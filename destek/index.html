@@ -1,0 +1,46 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#FBF6FA"><link rel="icon" type="image/png" href="/icons/favicon-48.png"><link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Allura&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap"><title>Destek · Me First</title><meta name="description" content="Me First destek: sık sorulan sorular ve iletişim."><style>:root{--bg:#FBF6FA;--surface:#fff;--ink:#3A3550;--muted:#7D7592;--line:#EDE4F0;--pink:#F7B3D2;--pink-d:#E2689A;--lilac:#D9CBFA;--peach:#FFDCCB;--gold:#C9963A;--f-display:"DM Serif Display",Georgia,serif;--f-body:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--pink-d)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left,0px))}
+.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo img{width:36px;height:36px;border-radius:10px}
+.wm{font-family:"Allura",cursive;font-size:34px;line-height:1}.wm i{font-style:normal;color:var(--pink-d)}
+.nav nav{display:flex;gap:18px;align-items:center;font-size:14.5px;font-weight:600}
+.nav nav a{color:var(--ink);text-decoration:none;opacity:.8}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-weight:800;text-decoration:none;color:#fff;background:linear-gradient(135deg,#E2689A,#C98BE6);border:0;border-radius:99px;padding:14px 26px;box-shadow:0 14px 30px -14px rgba(226,104,154,.8);cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.sm{padding:9px 16px;font-size:14px;box-shadow:none}
+.ghost{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none;padding:13px 20px;border-radius:99px;border:1.5px solid var(--line);background:var(--surface)}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.1;margin:0}
+.foot{margin-top:80px;padding:36px 0 calc(36px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between}
+.foot nav{display:flex;gap:18px;flex-wrap:wrap}.foot a{color:var(--muted)}
+.doc{max-width:760px;margin:0 auto;padding:40px max(20px,env(safe-area-inset-left,0px)) 0}
+.doc h1{font-size:clamp(34px,6vw,48px);margin-bottom:6px}
+.doc h2{font-size:24px;margin:34px 0 8px}
+.doc p,.doc li{color:#4D4762}
+.doc .lead{font-size:18px;color:var(--muted)}
+.doc .box{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px 20px;margin:18px 0}
+.doc .box b{color:var(--ink)}
+@media (max-width:640px){.nav nav a.hide-s{display:none}}
+
+details{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin:10px 0}summary{cursor:pointer;font-weight:800;list-style:none}summary::-webkit-details-marker{display:none}summary::after{content:"+";float:right;color:var(--pink-d);font-size:20px;line-height:1}details[open] summary::after{content:"–"}details p,details ol{margin:10px 0 0}
+</style></head><body><header class="nav"><div class="wrap"><a class="logo" href="/" aria-label="Me First ana sayfa"><img src="/icons/icon-192.png" alt=""><span class="wm"><i>Me</i> First</span></a><nav><a class="hide-s" href="/#ozellikler">Özellikler</a><a class="hide-s" href="/#gizlilik">Gizlilik</a><a class="btn sm" href="/app/">Dene</a></nav></div></header>
+<main class="doc">
+<h1>Destek</h1>
+<p class="lead">Bir sorun mu var, bir fikrin mi? Buradayız.</p>
+<div class="box"><b>Bize yaz:</b> <a href="mailto:destek@mefirst.app">destek@mefirst.app</a><br>Uygulamanın içindeki <b>"💬 Fikrini söyle"</b> düğmesinden de doğrudan yazabilirsin. Genellikle 1–2 iş günü içinde dönüyoruz.</div>
+<h2>Sık sorulan sorular</h2>
+<details><summary>Me First'ü telefonuma nasıl eklerim?</summary>
+<p><b>iPhone:</b> mefirst.app/app adresini Safari'de aç, alttaki <b>Paylaş</b> düğmesine dokun ve <b>Ana Ekrana Ekle</b>'yi seç.<br><b>Android:</b> Chrome'da aç; çıkan "Uygulamayı yükle" önerisine ya da menüdeki <b>Ana ekrana ekle</b>'ye dokun.<br>App Store ve Google Play sürümleri çok yakında.</p></details>
+<details><summary>Bilgilerim nerede saklanıyor?</summary><p>Sadece kendi telefonunda. Hesap açılmaz, bilgilerin hiçbir sunucuya gönderilmez. Ayrıntılar için <a href="/gizlilik/">gizlilik politikası</a>.</p></details>
+<details><summary>Telefonumu değiştirirsem ya da tarayıcı verilerini silersem ne olur?</summary><p>Bilgiler cihazda tutulduğu için yeni telefona kendiliğinden taşınmaz; tarayıcı verilerini temizlemek de onları siler. Beta sürecinde iPhone'da uygulamayı mutlaka <b>Ana Ekrana Ekle</b> ile kullanmanı öneririz; böylece bilgilerin daha güvende kalır. Yedekleme ve taşıma özelliği yol haritamızda.</p></details>
+<details><summary>Biz ikimiz şifremi unuttum.</summary><p>Kilit ekranındaki <b>Şifremi unuttum</b>'a dokun ve şifreni belirlerken seçtiğin güvenlik sorusunu cevapla. Güvenliğin için şifreyi başka bir yolla sıfırlayamıyoruz; bilgilerin bizde değil, senin telefonunda.</p></details>
+<details><summary>Döngü tahminlerine güvenebilir miyim?</summary><p>Tahminler geçmiş kayıtlarına göre hesaplanan yaklaşık tarihlerdir. Bilgilendirme amaçlıdır; tıbbi tavsiye değildir ve doğum kontrol yöntemi yerine geçmez.</p></details>
+<details><summary>Bildirim alabilir miyim?</summary><p>Hatırlatma bildirimleri (3·6·9 vakitleri, su, döngü, mühürlü mektubunun açılış günü) mağaza sürümüyle geliyor.</p></details>
+<details><summary>Bir hata buldum.</summary><p>Çok teşekkürler! "Fikrini söyle"de <b>Hata buldum 🐞</b>'yi seçip ne yaparken olduğunu kısaca yaz; mümkünse ekran görüntüsünü e-postaya ekle.</p></details>
+</main><footer class="foot"><div class="wrap"><span>© 2026 Me First · Önce sen.</span><nav><a href="/gizlilik/">Gizlilik politikası</a><a href="/destek/">Destek</a><a href="mailto:destek@mefirst.app">destek@mefirst.app</a></nav></div></footer></body></html>

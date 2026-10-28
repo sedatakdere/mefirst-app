@@ -1,0 +1,20 @@
+{
+  "name": "Me First · Önce sen",
+  "short_name": "Me First",
+  "description": "Kadınlar ve anneler için kişisel yardımcın: kombin, ritüeller, döngü, çocuklar ve ikiniz.",
+  "lang": "tr",
+  "dir": "ltr",
+  "id": "/app/",
+  "start_url": "/app/",
+  "scope": "/app/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F7F4FB",
+  "theme_color": "#F7B3D2",
+  "categories": ["lifestyle", "health", "productivity"],
+  "icons": [
+    {"src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
