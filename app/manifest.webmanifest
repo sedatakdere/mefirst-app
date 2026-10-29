@@ -39,5 +39,89 @@
   "display_override": [
     "fullscreen",
     "standalone"
+  ],
+  "shortcuts": [
+    {
+      "name": "Biz ikimiz",
+      "short_name": "Biz ikimiz",
+      "description": "Özel alanınız",
+      "url": "/app/?go=love",
+      "icons": [
+        {
+          "src": "/icons/sc-love.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Manifest Me",
+      "short_name": "Manifest",
+      "description": "Niyetin ve ritüellerin",
+      "url": "/app/?go=rit",
+      "icons": [
+        {
+          "src": "/icons/sc-rit.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Alışveriş listem",
+      "short_name": "Alışveriş",
+      "description": "Market listen",
+      "url": "/app/?go=shop",
+      "icons": [
+        {
+          "src": "/icons/sc-shop.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Ne giysem?",
+      "short_name": "Ne giysem",
+      "description": "Günün kombini",
+      "url": "/app/?go=style",
+      "icons": [
+        {
+          "src": "/icons/sc-style.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/icons/shot-home.png",
+      "sizes": "1080x2340",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Ana sayfa: günün sözü ve senin dünyan"
+    },
+    {
+      "src": "/icons/shot-love.png",
+      "sizes": "1080x2340",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Biz ikimiz: ikinize özel alan"
+    },
+    {
+      "src": "/icons/shot-rit.png",
+      "sizes": "1080x2340",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Manifest Me: 3·6·9 niyet ritüeli"
+    },
+    {
+      "src": "/icons/shot-shop.png",
+      "sizes": "1080x2340",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Ev & düzen: alışveriş listesi"
+    }
   ]
 }

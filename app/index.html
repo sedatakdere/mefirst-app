@@ -5410,6 +5410,10 @@ setInterval(()=>{try{if(typeof step==="undefined"||step!==0||document.hidden)ret
     if(y<40||max<120){n.classList.remove("nav-hide");acc=0;return;}if((d>0)!==(acc>0))acc=0;acc+=d;if(acc>28)n.classList.add("nav-hide");else if(acc<-14)n.classList.remove("nav-hide");},{passive:true});})();
 (function(){let inFrame=false;try{inFrame=window.top!==window;}catch(e){inFrame=true;}const touch=matchMedia("(pointer: coarse)").matches;if(inFrame||!touch||matchMedia("(display-mode: fullscreen)").matches||!document.documentElement.requestFullscreen)return;
   const go=()=>{const d=document.documentElement;if(!document.fullscreenElement&&d.requestFullscreen){try{d.requestFullscreen({navigationUI:"hide"}).catch(()=>{});}catch(e){}}};addEventListener("pointerup",go,{passive:true});})();
+
+/* kısayollar: /app/?go=love|rit|ev|style|kids|fit */
+(function(){let g=null;try{g=new URLSearchParams(location.search).get("go");}catch(e){}if(!g)return;const M={love:"go-love",rit:"go-rit",ev:"go-ev",shop:"go-ev",style:"go-style",kids:"go-kids",fit:"go-fit",keyif:"go-zod"};const id=M[g];if(!id)return;
+  setTimeout(()=>{try{const b=document.getElementById(id);if(!b)return;if(g==="shop"&&typeof etab!=="undefined")etab="shop";b.click();history.replaceState(history.state,"",location.pathname);}catch(e){}},250);})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
