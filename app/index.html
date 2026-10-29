@@ -13,7 +13,31 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Me First">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<style>[hidden]{display:none!important}html{-webkit-text-size-adjust:100%}body{margin:0}</style>
+<style>[hidden]{display:none!important}html{-webkit-text-size-adjust:100%}body{margin:0}
+.gsur{margin-top:12px;border-radius:24px;position:relative;display:flex;flex-direction:column;overflow:hidden;
+  background:radial-gradient(120% 90% at 0% 0%,color-mix(in srgb,var(--pink) 32%,transparent),transparent 60%),radial-gradient(110% 90% at 100% 100%,color-mix(in srgb,var(--lilac) 40%,transparent),transparent 60%),color-mix(in srgb,var(--surface) 70%,transparent);
+  border:1.5px dashed color-mix(in srgb,var(--pink-d) 40%,transparent);transition:min-height .5s ease}
+.gsur>*{flex:1}
+.gs-shut{font:inherit;color:var(--ink);background:none;border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:14px;padding:22px 18px;text-align:left;width:100%;min-height:120px}
+.gs-box{font-size:44px;line-height:1;animation:gsWig 2.6s ease-in-out infinite;filter:drop-shadow(0 6px 10px rgba(0,0,0,.15))}
+.gs-t{display:flex;flex-direction:column;gap:3px}
+.gs-t small{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pink-d)}
+.gs-t b{font-family:var(--f-display);font-weight:400;font-size:19px;line-height:1.2}
+.gs-t em{font-style:normal;font-size:12px;font-weight:700;opacity:.65}
+.gs-open{position:relative;padding:22px 20px 18px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.gs-eye{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pink-d);display:flex;align-items:center;gap:6px}
+.gs-eye span{font-size:18px}
+.gs-open p{margin:0;font-family:var(--f-display);font-size:20px;line-height:1.35}
+.gs-fine{font-size:11px;opacity:.55;font-weight:600}
+.gs-sp{position:absolute;font-style:normal;color:var(--pink-d);opacity:.5;animation:gsTw 3s ease-in-out infinite}
+.gs-sp:nth-child(1){top:12px;right:18px;font-size:14px}.gs-sp:nth-child(2){bottom:14px;right:44px;font-size:11px;animation-delay:1s}.gs-sp:nth-child(3){top:44%;right:12px;font-size:9px;animation-delay:2s}
+.gsur.gs-pop .gs-open{animation:gsPop .7s cubic-bezier(.2,1.4,.4,1)}
+@keyframes gsWig{0%,80%,100%{transform:rotate(0)}85%{transform:rotate(-10deg)}90%{transform:rotate(9deg)}95%{transform:rotate(-5deg)}}
+@keyframes gsTw{0%,100%{opacity:.2;transform:scale(.8)}50%{opacity:.8;transform:scale(1.15)}}
+@keyframes gsPop{0%{opacity:0;transform:scale(.85) rotateX(30deg)}100%{opacity:1;transform:none}}
+html[data-mf="dusk"] .gsur{background:radial-gradient(120% 90% at 0% 0%,rgba(244,143,190,.22),transparent 60%),radial-gradient(110% 90% at 100% 100%,rgba(180,150,240,.22),transparent 60%),rgba(255,255,255,.05);border-color:rgba(244,143,190,.35)}
+@media (prefers-reduced-motion:reduce){.gs-box,.gs-sp,.gsur.gs-pop .gs-open{animation:none}}
+</style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2485,6 +2509,7 @@ html[data-mf="dusk"] .jr-tip,html[data-mf="dusk"] .jr-legend .fut{background:rgb
       <div data-bzv="dil"><div id="bz-lang"></div></div>
     </div>
     <div class="panel" data-panel="games"><div id="gm"></div></div>
+    <div class="gsur" data-sec="love" hidden></div>
   </div>
 
   <div class="pet" data-step="20">
@@ -2590,6 +2615,7 @@ html[data-mf="dusk"] .jr-tip,html[data-mf="dusk"] .jr-legend .fut{background:rgb
         <p class="fine">Bu hesaplar genel bir yol göstericidir; hamilelik, emzirme, sağlık sorunu ya da özel bir diyet durumunda doktoruna veya diyetisyenine danış.</p>
       </div>
     </div>
+    <div class="gsur" data-sec="fit" hidden></div>
   </div>
 
   <div class="rit" data-step="60">
@@ -2617,6 +2643,7 @@ html[data-mf="dusk"] .jr-tip,html[data-mf="dusk"] .jr-legend .fut{background:rgb
       <button class="ghost" id="rit-edit" type="button">Niyetimi değiştir</button>
       <p class="fine">Manifest Me, niyetini her gün hatırlaman ve kendine ayırdığın bir an içindir. Yazdıkça niyetin zihninde netleşir; gerisi senin adımlarınla gelir.</p>
     </div>
+    <div class="gsur" data-sec="rit" hidden></div>
   </div>
 
   <div class="kids" data-step="70">
@@ -2632,6 +2659,7 @@ html[data-mf="dusk"] .jr-tip,html[data-mf="dusk"] .jr-legend .fut{background:rgb
       </div>
     </div>
     <div class="kpanel" id="kpanel"></div>
+    <div class="gsur" data-sec="kids" hidden></div>
   </div>
 
   <div class="evv" data-step="80">
@@ -2647,6 +2675,7 @@ html[data-mf="dusk"] .jr-tip,html[data-mf="dusk"] .jr-legend .fut{background:rgb
       </div>
     </div>
     <div class="kpanel epanel" id="epanel"></div>
+    <div class="gsur" data-sec="ev" hidden></div>
   </div>
 
   <nav class="bnav" id="bnav" aria-label="Ana menü">
@@ -2983,7 +3012,7 @@ function lkKey(k){if(LK.busy||LK.mode==="reset")return;if(LK.until>Date.now()){l
 let _lvPrev=null;const _showLK=show;show=function(){const inL=step===9||step===10;const R=document.documentElement;
   if(inL){if(_lvPrev===null){_lvPrev=R.dataset.mf||"day";tab="formula";bzsub="hafta";}R.dataset.mf="dusk";document.body.classList.add("love-on");const n=document.getElementById("lv-names");if(n)n.innerHTML=coupleLine();}
   else if(_lvPrev!==null){R.dataset.mf=_lvPrev;_lvPrev=null;document.body.classList.remove("love-on");}
-  document.body.classList.toggle("mf-on",step===60);if(window._lastStep!==step){document.body.style.minHeight="";window._lastStep=step;}_showLK();if(step===9){const b=document.getElementById("bnav");if(b)b.style.visibility="hidden";lkRender();}else{const b=document.getElementById("bnav");if(b)b.style.visibility="";}};
+  document.body.classList.toggle("mf-on",step===60);if(window._lastStep!==step){document.body.style.minHeight="";window._lastStep=step;}_showLK();try{surRender();}catch(e){}if(step===9){const b=document.getElementById("bnav");if(b)b.style.visibility="hidden";lkRender();}else{const b=document.getElementById("bnav");if(b)b.style.visibility="";}};
 function openLove(){if(love.unlocked){step=10;}else{lockSetup();step=9;}show();loveRender();}
 
 const PKIND=[["kopek","🐶","Köpek"],["kedi","🐱","Kedi"],["kus","🐦","Kuş"],["diger","🐰","Diğer"]];
@@ -3720,7 +3749,50 @@ const SOZ=[["Gelin tanış olalım, işi kolay kılalım; sevelim, sevilelim, bu
 const NEF=[["kutu","Kutu nefes","Sakinleş",[["Nefes al",4],["Tut",4],["Ver",4],["Tut",4]]],["478","4-7-8","Uykuya hazırlan",[["Nefes al",4],["Tut",7],["Ver",8]]],["denge","5-5","Dengelen",[["Nefes al",5],["Ver",5]]]];
 let nfType="kutu",nfRun=null,nfRound=0;
 function rx(){if(!st.rx)st.rx={suk:{},sozFav:[],sozOff:0,birak:0,nef:0};return st.rx;}
-function goTo(el,off){if(!el)return;requestAnimationFrame(()=>{const y=Math.max(0,el.getBoundingClientRect().top+window.scrollY-(off??12));const need=y+window.innerHeight;document.body.style.minHeight="";if(document.documentElement.scrollHeight<need)document.body.style.minHeight=need+"px";window.scrollTo({top:y,behavior:"smooth"});});}
+
+const SURK=[["🌟","Mini görev"],["💡","Biliyor muydun?"],["🫶","Küçük ipucu"],["✨","Bugün için"]];
+const SURN={formula:"Biz",night:"Plan",msg:"Mesaj",games:"Oyun",cycle:"Döngü",today:"Bugün",food:"Beslenme",move:"Hareket",goal:"Hedefim",
+ k_today:"Bugün",hw:"Ödevler",cal:"Takvim",prog:"Program",shop:"Alışveriş",meal:"Yemek",bill:"Faturalar",chore:"Ev işleri",
+ "369":"3·6·9",sukran:"Şükran",nefes:"Nefes",soz:"Bilge söz",birak:"Bırak gitsin",ay:"Ay ritüeli",pano:"Hayal panosu",mektup:"Gelecek bana"};
+const SUR={
+formula:[[0,"Bugün ona, ilk tanıştığınız günden aklında kalan küçük bir ayrıntıyı anlat. Ne giydiğini, ilk sözünü, gülüşünü…"],[1,"Uzun süreli ilişkilerde 'biz' diye konuşan çiftlerin, zorlukları daha kolay aştığı gözlemlenir. Bugün cümlelerine biraz daha 'biz' kat."],[2,"Kapıdan çıkarken ya da eve girerken altı saniyelik bir sarılma; gün içinde en kolay bağ kurma yollarından biri."],[3,"Bugün ona hiçbir şey istemeden yalnızca 'iyi ki varsın' de. Sebebini söyleme, merak etsin."],[0,"Telefonunuzdaki en eski ortak fotoğrafınızı bulun ve birlikte bakın. Hangi anıyı ilk o hatırlayacak?"],[2,"Bir tartışmanın ortasında 'şu an haklı olmak mı, yakın olmak mı?' diye kendine sor. Cevap çoğu zaman yolu gösterir."],[3,"İlişkiniz bir şarkı olsaydı hangisi olurdu? Bu akşam ikiniz de ayrı ayrı seçin, sonra karşılaştırın."],[0,"Ona bugün bir şey öğret ya da ondan bir şey öğrenmek iste. Küçük bir tarif, bir kelime, bir oyun hilesi…"],[1,"Birlikte gülmek bağı güçlendirir; ortak bir şakanız varsa bugün onu hatırlatın."],[2,"Birbirinizin günlerine dair tek bir soru: 'Bugün seni en çok ne yordu?' Dinlemek yeter, çözmek gerekmez."]],
+night:[[0,"Bu hafta için ikinizin de daha önce hiç yapmadığı küçük bir şey seçin: yeni bir semt, yeni bir mutfak, yeni bir yürüyüş yolu."],[2,"Plan yaparken telefonları başka odada bırakın; bir akşamı ikinize ayırmanın en güçlü hamlesi bu."],[3,"Evde mum, sevdiğiniz bir çalma listesi ve basit bir tabak: dışarı çıkmadan da randevu olur."],[1,"Beklemek de keyfin parçası: güzel bir planı birkaç gün önceden konuşmak, o anı daha çok sevdirir."],[0,"İkiniz de bir kâğıda 'seninle yapmak istediğim 3 şey' yazın ve kâğıtları değişin. İlkini bu ay yapın."],[2,"Çocuklar varken: onlar uyuduktan sonraki 30 dakika da bir randevudur. Küçük ama düzenli olsun."],[3,"Bu akşam ilk randevunuzu canlandırın: aynı yemek, aynı içecek ya da aynı şarkı."],[0,"Hafta sonu için iki seçenek hazırla, birini o seçsin. Sürpriz ve seçim aynı anda."],[2,"Bütçe dostu fikir: termosa çay, yanına iki simit; manzaralı bir bankta gün batımı."],[3,"Planın adı olsun: 'Cuma akşamı biz', 'Pazar sabah kahvesi'… Adı olan şey unutulmaz."]],
+msg:[[0,"Bugün ona bir sesli mesaj gönder; yazıdan çok daha sıcak gelir. 15 saniye yeter."],[2,"Mesajın sonuna bir soru ekle: cevap yazmak için güzel bir bahane olur."],[3,"Onun bugünkü planını hatırlıyorsan sor: 'Toplantın nasıl geçti?' Hatırlanmak sevilmektir."],[1,"Gün ortasında gelen küçük bir 'aklımdasın' mesajı, akşamki ruh halini bile değiştirebilir."],[0,"Eski bir fotoğrafınızı tek kelimeyle gönder: 'Hatırla.' Gerisini o anlatacak."],[2,"Barışma mesajı yazarken 'sen' yerine 'ben' ile başla: 'Ben üzüldüm' kapıyı açık tutar."],[3,"Bugün ona yalnızca emojilerle bir cümle yaz; çözmesi için ona bir dakika ver."],[0,"Akşam eve gelmeden önce 'seni bekleyen bir şey var' yaz. Sonra o şeyi bul: bir çay, bir sarılma, bir tatlı."],[2,"Övgü genel değil somut olsun: 'Dün çocuklarla öyle sabırlıydın ki…' gibi."],[3,"Kısa ve içten: 'Seninle her şey daha kolay.' Bazen tek cümle yeter."]],
+games:[[0,"Bu akşam oyun bitince kazanan, kaybedene bir dilek hakkı versin. Dilek küçük ama tatlı olsun."],[2,"Oyun saati için bir ritüel seçin: aynı battaniye, aynı ışık, aynı içecek. Ritüel tadı kalıcı yapar."],[3,"36 sorudan sadece üç tanesini seçin ve bu akşam onlara yavaşça cevap verin. Acele yok."],[1,"Birlikte oyun oynamak, gündelik hayattan kısa bir mola verip birbirinizi yeniden keşfetmenin eğlenceli bir yoludur."],[0,"Bugün tek bir zar atın, çıkanı yarın akşama saklayın. Bekleme kısmı oyunun yarısı."],[2,"Telefonu masaya ters çevirin ve oyun bitene kadar dokunmayın. Kaybeden bulaşığı yıkar."],[3,"Oyunu siz uydurun: 'Bugün beni en çok ne güldürdü, tahmin et.' Üç hak."],[0,"Bu hafta bir oyunu ilk kez o seçsin, sen kurallarına hiç itiraz etme."]],
+cycle:[[2,"Enerjinin yüksek olduğu günlerde zor işleri, sakin günlerde kendine nazik işleri planla. Döngün bir takvim gibi çalışır."],[1,"Döngü süresi kişiden kişiye değişir; 21 ile 35 gün arası genelde normal kabul edilir."],[0,"Bugün nasıl hissettiğini tek kelimeyle not et. Birkaç ay sonra kendi örüntünü görmeye başlarsın."],[2,"Regl öncesi günlerde tuzu ve kafeini biraz azaltmak, kendini daha hafif hissetmene yardım edebilir."],[3,"Bugün bedenine teşekkür et; her ay yeniden başlayan bir döngüyü taşıyor."],[1,"Düzenli uyku ve hareket, döngü belirtilerini hafifletmeye yardımcı olabilir."],[0,"Partnerine bu haftanın senin için nasıl geçtiğini tek cümleyle anlat; anlamak için ipucuna ihtiyacı var."],[2,"Sıcak su torbası, hafif bir yürüyüş ve bol su: kramp günlerinin üç küçük dostu."],[3,"Takvim tahmindir; bedenin ne diyorsa onu dinle. Fark edersen not et, uygulama daha iyi öğrensin."]],
+today:[[0,"Şu an bir bardak su iç ve omuzlarını üç kez geriye çevir. Bitti, bugün kendin için bir şey yaptın."],[2,"Gün içinde her kalkışında bir yudum su: alışkanlık kendiliğinden oturur."],[1,"Kısa yürüyüşler de sayılır; gün içine yayılmış 10'ar dakikalık hareket de etkili olur."],[3,"Bugün yalnızca 'yeterince iyi' hedefle. Mükemmel, iyinin düşmanıdır."],[0,"Güneş ışığına 10 dakika çık; mümkünse sabah. Gün daha aydınlık başlar."],[2,"Yorgun hissediyorsan önce su, sonra beş dakika esneme, sonra karar."],[3,"Bugünü bir renkle özetleseydin hangisi olurdu? Akşam kendine sor."],[0,"Telefonu bırakıp pencereden dışarı bak ve 5 derin nefes al. 60 saniye yeter."]],
+food:[[2,"Tabağının yarısını sebzeyle doldurmak, kalori saymadan dengeli yemenin en kolay yolu."],[0,"Bugün tabağına yeni bir renk ekle: mor lahana, turuncu havuç, kırmızı biber…"],[1,"Susuzluk bazen açlık gibi hissedilir; atıştırmadan önce bir bardak su dene."],[2,"Yavaş yemek, doyduğunu fark etmeni kolaylaştırır. Çatalı arada bir masaya bırak."],[3,"Bugün bir öğünü oturarak, telefonsuz ye. Tadını gerçekten al."],[0,"Haftalık tek bir yeni sağlıklı tarif seç; bu hafta onu dene."],[2,"Kuruyemişleri küçük kaplara bölerek sakla; ölçü kendiliğinden oluşur."],[1,"Kahvaltıda protein (yumurta, peynir, yoğurt) eklemek, öğlene kadar daha tok hissettirebilir."]],
+move:[[0,"Şu an 20 saniye parmak ucunda yükselip in. 10 tekrar. İşte bir set!"],[2,"Telefonla konuşurken yürü; günün adımları kendiliğinden artar."],[1,"Merdiven çıkmak, gün içine serpiştirilebilecek en pratik kardiyo hareketlerinden biri."],[3,"Bugün sevdiğin bir şarkıyı aç ve sadece dans et. Bu da hareket."],[0,"Akşam yemeğinden sonra 10 dakikalık bir yürüyüş; mümkünse biriyle."],[2,"Spor kıyafetini akşamdan hazırla; sabah karar vermek kolaylaşır."],[3,"Hareketi ceza değil hediye olarak düşün: 'Bunu bedenim için yapıyorum.'"],[0,"Çocuklarla 5 dakikalık bir 'kim daha uzun zıplar' yarışı. Herkes kazanır."]],
+goal:[[2,"Büyük hedefi haftalık küçük adımlara böl; her hafta bir adımı tamamla."],[3,"Hedefini bir cümleyle yaz ve görebileceğin bir yere as."],[1,"Hedefini biriyle paylaşmak, ona bağlı kalmayı kolaylaştırabilir."],[0,"Bu hafta neyi iyi yaptığını yaz; ilerlemeyi görmek motivasyondur."],[2,"Tartı bir sayı söyler, ama enerjin, uykun ve ruh halin de ilerlemenin parçası."],[3,"Kendine kızma, kendinle konuş: 'Dün olmadı, bugün tekrar deneriz.'"],[0,"Hedefine ulaştığında kendine vereceğin küçük ödülü şimdi belirle."]],
+k_today:[[0,"Bugün çocuğuna 'Bugün seni en çok ne mutlu etti?' diye sor. Akşam yemeği sorusu olsun."],[2,"Sabah çantayı akşamdan hazırlamak, sabah telaşını yarıya indirir."],[3,"Bugün ona bir not bırak: beslenme çantasına, defterine, yastığına."],[1,"Çocuklar birlikte geçirilen kısa ama dikkatli anları, uzun ama dağınık zamandan daha çok hatırlar."],[0,"10 dakika onun seçtiği oyunu oyna; kurallar onun."],[2,"Ekran süresi için zamanlayıcıyı birlikte kurun; kural ortak olunca itiraz azalır."],[3,"Bugün 'hayır' yerine 'şimdi değil, şu zaman' demeyi dene."]],
+hw:[[2,"Ödev için her gün aynı saat ve aynı köşe: düzen odaklanmayı kolaylaştırır."],[0,"Bugün ödevin bir parçasını ona 'öğretmen' olarak anlattır; anlatan daha iyi öğrenir."],[1,"Kısa molalar (25 dk çalışma, 5 dk mola) çocukların dikkatini toplamasına yardımcı olabilir."],[3,"Doğru cevabı vermek yerine 'sen ne düşünüyorsun?' diye sor."],[2,"Ödev bitince küçük bir kutlama: bir çıkartma, bir sarılma, bir 'aferin'."],[0,"Haftanın zor dersini bul ve ona bu hafta 5 dakika fazladan, oyunla çalışın."]],
+cal:[[2,"Haftanın planını pazar akşamı birlikte gözden geçirin; sürpriz azalır, huzur artar."],[0,"Bu ayki önemli günleri (veli toplantısı, gezi, doğum günü) takvime şimdi ekle."],[3,"Takvimde boş bir gün bırak: hiçbir şey planlanmamış bir aile günü."],[2,"Renk kodu kullan: her çocuğa bir renk. Takvim bir bakışta okunur."],[1,"Önceden bilinen planlar çocukların kendini daha güvende hissetmesine yardımcı olur."],[0,"Bu hafta takvimden bir şeyi iptal etmeyi düşün; dinlenmek de bir plandır."]],
+prog:[[2,"Ders programının fotoğrafını çek ve buzdolabına as; herkes görsün."],[0,"Yarının derslerine bakın ve gereken malzemeyi bu akşam hazırlayın."],[3,"En sevdiği dersi sor; ona o dersten bir şey anlatmasını iste."],[1,"Düzenli uyku saatleri, okul günlerinde dikkat ve ruh hali için en güçlü yardımcılardan biri."],[2,"Beden eğitimi günlerinin kıyafetini bir gün önceden çantanın yanına koy."],[0,"Bu hafta öğretmenine küçük bir teşekkür notu yazmayı düşünün."]],
+shop:[[2,"Listeyi market reyonlarına göre sırala; alışveriş süresi kısalır."],[0,"Bugün dolabı kontrol et ve bitmek üzere olan üç şeyi listeye ekle."],[1,"Aç karnına alışveriş, listede olmayan ürünlerin sepete girmesini kolaylaştırır."],[3,"Mevsim sebzesi hem daha lezzetli hem genelde daha uygun fiyatlı."],[2,"Haftada bir 'dolapta ne var' günü: yeni almadan önce eldekiyle yemek yap."],[0,"Bu hafta bir ürünün farklı markasını dene; belki yeni favorin olur."]],
+meal:[[2,"Pazar günü bir tencere bakliyat ya da sebze yemeği: hafta ortasında can simidi."],[0,"Bu hafta menüye çocukların seçtiği bir yemek ekle; birlikte pişirin."],[3,"Artan pilavdan ertesi gün sebzeli bir omlet ya da köfte çıkar."],[1,"Haftalık menü planlamak hem zaman hem israf açısından fark yaratabilir."],[2,"Doğranmış soğanı ve sarımsağı küçük kaplarda dondur; akşam yemeği yarı hazır olur."],[0,"Bu akşam sofraya tek bir yeni şey: bir sos, bir salata, bir baharat."]],
+bill:[[2,"Faturaları otomatik ödemeye almak, son gün stresini ortadan kaldırır."],[0,"Bu ay en yüksek gelen faturayı bul ve onu düşürecek tek bir şey dene."],[3,"Fatura günlerini takvime hatırlatıcı olarak ekle; bir gün öncesine."],[1,"Kullanılmayan cihazları prizden çekmek, bekleme modundaki tüketimi azaltabilir."],[2,"Aboneliklerini gözden geçir: son bir ayda kullanmadığın var mı?"],[0,"Bu ay bir faturayı geçen ayla karşılaştır; farkı fark etmek kontrol demek."]],
+chore:[[2,"İki dakika kuralı: iki dakikadan kısa süren işi hemen yap."],[0,"Bugün tek bir çekmeceyi düzenle. Sadece bir tane. Bitti!"],[3,"Sevdiğin bir şarkıyı aç; şarkı bitene kadar topla. 4 dakikada ev değişir."],[1,"Ev işlerini aileyle paylaşmak, çocuklara sorumluluk duygusu kazandırır."],[2,"Her odaya küçük bir 'kayıp eşya' sepeti: dağınıklık bir yerde toplanır."],[0,"Bu akşam herkes kendi yatağının çevresinde 5 dakika toplasın; sonra film."],[3,"Mükemmel temizlik değil, yaşanabilir düzen hedefle."]],
+"369":[[2,"Niyetini yazarken şimdiki zaman kullan: 'Olacak' değil, 'Oluyor'."],[0,"Bugünkü yazının bir kelimesini değiştir ve hissettiğini fark et."],[3,"Yazmadan önce bir dakika gözlerini kapat ve niyetin gerçekleşmiş hâlini hayal et."],[1,"Hedefleri yazıya dökmek, onları akılda tutmayı ve takip etmeyi kolaylaştırır."],[2,"Sabah 3, öğlen 6, akşam 9: telefona üç küçük hatırlatıcı kur."],[0,"Niyetin için bugün atabileceğin en küçük somut adımı yaz ve yap."]],
+sukran:[[0,"Bugün teşekkür etmediğin birine teşekkür et: kapıcıya, öğretmene, annene."],[2,"Şükran listesinde 'neden' de yaz: 'Kahvem için teşekkürler, çünkü sabahımı açtı.'"],[1,"Düzenli şükran pratiği, birçok kişide ruh halini olumlu yönde etkiler."],[3,"Bugün sıradan bir şeye minnet duy: sıcak su, açık bir pencere, bir gülüş."],[0,"Kendine de teşekkür et: bugün bedenin ve sabrın için."],[2,"Akşam çocuklarla 'bugünün güzel şeyi' turu yapın; herkes bir tane söylesin."]],
+nefes:[[2,"Nefesi verirken alırken olduğundan biraz daha uzun tut; beden sakinleşmeye başlar."],[0,"Şu an 4 saniye al, 4 saniye tut, 6 saniye ver. Üç tur."],[1,"Yavaş ve derin nefes, gerginlik anlarında sakinleşmeye yardımcı olan en basit araçlardan biri."],[3,"Bir eli göğsüne, diğerini karnına koy; karnındaki el daha çok hareket etsin."],[0,"Bugün kırmızı ışıkta, kuyrukta ya da asansörde tek bir derin nefes al."],[2,"Uyumadan önce 5 yavaş nefes, günün yükünü bırakmanın kısa yolu."]],
+soz:[[3,"Bugünkü sözü bir kâğıda yaz ve cüzdanına koy."],[0,"Sözü kendi cümlelerinle birine anlat; anlattıkça senin olur."],[2,"Seni en çok etkileyen sözü telefonunun kilit ekranına yaz."],[3,"Bir söz seç ve bütün gün ona göre bir karar ver."],[0,"Annenden ya da büyüğünden duyduğun bir sözü hatırla ve not al; aile bilgeliği de bilgeliktir."],[2,"Akşam sözü yeniden oku; sabah okuduğundan farklı anlam taşıyabilir."]],
+birak:[[0,"Seni yoran bir düşünceyi kâğıda yaz, katla ve çöpe at. Sembolik ama etkili."],[3,"Bugün kontrol edemediğin bir şeyi fark et ve ona 'tamam' de."],[2,"Bırakmak unutmak değil; taşımayı bırakmaktır."],[1,"Duyguları yazıya dökmek, onların yoğunluğunu azaltmaya yardımcı olabilir."],[0,"Bugün bir 'hayır' de; seni yoran bir isteğe, kibarca."],[3,"Dünü dünde bırak: bugün sıfırdan başlamak bir hak."]],
+ay:[[1,"Yeni ay bir başlangıcı, dolunay bir tamamlanmayı simgeler; birçok gelenekte niyetler buna göre yazılır."],[0,"Bu akşam pencereden ayı bul ve ona bir dilek fısılda."],[2,"Yeni ayda yeni bir alışkanlık başlat; dolunayda neyin işe yaradığına bak."],[3,"Ay gibi sen de evrelerden geçiyorsun; her evren güzel."],[0,"Bu ay için tek bir kelime seç: 'sabır', 'cesaret', 'huzur'…"],[2,"Ay ritüelini mum ışığında yap; yavaşlamak ritüelin ta kendisi."]],
+pano:[[0,"Hayal panona bu hafta bir fotoğraf daha ekle: bir yer, bir his, bir renk."],[2,"Panoyu her gün göreceğin bir yere koy; görmek hatırlamaktır."],[3,"Hayalinin yanına 'neden' yaz: neden bunu istiyorsun?"],[1,"Hedefleri görselleştirmek, onlara dair motivasyonu canlı tutmaya yardımcı olabilir."],[0,"Panodaki bir hayal için bu ay atılacak tek adımı belirle."],[2,"Panon değişebilir; hayallerin büyüdükçe panoyu da güncelle."]],
+mektup:[[0,"Bugün bir yıl sonraki kendine tek bir soru sor ve mektuba ekle."],[3,"Mektubu yazarken kendine bir arkadaşa yazar gibi yaz: sevgiyle."],[2,"Bugün seni zorlayan şeyi de yaz; bir yıl sonra okuyunca ne kadar yol aldığını göreceksin."],[1,"Gelecekteki kendine yazmak, bugünün hedeflerini netleştirmenin güzel bir yoludur."],[0,"Mektuba bugünden küçük bir ayrıntı ekle: hava, şarkı, akşam yemeği."],[2,"Kendine bir söz ver ve mektuba yaz; açtığında tutup tutmadığını göreceksin."]]
+};
+function surKey(sec){if(sec==="love")return tab;if(sec==="fit")return ftab;if(sec==="kids")return ktab==="today"?"k_today":ktab;if(sec==="ev")return etab;if(sec==="rit")return prac;return null;}
+function surOpened(){try{const o=JSON.parse(localStorage.getItem("mefirst-sur")||"{}");return o.d===dkey()?o:{d:dkey(),o:[]};}catch(e){return {d:dkey(),o:[]};}}
+function surRender(){document.querySelectorAll(".gsur[data-sec]").forEach(el=>{const k=surKey(el.dataset.sec),pool=SUR[k];el.hidden=!pool;if(!pool)return;
+  const O=surOpened(),open=O.o.includes(k),nm=SURN[k]||"";if(el.dataset.k===k&&el.dataset.open===String(open))return;el.dataset.k=k;el.dataset.open=open;
+  if(!open){el.innerHTML=`<button type="button" class="gs-shut" aria-label="Günün küçük sürprizini aç"><span class="gs-box" aria-hidden="true">🎁</span><span class="gs-t"><small>Günün küçük sürprizi</small><b>${nm} için bugün bir şey sakladım</b><em>Dokun, aç ✨</em></span></button>`;
+    el.querySelector(".gs-shut").onclick=()=>{const O2=surOpened();if(!O2.o.includes(k))O2.o.push(k);try{localStorage.setItem("mefirst-sur",JSON.stringify(O2));}catch(e){}el.classList.add("gs-pop");surRender();setTimeout(()=>el.classList.remove("gs-pop"),900);};return;}
+  const it=tFresh(pool,"sur-"+k,1)[0],K=SURK[it[0]];
+  el.innerHTML=`<div class="gs-open"><i class="gs-sp" aria-hidden="true">✦</i><i class="gs-sp" aria-hidden="true">✧</i><i class="gs-sp" aria-hidden="true">✦</i><div class="gs-eye"><span>${K[0]}</span>${K[1]} · ${nm}</div><p>${it[1]}</p><small class="gs-fine">Yarın burada yeni bir sürpriz olacak.</small></div>`;});}
+
+function goTo(el,off){if(!el)return;requestAnimationFrame(()=>{try{surRender();}catch(e){}const y=Math.max(0,el.getBoundingClientRect().top+window.scrollY-(off??12));const need=y+window.innerHeight;document.body.style.minHeight="";document.querySelectorAll(".gsur").forEach(g=>g.style.minHeight="");let gap=need-document.documentElement.scrollHeight;
+    if(gap>0){const g=[...document.querySelectorAll(".gsur")].find(x=>x.offsetParent!==null&&!x.hidden);if(g){const add=Math.min(gap,Math.max(0,440-g.offsetHeight));if(add>0){g.style.minHeight=(g.offsetHeight+add)+"px";gap-=add;}}}
+    if(gap>0)document.body.style.minHeight=(document.documentElement.scrollHeight+gap)+"px";window.scrollTo({top:y,behavior:"smooth"});});}
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest('[role="tab"],[role="tablist"]>button,.g-card');if(!b||b.closest('#pracs,.love .lhero .seg,.bzseg,.subseg,#zsh,.bnav,.onb,.lk2'))return;
   const tl=b.closest('[role="tablist"]'),aid=b.classList.contains("g-card")?"gm":(b.closest("[id]")||{}).id;
   setTimeout(()=>{const el=tl&&tl.isConnected?tl:(aid&&document.getElementById(aid));if(el&&el.offsetParent!==null)goTo(el,10);},40);});
