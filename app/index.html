@@ -194,6 +194,11 @@ html[data-mf="dusk"] .ss-in2{background-color:#2A1F33;color:#fff}
 .ss-bot .ss-fab{position:static!important;width:54px;height:54px;flex:0 0 auto;box-shadow:0 10px 22px -10px rgba(150,40,120,.75)!important}
 .ss-in .ss-empty b{font-size:18px}.ss-in .ss-empty span{font-size:34px}
 @media (max-height:700px){.ss-pan{height:124px}.ss-main{grid-template-columns:50px minmax(0,1fr) 50px}.ss-ri .c{width:38px;height:38px}}
+
+#ss-fx .ss-ri,#ss-mo .ss-ri{position:relative}
+#ss-fx .ss-ri[aria-pressed="true"] .c::after,#ss-mo .ss-ri[aria-pressed="true"] .c::after{content:"✕";position:absolute;top:-3px;right:3px;width:15px;height:15px;border-radius:50%;background:#D62976;color:#fff;font-size:8.5px;font-weight:800;display:grid;place-items:center;line-height:1}
+.ss-ri .c{width:40px;height:40px}.ss-rl{gap:5px}.ss-rail{gap:4px}
+@media (max-height:800px){.ss-ri .c{width:36px;height:36px;font-size:17px}.ss-ri .l{font-size:9px}.ss-rl{gap:5px}.ss-ri:not([aria-pressed="true"]) .l{display:none}}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -5056,7 +5061,7 @@ const SSTC=[["#FFFFFF","#E8336D"],["#FFE14D","#1E1B24"],["#1E1B24","#FFFFFF"],["
 const SVB={byk:[270,90],gzl:[310,120],kgz:[330,130],tac:[250,170],kedi:[380,190],tav:[240,300],yanak:[430,100],sapka:[180,240],cicek:[440,160]};
 const AYLAR=["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
 const EMOF='"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif';
-let SS={tpl:"biz",ph:[],t:"",s:"",flt:"sicak",fx:"kalp",mo:"yok",ts:"klasik",sign:true,mode:"video",raf:0,t0:0,busy:false,res:null,stk:[],sel:null,edit:false,cur:0,showing:0,lines:null};
+let SS={tpl:"biz",ph:[],t:"",s:"",flt:"sicak",fx:"kalp",mo:"yok",ts:"klasik",sign:true,mode:"video",raf:0,t0:0,busy:false,res:null,stk:[],sel:null,edit:false,cur:0,showing:0,lines:null,tt:{k:"title",x:null,y:null,s:1,r:0}};
 const SSX=.7;function ssD(){const n=SS.ph.length;return n<=1?5:n===2?3.6:2.8;}
 function ssRnd(i){const x=Math.sin(i*127.1+311.7)*43758.5453;return x-Math.floor(x);}
 function ssSplit(){return STPL[SS.tpl].lay==="split";}
@@ -5086,7 +5091,7 @@ function ssWrap(ctx,txt,maxW,maxL){const w=String(txt).split(/\s+/),L=[];let c="
 /* çıkartmalar */
 const _ssM=document.createElement("canvas").getContext("2d");
 function ssBalLines(o){_ssM.font='800 52px "Nunito Sans",system-ui,'+EMOF;return ssWrap(_ssM,o.txt||"…",560,4);}
-function ssStBox(o){if(SVB[o.k])return SVB[o.k];if(o.k==="emo")return[180,180];
+function ssStBox(o){if(o.k==="title")return[o.w||600,o.h||200];if(SVB[o.k])return SVB[o.k];if(o.k==="emo")return[180,180];
   if(o.k==="txt"){_ssM.font='800 64px "Nunito Sans",system-ui,'+EMOF;return[_ssM.measureText(o.txt).width+72,104];}
   const L=ssBalLines(o);_ssM.font='800 52px "Nunito Sans",system-ui,'+EMOF;const w=Math.max(160,...L.map(l=>_ssM.measureText(l).width))+96;return[w,L.length*64+72];}
 function ssDrawK(ctx,o){const k=o.k;ctx.lineJoin="round";ctx.lineCap="round";
@@ -5110,7 +5115,7 @@ function ssDrawK(ctx,o){const k=o.k;ctx.lineJoin="round";ctx.lineCap="round";
 function ssDrawSt(ctx,o){ctx.save();ctx.translate(o.x,o.y);ctx.rotate(o.r||0);ctx.scale(o.s,o.s);ssDrawK(ctx,o);ctx.restore();}
 function ssStFor(i){const one=SS.ph.length===1;return SS.stk.filter(o=>o.ph===i||(o.ph===-1&&one));}
 function ssHasSt(i){return SS.stk.some(o=>o.ph===i);}
-function ssVisibleSt(){return SS.mode==="photo"?SS.stk.filter(o=>o.ph===-1||(SS.ph.length===1&&o.ph===0)):ssStFor(SS.cur);}
+function ssVisibleSt(){const L=SS.mode==="photo"?SS.stk.filter(o=>o.ph===-1||(SS.ph.length===1&&o.ph===0)):ssStFor(SS.cur);return!ssSplit()&&SS.tt.x!=null?[SS.tt,...L]:L;}
 
 /* metin */
 function ssText(ctx,t,still){const T=STPL[SS.tpl];
@@ -5123,6 +5128,9 @@ function ssText(ctx,t,still){const T=STPL[SS.tpl];
     const by=list?250:full?1560:300,ts=SS.ts;let font='400 112px "DM Serif Display",Georgia,serif',lh=118;
     if(ts==="el"){font='400 150px "Allura","DM Serif Display",cursive';lh=128;}else if(ts==="neon"){font='800 98px "Nunito Sans",system-ui,'+EMOF;lh=112;}else if(ts==="daktilo"){font='700 80px "Courier New",Courier,monospace';lh=96;}
     ctx.font=font;let tl=ssWrap(ctx,title,940,2);
+    const tyB=by-(top?0:(tl.length-1)*lh);let tw=Math.max(10,...tl.map(l=>ctx.measureText(l).width)),bot=tyB+(tl.length-1)*lh+lh*.25;if(sub&&!list){ctx.font='400 64px "Allura","DM Serif Display",cursive';const sl0=ssWrap(ctx,sub,900,2);tw=Math.max(tw,...sl0.map(l=>ctx.measureText(l).width));bot=tyB+(tl.length-1)*lh+96+(sl0.length-1)*72+22;ctx.font=font;}
+    const tTop=tyB-lh*.82,cy0=(tTop+bot)/2,TT=SS.tt;if(TT.x==null){TT.x=540;TT.y=cy0;}TT.w=tw+60;TT.h=bot-tTop+30;
+    ctx.save();ctx.translate(TT.x,TT.y);ctx.rotate(TT.r||0);ctx.scale(TT.s,TT.s);ctx.translate(-540,-cy0);
     if(ts==="daktilo"&&!still){let n=Math.floor(Math.max(0,t-.2)*16);tl=tl.map(l=>{const c=l.slice(0,Math.max(0,n));n-=l.length;return c;});const typing=tl.join("").length<title.replace(/\s+/g," ").length-1;if(typing&&Math.floor(t*3)%2===0){const li=tl.findIndex(l=>l.length===0);const at=li<0?tl.length-1:Math.max(0,li-1);tl[at]=tl[at]+"▌";}}
     ctx.globalAlpha=ts==="daktilo"?1:e(a1);const ty0=by-(top?0:(tl.length-1)*lh)+(ts==="daktilo"?0:(1-e(a1))*40);
     if(ts==="neon"){ctx.shadowColor=T.ac;ctx.shadowBlur=36;ctx.strokeStyle=T.ac;ctx.lineWidth=5;ctx.fillStyle="#FFFFFF";tl.forEach((l,i)=>{ctx.strokeText(l,540,ty0+i*lh);ctx.fillText(l,540,ty0+i*lh);ctx.fillText(l,540,ty0+i*lh);});}
@@ -5130,6 +5138,7 @@ function ssText(ctx,t,still){const T=STPL[SS.tpl];
     ctx.shadowColor="rgba(0,0,0,0)";
     const sy=ty0+(tl.length-1)*lh+96;
     if(sub&&!list){ctx.font='400 64px "Allura","DM Serif Display",cursive';const sl=ssWrap(ctx,sub,900,2);ctx.globalAlpha=e(a2);ctx.fillStyle=full?"#FFFFFF":T.ac;sl.forEach((l,i)=>ctx.fillText(l,540,sy+i*72+(1-e(a2))*30));}
+    ctx.restore();
     if(list){ctx.font='800 50px "Nunito Sans",system-ui,'+EMOF;ctx.textBaseline="middle";list.slice(0,5).forEach((l,j)=>{const a=still?1:Math.min(1,Math.max(0,(t-.9-j*.55)/.35));if(a<=0)return;const w=Math.min(960,ctx.measureText(l).width+80),y=1060+j*128;ctx.save();ctx.globalAlpha=a;ctx.translate(540,y);ctx.rotate((j%2?1:-1)*.02);ctx.scale(.85+.15*e(a),.85+.15*e(a));ctx.fillStyle=j%2?T.ac:"#FFFFFF";ctx.shadowColor="rgba(0,0,0,.3)";ctx.shadowBlur=16;ssRR(ctx,-w/2,-46,w,92,46);ctx.fill();ctx.shadowColor="rgba(0,0,0,0)";ctx.fillStyle="#1E1B24";ctx.fillText(l,0,4);ctx.restore();});}
     ctx.restore();}
   if(SS.sign){const dark=T.lay==="tam"||T.ink==="#FFFFFF";ctx.save();ctx.font='700 30px "Nunito Sans",system-ui,sans-serif';const s="♡ Me First · mefirst.app",w=ctx.measureText(s).width+44,x=540-w/2,y=1826;ctx.globalAlpha=.9;ctx.fillStyle=dark?"rgba(0,0,0,.28)":"rgba(255,255,255,.7)";ssRR(ctx,x,y,w,54,27);ctx.fill();ctx.fillStyle=dark?"#FFFFFF":T.ink;ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText(s,540,y+28);ctx.restore();}}
@@ -5201,7 +5210,7 @@ function ssPlay(){SS.edit=false;SS.sel=null;document.getElementById("sst").class
 function ssEdUi(){const b=document.getElementById("ss-edbar");if(!b)return;b.hidden=!SS.edit;if(!SS.edit)return;const ph=SS.mode==="photo";document.getElementById("ss-edt").textContent=ph?"✎ Kolaj":"✎ "+(SS.cur+1)+"/"+SS.ph.length;
   document.getElementById("ss-prev").hidden=ph||SS.ph.length<2;document.getElementById("ss-next").hidden=ph||SS.ph.length<2;}
 function ssSelUi(fromGesture){const c=document.getElementById("ss-selctl");if(!c)return;const o=SS.sel;c.hidden=!o;const pv=document.getElementById("ss-pvs");if(pv)pv.hidden=!!o;if(!o)return;
-  const tx=document.getElementById("ss-seltx"),txt=o.k==="txt"||o.k==="balon"||o.k==="dus";tx.hidden=!txt;if(txt&&!fromGesture&&document.activeElement!==tx)tx.value=o.txt||"";
+  const tx=document.getElementById("ss-seltx"),ti=o.k==="title",txt=ti||o.k==="txt"||o.k==="balon"||o.k==="dus";tx.hidden=!txt;if(txt&&!fromGesture&&document.activeElement!==tx)tx.value=ti?(SS.t||STPL[SS.tpl].t):o.txt||"";document.getElementById("ss-del").hidden=ti;document.getElementById("ss-front").hidden=ti;
   document.getElementById("ss-sz").value=Math.round(o.s*100);let deg=Math.round((o.r||0)*180/Math.PI)%360;if(deg>180)deg-=360;if(deg<-180)deg+=360;document.getElementById("ss-rt").value=deg;
   document.getElementById("ss-flip").hidden=!(o.k==="balon"||o.k==="dus");}
 function ssAddSt(o){if(!SS.ph.length){ssToast("Önce bir fotoğraf seç 📷");return;}if(!SS.edit)ssEdit(SS.mode==="photo"?0:SS.showing||0);
@@ -5227,7 +5236,7 @@ function ssStkUi(){const v=document.getElementById("ss-stk-v");if(!v)return;
   document.querySelectorAll("#ss-stk-t [data-st]").forEach(b=>b.onclick=()=>{const i=+b.dataset.st;ssAddSt({k:"txt",txt:STXT[i],c:i});});
   const bal=k=>{const i=document.getElementById("ss-baltx"),t=(i.value||"").trim()||(k==="balon"?"Anne bugün ödev yok!":"Acaba akşama ne pişirsem…");ssAddSt({k,txt:t,f:1});i.value="";};
   document.getElementById("ss-bal1").onclick=()=>bal("balon");document.getElementById("ss-bal2").onclick=()=>bal("dus");
-  document.getElementById("ss-seltx").oninput=e=>{if(SS.sel){SS.sel.txt=e.target.value||" ";}};
+  document.getElementById("ss-seltx").oninput=e=>{if(!SS.sel)return;if(SS.sel.k==="title"){SS.t=e.target.value;const i=document.getElementById("ss-t");if(i)i.value=SS.t;}else SS.sel.txt=e.target.value||" ";};
   document.getElementById("ss-sz").oninput=e=>{if(SS.sel)SS.sel.s=e.target.value/100;};
   document.getElementById("ss-rt").oninput=e=>{if(SS.sel)SS.sel.r=e.target.value*Math.PI/180;};
   document.getElementById("ss-flip").onclick=()=>{if(SS.sel)SS.sel.f=-(SS.sel.f||1);};
@@ -5255,14 +5264,14 @@ function ssFltThumb(k){const c0=SS.ph[SS.edit?SS.cur:SS.showing||0]||SS.ph[0];if
 const SFLI={yok:"🌿",sicak:"🌅",pastel:"🌸",film:"🎞",sb:"🖤"},SFXI={yok:"⊘",kalp:"💕",isilti:"✨",konfeti:"🎉",yildiz:"⭐"},SMOI={yok:"⏸",zoom:"💥",bumerang:"🔁",titre:"📳",glitch:"👾",vhs:"📼"};
 function ssRail(id,arr,cur,ico,fn,thumb){const el=document.getElementById(id);if(!el)return;el.innerHTML=arr.map(([k,l])=>{const im=thumb?ssFltThumb(k):"";return`<button type="button" class="ss-ri" data-k="${k}" aria-pressed="${k===cur}" aria-label="${l}"><span class="c no-mi"${im?` style="background-image:url(${im})"`:""}>${im?"":ico[k]}</span><span class="l">${l}</span></button>`;}).join("");
   el.querySelectorAll(".ss-ri").forEach(b=>b.onclick=()=>fn(b.dataset.k));}
-function ssRails(){ssRail("ss-flt",SFLT,SS.flt,SFLI,k=>{SS.flt=k;ssRails();},true);ssRail("ss-fx",SFX,SS.fx,SFXI,k=>{SS.fx=k;ssRails();});ssRail("ss-mo",SMO,SS.mo,SMOI,k=>{SS.mo=k;SS.t0=performance.now();ssRails();});}
+function ssRails(){ssRail("ss-flt",SFLT,SS.flt,SFLI,k=>{SS.flt=k;ssRails();},true);ssRail("ss-fx",SFX.filter(x=>x[0]!=="yok"),SS.fx,SFXI,k=>{SS.fx=SS.fx===k?"yok":k;ssRails();});ssRail("ss-mo",SMO.filter(x=>x[0]!=="yok"),SS.mo,SMOI,k=>{SS.mo=SS.mo===k?"yok":k;SS.t0=performance.now();ssRails();});}
 function ssFit(){const m=document.querySelector(".ss-main"),g=document.querySelector(".ss-main .ss-stage");if(!m||!g)return;const rl=m.querySelector(".ss-rail"),cw=m.clientWidth-2*(rl?rl.offsetWidth:54)-12,ch=m.clientHeight;if(cw<=0||ch<=0)return;let w=Math.min(cw,ch*9/16);g.style.width=Math.floor(w)+"px";g.style.height=Math.floor(w*16/9)+"px";}
 function ssTab(k){SS.tab=k;document.querySelectorAll(".ss-tab").forEach(b=>b.setAttribute("aria-pressed",b.dataset.tab===k));document.querySelectorAll("[data-pv]").forEach(p=>p.hidden=p.dataset.pv!==k);}
-function ssUi(){ssChips("ss-tpl",Object.entries(STPL).map(([k,v])=>[k,v.n,v.e]),SS.tpl,k=>{const T=STPL[k];SS.tpl=k;SS.flt=T.flt;SS.fx=T.fx;SS.mo=T.mo||"yok";SS.t="";SS.lines=null;SS.s=T.s();document.getElementById("ss-t").value="";document.getElementById("ss-s").value=SS.s;SS.t0=performance.now();ssUi();ssTextUi();ssPhRender();});
+function ssUi(){ssChips("ss-tpl",Object.entries(STPL).map(([k,v])=>[k,v.n,v.e]),SS.tpl,k=>{const T=STPL[k];SS.tpl=k;SS.tt={k:"title",x:null,y:null,s:1,r:0};SS.flt=T.flt;SS.fx=T.fx;SS.mo=T.mo||"yok";SS.t="";SS.lines=null;SS.s=T.s();document.getElementById("ss-t").value="";document.getElementById("ss-s").value=SS.s;SS.t0=performance.now();ssUi();ssTextUi();ssPhRender();});
   ssRails();ssChips("ss-ts",STS,SS.ts,k=>{SS.ts=k;SS.t0=performance.now();ssUi();});
   document.querySelectorAll("#ss-mode button").forEach(b=>{b.setAttribute("aria-pressed",b.dataset.m===SS.mode);b.onclick=()=>{if(SS.mode===b.dataset.m)return;SS.mode=b.dataset.m;SS.sel=null;if(SS.edit)ssPlay();SS.t0=performance.now();ssUi();ssPhRender();};});
   const g=document.getElementById("ss-go");if(!SS.busy){g.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';g.classList.remove("busy");g.style.removeProperty("--p");}g.setAttribute("aria-label",SS.mode==="photo"?"Story fotoğrafımı hazırla":"Story videomu hazırla");}
-function ssOpen(tpl){const O=document.getElementById("sst");const T=STPL[tpl]||STPL[SS.tpl];if(tpl&&STPL[tpl]){SS.tpl=tpl;SS.flt=T.flt;SS.fx=T.fx;SS.mo=T.mo||"yok";SS.t="";SS.lines=null;SS.s=T.s();}else if(!SS.s)SS.s=T.s();SS.edit=false;SS.sel=null;O.classList.remove("ss-editing");
+function ssOpen(tpl){const O=document.getElementById("sst");const T=STPL[tpl]||STPL[SS.tpl];if(tpl&&STPL[tpl]){SS.tpl=tpl;SS.tt={k:"title",x:null,y:null,s:1,r:0};SS.flt=T.flt;SS.fx=T.fx;SS.mo=T.mo||"yok";SS.t="";SS.lines=null;SS.s=T.s();}else if(!SS.s)SS.s=T.s();SS.edit=false;SS.sel=null;O.classList.remove("ss-editing");
   const tabs=[["tpl","🎨","Şablon"],["ph","🖼","Foto"],["stk","😜","Çıkartma"],["txt","🔤","Yazı"],["set","⚙️","Ayar"]];
   O.innerHTML=`<div class="ob-in ss-in">
   <div class="ss-top"><button class="ss-x" type="button" id="ss-x" aria-label="Kapat">✕</button><b class="ss-ttl">Story stüdyom</b>
@@ -5284,7 +5293,7 @@ function ssOpen(tpl){const O=document.getElementById("sst");const T=STPL[tpl]||S
     <div data-pv="stk" hidden><div class="ss-stk" id="ss-stk-v"></div><div class="ss-stk" id="ss-stk-e"></div><div class="ss-chips" id="ss-stk-t"></div>
      <div class="ss-bal no-mi"><input id="ss-baltx" type="text" maxlength="80" placeholder="Balona ne yazsın?" aria-label="Balon yazısı"><button type="button" id="ss-bal1" aria-label="Konuşma balonu ekle">💬</button><button type="button" id="ss-bal2" aria-label="Düşünce balonu ekle">💭</button></div></div>
     <div data-pv="txt" hidden><div class="ss-lab" id="ss-tlab">Yazı</div><input id="ss-t" type="text" maxlength="40"><input id="ss-s" type="text" maxlength="60" value="${esc(SS.s)}"><textarea id="ss-lines" rows="4" maxlength="200" aria-label="Özet satırları (her satır bir madde)" hidden></textarea>
-     <div id="ss-tsw"><div class="ss-lab">Yazı stili</div><div class="ss-chips" id="ss-ts"></div></div></div>
+     <p class="ss-hint">Başlığı önizlemede parmağınla taşı, iki parmakla büyüt ya da çevir.</p><div id="ss-tsw"><div class="ss-lab">Yazı stili</div><div class="ss-chips" id="ss-ts"></div></div></div>
     <div data-pv="set" hidden><label class="tog ss-tog"><input type="checkbox" id="ss-sign" ${SS.sign?"checked":""}><span>Köşede küçük “mefirst.app” imzası</span></label><p class="fine">Fotoğrafların hiçbir yere yüklenmez; story bu telefonda hazırlanır. Müziği Instagram ya da WhatsApp'ta paylaşırken ekleyebilirsin.</p></div>
    </div></div>
   <div class="ss-bot"><div class="ss-tabs">${tabs.map(([k,e,l])=>`<button type="button" class="ss-tab" data-tab="${k}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div><button class="ss-fab" type="button" id="ss-go"></button></div>
