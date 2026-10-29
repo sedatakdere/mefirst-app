@@ -2981,7 +2981,7 @@ function lkKey(k){if(LK.busy||LK.mode==="reset")return;if(LK.until>Date.now()){l
     if(LK.mode==="confirm"){if(v===LK.first){try{localStorage.setItem("mefirst-pin",v);}catch(e){}lkOk();}else{LK.mode="set";LK.first="";lkFail("Şifreler eşleşmedi, baştan belirleyelim.");}return;}
     if(v===lkPin())lkOk();else{LK.fails++;if(LK.fails>=5){LK.until=Date.now()+30000;LK.fails=0;lkFail("Çok fazla deneme. 30 saniye bekle.");}else lkFail("Şifre yanlış, tekrar dene.");}},140);}
 let _lvPrev=null;const _showLK=show;show=function(){const inL=step===9||step===10;const R=document.documentElement;
-  if(inL){if(_lvPrev===null)_lvPrev=R.dataset.mf||"day";R.dataset.mf="dusk";document.body.classList.add("love-on");const n=document.getElementById("lv-names");if(n)n.innerHTML=coupleLine();}
+  if(inL){if(_lvPrev===null){_lvPrev=R.dataset.mf||"day";tab="cycle";sub="today";}R.dataset.mf="dusk";document.body.classList.add("love-on");const n=document.getElementById("lv-names");if(n)n.innerHTML=coupleLine();}
   else if(_lvPrev!==null){R.dataset.mf=_lvPrev;_lvPrev=null;document.body.classList.remove("love-on");}
   document.body.classList.toggle("mf-on",step===60);if(window._lastStep!==step){document.body.style.minHeight="";window._lastStep=step;}_showLK();if(step===9){const b=document.getElementById("bnav");if(b)b.style.visibility="hidden";lkRender();}else{const b=document.getElementById("bnav");if(b)b.style.visibility="";}};
 function openLove(){if(love.unlocked){step=10;}else{lockSetup();step=9;}show();loveRender();}
