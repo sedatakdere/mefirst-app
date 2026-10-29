@@ -2500,6 +2500,15 @@ html[data-mf="dusk"] .ss-in2{background-color:#2A1F33;color:#fff}
 @keyframes spLet{0%{transform:translateY(18px) scale(.8);opacity:0;filter:blur(8px)}100%{transform:none;opacity:1;filter:none}}
 @keyframes spWrite{to{clip-path:inset(0 -10% 0 0)}}
 @keyframes spTw{0%{opacity:0;transform:translate(var(--x),var(--y)) scale(.3)}50%{opacity:1;transform:translate(var(--x),var(--y)) scale(1.3) rotate(25deg)}100%{opacity:.55;transform:translate(var(--x),var(--y)) scale(.9)}}
+
+/* v131: kalp halkaların tam ortasında, yazı altta */
+#mf-splash{--cy:42%}
+#mf-splash .sp-heart{position:absolute;left:50%;top:var(--cy);margin:-66px 0 0 -66px}
+#mf-splash .sp-glow{left:calc(50% - 180px);top:calc(var(--cy) - 180px)}
+#mf-splash .sp-ring{left:calc(50% - 75px);top:calc(var(--cy) - 75px)}
+#mf-splash .sp-dust,#mf-splash .sp-flash,#mf-splash .sp-s{top:var(--cy)}
+#mf-splash .sp-wm{position:absolute;left:0;right:0;top:calc(var(--cy) + 128px);justify-content:center;margin:0}
+#mf-splash .sp-tag{position:absolute;left:0;right:0;top:calc(var(--cy) + 184px);text-align:center}
 @media (prefers-reduced-motion:reduce){#mf-splash *{animation-duration:.01s!important;animation-delay:0s!important;transition-duration:.01s!important}}
 /* v129: parmak izi tuşu */
 .lk-pad .lk-fp{background:none!important;border-color:transparent!important;color:#F7A8C8;display:grid;place-items:center}
