@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Me First">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>[hidden]{display:none!important}html{-webkit-text-size-adjust:100%}body{margin:0}
 .gsur{margin-top:12px;border-radius:24px;position:relative;display:flex;flex-direction:column;overflow:hidden;
   background:radial-gradient(120% 90% at 0% 0%,color-mix(in srgb,var(--pink) 32%,transparent),transparent 60%),radial-gradient(110% 90% at 100% 100%,color-mix(in srgb,var(--lilac) 40%,transparent),transparent 60%),color-mix(in srgb,var(--surface) 70%,transparent);
@@ -238,6 +238,10 @@ html[data-mf="dusk"] .ss-in2{background-color:#2A1F33;color:#fff}
 
 .qst b{min-width:22px;white-space:nowrap;font-size:13.5px;padding:0 2px}
 .kq-n b{width:auto;white-space:nowrap}
+
+/* v127: alt menü kaydırınca gizlenir */
+.bnav{transition:transform .3s cubic-bezier(.2,.7,.2,1),opacity .3s}
+.bnav.nav-hide{transform:translateY(calc(100% + 8px));opacity:0;pointer-events:none}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -3216,7 +3220,7 @@ function lkKey(k){if(LK.busy||LK.mode==="reset")return;if(LK.until>Date.now()){l
 let _lvPrev=null;const _showLK=show;show=function(){const inL=step===9||step===10;const R=document.documentElement;
   if(inL){if(_lvPrev===null){_lvPrev=R.dataset.mf||"day";tab="formula";bzsub="hafta";}R.dataset.mf="dusk";document.body.classList.add("love-on");const n=document.getElementById("lv-names");if(n)n.innerHTML=coupleLine();}
   else if(_lvPrev!==null){R.dataset.mf=_lvPrev;_lvPrev=null;document.body.classList.remove("love-on");}
-  document.body.classList.toggle("mf-on",step===60);if(window._lastStep!==step){document.body.style.minHeight="";window._lastStep=step;}_showLK();try{surRender();ssBubRender();}catch(e){}if(step===9){const b=document.getElementById("bnav");if(b)b.style.visibility="hidden";lkRender();}else{const b=document.getElementById("bnav");if(b)b.style.visibility="";}};
+  document.body.classList.toggle("mf-on",step===60);if(window._lastStep!==step){document.body.style.minHeight="";window._lastStep=step;}_showLK();try{surRender();ssBubRender();}catch(e){}{const bn=document.getElementById("bnav");if(bn)bn.classList.remove("nav-hide");}if(step===9){const b=document.getElementById("bnav");if(b)b.style.visibility="hidden";lkRender();}else{const b=document.getElementById("bnav");if(b)b.style.visibility="";}};
 function openLove(){if(love.unlocked){step=10;}else{lockSetup();step=9;}show();loveRender();}
 
 const PKIND=[["kopek","🐶","Köpek"],["kedi","🐱","Kedi"],["kus","🐦","Kuş"],["diger","🐰","Diğer"]];
@@ -5411,6 +5415,12 @@ try{ssBubRender();}catch(e){}
   addEventListener("resize",all);try{document.fonts&&document.fonts.ready.then(all);}catch(e){}all();})();
 
 setInterval(()=>{try{if(typeof step==="undefined"||step!==0||document.hidden)return;const hx=document.getElementById("hx");if(!hx||hx.hidden)return;const now=new Date(),H=now.getHours()+now.getMinutes()/60,S=sunTimes(now),ph=(H<S.rise-.6||H>=S.set+.35)?"gece":H<S.rise+3?"sabah":H<S.set-1.5?"ogle":"aksam";if(!hx.classList.contains("sky-"+ph))homeRender();}catch(e){}},120000);
+
+(function(){let ly=window.scrollY,acc=0;const nav=()=>document.getElementById("bnav");
+  addEventListener("scroll",()=>{const y=window.scrollY,d=y-ly;ly=y;const n=nav();if(!n)return;const max=document.documentElement.scrollHeight-innerHeight;
+    if(y<40||max<120){n.classList.remove("nav-hide");acc=0;return;}if((d>0)!==(acc>0))acc=0;acc+=d;if(acc>28)n.classList.add("nav-hide");else if(acc<-14)n.classList.remove("nav-hide");},{passive:true});})();
+(function(){const sa=matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;if(!sa||matchMedia("(display-mode: fullscreen)").matches)return;
+  const go=()=>{const d=document.documentElement;if(!document.fullscreenElement&&d.requestFullscreen){try{d.requestFullscreen({navigationUI:"hide"}).catch(()=>{});}catch(e){}}};addEventListener("pointerup",go,{passive:true});})();
 </script>
 </body>
 </html>
