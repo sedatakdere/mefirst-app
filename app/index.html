@@ -2363,10 +2363,10 @@ html[data-mf="dusk"] .jr-tip,html[data-mf="dusk"] .jr-legend .fut{background:rgb
       <div><h2>Biz <em>ikimiz</em></h2><p class="lv-names" id="lv-names"></p></div></div>
       <p id="love-sub"></p>
       <div class="seg" role="tablist">
+        <button type="button" role="tab" data-tab="formula">💞 Biz</button>
         <button type="button" role="tab" data-tab="cycle">🌙 Döngü</button>
         <button type="button" role="tab" data-tab="night">💫 Plan</button>
         <button type="button" role="tab" data-tab="msg">💌 Mesaj</button>
-        <button type="button" role="tab" data-tab="formula">💞 Biz</button>
         <button type="button" role="tab" data-tab="games">🎲 Oyun</button>
       </div>
     </div>
@@ -2835,7 +2835,7 @@ function msgOrder(tn){const n=MSG[tn].length;let sent={};try{sent=JSON.parse(loc
 function msgMark(){bizAct("msg");const tn=love.tone,o=msgOrder(tn),i=o[mix%o.length];let sent={};try{sent=JSON.parse(localStorage.getItem("mefirst-msgsent")||"{}");}catch(e){}
   const S=(sent[tn]||[]).filter(x=>x!==i);S.push(i);sent[tn]=S.slice(-Math.floor(MSG[tn].length*.7));try{localStorage.setItem("mefirst-msgsent",JSON.stringify(sent));}catch(e){}}
 function curMsg(){const arr=MSG[love.tone],o=msgOrder(love.tone);let t=arr[o[mix%o.length]].split("{ad}").join((st.pname||"").trim()||"aşkım");return t.charAt(0).toLocaleUpperCase("tr-TR")+t.slice(1);}
-let tab="cycle",fx=0,sub="today",bzsub="hafta";let stg=null,tip="good",ptip="self";
+let tab="formula",fx=0,sub="today",bzsub="hafta";let stg=null,tip="good",ptip="self";
 const STAGE={
  "1-2":{e:"🌧",sky:"Yağmurlu ve yumuşak",m:[30,75,70],what:"Kanama ve kramplar genelde en yoğun; enerjin düşük, yorgun hissedebilirsin.",good:"Sıcak su torbası, bol su, demirden zengin yemekler (mercimek, ıspanak, kırmızı et) ve erken uyku.",style:"Koyu renk, yüksek bel, bol kesim. Regl külotu ya da gece pedi içini rahatlatır.",us:"\"Bugün beni biraz şımart\" demenin tam günü."},
  "3-4":{e:"🌤",sky:"Parçalı bulutlu",m:[55,50,50],what:"Akış azalıyor, kramplar hafifliyor. Enerji yavaş yavaş geri geliyor.",good:"Kısa bir yürüyüş, hafif esneme, sebze ağırlıklı öğünler.",style:"Rahat ama özenli: sevdiğin bir kazak ve hafif bir makyaj.",us:"Evde sakin bir film gecesi için güzel günler."},
@@ -2981,7 +2981,7 @@ function lkKey(k){if(LK.busy||LK.mode==="reset")return;if(LK.until>Date.now()){l
     if(LK.mode==="confirm"){if(v===LK.first){try{localStorage.setItem("mefirst-pin",v);}catch(e){}lkOk();}else{LK.mode="set";LK.first="";lkFail("Şifreler eşleşmedi, baştan belirleyelim.");}return;}
     if(v===lkPin())lkOk();else{LK.fails++;if(LK.fails>=5){LK.until=Date.now()+30000;LK.fails=0;lkFail("Çok fazla deneme. 30 saniye bekle.");}else lkFail("Şifre yanlış, tekrar dene.");}},140);}
 let _lvPrev=null;const _showLK=show;show=function(){const inL=step===9||step===10;const R=document.documentElement;
-  if(inL){if(_lvPrev===null){_lvPrev=R.dataset.mf||"day";tab="cycle";sub="today";}R.dataset.mf="dusk";document.body.classList.add("love-on");const n=document.getElementById("lv-names");if(n)n.innerHTML=coupleLine();}
+  if(inL){if(_lvPrev===null){_lvPrev=R.dataset.mf||"day";tab="formula";bzsub="hafta";}R.dataset.mf="dusk";document.body.classList.add("love-on");const n=document.getElementById("lv-names");if(n)n.innerHTML=coupleLine();}
   else if(_lvPrev!==null){R.dataset.mf=_lvPrev;_lvPrev=null;document.body.classList.remove("love-on");}
   document.body.classList.toggle("mf-on",step===60);if(window._lastStep!==step){document.body.style.minHeight="";window._lastStep=step;}_showLK();if(step===9){const b=document.getElementById("bnav");if(b)b.style.visibility="hidden";lkRender();}else{const b=document.getElementById("bnav");if(b)b.style.visibility="";}};
 function openLove(){if(love.unlocked){step=10;}else{lockSetup();step=9;}show();loveRender();}
