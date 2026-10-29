@@ -207,6 +207,34 @@ html[data-mf="dusk"] .ss-in2{background-color:#2A1F33;color:#fff}
 /* v122: Story stüdyosu şimdilik kapalı (kod duruyor, girişler gizli) */
 .ss-bub{display:none!important}
 .sky-line{max-width:calc(100% - 96px)!important}
+
+/* v125: alışveriş adetleri */
+.ksq{display:inline-flex;align-items:center;border-radius:99px;background:var(--bg);border:1.5px solid transparent;overflow:hidden}
+.ksq button{font:inherit;color:var(--ink);background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.kq-n{font-size:12.5px;font-weight:600;padding:6px 4px 6px 11px;display:inline-flex;align-items:center;gap:5px}
+.kq-n b{min-width:18px;height:18px;border-radius:99px;background:var(--deep);color:#fff;font-size:11px;display:inline-grid;place-items:center;padding:0 4px}
+.kq-p,.kq-m{width:28px;height:30px;font-size:17px!important;font-weight:800;color:var(--deep)!important;display:grid;place-items:center}
+.kq-m{padding-left:4px}
+.ksq.on{background:var(--tint);border-color:var(--deep)}
+.ksq.on .kq-n{padding-left:2px}
+.kci2{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:6px;background:var(--bg);border-radius:14px;padding:6px 6px 6px 8px}
+.kci2.on{background:var(--tint)}
+.kc-ck{width:30px;height:30px;border:0;background:none;cursor:pointer;display:grid;place-items:center;padding:0}
+.kc-ck i{width:22px;height:22px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center}
+.kci2.on .kc-ck i{background:var(--mint-d);border-color:var(--mint-d)}
+.kci2.on .kc-ck i::after{content:"";width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:translateY(-1px) rotate(45deg)}
+.kc-n{font:inherit;font-size:14px;color:var(--ink);text-align:left;background:none;border:0;cursor:pointer;padding:6px 0;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.kci2.on .kc-n{text-decoration:line-through;opacity:.6}
+.qst{display:flex;align-items:center;gap:2px;background:color-mix(in srgb,var(--surface) 80%,transparent);border-radius:99px;padding:2px}
+.qst button{width:30px;height:30px;border-radius:50%;border:0;background:none;color:var(--deep);font:inherit;font-size:17px;font-weight:800;cursor:pointer;display:grid;place-items:center}
+.qst button:active{background:var(--tint)}
+.qst b{min-width:18px;text-align:center;font-size:14px}
+.kci2.on .qst{opacity:.5}
+.danger{color:#C62850!important}
+.pill.danger{background:#E23E6A!important;color:#fff!important}
+.sure{display:flex;flex-direction:column;gap:8px;padding:12px 14px;border-radius:16px;background:color-mix(in srgb,#E23E6A 12%,var(--surface));border:1.5px solid color-mix(in srgb,#E23E6A 45%,transparent);animation:rise .25s ease both}
+.sure b{font-size:15px}.sure span{font-size:13px;opacity:.85}
+.sure div{display:flex;gap:8px;flex-wrap:wrap}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -4239,7 +4267,7 @@ const DCAT=[["hepsi","Hepsi"],["pratik","Pratik"],["sebze","Sebze"],["et","Et"],
 const BTY=[["elektrik","⚡","Elektrik"],["su","💧","Su"],["dogalgaz","🔥","Doğalgaz"],["internet","🌐","İnternet"],["telefon","📱","Telefon"],["aidat","🏠","Aidat"],["kira","🔑","Kira"],["kart","💳","Kredi kartı"],["diger","🧾","Diğer"]];
 const CHQ=["Bulaşık","Çamaşır","Ütü","Toz alma","Süpürge","Banyo temizliği","Çöpü çıkarma","Market alışverişi","Çiçekleri sulama","Yatakları toplama"];
 const GUN7=["Pzt","Sal","Çar","Per","Cum","Cmt","Paz"];
-let etab="shop",scat="manav",dcat="hepsi",eday=null;
+let etab="shop",scat="manav",dcat="hepsi",eday=null;let shClr=false;
 function ev(){if(!st.ev)st.ev={shop:[],plan:{},bills:[],chores:[]};return st.ev;}
 function ym(){const d=new Date();return d.getFullYear()+"-"+(d.getMonth()+1);}
 function wkKey(){const d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()-((d.getDay()+6)%7));return dkey(d);}
@@ -4247,26 +4275,34 @@ function billDue(b){const t=new Date();t.setHours(0,0,0,0);const last=new Date(t
 function addShop(n,cat){const E=ev();const ex=E.shop.find(x=>x.n.toLocaleLowerCase("tr-TR")===n.toLocaleLowerCase("tr-TR")&&!x.done);if(ex)return false;E.shop.push({n,cat:cat||ICAT[n.toLocaleLowerCase("tr-TR")]||"diger",done:false});return true;}
 function evRender(){
   const E=ev(),P=document.getElementById("epanel");
-  document.querySelectorAll(".eseg button").forEach(b=>{b.setAttribute("aria-selected",b.dataset.et===etab);b.onclick=()=>{etab=b.dataset.et;evRender();};});
+  document.querySelectorAll(".eseg button").forEach(b=>{b.setAttribute("aria-selected",b.dataset.et===etab);b.onclick=()=>{etab=b.dataset.et;shClr=false;evRender();};});
   const open=E.shop.filter(x=>!x.done).length,unpaid=E.bills.filter(b=>!(b.paid||{})[ym()]),soon=unpaid.filter(b=>{const d=billDue(b);return d>=0&&d<=3;});
   const wd=(new Date().getDay()+6)%7;const today=E.plan[wd];
   document.getElementById("esum").innerHTML=`<span><b>${open}</b> alınacak</span><span><b>${today?esc(today):"–"}</b> bu akşam</span><span class="${soon.length?"warn":""}"><b>${unpaid.length}</b> ödenmemiş fatura</span>`;
-  if(etab==="shop"){const groups=SCAT.map(([id,e,l])=>[id,e,l,E.shop.filter(x=>x.cat===id)]).filter(g=>g[3].length);
+  if(etab==="shop"){const groups=SCAT.map(([id,e,l])=>[id,e,l,E.shop.filter(x=>x.cat===id)]).filter(g=>g[3].length);const qOf=n=>{const x=E.shop.find(y=>y.n===n&&!y.done);return x?(x.q||1):0;};const tot=E.shop.filter(x=>!x.done).reduce((a,x)=>a+(x.q||1),0);
     P.innerHTML=`<div class="lcard t-peach"><h3><span class="step">🛒</span>Listeye ekle</h3>
       <div class="addrow"><input id="sh-n" type="text" maxlength="40" placeholder="ör. Süt, deterjan…"><button class="pill" id="sh-add" type="button">Ekle</button></div>
       <div class="mealtabs">${SCAT.map(([id,e,l])=>`<button type="button" class="wcat" data-sc="${id}" aria-selected="${id===scat}"><span>${e}</span>${l}</button>`).join("")}</div>
-      <div class="ksubs">${SQUICK[scat].map(n=>`<button type="button" class="ksub" data-q="${esc(n)}" aria-pressed="${E.shop.some(x=>x.n===n&&!x.done)}">${esc(n)}</button>`).join("")}</div></div>
-      <div class="lcard t-butter"><h3><span class="step">🧺</span>Alışveriş listem<span class="nextf">${open} kalem</span></h3>
-      ${groups.length?groups.map(([id,e,l,items])=>`<div class="sgrp"><div class="sgh">${e} ${l}</div>${items.map(x=>`<button type="button" class="kci${x.done?" on":""}" data-si="${E.shop.indexOf(x)}"><span>${esc(x.n)}</span><i></i></button>`).join("")}</div>`).join(""):'<p class="empty">Listen boş. Yukarıdan dokunarak ekle ya da yemek planından malzemeleri ekle.</p>'}
-      ${E.shop.length?`<div class="eact"><button class="pill" id="sh-copy" type="button">📋 Listeyi kopyala</button>${E.shop.some(x=>x.done)?'<button class="ghost" id="sh-clr" type="button">Alınanları temizle</button>':""}</div><p class="fine" id="sh-msg">Kopyalayıp WhatsApp'tan eşine gönderebilirsin.</p>`:""}</div>`;
-    const add=()=>{const v=document.getElementById("sh-n").value.trim();if(!v)return;addShop(v);save();evRender();setTimeout(()=>{const i=document.getElementById("sh-n");if(i)i.focus();},0);};
+      <div class="ksubs">${SQUICK[scat].map(n=>{const q=qOf(n);return`<div class="ksq${q?" on":""}">${q?`<button type="button" class="kq-m" data-qm="${esc(n)}" aria-label="${esc(n)} bir azalt">−</button>`:""}<button type="button" class="kq-n" data-qp="${esc(n)}">${esc(n)}${q?`<b>${q}</b>`:""}</button><button type="button" class="kq-p" data-qp="${esc(n)}" aria-label="${esc(n)} bir ekle">+</button></div>`;}).join("")}</div>
+      <p class="fine">Her + bir adet ekler; süt ×2 için iki kez dokun.</p></div>
+      <div class="lcard t-butter"><h3><span class="step">🧺</span>Alışveriş listem<span class="nextf">${open} kalem${tot>open?" · "+tot+" adet":""}</span></h3>
+      ${groups.length?groups.map(([id,e,l,items])=>`<div class="sgrp"><div class="sgh">${e} ${l}</div>${items.map(x=>{const i=E.shop.indexOf(x),q=x.q||1;return`<div class="kci2${x.done?" on":""}"><button type="button" class="kc-ck" data-si="${i}" aria-label="${esc(x.n)} ${x.done?"alınmadı":"alındı"} olarak işaretle"><i></i></button><button type="button" class="kc-n" data-si="${i}">${esc(x.n)}</button><div class="qst"><button type="button" data-sm="${i}" aria-label="${q>1?"Bir azalt":"Listeden çıkar"}">${q>1?"−":"🗑"}</button><b>${q}</b><button type="button" data-sp="${i}" aria-label="Bir ekle">+</button></div></div>`;}).join("")}</div>`).join(""):'<p class="empty">Listen boş. Yukarıdan dokunarak ekle ya da yemek planından malzemeleri ekle.</p>'}
+      ${E.shop.length?(shClr?`<div class="sure" role="alertdialog" aria-label="Sepeti temizle"><b>Emin misin?</b><span>Listendeki ${E.shop.length} kalemin hepsi silinecek. Bu geri alınamaz.</span><div><button class="pill danger" id="sh-yes" type="button">Evet, temizle</button><button class="pill" id="sh-no" type="button">Vazgeç</button></div></div>`
+        :`<div class="eact"><button class="pill" id="sh-copy" type="button">📋 Listeyi kopyala</button>${E.shop.some(x=>x.done)?'<button class="ghost" id="sh-clr" type="button">Alınanları temizle</button>':""}<button class="ghost danger" id="sh-all" type="button">🗑 Sepeti temizle</button></div><p class="fine" id="sh-msg">Kopyalayıp WhatsApp'tan eşine gönderebilirsin.</p>`):""}</div>`;
+    const add=()=>{const v=document.getElementById("sh-n").value.trim();if(!v)return;if(!addShop(v)){const ex=E.shop.find(x=>x.n.toLocaleLowerCase("tr-TR")===v.toLocaleLowerCase("tr-TR")&&!x.done);if(ex)ex.q=(ex.q||1)+1;}save();evRender();setTimeout(()=>{const i=document.getElementById("sh-n");if(i)i.focus();},0);};
     document.getElementById("sh-add").onclick=add;document.getElementById("sh-n").addEventListener("keydown",e=>{if(e.key==="Enter")add();});
     P.querySelectorAll("[data-sc]").forEach(b=>b.onclick=()=>{scat=b.dataset.sc;evRender();});
-    P.querySelectorAll("[data-q]").forEach(b=>b.onclick=()=>{const n=b.dataset.q;const ex=E.shop.find(x=>x.n===n&&!x.done);if(ex)E.shop.splice(E.shop.indexOf(ex),1);else addShop(n,scat);save();evRender();});
+    P.querySelectorAll("[data-qp]").forEach(b=>b.onclick=()=>{const n=b.dataset.qp;const ex=E.shop.find(x=>x.n===n&&!x.done);if(ex)ex.q=(ex.q||1)+1;else addShop(n,scat);save();evRender();});
+    P.querySelectorAll("[data-qm]").forEach(b=>b.onclick=()=>{const n=b.dataset.qm;const ex=E.shop.find(x=>x.n===n&&!x.done);if(!ex)return;if((ex.q||1)>1)ex.q--;else E.shop.splice(E.shop.indexOf(ex),1);save();evRender();});
     P.querySelectorAll("[data-si]").forEach(b=>b.onclick=()=>{const x=E.shop[+b.dataset.si];x.done=!x.done;save();evRender();});
-    const cp=document.getElementById("sh-copy");if(cp)cp.onclick=()=>{const txt="🛒 Alışveriş listesi\n"+SCAT.map(([id,e,l])=>{const it=E.shop.filter(x=>x.cat===id&&!x.done);return it.length?`\n${l}:\n`+it.map(x=>"• "+x.n).join("\n"):"";}).join("");
+    P.querySelectorAll("[data-sp]").forEach(b=>b.onclick=()=>{const x=E.shop[+b.dataset.sp];x.q=(x.q||1)+1;save();evRender();});
+    P.querySelectorAll("[data-sm]").forEach(b=>b.onclick=()=>{const i=+b.dataset.sm,x=E.shop[i];if((x.q||1)>1)x.q--;else E.shop.splice(i,1);save();evRender();});
+    const cp=document.getElementById("sh-copy");if(cp)cp.onclick=()=>{const txt="🛒 Alışveriş listesi\n"+SCAT.map(([id,e,l])=>{const it=E.shop.filter(x=>x.cat===id&&!x.done);return it.length?`\n${l}:\n`+it.map(x=>"• "+x.n+((x.q||1)>1?" ×"+x.q:"")).join("\n"):"";}).join("");
       const m=document.getElementById("sh-msg");try{navigator.clipboard.writeText(txt).then(()=>m.textContent="Kopyalandı! WhatsApp'a yapıştırabilirsin 📋",()=>m.textContent="Kopyalanamadı; listeyi elle seçip kopyalayabilirsin.");}catch(e){m.textContent="Kopyalanamadı; listeyi elle seçip kopyalayabilirsin.";}};
-    const cl=document.getElementById("sh-clr");if(cl)cl.onclick=()=>{E.shop=E.shop.filter(x=>!x.done);save();evRender();};}
+    const cl=document.getElementById("sh-clr");if(cl)cl.onclick=()=>{E.shop=E.shop.filter(x=>!x.done);save();evRender();};
+    const ca=document.getElementById("sh-all");if(ca)ca.onclick=()=>{shClr=true;evRender();const s=P.querySelector(".sure");if(s)s.scrollIntoView({behavior:"smooth",block:"center"});};
+    const cy=document.getElementById("sh-yes");if(cy)cy.onclick=()=>{E.shop=[];shClr=false;save();evRender();};
+    const cn=document.getElementById("sh-no");if(cn)cn.onclick=()=>{shClr=false;evRender();};}
   if(etab==="meal"){if(eday===null)eday=wd;const list=DISH.filter(d=>dcat==="hepsi"||d[1]===dcat);const di=di0();
     const sug=list[((di+eday)%list.length+list.length)%list.length];
     P.innerHTML=`<div class="lcard t-mint"><h3><span class="step">🍲</span>Bu haftanın akşam yemekleri</h3>
