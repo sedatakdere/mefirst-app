@@ -155,6 +155,45 @@ html[data-mf="dusk"] .ss-in2{background-color:#2A1F33;color:#fff}
 .ss-bal input{flex:1;min-width:0;font:inherit;font-size:14px;padding:10px 14px;border-radius:99px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
 .ss-bal button{flex:0 0 44px;height:44px;border-radius:50%;border:0;cursor:pointer;font-size:22px;background:var(--surface);box-shadow:0 4px 12px -8px rgba(0,0,0,.35)}
 #ss-lines{font:inherit;font-size:14px;padding:10px 14px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);resize:none;width:100%;box-sizing:border-box}
+/* Story stüdyosu: tek ekran düzeni */
+.sst{padding:0!important;overflow:hidden!important}
+.sst .ss-in{height:100vh;height:100dvh;min-height:0!important;max-width:520px;box-sizing:border-box;display:flex;flex-direction:column;gap:8px!important;padding:calc(8px + env(safe-area-inset-top,0px)) 10px calc(8px + env(safe-area-inset-bottom,0px))!important;animation:none!important}
+.ss-top{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.ss-x{width:36px;height:36px;border-radius:50%;border:0;background:color-mix(in srgb,var(--surface) 80%,transparent);color:var(--ink);font-size:15px;cursor:pointer;flex:0 0 auto}
+.ss-ttl{flex:1;font-family:var(--f-display);font-weight:400;font-size:19px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ss-top .ss-mode{width:auto!important;margin:0!important;flex:0 0 auto}
+.ss-top .ss-mode button{font-size:12px!important;padding:7px 11px!important}
+.ss-main{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:54px minmax(0,1fr) 54px;grid-template-rows:minmax(0,1fr);gap:6px}
+.ss-main .ss-stage{max-height:100%;max-width:100%;justify-self:center;align-self:center;min-height:0;aspect-ratio:auto}
+.sst.ss-editing .ss-stage{box-shadow:0 0 0 3px #D62976,0 22px 50px -24px rgba(60,20,60,.55)}
+.ss-rail{display:flex;flex-direction:column;align-items:center;gap:6px;overflow-y:auto;scrollbar-width:none;padding:2px 0 8px;min-height:0}
+.ss-rail::-webkit-scrollbar{display:none}
+.ss-rail>small{font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.ss-rl{display:flex;flex-direction:column;gap:7px;align-items:center}
+.ss-ri{display:flex;flex-direction:column;align-items:center;gap:2px;border:0;background:none;color:var(--ink);font:inherit;cursor:pointer;width:54px;padding:0;-webkit-tap-highlight-color:transparent}
+.ss-ri .c{width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--surface) 85%,transparent) center/cover no-repeat;display:grid;place-items:center;font-size:19px;line-height:1;transition:box-shadow .15s,transform .12s}
+.ss-ri:active .c{transform:scale(.9)}
+.ss-ri .l{font-size:9.5px;font-weight:700;line-height:1.1;text-align:center;opacity:.85;max-width:54px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ss-ri[aria-pressed="true"] .c{box-shadow:0 0 0 2.5px var(--bg),0 0 0 5px #D62976}
+.ss-ri[aria-pressed="true"] .l{color:#D62976;opacity:1}
+.ss-msg{position:absolute;left:10px;right:10px;top:10px;margin:0;z-index:2;background:rgba(20,10,25,.7);color:#fff!important;border-radius:14px;padding:8px 10px;font-size:12px!important}
+.ss-pan{flex:0 0 auto;height:150px;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;background:color-mix(in srgb,var(--surface) 45%,transparent);border-radius:18px;padding:10px}
+.ss-pan::-webkit-scrollbar{display:none}
+.ss-pan [data-pv]{display:flex;flex-direction:column;gap:8px}
+.ss-pan input[type=text],.ss-pan textarea{font:inherit;font-size:14px;padding:9px 12px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);width:100%;box-sizing:border-box}
+.ss-wrap{flex-wrap:wrap;overflow:visible}
+.ss-hint{margin:0;font-size:11.5px;color:var(--muted);text-align:center}
+.ss-pan .ss-dur{margin:0}
+.ss-pan .ss-selctl{background:none;box-shadow:none;padding:0}
+.ss-selb .ok{background:#D62976!important;color:#fff!important}
+.ss-bot{flex:0 0 auto;display:flex;align-items:center;gap:8px}
+.ss-tabs{flex:1;display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:color-mix(in srgb,var(--surface) 55%,transparent);border-radius:18px;padding:3px}
+.ss-tab{font:inherit;font-size:10.5px;font-weight:700;border:0;border-radius:14px;background:none;color:var(--ink);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:1px;padding:5px 0;opacity:.75}
+.ss-tab span{font-size:17px;line-height:1.1}
+.ss-tab[aria-pressed="true"]{background:var(--surface);opacity:1;box-shadow:0 4px 10px -6px rgba(0,0,0,.3)}
+.ss-bot .ss-fab{position:static!important;width:54px;height:54px;flex:0 0 auto;box-shadow:0 10px 22px -10px rgba(150,40,120,.75)!important}
+.ss-in .ss-empty b{font-size:18px}.ss-in .ss-empty span{font-size:34px}
+@media (max-height:700px){.ss-pan{height:124px}.ss-main{grid-template-columns:50px minmax(0,1fr) 50px}.ss-ri .c{width:38px;height:38px}}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -5006,9 +5045,9 @@ const STPL={
  niyet:{n:"Niyetim",e:"✨",bg:["#160F33","#5B3B8C"],ac:"#E9C46A",ink:"#FFFFFF",lay:"tam",fx:"yildiz",flt:"film",t:"Niyetim",s:()=>{const R=rit();return R&&R.text?R.text:"Her gün biraz daha yakın";}},
  sukran:{n:"Şükran",e:"🫶",bg:["#FFF1E2","#FFC9B5"],ac:"#E05A2B",ink:"#4E342E",lay:"pol",fx:"isilti",flt:"sicak",t:"Bugün minnettarım",s:()=>"Küçük şeyler, büyük mutluluklar"}
 };
-const SFLT=[["yok","Doğal"],["sicak","Sıcak"],["pastel","Pastel"],["film","Film"],["sb","Siyah-beyaz"]];
+const SFLT=[["yok","Doğal"],["sicak","Sıcak"],["pastel","Pastel"],["film","Film"],["sb","S/B"]];
 const SFX=[["yok","Sade"],["kalp","Kalpler"],["isilti","Işıltı"],["konfeti","Konfeti"],["yildiz","Yıldızlar"]];
-const SMO=[["yok","Sakin"],["zoom","Zoom vuruşu"],["bumerang","Bumerang"],["titre","Titreme"],["glitch","Glitch"],["vhs","Eski kaset"]];
+const SMO=[["yok","Sakin"],["zoom","Zoom"],["bumerang","Bumerang"],["titre","Titreme"],["glitch","Glitch"],["vhs","Eski kaset"]];
 const STS=[["klasik","Klasik"],["el","El yazısı"],["neon","Neon"],["daktilo","Daktilo"]];
 const SSTK=[["byk","Bıyık"],["gzl","Gözlük"],["kgz","Kalp gözlük"],["tac","Taç"],["kedi","Kedi kulağı"],["tav","Tavşan kulağı"],["yanak","Allık"],["sapka","Parti şapkası"],["cicek","Çiçek taç"]];
 const SEMO=["😂","😍","🥳","🙄","😴","🤪","🔥","💯","❤️","☕","🍕","💅","🫠","👀"];
@@ -5161,7 +5200,7 @@ function ssEdit(i){if(!SS.ph.length)return;SS.edit=true;SS.cur=Math.max(0,Math.m
 function ssPlay(){SS.edit=false;SS.sel=null;document.getElementById("sst").classList.remove("ss-editing");SS.t0=performance.now();ssEdUi();ssSelUi();}
 function ssEdUi(){const b=document.getElementById("ss-edbar");if(!b)return;b.hidden=!SS.edit;if(!SS.edit)return;const ph=SS.mode==="photo";document.getElementById("ss-edt").textContent=ph?"✎ Kolaj":"✎ "+(SS.cur+1)+"/"+SS.ph.length;
   document.getElementById("ss-prev").hidden=ph||SS.ph.length<2;document.getElementById("ss-next").hidden=ph||SS.ph.length<2;}
-function ssSelUi(fromGesture){const c=document.getElementById("ss-selctl");if(!c)return;const o=SS.sel;c.hidden=!o;if(!o)return;
+function ssSelUi(fromGesture){const c=document.getElementById("ss-selctl");if(!c)return;const o=SS.sel;c.hidden=!o;const pv=document.getElementById("ss-pvs");if(pv)pv.hidden=!!o;if(!o)return;
   const tx=document.getElementById("ss-seltx"),txt=o.k==="txt"||o.k==="balon"||o.k==="dus";tx.hidden=!txt;if(txt&&!fromGesture&&document.activeElement!==tx)tx.value=o.txt||"";
   document.getElementById("ss-sz").value=Math.round(o.s*100);let deg=Math.round((o.r||0)*180/Math.PI)%360;if(deg>180)deg-=360;if(deg<-180)deg+=360;document.getElementById("ss-rt").value=deg;
   document.getElementById("ss-flip").hidden=!(o.k==="balon"||o.k==="dus");}
@@ -5206,39 +5245,50 @@ function ssPhRender(){const el=document.getElementById("ss-ph");if(!el)return;el
   el.querySelectorAll("[data-mv]").forEach(b=>b.onclick=()=>{const i=+b.dataset.mv;[SS.ph[i-1],SS.ph[i]]=[SS.ph[i],SS.ph[i-1]];SS.stk.forEach(o=>{if(o.ph===i)o.ph=i-1;else if(o.ph===i-1)o.ph=i;});SS.t0=performance.now();ssPhRender();});
   el.querySelectorAll("[data-ed]").forEach(b=>b.onclick=()=>{ssEdit(+b.dataset.ed);SS.sel=null;ssSelUi();});
   document.getElementById("ss-empty").hidden=!!SS.ph.length;const n=document.getElementById("ss-dur");
-  if(n)n.textContent=SS.mode==="photo"?(ssSplit()?"İlk iki fotoğraf karşılaştırılır":SS.ph.length>4?"Kolajda ilk 4 fotoğraf kullanılır":"Tek kare kolaj"):(SS.ph.length?(ssSplit()&&SS.ph.length<2?"Karşılaştırma için 2 fotoğraf seç · ":"")+"Yaklaşık "+Math.round(ssTotal())+" saniyelik video":"");}
+  try{ssRails();}catch(e){}if(n)n.textContent=SS.mode==="photo"?(ssSplit()?"İlk iki fotoğraf karşılaştırılır":SS.ph.length>4?"Kolajda ilk 4 fotoğraf kullanılır":"Tek kare kolaj"):(SS.ph.length?(ssSplit()&&SS.ph.length<2?"Karşılaştırma için 2 fotoğraf seç · ":"")+"Yaklaşık "+Math.round(ssTotal())+" saniyelik video":"");}
 function ssChips(id,arr,cur,fn){const el=document.getElementById(id);el.innerHTML=arr.map(([k,l,e])=>`<button type="button" class="ss-chip" data-k="${k}" aria-pressed="${k===cur}">${e?`<span class="no-mi">${e}</span>`:""}${l}</button>`).join("");el.querySelectorAll(".ss-chip").forEach(b=>b.onclick=()=>{fn(b.dataset.k);});}
 function ssTextUi(){const T=STPL[SS.tpl],sp=T.lay==="split",ti=document.getElementById("ss-t"),si=document.getElementById("ss-s"),li=document.getElementById("ss-lines");
   document.getElementById("ss-tlab").textContent=sp?"Etiketler":"Yazı";ti.placeholder=sp?T.L[0]:T.t;ti.setAttribute("aria-label",sp?"Üst etiket":"Başlık");si.placeholder=sp?T.L[1]:"Alt yazı (isteğe bağlı)";si.setAttribute("aria-label",sp?"Alt etiket":"Alt yazı");
   si.hidden=!!T.lines;li.hidden=!T.lines;if(T.lines&&document.activeElement!==li)li.value=(SS.lines||T.lines).join("\n");document.getElementById("ss-tsw").hidden=sp;}
+function ssFltThumb(k){const c0=SS.ph[SS.edit?SS.cur:SS.showing||0]||SS.ph[0];if(!c0)return"";c0._ft=c0._ft||{};if(c0._ft[k])return c0._ft[k];
+  const c=document.createElement("canvas");c.width=c.height=84;const g=c.getContext("2d"),f=SS.flt;ssCover(g,c0,0,0,84,84,1,0,0);SS.flt=k;try{ssFilter(g,0,0,84,84,1);}finally{SS.flt=f;}return c0._ft[k]=c.toDataURL("image/jpeg",.8);}
+const SFLI={yok:"🌿",sicak:"🌅",pastel:"🌸",film:"🎞",sb:"🖤"},SFXI={yok:"⊘",kalp:"💕",isilti:"✨",konfeti:"🎉",yildiz:"⭐"},SMOI={yok:"⏸",zoom:"💥",bumerang:"🔁",titre:"📳",glitch:"👾",vhs:"📼"};
+function ssRail(id,arr,cur,ico,fn,thumb){const el=document.getElementById(id);if(!el)return;el.innerHTML=arr.map(([k,l])=>{const im=thumb?ssFltThumb(k):"";return`<button type="button" class="ss-ri" data-k="${k}" aria-pressed="${k===cur}" aria-label="${l}"><span class="c no-mi"${im?` style="background-image:url(${im})"`:""}>${im?"":ico[k]}</span><span class="l">${l}</span></button>`;}).join("");
+  el.querySelectorAll(".ss-ri").forEach(b=>b.onclick=()=>fn(b.dataset.k));}
+function ssRails(){ssRail("ss-flt",SFLT,SS.flt,SFLI,k=>{SS.flt=k;ssRails();},true);ssRail("ss-fx",SFX,SS.fx,SFXI,k=>{SS.fx=k;ssRails();});ssRail("ss-mo",SMO,SS.mo,SMOI,k=>{SS.mo=k;SS.t0=performance.now();ssRails();});}
+function ssFit(){const m=document.querySelector(".ss-main"),g=document.querySelector(".ss-main .ss-stage");if(!m||!g)return;const rl=m.querySelector(".ss-rail"),cw=m.clientWidth-2*(rl?rl.offsetWidth:54)-12,ch=m.clientHeight;if(cw<=0||ch<=0)return;let w=Math.min(cw,ch*9/16);g.style.width=Math.floor(w)+"px";g.style.height=Math.floor(w*16/9)+"px";}
+function ssTab(k){SS.tab=k;document.querySelectorAll(".ss-tab").forEach(b=>b.setAttribute("aria-pressed",b.dataset.tab===k));document.querySelectorAll("[data-pv]").forEach(p=>p.hidden=p.dataset.pv!==k);}
 function ssUi(){ssChips("ss-tpl",Object.entries(STPL).map(([k,v])=>[k,v.n,v.e]),SS.tpl,k=>{const T=STPL[k];SS.tpl=k;SS.flt=T.flt;SS.fx=T.fx;SS.mo=T.mo||"yok";SS.t="";SS.lines=null;SS.s=T.s();document.getElementById("ss-t").value="";document.getElementById("ss-s").value=SS.s;SS.t0=performance.now();ssUi();ssTextUi();ssPhRender();});
-  ssChips("ss-flt",SFLT,SS.flt,k=>{SS.flt=k;ssUi();});ssChips("ss-fx",SFX,SS.fx,k=>{SS.fx=k;ssUi();});ssChips("ss-mo",SMO,SS.mo,k=>{SS.mo=k;SS.t0=performance.now();ssUi();});ssChips("ss-ts",STS,SS.ts,k=>{SS.ts=k;SS.t0=performance.now();ssUi();});
+  ssRails();ssChips("ss-ts",STS,SS.ts,k=>{SS.ts=k;SS.t0=performance.now();ssUi();});
   document.querySelectorAll("#ss-mode button").forEach(b=>{b.setAttribute("aria-pressed",b.dataset.m===SS.mode);b.onclick=()=>{if(SS.mode===b.dataset.m)return;SS.mode=b.dataset.m;SS.sel=null;if(SS.edit)ssPlay();SS.t0=performance.now();ssUi();ssPhRender();};});
-  const g=document.getElementById("ss-go"),l=document.getElementById("ss-fab-l");if(!SS.busy){g.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';g.classList.remove("busy");g.style.removeProperty("--p");}g.setAttribute("aria-label",SS.mode==="photo"?"Story fotoğrafımı hazırla":"Story videomu hazırla");if(l)l.textContent=SS.busy?"Hazırlanıyor…":SS.mode==="photo"?"Fotoğrafı hazırla":"Videoyu hazırla";}
+  const g=document.getElementById("ss-go");if(!SS.busy){g.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';g.classList.remove("busy");g.style.removeProperty("--p");}g.setAttribute("aria-label",SS.mode==="photo"?"Story fotoğrafımı hazırla":"Story videomu hazırla");}
 function ssOpen(tpl){const O=document.getElementById("sst");const T=STPL[tpl]||STPL[SS.tpl];if(tpl&&STPL[tpl]){SS.tpl=tpl;SS.flt=T.flt;SS.fx=T.fx;SS.mo=T.mo||"yok";SS.t="";SS.lines=null;SS.s=T.s();}else if(!SS.s)SS.s=T.s();SS.edit=false;SS.sel=null;O.classList.remove("ss-editing");
-  O.innerHTML=`<div class="ob-in ss-in"><button class="zs-x" type="button" id="ss-x" aria-label="Kapat">✕</button>
-  <div class="ss-hero"><small>Story stüdyom</small><h2>Anlarını <em>story</em> yap</h2></div>
-  <div class="ss-stw"><div class="ss-stage"><canvas id="ss-cv" width="540" height="960" aria-label="Story önizlemesi"></canvas><label class="ss-empty" id="ss-empty" for="ss-file"><span class="no-mi">📷</span><b>Fotoğraflarını seç</b><small>En fazla 8 fotoğraf · telefonundan çıkmaz</small></label>
-   <div class="ss-edbar no-mi" id="ss-edbar" hidden><button type="button" id="ss-prev" aria-label="Önceki fotoğraf">‹</button><span id="ss-edt"></span><button type="button" id="ss-next" aria-label="Sonraki fotoğraf">›</button><button type="button" class="ss-play" id="ss-play">▶ Oynat</button></div></div>
-  <div class="ss-selctl no-mi" id="ss-selctl" hidden><input id="ss-seltx" type="text" maxlength="80" placeholder="Yazıyı değiştir" aria-label="Çıkartma yazısı">
-   <label>Boyut<input type="range" id="ss-sz" min="25" max="400"></label><label>Döndür<input type="range" id="ss-rt" min="-180" max="180"></label>
-   <div class="ss-selb"><button type="button" id="ss-flip" hidden>↔ Kuyruk</button><button type="button" id="ss-front">⬆ Öne al</button><button type="button" id="ss-del">🗑 Sil</button></div></div></div>
-  <p class="ss-dur" id="ss-dur"></p>
-  <div class="seg ss-mode" id="ss-mode"><button type="button" data-m="video"><span class="no-mi">🎬</span> Video</button><button type="button" data-m="photo"><span class="no-mi">🖼</span> Fotoğraf</button></div>
-  <div class="ss-sec"><div class="ss-lab">Şablon</div><div class="ss-chips" id="ss-tpl"></div></div>
-  <div class="ss-sec"><div class="ss-lab">Fotoğraflar <small>dokun: süsle · ‹ sırayı değiştir</small></div><div class="ss-ph" id="ss-ph"></div><input type="file" id="ss-file" accept="image/*" multiple hidden></div>
-  <div class="ss-sec ss-fun"><div class="ss-lab">Komik çıkartmalar <small>sürükle, iki parmakla büyüt/çevir</small></div>
-   <div class="ss-stk" id="ss-stk-v"></div><div class="ss-stk" id="ss-stk-e"></div><div class="ss-chips" id="ss-stk-t"></div>
-   <div class="ss-bal no-mi"><input id="ss-baltx" type="text" maxlength="80" placeholder="Balona ne yazsın? ör. Anne bugün ödev yok!" aria-label="Balon yazısı"><button type="button" id="ss-bal1" aria-label="Konuşma balonu ekle">💬</button><button type="button" id="ss-bal2" aria-label="Düşünce balonu ekle">💭</button></div></div>
-  <div class="ss-sec"><div class="ss-lab" id="ss-tlab">Yazı</div><input id="ss-t" type="text" maxlength="40"><input id="ss-s" type="text" maxlength="60" value="${esc(SS.s)}"><textarea id="ss-lines" rows="4" maxlength="200" aria-label="Özet satırları (her satır bir madde)" hidden></textarea>
-   <div id="ss-tsw"><div class="ss-lab" style="margin-top:4px">Yazı stili</div><div class="ss-chips" id="ss-ts"></div></div></div>
-  <div class="ss-sec"><div class="ss-lab">Hareket</div><div class="ss-chips" id="ss-mo"></div></div>
-  <div class="ss-sec"><div class="ss-lab">Filtre</div><div class="ss-chips" id="ss-flt"></div></div>
-  <div class="ss-sec"><div class="ss-lab">Efekt</div><div class="ss-chips" id="ss-fx"></div></div>
-  <label class="tog ss-tog"><input type="checkbox" id="ss-sign" ${SS.sign?"checked":""}><span>Köşede küçük “mefirst.app” imzası</span></label>
-  <p class="ss-msg" id="ss-msg" hidden></p>
-  <p class="fine">Fotoğrafların hiçbir yere yüklenmez; story bu telefonda hazırlanır. Müziği Instagram ya da WhatsApp'ta paylaşırken ekleyebilirsin.</p></div>
-  <span class="ss-fab-l" id="ss-fab-l"></span><button class="ss-fab" type="button" id="ss-go"></button>
+  const tabs=[["tpl","🎨","Şablon"],["ph","🖼","Foto"],["stk","😜","Çıkartma"],["txt","🔤","Yazı"],["set","⚙️","Ayar"]];
+  O.innerHTML=`<div class="ob-in ss-in">
+  <div class="ss-top"><button class="ss-x" type="button" id="ss-x" aria-label="Kapat">✕</button><b class="ss-ttl">Story stüdyom</b>
+   <div class="seg ss-mode" id="ss-mode"><button type="button" data-m="video"><span class="no-mi">🎬</span> Video</button><button type="button" data-m="photo"><span class="no-mi">🖼</span> Foto</button></div></div>
+  <div class="ss-main">
+   <div class="ss-rail"><small>Filtre</small><div id="ss-flt" class="ss-rl"></div></div>
+   <div class="ss-stage"><canvas id="ss-cv" width="540" height="960" aria-label="Story önizlemesi"></canvas><label class="ss-empty" id="ss-empty" for="ss-file"><span class="no-mi">📷</span><b>Fotoğraflarını seç</b><small>En fazla 8 fotoğraf · telefonundan çıkmaz</small></label>
+    <p class="ss-msg" id="ss-msg" hidden></p>
+    <div class="ss-edbar no-mi" id="ss-edbar" hidden><button type="button" id="ss-prev" aria-label="Önceki fotoğraf">‹</button><span id="ss-edt"></span><button type="button" id="ss-next" aria-label="Sonraki fotoğraf">›</button><button type="button" class="ss-play" id="ss-play">▶ Oynat</button></div></div>
+   <div class="ss-rail"><small>Efekt</small><div id="ss-fx" class="ss-rl"></div><small>Hareket</small><div id="ss-mo" class="ss-rl"></div></div>
+  </div>
+  <div class="ss-pan">
+   <div class="ss-selctl no-mi" id="ss-selctl" hidden><input id="ss-seltx" type="text" maxlength="80" placeholder="Yazıyı değiştir" aria-label="Çıkartma yazısı">
+    <label>Boyut<input type="range" id="ss-sz" min="25" max="400"></label><label>Döndür<input type="range" id="ss-rt" min="-180" max="180"></label>
+    <div class="ss-selb"><button type="button" id="ss-flip" hidden>↔ Kuyruk</button><button type="button" id="ss-front">⬆ Öne</button><button type="button" id="ss-del">🗑 Sil</button><button type="button" id="ss-done" class="ok">✓ Tamam</button></div></div>
+   <div id="ss-pvs">
+    <div data-pv="tpl"><div class="ss-chips ss-wrap" id="ss-tpl"></div></div>
+    <div data-pv="ph" hidden><div class="ss-ph" id="ss-ph"></div><p class="ss-dur" id="ss-dur"></p><p class="ss-hint">Bir fotoğrafa dokun, süslemeye başla · ‹ sırayı değiştirir</p><input type="file" id="ss-file" accept="image/*" multiple hidden></div>
+    <div data-pv="stk" hidden><div class="ss-stk" id="ss-stk-v"></div><div class="ss-stk" id="ss-stk-e"></div><div class="ss-chips" id="ss-stk-t"></div>
+     <div class="ss-bal no-mi"><input id="ss-baltx" type="text" maxlength="80" placeholder="Balona ne yazsın?" aria-label="Balon yazısı"><button type="button" id="ss-bal1" aria-label="Konuşma balonu ekle">💬</button><button type="button" id="ss-bal2" aria-label="Düşünce balonu ekle">💭</button></div></div>
+    <div data-pv="txt" hidden><div class="ss-lab" id="ss-tlab">Yazı</div><input id="ss-t" type="text" maxlength="40"><input id="ss-s" type="text" maxlength="60" value="${esc(SS.s)}"><textarea id="ss-lines" rows="4" maxlength="200" aria-label="Özet satırları (her satır bir madde)" hidden></textarea>
+     <div id="ss-tsw"><div class="ss-lab">Yazı stili</div><div class="ss-chips" id="ss-ts"></div></div></div>
+    <div data-pv="set" hidden><label class="tog ss-tog"><input type="checkbox" id="ss-sign" ${SS.sign?"checked":""}><span>Köşede küçük “mefirst.app” imzası</span></label><p class="fine">Fotoğrafların hiçbir yere yüklenmez; story bu telefonda hazırlanır. Müziği Instagram ya da WhatsApp'ta paylaşırken ekleyebilirsin.</p></div>
+   </div></div>
+  <div class="ss-bot"><div class="ss-tabs">${tabs.map(([k,e,l])=>`<button type="button" class="ss-tab" data-tab="${k}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div><button class="ss-fab" type="button" id="ss-go"></button></div>
+  </div>
   <div class="ss-res" id="ss-res" hidden></div>`;
   document.getElementById("ss-t").value=SS.t;
   document.getElementById("ss-x").onclick=()=>ssClose();
@@ -5247,7 +5297,11 @@ function ssOpen(tpl){const O=document.getElementById("sst");const T=STPL[tpl]||S
   document.getElementById("ss-lines").oninput=e=>{SS.lines=e.target.value.split("\n").map(x=>x.trim()).filter(Boolean).slice(0,5);};
   document.getElementById("ss-sign").onchange=e=>{SS.sign=e.target.checked;};
   document.getElementById("ss-go").onclick=ssMake;
-  ssUi();ssTextUi();ssStkUi();ssBindCv();ssPhRender();ssEdUi();ssSelUi();if(O.hidden){O.hidden=false;try{history.pushState({ss:1},"");}catch(e){}document.body.style.overflow="hidden";O.scrollTop=0;}
+  document.getElementById("ss-done").onclick=()=>{SS.sel=null;ssSelUi();};
+  document.querySelectorAll(".ss-tab").forEach(b=>b.onclick=()=>{SS.sel=null;ssSelUi();ssTab(b.dataset.tab);});
+  ssUi();ssTextUi();ssStkUi();ssBindCv();ssPhRender();ssEdUi();ssSelUi();ssTab(SS.ph.length?(SS.tab||"tpl"):"ph");
+  ssFit();try{if(window.ResizeObserver){SS.ro&&SS.ro.disconnect();SS.ro=new ResizeObserver(ssFit);SS.ro.observe(document.querySelector(".ss-main"));}else window.addEventListener("resize",ssFit);}catch(e){}
+  if(O.hidden){O.hidden=false;try{history.pushState({ss:1},"");}catch(e){}document.body.style.overflow="hidden";O.scrollTop=0;}
   try{document.fonts.load('112px "DM Serif Display"');document.fonts.load('64px "Allura"');document.fonts.load('800 64px "Nunito Sans"');document.fonts.load('700 30px "Nunito Sans"');}catch(e){}
   SS.t0=performance.now();if(!SS.raf)SS.raf=requestAnimationFrame(ssLoop);}
 function ssClose(fromPop){const O=document.getElementById("sst");if(O.hidden)return;if(SS.busy)return;O.hidden=true;O.classList.remove("ss-editing");SS.edit=false;SS.sel=null;cancelAnimationFrame(SS.raf);SS.raf=0;if(SS.res&&SS.res.url)URL.revokeObjectURL(SS.res.url);SS.res=null;if(fromPop!==true&&history.state&&history.state.ss)try{history.back();}catch(e){}document.body.style.overflow="";}
