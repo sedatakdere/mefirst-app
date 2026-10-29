@@ -5419,7 +5419,7 @@ setInterval(()=>{try{if(typeof step==="undefined"||step!==0||document.hidden)ret
 (function(){let ly=window.scrollY,acc=0;const nav=()=>document.getElementById("bnav");
   addEventListener("scroll",()=>{const y=window.scrollY,d=y-ly;ly=y;const n=nav();if(!n)return;const max=document.documentElement.scrollHeight-innerHeight;
     if(y<40||max<120){n.classList.remove("nav-hide");acc=0;return;}if((d>0)!==(acc>0))acc=0;acc+=d;if(acc>28)n.classList.add("nav-hide");else if(acc<-14)n.classList.remove("nav-hide");},{passive:true});})();
-(function(){const sa=matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;if(!sa||matchMedia("(display-mode: fullscreen)").matches)return;
+(function(){let inFrame=false;try{inFrame=window.top!==window;}catch(e){inFrame=true;}const touch=matchMedia("(pointer: coarse)").matches;if(inFrame||!touch||matchMedia("(display-mode: fullscreen)").matches||!document.documentElement.requestFullscreen)return;
   const go=()=>{const d=document.documentElement;if(!document.fullscreenElement&&d.requestFullscreen){try{d.requestFullscreen({navigationUI:"hide"}).catch(()=>{});}catch(e){}}};addEventListener("pointerup",go,{passive:true});})();
 </script>
 </body>
