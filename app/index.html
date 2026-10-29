@@ -199,6 +199,10 @@ html[data-mf="dusk"] .ss-in2{background-color:#2A1F33;color:#fff}
 #ss-fx .ss-ri[aria-pressed="true"] .c::after,#ss-mo .ss-ri[aria-pressed="true"] .c::after{content:"✕";position:absolute;top:-3px;right:3px;width:15px;height:15px;border-radius:50%;background:#D62976;color:#fff;font-size:8.5px;font-weight:800;display:grid;place-items:center;line-height:1}
 .ss-ri .c{width:40px;height:40px}.ss-rl{gap:5px}.ss-rail{gap:4px}
 @media (max-height:800px){.ss-ri .c{width:36px;height:36px;font-size:17px}.ss-ri .l{font-size:9px}.ss-rl{gap:5px}.ss-ri:not([aria-pressed="true"]) .l{display:none}}
+
+/* v121: ana sayfa sözü en fazla 2 satır */
+.sky-line{font-size:clamp(19px,5.6vw,24px)!important;max-width:calc(100% - 62px)!important;text-wrap:balance}
+.sky-in{padding-bottom:74px!important}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -5342,6 +5346,12 @@ document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest
 
 function ssBubRender(){document.querySelectorAll(".ss-bub.at-home .ss-in2").forEach(el=>{if(PH.me){el.style.backgroundImage=`url(${PH.me})`;el.textContent="";}else{el.style.backgroundImage="";const n=(st.name||"").trim();el.textContent=n?n.charAt(0).toLocaleUpperCase("tr-TR"):"🎬";}});}
 try{ssBubRender();}catch(e){}
+
+(function(){function fit(el){if(!el)return;el.style.removeProperty("font-size");const cs=getComputedStyle(el);let fs=parseFloat(cs.fontSize),n=0;const lines=()=>{const W=el.querySelectorAll(".w");if(W.length)return new Set([...W].map(w=>Math.round(w.offsetTop/4))).size;const lh=parseFloat(getComputedStyle(el).lineHeight)||fs*1.1;return Math.round(el.scrollHeight/lh);};
+  while(lines()>2&&fs>16&&n<16){fs-=1;el.style.setProperty("font-size",fs+"px","important");n++;}}
+  const all=()=>document.querySelectorAll(".sky-line").forEach(fit);const hx=document.getElementById("hx");
+  if(hx&&window.MutationObserver)new MutationObserver(()=>requestAnimationFrame(all)).observe(hx,{childList:true,subtree:true,characterData:true});
+  addEventListener("resize",all);try{document.fonts&&document.fonts.ready.then(all);}catch(e){}all();})();
 </script>
 </body>
 </html>
