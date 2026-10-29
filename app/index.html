@@ -97,6 +97,24 @@ html[data-mf="dusk"] .ss-ban .pi{background:rgba(255,255,255,.1)}
 .ss-short{font:inherit;font-size:13px;font-weight:700;border:1.5px dashed color-mix(in srgb,var(--pink-d) 50%,transparent);border-radius:99px;padding:9px 14px;cursor:pointer;background:color-mix(in srgb,var(--surface) 55%,transparent);color:var(--ink);display:flex;align-items:center;justify-content:center;gap:6px;width:100%}
 html[data-mf="dusk"] .ss-short{background:rgba(255,255,255,.06);color:#fff}
 @media (prefers-reduced-motion:reduce){.ss-ban::after{animation:none}}
+
+.ss-bub{font:inherit;background:none;border:0;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;color:inherit;position:relative;flex:0 0 auto;-webkit-tap-highlight-color:transparent}
+.ss-ring{position:relative;width:52px;height:52px;border-radius:50%;display:grid;place-items:center}
+.ss-ring::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,#FEDA75,#FA7E1E,#D62976,#962FBF,#4F5BD5,#FEDA75);animation:ssSpin 5s linear infinite}
+.ss-in2{position:relative;width:45px;height:45px;border-radius:50%;display:grid;place-items:center;font-size:20px;background:var(--bg) center/cover no-repeat;box-shadow:0 0 0 2.5px var(--bg);color:var(--ink);font-family:var(--f-display);font-weight:400}
+.ss-in2 .mi{width:22px;height:22px}
+.ss-bub i{position:absolute;right:-2px;top:34px;width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#E85C9B,#962FBF);color:#fff;font-style:normal;font-weight:800;font-size:15px;line-height:17px;text-align:center;box-shadow:0 0 0 2px var(--bg)}
+.ss-bub small{font-size:10.5px;font-weight:700;letter-spacing:.02em;opacity:.85}
+.ss-bub:active .ss-ring{transform:scale(.93)}
+@keyframes ssSpin{to{transform:rotate(360deg)}}
+.hello{position:relative}
+.ss-bub.at-home{position:absolute;right:14px;top:60px;z-index:3}
+.ss-bub.at-home small{color:#3A2F48;opacity:.9;text-shadow:0 1px 6px rgba(255,255,255,.6)}
+.lv-id .ss-bub{margin-left:auto;align-self:center}
+.rhero{position:relative}
+.ss-bub.at-rit{position:absolute;right:10px;top:58px;z-index:3}
+html[data-mf="dusk"] .ss-in2{background-color:#2A1F33;color:#fff}
+@media (prefers-reduced-motion:reduce){.ss-ring::before{animation:none}}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2317,6 +2335,7 @@ html[data-mf="dusk"] .jr-tip,html[data-mf="dusk"] .jr-legend .fut{background:rgb
   </header>
 
   <div class="hello" id="hello">
+    <button class="ss-bub at-home" type="button" data-ss="anne" aria-label="Story yap"><span class="ss-ring"><span class="ss-in2">🎬</span></span><i aria-hidden="true">+</i><small>Story</small></button>
     <div class="crown" aria-hidden="true">✦ Me First ✦</div>
     <h1 id="greet">Günaydın, <span>güzelim</span> ☀️</h1>
     <p id="hello-p">Bugün önce sen varsın.</p>
@@ -2350,7 +2369,6 @@ html[data-mf="dusk"] .jr-tip,html[data-mf="dusk"] .jr-legend .fut{background:rgb
       <button class="path t-lilac" id="go-zod" type="button"><span class="pi">☕</span><strong>Keyif köşem</strong><small>Fal, burç, bulmaca</small></button>
       <button class="path t-pink wide" id="go-love" type="button"><span class="badge">🔒 Özel</span><span class="pi">💞</span><strong>Biz ikimiz</strong><small>Döngün, romantik akşamlar ve mesajlar</small><span class="lv-go" aria-hidden="true">›</span></button>
     </div>
-    <button class="ss-ban" id="go-story" type="button" data-ss="biz"><span class="badge">Yeni</span><span class="pi">🎬</span><strong>Story stüdyom</strong><small>Fotoğraflarından efektli story yap, paylaş</small><span class="lv-go" aria-hidden="true">›</span></button>
     <p class="soon-msg" id="soon-msg" hidden></p>
   </div>
 
@@ -2445,7 +2463,7 @@ html[data-mf="dusk"] .jr-tip,html[data-mf="dusk"] .jr-legend .fut{background:rgb
       <div class="orbs" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="lhero-top"><button class="tag lv-lock" id="love-lock" type="button" aria-label="Biz ikimiz'i kilitle ve ana sayfaya dön">🔒 Kilitle</button><button class="iconbtn homebtn" id="love-home" type="button" aria-label="Ana sayfaya dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Ana sayfa</span></button></div>
       <div class="lv-id"><span class="lv-emb" aria-hidden="true"><svg viewBox="0 0 100 100"><defs><linearGradient id="lvg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD3E4"/><stop offset=".55" stop-color="#F27FAE"/><stop offset="1" stop-color="#B98AF0"/></linearGradient></defs><path d="M34 46V33a16 16 0 0 1 32 0v13" fill="none" stroke="#F3D6E6" stroke-width="7" stroke-linecap="round" transform="translate(-9 -9) rotate(-14 66 46)"/><path d="M50 92S16 72 16 52a17 17 0 0 1 34-6 17 17 0 0 1 34 6c0 20-34 40-34 40z" fill="url(#lvg1)"/><path d="M27 50a11 11 0 0 1 9-10" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/></svg></span>
-      <div><h2>Biz <em>ikimiz</em></h2><p class="lv-names" id="lv-names"></p></div></div>
+      <div><h2>Biz <em>ikimiz</em></h2><p class="lv-names" id="lv-names"></p></div><button class="ss-bub" type="button" data-ss="biz" aria-label="Story yap"><span class="ss-ring"><span class="ss-in2">🎬</span></span><i aria-hidden="true">+</i><small>Story</small></button></div>
       <p id="love-sub"></p>
       <div class="seg" role="tablist">
         <button type="button" role="tab" data-tab="formula">💞 Biz</button>
@@ -2562,7 +2580,6 @@ html[data-mf="dusk"] .jr-tip,html[data-mf="dusk"] .jr-legend .fut{background:rgb
 
     <div class="panel" data-panel="formula">
       <div id="bz-hero"></div>
-      <button class="ss-short" type="button" data-ss="biz">🎬 İkimizin story'sini yap</button>
       <div class="subseg bzseg"><button type="button" data-bz="hafta">✨ Bu hafta</button><button type="button" data-bz="ani">🫙 Anılar</button><button type="button" data-bz="gun">🎂 Günler</button><button type="button" data-bz="dil">💌 Aşk dili</button></div>
       <div data-bzv="hafta"><div id="bz-task"></div>
       <div class="fcard"><div class="eyebrow">Mutluluğun formülü · bugün</div><p id="formula"></p><button class="pill" id="fnext" type="button">Bir tane daha ✨</button></div></div>
@@ -2684,13 +2701,13 @@ html[data-mf="dusk"] .jr-tip,html[data-mf="dusk"] .jr-legend .fut{background:rgb
     <div class="rhero">
       <div class="rh-sky" aria-hidden="true"><span></span><span></span><i>✦</i><i>✧</i><i>✦</i><i>✧</i></div>
       <div class="lhero-top"><span class="tag" id="rit-tag">Ritüellerin</span><button class="iconbtn homebtn" id="rit-home" type="button" aria-label="Ana sayfaya dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Ana sayfa</span></button></div>
+<button class="ss-bub at-rit" type="button" data-ss="niyet" aria-label="Story yap"><span class="ss-ring"><span class="ss-in2">🎬</span></span><i aria-hidden="true">+</i><small>Story</small></button>
       <div class="rh-monk">🧘</div>
       <h2>Manifest <em>Me</em></h2>
       <p class="rh-int" id="rit-int"></p>
       <div class="rh-prog" id="rit-prog"></div>
     </div>
     <div class="pracs" id="pracs" role="tablist"></div>
-    <button class="ss-short" type="button" data-ss="niyet">🎬 Niyetimden story yap</button>
     <div class="rpanel" data-pr="sukran" id="pr-sukran"></div>
     <div class="rpanel" data-pr="nefes" id="pr-nefes"></div>
     <div class="rpanel" data-pr="soz" id="pr-soz"></div>
@@ -3076,7 +3093,7 @@ function lkKey(k){if(LK.busy||LK.mode==="reset")return;if(LK.until>Date.now()){l
 let _lvPrev=null;const _showLK=show;show=function(){const inL=step===9||step===10;const R=document.documentElement;
   if(inL){if(_lvPrev===null){_lvPrev=R.dataset.mf||"day";tab="formula";bzsub="hafta";}R.dataset.mf="dusk";document.body.classList.add("love-on");const n=document.getElementById("lv-names");if(n)n.innerHTML=coupleLine();}
   else if(_lvPrev!==null){R.dataset.mf=_lvPrev;_lvPrev=null;document.body.classList.remove("love-on");}
-  document.body.classList.toggle("mf-on",step===60);if(window._lastStep!==step){document.body.style.minHeight="";window._lastStep=step;}_showLK();try{surRender();}catch(e){}if(step===9){const b=document.getElementById("bnav");if(b)b.style.visibility="hidden";lkRender();}else{const b=document.getElementById("bnav");if(b)b.style.visibility="";}};
+  document.body.classList.toggle("mf-on",step===60);if(window._lastStep!==step){document.body.style.minHeight="";window._lastStep=step;}_showLK();try{surRender();ssBubRender();}catch(e){}if(step===9){const b=document.getElementById("bnav");if(b)b.style.visibility="hidden";lkRender();}else{const b=document.getElementById("bnav");if(b)b.style.visibility="";}};
 function openLove(){if(love.unlocked){step=10;}else{lockSetup();step=9;}show();loveRender();}
 
 const PKIND=[["kopek","🐶","Köpek"],["kedi","🐱","Kedi"],["kus","🐦","Kuş"],["diger","🐰","Diğer"]];
@@ -5066,6 +5083,9 @@ async function ssSave(blob,name,fromShare){let d=null;try{if(window.claude&&type
 window.addEventListener("popstate",()=>{const O=document.getElementById("sst");if(O&&!O.hidden){if(SS.busy){try{history.pushState({ss:1},"");}catch(e){}return;}ssClose(true);}});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){const O=document.getElementById("sst");if(O&&!O.hidden)ssClose();}});
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-ss]");if(b){e.preventDefault();ssOpen(b.dataset.ss);}});
+
+function ssBubRender(){document.querySelectorAll(".ss-bub.at-home .ss-in2").forEach(el=>{if(PH.me){el.style.backgroundImage=`url(${PH.me})`;el.textContent="";}else{el.style.backgroundImage="";const n=(st.name||"").trim();el.textContent=n?n.charAt(0).toLocaleUpperCase("tr-TR"):"🎬";}});}
+try{ssBubRender();}catch(e){}
 </script>
 </body>
 </html>
