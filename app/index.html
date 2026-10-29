@@ -3226,6 +3226,12 @@ function petRender(){
 
 const AFF=["Bugün önce sen varsın.","Kendine ayırdığın 5 dakika, herkese iyi gelir.","Mükemmel olmak zorunda değilsin; yeterlisin.","Bugün de harikasın, bunu unutma.","Gülümsemen bu evin güneşi.","Kendine nazik ol, gerisi gelir.","Bugün küçük bir şey için kendini tebrik et."];
 const DCOL=[["Pudra","#e8c3bf","yumuşaklık ve şefkat"],["Lila","#c3b0ec","sezgi ve sakinlik"],["Mercan","#f4a6a0","neşe ve sıcaklık"],["Mint","#9fdcc3","tazelik ve yeni başlangıç"],["Vanilya","#f3dc93","ışık ve iyimserlik"],["Bebek mavisi","#a9c9f2","huzur ve netlik"],["Gül kurusu","#c98d95","zarafet ve özgüven"]];
+function sunTimes(d){d=d||new Date();let lat=41.0,lon=29.0;try{const tz=Intl.DateTimeFormat().resolvedOptions().timeZone||"";if(!/Istanbul|Europe\/Nicosia|Asia\/Famagusta/.test(tz)){lat=40;lon=-d.getTimezoneOffset()/4;}}catch(e){}
+  const r=Math.PI/180,n=Math.floor((new Date(d.getFullYear(),d.getMonth(),d.getDate())-new Date(d.getFullYear(),0,1))/864e5)+1,g=2*Math.PI/365*(n-1);
+  const eqt=229.18*(.000075+.001868*Math.cos(g)-.032077*Math.sin(g)-.014615*Math.cos(2*g)-.040849*Math.sin(2*g));
+  const dec=.006918-.399912*Math.cos(g)+.070257*Math.sin(g)-.006758*Math.cos(2*g)+.000907*Math.sin(2*g)-.002697*Math.cos(3*g)+.00148*Math.sin(3*g);
+  const c=Math.cos(90.833*r)/(Math.cos(lat*r)*Math.cos(dec))-Math.tan(lat*r)*Math.tan(dec),ha=Math.acos(Math.max(-1,Math.min(1,c)))/r,tzo=-d.getTimezoneOffset();
+  return{rise:(720-4*(lon+ha)-eqt+tzo)/60,set:(720-4*(lon-ha)-eqt+tzo)/60};}
 function homeRender(){
   const hub=step===0;const h=document.getElementById("hello");h.classList.toggle("hero",hub);
   h.querySelectorAll(":scope>h1,:scope>p,:scope>.crown").forEach(e=>e.hidden=true);h.style.display=hub?"":"none";
@@ -3246,7 +3252,7 @@ function homeRender(){
     const full=P.feeds.length&&P.feeds.every(t=>P.fed.includes(t));tiles.push({i:"🐾",l:pn,v:full?"Doydu ✓":nx?"Mama "+nx:"Bugün tamam",go:"go-pet"});}
   if(tiles.length<3)tiles.push({i:"💞",l:"Biz ikimiz",v:"Özel alanın",go:"go-love"});
   const H=hr+now.getMinutes()/60;
-  const phase=(H<5||H>=20.5)?"gece":H<10.5?"sabah":H<16.5?"ogle":"aksam";
+  const SUN=sunTimes(now),phase=(H<SUN.rise-.6||H>=SUN.set+.35)?"gece":H<SUN.rise+3?"sabah":H<SUN.set-1.5?"ogle":"aksam";
   hx.className="sky sky-"+phase;
   const LINES=["Bugün acele etmek zorunda değilsin.","Kendi hızında git; yol zaten senin.","Bugün bir şeye hayır de, kendine evet.","On dakika sadece senin. Gerisi bekleyebilir.","Yeterince iyisin. Bugün de.","Küçük bir mola, büyük bir iyilik.","Önce sen; sonra her şey daha kolay.","Bugün kendine bir arkadaşına davrandığın gibi davran.","Mükemmel değil, gerçek ol.","Yorgunsan dinlen, vazgeçme.","Bugünün tek görevi: kendine nazik olmak.","Gülümsemen bu evin ışığı.","Bir nefes al. Her şey yoluna giriyor.","Kendine ayırdığın zaman, herkese iyi gelir.","Bugün küçük bir şey için kendini tebrik et.","Sen de bir önceliksin.","Hayır demek de sevgidir; önce kendine.","Bugün güzel bir şey seni bekliyor.","Dünü bırak, yarını sonra düşün; bugün senin.","Aynaya bak ve teşekkür et; çok şey taşıyorsun.","Herkesi mutlu etmek zorunda değilsin.","Bugün bir kahveyi gerçekten oturarak iç.","Kendin için yaptığın her şey sayılır.","Yavaşlamak geride kalmak değildir.","Bugün sesini dinle; o hep haklı.","Güçlü olmak her şeyi tek başına yapmak değil.","Bugün yardım istemek serbest.","Işığını kısma; parla.","Bugün kendine bir çiçek al.","Her yeni gün, temiz bir sayfa."];
   const greet=tod[1]+(nm?" "+esc(nm):"");
@@ -5356,6 +5362,8 @@ try{ssBubRender();}catch(e){}
   const all=()=>document.querySelectorAll(".sky-line").forEach(fit);const hx=document.getElementById("hx");
   if(hx&&window.MutationObserver)new MutationObserver(()=>requestAnimationFrame(all)).observe(hx,{childList:true,subtree:true,characterData:true});
   addEventListener("resize",all);try{document.fonts&&document.fonts.ready.then(all);}catch(e){}all();})();
+
+setInterval(()=>{try{if(typeof step==="undefined"||step!==0||document.hidden)return;const hx=document.getElementById("hx");if(!hx||hx.hidden)return;const now=new Date(),H=now.getHours()+now.getMinutes()/60,S=sunTimes(now),ph=(H<S.rise-.6||H>=S.set+.35)?"gece":H<S.rise+3?"sabah":H<S.set-1.5?"ogle":"aksam";if(!hx.classList.contains("sky-"+ph))homeRender();}catch(e){}},120000);
 </script>
 </body>
 </html>
