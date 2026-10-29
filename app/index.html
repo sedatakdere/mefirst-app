@@ -206,7 +206,7 @@ html[data-mf="dusk"] .ss-in2{background-color:#2A1F33;color:#fff}
 
 /* v122: Story stüdyosu şimdilik kapalı (kod duruyor, girişler gizli) */
 .ss-bub{display:none!important}
-.sky-line{max-width:calc(100% - 8px)!important}
+.sky-line{max-width:calc(100% - 96px)!important}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -3260,7 +3260,7 @@ function homeRender(){
   // güneş yayı / ay
   let celestial="";
   const ma=moonAge(),mp=moonPhase(ma);
-  if(phase!=="gece"){const t=Math.max(0,Math.min(1,(H-6)/14));const x=8+84*t,y=62-Math.sin(Math.PI*t)*44;
+  if(phase!=="gece"){const t=Math.max(0,Math.min(1,(H-SUN.rise)/(SUN.set-SUN.rise)));const x=80+6*t,y=64-Math.sin(Math.PI*t)*36;
     celestial=`<button type="button" class="sun" style="left:${x}%;top:${y}%" data-sky="sun" aria-label="Gökyüzü bilgisi"><span></span></button>`;}
   else celestial=`<button type="button" class="moonbtn" style="left:82%;top:56%" data-sky="moon" aria-label="Ay bilgisi">${moonSVG(ma)}</button>`;
   const stars=phase==="gece"||phase==="aksam"?Array.from({length:phase==="gece"?22:8},(_,i)=>`<i class="st" style="left:${(i*41)%96+2}%;top:${(i*29)%(phase==="gece"?58:30)+3}%;--s:${.6+(i%4)*.35};animation-delay:${(i*.37)%3.4}s"></i>`).join(""):"";
