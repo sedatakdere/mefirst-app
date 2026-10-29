@@ -6,9 +6,10 @@
 </defs>
 <rect width="512" height="512" fill="url(#bg)"/>
 <rect width="512" height="512" fill="url(#gl)"/>
-<path d="M256 402s-118-70-118-158c0-44 34-76 74-76 20 0 36 8 44 22 8-14 24-22 44-22 40 0 74 32 74 76 0 88-118 158-118 158z" fill="url(#h)"/>
+<g transform="translate(256 285) scale(1.32) translate(-256 -285)"><path d="M256 402s-118-70-118-158c0-44 34-76 74-76 20 0 36 8 44 22 8-14 24-22 44-22 40 0 74 32 74 76 0 88-118 158-118 158z" fill="url(#h)"/>
 <path d="M256 402s-118-70-118-158c0-44 34-76 74-76 20 0 36 8 44 22 8-14 24-22 44-22 40 0 74 32 74 76 0 88-118 158-118 158z" fill="none" stroke="#E2689A" stroke-width="10" stroke-opacity=".35"/>
 <path d="M256 214l13 36 37 13-37 13-13 36-13-36-37-13 37-13z" fill="#E2689A"/>
-<path d="M352 128l7 19 19 7-19 7-7 19-7-19-19-7 19-7z" fill="#fff"/>
-<circle cx="160" cy="150" r="7" fill="#fff" opacity=".8"/>
+</g>
+<path d="M418 92l7 19 19 7-19 7-7 19-7-19-19-7 19-7z" fill="#fff"/>
+<circle cx="96" cy="112" r="7" fill="#fff" opacity=".8"/>
 </svg>
