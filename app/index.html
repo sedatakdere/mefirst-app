@@ -115,6 +115,15 @@ html[data-mf="dusk"] .ss-short{background:rgba(255,255,255,.06);color:#fff}
 .ss-bub.at-rit{position:absolute;right:10px;top:58px;z-index:3}
 html[data-mf="dusk"] .ss-in2{background-color:#2A1F33;color:#fff}
 @media (prefers-reduced-motion:reduce){.ss-ring::before{animation:none}}
+
+.ss-fab{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:4;width:62px;height:62px;border-radius:50%;border:0;padding:0;cursor:pointer;color:#fff;display:grid;place-items:center;
+  background:linear-gradient(135deg,#FA7E1E,#D62976 45%,#962FBF);box-shadow:0 14px 30px -10px rgba(150,40,120,.75),0 0 0 3px color-mix(in srgb,var(--bg) 80%,transparent);font:inherit;font-weight:800;font-size:14px;transition:transform .15s}
+.ss-fab svg{width:26px;height:26px}
+.ss-fab:active{transform:scale(.92)}
+.ss-fab:disabled{cursor:progress}
+.ss-fab.busy{background:conic-gradient(#fff var(--p,0%),rgba(255,255,255,.25) 0) , linear-gradient(135deg,#FA7E1E,#D62976 45%,#962FBF);background-blend-mode:soft-light}
+.ss-fab-l{position:fixed;right:calc(max(18px,env(safe-area-inset-right,0px)) + 72px);bottom:calc(36px + env(safe-area-inset-bottom,0px));z-index:4;font-size:12px;font-weight:700;padding:6px 11px;border-radius:99px;background:color-mix(in srgb,var(--surface) 88%,transparent);color:var(--ink);box-shadow:0 6px 16px -8px rgba(0,0,0,.35);pointer-events:none;white-space:nowrap}
+.ss-in{padding-bottom:110px!important}
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -5031,7 +5040,7 @@ function ssChips(id,arr,cur,fn){const el=document.getElementById(id);el.innerHTM
 function ssUi(){ssChips("ss-tpl",Object.entries(STPL).map(([k,v])=>[k,v.n,v.e]),SS.tpl,k=>{const T=STPL[k];SS.tpl=k;SS.flt=T.flt;SS.fx=T.fx;SS.t="";SS.s=T.s();document.getElementById("ss-t").value="";document.getElementById("ss-t").placeholder=T.t;document.getElementById("ss-s").value=SS.s;SS.t0=performance.now();ssUi();});
   ssChips("ss-flt",SFLT,SS.flt,k=>{SS.flt=k;ssUi();});ssChips("ss-fx",SFX,SS.fx,k=>{SS.fx=k;ssUi();});
   document.querySelectorAll("#ss-mode button").forEach(b=>{b.setAttribute("aria-pressed",b.dataset.m===SS.mode);b.onclick=()=>{SS.mode=b.dataset.m;SS.t0=performance.now();ssUi();ssPhRender();};});
-  document.getElementById("ss-go").textContent=SS.mode==="photo"?"Story fotoğrafımı hazırla ✨":"Story videomu hazırla ✨";}
+  const g=document.getElementById("ss-go"),l=document.getElementById("ss-fab-l");if(!SS.busy){g.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';g.classList.remove("busy");g.style.removeProperty("--p");}g.setAttribute("aria-label",SS.mode==="photo"?"Story fotoğrafımı hazırla":"Story videomu hazırla");if(l)l.textContent=SS.busy?"Hazırlanıyor…":SS.mode==="photo"?"Fotoğrafı hazırla":"Videoyu hazırla";}
 function ssOpen(tpl){const O=document.getElementById("sst");const T=STPL[tpl]||STPL[SS.tpl];if(tpl&&STPL[tpl]){SS.tpl=tpl;SS.flt=T.flt;SS.fx=T.fx;SS.t="";SS.s=T.s();}else if(!SS.s)SS.s=T.s();
   O.innerHTML=`<div class="ob-in ss-in"><button class="zs-x" type="button" id="ss-x" aria-label="Kapat">✕</button>
   <div class="ss-hero"><small>Story stüdyom</small><h2>Anlarını <em>story</em> yap</h2></div>
@@ -5044,9 +5053,9 @@ function ssOpen(tpl){const O=document.getElementById("sst");const T=STPL[tpl]||S
   <div class="ss-sec"><div class="ss-lab">Filtre</div><div class="ss-chips" id="ss-flt"></div></div>
   <div class="ss-sec"><div class="ss-lab">Efekt</div><div class="ss-chips" id="ss-fx"></div></div>
   <label class="tog ss-tog"><input type="checkbox" id="ss-sign" ${SS.sign?"checked":""}><span>Köşede küçük “mefirst.app” imzası</span></label>
-  <button class="ss-go" type="button" id="ss-go"></button>
   <p class="ss-msg" id="ss-msg" hidden></p>
   <p class="fine">Fotoğrafların hiçbir yere yüklenmez; story bu telefonda hazırlanır. Müziği Instagram ya da WhatsApp'ta paylaşırken ekleyebilirsin.</p></div>
+  <span class="ss-fab-l" id="ss-fab-l"></span><button class="ss-fab" type="button" id="ss-go"></button>
   <div class="ss-res" id="ss-res" hidden></div>`;
   document.getElementById("ss-t").value=SS.t;
   document.getElementById("ss-x").onclick=()=>ssClose();
@@ -5066,8 +5075,8 @@ async function ssMake(){if(SS.busy)return;if(!SS.ph.length){ssToast("Önce en az
   const x=c.getContext("2d");x.setTransform(W/1080,0,0,H/1920,0,0);ssFrame(x,0);const stream=c.captureStream(30);let rec;try{rec=new MediaRecorder(stream,{mimeType:mime,videoBitsPerSecond:6e6});}catch(e){rec=new MediaRecorder(stream);}
   const ch=[];rec.ondataavailable=e=>{if(e.data&&e.data.size)ch.push(e.data);};const T=ssTotal();
   rec.onstop=()=>{c.remove();SS.busy=false;btn.disabled=false;ssUi();const b=new Blob(ch,{type:(rec.mimeType||mime).split(";")[0]});ssResult(b,/mp4/.test(b.type)?"mp4":"webm");};
-  btn.disabled=true;rec.start(250);const t0=performance.now();
-  const step=()=>{const t=(performance.now()-t0)/1000;x.setTransform(W/1080,0,0,H/1920,0,0);ssFrame(x,Math.min(t,T));btn.textContent="Hazırlanıyor… %"+Math.min(99,Math.round(t/T*100));if(t<T+.15)requestAnimationFrame(step);else rec.stop();};requestAnimationFrame(step);}
+  btn.disabled=true;SS.busy=true;ssUi();rec.start(250);const t0=performance.now();
+  const step=()=>{const t=(performance.now()-t0)/1000;x.setTransform(W/1080,0,0,H/1920,0,0);ssFrame(x,Math.min(t,T));{const pc=Math.min(99,Math.round(t/T*100));btn.textContent="%"+pc;btn.classList.add("busy");btn.style.setProperty("--p",pc+"%");}if(t<T+.15)requestAnimationFrame(step);else rec.stop();};requestAnimationFrame(step);}
 function ssResult(blob,ext){if(!blob){ssToast("Bir sorun oldu, tekrar dener misin?");return;}const R=document.getElementById("ss-res"),url=URL.createObjectURL(blob),name="mefirst-story-"+dkey()+"."+ext;if(SS.res&&SS.res.url)URL.revokeObjectURL(SS.res.url);SS.res={blob,url,name};
   const vid=/^video/.test(blob.type);R.innerHTML=`<div class="ss-rbox"><div class="ss-rhead"><b>Story'in hazır ✨</b><button type="button" class="zs-x ss-rx" id="ss-rx" aria-label="Kapat">✕</button></div>${vid?`<video src="${url}" autoplay loop muted playsinline></video>`:`<img src="${url}" alt="Hazırlanan story">`}
   <div class="ss-racts"><button type="button" class="ss-go" id="ss-share">Paylaş</button><button type="button" class="pill" id="ss-save">Telefona kaydet</button></div><p class="ss-msg" id="ss-rmsg" hidden></p>
