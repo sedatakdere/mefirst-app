@@ -2725,7 +2725,7 @@ html[data-mf="dusk"] body.mf-on .rit .pracs{background:rgba(40,24,52,.72);border
 html[data-mf="dusk"] body.mf-on .rit .prac:not([aria-selected="true"]){background:transparent!important}
 html[data-mf="dusk"] body.mf-on .rit .prac strong{color:rgba(255,244,248,.75)}
 #prac-anc{display:block;height:0}
-.rit .pr-in{animation:prIn .35s ease both}
+.rit .pr-in,#ktpanel.pr-in{animation:prIn .35s ease both}
 @keyframes prIn{from{opacity:0;transform:translateY(8px)}}
 /* ===== v152: Kitap köşem (sonbahar) ===== */
 :root{--kt1:#A8492A;--kt2:#C9822B;--kt3:#6B7A3A;--ktbg:#FBF1E1;--ktink:#4A2A1C}
@@ -5981,7 +5981,7 @@ function pracCenter(sm){const pw=document.getElementById("pracs");if(!pw)return;
   const x=a.offsetLeft-(pw.clientWidth-a.offsetWidth)/2;pw.scrollTo({left:Math.max(0,x),behavior:sm?"smooth":"auto"});}
 function pracSettle(){requestAnimationFrame(()=>{pracCenter(true);const pw=document.getElementById("pracs");if(!pw)return;
   const top=pw.getBoundingClientRect().top,stuck=top<=parseFloat(getComputedStyle(pw).top||0)+1;
-  if(stuck){const anc=document.getElementById("prac-anc");if(anc){const y=anc.getBoundingClientRect().top+window.scrollY-pw.offsetHeight-parseFloat(getComputedStyle(pw).top||0);window.scrollTo({top:Math.max(0,y),behavior:"smooth"});}}
+  if(stuck){const anc=document.getElementById("prac-anc");if(anc){const y=anc.getBoundingClientRect().top+window.scrollY-pw.offsetHeight-parseFloat(getComputedStyle(pw).top||0)-10;window.scrollTo({top:Math.max(0,y),behavior:"instant"});}}
   const vis=[...document.querySelectorAll('.rit .rpanel:not([hidden]),#rit-setup:not([hidden]),#rit-main:not([hidden])')];vis.forEach(v=>{v.classList.remove("pr-in");void v.offsetWidth;v.classList.add("pr-in");});});}
 
 /* ===== v152: Kitap köşem (sonbahar) ===== */
@@ -6099,7 +6099,7 @@ function kitapRender(){const K=kt();const P=document.getElementById("ktpanel");i
   const myE=ktMyEvents(30);
   document.getElementById("kt-sub").textContent=myE.length?`${myE[0][1].filter(ktFollow)[0]||myE[0][1][0]} ${myE[0][2]?ktWhen(myE[0][2]).toLocaleLowerCase("tr-TR"):"Kasım'da"} okurlarıyla buluşuyor, kaçırma! ✍️`:K.setup?"Bir fincan çay, bir battaniye, bir de iyi kitap ☕🍂":"Bana zevkini anlat, sana kitap bulayım 🍂";
   if(!K.setup&&kttab!=="zevk")kttab="zevk";
-  document.querySelectorAll(".ktseg button").forEach(b=>{b.setAttribute("aria-selected",b.dataset.kt===kttab);b.onclick=()=>{kttab=b.dataset.kt;kitapRender();};});
+  document.querySelectorAll(".ktseg button").forEach(b=>{b.setAttribute("aria-selected",b.dataset.kt===kttab);b.onclick=()=>{if(kttab===b.dataset.kt)return;kttab=b.dataset.kt;kitapRender();ktSettle();};});
   const ec=document.getElementById("kt-ecount");if(ec){ec.textContent=myE.length||"";ec.hidden=!myE.length;}
   if(kttab==="zevk"){
     const ch=KT_GEN.map(([id,e,l])=>[id,l,e]);
@@ -6225,6 +6225,11 @@ function ktPhoto(el){const a=el.dataset.kph;const key="mefirst-ktph";let C={};tr
   fetch("https://tr.wikipedia.org/api/rest_v1/page/summary/"+encodeURIComponent(a.replace(/ /g,"_"))).then(r=>r.ok?r.json():null).then(j=>{
     const ok=j&&j.type!=="disambiguation"&&/yazar|şair|romancı|akademisyen|psikiyatr|gazeteci|öğretim/i.test((j.description||"")+" "+(j.extract||"").slice(0,200));
     const u=ok&&j.thumbnail?j.thumbnail.source:"";C[a]=u;try{localStorage.setItem(key,JSON.stringify(C));}catch(e){}put(u);}).catch(()=>{});}
+
+function ktSettle(){requestAnimationFrame(()=>{const sg=document.querySelector(".ktseg"),P=document.getElementById("ktpanel");if(!sg||!P)return;
+  const top=parseFloat(getComputedStyle(sg).top)||0;const stuck=sg.getBoundingClientRect().top<=top+1;
+  if(stuck){const y=P.getBoundingClientRect().top+window.scrollY-sg.offsetHeight-top-10;window.scrollTo({top:Math.max(0,y),behavior:"instant"});}
+  P.classList.remove("pr-in");void P.offsetWidth;P.classList.add("pr-in");});}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
