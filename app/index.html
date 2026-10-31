@@ -3219,7 +3219,7 @@ html[data-mf="dusk"] .ktstage{background:radial-gradient(80% 70% at 50% 0%,rgba(
       <p id="kt-sub"></p>
       <span class="ktbook" aria-hidden="true">📚</span>
     </div>
-    <div class="ktseg" role="tablist"><button type="button" role="tab" data-kt="oneri">Sana özel</button><button type="button" role="tab" data-kt="etk">İmza günü<span class="ktcnt" id="kt-ecount" hidden></span></button><button type="button" role="tab" data-kt="raf">Rafım</button><button type="button" role="tab" data-kt="zevk">Zevkim</button></div>
+    <div class="ktseg" role="tablist"><button type="button" role="tab" data-kt="oneri">Sana özel</button><button type="button" role="tab" data-kt="etk">İmza günü<span class="ktcnt" id="kt-ecount" hidden></span></button><button type="button" role="tab" data-kt="raf">Rafım</button><button type="button" role="tab" data-kt="zevk">Okur ruhum</button></div>
     <div id="ktpanel"></div>
   </div>
 
@@ -6129,7 +6129,7 @@ function kitapRender(){const K=kt();const P=document.getElementById("ktpanel");i
       ${nw.length?`<div class="kthead"><span>Fırından yeni çıktı 🥐</span><small>Ekim 2026</small></div><div class="ktrow">${nw.slice(0,6).map(r=>ktCard(r)).join("")}</div>`:""}
       <div id="kt-live"></div>
       <div class="kthead"><span>Battaniyeye sarılıp okunacaklar 🧣</span></div><div class="ktlist">${rest.map(r=>ktCard(r)).join("")}</div>
-      <p class="ktfine c">Yeni çıkanları ve imza günlerini ben takip ediyorum, sen sadece oku 😉 Zevkin değişti mi? <a href="#" id="kt-tz">Zevkim</a></p>`;
+      <p class="ktfine c">Yeni çıkanları ve imza günlerini ben takip ediyorum, sen sadece oku 😉 Okur ruhun değişti mi? <a href="#" id="kt-tz">Okur ruhum ✨</a></p>`;
     const te=document.getElementById("kt-toev");if(te)te.onclick=()=>{kttab="etk";kitapRender();};
     document.getElementById("kt-tz").onclick=e=>{e.preventDefault();kttab="zevk";kitapRender();};
     P.querySelectorAll("[data-km]").forEach(b=>b.onclick=()=>{ktMood=ktMood===b.dataset.km?null:b.dataset.km;const y=window.scrollY;kitapRender();window.scrollTo({top:y});const f=document.querySelector(".ktb.feat");if(f){f.classList.add("pop");}});
