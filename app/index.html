@@ -4551,7 +4551,7 @@ function surRender(){document.querySelectorAll(".gsur[data-sec]").forEach(el=>{c
 function goTo(el,off){if(!el)return;requestAnimationFrame(()=>{try{surRender();}catch(e){}const y=Math.max(0,el.getBoundingClientRect().top+window.scrollY-(off??12));const need=y+window.innerHeight;document.body.style.minHeight="";document.querySelectorAll(".gsur").forEach(g=>g.style.minHeight="");let gap=need-document.documentElement.scrollHeight;
     if(gap>0){const g=[...document.querySelectorAll(".gsur")].find(x=>x.offsetParent!==null&&!x.hidden);if(g){const add=Math.min(gap,Math.max(0,440-g.offsetHeight));if(add>0){g.style.minHeight=(g.offsetHeight+add)+"px";gap-=add;}}}
     if(gap>0)document.body.style.minHeight=(document.documentElement.scrollHeight+gap)+"px";window.scrollTo({top:y,behavior:"smooth"});});}
-document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest('[role="tab"],[role="tablist"]>button,.g-card');if(!b||b.closest('#pracs,.love .lhero .seg,.bzseg,.subseg,#zsh,.bnav,.onb,.lk2'))return;
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest('[role="tab"],[role="tablist"]>button,.g-card');if(!b||b.closest('#pracs,.ktseg,.love .lhero .seg,.bzseg,.subseg,#zsh,.bnav,.onb,.lk2'))return;
   const tl=b.closest('[role="tablist"]'),aid=b.classList.contains("g-card")?"gm":(b.closest("[id]")||{}).id;
   setTimeout(()=>{const el=tl&&tl.isConnected?tl:(aid&&document.getElementById(aid));if(el&&el.offsetParent!==null)goTo(el,10);},40);});
 function pracRender(){
@@ -6000,7 +6000,7 @@ window.addEventListener("resize",()=>{if(typeof kv!=="undefined"&&kv==="wow")wow
 /* v152: Manifest seçici — yapışkan şerit, sayfa zıplamaz */
 function pracCenter(sm){const pw=document.getElementById("pracs");if(!pw)return;const a=pw.querySelector('[aria-selected="true"]');if(!a)return;
   const x=a.offsetLeft-(pw.clientWidth-a.offsetWidth)/2;pw.scrollTo({left:Math.max(0,x),behavior:sm?"smooth":"auto"});}
-function pracSettle(){requestAnimationFrame(()=>{pracCenter(true);const pw=document.getElementById("pracs");if(!pw)return;
+function pracSettle(){try{surRender();}catch(e){}requestAnimationFrame(()=>{pracCenter(true);const pw=document.getElementById("pracs");if(!pw)return;
   stickFix(pw);
   const vis=[...document.querySelectorAll('.rit .rpanel:not([hidden]),#rit-setup:not([hidden]),#rit-main:not([hidden])')];vis.forEach(v=>{v.classList.remove("pr-in");void v.offsetWidth;v.classList.add("pr-in");});});}
 
