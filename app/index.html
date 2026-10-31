@@ -2706,6 +2706,159 @@ input.pulse,textarea.pulse{animation:affP .6s ease}
 .wow-wc span{font-size:46px}.wow-wc b{font-family:var(--f-display);font-weight:400;font-size:24px}.wow-wc small{font-size:13px;opacity:.7}
 .wow-wc .btn{margin-top:8px;background:linear-gradient(135deg,var(--w1),var(--w2));color:#fff}
 #zsh.pzmode .wow{margin-top:44px}
+
+/* v152: Manifest seçici — yapışkan pill şeridi */
+body.mf-on .rit .pracs{display:flex!important;gap:6px!important;overflow-x:auto!important;overflow-y:hidden;scrollbar-width:none;scroll-snap-type:x proximity;
+  position:sticky;top:calc(env(safe-area-inset-top,0px) + 6px);z-index:20;margin:4px -6px 12px;padding:6px!important;border-radius:999px;
+  background:rgba(255,250,244,.78);border:1px solid rgba(255,255,255,.95);box-shadow:0 10px 26px -16px rgba(120,80,40,.55);-webkit-backdrop-filter:blur(14px) saturate(1.3);backdrop-filter:blur(14px) saturate(1.3)}
+body.mf-on .rit .pracs::-webkit-scrollbar{display:none}
+body.mf-on .rit .prac{flex:0 0 auto!important;flex-direction:row!important;align-items:center!important;gap:6px!important;min-width:0!important;padding:6px 12px 6px 6px!important;border-radius:999px!important;
+  background:transparent!important;border:0!important;box-shadow:none!important;-webkit-backdrop-filter:none;backdrop-filter:none;transform:none!important;scroll-snap-align:center;transition:background .25s,color .25s}
+body.mf-on .rit .prac .pre{width:30px!important;height:30px!important;border-radius:50%!important;font-size:15px;margin:0!important;flex:none}
+body.mf-on .rit .prac .pre .mi{width:17px!important;height:17px!important}
+body.mf-on .rit .prac strong{font-size:12.5px!important;font-weight:700;color:var(--muted)}
+body.mf-on .rit .prac[aria-selected="true"]{background:linear-gradient(135deg,#C9963A,#C9608E)!important;box-shadow:0 6px 16px -8px rgba(201,96,142,.8)!important}
+body.mf-on .rit .prac[aria-selected="true"] strong{color:#fff!important}
+body.mf-on .rit .prac[aria-selected="true"] .pre{background:rgba(255,255,255,.25)!important}
+body.mf-on .rit .prac[aria-selected="true"] .pre .mi{color:#fff;animation:none;filter:none}
+html[data-mf="dusk"] body.mf-on .rit .pracs{background:rgba(40,24,52,.72);border-color:rgba(255,255,255,.12)}
+html[data-mf="dusk"] body.mf-on .rit .prac:not([aria-selected="true"]){background:transparent!important}
+html[data-mf="dusk"] body.mf-on .rit .prac strong{color:rgba(255,244,248,.75)}
+#prac-anc{display:block;height:0}
+.rit .pr-in{animation:prIn .35s ease both}
+@keyframes prIn{from{opacity:0;transform:translateY(8px)}}
+/* ===== v152: Kitap köşem (sonbahar) ===== */
+:root{--kt1:#A8492A;--kt2:#C9822B;--kt3:#6B7A3A;--ktbg:#FBF1E1;--ktink:#4A2A1C}
+.kitap:not([hidden]){display:flex;flex-direction:column;gap:14px}
+.kthero{position:relative;overflow:hidden;border-radius:28px;padding:16px 18px 20px;color:#FFF8EE;background:radial-gradient(120% 90% at 85% 0%,#E9A55A 0%,transparent 55%),radial-gradient(90% 80% at 0% 100%,#6B7A3A 0%,transparent 60%),linear-gradient(160deg,#C9822B,#A8492A 60%,#7A3322);box-shadow:0 18px 40px -22px rgba(122,51,34,.8)}
+.kthero h2{position:relative;margin:6px 0 4px;font-family:var(--f-display);font-weight:400;font-size:34px;line-height:1.05}
+.kthero h2 em{font-style:italic;color:#FFE2B0}
+.kthero p{position:relative;margin:0;font-size:13.5px;opacity:.92;max-width:calc(100% - 92px)}
+.kthero .lhero-top{position:relative;z-index:2}
+.kthero .homebtn{background:rgba(255,255,255,.18)!important;color:#fff!important;border-color:rgba(255,255,255,.3)!important}
+.kthero .ktbook{position:absolute;right:16px;bottom:12px;font-size:52px;opacity:.9;filter:drop-shadow(0 8px 14px rgba(60,20,10,.4));transform:rotate(-8deg)}
+.kthero .ktbook .mi{width:58px;height:58px;color:#FFF3DE}
+.ktleaves{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.ktleaf{position:absolute;top:-20px;left:var(--x);width:calc(14px*var(--s));height:calc(10px*var(--s));border-radius:0 80% 0 80%;background:linear-gradient(135deg,#F2B35C,#C2522B);opacity:.85;animation:ktFall var(--d) linear var(--dl) infinite;transform:rotate(var(--r))}
+.ktleaf:nth-child(3n){background:linear-gradient(135deg,#D9C26A,#7E8A3C)}
+.ktleaf:nth-child(4n){background:linear-gradient(135deg,#E98A4A,#8C2E1E)}
+@keyframes ktFall{0%{transform:translate(0,-20px) rotate(var(--r))}50%{transform:translate(18px,110px) rotate(calc(var(--r) + 160deg))}100%{transform:translate(-10px,260px) rotate(calc(var(--r) + 320deg));opacity:0}}
+@media (prefers-reduced-motion:reduce){.ktleaf{animation:none;display:none}}
+.ktseg{display:flex;gap:4px;padding:5px;border-radius:999px;background:color-mix(in srgb,#F3E2C7 70%,var(--surface));border:1px solid color-mix(in srgb,#C9822B 25%,transparent);position:sticky;top:calc(env(safe-area-inset-top,0px) + 6px);z-index:20;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.ktseg button{flex:1 1 auto;font:inherit;font-size:12.5px;font-weight:700;color:#7A4A2E;background:none;border:0;border-radius:999px;padding:9px 4px;cursor:pointer;position:relative;white-space:nowrap}
+.ktseg button[aria-selected="true"]{background:linear-gradient(135deg,#C9822B,#A8492A);color:#fff;box-shadow:0 6px 14px -8px rgba(168,73,42,.9)}
+.ktseg .ktcnt{display:inline-block;vertical-align:1px;margin-left:4px;padding:0 4px;min-width:16px;height:16px;border-radius:9px;background:#C2522B;color:#fff;font-size:10px;line-height:16px;box-shadow:0 0 0 2px var(--bg)}
+.kitap .lcard.ktcard{background:color-mix(in srgb,#FFF6E9 80%,var(--surface));border-color:color-mix(in srgb,#C9822B 22%,transparent)}
+.kitap .lcard.ktcard h3 .step{background:linear-gradient(150deg,#F6D7A8,#EFB48A)}
+.ktchips{display:flex;flex-wrap:wrap;gap:7px}
+.ktchip{font:inherit;font-size:13px;font-weight:600;color:var(--ink);background:var(--surface);border:1.5px solid color-mix(in srgb,#C9822B 30%,transparent);border-radius:999px;padding:7px 12px;display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+.ktchip[aria-pressed="true"]{background:linear-gradient(135deg,#C9822B,#A8492A);color:#fff;border-color:transparent}
+.ktchip.au[aria-pressed="true"]::before{content:"✓";font-weight:800}
+.ktchips.shake{animation:ktShake .4s}
+@keyframes ktShake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.ktfine{margin:0;font-size:12px;color:var(--muted);line-height:1.45}
+.ktfine.c{text-align:center;padding:4px 12px 8px}
+.ktfine a{color:var(--kt1);font-weight:700}
+.ktfav{display:flex;flex-wrap:wrap;gap:6px}
+.ktfv{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-family:var(--f-display);font-style:italic;background:#F6E3C6;color:#5A3420;border-radius:10px;padding:5px 4px 5px 10px}
+.ktfv button{border:0;background:none;font-size:16px;color:#8C4A2E;cursor:pointer;width:22px}
+.btn.ktgo{background:linear-gradient(135deg,#C9822B,#A8492A 70%)!important;color:#fff!important;width:100%;justify-content:center}
+.kthead{display:flex;align-items:baseline;justify-content:space-between;margin:6px 4px -4px}
+.kthead span{font-family:var(--f-display);font-size:21px;color:var(--ink)}
+.kthead small{font-size:11px;font-weight:700;color:var(--kt1);letter-spacing:.06em;text-transform:uppercase}
+.ktlivedot::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#6B7A3A;margin-right:5px;animation:mfPulse 1.8s infinite}
+.ktb{display:flex;gap:12px;background:color-mix(in srgb,#FFF6E9 85%,var(--surface));border:1px solid color-mix(in srgb,#C9822B 20%,transparent);border-radius:20px;padding:12px}
+.ktb.feat{padding:16px;gap:14px;background:linear-gradient(160deg,#FFF3DF,#F9E1CF);box-shadow:0 14px 30px -20px rgba(168,73,42,.6)}
+.ktb-i{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.ktb-i strong{font-family:var(--f-display);font-weight:400;font-size:17px;line-height:1.2;color:var(--ink)}
+.ktb.feat .ktb-i strong{font-size:22px}
+.ktau{font-size:13px;font-weight:700;color:#8C4A2E}
+.ktpub{font-size:11.5px;color:var(--muted)}
+.ktnote{margin:4px 0 2px;font-size:13px;line-height:1.45;color:var(--ink);opacity:.85}
+.ktwhy{font-size:11.5px;font-style:normal;font-weight:700;color:#6B7A3A}
+.ktwhy::before{content:"🍂 "}
+.ktnew{align-self:flex-start;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:#C2522B;border-radius:99px;padding:3px 8px}
+.ktb-a{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.ktbtn{font:inherit;font-size:12px;font-weight:800;color:#fff;background:#A8492A;border:0;border-radius:99px;padding:7px 12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+.ktbtn.gh{background:transparent;color:#A8492A;box-shadow:inset 0 0 0 1.5px color-mix(in srgb,#A8492A 50%,transparent)}
+.ktbtn.sm{padding:6px 10px;font-size:11.5px}
+.ktbtn.done{background:#6B7A3A}
+.ktfol{font-size:12px;font-weight:800;color:#6B7A3A;padding:7px 4px}
+.ktc{flex:none;width:64px;height:94px;border-radius:4px 10px 10px 4px;background:linear-gradient(160deg,var(--c2),var(--c1));position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:9px 7px 7px 11px;color:#FFF8EE;box-shadow:0 8px 16px -8px rgba(80,30,10,.6),inset -2px 0 0 rgba(255,255,255,.15)}
+.ktc i{position:absolute;left:4px;top:0;bottom:0;width:2px;background:rgba(0,0,0,.18)}
+.ktc b{font-family:var(--f-display);font-weight:400;font-size:10.5px;line-height:1.15;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.ktc small{font-size:7.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;opacity:.85;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ktc.big{width:96px;height:142px;padding:12px 9px 9px 14px}
+.ktc.big b{font-size:15px}
+.ktc.big small{font-size:9px}
+.ktc.img{padding:0;background:#E9D3B6}
+.ktc.img img{width:100%;height:100%;object-fit:cover}
+.ktrow{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;scroll-snap-type:x mandatory;margin:0 -16px;padding:4px 16px 6px}
+.ktrow::-webkit-scrollbar{display:none}
+.ktrow .ktb{flex:0 0 82%;scroll-snap-align:center}
+.ktlist{display:flex;flex-direction:column;gap:10px}
+.ktalert{font:inherit;text-align:left;cursor:pointer;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:20px;border:0;color:#fff;background:linear-gradient(120deg,#A8492A,#C9822B);box-shadow:0 12px 26px -16px rgba(168,73,42,.9);animation:ktGlow 2.6s ease-in-out infinite}
+.ktalert>span:first-child{font-size:22px}
+.ktalert span:nth-child(2){flex:1;display:flex;flex-direction:column;gap:2px}
+.ktalert strong{font-size:15px}
+.ktalert small{font-size:12px;opacity:.9}
+.ktalert b{font-size:22px;opacity:.8}
+@keyframes ktGlow{50%{box-shadow:0 12px 30px -10px rgba(233,165,90,.95)}}
+.ktev{display:flex;align-items:center;gap:12px;padding:8px 0;border-top:1px dashed color-mix(in srgb,#C9822B 30%,transparent)}
+.lcard h3+.ktev{border-top:0}
+.ktd{flex:0 0 48px;height:52px;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#F6E3C6;color:#7A3322;font-size:11px;font-weight:700;text-transform:uppercase}
+.ktd b{font-size:20px;line-height:1;font-family:var(--f-display);font-weight:400}
+.ktev.mine .ktd{background:linear-gradient(150deg,#C9822B,#A8492A);color:#fff}
+.ktev.fair .ktd{background:#E4E6C9;color:#4F5D3A}
+.kti{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.kti strong{font-size:14.5px;color:var(--ink)}
+.kti small{font-size:12px;color:var(--muted)}
+.kti .ktcity{font-size:11.5px}
+.ktsh{display:flex;align-items:center;gap:12px;padding:6px 0}
+.ktsh .ktc{width:40px;height:58px;padding:5px 4px 4px 7px}
+.ktsh .ktc b{font-size:7px;-webkit-line-clamp:4}
+.ktsh .ktc small{display:none}
+.ktsa{display:flex;align-items:center;gap:4px}
+.ktx{border:0;background:none;font-size:20px;color:var(--muted);cursor:pointer;width:28px;height:32px}
+/* Ana sayfa bandı */
+.paths.world.paths #go-kitap.path{order:10;grid-column:1/-1!important;display:grid!important;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto;column-gap:12px;row-gap:1px;align-items:center;text-align:left!important;padding:12px 16px 12px 12px!important;border-radius:22px!important;margin-top:4px;position:relative;overflow:hidden;
+  background:radial-gradient(90% 120% at 100% 0%,#F2B35C,transparent 60%),linear-gradient(120deg,#C9822B,#A8492A)!important;color:#FFF8EE!important;box-shadow:0 14px 28px -18px rgba(168,73,42,.9)!important}
+.paths.world.paths #go-kitap .pi{grid-row:1/3;width:48px;height:48px;border-radius:16px;font-size:24px;background:rgba(255,255,255,.2)!important;box-shadow:none;position:relative;z-index:1}
+.paths.world.paths #go-kitap .pi .mi{color:#fff}
+.paths.world.paths #go-kitap strong{font-family:var(--f-display);font-weight:400;font-size:20px!important;align-self:end;max-width:none;position:relative;z-index:1;color:#fff}
+.paths.world.paths #go-kitap small{grid-column:2;display:block!important;font-size:12px!important;opacity:.92;align-self:start;position:relative;z-index:1;color:#FFF3E0}
+.paths.world.paths #go-kitap .badge{position:static!important;grid-column:3;grid-row:1;justify-self:end;font-size:9px!important;background:rgba(255,255,255,.22)!important;color:#fff!important;box-shadow:none;max-width:none;z-index:1}
+.paths.world.paths #go-kitap .lv-go{grid-column:3;grid-row:2;justify-self:end;font-size:22px;line-height:1;opacity:.8;z-index:1}
+#go-kitap .ktleaves{opacity:.8}
+html[data-mf="dusk"] .paths.world.paths #go-kitap.path{background:radial-gradient(90% 120% at 100% 0%,#8A4A26,transparent 60%),linear-gradient(120deg,#5E3420,#4A2620)!important}
+/* İmza günü kartı */
+.ktpop{position:fixed;inset:0;z-index:80;display:grid;place-items:end center;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px));background:rgba(40,18,10,.45);opacity:0;transition:opacity .3s;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.ktpop.on{opacity:1}
+.ktpop-c{position:relative;overflow:hidden;width:100%;max-width:420px;border-radius:28px;padding:22px 20px 16px;color:#FFF8EE;text-align:center;background:radial-gradient(120% 90% at 85% 0%,#E9A55A 0%,transparent 55%),linear-gradient(160deg,#C9822B,#A8492A 60%,#7A3322);box-shadow:0 30px 60px -20px rgba(60,20,10,.7);transform:translateY(40px) scale(.96);transition:transform .45s cubic-bezier(.2,1.3,.4,1)}
+.ktpop.on .ktpop-c{transform:none}
+.ktpop-k{position:relative;display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,255,255,.2);padding:5px 12px;border-radius:99px}
+.ktpop-c h3{position:relative;margin:12px 0 8px;font-family:var(--f-display);font-weight:400;font-size:26px;line-height:1.15}
+.ktpop-c h3 em{color:#FFE2B0}
+.ktpop-c p{position:relative;margin:0 0 6px;font-size:14px;line-height:1.5;opacity:.95}
+.ktpop-m{font-size:13px!important}
+.ktpop-a{position:relative;display:flex;gap:8px;justify-content:center;margin:14px 0 6px}
+.ktpop-a .ktbtn{background:#fff;color:#A8492A;padding:10px 16px;font-size:13px}
+.ktpop-x{position:relative;font:inherit;font-size:13px;font-weight:700;color:#FFE9CC;background:none;border:0;padding:8px;cursor:pointer}
+/* Akşam teması */
+html[data-mf="dusk"] .kitap .lcard.ktcard,html[data-mf="dusk"] .ktb{background:rgba(255,236,214,.06);border-color:rgba(233,165,90,.18)}
+html[data-mf="dusk"] .ktb.feat{background:linear-gradient(160deg,rgba(201,130,43,.22),rgba(168,73,42,.18))}
+html[data-mf="dusk"] .ktseg{background:rgba(60,34,24,.75);border-color:rgba(233,165,90,.2)}
+html[data-mf="dusk"] .ktseg button{color:#F0CFA8}
+html[data-mf="dusk"] .ktseg button[aria-selected="true"]{color:#fff}
+html[data-mf="dusk"] .ktau{color:#F2B98A}
+html[data-mf="dusk"] .ktwhy{color:#C8D08A}
+html[data-mf="dusk"] .ktchip{background:rgba(255,255,255,.05);border-color:rgba(233,165,90,.3)}
+html[data-mf="dusk"] .ktd{background:rgba(233,165,90,.15);color:#F6D7A8}
+html[data-mf="dusk"] .ktev.fair .ktd{background:rgba(200,208,138,.15);color:#D9DFA8}
+html[data-mf="dusk"] .ktfv{background:rgba(233,165,90,.15);color:#F6D7A8}
+html[data-mf="dusk"] .ktbtn.gh{color:#F2B98A;box-shadow:inset 0 0 0 1.5px rgba(242,185,138,.5)}
+html[data-mf="dusk"] .ktfol{color:#C8D08A}
+html[data-mf="dusk"] .kitap .lcard.ktcard h3 .step{background:rgba(233,165,90,.25)}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -2749,6 +2902,7 @@ input.pulse,textarea.pulse{animation:affP .6s ease}
       <button class="path t-butter" id="go-pet" type="button"><span class="badge" id="pet-badge">Yeni</span><span class="pi">🐾</span><strong>Patili dostum</strong><small id="pet-sub">Mama saatleri ve aşılar</small></button>
       <button class="path t-lilac" id="go-zod" type="button"><span class="pi">☕</span><strong>Keyif köşem</strong><small>Fal, burç, bulmaca</small></button>
       <button class="path t-pink wide" id="go-love" type="button"><span class="badge">🔒 Özel</span><span class="pi">💞</span><strong>Biz ikimiz</strong><small>Döngün, romantik akşamlar ve mesajlar</small><span class="lv-go" aria-hidden="true">›</span></button>
+      <button class="path wide" id="go-kitap" type="button"><span class="ktleaves" aria-hidden="true"><i class="ktleaf" style="--x:62%;--d:9s;--dl:-2s;--r:20deg;--s:.8"></i><i class="ktleaf" style="--x:80%;--d:11s;--dl:-6s;--r:140deg;--s:1"></i><i class="ktleaf" style="--x:45%;--d:10s;--dl:-8s;--r:260deg;--s:.7"></i></span><span class="badge">🍂 Yeni</span><span class="pi">📚</span><strong>Kitap köşem</strong><small id="kitap-sub">Sonbahar okumaları, yazarların ve imza günleri</small><span class="lv-go" aria-hidden="true">›</span></button>
     </div>
     <p class="soon-msg" id="soon-msg" hidden></p>
   </div>
@@ -2972,6 +3126,17 @@ input.pulse,textarea.pulse{animation:affP .6s ease}
     <div class="gsur" data-sec="love" hidden></div>
   </div>
 
+  <div class="kitap" data-step="90" hidden>
+    <div class="kthero"><span class="ktleaves" aria-hidden="true"><i class="ktleaf" style="--x:11%;--d:7.0s;--dl:0.0s;--r:0deg;--s:0.70"></i><i class="ktleaf" style="--x:48%;--d:8.7s;--dl:5.7s;--r:53deg;--s:0.95"></i><i class="ktleaf" style="--x:85%;--d:10.4s;--dl:4.4s;--r:106deg;--s:1.20"></i><i class="ktleaf" style="--x:22%;--d:12.1s;--dl:3.1s;--r:159deg;--s:0.70"></i><i class="ktleaf" style="--x:59%;--d:7.8s;--dl:1.8s;--r:212deg;--s:0.95"></i><i class="ktleaf" style="--x:96%;--d:9.5s;--dl:0.5s;--r:265deg;--s:1.20"></i><i class="ktleaf" style="--x:33%;--d:11.2s;--dl:6.2s;--r:318deg;--s:0.70"></i><i class="ktleaf" style="--x:70%;--d:12.9s;--dl:4.9s;--r:11deg;--s:0.95"></i><i class="ktleaf" style="--x:7%;--d:8.6s;--dl:3.6s;--r:64deg;--s:1.20"></i></span>
+      <div class="lhero-top"><span class="tag">🍂 Sonbahar</span><button class="iconbtn homebtn" id="kt-home" type="button" aria-label="Ana sayfaya dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Ana sayfa</span></button></div>
+      <h2>Kitap <em>köşem</em></h2>
+      <p id="kt-sub"></p>
+      <span class="ktbook" aria-hidden="true">📚</span>
+    </div>
+    <div class="ktseg" role="tablist"><button type="button" role="tab" data-kt="oneri">Öneriler</button><button type="button" role="tab" data-kt="etk">Etkinlikler<span class="ktcnt" id="kt-ecount" hidden></span></button><button type="button" role="tab" data-kt="raf">Kitaplığım</button><button type="button" role="tab" data-kt="zevk">Zevkim</button></div>
+    <div id="ktpanel"></div>
+  </div>
+
   <div class="pet" data-step="20">
     <div class="phero">
       <div class="lhero-top"><span class="tag">🐾 Ailenin bir ferdi</span><button class="iconbtn homebtn" id="pet-home" type="button" aria-label="Ana sayfaya dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Ana sayfa</span></button></div>
@@ -3088,7 +3253,7 @@ input.pulse,textarea.pulse{animation:affP .6s ease}
       <p class="rh-int" id="rit-int"></p>
       <div class="rh-prog" id="rit-prog"></div>
     </div>
-    <div class="pracs" id="pracs" role="tablist"></div>
+    <div class="pracs" id="pracs" role="tablist"></div><span id="prac-anc" aria-hidden="true"></span>
     <div class="rpanel" data-pr="sukran" id="pr-sukran"></div>
     <div class="rpanel" data-pr="nefes" id="pr-nefes"></div>
     <div class="rpanel" data-pr="soz" id="pr-soz"></div>
@@ -4285,7 +4450,8 @@ document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest
 function pracRender(){
   const pw=document.getElementById("pracs");pw.innerHTML="";
   PRACS.forEach(([id,e,l,d])=>{const b=document.createElement("button");b.type="button";b.className="prac";b.setAttribute("role","tab");b.setAttribute("aria-selected",id===prac);
-    b.innerHTML=`<span class="pre">${e}</span><strong>${l}</strong>`;b.classList.add("pr-"+id);b.title=d;b.onclick=()=>{if(nfRun)nfStop();prac=id;ritRender();goTo(id==="369"?(document.getElementById("rit-setup").hidden?document.getElementById("rit-main"):document.getElementById("rit-setup")):document.getElementById("pr-"+id));};pw.appendChild(b);});
+    b.innerHTML=`<span class="pre">${e}</span><strong>${l}</strong>`;b.classList.add("pr-"+id);b.title=d;b.onclick=()=>{if(nfRun)nfStop();if(prac===id)return;prac=id;ritRender();pracSettle();};pw.appendChild(b);});
+  pracCenter(false);
   document.querySelectorAll("[data-pr]").forEach(el=>el.hidden=el.dataset.pr!==prac);
   const is369=prac==="369";
   if(!is369){document.getElementById("rit-setup").hidden=true;document.getElementById("rit-main").hidden=true;}else{const R0=rit();document.getElementById("rit-setup").hidden=!(!R0||redit);document.getElementById("rit-main").hidden=(!R0||redit);}
@@ -4880,7 +5046,7 @@ function navSync(){const c=navCur();document.querySelectorAll("#bnav [data-nv]")
   if(lastStep===null){try{history.replaceState({mf:step},"");}catch(e){}}
   lastStep=step;}
 function renderStep(){try{if(step>=9&&step<=10){openLove();return;}
-  const R={20:petRender,30:profRender,40:wardRender,50:fitRender,60:ritRender,70:kidsRender,80:evRender};show();if(R[step])R[step]();}catch(e){show();}}
+  const R={20:petRender,30:profRender,40:wardRender,50:fitRender,60:ritRender,70:kidsRender,80:evRender,90:kitapRender};show();if(R[step])R[step]();}catch(e){show();}}
 window.addEventListener("popstate",e=>{const t=e.state&&typeof e.state.mf==="number"?e.state.mf:0;if(typeof nfRun!=="undefined"&&nfRun)nfStop();
   navLock=true;step=(t===9||t===10)?(love.unlocked?10:9):t;renderStep();navLock=false;});
 document.addEventListener("click",e=>{const b=e.target.closest("#bnav [data-nv]");if(!b)return;const v=b.dataset.nv;if(typeof nfRun!=="undefined"&&nfRun)nfStop();
@@ -5723,6 +5889,199 @@ function wowDone(){const S=wowS(),L=wowLvl();if(!L.g.every(g=>S.f.includes(g.w))
   setTimeout(()=>{const W=document.querySelector(".wow");if(!W)return;W.insertAdjacentHTML("beforeend",`<div class="wow-win"><div class="wow-wc"><span>${last?ch[1]:"🎉"}</span><b>${last?ch[0]+" tamamlandı!":"Seviye "+(S.i+1)+" tamam!"}</b><small>${L.g.length} kelime${S.b.length?" · "+S.b.length+" bonus ⭐":""}</small><button type="button" class="btn" id="wow-next">${S.i+1>=WLV.length?"Baştan oyna ↻":"Sonraki seviye →"}</button></div></div>`);
     document.getElementById("wow-next").onclick=()=>{S.i=(S.i+1)%WLV.length;S.f=[];S.r=[];S.b=[];S.ord=null;if(last)S.h++;save();keyRender();};},650);}
 window.addEventListener("resize",()=>{if(typeof kv!=="undefined"&&kv==="wow")wowFit();});
+
+/* v152: Manifest seçici — yapışkan şerit, sayfa zıplamaz */
+function pracCenter(sm){const pw=document.getElementById("pracs");if(!pw)return;const a=pw.querySelector('[aria-selected="true"]');if(!a)return;
+  const x=a.offsetLeft-(pw.clientWidth-a.offsetWidth)/2;pw.scrollTo({left:Math.max(0,x),behavior:sm?"smooth":"auto"});}
+function pracSettle(){requestAnimationFrame(()=>{pracCenter(true);const pw=document.getElementById("pracs");if(!pw)return;
+  const top=pw.getBoundingClientRect().top,stuck=top<=parseFloat(getComputedStyle(pw).top||0)+1;
+  if(stuck){const anc=document.getElementById("prac-anc");if(anc){const y=anc.getBoundingClientRect().top+window.scrollY-pw.offsetHeight-parseFloat(getComputedStyle(pw).top||0);window.scrollTo({top:Math.max(0,y),behavior:"smooth"});}}
+  const vis=[...document.querySelectorAll('.rit .rpanel:not([hidden]),#rit-setup:not([hidden]),#rit-main:not([hidden])')];vis.forEach(v=>{v.classList.remove("pr-in");void v.offsetWidth;v.classList.add("pr-in");});});}
+
+/* ===== v152: Kitap köşem (sonbahar) ===== */
+const KT_GEN=[["roman","Roman","📖"],["polisiye","Polisiye & gerilim","🔎"],["kisisel","Kişisel gelişim","🌱"],["psikoloji","Psikoloji","🧠"],["ebeveyn","Ebeveynlik","🧸"],["romantik","Aşk & ilişkiler","💕"],["klasik","Klasikler","🏛"],["dunya","Dünya edebiyatı","🌍"],["siir","Şiir & deneme","🖋"],["tarih","Tarih","📜"],["cocuk","Çocuğum için","🎈"]];
+/* [başlık, yazar, türler, yayınevi, çıkış (YYYY-AA), kısa not] — yeni çıkanlar Ekim 2026 listelerinden */
+const KT_BOOKS=[
+["Roma'nın Beş Günü","Ahmet Ümit",["polisiye","roman"],"YKY","2026-10","Bir Yıldız Karasu kitabı: polisiye ile tarih bu kez Roma'da iç içe."],
+["Rüzgar Adımı Biliyor","Isabel Allende",["dunya","roman"],"Can","2026-10","Allende'den göç, ayrılık ve umut üzerine kuşaklar arası bir roman."],
+["Onlar Yaşadı Ben Yazdım","Kemal Varol",["roman"],"Doğan","2026-10","Kemal Varol'un yeni kitabı raflarda."],
+["Beni Bir Temiz Dövseler","Başar Başarır",["roman"],"Can","2026-10","İnce mizahı ve hüznüyle Başar Başarır'dan yeni bir kitap."],
+["Okudum da Ne Oldu?","Yekta Kopan",["siir"],"Can","2026-10","Okumanın hayatımıza kattıkları üzerine sohbet tadında yazılar."],
+["Paris Buluşmaları","Nedim Gürsel",["siir","dunya"],"Doğan","2026-10","Nedim Gürsel'in Paris'le ve yazarlarla buluşmaları."],
+["Merhaba Acımasız Dünya","Melinda Wenner Moyer",["ebeveyn"],"Hep Kitap","2026-10","İyi kalpli ve dirençli çocuk yetiştirmek üzerine araştırmaya dayalı bir rehber."],
+["Melek","Paulo Coelho",["dunya","kisisel"],"Can","2026-10","Coelho'nun yeni Türkçe baskısı."],
+["Hizmetçi ve Profesör","Yoko Ogawa",["dunya","roman"],"Domingo","2026-10","Hafızası seksen dakika süren bir matematikçi ve hizmetçisi: sayılarla örülen sıcacık bir dostluk."],
+["Gizli Tarih","Donna Tartt",["polisiye","dunya"],"İthaki","2026-10","Bir grup klasik filoloji öğrencisi ve bir cinayet; kült bir gerilim."],
+["Olive Kitteridge","Elizabeth Strout",["dunya","roman"],"İthaki","2026-10","Pulitzer ödüllü; küçük bir kasabada sert ama derin bir kadının portresi."],
+["Karaağaç","Tana French",["polisiye","dunya"],"İthaki","2026-10","Bahçedeki yaşlı ağaçta bulunan bir sır; İrlanda'dan atmosferik bir gerilim."],
+["Verity","Colleen Hoover",["polisiye","romantik"],"Epsilon","2026-10","Yarım kalan bir seriyi bitirmeye çağrılan bir yazar ve bulduğu ürkütücü bir otobiyografi."],
+["Ölümlüler İçin Derin Düşünceler","Oliver Burkeman",["kisisel"],"Epsilon","2026-10","Mükemmeliyetçiliği bırakıp şimdiyi yaşamak üzerine kısa ve rahatlatıcı düşünceler."],
+["Vücudunuz Hayır Diyorsa","Gabor Maté",["psikoloji"],"İletişim","2026-10","Bastırılan stresin ve 'hayır' diyememenin bedene etkisi üzerine."],
+["Bekar ve Mutlu Nasıl Yaşanır?","Jennifer Taitz",["kisisel","romantik"],"Aganta","2026-10","İlişki durumundan bağımsız olarak kendinle barışık yaşamak üzerine."],
+["Son Demlerinde Hayat","Bernhard Schlink",["dunya","roman"],"İletişim","2026-10","'Okuyucu'nun yazarından; sevdiklerine bir şey bırakmak isteyen bir babanın son ayları."],
+["El Feneri","Susan Choi",["dunya","roman"],"İthaki","2026-10","Susan Choi'nin yeni romanı Türkçede."],
+["Yüzlerce Gölge","Hwang Jungeun",["dunya","romantik"],"İthaki","2026-10","Kore'den; yıkılmak üzere olan bir çarşıda filizlenen sessiz bir aşk."],
+["Ressam","Lucy Steeds",["dunya","roman"],"İthaki","2026-10","Provence'ta bir ressamın yanında geçen, renkleri ve sırlarıyla bir yaz."],
+["Kedi Kitabı","Ursula K. Le Guin",["siir"],"Metis","2026-10","Le Guin'den kedi sevenlere küçük ve tatlı bir kitap."],
+["Okulda Öğretilmeyenler Listesi","Mavisel Yener",["cocuk"],"","2026-10","Mavisel Yener'den çocuklar için yeni bir kitap."],
+["Renkli Duygular Oteli","Lidia Brankovic",["cocuk"],"","2026-10","Çocuklarla duyguları konuşmanın renkli bir yolu."],
+["Kürk Mantolu Madonna","Sabahattin Ali",["klasik","romantik"],"YKY","","Raif Efendi'nin defterinden, yıllardır elden ele dolaşan bir aşk."],
+["Aşk","Elif Şafak",["roman","romantik"],"Doğan","","Ella'nın sıradan hayatı ile Şems ve Mevlânâ'nın hikâyesi kesişiyor."],
+["Huzursuzluk","Zülfü Livaneli",["roman"],"Doğan","","Bir gazetecinin peşine düştüğü, bölgenin acılarına dokunan bir hikâye."],
+["Serenad","Zülfü Livaneli",["roman","tarih"],"Doğan","","İstanbul'dan Şile'ye uzanan, geçmişin sırlarını açan bir yolculuk."],
+["Masumiyet Müzesi","Orhan Pamuk",["roman","romantik"],"YKY","","Kemal ve Füsun; bir aşkın eşyalarla tutulan hatırası."],
+["Benim Adım Kırmızı","Orhan Pamuk",["roman","tarih","polisiye"],"YKY","","Osmanlı nakkaşları arasında bir cinayet ve bir aşk."],
+["Kayıp Söz","Oya Baydar",["roman"],"Can","","Bir yazarın kaybolan sözcüklerinin peşinde, iç dünyaya bir yolculuk."],
+["Çocukluğun Soğuk Geceleri","Tezer Özlü",["klasik","siir"],"YKY","","Kısa, sarsıcı ve unutulmaz bir iç ses."],
+["Tante Rosa","Sevgi Soysal",["klasik"],"İletişim","","Hayata her seferinde yeniden başlayan bir kadının neşeli ve hüzünlü hikâyesi."],
+["Saatleri Ayarlama Enstitüsü","Ahmet Hamdi Tanpınar",["klasik"],"Dergâh","","Türk edebiyatının en zekice ironilerinden biri."],
+["Nefes Nefese","Ayşe Kulin",["roman","tarih"],"Everest","","İkinci Dünya Savaşı yıllarında Türk diplomatların cesur hikâyesi."],
+["Piraye","Canan Tan",["roman","romantik"],"Altın","","Kuşaklar boyu süren bir aile ve aşk destanı."],
+["Kurt Seyit ve Şura","Nermin Bezmen",["romantik","tarih"],"","","Rus Devrimi'nden İstanbul'a uzanan efsanevi bir aşk."],
+["Beyoğlu Rapsodisi","Ahmet Ümit",["polisiye"],"","","İstanbul'un kalbinde, Beyoğlu sokaklarında bir polisiye."],
+["Ruhlar Evi","Isabel Allende",["dunya","klasik"],"Can","","Üç kuşak kadının büyülü ve tutkulu hikâyesi."],
+["Simyacı","Paulo Coelho",["dunya","kisisel"],"Can","","Kişisel menkıbesinin peşine düşen bir çobanın yolculuğu."],
+["Gece Yarısı Kütüphanesi","Matt Haig",["dunya","kisisel"],"Domingo","","Yaşanmamış hayatların kitaplarla dolu bir kütüphanesi."],
+["Ove Adında Bir Adam","Fredrik Backman",["dunya","roman"],"","","Huysuz bir komşunun kalbine yavaş yavaş açılan kapılar."],
+["Doğu Ekspresinde Cinayet","Agatha Christie",["polisiye","klasik"],"Altın","","Karda mahsur kalan bir tren ve Poirot."],
+["Gurur ve Önyargı","Jane Austen",["klasik","romantik"],"","","Elizabeth ve Darcy; ilk izlenimlerin ne kadar yanıltıcı olabileceği üzerine."],
+["Anna Karenina","Lev Tolstoy",["klasik","romantik","dunya"],"","","Tutku, toplum ve vicdan arasında kalan bir kadın."],
+["Satranç","Stefan Zweig",["klasik","dunya"],"","","Bir gemide oynanan, insan zihninin sınırlarını zorlayan bir oyun."],
+["Atomik Alışkanlıklar","James Clear",["kisisel"],"Pegasus","","Küçük değişikliklerle büyük sonuçlar almanın pratik yolu."],
+["Dört Bin Hafta","Oliver Burkeman",["kisisel"],"","","Ortalama bir ömür dört bin hafta; zamanı kontrol etmeye değil yaşamaya dair."],
+["Duygusal Zekâ","Daniel Goleman",["psikoloji","kisisel"],"","","Neden bazı insanlar duygularını daha iyi yönetir?"],
+["İçimizdeki Çocuk","Doğan Cüceloğlu",["psikoloji","ebeveyn"],"Remzi","","Kendimizi ve çocuklarımızı anlamak için sıcak bir rehber."],
+["Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli","Adele Faber & Elaine Mazlish",["ebeveyn"],"","","Evde iletişimi değiştiren, uygulaması kolay bir klasik."],
+["Türklerin Tarihi","İlber Ortaylı",["tarih"],"Timaş","","Ortaylı'nın akıcı anlatımıyla bozkırdan Anadolu'ya."],
+["Üvercinka","Cemal Süreya",["siir","klasik"],"YKY","","Türk şiirinin en sevilen aşk dizelerinden."]];
+const KT_POP=["Ahmet Ümit","Elif Şafak","Zülfü Livaneli","Sabahattin Ali","Kemal Sayar","Hatice Kübra Tongar","Şermin Yaşar","Kahraman Tazeoğlu","Şükrü Erbaş","Isabel Allende","Colleen Hoover","Paulo Coelho","Ayşe Kulin","Canan Tan","Orhan Pamuk","İlber Ortaylı","Yekta Kopan","Gabor Maté","Oliver Burkeman","Donna Tartt"];
+/* Okur-yazar buluşmaları & imza günleri (kaynak: okuryazarbulusmasi.com, Kasım 2026) */
+const KT_EV=[
+["e1",["Mert Arık"],"2026-11-01","13:00","Samsun Kitap Fuarı","Samsun"],
+["e2",["Kemal Sayar"],"2026-11-01","14:00","Samsun Kitap Fuarı","Samsun"],
+["e3",["Sertaç Abi","Oytun Erbaş"],"2026-11-01","16:00","Samsun Kitap Fuarı","Samsun"],
+["e4",["Adnan Demircan"],"2026-11-01","13:00","Malatya Kitap Fuarı","Malatya"],
+["e5",["Vehbi Vakkasoğlu"],"2026-11-01","15:00","Malatya Kitap Fuarı","Malatya"],
+["e6",["Altay Cem Meriç"],"2026-11-01","14:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
+["e7",["Birsen Ekim Özen"],"2026-11-01","15:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
+["e8",["Hatice Kübra Tongar"],"2026-11-01","17:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
+["e9",["Şermin Yaşar"],"2026-11-06","14:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
+["e10",["Kahraman Tazeoğlu"],"2026-11-07","18:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
+["e11",["Hatice Nur Ege"],"2026-11-08","16:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
+["e12",["Dilek Cesur"],"2026-11-08","17:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
+["e13",["Şükrü Erbaş"],"2026-11-11","18:00","Okur buluşması","Kastamonu"],
+["e14",["Figen Şakacı"],"2026-11-15","15:00","TESAK · Kadıköy","İstanbul"],
+["e15",["Ahmet Ümit"],"","","Bartın ve Samsun okur buluşmaları","Kasım · tarih netleşecek"]];
+const KT_FAIR=[["Ümraniye Kitap Fuarı","2026-11-21","2026-11-29","İstanbul","Program yakında"],["Şanlıurfa Kitap Fuarı","2026-11-20","2026-11-29","Şanlıurfa","Program yakında"],["43. TÜYAP İstanbul Kitap Fuarı","2026-12-12","2026-12-20","TÜYAP Büyükçekmece","Onur yazarı Latife Tekin · imza programı açıklanınca burada"]];
+const KT_SRC="https://okuryazarbulusmasi.com/okur-yazar-bulusmalari/";
+let kttab="oneri";
+function kt(){if(!st.kitap)st.kitap={gen:[],au:[],fav:[],shelf:[],seen:{},setup:false};const K=st.kitap;["gen","au","fav","shelf"].forEach(k=>{if(!Array.isArray(K[k]))K[k]=[];});if(!K.seen)K.seen={};return K;}
+const ktN=x=>(x||"").toLocaleLowerCase("tr-TR").replace(/[^a-zçğıöşü0-9 ]/g," ").replace(/\s+/g," ").trim();
+function ktFollow(a){const n=ktN(a);return kt().au.some(x=>{const m=ktN(x);return m&&(m===n||(m.length>4&&n.includes(m))||(n.length>4&&m.includes(n)));});}
+function ktOnShelf(t){const n=ktN(t);return kt().shelf.find(x=>ktN(x.t)===n);}
+function ktDays(d){if(!d)return null;return Math.round((new Date(d+"T00:00")-new Date(dkey()+"T00:00"))/864e5);}
+function ktWhen(d){const x=ktDays(d);if(x===null)return"";if(x===0)return"Bugün";if(x===1)return"Yarın";if(x<7)return x+" gün sonra";return new Date(d+"T00:00").toLocaleDateString("tr-TR",{day:"numeric",month:"long",weekday:"long"});}
+function ktMyEvents(max){return KT_EV.filter(e=>e[1].some(ktFollow)&&(e[2]===""||(ktDays(e[2])>=0&&ktDays(e[2])<=(max||60))));}
+function ktScore(b){const K=kt();let s=0,why="";
+  if(ktFollow(b[1])){s+=6;why="Takip ettiğin yazar";}
+  const g=b[2].filter(x=>K.gen.includes(x));if(g.length){s+=2*g.length;if(!why)why="Sevdiğin tür: "+(KT_GEN.find(x=>x[0]===g[0])||[0,""])[1];}
+  const fv=K.fav.map(ktN);KT_BOOKS.forEach(f=>{if(fv.includes(ktN(f[0]))&&f!==b){if(f[1]===b[1]){s+=3;if(!why)why=`"${f[0]}" sevdiysen`;}const ov=f[2].filter(x=>b[2].includes(x)).length;if(ov>=2){s+=1.5;if(!why)why=`"${f[0]}" sevenler bunu da sever`;}}});
+  if(b[4]){s+=1;}
+  if(b[2].includes("cocuk")&&!K.gen.includes("cocuk"))s-=4;
+  return [s,why||(b[4]?"Bu ay yeni çıktı":"Sonbahar klasiği")];}
+function ktRecs(){const K=kt();return KT_BOOKS.filter(b=>!ktOnShelf(b[0])&&!K.fav.map(ktN).includes(ktN(b[0]))).map(b=>[b,...ktScore(b)]).sort((a,b)=>b[1]-a[1]);}
+const KT_COL=[["#B5532D","#E9A55A"],["#6B7A3A","#C8B45A"],["#8C3B2E","#D9824A"],["#4F5D3A","#B98A3C"],["#9A4A2C","#F0C27A"],["#5C3A2E","#C47A4C"]];
+function ktCover(t,a,big){let h=0;for(const c of t)h=(h*31+c.charCodeAt(0))>>>0;const c=KT_COL[h%KT_COL.length];
+  return `<span class="ktc${big?" big":""}" style="--c1:${c[0]};--c2:${c[1]}" aria-hidden="true"><i></i><b>${esc(t.length>34?t.slice(0,32)+"…":t)}</b><small>${esc(a)}</small></span>`;}
+function ktCard(r,feat){const b=r[0];const pub=[b[3],b[4]?new Date(b[4]+"-01T00:00").toLocaleDateString("tr-TR",{month:"long",year:"numeric"}):""].filter(Boolean).join(" · ");const fol=ktFollow(b[1]);
+  return `<div class="ktb${feat?" feat":""}">${ktCover(b[0],b[1],feat)}<div class="ktb-i">${b[4]?'<span class="ktnew">Yeni çıktı</span>':""}<strong>${esc(b[0])}</strong><span class="ktau">${esc(b[1])}</span>${pub?`<small class="ktpub">${esc(pub)}</small>`:""}
+    ${feat?`<p class="ktnote">${esc(b[5])}</p>`:""}<em class="ktwhy">${esc(r[2])}</em>
+    <div class="ktb-a"><button type="button" class="ktbtn" data-kadd="${esc(b[0])}" data-kau="${esc(b[1])}">＋ Okuyacağım</button>${fol?'<span class="ktfol on">✓ Takiptesin</span>':`<button type="button" class="ktbtn gh" data-kfol="${esc(b[1])}">Yazarı takip et</button>`}</div></div></div>`;}
+function ktLeaves(n){let o="";for(let i=0;i<n;i++)o+=`<i class="ktleaf" style="--x:${(i*37+11)%100}%;--d:${7+(i*1.7)%6}s;--dl:${-(i*1.3)%7}s;--r:${(i*53)%360}deg;--s:${.7+(i%3)*.25}"></i>`;return `<span class="ktleaves" aria-hidden="true">${o}</span>`;}
+function kitapRender(){const K=kt();const P=document.getElementById("ktpanel");if(!P)return;
+  const myE=ktMyEvents(30);
+  document.getElementById("kt-sub").textContent=myE.length?`${myE[0][1].filter(ktFollow)[0]||myE[0][1][0]} ${myE[0][2]?ktWhen(myE[0][2]).toLocaleLowerCase("tr-TR"):"bu ay"} okurlarıyla buluşuyor ✏️`:K.setup?"Sonbahar okumaların hazır; bir fincan çay demle 🍂":"Zevkini anlat, sana göre kitap seçeyim 🍂";
+  if(!K.setup&&kttab!=="zevk")kttab="zevk";
+  document.querySelectorAll(".ktseg button").forEach(b=>{b.setAttribute("aria-selected",b.dataset.kt===kttab);b.onclick=()=>{kttab=b.dataset.kt;kitapRender();};});
+  const ec=document.getElementById("kt-ecount");if(ec){ec.textContent=myE.length||"";ec.hidden=!myE.length;}
+  if(kttab==="zevk"){
+    const ch=KT_GEN.map(([id,e,l])=>[id,l,e]);
+    const au=[...new Set([...K.au,...KT_POP])];
+    P.innerHTML=`<div class="lcard ktcard"><h3><span class="step no-mi">🍁</span>Ne okumayı seversin?</h3><div class="ktchips">${ch.map(([id,l,e])=>`<button type="button" class="ktchip" data-kg="${id}" aria-pressed="${K.gen.includes(id)}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div></div>
+      <div class="lcard ktcard"><h3><span class="step no-mi">✒️</span>Takip ettiğin yazarlar<span class="nextf">${K.au.length||""}</span></h3><p class="ktfine">Seçtiğin yazarların yeni kitapları ve imza günleri ekranına düşer.</p>
+      <div class="ktchips">${au.map(a=>`<button type="button" class="ktchip au" data-kau2="${esc(a)}" aria-pressed="${K.au.includes(a)}">${esc(a)}</button>`).join("")}</div>
+      <div class="addrow"><input id="kt-au" type="text" maxlength="40" placeholder="Listede yok mu? Yazar adı yaz"><button class="pill" id="kt-aua" type="button">＋ Ekle</button></div></div>
+      <div class="lcard ktcard"><h3><span class="step no-mi">📚</span>En sevdiğin kitaplar</h3><p class="ktfine">Sevdiğin kitapları yaz; benzerlerini bulayım.</p>
+      ${K.fav.length?`<div class="ktfav">${K.fav.map((f,i)=>`<span class="ktfv">${esc(f)}<button type="button" data-kfx="${i}" aria-label="Kaldır">×</button></span>`).join("")}</div>`:""}
+      <div class="addrow"><input id="kt-fv" type="text" maxlength="60" placeholder="ör. Kürk Mantolu Madonna" list="kt-dl"><button class="pill" id="kt-fva" type="button">＋ Ekle</button></div><datalist id="kt-dl">${KT_BOOKS.map(b=>`<option value="${esc(b[0])}">`).join("")}</datalist></div>
+      <button class="btn ktgo" id="kt-done" type="button">${K.setup?"Önerilerimi güncelle":"Bana kitap öner"} 🍂</button>`;
+    P.querySelectorAll("[data-kg]").forEach(b=>b.onclick=()=>{const g=b.dataset.kg;K.gen=K.gen.includes(g)?K.gen.filter(x=>x!==g):[...K.gen,g];save();b.setAttribute("aria-pressed",K.gen.includes(g));});
+    P.querySelectorAll("[data-kau2]").forEach(b=>b.onclick=()=>{const a=b.dataset.kau2;K.au=K.au.includes(a)?K.au.filter(x=>x!==a):[...K.au,a];save();b.setAttribute("aria-pressed",K.au.includes(a));const n=P.querySelector(".ktcard:nth-child(2) .nextf");if(n)n.textContent=K.au.length||"";});
+    const addAu=()=>{const i=document.getElementById("kt-au"),v=i.value.trim();if(!v){i.focus();return;}if(!K.au.some(x=>ktN(x)===ktN(v)))K.au.push(v);save();kitapRender();};
+    document.getElementById("kt-aua").onclick=addAu;document.getElementById("kt-au").onkeydown=e=>{if(e.key==="Enter")addAu();};
+    const addFv=()=>{const i=document.getElementById("kt-fv"),v=i.value.trim();if(!v){i.focus();return;}if(!K.fav.some(x=>ktN(x)===ktN(v)))K.fav.push(v);const m=KT_BOOKS.find(b=>ktN(b[0])===ktN(v));if(m)m[2].forEach(g=>{if(!K.gen.includes(g)&&g!=="cocuk")K.gen.push(g);});save();kitapRender();};
+    document.getElementById("kt-fva").onclick=addFv;document.getElementById("kt-fv").onkeydown=e=>{if(e.key==="Enter")addFv();};
+    P.querySelectorAll("[data-kfx]").forEach(b=>b.onclick=()=>{K.fav.splice(+b.dataset.kfx,1);save();kitapRender();});
+    document.getElementById("kt-done").onclick=()=>{if(!K.gen.length&&!K.au.length&&!K.fav.length){P.querySelector(".ktchips").classList.add("shake");setTimeout(()=>P.querySelector(".ktchips")&&P.querySelector(".ktchips").classList.remove("shake"),500);return;}K.setup=true;save();kttab="oneri";kitapRender();window.scrollTo({top:0,behavior:"smooth"});};
+  }
+  if(kttab==="oneri"){const R=ktRecs();const nw=R.filter(r=>r[0][4]&&r[1]>=2);const feat=R[0];const rest=R.slice(1).filter(r=>!nw.slice(0,6).includes(r)).slice(0,8);
+    const evB=myE.length?`<button type="button" class="ktalert" id="kt-toev"><span class="no-mi">✏️</span><span><strong>${esc(myE[0][1].filter(ktFollow)[0]||myE[0][1][0])} imza gününde!</strong><small>${myE[0][2]?ktWhen(myE[0][2])+" · "+myE[0][3]+" · ":""}${esc(myE[0][4])}${myE[0][2]?", "+esc(myE[0][5]):""}</small></span><b>›</b></button>`:"";
+    P.innerHTML=evB+`<div class="kthead"><span>Bu sonbahar senin için</span></div>${feat?ktCard(feat,true):""}
+      ${nw.length?`<div class="kthead"><span>Zevkine göre yeni çıkanlar</span><small>Ekim 2026</small></div><div class="ktrow">${nw.filter(r=>r!==feat).slice(0,6).map(r=>ktCard(r)).join("")}</div>`:""}
+      <div id="kt-live"></div>
+      <div class="kthead"><span>Sevebileceğin kitaplar</span></div><div class="ktlist">${rest.map(r=>ktCard(r)).join("")}</div>
+      <p class="ktfine c">Yeni çıkanlar ve buluşmalar düzenli olarak güncellenir. Zevkini değiştirmek için <a href="#" id="kt-tz">Zevkim</a>.</p>`;
+    const te=document.getElementById("kt-toev");if(te)te.onclick=()=>{kttab="etk";kitapRender();};
+    document.getElementById("kt-tz").onclick=e=>{e.preventDefault();kttab="zevk";kitapRender();};
+    ktLive();}
+  if(kttab==="etk"){const all=KT_EV.filter(e=>e[2]===""||ktDays(e[2])>=0);const mine=all.filter(e=>e[1].some(ktFollow)),oth=all.filter(e=>!e[1].some(ktFollow));
+    const row=e=>{const d=e[2]?new Date(e[2]+"T00:00"):null;const f=e[1].some(ktFollow);return `<div class="ktev${f?" mine":""}"><span class="ktd">${d?`<b>${d.getDate()}</b>${d.toLocaleDateString("tr-TR",{month:"short"})}`:"<b>?</b>Kasım"}</span><span class="kti"><strong>${e[1].map(esc).join(" & ")}</strong><small>${e[2]?ktWhen(e[2])+" · "+e[3]+" · ":""}${esc(e[4])}</small><small class="ktcity">📍 ${esc(e[5])}</small></span>${f?'<span class="ktfol on">✓</span>':`<button type="button" class="ktbtn gh sm" data-kfol="${esc(e[1][0])}">Takip et</button>`}</div>`;};
+    P.innerHTML=`<div class="lcard ktcard"><h3><span class="step no-mi">✏️</span>Senin yazarların</h3>${mine.length?mine.map(row).join(""):`<p class="ktfine">Takip ettiğin yazarların yakın zamanda bir buluşması görünmüyor. Aşağıdan birini takip edersen, imza günü olduğunda ana sayfanda haber veririm.</p>`}</div>
+      <div class="lcard ktcard"><h3><span class="step no-mi">🍂</span>Kitap fuarları</h3>${KT_FAIR.filter(f=>ktDays(f[2])>=0).map(f=>{const a=new Date(f[1]+"T00:00"),b=new Date(f[2]+"T00:00");return `<div class="ktev fair"><span class="ktd"><b>${a.getDate()}</b>${a.toLocaleDateString("tr-TR",{month:"short"})}</span><span class="kti"><strong>${esc(f[0])}</strong><small>${a.getDate()}–${b.getDate()} ${b.toLocaleDateString("tr-TR",{month:"long"})} · ${esc(f[3])}</small><small class="ktcity">${esc(f[4])}</small></span></div>`;}).join("")}</div>
+      <div class="lcard ktcard"><h3><span class="step no-mi">📅</span>Tüm imza günleri</h3>${oth.map(row).join("")}<p class="ktfine">Kaynak: <a href="${KT_SRC}" target="_blank" rel="noopener">Okur-Yazar Buluşmaları</a>. Saatler değişebilir; gitmeden önce fuarın sitesinden teyit et.</p></div>`;}
+  if(kttab==="raf"){const S=K.shelf;const L=[["okuyor","Okuyorum","📖"],["oku","Okuyacağım","🔖"],["okudu","Okudum","✓"]];
+    P.innerHTML=`<div class="lcard ktcard"><h3><span class="step no-mi">➕</span>Kitaplığıma ekle</h3><div class="addgrid"><div class="field"><label for="kt-st">Kitap</label><input id="kt-st" type="text" maxlength="70" list="kt-dl2" placeholder="Kitabın adı"></div><div class="field"><label for="kt-sa">Yazar</label><input id="kt-sa" type="text" maxlength="40" placeholder="Yazarı"></div></div><datalist id="kt-dl2">${KT_BOOKS.map(b=>`<option value="${esc(b[0])}">`).join("")}</datalist><button class="btn ktgo" id="kt-sadd" type="button">Kitaplığa ekle</button></div>`+
+      L.map(([k,l,e])=>{const X=S.filter(x=>x.s===k);return `<div class="lcard ktcard"><h3><span class="step no-mi">${e}</span>${l}<span class="nextf">${X.length||""}</span></h3>${X.length?X.map(x=>{const i=S.indexOf(x);return `<div class="ktsh">${ktCover(x.t,x.a||"",false)}<span class="kti"><strong>${esc(x.t)}</strong><small>${esc(x.a||"")}</small></span><span class="ktsa">${k!=="okuyor"&&k!=="okudu"?`<button type="button" class="ktbtn sm" data-ks="${i}" data-to="okuyor">Başladım</button>`:""}${k==="okuyor"?`<button type="button" class="ktbtn sm" data-ks="${i}" data-to="okudu">Bitirdim 🎉</button>`:""}<button type="button" class="ktx" data-kx="${i}" aria-label="Kaldır">×</button></span></div>`;}).join(""):`<p class="ktfine">${k==="oku"?"Önerilerdeki ＋ Okuyacağım ile buraya eklenir.":k==="okuyor"?"Şu an elinde bir kitap yok mu? 🍂":"Bitirdiğin kitaplar burada birikir."}</p>`}</div>`;}).join("");
+    document.getElementById("kt-st").oninput=e=>{const m=KT_BOOKS.find(b=>ktN(b[0])===ktN(e.target.value));if(m)document.getElementById("kt-sa").value=m[1];};
+    document.getElementById("kt-sadd").onclick=()=>{const t=document.getElementById("kt-st").value.trim();if(!t){document.getElementById("kt-st").focus();return;}if(!ktOnShelf(t))S.unshift({t,a:document.getElementById("kt-sa").value.trim(),s:"oku",d:dkey()});save();kitapRender();};
+    P.querySelectorAll("[data-ks]").forEach(b=>b.onclick=()=>{const x=S[+b.dataset.ks];x.s=b.dataset.to;x.d=dkey();save();kitapRender();});
+    P.querySelectorAll("[data-kx]").forEach(b=>b.onclick=()=>{S.splice(+b.dataset.kx,1);save();kitapRender();});}
+  P.querySelectorAll("[data-kadd]").forEach(b=>b.onclick=()=>{if(!ktOnShelf(b.dataset.kadd))K.shelf.unshift({t:b.dataset.kadd,a:b.dataset.kau,s:"oku",d:dkey()});save();b.textContent="✓ Kitaplığında";b.disabled=true;b.classList.add("done");});
+  P.querySelectorAll("[data-kfol]").forEach(b=>b.onclick=()=>{const a=b.dataset.kfol;if(!ktFollow(a))K.au.push(a);save();kitapRender();});
+}
+/* Canlı: takip edilen yazarların en yeni kitapları (Google Books, internet varsa) */
+function ktLive(){const K=kt(),box=document.getElementById("kt-live");if(!box||!K.au.length||!window.fetch)return;
+  const key="mefirst-ktlive",sig=K.au.slice(0,6).join("|");let C=null;try{C=JSON.parse(localStorage.getItem(key)||"null");}catch(e){}
+  const draw=items=>{const b=document.getElementById("kt-live");if(!b)return;const known=new Set(KT_BOOKS.map(x=>ktN(x[0])));const X=items.filter(i=>!known.has(ktN(i.t))&&!ktOnShelf(i.t)).slice(0,8);if(!X.length){b.innerHTML="";return;}
+    b.innerHTML=`<div class="kthead"><span>Yazarlarından son çıkanlar</span><small class="ktlivedot">canlı</small></div><div class="ktrow">${X.map(i=>`<div class="ktb">${i.img?`<span class="ktc img"><img src="${esc(i.img)}" alt="" loading="lazy"></span>`:ktCover(i.t,i.a)}<div class="ktb-i"><strong>${esc(i.t)}</strong><span class="ktau">${esc(i.a)}</span><small class="ktpub">${esc([i.p,i.y].filter(Boolean).join(" · "))}</small><em class="ktwhy">Takip ettiğin yazar</em><div class="ktb-a"><button type="button" class="ktbtn" data-kadd="${esc(i.t)}" data-kau="${esc(i.a)}">＋ Okuyacağım</button></div></div></div>`).join("")}</div>`;
+    b.querySelectorAll("[data-kadd]").forEach(x=>x.onclick=()=>{if(!ktOnShelf(x.dataset.kadd))K.shelf.unshift({t:x.dataset.kadd,a:x.dataset.kau,s:"oku",d:dkey()});save();x.textContent="✓ Kitaplığında";x.disabled=true;x.classList.add("done");});};
+  if(C&&C.sig===sig&&C.day===dkey()){draw(C.items);return;}
+  const y0=new Date().getFullYear()-1;const ctl=window.AbortController?new AbortController():null;const tm=setTimeout(()=>ctl&&ctl.abort(),6000);
+  Promise.all(K.au.slice(0,6).map(a=>fetch(`https://www.googleapis.com/books/v1/volumes?q=inauthor:%22${encodeURIComponent(a)}%22&orderBy=newest&maxResults=10&printType=books&langRestrict=tr`,ctl?{signal:ctl.signal}:{}).then(r=>r.ok?r.json():{items:[]}).then(j=>(j.items||[]).map(it=>{const v=it.volumeInfo||{};return{t:v.title||"",a:(v.authors||[a])[0],p:v.publisher||"",y:(v.publishedDate||"").slice(0,4),img:((v.imageLinks||{}).thumbnail||"").replace(/^http:/,"https:"),au:v.authors||[]};}).filter(x=>x.t&&+x.y>=y0&&x.au.some(ktFollow))).catch(()=>[])))
+    .then(L=>{clearTimeout(tm);const seen=new Set(),items=[];L.flat().forEach(i=>{const n=ktN(i.t);if(!seen.has(n)){seen.add(n);items.push(i);}});items.sort((a,b)=>b.y-a.y);try{localStorage.setItem(key,JSON.stringify({sig,day:dkey(),items}));}catch(e){}draw(items);}).catch(()=>{});}
+/* İmza günü: ekrana düşen kart */
+function ktPop(){if(step!==0||!st.kitap||!kt().au.length)return;const K=kt();const E=ktMyEvents(14).filter(e=>e[2]);if(!E.length)return;
+  const e=E[0],x=ktDays(e[2]),id=e[0]+(x===0?"t":x<=2?"s":"");if(K.seen[id])return;if(document.getElementById("ktpop"))return;
+  const a=e[1].filter(ktFollow)[0]||e[1][0];const m=KT_BOOKS.find(b=>ktN(b[1])===ktN(a)&&b[4]);
+  const d=document.createElement("div");d.className="ktpop";d.id="ktpop";d.setAttribute("role","dialog");d.setAttribute("aria-label","İmza günü");
+  d.innerHTML=`<div class="ktpop-c">${ktLeaves(7)}<span class="ktpop-k">✏️ İmza günü</span><h3>${esc(a)}<br><em>${x===0?"bugün":x===1?"yarın":ktWhen(e[2]).toLocaleLowerCase("tr-TR")}</em> okurlarıyla buluşuyor</h3>
+    <p><b>${e[3]}</b> · ${esc(e[4])}<br>📍 ${esc(e[5])}</p>${m?`<p class="ktpop-m">Yeni kitabı <b>${esc(m[0])}</b> da yanında olsun 📚</p>`:""}
+    <div class="ktpop-a"><a class="ktbtn" href="https://www.google.com/maps/search/${encodeURIComponent(e[4].split("·").pop().trim()+" "+e[5])}" target="_blank" rel="noopener">Yol tarifi</a><button type="button" class="ktbtn" id="ktpop-go">Tüm etkinlikler</button></div><button type="button" class="ktpop-x" id="ktpop-x">Tamam, teşekkürler</button></div>`;
+  document.body.appendChild(d);requestAnimationFrame(()=>d.classList.add("on"));
+  const close=()=>{K.seen[id]=1;save();d.classList.remove("on");setTimeout(()=>d.remove(),300);};
+  d.querySelector("#ktpop-x").onclick=close;d.onclick=ev=>{if(ev.target===d)close();};
+  d.querySelector("#ktpop-go").onclick=()=>{close();kttab="etk";step=90;show();kitapRender();window.scrollTo({top:0});};}
+function ktHome(){const s=document.getElementById("kitap-sub");if(!s||!st)return;const K=st.kitap;
+  if(!K||!K.setup){s.textContent="Sonbahar okumaları, yazarların ve imza günleri";return;}
+  const E=ktMyEvents(14);if(E.length){const e=E[0];s.textContent=`${e[1].filter(ktFollow)[0]||e[1][0]} · ${e[2]?ktWhen(e[2]):"bu ay"} imza gününde ✏️`;return;}
+  const nw=KT_BOOKS.find(b=>b[4]&&ktFollow(b[1])&&!ktOnShelf(b[0]));if(nw){s.textContent=`${nw[1]}'den yeni: ${nw[0]}`;return;}
+  const r=K.shelf.find(x=>x.s==="okuyor");s.textContent=r?`Okuyorsun: ${r.t}`:"Sana göre yeni öneriler var";}
+document.getElementById("go-kitap").onclick=()=>{step=90;show();kitapRender();window.scrollTo({top:0});};
+document.getElementById("kt-home").onclick=()=>{step=0;show();};
+(function(){const _h=homeRender;homeRender=function(){_h.apply(this,arguments);try{ktHome();setTimeout(ktPop,900);}catch(e){}};try{ktHome();setTimeout(ktPop,1600);}catch(e){}})();
+(function(){const _t=TC_MORE;TC_MORE=function(C,h){_t(C,h);try{if(!st.kitap||!kt().au.length)return;const E=ktMyEvents(14).filter(e=>e[2]);
+  if(E.length){const e=E[0],a=e[1].filter(ktFollow)[0]||e[1][0];C.unshift({t:"peach",e:"İmza günü",h:`${a} ${ktWhen(e[2]).toLocaleLowerCase("tr-TR")} imza gününde ✏️`,d:`${e[3]} · ${e[4]}, ${e[5]}`,cta:"Detaylar",ic:"📚",go:()=>{kttab="etk";document.getElementById("go-kitap").click();}});}
+  const nw=KT_BOOKS.find(b=>b[4]&&ktFollow(b[1])&&!ktOnShelf(b[0]));if(nw)C.splice(Math.min(2,C.length),0,{t:"butter",e:"Yeni kitap",h:`${nw[1]}'den yeni: ${nw[0]}`,d:nw[5],cta:"Kitap köşeme git",ic:"📚",go:()=>{kttab="oneri";document.getElementById("go-kitap").click();}});}catch(e){}};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
