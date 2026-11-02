@@ -6740,8 +6740,20 @@ const KT_EV=[
 ["e12",["Dilek Cesur"],"2026-11-08","17:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
 ["e13",["Şükrü Erbaş"],"2026-11-11","18:00","Okur buluşması","Kastamonu"],
 ["e14",["Figen Şakacı"],"2026-11-15","15:00","TESAK · Kadıköy","İstanbul"],
-["e15",["Ahmet Ümit"],"","","Bartın ve Samsun okur buluşmaları","Kasım · tarih netleşecek"]];
-const KT_FAIR=[["Ümraniye Kitap Fuarı","2026-11-21","2026-11-29","İstanbul","Program yakında"],["Şanlıurfa Kitap Fuarı","2026-11-20","2026-11-29","Şanlıurfa","Program yakında"],["43. TÜYAP İstanbul Kitap Fuarı","2026-12-12","2026-12-20","TÜYAP Büyükçekmece","Onur yazarı Latife Tekin · imza programı açıklanınca burada"]];
+["e15",["Ahmet Ümit"],"2026-11-03","16:00","Bartın 28. Kitap Fuarı","Bartın"],
+["e16",["Nurettin İlgi"],"2026-11-06","15:00","Bartın 28. Kitap Fuarı · söyleşi","Bartın"],
+["e17",["Işıl Işık"],"2026-11-07","13:00","Bartın 28. Kitap Fuarı","Bartın"],
+["e18",["Emre Gürlek"],"2026-11-07","15:00","Bartın 28. Kitap Fuarı","Bartın"],
+["e19",["Deniz Ergen"],"2026-11-07","13:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
+["e20",["Oytun Erbaş"],"2026-11-07","14:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
+["e21",["Mert Arık"],"2026-11-07","15:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
+["e22",["Nurullah Genç"],"2026-11-07","16:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
+["e23",["Vehbi Vakkasoğlu"],"2026-11-07","17:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
+["e24",["Yasin Pişgin"],"2026-11-07","17:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
+["e25",["Canten Kaya"],"2026-11-07","17:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
+["e26",["Sertaç Abi"],"2026-11-08","14:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"],
+["e27",["İsmail Hakkı Aydın"],"2026-11-08","15:00","İnegöl Kitap Günleri · Kültürpark Modef","Bursa"]];
+const KT_FAIR=[["Bartın 28. Kitap Fuarı","2026-10-31","2026-11-08","Bartın","Ahmet Ümit 3 Kasım 16:00'da"],["Aydın Kitap Fuarı","2026-10-30","2026-11-08","Fuar Aydın · Efeler","Giriş ücretsiz"],["Ümraniye Kitap Fuarı","2026-11-21","2026-11-29","İstanbul","Program yakında"],["Şanlıurfa Kitap Fuarı","2026-11-20","2026-11-29","Şanlıurfa","Program yakında"],["43. TÜYAP İstanbul Kitap Fuarı","2026-12-12","2026-12-20","TÜYAP Büyükçekmece","Onur yazarı Latife Tekin · imza programı açıklanınca burada"]];
 const KT_SRC="https://okuryazarbulusmasi.com/okur-yazar-bulusmalari/";
 let kttab="oneri";
 function kt(){if(!st.kitap)st.kitap={gen:[],au:[],fav:[],shelf:[],seen:{},setup:false};const K=st.kitap;["gen","au","fav","shelf"].forEach(k=>{if(!Array.isArray(K[k]))K[k]=[];});if(!K.seen)K.seen={};return K;}
@@ -6750,7 +6762,7 @@ function ktFollow(a){const n=ktN(a);return kt().au.some(x=>{const m=ktN(x);retur
 function ktOnShelf(t){const n=ktN(t);return kt().shelf.find(x=>ktN(x.t)===n);}
 function ktDays(d){if(!d)return null;return Math.round((new Date(d+"T00:00")-new Date(dkey()+"T00:00"))/864e5);}
 function ktWhen(d){const x=ktDays(d);if(x===null)return"";if(x===0)return"Bugün";if(x===1)return"Yarın";if(x<7)return x+" gün sonra";return new Date(d+"T00:00").toLocaleDateString("tr-TR",{day:"numeric",month:"long",weekday:"long"});}
-function ktMyEvents(max){return KT_EV.filter(e=>e[1].some(ktFollow)&&(e[2]===""||(ktDays(e[2])>=0&&ktDays(e[2])<=(max||60))));}
+function ktMyEvents(max){return KT_EV.filter(e=>e[1].some(ktFollow)&&(e[2]===""||(ktDays(e[2])>=0&&ktDays(e[2])<=(max||60)))).sort((a,b)=>(a[2]||"9")+(a[3]||"")<(b[2]||"9")+(b[3]||"")?-1:1);}
 const KT_WHY={roman:"Roman kurdu musun? Tam sana göre 📖",polisiye:"Polisiye seviyorsun; bu seni uyutmaz 🔎",kisisel:"Kendine iyi gelmek için 🌱",psikoloji:"Kafanı toparlar, kalbini rahatlatır 🧠",ebeveyn:"Anne yüreğine iyi gelecek 🧸",romantik:"Kalbin pıt pıt edecek 💕",klasik:"Klasikler hiç eskimez 🏛",dunya:"Dünyayı koltuğundan gez 🌍",siir:"Altını çizmelik cümleler 🖋",tarih:"Geçmişe tatlı bir yolculuk 📜",cocuk:"Minik okurun için 🎈"};
 const KT_MOOD=[["agla","😭","Ağlatsın",["Kürk Mantolu Madonna","Son Demlerinde Hayat","Hizmetçi ve Profesör","Olive Kitteridge","Anna Karenina","Çocukluğun Soğuk Geceleri","Masumiyet Müzesi","Rüzgar Adımı Biliyor","Piraye"]],
 ["gul","😂","Güldürsün",["Beni Bir Temiz Dövseler","Ove Adında Bir Adam","Tante Rosa","Saatleri Ayarlama Enstitüsü","Kedi Kitabı","Okudum da Ne Oldu?"]],
@@ -6823,13 +6835,13 @@ function kitapRender(){const K=kt();const P=document.getElementById("ktpanel");i
       box.querySelector("[data-kadd]").onclick=e=>{const x=e.currentTarget;if(!ktOnShelf(x.dataset.kadd))K.shelf.unshift({t:x.dataset.kadd,a:x.dataset.kau,s:"oku",d:dkey()});save();x.textContent="Rafında ✓";x.disabled=true;x.classList.add("done");};
       box.querySelector("#kt-again").onclick=()=>document.getElementById("kt-draw").click();};
     ktLive();}
-  if(kttab==="etk"){const all=KT_EV.filter(e=>e[2]===""||ktDays(e[2])>=0);const mine=all.filter(e=>e[1].some(ktFollow)),fit=all.filter(e=>!e[1].some(ktFollow)&&ktEvFit(e)),oth=all.filter(e=>!e[1].some(ktFollow)&&!fit.includes(e));
+  if(kttab==="etk"){const all=KT_EV.filter(e=>e[2]===""||ktDays(e[2])>=0).sort((a,b)=>(a[2]||"9")+(a[3]||"")<(b[2]||"9")+(b[3]||"")?-1:1);const mine=all.filter(e=>e[1].some(ktFollow)),fit=all.filter(e=>!e[1].some(ktFollow)&&ktEvFit(e)),oth=all.filter(e=>!e[1].some(ktFollow)&&!fit.includes(e));
     const row=e=>{const d=e[2]?new Date(e[2]+"T00:00"):null;const f=e[1].some(ktFollow);return `<div class="ktev${f?" mine":""}"><span class="ktd">${d?`<b>${d.getDate()}</b>${d.toLocaleDateString("tr-TR",{month:"short"})}`:"<b>?</b>Kasım"}</span><span class="kti"><strong>${e[1].map(esc).join(" & ")}</strong><small>${e[2]?ktWhen(e[2])+" · "+e[3]+" · ":""}${esc(e[4])}</small><small class="ktcity">📍 ${esc(e[5])}</small></span>${f?'<span class="ktfol on">💛</span>':`<button type="button" class="ktbtn gh sm" data-kfol="${esc(e[1][0])}">🔔 Haber ver</button>`}</div>`;};
     P.innerHTML=`<div class="ktstage"><div class="ktstage-h"><span>Senin yazarların sahnede!</span>${mine.length>1?`<small>${mine.length} buluşma</small>`:""}</div>${mine.length?`<div class="ktsl" id="ktsl">${mine.map(ktSlide).join("")}</div>${mine.length>1?`<div class="ktdots">${mine.map((_,i)=>`<i class="${i?"":"on"}"></i>`).join("")}</div>`:""}`:`<p class="ktstage-e">Şimdilik sahnede kimse yok 🍂<br>Aşağıdan birine 🔔 dersen, imza günü gelince ekranına düşeririm.</p>`}</div>
       ${fit.length?`<div class="lcard ktcard ktfit"><h3><span class="step no-mi">🌱</span>Tarzına göre keşfet<span class="nextf">${fit.length}</span></h3><p class="ktfine">Takip etmiyorsun ama okuduklarına bakılırsa seveceğin yazarlar</p>${fit.map(e=>row(e).replace('<small class="ktcity">',`<em class="ktwhy">${esc(ktEvFit(e))}</em><small class="ktcity">`)).join("")}</div>`:""}
       <div class="lcard ktcard"><h3><span class="step no-mi">🍂</span>Fuar zamanı! 🎪</h3>${KT_FAIR.filter(f=>ktDays(f[2])>=0).map(f=>{const a=new Date(f[1]+"T00:00"),b=new Date(f[2]+"T00:00");return `<div class="ktev fair"><span class="ktd"><b>${a.getDate()}</b>${a.toLocaleDateString("tr-TR",{month:"short"})}</span><span class="kti"><strong>${esc(f[0])}</strong><small>${a.getDate()}–${b.getDate()} ${b.toLocaleDateString("tr-TR",{month:"long"})} · ${esc(f[3])}</small><small class="ktcity">${esc(f[4])}</small></span></div>`;}).join("")}</div>
-      <div class="lcard ktcard"><h3><span class="step no-mi">📅</span>Kim nerede imza dağıtıyor? ✍️<span class="nextf">${oth.length}</span></h3>${oth.map((e,i)=>i<4?row(e):row(e).replace('class="ktev','class="ktev ktmore" hidden data-x="1')).join("")}${oth.length>4?`<button type="button" class="ktbtn gh ktall" id="kt-all">Tümünü gör (${oth.length-4} daha) ▾</button>`:""}<p class="ktfine">Kaynak: <a href="${KT_SRC}" target="_blank" rel="noopener">Okur-Yazar Buluşmaları</a>. Saatler değişebilir; gitmeden önce fuarın sitesinden teyit et.</p></div>`;
-    const ka=document.getElementById("kt-all");if(ka)ka.onclick=()=>{P.querySelectorAll(".ktmore").forEach(x=>x.hidden=false);ka.remove();};
+      <div class="lcard ktcard"><h3><span class="step no-mi">📅</span>Kim nerede imza dağıtıyor? ✍️<span class="nextf">${oth.length}</span></h3>${oth.map((e,i)=>i<4||window.ktAllOpen?row(e):row(e).replace('class="ktev','class="ktev ktmore" hidden data-x="1')).join("")}${oth.length>4&&!window.ktAllOpen?`<button type="button" class="ktbtn gh ktall" id="kt-all">Tümünü gör (${oth.length-4} daha) ▾</button>`:""}${(()=>{const past=KT_EV.filter(e=>e[2]&&ktDays(e[2])<0).length;return past?`<p class="ktfine">${past} buluşma geride kaldı; liste her hafta yeni etkinliklerle güncelleniyor 🍂</p>`:"";})()}<p class="ktfine">Kaynak: <a href="${KT_SRC}" target="_blank" rel="noopener">Okur-Yazar Buluşmaları</a>. Saatler değişebilir; gitmeden önce fuarın sitesinden teyit et.</p></div>`;
+    const ka=document.getElementById("kt-all");if(ka)ka.onclick=()=>{window.ktAllOpen=1;P.querySelectorAll(".ktmore").forEach(x=>x.hidden=false);ka.remove();};
     ktSlider();P.querySelectorAll("[data-kph]").forEach(ktPhoto);}
   if(kttab==="raf"){const S=K.shelf;const done=S.filter(x=>x.s==="okudu"),now=S.filter(x=>x.s==="okuyor"),nx=S.filter(x=>x.s==="oku");const goal=5;
     const sp=x=>{let h=0;for(const c of x.t)h=(h*31+c.charCodeAt(0))>>>0;const c=KT_COL[h%KT_COL.length];return `<span class="ktsp${x.s==="okuyor"?" rd":""}" style="--c1:${c[0]};--c2:${c[1]};--h:${78+h%30}%;--w:${26+h%12}px;--t:${(h%5)-2}deg" title="${esc(x.t)}"><b>${esc(x.t)}</b></span>`;};
@@ -6904,12 +6916,16 @@ function ktSlider(){clearInterval(ktSlT);const sl=document.getElementById("ktsl"
   if(n<2)return;let hold=0;["touchstart","pointerdown"].forEach(ev=>sl.addEventListener(ev,()=>{hold=Date.now();},{passive:true}));
   dots.forEach((d,i)=>d.onclick=()=>{hold=Date.now();sl.scrollTo({left:i*sl.clientWidth,behavior:"smooth"});});
   ktSlT=setInterval(()=>{if(!document.body.contains(sl)){clearInterval(ktSlT);return;}if(Date.now()-hold<7000||document.hidden)return;sl.scrollTo({left:((cur()+1)%n)*sl.clientWidth,behavior:"smooth"});},4200);}
-function ktPhoto(el){const a=el.dataset.kph;const key="mefirst-ktph";let C={};try{C=JSON.parse(localStorage.getItem(key)||"{}");}catch(e){}
+function ktPhoto(el){const a=el.dataset.kph;const key="mefirst-ktph2";let C={};try{C=JSON.parse(localStorage.getItem(key)||"{}");}catch(e){}
   const put=u=>{if(!u)return;const im=new Image();im.onload=()=>{el.style.backgroundImage=`url("${u}")`;el.classList.add("on");};im.src=u;};
-  if(a in C){put(C[a]);return;}if(!window.fetch)return;
-  fetch("https://tr.wikipedia.org/api/rest_v1/page/summary/"+encodeURIComponent(a.replace(/ /g,"_"))).then(r=>r.ok?r.json():null).then(j=>{
-    const ok=j&&j.type!=="disambiguation"&&/yazar|şair|romancı|akademisyen|psikiyatr|gazeteci|öğretim/i.test((j.description||"")+" "+(j.extract||"").slice(0,200));
-    const u=ok&&j.thumbnail?j.thumbnail.source:"";C[a]=u;try{localStorage.setItem(key,JSON.stringify(C));}catch(e){}put(u);}).catch(()=>{});}
+  const c=C[a];if(c&&(c.u||Date.now()-c.t<7*864e5)){put(c.u);return;}if(!window.fetch)return;
+  const W=/yazar|şair|romancı|öykü|deneme|akademisyen|psikiyatr|psikolog|gazeteci|tarihçi|ilahiyat|eğitimci|writer|author|poet|novelist|psychiatrist|journalist|historian|essayist/i;
+  const fin=u=>{C[a]={u:u||"",t:Date.now()};try{localStorage.setItem(key,JSON.stringify(C));}catch(e){}put(u);};
+  const wiki=lang=>fetch(`https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(a.replace(/ /g,"_"))}`).then(r=>r.ok?r.json():null).then(j=>j&&j.type!=="disambiguation"&&j.thumbnail&&W.test((j.description||"")+" "+(j.extract||"").slice(0,300))?j.thumbnail.source:null).catch(()=>null);
+  const wd=()=>fetch(`https://www.wikidata.org/w/api.php?action=wbsearchentities&search=${encodeURIComponent(a)}&language=tr&uselang=tr&limit=5&format=json&origin=*`).then(r=>r.ok?r.json():null).then(j=>{const h=(j&&j.search||[]).find(x=>W.test(x.description||""));if(!h)return null;
+      return fetch(`https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=${h.id}&property=P18&format=json&origin=*`).then(r=>r.ok?r.json():null).then(c=>{const f=c&&c.claims&&c.claims.P18&&c.claims.P18[0].mainsnak.datavalue.value;return f?`https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(f)}?width=240`:null;});}).catch(()=>null);
+  const ol=()=>fetch(`https://openlibrary.org/search/authors.json?q=${encodeURIComponent(a)}&limit=1`).then(r=>r.ok?r.json():null).then(j=>{const d=j&&j.docs&&j.docs[0];if(!d||ktN(d.name)!==ktN(a))return null;const u=`https://covers.openlibrary.org/a/olid/${d.key}-M.jpg?default=false`;return new Promise(res=>{const im=new Image();im.onload=()=>res(im.naturalWidth>10?u:null);im.onerror=()=>res(null);im.src=u;});}).catch(()=>null);
+  wiki("tr").then(u=>u||wiki("en")).then(u=>u||wd()).then(u=>u||ol()).then(fin);}
 
 function stickFix(bar){if(!bar)return;const go=()=>{const prev=bar.previousElementSibling;if(!prev)return;const top=parseFloat(getComputedStyle(bar).top)||0;
   const nat=prev.getBoundingClientRect().bottom+window.scrollY+(parseFloat(getComputedStyle(bar).marginTop)||0)+(parseFloat(getComputedStyle(bar.parentElement).rowGap)||0)-top;
@@ -6917,7 +6933,7 @@ function stickFix(bar){if(!bar)return;const go=()=>{const prev=bar.previousEleme
 function ktSettle(){stickFix(document.querySelector(".ktseg"));const P=document.getElementById("ktpanel");if(P){P.classList.remove("pr-in");void P.offsetWidth;P.classList.add("pr-in");}}
 
 /* v160: yazarın tarzı → tarzına uygun imza günleri */
-const KT_AG={"Kemal Sayar":["psikoloji","kisisel"],"Hatice Kübra Tongar":["ebeveyn","kisisel"],"Vehbi Vakkasoğlu":["tarih"],"Adnan Demircan":["tarih"],"Şükrü Erbaş":["siir"],"Kahraman Tazeoğlu":["siir","romantik"],"Figen Şakacı":["roman"],"Oytun Erbaş":["cocuk"],"Sertaç Abi":["cocuk"],"Birsen Ekim Özen":["roman","tarih"],"Altay Cem Meriç":["kisisel"]};
+const KT_AG={"Kemal Sayar":["psikoloji","kisisel"],"Hatice Kübra Tongar":["ebeveyn","kisisel"],"Vehbi Vakkasoğlu":["tarih"],"Adnan Demircan":["tarih"],"Şükrü Erbaş":["siir"],"Kahraman Tazeoğlu":["siir","romantik"],"Figen Şakacı":["roman"],"Oytun Erbaş":["cocuk"],"Sertaç Abi":["cocuk"],"Birsen Ekim Özen":["roman","tarih"],"Altay Cem Meriç":["kisisel"],"Nurullah Genç":["siir"]};
 function ktAG(a){const g=new Set(KT_AG[a]||[]);KT_BOOKS.forEach(b=>{if(ktN(b[1])===ktN(a))b[2].forEach(x=>g.add(x));});return [...g];}
 function ktEvFit(e){const K=kt();for(const a of e[1]){const g=ktAG(a).find(x=>K.gen.includes(x));if(g)return (KT_WHY[g]||"Tam senin tarzın").replace(/;.*$/,"");}return "";}
 
