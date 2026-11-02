@@ -2966,6 +2966,73 @@ body .rit .qcard.moonc .mr{grid-column:2;font-size:13px;line-height:1.4;max-widt
 
 html[data-mf="dusk"] body.mf-on .rit .prac[aria-selected="true"]{background:linear-gradient(135deg,#C9963A,#C9608E)!important}
 html[data-mf="dusk"] body.mf-on .rit .prac[aria-selected="true"] strong{color:#fff!important}
+
+/* ===== v164: Kendime iyi bak — spa sabahı ===== */
+.fit .fhero{position:relative;overflow:hidden;border-radius:28px!important;padding:16px 18px 18px!important;color:#F4FBF6;background:radial-gradient(90% 70% at 90% 0%,rgba(242,180,155,.55) 0%,transparent 60%),radial-gradient(80% 70% at 0% 100%,rgba(191,227,242,.45),transparent 60%),linear-gradient(160deg,#7FB59A,#4E8A6E 60%,#3F6F5A)!important;box-shadow:0 18px 40px -22px rgba(47,90,70,.85)}
+.fit .fhero h2{position:relative;color:#fff;font-size:34px!important}
+.fit .fhero h2 em{color:#FFE3D3!important}
+.fit .fhero .lhero-top{position:relative;z-index:2}
+.fit .fhero .homebtn{background:rgba(255,255,255,.18)!important;color:#fff!important;border-color:rgba(255,255,255,.3)!important}
+.fh-sub{position:relative;margin:0;font-size:13.5px;opacity:.95;max-width:34ch}
+.spbub{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.spbub i{position:absolute;bottom:-20px;left:var(--x);width:calc(16px*var(--s));height:calc(16px*var(--s));border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.9),rgba(255,255,255,.15) 60%,rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.4);animation:spUp var(--d) ease-in var(--dl) infinite}
+@keyframes spUp{0%{transform:translate(0,0);opacity:0}15%{opacity:.9}100%{transform:translate(14px,-240px);opacity:0}}
+@media (prefers-reduced-motion:reduce){.spbub{display:none}}
+.fit .fhero .rings{position:relative}
+.fit .fhero .ring small{color:#F4FBF6!important;opacity:.9}
+.fit .fhero .ring .rv b{color:#fff}
+.fit .fhero .ring svg circle:first-child{stroke:rgba(255,255,255,.22)!important}
+.fit .seg.fseg{position:sticky;top:calc(env(safe-area-inset-top,0px) + 6px);z-index:20;display:flex;gap:4px;padding:5px!important;border-radius:999px!important;background:color-mix(in srgb,#E3F1E8 95%,var(--surface))!important;border:1px solid rgba(110,158,130,.3)!important;box-shadow:0 10px 22px -12px rgba(47,90,70,.45)}
+.fit .seg.fseg button{flex:1;font-size:13px!important;font-weight:700;color:#3F6F5A!important;background:none!important;border-radius:999px!important;padding:9px 4px!important;box-shadow:none!important}
+.fit .seg.fseg button[aria-selected="true"]{background:linear-gradient(135deg,#6E9E82,#3F6F5A)!important;color:#fff!important;box-shadow:0 6px 14px -8px rgba(47,90,70,.9)!important}
+.fit .seg.fseg button .mi{display:none}
+.fit .lcard{border-radius:22px!important}
+.fit .lcard h3 .step{background:linear-gradient(150deg,#D4EEDD,#BFE3D0)!important}
+.fit .fpanel.pr-in{animation:prIn .35s ease both}
+.cups{gap:6px!important}
+.cup{transition:transform .2s}
+.cup:active{transform:scale(.88)}
+.cup.full .wf{fill:#7FC4E8!important;opacity:.85!important}
+.cup.splash{animation:cupSp .6s cubic-bezier(.2,1.6,.4,1)}
+@keyframes cupSp{30%{transform:translateY(-6px) scale(1.15)}}
+.wmsg{margin:2px 0 0;font-size:13px;font-weight:600;color:#3F7FA0;text-align:center}
+.iyi-draw{font:inherit;text-align:left;cursor:pointer;width:100%;display:flex;align-items:center;gap:12px;padding:14px;border-radius:22px;border:2px dashed rgba(110,158,130,.55);color:var(--ink);background:repeating-linear-gradient(-45deg,color-mix(in srgb,#EAF5EE 92%,var(--surface)) 0 10px,color-mix(in srgb,#DDEFE4 92%,var(--surface)) 10px 20px)}
+.iyi-draw>span:first-child{font-size:28px;animation:ktWig 2.6s ease-in-out infinite}
+.iyi-draw span:nth-child(2){flex:1;display:flex;flex-direction:column}
+.iyi-draw strong{font-family:var(--f-display);font-weight:400;font-size:19px}
+.iyi-draw small{font-size:12px;color:var(--muted)}
+.iyi-lv{display:flex;gap:3px}
+.iyi-lv i{width:14px;height:10px;border-radius:0 80% 0 80%;background:rgba(110,158,130,.25)}
+.iyi-lv i.on{background:linear-gradient(135deg,#A8D5BA,#3F6F5A)}
+.iyi-card{perspective:800px}
+.iyi-in{position:relative;border-radius:24px;padding:18px 16px 14px;text-align:center;color:#F4FBF6;background:radial-gradient(90% 70% at 90% 0%,rgba(242,180,155,.5),transparent 60%),linear-gradient(160deg,#7FB59A,#3F6F5A);box-shadow:0 14px 30px -18px rgba(47,90,70,.8);transform:rotateY(90deg);transition:transform .55s cubic-bezier(.3,1.3,.5,1)}
+.iyi-card.on .iyi-in{transform:none}
+.iyi-e{font-size:40px;display:block}
+.iyi-in small{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.iyi-in p{margin:6px 0 12px;font-family:var(--f-display);font-size:21px;line-height:1.25}
+.iyi-a{display:flex;gap:8px;justify-content:center}
+.iyi-a .ktbtn{background:#fff;color:#3F6F5A;padding:9px 16px;font-size:13px}
+.iyi-a .ktbtn.gh{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6)}
+.iyi-in .iyi-lv{position:absolute;top:12px;right:14px}
+.iyi-in .iyi-lv i{background:rgba(255,255,255,.25)}
+.iyi-in .iyi-lv i.on{background:#FFE3D3}
+.fit #act-add{background:linear-gradient(135deg,#6E9E82,#3F6F5A)!important;width:100%}
+html[data-mf="dusk"] .fit .fhero{background:radial-gradient(90% 70% at 90% 0%,rgba(242,180,155,.25) 0%,transparent 60%),linear-gradient(160deg,#2F5546,#244236 60%,#1C3329)!important}
+html[data-mf="dusk"] .fit .seg.fseg{background:rgba(28,44,38,.96)!important;border-color:rgba(168,213,186,.2)!important}
+html[data-mf="dusk"] .fit .seg.fseg button{color:#BFE3D0!important}
+html[data-mf="dusk"] .fit .seg.fseg button[aria-selected="true"]{color:#fff!important}
+html[data-mf="dusk"] .iyi-draw{background:rgba(168,213,186,.07);border-color:rgba(168,213,186,.3)}
+html[data-mf="dusk"] .fit .lcard h3 .step{background:rgba(168,213,186,.18)!important}
+html[data-mf="dusk"] .wmsg{color:#9ED3EE}
+html[data-mf="dusk"] .iyi-in{background:linear-gradient(160deg,#3F6F5A,#244236)}
+
+#rings .rv i{background:none!important;width:auto!important;height:auto!important;border-radius:0!important;display:inline!important;position:static!important;font-style:normal;box-shadow:none!important;animation:none!important;opacity:.8;font-size:.6em}
+.fit #act-add{color:#fff!important}
+.fit .act[aria-pressed="true"]{background:linear-gradient(150deg,#E3F3E9,#CBE8D6)!important;border-color:#6E9E82!important;color:#2F5546!important}
+html[data-mf="dusk"] .fit .act[aria-pressed="true"]{background:rgba(110,158,130,.3)!important;border-color:#7FB59A!important;color:#E3F3E9!important}
+.fit .dur[aria-pressed="true"],.fit .durs button[aria-pressed="true"]{background:linear-gradient(150deg,#E3F3E9,#CBE8D6)!important;border-color:#6E9E82!important;color:#2F5546!important}
+html[data-mf="dusk"] .fit .durs button[aria-pressed="true"]{background:rgba(110,158,130,.3)!important;color:#E3F3E9!important}
+.fit .wcat[aria-selected="true"]{background:linear-gradient(135deg,#6E9E82,#3F6F5A)!important;color:#fff!important;border-color:transparent!important}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -3293,43 +3360,46 @@ html[data-mf="dusk"] body.mf-on .rit .prac[aria-selected="true"] strong{color:#f
   <div class="fit" data-step="50">
     <div class="fhero">
       <div class="lhero-top"><span class="tag">🌿 Kendime iyi bak</span><button class="iconbtn homebtn" id="fit-home" type="button" aria-label="Ana sayfaya dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Ana sayfa</span></button></div>
+      <span class="spbub" aria-hidden="true"><i style="--x:7%;--d:6.0s;--dl:0.0s;--s:0.50"></i><i style="--x:36%;--d:7.3s;--dl:4.3s;--s:0.80"></i><i style="--x:65%;--d:8.6s;--dl:2.6s;--s:1.10"></i><i style="--x:94%;--d:9.9s;--dl:0.9s;--s:1.40"></i><i style="--x:23%;--d:6.2s;--dl:5.2s;--s:0.50"></i><i style="--x:52%;--d:7.5s;--dl:3.5s;--s:0.80"></i><i style="--x:81%;--d:8.8s;--dl:1.8s;--s:1.10"></i><i style="--x:10%;--d:10.1s;--dl:0.1s;--s:1.40"></i><i style="--x:39%;--d:6.4s;--dl:4.4s;--s:0.50"></i><i style="--x:68%;--d:7.7s;--dl:2.7s;--s:0.80"></i></span>
       <h2>Bugün <em>kendin için</em></h2>
+      <p class="fh-sub" id="fh-sub"></p>
       <div class="rings" id="rings"></div>
-      <div class="seg fseg" role="tablist">
-        <button type="button" role="tab" data-ft="today">☀️ Bugün</button>
-        <button type="button" role="tab" data-ft="food">🥗 Beslenme</button>
-        <button type="button" role="tab" data-ft="move">🏃‍♀️ Hareket</button>
-        <button type="button" role="tab" data-ft="goal">🎯 Hedefim</button>
-      </div>
+    </div>
+    <div class="seg fseg" role="tablist">
+      <button type="button" role="tab" data-ft="today">Bugün</button>
+      <button type="button" role="tab" data-ft="food">Tabağım</button>
+      <button type="button" role="tab" data-ft="move">Hareket</button>
+      <button type="button" role="tab" data-ft="goal">Hedefim</button>
     </div>
     <div class="fpanel" data-fp="today">
-      <div class="lcard t-sky"><h3><span class="step">💧</span>Su<span class="nextf" id="water-t"></span></h3><div class="cups" id="cups"></div></div>
+      <div class="lcard t-sky"><h3><span class="step">💧</span>Su perisi<span class="nextf" id="water-t"></span></h3><div class="cups" id="cups"></div></div>
       <div class="lcard t-mint" id="move-sug"></div>
+      <div id="fit-iyi"></div>
       <div class="lcard t-butter" id="day-sum"></div>
     </div>
     <div class="fpanel" data-fp="food">
       <div class="lcard t-peach">
-        <h3><span class="step">🍳</span>Ne yedin?</h3>
+        <h3><span class="step">🍳</span>Tabağında ne vardı?</h3>
         <div class="mealtabs" id="mealtabs"></div>
         <div class="foods" id="foods"></div>
         <details class="custom"><summary>+ Listede yok, kendim yazayım</summary>
           <div class="addrow"><input id="cf-n" type="text" maxlength="30" placeholder="ör. Ev yapımı börek"><input id="cf-k" type="number" inputmode="numeric" min="0" max="3000" placeholder="kcal" style="max-width:90px"><button class="pill" id="cf-add" type="button">Ekle</button></div>
         </details>
       </div>
-      <div class="lcard t-butter"><h3><span class="step">🍽</span>Bugün yediklerim<span class="nextf" id="food-t"></span></h3><div class="hist" id="meals"></div>
+      <div class="lcard t-butter"><h3><span class="step">🍽</span>Bugünkü tabakların<span class="nextf" id="food-t"></span></h3><div class="hist" id="meals"></div>
         <p class="fine">Kaloriler ortalama porsiyonlar için yaklaşık değerlerdir.</p></div>
     </div>
     <div class="fpanel" data-fp="move">
       <div class="lcard t-mint" id="move-sug2"></div>
       <div class="lcard t-lilac">
-        <h3><span class="step">💪</span>Hareket ekle</h3>
+        <h3><span class="step">💪</span>Ne yaptın, anlat bakalım</h3>
         <div class="acts" id="acts"></div>
         <div class="durs" id="durs"></div>
-        <button class="btn" id="act-add" type="button">Kaydet</button>
+        <button class="btn" id="act-add" type="button">Kaydet, alkışı hak ettin 👏</button>
         <p class="fine" id="act-msg"></p>
       </div>
-      <div class="lcard t-sky"><h3><span class="step">📅</span>Bugün yaptıklarım<span class="nextf" id="move-t"></span></h3><div class="hist" id="actlog"></div></div>
-      <div class="lcard t-mint"><h3><span class="step">🌿</span>Son 7 gün</h3><div class="week" id="week"></div></div>
+      <div class="lcard t-sky"><h3><span class="step">📅</span>Bugünkü hareketlerin<span class="nextf" id="move-t"></span></h3><div class="hist" id="actlog"></div></div>
+      <div class="lcard t-mint"><h3><span class="step">🌿</span>Haftalık enerji haritan</h3><div class="week" id="week"></div></div>
     </div>
     <div class="fpanel" data-fp="goal">
       <div class="lcard t-pink">
@@ -4317,7 +4387,7 @@ function moveSug(){const di=di0();
     peak:[["🎉","Dans et!","En sevdiğin 5 şarkıyı aç ve dans et; 20 dakikada fark etmeden geçer."],["🏃‍♀️","Kendini dene","Koşu ya da yürüyüşte bugün 5 dakika daha uzun git."]],
     calm:[["🌸","Pilates zamanı","20 dk pilates; karın ve sırt için birebir."],["🌿","Doğaya çık","Parkta 30 dk yürüyüş; ağaçların arasında stres azalır."]]};
   const key=ph||M[st.mood]||["up","calm","rest","peak"][di%4];const x=dpick([S[key],...S2[key]],"mv"+key);
-  return `<h3><span class="step">${x[0]}</span>Bugünün hareketi</h3><div class="msug"><strong>${x[1]}</strong><p>${x[2]}</p></div>`;}
+  return `<h3><span class="step">${x[0]}</span>Bedenin bugün bunu istiyor</h3><div class="msug"><strong>${x[1]}</strong><p>${x[2]}</p></div>`;}
 function fitRender(){
   const F=fit(),D=fday(),T=fTarget(),hide=F.p.hide;
   const kin=D.m.reduce((a,m)=>a+m.k,0),kout=D.a.reduce((a,x)=>a+x.k,0),mins=D.a.reduce((a,x)=>a+x.min,0);
@@ -4334,8 +4404,8 @@ function fitRender(){
   document.getElementById("move-sug").innerHTML=moveSug();document.getElementById("move-sug2").innerHTML=moveSug();
   // day summary
   const ds=document.getElementById("day-sum");
-  if(!T)ds.innerHTML=`<h3><span class="step">🎯</span>Hedefini belirleyelim</h3><p class="msug-p">Yaşını, boyunu ve kilonu girersen sana özel günlük kalori ihtiyacını hesaplarım.</p><button class="pill" type="button" id="go-goal">Hedefimi belirle →</button>`;
-  else{const left=T.t-kin+kout;ds.innerHTML=`<h3><span class="step">🍽</span>Bugünün özeti</h3>`+(hide?
+  if(!T)ds.innerHTML=`<h3><span class="step">🎯</span>Sana özel hedefini bulalım</h3><p class="msug-p">Yaşını, boyunu ve kilonu girersen sana özel günlük kalori ihtiyacını hesaplarım.</p><button class="pill" type="button" id="go-goal">Hedefimi belirle →</button>`;
+  else{const left=T.t-kin+kout;ds.innerHTML=`<h3><span class="step">🍽</span>Bugünkü dengen</h3>`+(hide?
      `<p class="msug-p">${D.m.length} öğün kaydettin, ${mins} dakika hareket ettin. ${D.m.length>=3?"Dengeli bir gün 🌿":"Öğün atlamamaya çalış."}</p>`:
      `<div class="bal"><div><b>${kin}</b><small>alınan</small></div><span>−</span><div><b>${kout}</b><small>yakılan</small></div><span>→</span><div class="${left<0?"neg":""}"><b>${Math.abs(left)}</b><small>${left>=0?"kalan":"fazla"}</small></div></div>
       <p class="msug-p">${left>600?"Henüz yeterince yemedin; öğün atlamak enerjini düşürür.":left>=0?"Güzel gidiyorsun, dengedesin.":"Hedefini biraz aştın, dert etme; yarın yeni bir gün. Kısa bir yürüyüş iyi gelir."}</p>`);}
@@ -4551,7 +4621,7 @@ function surRender(){document.querySelectorAll(".gsur[data-sec]").forEach(el=>{c
 function goTo(el,off){if(!el)return;requestAnimationFrame(()=>{try{surRender();}catch(e){}const y=Math.max(0,el.getBoundingClientRect().top+window.scrollY-(off??12));const need=y+window.innerHeight;document.body.style.minHeight="";document.querySelectorAll(".gsur").forEach(g=>g.style.minHeight="");let gap=need-document.documentElement.scrollHeight;
     if(gap>0){const g=[...document.querySelectorAll(".gsur")].find(x=>x.offsetParent!==null&&!x.hidden);if(g){const add=Math.min(gap,Math.max(0,440-g.offsetHeight));if(add>0){g.style.minHeight=(g.offsetHeight+add)+"px";gap-=add;}}}
     if(gap>0)document.body.style.minHeight=(document.documentElement.scrollHeight+gap)+"px";window.scrollTo({top:y,behavior:"smooth"});});}
-document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest('[role="tab"],[role="tablist"]>button,.g-card');if(!b||b.closest('#pracs,.ktseg,.love .lhero .seg,.bzseg,.subseg,#zsh,.bnav,.onb,.lk2'))return;
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest('[role="tab"],[role="tablist"]>button,.g-card');if(!b||b.closest('#pracs,.ktseg,.fseg,.love .lhero .seg,.bzseg,.subseg,#zsh,.bnav,.onb,.lk2'))return;
   const tl=b.closest('[role="tablist"]'),aid=b.classList.contains("g-card")?"gm":(b.closest("[id]")||{}).id;
   setTimeout(()=>{const el=tl&&tl.isConnected?tl:(aid&&document.getElementById(aid));if(el&&el.offsetParent!==null)goTo(el,10);},40);});
 function pracRender(){
@@ -6260,6 +6330,31 @@ function ktEvFit(e){const K=kt();for(const a of e[1]){const g=ktAG(a).find(x=>K.
 
 (function(){const _t=TC_MORE;TC_MORE=function(C,h){_t(C,h);try{if(!st.kitap||!kt().setup)return;const e=KT_EV.find(x=>x[2]&&ktDays(x[2])>=0&&ktDays(x[2])<=3&&!x[1].some(ktFollow)&&ktEvFit(x));if(!e)return;
   C.splice(Math.min(3,C.length),0,{t:"mint",e:"Tarzına göre",h:`${e[1][0]} ${ktWhen(e[2]).toLocaleLowerCase("tr-TR")} imza gününde 🌱`,d:`${ktEvFit(e)} · ${e[3]} · ${e[5]}`,cta:"Göz at",ic:"📚",go:()=>{kttab="etk";document.getElementById("go-kitap").click();}});}catch(x){}};})();
+
+/* ===== v164: Kendime iyi bak — spa sabahı ===== */
+function mfConfetti(msg,cols,bg){const C=cols||["#C9822B","#A8492A","#E9A55A","#6B7A3A","#F7B3D2"];const w=document.createElement("div");w.className="ktconf";w.innerHTML=Array.from({length:24},(_,i)=>`<i style="--x:${Math.random()*100}%;--d:${1.2+Math.random()}s;--r:${Math.random()*360}deg;--c:${C[i%C.length]}"></i>`).join("")+`<b class="no-mi"${bg?` style="background:${bg}"`:""}>${msg}</b>`;document.body.appendChild(w);setTimeout(()=>w.remove(),2600);}
+const SPA_C=["#6E9E82","#A8D5BA","#F2B49B","#3F6F5A","#BFE3F2"],SPA_BG="linear-gradient(135deg,#7FB59A,#3F6F5A)";
+const IYI=[["🛁","Ayaklarını 5 dakika ılık suya koy, bir damla lavanta ekle"],["🧴","Ellerine bolca krem sür, parmaklarına tek tek masaj yap"],["🌬","Pencereyi aç, 5 derin nefes al: burnundan al, ağzından ver"],["🎵","Sevdiğin bir şarkıyı aç ve sadece dinle, başka hiçbir şey yapma"],["🧊","Yüzüne soğuk su çarp, ışıl ışıl ol"],["☀️","10 dakika güneşe çık, yüzünü göğe çevir"],["🍵","Kendine bir bitki çayı demle, sıcak sıcak yudumla"],["📵","15 dakika telefonu başka odaya bırak"],["💆‍♀️","Şakaklarına ve çene eklemlerine nazikçe masaj yap"],["🪞","Aynaya bak ve kendine yüksek sesle bir iltifat et"],["🧘‍♀️","Omuzlarını kulaklarına kaldır, 3 saniye tut, bırak. 5 kez"],["🍓","Bugün tabağına renkli bir meyve ekle"],["🛏","Bu akşam 30 dakika erken yat"],["🌸","Sevdiğin kokuyu sür, sadece kendin için"],["✍️","Seni mutlu eden 3 küçük şeyi yaz"],["🚶‍♀️","Telefonsuz 10 dakikalık bir yürüyüş yap"],["💧","Hemen şimdi bir bardak su iç, cildin teşekkür etsin"],["🦶","Çıplak ayakla halıya bas, ayaklarını hisset"],["😌","Gözlerini kapat, 1 dakika sadece seslere kulak ver"],["💅","Tırnaklarına küçük bir bakım yap"]];
+function iyiSt(){let o={};try{o=JSON.parse(localStorage.getItem("mefirst-iyi")||"{}");}catch(e){}if(o.d!==dkey())o={d:dkey(),n:0,c:null,t:o.t||0};return o;}
+function iyiSave(o){try{localStorage.setItem("mefirst-iyi",JSON.stringify(o));}catch(e){}}
+function iyiRender(){const el=document.getElementById("fit-iyi");if(!el)return;const o=iyiSt();
+  const leaves=Array.from({length:3},(_,i)=>`<i class="${i<o.n?"on":""}"></i>`).join("");
+  if(o.c==null){el.innerHTML=`<button type="button" class="iyi-draw" id="iyi-go"><span class="no-mi">🍃</span><span><strong>Kendine bir iyilik çek</strong><small>${o.n?`Bugün kendine ${o.n} iyilik yaptın 💚`:"Kartı çevir, bugünkü küçük spa anını gör"}</small></span><span class="iyi-lv">${leaves}</span></button>`;
+    document.getElementById("iyi-go").onclick=()=>{const O=iyiSt();let c;do{c=Math.floor(Math.random()*IYI.length);}while(IYI.length>1&&c===O.last);O.c=c;O.last=c;iyiSave(O);iyiRender();const f=el.querySelector(".iyi-card");if(f){f.classList.remove("on");setTimeout(()=>f.classList.add("on"),40);}};return;}
+  const x=IYI[o.c];el.innerHTML=`<div class="iyi-card on"><div class="iyi-in"><span class="iyi-e no-mi">${x[0]}</span><small>Bugünkü iyiliğin</small><p>${x[1]}</p><div class="iyi-a"><button type="button" class="ktbtn" id="iyi-ok">Yaptım 💚</button><button type="button" class="ktbtn gh" id="iyi-nx">Başka çek 🍃</button></div><span class="iyi-lv">${leaves}</span></div></div>`;
+  document.getElementById("iyi-ok").onclick=()=>{const O=iyiSt();O.n++;O.t=(O.t||0)+1;O.c=null;iyiSave(O);mfConfetti(O.n>=3?"Bugün spa kraliçesisin 👑":"Kendine iyi baktın 💚",SPA_C,SPA_BG);iyiRender();fitHeroSub();};
+  document.getElementById("iyi-nx").onclick=()=>{const O=iyiSt();O.c=null;iyiSave(O);document.getElementById("iyi-go")||iyiRender();document.getElementById("iyi-go").click();};}
+function fitHeroSub(){const el=document.getElementById("fh-sub");if(!el)return;const D=fday(),mins=D.a.reduce((a,x)=>a+x.min,0),nm=(st.name||"").trim(),o=iyiSt();
+  el.textContent=D.w>=8&&mins>=30?"Su tamam, hareket tamam… bugün parlıyorsun ✨":mins>=30?"Hareket hedefin tamam, bedenin sana teşekkür ediyor 💚":D.w>=4?"Yarı yoldasın su perisi, devam 🧜‍♀️":o.n?"Kendine iyilik yaptın, şimdi bir bardak su? 💧":D.w||mins||D.m.length?"Güzel başladın, adım adım 🌿":`${nm?nm+", b":"B"}ugün bedenin için küçük bir iyilik yapalım mı? 🍃`;}
+function fitSettle(){stickFix(document.querySelector(".fseg"));document.querySelectorAll(".fit [data-fp]:not([hidden])").forEach(P=>{P.classList.remove("pr-in");void P.offsetWidth;P.classList.add("pr-in");});}
+(function(){const _f=fitRender;fitRender=function(){const D=fday(),w0=fitRender._w;_f.apply(this,arguments);try{
+  document.querySelectorAll(".fseg button").forEach(b=>{b.onclick=()=>{if(ftab===b.dataset.ft)return;ftab=b.dataset.ft;fitRender();fitSettle();};});
+  const w=fday().w;const wt=document.getElementById("water-t");if(wt)wt.textContent=w>=8?"8/8 🧜‍♀️":`${w}/8 · ${w*250} ml`;
+  let wm=document.getElementById("wmsg");const cw=document.getElementById("cups");if(cw&&!wm){wm=document.createElement("p");wm.id="wmsg";wm.className="wmsg";cw.after(wm);}
+  if(wm)wm.textContent=w>=8?"Su perisi oldun! Cildin ışıl ışıl 🧜‍♀️✨":w>=6?"Az kaldı, son bardaklar en tatlıları 🌊":w>=4?"Yarı yoldasın, bedenin teşekkür ediyor 💙":w>=1?"Güzel başlangıç! Bir bardak daha? 💧":"Bugünün ilk bardağıyla başla, bardağa dokun 💧";
+  if(w0!=null&&w>w0){const c=cw&&cw.children[w-1];if(c){c.classList.add("splash");}if(w===8)mfConfetti("Su perisi oldun! 🧜‍♀️",["#7FC4E8","#BFE3F2","#A8D5BA","#fff"],"linear-gradient(135deg,#7FC4E8,#3F7FA0)");}
+  fitRender._w=w;fitHeroSub();iyiRender();}catch(e){}};})();
+document.getElementById("act-add").addEventListener("click",()=>{setTimeout(()=>mfConfetti("Aferin sana! 💪",SPA_C,SPA_BG),50);});
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
