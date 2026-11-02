@@ -3090,6 +3090,42 @@ html[data-mf="dusk"] .plate circle[fill="#fff"]{fill:#F7F3EE}
 html[data-mf="dusk"] .pl-leg span.ok{background:rgba(125,190,140,.25);color:#D4EEDD}
 html[data-mf="dusk"] .gs-mid b,html[data-mf="dusk"] .gd b,html[data-mf="dusk"] .gd-cap,html[data-mf="dusk"] .gd.today small,html[data-mf="dusk"] .pl-sc{color:#BFE3D0!important}
 html[data-mf="dusk"] .gs-c{background:rgba(255,255,255,.05);color:#D4EEDD}
+
+/* v166: Su perisi */
+#cups,#wmsg{display:none!important}
+.wtr{display:grid;grid-template-columns:118px 1fr;gap:6px 14px;align-items:center}
+.wtr-g{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.wglass{width:118px;height:auto;display:block;overflow:visible;filter:drop-shadow(0 10px 14px rgba(58,143,199,.18))}
+.wlev{transition:transform 1s cubic-bezier(.3,1.25,.5,1)}
+.wv1{animation:wWave 3.2s linear infinite}.wv2{animation:wWave 5s linear infinite reverse}
+@keyframes wWave{to{transform:translateX(60px)}}
+.wlev.slosh .wv1{animation:wWave 3.2s linear infinite,wSlosh .9s ease-out}
+@keyframes wSlosh{30%{transform:translate(20px,-5px)}}
+.wbub{animation:wBub 4s ease-in infinite}
+@keyframes wBub{from{transform:translateY(0);opacity:.7}to{transform:translateY(-150px);opacity:0}}
+.dmw{transition:transform 1s cubic-bezier(.3,1.25,.5,1)}
+.dmb{animation:dmBob 2.6s ease-in-out infinite}
+.dmw.sleep .dmb{animation:dmBob 5s ease-in-out infinite}
+@keyframes dmBob{50%{transform:translateY(-3px) rotate(-4deg)}}
+.wtr-i{display:flex;flex-direction:column;gap:3px;min-width:0}
+.wtr-n{font-family:var(--f-display);font-weight:400;font-size:44px;line-height:1;color:#2C7FB5}
+.wtr-n i{font-style:normal;font-size:20px;opacity:.55}
+.wtr-i>small{font-size:12px;color:var(--muted);font-weight:600}
+.wtr-m{margin:4px 0 6px;font-family:var(--f-display);font-size:16.5px;line-height:1.25;color:var(--ink)}
+.wtr-add{font:inherit;font-size:14px;font-weight:800;color:#fff;border:0;border-radius:16px;padding:12px 14px;cursor:pointer;background:linear-gradient(135deg,#7FC4E8,#2C7FB5);box-shadow:0 10px 20px -12px rgba(44,127,181,.9);transition:transform .15s}
+.wtr-add:active{transform:scale(.96)}
+.wtr-r{display:flex;justify-content:space-between;align-items:center;gap:6px;min-height:24px}
+.wtr-un{font:inherit;font-size:12px;font-weight:700;color:#2C7FB5;background:none;border:0;padding:4px 0;cursor:pointer}
+.wtr-r small{font-size:11.5px;color:var(--muted);text-align:right}
+.wtr-dots{grid-column:1/-1;display:flex;justify-content:space-between;gap:4px;padding:4px 2px 0}
+.wd{flex:1;background:none;border:0;padding:2px;cursor:pointer;max-width:34px}
+.wd svg{width:100%;height:auto;fill:rgba(127,196,232,.18);stroke:#9CCBE6;stroke-width:1.2;transition:fill .3s,transform .3s}
+.wd.on svg{fill:#5AB0E0;stroke:#2C7FB5;transform:scale(1.08)}
+html[data-mf="dusk"] .wtr-n{color:#9ED3EE}
+html[data-mf="dusk"] .wtr-un{color:#9ED3EE}
+html[data-mf="dusk"] .wglass>path:first-of-type{fill:rgba(191,227,242,.08)}
+
+#water-t{display:none}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -6503,6 +6539,40 @@ function gardenRender(){const wk=document.getElementById("week");if(!wk)return;c
   const fl=[...Array(7)].filter((_,i)=>{const d=new Date();d.setDate(d.getDate()-i);const x=F.d[dkey(d)];return x&&x.a.reduce((a,y)=>a+y.min,0)>=30;}).length;
   cap.textContent=fl>=5?`Bu hafta ${fl} çiçek açtı, bahçen cennet gibi 🌸`:fl?`Bu hafta ${fl} çiçek açtı. 30 dakikalık her gün bir çiçek demek 🌸`:"30 dakika hareket ettiğin her gün bahçende bir çiçek açar 🌱";}
 (function(){const _f=fitRender;fitRender=function(){_f.apply(this,arguments);try{plateRender();gardenRender();if(!gsRun||!document.getElementById("gs-arc"))gsRender();}catch(e){console.error(e);}};})();
+
+/* ===== v166: Su perisi — dalgalı bardak ve Damla ===== */
+const WMSG=[["Damla uyuyor… Bir bardakla uyandır onu 💧","uyku"],["Günaydın! Damla gözlerini açtı ☀️","mutlu"],["İki bardak! Cildin şimdiden parlıyor ✨","mutlu"],["Üç oldu, enerjin yerine geliyor 🌊","mutlu"],["Yarı yoldasın su perisi 🧜‍♀️","neşe"],["Beş! Damla dans ediyor 💃","neşe"],["Altı bardak, böbreklerin sana el sallıyor 👋","neşe"],["Son bir bardak kaldı, hadi! 🏁","neşe"],["Su perisi oldun! Bugün ışıl ışılsın 👑","yildiz"]];
+function damlaFace(m){const e=m==="uyku"?'<path d="M-9 2q3 2 6 0M3 2q3 2 6 0" stroke="#24506B" stroke-width="1.8" fill="none" stroke-linecap="round"/>':m==="yildiz"?'<path d="M-6 -2l1.2 2.6 2.8.3-2.1 1.9.6 2.8-2.5-1.4-2.5 1.4.6-2.8-2.1-1.9 2.8-.3zM6 -2l1.2 2.6 2.8.3-2.1 1.9.6 2.8-2.5-1.4-2.5 1.4.6-2.8-2.1-1.9 2.8-.3z" fill="#F2C14E"/>':'<circle cx="-5" cy="1" r="2.2" fill="#24506B"/><circle cx="5" cy="1" r="2.2" fill="#24506B"/><circle cx="-4.2" cy=".2" r=".8" fill="#fff"/><circle cx="5.8" cy=".2" r=".8" fill="#fff"/>';
+  const mo=m==="uyku"?'<ellipse cx="0" cy="8" rx="2" ry="1.4" fill="#24506B"/>':m==="mutlu"?'<path d="M-4 7q4 4 8 0" stroke="#24506B" stroke-width="1.8" fill="none" stroke-linecap="round"/>':'<path d="M-5 6q5 7 10 0z" fill="#24506B"/>';
+  return `<path d="M0 -20 C6 -10 13 -3 13 6 A13 13 0 0 1 -13 6 C-13 -3 -6 -10 0 -20Z" fill="url(#dmg)" stroke="#5AA9D6" stroke-width="1"/><ellipse cx="-5" cy="-4" rx="3" ry="5" fill="#fff" opacity=".55"/>${e}${mo}${m!=="uyku"?'<circle cx="-9" cy="6" r="2" fill="#F4A3A8" opacity=".6"/><circle cx="9" cy="6" r="2" fill="#F4A3A8" opacity=".6"/>':'<text x="10" y="-10" font-size="8" fill="#5AA9D6" font-weight="800">z</text><text x="15" y="-16" font-size="6" fill="#5AA9D6" font-weight="800">z</text>'}${m==="yildiz"?'<path d="M-8 -20l2-6 3 4 3-6 3 6 3-4 2 6z" fill="#F2C14E" stroke="#D9A62B" stroke-width=".6"/>':""}`;}
+function wLevelY(w){return 160-146*Math.min(8,w)/8;}
+function waterRender(){const host=document.getElementById("cups");if(!host)return;const D=fday();const w=D.w||0;D.wt=D.wt||[];
+  let box=document.getElementById("wtr");
+  if(!box){box=document.createElement("div");box.id="wtr";box.className="wtr";host.after(box);
+    box.innerHTML=`<div class="wtr-g"><svg viewBox="0 0 120 172" class="wglass" aria-hidden="true"><defs><clipPath id="wclip"><path d="M17 8H103L93 158Q92 165 85 165H35Q28 165 27 158Z"/></clipPath>
+      <linearGradient id="wwg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8FD3F4"/><stop offset="1" stop-color="#3A8FC7"/></linearGradient><radialGradient id="dmg" cx=".35" cy=".3"><stop offset="0" stop-color="#E6F6FF"/><stop offset="1" stop-color="#8FD3F4"/></radialGradient></defs>
+      <path d="M17 8H103L93 158Q92 165 85 165H35Q28 165 27 158Z" fill="rgba(191,227,242,.18)"/>
+      <g clip-path="url(#wclip)"><g class="wlev" id="wlev"><g class="wv2"><path d="M-120 0q15 -5 30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0V200H-120Z" fill="#BFE7FA" opacity=".7"/></g><g class="wv1"><path d="M-120 3q15 -6 30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0V200H-120Z" fill="url(#wwg)"/></g>
+        ${[18,40,62,84,100].map((x,i)=>`<circle cx="${x}" cy="150" r="${1.5+i%3}" fill="#fff" opacity=".6" class="wbub" style="animation-delay:${-i*.7}s"/>`).join("")}</g></g>
+      ${[1,2,3,4,5,6,7].map(i=>`<path d="M${(99-1.25*0+0).toFixed(0)} ${wLevelY(i).toFixed(1)}h-6" stroke="rgba(58,143,199,.35)" stroke-width="1.2" class="wtick"/>`).join("")}
+      <path d="M17 8H103L93 158Q92 165 85 165H35Q28 165 27 158Z" fill="none" stroke="#9CCBE6" stroke-width="2.5" stroke-linejoin="round"/><path d="M27 18L35 150" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+      <g class="dmw" id="dmw"><g class="dmb" id="dmb"></g></g></svg></div>
+      <div class="wtr-i"><b class="wtr-n" id="wtr-n"></b><small id="wtr-l"></small><p class="wtr-m" id="wtr-m"></p><button type="button" class="wtr-add" id="wtr-add">＋ Bir bardak içtim</button><div class="wtr-r"><button type="button" class="wtr-un" id="wtr-un">↶ Geri al</button><small id="wtr-last"></small></div></div>
+      <div class="wtr-dots" id="wtr-dots"></div>`;
+    document.getElementById("wtr-add").onclick=()=>{const D=fday();if(D.w>=12)return;D.w=(D.w||0)+1;D.wt=D.wt||[];D.wt.push(Date.now());fsave();fitRender();const s=document.getElementById("wlev");if(s){s.classList.remove("slosh");void s.getBBox;setTimeout(()=>s.classList.add("slosh"),10);}};
+    document.getElementById("wtr-un").onclick=()=>{const D=fday();if(!D.w)return;D.w--;(D.wt||[]).pop();fsave();fitRender();};
+    box.querySelector(".wtr-g").onclick=()=>document.getElementById("wtr-add").click();}
+  const y=wLevelY(w);document.getElementById("wlev").style.transform=`translateY(${y}px)`;
+  const M=WMSG[Math.min(8,w)];const dm=document.getElementById("dmw");dm.style.transform=`translate(60px,${(w?y-10:150).toFixed(1)}px)`;document.getElementById("dmb").innerHTML=damlaFace(M[1]);dm.classList.toggle("sleep",!w);
+  document.getElementById("wtr-n").innerHTML=`${w}<i>/8</i>`;document.getElementById("wtr-l").textContent=`${(w*0.25).toLocaleString("tr-TR",{minimumFractionDigits:w%4?2:0})} litre · ${w>=8?"hedef tamam 🎉":(8-w)+" bardak kaldı"}`;
+  document.getElementById("wtr-m").textContent=M[0];
+  const last=D.wt.length?D.wt[D.wt.length-1]:null,mins=last?Math.round((Date.now()-last)/6e4):null;const h=new Date().getHours();
+  document.getElementById("wtr-last").textContent=last?(mins<1?"Az önce içtin":mins<60?`Son bardak ${mins} dk önce`:`Son bardak ${Math.floor(mins/60)} saat önce${mins>=120&&w<8?" 👀":""}`):(w?"":h>=10&&h<22?"Bugün henüz su içmedin":"");
+  document.getElementById("wtr-un").hidden=!w;document.getElementById("wtr-add").textContent=w>=8?"＋ Bir bardak daha 💧":"＋ Bir bardak içtim";
+  const dots=document.getElementById("wtr-dots");dots.innerHTML=Array.from({length:8},(_,i)=>`<button type="button" class="wd${i<w?" on":""}" data-wd="${i+1}" aria-label="${i+1}. bardak"><svg viewBox="0 0 20 24"><path d="M10 1C13 6 18 10 18 15a8 8 0 0 1-16 0C2 10 7 6 10 1Z"/></svg></button>`).join("");
+  dots.querySelectorAll("[data-wd]").forEach(b=>b.onclick=()=>{const D=fday(),n=+b.dataset.wd,nw=n===D.w?n-1:n;D.wt=D.wt||[];while(D.wt.length<nw)D.wt.push(Date.now());D.wt.length=Math.min(D.wt.length,nw);D.w=nw;fsave();fitRender();});
+  const wm=document.getElementById("wmsg");if(wm)wm.hidden=true;}
+(function(){const _f=fitRender;fitRender=function(){_f.apply(this,arguments);try{waterRender();}catch(e){console.error(e);}};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
