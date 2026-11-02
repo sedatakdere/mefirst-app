@@ -3904,6 +3904,40 @@ html[data-mf="dusk"] .mw-back{background:rgba(46,30,52,.7);color:#F7E1F0}
 .prof .me-av{padding-top:46px!important}
 .me-idr .me-mir{width:76px;height:98px}
 .me-idr .me-mir span{font-size:38px}
+
+/* v194 çoklu patili */
+.pet .prow2{display:none!important}
+.pet.pet-empty>:not(.phero){display:none!important}
+.psw{position:relative;z-index:2;display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.psw:empty{display:none}
+.psw-b{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:13.5px;font-weight:700;color:#6B3E1F;background:rgba(255,255,255,.6);border:1.5px solid rgba(255,255,255,.9);border-radius:999px;padding:4px 12px 4px 4px;cursor:pointer}
+.psw-b span{width:28px;height:28px;display:grid;place-items:center}
+.psw-b span svg{width:28px;height:28px}
+.psw-b[aria-pressed="true"]{background:#fff;border-color:#E39A4E;box-shadow:0 6px 14px -8px rgba(120,60,20,.6)}
+.psw-add{padding-left:10px;color:#A8743F;border-style:dashed}
+.psw-add span{width:auto;height:auto;font-size:16px}
+.psw-ed{font:inherit;background:none;border:0;cursor:pointer;font-size:15px;padding:4px 6px;opacity:.75}
+.padd{position:relative;z-index:2;margin-top:12px}
+.padd-in{background:rgba(255,255,255,.82);border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:10px;box-shadow:0 10px 24px -16px rgba(120,60,20,.6)}
+.padd-t{font-family:var(--f-display);font-weight:400;font-size:19px;color:#5A3418}
+.padd-k{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.padd-kb{display:flex;flex-direction:column;align-items:center;gap:2px;font:inherit;font-size:12px;font-weight:700;color:#6B3E1F;background:#FFF8EF;border:1.5px solid #F1DCC2;border-radius:16px;padding:6px 2px 8px;cursor:pointer}
+.padd-kb span svg{width:44px;height:44px}
+.padd-kb[aria-pressed="true"]{border-color:#E39A4E;background:#FFEBD2;box-shadow:0 0 0 3px rgba(227,154,78,.2)}
+.padd-r{display:flex;gap:8px}
+.padd-r input{flex:1;min-width:0;font:inherit;font-size:16px;padding:11px 14px;border-radius:14px;border:1.5px solid #F1DCC2;background:#fff;color:#3A2418}
+.padd-ok{font:inherit;font-weight:800;font-size:14.5px;color:#fff;background:linear-gradient(135deg,#F2B36B,#E3804E);border:0;border-radius:14px;padding:0 16px;cursor:pointer}
+.padd-f{display:flex;justify-content:space-between;gap:8px}
+.padd-f:empty{display:none}
+.padd-x,.padd-del{font:inherit;font-size:13px;font-weight:600;background:none;border:0;cursor:pointer;color:#8A6A55;padding:4px}
+.padd-del{color:#C2453A;margin-left:auto}
+html[data-mf="dusk"] .psw-b{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#FBE3C4}
+html[data-mf="dusk"] .psw-b[aria-pressed="true"]{background:rgba(255,255,255,.26);border-color:#F2B36B}
+html[data-mf="dusk"] .padd-in{background:rgba(40,28,24,.85)}
+html[data-mf="dusk"] .padd-t{color:#FBE3C4}
+html[data-mf="dusk"] .padd-kb{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.15);color:#FBE3C4}
+html[data-mf="dusk"] .padd-kb[aria-pressed="true"]{background:rgba(242,179,107,.2);border-color:#F2B36B}
+html[data-mf="dusk"] .padd-r input{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:#FBE3C4}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -4193,6 +4227,8 @@ html[data-mf="dusk"] .mw-back{background:rgba(46,30,52,.7);color:#F7E1F0}
       <div class="pface" id="pface" aria-hidden="true"></div>
       <h2 id="pet-title">Patili <em>dostum</em></h2>
       <p class="pbub" id="pbub"></p>
+      <div class="psw" id="pet-sw"></div>
+      <div class="padd" id="pet-addf" hidden></div>
       <div class="prow2">
         <div class="field"><label for="pet-name">Adı</label><input id="pet-name" type="text" maxlength="16" placeholder="ör. Pamuk"></div>
         <div class="kinds" id="pet-kind" role="radiogroup" aria-label="Türü"></div>
@@ -4719,7 +4755,10 @@ let _lvPrev=null;const _showLK=show;show=function(){const inL=step===9||step===1
 function openLove(){if(love.unlocked){step=10;}else{lockSetup();step=9;}show();loveRender();}
 
 const PKIND=[["kopek","🐶","Köpek"],["kedi","🐱","Kedi"],["kus","🐦","Kuş"],["diger","🐰","Diğer"]];
-function petData(){if(!st.pet)st.pet={name:"",kind:"kedi",feeds:["08:00","19:00"],fedDay:"",fed:[],vax:[]};const P=st.pet;if(P.fedDay!==TODAY){P.fedDay=TODAY;P.fed=[];}return P;}
+function petNew(kind,name){const ids=(st.pets||[]).map(p=>p.id);let n=0;while(ids.includes("p"+n))n++;return {id:"p"+n,name:name||"",kind:kind||"kedi",feeds:["08:00","19:00"],fedDay:"",fed:[],vax:[]};}
+function petData(){if(!Array.isArray(st.pets))st.pets=st.pet?[st.pet]:[];if(!st.pets.length)st.pets.push(st.pet&&!st.pet.id?st.pet:petNew());
+  const seen={};st.pets.forEach(p=>{if(!p.id||seen[p.id]){let n=0;while(st.pets.some(q=>q.id==="p"+n))n++;p.id="p"+n;}seen[p.id]=1;});
+  let i=st.pets.findIndex(p=>p.id===st.petCur);if(i<0)i=0;if(st.pet&&st.pet.id===st.pets[i].id&&st.pet!==st.pets[i])st.pets[i]=st.pet;else st.pet=st.pets[i];st.petCur=st.pet.id;const P=st.pet;if(P.fedDay!==TODAY){P.fedDay=TODAY;P.fed=[];}return P;}
 function petRender(){
   const P=petData();const nm=P.name.trim();const k=PKIND.find(x=>x[0]===P.kind)||PKIND[1];
   document.getElementById("pet-title").innerHTML=nm?`${k[1]} <em>${esc(nm)}</em>`:"Patili <em>dostum</em>";
@@ -4777,7 +4816,7 @@ function homeRender(){
   tiles.push({i:"👗",l:"Kombinin",v:st.day===TODAY?"Hazır ✓":"1 dakikada",go:"go-style"});
   if(st.rit){const RD=st.rit.d[dkey()]||{s:0,o:0,a:0};const k=rnow(),S=SESS.find(x=>x[0]===k);tiles.push({i:"🧘",l:"Manifest",v:RD[k]>=S[3]?S[2]+" ✓":S[2]+" "+RD[k]+"/"+S[3],go:"go-rit"});}
   if(W.length)tiles.push({i:"👚",l:"Dolabın",v:W.length+" parça",go:"go-ward"});
-  if(st.pet){const P=petData();const pn=P.name.trim()||"Dostun";const nm2=hr*60+now.getMinutes();
+  if(st.pet&&(st.pet.name||"").trim()){const P=petData();const pn=P.name.trim()||"Dostun";const nm2=hr*60+now.getMinutes();
     const nx=P.feeds.slice().sort().find(t=>{const [a,b]=t.split(":").map(Number);return !P.fed.includes(t)&&a*60+b>=nm2;});
     const full=P.feeds.length&&P.feeds.every(t=>P.fed.includes(t));tiles.push({i:"🐾",l:pn,v:full?"Doydu ✓":nx?"Mama "+nx:"Bugün tamam",go:"go-pet"});}
   if(tiles.length<3)tiles.push({i:"💞",l:"Biz ikimiz",v:"Özel alanın",go:"go-love"});
@@ -6247,7 +6286,7 @@ document.addEventListener("input",e=>{const el=e.target;if(!el.matches||!el.matc
   el.classList.toggle("bad",el.value.length===10&&!dmyIso(el.value));if(el.value.length===10)el.dispatchEvent(new Event("change"));});
 function zodHTML(iso,who){const z=zodiac(iso);return z?`<span class="zmini">${z[1]} ${who?who+": ":""}${z[0]}</span>`:"";}
 function esc(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
-function save(){try{localStorage.setItem("mefirst",JSON.stringify({mood:st.mood,plan:st.plan,weather:st.weather,style:st.style,name:st.name,note:st.note||"",day:st.day||"",last:st.last||"",clen:st.clen||28,pname:st.pname||"",pet:st.pet||null,prof:st.prof||null,fit:st.fit||null,rit:st.rit||null,rx:st.rx||null,biz:st.biz||null,kids:st.kids||null,ev:st.ev||null,onb:st.onb||false,hist:st.hist||[],meds:st.meds||[],kitap:st.kitap||null,wow:st.wow||null,kf:st.kf||null,games2:st.games2||null,puz:st.puz||null}));}catch(e){}}
+function save(){try{localStorage.setItem("mefirst",JSON.stringify({mood:st.mood,plan:st.plan,weather:st.weather,style:st.style,name:st.name,note:st.note||"",day:st.day||"",last:st.last||"",clen:st.clen||28,pname:st.pname||"",pet:st.pet||null,pets:st.pets||null,petCur:st.petCur||null,prof:st.prof||null,fit:st.fit||null,rit:st.rit||null,rx:st.rx||null,biz:st.biz||null,kids:st.kids||null,ev:st.ev||null,onb:st.onb||false,hist:st.hist||[],meds:st.meds||[],kitap:st.kitap||null,wow:st.wow||null,kf:st.kf||null,games2:st.games2||null,puz:st.puz||null}));}catch(e){}}
 
 document.getElementById("today").textContent=new Date().toLocaleDateString("tr-TR",{weekday:"long",day:"numeric",month:"long"});
 const nameEl=document.getElementById("name");nameEl.value=st.name||"";
@@ -7566,8 +7605,9 @@ function petFace(kind,mood){const C={kedi:["#F2B36B","#E39A4E","#FBE3C4"],kopek:
   const wh=kind==="kedi"?`<path d="M30 76h16M30 82l16-3M90 76H74M90 82l-16-3" stroke="#3A2A20" stroke-width="1.4" opacity=".5"/>`:"";
   const extra=mood==="uyku"?`<text x="88" y="28" font-size="14" font-weight="800" fill="#fff" class="pz">z</text><text x="100" y="16" font-size="10" font-weight="800" fill="#fff" class="pz" style="animation-delay:.6s">z</text>`:mood==="tok"?`<path d="M96 22c-3-4-9-1-6 4l6 6 6-6c3-5-3-8-6-4z" fill="#F4A3A8" class="pht"/>`:mood==="ac"?`<text x="94" y="30" font-size="22" font-weight="900" fill="#fff" class="pex">!</text>`:"";
   return `<svg viewBox="0 0 120 120">${ears}<ellipse cx="60" cy="70" rx="38" ry="34" fill="${C[0]}"/><ellipse cx="60" cy="80" rx="20" ry="15" fill="${C[2]}"/>${kind==="kedi"?`<path d="M50 40q10-6 20 0" stroke="${C[1]}" stroke-width="3" fill="none" stroke-linecap="round"/>`:""}<circle cx="38" cy="78" r="5" fill="#F7B6BE" opacity=".6"/><circle cx="82" cy="78" r="5" fill="#F7B6BE" opacity=".6"/>${eyes}${nose}${mouth}${wh}${extra}</svg>`;}
-function pcare(){let o={};try{o=JSON.parse(localStorage.getItem("mefirst-pcare")||"{}");}catch(e){}if(o.d!==dkey())o={d:dkey(),n:[]};return o;}
-function pcareSave(o){try{localStorage.setItem("mefirst-pcare",JSON.stringify(o));}catch(e){}}
+function pcKey(){const id=st.pet&&st.pet.id;return "mefirst-pcare"+(id&&id!=="p0"?"-"+id:"");}
+function pcare(){let o={};try{o=JSON.parse(localStorage.getItem(pcKey())||"{}");}catch(e){}if(o.d!==dkey())o={d:dkey(),n:[]};return o;}
+function pcareSave(o){try{localStorage.setItem(pcKey(),JSON.stringify(o));}catch(e){}}
 function pCareList(kind){const base=[["oyun","🎾","Oyun oynadık"],["sev","🤗","Bol bol sevdim"],["su","💧","Suyunu tazeledim"]];
   return kind==="kopek"?[["yuru","🦮","Yürüyüşe çıktık"],...base,["tuy","🪮","Tüylerini taradım"]]:kind==="kedi"?[...base,["kum","🧹","Kumunu temizledim"],["tuy","🪮","Tüylerini taradım"]]:kind==="kus"?[["kafes","🧹","Kafesini temizledim"],["sev","🤗","Onunla konuştum"],["su","💧","Suyunu tazeledim"],["uc","🪶","Odada uçtu"]]:[...base,["kafes","🧹","Yuvasını temizledim"]];}
 let petWasAll=null,petWasLove=null;
@@ -8083,6 +8123,38 @@ function meAvatar(P){const nm=(st.name||"").trim(),ini=nm?nm[0].toLocaleUpperCas
 
 (function(){if(typeof mePhotoRender==="function"){const _m=mePhotoRender;mePhotoRender=function(){_m.apply(this,arguments);try{meExtra();}catch(e){}};}
   const _r=render;render=function(){_r.apply(this,arguments);try{const m=document.getElementById("r-makeup");if(m&&st.plan!=="ev"){const l=gnLip();m.textContent=m.textContent.replace(/ 💋 Bugünün ruju:.*$/,"").replace(/;\s*dudakta[^.]*\./,".").replace(/\s*Dudakta [^.]*\./g,"").replace(/, gül kurusu dudak çok yakışır/," yakışır").replace(/Gözde toprak tonu, dudakta sevdiğin o eski ruj\./,"Gözde toprak tonu.")+` 💋 Bugünün ruju: ${l[0].toLocaleLowerCase("tr-TR")}.`;}}catch(e){}};})();
+
+/* ===== v194: Patili dostlarım — çoklu evcil hayvan ===== */
+function petNamed(){return (st.pets||[]).filter(p=>(p.name||"").trim());}
+let petForm=null;/* null | {mode:"add"} | {mode:"edit"} */
+function petSwitch(id){st.petCur=id;st.pet=null;petData();save();petForm=null;const pn=document.getElementById("pet-name");if(pn)pn.value=st.pet.name||"";petRender();}
+function petFormHTML(){const edit=petForm&&petForm.mode==="edit",P=edit?st.pet:null;const k0=petForm.kind||(P?P.kind:"kedi");
+  return `<div class="padd-in"><b class="padd-t">${edit?`${esc(P.name)} bilgileri`:petNamed().length?"Yeni bir dost ekle":"Evde kim var?"}</b>
+   <div class="padd-k">${PKIND.map(([v,e,l])=>`<button type="button" class="padd-kb" data-pk="${v}" aria-pressed="${k0===v}"><span class="no-mi">${petFace(v,k0===v?"tok":"normal")}</span>${l}</button>`).join("")}</div>
+   <div class="padd-r"><input id="padd-n" type="text" maxlength="16" placeholder="Adı, ör. Pamuk" value="${esc(P?P.name:(petForm.name||""))}"><button type="button" class="padd-ok" id="padd-ok">${edit?"Kaydet":"Ekle 🐾"}</button></div>
+   <div class="padd-f">${petNamed().length?`<button type="button" class="padd-x" id="padd-x">Vazgeç</button>`:""}${edit?`<button type="button" class="padd-del" id="padd-del">${petForm.del?"Eminim, sil":"Bu dostu kaldır"}</button>`:""}</div></div>`;}
+function petUI(){const root=document.querySelector('.pet[data-step="20"]');if(!root)return;const named=petNamed();const empty=!named.length;
+  if(empty&&!petForm)petForm={mode:"add"};root.classList.toggle("pet-empty",empty);
+  if(empty){document.getElementById("pet-title").innerHTML="Patili <em>dostum</em>";document.getElementById("pbub").textContent="Evde kim var? Ekle, mamasını ve aşılarını ben takip edeyim 🐾";}
+  const sw=document.getElementById("pet-sw");
+  sw.innerHTML=empty?"":named.map(p=>`<button type="button" class="psw-b" data-pid="${p.id}" aria-pressed="${p.id===st.pet.id}"><span class="no-mi">${petFace(p.kind,"normal")}</span>${esc(p.name)}</button>`).join("")+`<button type="button" class="psw-b psw-add" id="psw-add" aria-label="Yeni dost ekle"><span>＋</span>Ekle</button>${named.length?`<button type="button" class="psw-ed" id="psw-ed" aria-label="Düzenle">✏️</button>`:""}`;
+  sw.querySelectorAll("[data-pid]").forEach(b=>b.onclick=()=>{if(b.dataset.pid!==st.pet.id)petSwitch(b.dataset.pid);});
+  const ad=document.getElementById("psw-add");if(ad)ad.onclick=()=>{petForm={mode:"add"};petUI();document.getElementById("padd-n").focus();};
+  const ed=document.getElementById("psw-ed");if(ed)ed.onclick=()=>{petForm=petForm&&petForm.mode==="edit"?null:{mode:"edit"};petUI();};
+  const f=document.getElementById("pet-addf");f.hidden=!petForm;if(!petForm){f.innerHTML="";return;}
+  f.innerHTML=petFormHTML();
+  f.querySelectorAll("[data-pk]").forEach(b=>b.onclick=()=>{petForm.kind=b.dataset.pk;petForm.name=document.getElementById("padd-n").value;petUI();});
+  const ok=()=>{const nm=document.getElementById("padd-n").value.trim();if(!nm){const i=document.getElementById("padd-n");i.classList.remove("mw-shake");void i.offsetWidth;i.classList.add("mw-shake");i.placeholder="Önce adını yaz 🐾";return;}
+    if(petForm.mode==="edit"){st.pet.name=nm;if(petForm.kind)st.pet.kind=petForm.kind;petForm=null;save();petRender();return;}
+    const kind=petForm.kind||"kedi";let P;const blank=st.pets.find(p=>!(p.name||"").trim());if(blank){P=blank;P.kind=kind;P.name=nm;}else{P=petNew(kind,nm);st.pets.push(P);}
+    petForm=null;petSwitch(P.id);mfConfetti(`${nm} aileye katıldı! 🐾`,PT_C,PT_BG);};
+  document.getElementById("padd-ok").onclick=ok;document.getElementById("padd-n").onkeydown=e=>{if(e.key==="Enter")ok();};
+  const x=document.getElementById("padd-x");if(x)x.onclick=()=>{petForm=null;petUI();};
+  const del=document.getElementById("padd-del");if(del)del.onclick=()=>{if(!petForm.del){petForm.del=1;petUI();return;}
+    const id=st.pet.id;st.pets=st.pets.filter(p=>p.id!==id);try{localStorage.removeItem(pcKey());}catch(e){}st.pet=null;st.petCur=(st.pets[0]||{}).id||null;
+    if(!st.pets.length){st.pet=null;st.pets=[];}petForm=null;save();petData();petRender();};}
+(function(){const _p=petRender;petRender=function(){petData();if(!petNamed().length){try{petUI();}catch(e){console.error(e);}return;}_p.apply(this,arguments);try{petUI();}catch(e){console.error(e);}};
+  const _s=show;show=function(){const was=step;_s.apply(this,arguments);try{if(step===20&&was!==20){petForm=null;}}catch(e){}};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
