@@ -8676,7 +8676,7 @@ function libAllOpen(){libQ="";libF="all";const L=klib();const au=new Set(L.map(x
   const O=libSheet(`<div class="shs-grab"></div><div class="shs-h"><div><small>Kütüphanem</small><b>${L.length} kitap · ${au} yazar</b></div><button type="button" class="shs-x" aria-label="Kapat">✕</button></div>
    <div class="la-s"><input id="la-q" type="search" placeholder="Kitap ya da yazar ara…" value="${esc(libQ)}" autocomplete="off"><button type="button" class="la-ser" id="la-ser" aria-label="Seri barkodla ekle">📷</button></div>
    <div class="la-f">${[["all","Tümü"],["home","🏠 Evde"],["out","📤 Arkadaşta"],["bor","📥 Emanet"]].map(([v,l])=>`<button type="button" class="la-c" data-lf="${v}" aria-pressed="${libF===v}">${l}</button>`).join("")}</div>
-   <div class="la-o"><small>Sırala:</small>${[["new","Son eklenen"],["az","A-Z"],["au","Yazar"]].map(([v,l])=>`<button type="button" class="la-sc" data-ls="${v}" aria-pressed="${libS===v}">${l}</button>`).join("")}</div>
+   <div class="la-o">${[["new","Son eklenen"],["au","Yazar"],["az","A-Z"]].map(([v,l])=>`<button type="button" class="la-sc" data-ls="${v}" aria-pressed="${libS===v}">${l}</button>`).join("")}</div>
    <div class="la-l" id="la-l"></div>`);
   const list=()=>{const q=bkN(libQ);let R=klib().map((x,i)=>[x,i]);
     if(libF==="home")R=R.filter(([x])=>x.k==="own"&&!x.who);if(libF==="out")R=R.filter(([x])=>x.k==="own"&&x.who);if(libF==="bor")R=R.filter(([x])=>x.k==="bor");
@@ -8714,6 +8714,14 @@ function bnBooks(){let B=[];try{const K=kt();B=[...K.shelf.filter(x=>x.s==="okuy
   return `<span class="bnk">${B.slice(0,5).map((t,i)=>{let h=0;for(const c of t)h=(h*31+c.charCodeAt(0))>>>0;const c=KT_COL[h%KT_COL.length];
     return `<span class="bnk-s${i===0?" rd":""}" style="--c1:${c[0]};--c2:${c[1]};--h:${64+h%28}%;--w:${18+h%8}px;--t:${i===4?6:(h%3)-1}deg"><b>${esc(t)}</b></span>`;}).join("")}<span class="bnk-p"></span></span>`;}
 (function(){const _b=bentoRender;bentoRender=function(){_b.apply(this,arguments);try{const a=document.querySelector(".bn-kitap .bn-art");if(a)a.innerHTML=bnBooks();}catch(e){console.error(e);}};try{if(step===0)bentoRender();}catch(e){}})();
+
+/* v207: kitap/yazar alanlarında her kelimenin ilk harfi büyük */
+(function(){const IDS=["kt-st","kt-sa","kt-au","kt-fv","lb-t","lb-a","padd-br"];
+  const cap=el=>{const v=el.value;const n=v.replace(/(^|[\s\-'’"(])([a-zçğıöşüi])/g,(m,a,b)=>a+b.toLocaleUpperCase("tr-TR"));if(n!==v){const p=el.selectionStart;el.value=n;try{el.setSelectionRange(p,p);}catch(e){}}};
+  document.addEventListener("input",e=>{const el=e.target;if(el&&el.tagName==="INPUT"&&IDS.includes(el.id)&&!e.isComposing)cap(el);},true);
+  document.addEventListener("compositionend",e=>{const el=e.target;if(el&&IDS.includes(el.id))cap(el);},true);
+  const mark=()=>IDS.forEach(id=>{const el=document.getElementById(id);if(el&&!el.dataset.capw){el.dataset.capw=1;el.setAttribute("autocapitalize","words");}});
+  new MutationObserver(mark).observe(document.body,{childList:true,subtree:true});mark();})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
