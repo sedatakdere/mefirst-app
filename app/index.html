@@ -3669,6 +3669,31 @@ html[data-mf="dusk"] .kt-wchip{background:rgba(229,138,166,.1);color:#F7C9D6}
 .kbb.on i{transform:scale(1.12)}
 .kbb.on span{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
 html[data-mf="dusk"] .ktbar{background:transparent!important}
+
+/* v181: kaydırmalı raflar */
+.ktshv{display:flex;flex-direction:column;gap:6px}
+.ktsh-tr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:0;border-radius:24px}
+.ktsh-tr::-webkit-scrollbar{display:none}
+.ktsh-tr>.ktshelf{flex:0 0 100%;scroll-snap-align:center;box-sizing:border-box;min-height:236px}
+.ktsh-dots{display:flex;justify-content:center;gap:6px}
+.ktsh-dots button{font:inherit;font-size:11.5px;font-weight:800;color:var(--muted);background:none;border:0;border-radius:99px;padding:4px 10px;display:flex;align-items:center;gap:5px;cursor:pointer}
+.ktsh-dots i{width:7px;height:7px;border-radius:4px;background:currentColor;opacity:.5;transition:width .3s}
+.ktsh-dots button.on{color:#A8492A}.ktsh-dots button:nth-child(2).on{color:#B85C78}
+.ktsh-dots button.on i{width:18px;opacity:1}
+.ktshelf.wsh{background:linear-gradient(180deg,#FFF3F5,#FBE1E8)!important;border-color:#F0C3CF!important}
+.wsh .ktshelf-t strong{color:#7A2E4A}
+.wsh-hint{font-size:11px;font-weight:700;color:#B85C78}
+.wpl{background:linear-gradient(180deg,#E9A2B8,#C27390)!important}
+.wsp{cursor:pointer;box-shadow:inset 0 6px 0 rgba(255,255,255,.25),inset 0 -8px 0 rgba(0,0,0,.08)!important}
+.wsp::after{content:"";position:absolute;top:-2px;left:50%;width:7px;height:20px;margin-left:-3.5px;background:#fff;clip-path:polygon(0 0,100% 0,100% 100%,50% 76%,0 100%);opacity:.9}
+.wsp:active{transform:rotate(var(--t)) translateY(-4px)}
+.wsh .ktempty{color:#B85C78}
+.wsh-go{align-self:center;background:linear-gradient(135deg,#25D366,#128C7E)!important}
+html[data-mf="dusk"] .ktshelf.wsh{background:linear-gradient(180deg,rgba(229,138,166,.12),rgba(229,138,166,.06))!important;border-color:rgba(229,138,166,.25)!important}
+html[data-mf="dusk"] .wsh .ktshelf-t strong{color:#F7C9D6}
+
+.wsh .ktshelf-t{flex-wrap:wrap}
+.wsh-hint{white-space:nowrap}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -7558,7 +7583,7 @@ function ktHint(){const K=kt();const W2=K.shelf.filter(x=>x.s==="istek");if(!W2.
   window.open("https://wa.me/?text="+encodeURIComponent(txt),"_blank","noopener");}
 (function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{if(kttab!=="raf")return;const K=kt();const n=K.shelf.filter(x=>x.s==="istek").length;if(!n)return;
   const h=[...document.querySelectorAll("#ktpanel .lcard h3")].find(x=>/İstek listem/.test(x.textContent));if(!h)return;const card=h.closest(".lcard");
-  card.classList.add("ktwish");card.insertAdjacentHTML("beforeend",`<div class="ktw-hint"><button type="button" class="pl-add" id="kt-hint">💌 Eşime ipucu gönder</button><small>Listeni WhatsApp'tan tatlı bir mesajla gönderir</small></div>`);
+  card.classList.add("ktwish");card.insertAdjacentHTML("beforeend",`<div class="ktw-hint"><button type="button" class="pl-add" id="kt-hint">💌 Ruh Eşime Gönder</button><small>Listeni WhatsApp'tan tatlı bir mesajla gönderir</small></div>`);
   document.getElementById("kt-hint").onclick=ktHint;
   card.querySelectorAll(".ktsh").forEach(r=>{const t=(r.querySelector(".kti strong")||{}).textContent,a=(r.querySelector(".kti small")||{}).textContent;const sa=r.querySelector(".ktsa");if(sa&&t){sa.insertAdjacentHTML("afterbegin",`<button type="button" class="ktbtn sm" data-kprice="${esc(t)}" data-kau="${esc(a||"")}">🔍 Fiyat</button>`);}});}catch(e){console.error(e);}};})();
 
@@ -7572,6 +7597,26 @@ function ktWishChip(){const P=document.getElementById("ktpanel");if(!P||kttab!==
   if(!n){if(c)c.remove();return;}if(!c){c=document.createElement("button");c.type="button";c.id="kt-wchip";c.className="kt-wchip";const m=P.querySelector(".ktmood");(m||P.firstChild)&&P.insertBefore(c,m||P.firstChild);c.onclick=()=>{kttab="raf";kitapRender();ktSettle();};}
   c.innerHTML=`<span class="no-mi">💝</span><b>İstek listem</b><i>${n}</i><em>›</em>`;}
 (function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{ktWishChip();}catch(e){}};})();
+
+/* v181: raf + istek rafı yan yana kaydırmalı */
+function ktSpine(x,wish){let h=0;for(const c of x.t)h=(h*31+c.charCodeAt(0))>>>0;const c=wish?[["#B5486E","#E58AA6"],["#8E3E5E","#C98A9E"],["#A8506C","#E39AB2"],["#9A4A6A","#D99AB0"]][h%4]:KT_COL[h%KT_COL.length];
+  return `<span class="ktsp${x.s==="okuyor"?" rd":""}${wish?" wsp":""}" style="--c1:${c[0]};--c2:${c[1]};--h:${78+h%30}%;--w:${26+h%12}px;--t:${(h%5)-2}deg" title="${esc(x.t)}" ${wish?`data-kprice="${esc(x.t)}" data-kau="${esc(x.a||"")}" role="button" tabindex="0"`:""}><b>${esc(x.t)}</b></span>`;}
+let ktShelfI=0;
+function ktShelves(){const P=document.getElementById("ktpanel");if(!P||kttab!=="raf")return;const sh=P.querySelector(".ktshelf");if(!sh||sh.closest(".ktshv"))return;const K=kt();const W2=K.shelf.filter(x=>x.s==="istek");
+  const wish=document.createElement("div");wish.className="ktshelf wsh";
+  wish.innerHTML=`<div class="ktshelf-t"><strong>${W2.length?`İstek rafımda ${W2.length} kitap 💝`:"İstek rafım 💝"}</strong><span class="wsh-hint">${W2.length?"Kitaba dokun, fiyatını gör":""}</span></div>
+    <div class="ktwood">${W2.length?W2.map(x=>ktSpine(x,1)).join(""):'<span class="ktempty">Keşke dediğin kitaplar burada sıralanacak 💝</span>'}<span class="ktplant no-mi">🎀</span></div><div class="ktplank wpl"></div>
+    ${W2.length?`<button type="button" class="pl-add wsh-go" id="kt-hint2">💌 Ruh Eşime Gönder</button>`:`<small class="ktfine">Kitap kartlarındaki 🤍 Keşke ile ekle</small>`}`;
+  const wrap=document.createElement("div");wrap.className="ktshv";const tr=document.createElement("div");tr.className="ktsh-tr";sh.replaceWith(wrap);tr.append(sh,wish);wrap.append(tr);
+  const dots=document.createElement("div");dots.className="ktsh-dots";dots.innerHTML='<button type="button" aria-label="Rafım"><i></i>Rafım</button><button type="button" aria-label="İstek rafım"><i></i>İstek rafım</button>';wrap.append(dots);
+  const set=i=>{ktShelfI=i;dots.querySelectorAll("button").forEach((b,j)=>b.classList.toggle("on",j===i));};
+  tr.addEventListener("scroll",()=>set(Math.round(tr.scrollLeft/tr.clientWidth)),{passive:true});
+  dots.querySelectorAll("button").forEach((b,j)=>b.onclick=()=>tr.scrollTo({left:j*tr.clientWidth,behavior:"smooth"}));
+  requestAnimationFrame(()=>{tr.scrollLeft=ktShelfI*tr.clientWidth;set(ktShelfI);});
+  const g=document.getElementById("kt-hint2");if(g)g.onclick=ktHint;
+  const wc=P.querySelector(".ktwish");if(wc)wc.remove();}
+(function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{ktShelves();}catch(e){console.error(e);}};})();
+document.addEventListener("keydown",e=>{const t=document.activeElement;if((e.key==="Enter"||e.key===" ")&&t&&t.classList&&t.classList.contains("wsp")){e.preventDefault();t.click();}});
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
