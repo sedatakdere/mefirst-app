@@ -2696,8 +2696,8 @@ input.pulse,textarea.pulse{animation:affP .6s ease}
 .wow-wheel{position:relative;width:min(250px,66vw);aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.22);box-shadow:inset 0 0 0 2px rgba(255,255,255,.35);touch-action:none;user-select:none;-webkit-user-select:none}
 .wow-wheel svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .wow-wheel path{fill:none;stroke:#fff;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;opacity:.9}
-.wl{position:absolute;width:var(--ls,52px);height:var(--ls,52px);margin:calc(var(--ls,52px)/-2) 0 0 calc(var(--ls,52px)/-2);border-radius:50%;display:grid;place-items:center;font:800 calc(var(--ls,52px)*.48)/1 "Nunito Sans",system-ui,sans-serif;color:#3A2A48;background:#fff;box-shadow:0 4px 0 rgba(0,0,0,.12);pointer-events:none;transition:transform .1s,background .1s}
-.wl.sel{background:var(--w2);color:#fff;transform:scale(1.1)}
+.wlt{position:absolute;width:var(--ls,52px);height:var(--ls,52px);margin:calc(var(--ls,52px)/-2) 0 0 calc(var(--ls,52px)/-2);border-radius:50%;display:grid;place-items:center;font:800 calc(var(--ls,52px)*.48)/1 "Nunito Sans",system-ui,sans-serif;color:#3A2A48;background:#fff;box-shadow:0 4px 0 rgba(0,0,0,.12);pointer-events:none;transition:transform .1s,background .1s}
+.wlt.sel{background:var(--w2);color:#fff;transform:scale(1.1)}
 .wow-b{flex:0 0 46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.25);color:#fff;font-size:21px;cursor:pointer;position:relative}
 .wow-b i{position:absolute;right:-4px;top:-4px;min-width:18px;height:18px;border-radius:99px;background:#fff;color:#3A2A48;font:800 11px/18px system-ui;font-style:normal}
 .wow-msg{margin:0;text-align:center;min-height:18px;font-size:13px;font-weight:800}
@@ -3278,6 +3278,79 @@ html[data-mf="dusk"] .shs-gh{color:#F6CFA8}
 .shi-d{width:46px;height:46px;display:block;margin:-2px 0 -2px;transition:transform .3s}
 .shi-l{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;font-family:var(--f-display);font-size:24px;transition:transform .3s}
 .shi.on .shi-d,.shi.on .shi-l{transform:scale(.8) rotate(-8deg);filter:grayscale(.4);opacity:.6}
+
+/* ===== v170: Çocuklarım — pastel oyun parkı ===== */
+.kids .khero{position:relative;overflow:hidden;border-radius:28px!important;padding:16px 18px 16px!important;background:radial-gradient(70% 60% at 100% 0%,rgba(255,211,110,.6),transparent 60%),radial-gradient(70% 70% at 0% 100%,rgba(247,168,184,.5),transparent 60%),linear-gradient(165deg,#BFE6FA,#A9D4F5 50%,#D9C9F7)!important;box-shadow:0 18px 40px -22px rgba(80,110,170,.7);color:#2E3F66}
+.kids .khero h2{position:relative;font-size:34px!important;color:#2E3F66}
+.kids .khero h2 em{color:#E2688A!important}
+.kids .khero .lhero-top,.kids .khero .kchips{position:relative;z-index:2}
+.kids .khero .homebtn{background:rgba(255,255,255,.55)!important;border-color:rgba(255,255,255,.8)!important}
+.kscrib{position:relative;width:150px;height:10px;margin:-6px 0 0;overflow:visible}
+.kscrib path{fill:none;stroke:#FFD36E;stroke-width:4;stroke-linecap:round;stroke-dasharray:200;animation:kScr 1.2s ease-out .2s both}
+@keyframes kScr{from{stroke-dashoffset:200}}
+.kh-sub{position:relative;margin:0;font-size:13.5px;font-weight:600;color:#3E5580;max-width:32ch}
+.kpark{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.kbal{position:absolute;bottom:-60px;left:var(--x);width:calc(26px*var(--s));height:calc(32px*var(--s));border-radius:50% 50% 48% 48%/55% 55% 45% 45%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.75),transparent 30%),var(--c);opacity:.85;animation:kBal var(--d) ease-in-out var(--dl) infinite}
+.kbal::after{content:"";position:absolute;left:50%;top:100%;width:1px;height:calc(30px*var(--s));background:rgba(46,63,102,.35)}
+.kbal::before{content:"";position:absolute;left:50%;top:calc(100% - 2px);width:6px;height:5px;margin-left:-3px;background:var(--c);clip-path:polygon(50% 0,100% 100%,0 100%)}
+@keyframes kBal{0%{transform:translate(0,0) rotate(-4deg)}50%{transform:translate(10px,-140px) rotate(5deg)}100%{transform:translate(-6px,-300px) rotate(-3deg);opacity:0}}
+.kcloud{position:absolute;width:64px;fill:rgba(255,255,255,.75);animation:kCl 26s linear infinite}
+.kcloud.c1{top:44px;left:-70px}.kcloud.c2{top:100px;left:-70px;width:46px;animation-duration:34s;animation-delay:-14s;opacity:.7}
+@keyframes kCl{to{transform:translateX(520px)}}
+@media (prefers-reduced-motion:reduce){.kbal,.kcloud{animation:none;display:none}}
+.kids .kchip{background:rgba(255,255,255,.55)!important}
+.kids .kchip[aria-pressed="true"]{background:#fff!important;box-shadow:0 6px 14px -8px rgba(46,63,102,.5)}
+.kids .seg.kseg{position:sticky;top:calc(env(safe-area-inset-top,0px) + 6px);z-index:20;display:flex;gap:4px;padding:5px!important;border-radius:999px!important;background:color-mix(in srgb,#E6F3FC 96%,var(--surface))!important;border:1px solid rgba(143,203,239,.5)!important;box-shadow:0 10px 22px -12px rgba(80,110,170,.45);margin:12px 0}
+.kids .seg.kseg button{flex:1;font-size:13px!important;font-weight:700;color:#3E5580!important;background:none!important;border-radius:999px!important;padding:9px 4px!important;box-shadow:none!important}
+.kids .seg.kseg button[aria-selected="true"]{background:linear-gradient(135deg,#8FCBEF,#9C8FE0)!important;color:#fff!important;box-shadow:0 6px 14px -8px rgba(80,110,170,.9)!important}
+.kids .seg.kseg button .mi{display:none}
+#kpanel.pr-in{animation:prIn .35s ease both}
+.kids .lcard.kpc{border-radius:24px!important}
+.kids .lcard.kpc h3 .step{background:linear-gradient(150deg,#DDF0FC,#E9E0FB)!important}
+.kids .kci.on{background:linear-gradient(150deg,#E3F6DE,#D4EFCC)!important}
+.kbcard{display:grid!important;grid-template-columns:100px 1fr;align-items:center;gap:14px!important;background:linear-gradient(160deg,#EEF7FD,#F7F0FD)!important}
+.kbag{width:100px;overflow:visible}
+.kb-it{animation:bagIn .5s cubic-bezier(.2,1.6,.4,1) both}
+.kzip{transition:cx .8s}
+.kbcard.done .kbag{animation:kHop 1s ease}
+@keyframes kHop{25%{transform:translateY(-10px) rotate(-5deg)}50%{transform:translateY(0) rotate(4deg)}75%{transform:translateY(-4px)}}
+.kb-i{display:flex;flex-direction:column;gap:4px}
+.kb-i b{font-family:var(--f-display);font-weight:400;font-size:22px;line-height:1.1;color:#2E3F66}
+.kb-i small{font-size:12.5px;color:var(--muted)}
+.kb-bar{height:8px;border-radius:4px;background:rgba(143,203,239,.25);overflow:hidden;margin-top:4px}
+.kb-bar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,#8FCBEF,#9C8FE0);transition:width .6s}
+.kscard{background:linear-gradient(160deg,#FFF9E6,#FDF1F5)!important}
+.kbadge{margin-left:auto;font-size:11px;font-weight:800;background:linear-gradient(135deg,#FFD36E,#F2A93B);color:#6A4A10;padding:3px 9px;border-radius:99px;animation:ckPop .5s cubic-bezier(.2,1.6,.4,1)}
+.kstars{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.kst{width:38px;height:38px;fill:#EFE7D6;stroke:#E2D6BC;stroke-width:1;transition:fill .3s}
+.kst.on{fill:#FFC94A;stroke:#E8A92B;animation:kStar .6s cubic-bezier(.2,1.6,.4,1) both;filter:drop-shadow(0 3px 4px rgba(232,169,43,.5))}
+@keyframes kStar{from{transform:scale(.3) rotate(-40deg)}}
+.ks-m{margin:0;text-align:center;font-family:var(--f-display);font-size:16.5px;line-height:1.3;color:var(--ink)}
+.kncard{display:flex!important;flex-direction:row!important;align-items:center;gap:12px!important;background:linear-gradient(160deg,#EEF7FD,#FDEFF4)!important}
+.kn-bal{font-size:40px;animation:dmBob 3s ease-in-out infinite}
+.kn-i{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.kn-i small{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#9C8FE0}
+.kn-i b{font-family:var(--f-display);font-weight:400;font-size:21px;color:#2E3F66}
+.kn-i span{font-size:12px;color:var(--muted)}
+.kn-d{flex:none;min-width:62px;display:flex;flex-direction:column;align-items:center;padding:6px 8px;border-radius:16px;background:#fff;box-shadow:0 6px 14px -10px rgba(80,110,170,.6)}
+.kn-d b{font-size:26px;font-weight:800;line-height:1;color:#E2688A}
+.kn-d small{font-size:10px;font-weight:700;color:var(--muted)}
+.kids .btn{background:linear-gradient(135deg,#8FCBEF,#9C8FE0)!important;color:#fff!important}
+html[data-mf="dusk"] .kids .khero{background:radial-gradient(70% 60% at 100% 0%,rgba(255,211,110,.18),transparent 60%),linear-gradient(165deg,#2B4166,#2D3A5E 50%,#3B2E5E)!important;color:#E6F0FC}
+html[data-mf="dusk"] .kids .khero h2{color:#F2F6FD}
+html[data-mf="dusk"] .kh-sub{color:#C9DAF2}
+html[data-mf="dusk"] .kids .kchip{background:rgba(255,255,255,.1)!important;color:#E6F0FC}
+html[data-mf="dusk"] .kids .kchip[aria-pressed="true"]{background:rgba(255,255,255,.2)!important}
+html[data-mf="dusk"] .kids .seg.kseg{background:rgba(30,40,66,.96)!important;border-color:rgba(143,203,239,.25)!important}
+html[data-mf="dusk"] .kids .seg.kseg button{color:#C9DAF2!important}
+html[data-mf="dusk"] .kids .seg.kseg button[aria-selected="true"]{color:#fff!important}
+html[data-mf="dusk"] .kbcard,html[data-mf="dusk"] .kscard,html[data-mf="dusk"] .kncard{background:rgba(143,203,239,.07)!important}
+html[data-mf="dusk"] .kb-i b,html[data-mf="dusk"] .kn-i b{color:#E6F0FC}
+html[data-mf="dusk"] .kst{fill:rgba(255,255,255,.08);stroke:rgba(255,255,255,.15)}
+html[data-mf="dusk"] .kst.on{fill:#FFC94A}
+html[data-mf="dusk"] .kn-d{background:rgba(255,255,255,.08)}
+html[data-mf="dusk"] .kids .lcard.kpc h3 .step{background:rgba(143,203,239,.18)!important}
+html[data-mf="dusk"] .kids .kci.on{background:rgba(182,227,168,.18)!important}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -3700,14 +3773,17 @@ html[data-mf="dusk"] .shs-gh{color:#F6CFA8}
   <div class="kids" data-step="70">
     <div class="khero">
       <div class="lhero-top"><span class="tag">🎒 Çocuklarım</span><button class="iconbtn homebtn" id="kids-home" type="button" aria-label="Ana sayfaya dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Ana sayfa</span></button></div>
+      <span class="kpark" aria-hidden="true"><i class="kbal" style="--x:6%;--c:#F7A8B8;--d:11s;--dl:-2s;--s:1"></i><i class="kbal" style="--x:22%;--c:#8FCBEF;--d:13s;--dl:-8s;--s:0.8"></i><i class="kbal" style="--x:70%;--c:#FFD36E;--d:12s;--dl:-5s;--s:0.9"></i><i class="kbal" style="--x:86%;--c:#B6E3A8;--d:14s;--dl:-10s;--s:1.1"></i><i class="kbal" style="--x:48%;--c:#C9B3F2;--d:15s;--dl:-12s;--s:0.75"></i><svg class="kcloud c1" viewBox="0 0 60 26"><path d="M10 24a9 9 0 0 1 2-17 12 12 0 0 1 22-3 10 10 0 0 1 16 8 7 7 0 0 1 0 12z"/></svg><svg class="kcloud c2" viewBox="0 0 60 26"><path d="M10 24a9 9 0 0 1 2-17 12 12 0 0 1 22-3 10 10 0 0 1 16 8 7 7 0 0 1 0 12z"/></svg></span>
       <h2 id="k-title">Minik <em>dünyam</em></h2>
+      <svg class="kscrib" viewBox="0 0 160 10" aria-hidden="true"><path d="M2 6c18-5 30 3 48-1s28-4 46 0 34 3 62-2"/></svg>
+      <p class="kh-sub" id="kh-sub"></p>
       <div class="kchips" id="kchips"></div>
-      <div class="seg kseg" role="tablist">
-        <button type="button" role="tab" data-kt="today">☀️ Bugün</button>
-        <button type="button" role="tab" data-kt="hw">✏️ Ödevler</button>
-        <button type="button" role="tab" data-kt="cal">📅 Takvim</button>
-        <button type="button" role="tab" data-kt="prog">📖 Program</button>
-      </div>
+    </div>
+    <div class="seg kseg" role="tablist">
+      <button type="button" role="tab" data-kt="today">Bugün</button>
+      <button type="button" role="tab" data-kt="hw">Ödevler</button>
+      <button type="button" role="tab" data-kt="cal">Takvim</button>
+      <button type="button" role="tab" data-kt="prog">Program</button>
     </div>
     <div class="kpanel" id="kpanel"></div>
     <div class="gsur" data-sec="kids" hidden></div>
@@ -4873,7 +4949,7 @@ function surRender(){document.querySelectorAll(".gsur[data-sec]").forEach(el=>{c
 function goTo(el,off){if(!el)return;requestAnimationFrame(()=>{try{surRender();}catch(e){}const y=Math.max(0,el.getBoundingClientRect().top+window.scrollY-(off??12));const need=y+window.innerHeight;document.body.style.minHeight="";document.querySelectorAll(".gsur").forEach(g=>g.style.minHeight="");let gap=need-document.documentElement.scrollHeight;
     if(gap>0){const g=[...document.querySelectorAll(".gsur")].find(x=>x.offsetParent!==null&&!x.hidden);if(g){const add=Math.min(gap,Math.max(0,440-g.offsetHeight));if(add>0){g.style.minHeight=(g.offsetHeight+add)+"px";gap-=add;}}}
     if(gap>0)document.body.style.minHeight=(document.documentElement.scrollHeight+gap)+"px";window.scrollTo({top:y,behavior:"smooth"});});}
-document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest('[role="tab"],[role="tablist"]>button,.g-card');if(!b||b.closest('#pracs,.ktseg,.fseg,.eseg,.love .lhero .seg,.bzseg,.subseg,#zsh,.bnav,.onb,.lk2'))return;
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest('[role="tab"],[role="tablist"]>button,.g-card');if(!b||b.closest('#pracs,.ktseg,.fseg,.eseg,.kseg,.love .lhero .seg,.bzseg,.subseg,#zsh,.bnav,.onb,.lk2'))return;
   const tl=b.closest('[role="tablist"]'),aid=b.classList.contains("g-card")?"gm":(b.closest("[id]")||{}).id;
   setTimeout(()=>{const el=tl&&tl.isConnected?tl:(aid&&document.getElementById(aid));if(el&&el.offsetParent!==null)goTo(el,10);},40);});
 function pracRender(){
@@ -5087,21 +5163,21 @@ function kidsRender(){
   if(ktab==="today"){const L=kList(c),C=kChecked(c);const di=di0()+K.list.indexOf(c);
     const hwT=K.hw.filter(h=>h.kid===c.id&&!h.done&&dd(h.due)<=1);const evT=K.ev.filter(e=>e.kid===c.id&&dd(e.d)>=0&&dd(e.d)<=2);
     const TD=kToday(c)||[];const lessons=TD.filter(e=>!KDERS.some(x=>x[0]===e));
-    P.innerHTML=(lessons.length?`<div class="lcard t-butter"><h3><span class="step">📖</span>Bugünün dersleri</h3><div class="klessons">${lessons.map(n=>`<span class="kles">${SUBJ_IC(n)} ${esc(n)}</span>`).join("")}</div></div>`:(kToday(c)&&!TD.length?`<div class="lcard t-butter"><h3><span class="step">📖</span>Bugünün dersleri</h3><p class="msug-p">Ders programını eklersen çanta listesi derslere göre hazırlanır.</p><button class="pill" type="button" id="k-toprog">Programı doldur →</button></div>`:""))+(L.length?`<div class="lcard t-sky"><h3><span class="step">🎒</span>Çanta kontrolü<span class="nextf">${C.filter(x=>L.some(l=>l[0]===x)).length}/${L.length}</span></h3>
+    P.innerHTML=(lessons.length?`<div class="lcard t-butter"><h3><span class="step">📖</span>Bugünün dersleri</h3><div class="klessons">${lessons.map(n=>`<span class="kles">${SUBJ_IC(n)} ${esc(n)}</span>`).join("")}</div></div>`:(kToday(c)&&!TD.length?`<div class="lcard t-butter"><h3><span class="step">📖</span>Bugünün dersleri</h3><p class="msug-p">Ders programını eklersen çanta listesi derslere göre hazırlanır.</p><button class="pill" type="button" id="k-toprog">Programı doldur →</button></div>`:""))+(L.length?`<div class="lcard t-sky"><h3><span class="step">🎒</span>Çanta hazır mı?<span class="nextf">${C.filter(x=>L.some(l=>l[0]===x)).length}/${L.length}</span></h3>
       <div class="kchk">${L.map(([id,e,l])=>`<button type="button" class="kci${C.includes(id)?" on":""}" data-ci="${id}"><span class="kce">${e}</span><span>${l}</span><i></i></button>`).join("")}</div>
       ${L.every(l=>C.includes(l[0]))?'<p class="kdone">Çanta hazır, gönül rahat 🎉</p>':""}</div>`:
       `<div class="lcard t-butter"><h3><span class="step">🧸</span>Bugün okul yok</h3><p class="msug-p">Hafta sonu! Birlikte bir parka gidin, bir kek yapın ya da sadece pijamayla film izleyin.</p></div>`)+
      (L.length?`<div class="lcard t-mint"><h3><span class="step">🍎</span>Beslenme çantası fikri</h3><p class="klunch">${LUNCH[((di%LUNCH.length)+LUNCH.length)%LUNCH.length]}</p><p class="fine">Okulunun alerji ve beslenme kurallarını da göz önünde bulundur.</p></div>`:"")+
-     `<div class="lcard t-lilac"><h3><span class="step">📌</span>Yaklaşanlar</h3>${hwT.length||evT.length?[...hwT.map(h=>`<div class="hrow"><span class="vdate mi-host">✏️</span><span class="hinfo"><strong>${esc(h.t)}</strong><small>Ödev · ${when(h.due)}</small></span></div>`),...evT.map(e=>{const T=KEV.find(x=>x[0]===e.ty)||KEV[5];return `<div class="hrow"><span class="vdate mi-host">${T[1]}</span><span class="hinfo"><strong>${esc(e.t||T[2])}</strong><small>${when(e.d)}${e.tm?" · "+e.tm:""}</small></span></div>`;})].join(""):'<p class="empty">Önümüzdeki günlerde ödev ya da randevu yok.</p>'}</div>`;
+     `<div class="lcard t-lilac"><h3><span class="step">📌</span>Yaklaşan maceralar</h3>${hwT.length||evT.length?[...hwT.map(h=>`<div class="hrow"><span class="vdate mi-host">✏️</span><span class="hinfo"><strong>${esc(h.t)}</strong><small>Ödev · ${when(h.due)}</small></span></div>`),...evT.map(e=>{const T=KEV.find(x=>x[0]===e.ty)||KEV[5];return `<div class="hrow"><span class="vdate mi-host">${T[1]}</span><span class="hinfo"><strong>${esc(e.t||T[2])}</strong><small>${when(e.d)}${e.tm?" · "+e.tm:""}</small></span></div>`;})].join(""):'<p class="empty">Önümüzdeki günlerde ödev ya da randevu yok.</p>'}</div>`;
     const tp=document.getElementById("k-toprog");if(tp)tp.onclick=()=>{ktab="prog";kidsRender();};
     P.querySelectorAll("[data-ci]").forEach(b=>b.onclick=()=>{const k=dkey();K.chk[k]=K.chk[k]||{};let a=K.chk[k][c.id]||[];const id=b.dataset.ci;a=a.includes(id)?a.filter(x=>x!==id):[...a,id];K.chk[k][c.id]=a;
       const ks=Object.keys(K.chk).sort();while(ks.length>14)delete K.chk[ks.shift()];save();kidsRender();});}
   if(ktab==="hw"){const H=K.hw.filter(h=>h.kid===c.id).sort((a,b)=>(a.done-b.done)||a.due.localeCompare(b.due));
     const tm=new Date(t0);tm.setDate(tm.getDate()+1);
-    P.innerHTML=`<div class="lcard t-peach"><h3><span class="step">✏️</span>Ödev ekle</h3>
+    P.innerHTML=`<div class="lcard t-peach"><h3><span class="step">✏️</span>Yeni ödev</h3>
       <div class="addgrid"><div class="field"><label for="hw-s">Ders</label><select id="hw-s">${kSubj(c).map(n=>`<option>${esc(n)}</option>`).join("")}<option>Diğer</option></select></div><div class="field"><label for="hw-d">Teslim günü</label><input id="hw-d" type="date" value="${dkey(tm)}"></div>
       <div class="field wide2"><label for="hw-t">Ödev</label><input id="hw-t" type="text" maxlength="60" placeholder="ör. Sayfa 42-43, okuma kitabı"></div></div><button class="btn" id="hw-add" type="button">Ödevi ekle</button></div>
-      <div class="lcard t-butter"><h3><span class="step">📚</span>Ödevleri<span class="nextf">${H.filter(h=>!h.done).length} bekliyor</span></h3>
+      <div class="lcard t-butter"><h3><span class="step">📚</span>Ödev listesi<span class="nextf">${H.filter(h=>!h.done).length} bekliyor</span></h3>
       ${H.length?H.map(h=>{const x=dd(h.due);return `<div class="hrow kh${h.done?" done":x<0?" late":x<=1?" soon":""}"><button type="button" class="khc" data-hd="${K.hw.indexOf(h)}" aria-pressed="${!!h.done}" aria-label="Tamamlandı"></button><span class="hinfo"><strong>${esc(h.t)}</strong><small>${h.done?"Tamamlandı ✓":when(h.due)}</small></span><button type="button" class="fdel" data-hx="${K.hw.indexOf(h)}" aria-label="Sil">×</button></div>`;}).join(""):'<p class="empty">Ödev yok. Ne güzel! 🎈</p>'}</div>`;
     document.getElementById("hw-add").onclick=()=>{const t0x=document.getElementById("hw-t").value.trim(),sb=document.getElementById("hw-s").value,d=document.getElementById("hw-d").value;if(!t0x){document.getElementById("hw-t").focus();return;}const t=(sb!=="Diğer"?sb+" · ":"")+t0x;K.hw.push({kid:c.id,t,sub:sb,due:d||todayK,done:false});save();kidsRender();};
     P.querySelectorAll("[data-hd]").forEach(b=>b.onclick=()=>{const h=K.hw[+b.dataset.hd];h.done=!h.done;save();kidsRender();});
@@ -6289,11 +6365,11 @@ function wowFit(){const gw=document.getElementById("wow-gw"),g=document.getEleme
 function wowBind(){const S=wowS(),L=wowLvl(),M=wowCells(L);const wh=document.getElementById("wow-wheel"),svg=document.getElementById("wow-svg"),wd=document.getElementById("wow-word"),msg=document.getElementById("wow-msg");
   if(!S.ord||S.ord.length!==L.l.length)S.ord=[...L.l].map((_,i)=>i);
   const R=wh.clientWidth/2,n=L.l.length,ls=n>=8?42:n>=7?46:52,rr=R-ls/2-6;wh.style.setProperty("--ls",ls+"px");const pos=S.ord.map((li,k)=>{const a=-Math.PI/2+k*2*Math.PI/L.l.length;return {li,ch:L.l[li],x:R+rr*Math.cos(a),y:R+rr*Math.sin(a)};});
-  wh.insertAdjacentHTML("beforeend",pos.map((p,k)=>`<span class="wl" data-p="${k}" style="left:${p.x}px;top:${p.y}px">${p.ch}</span>`).join(""));
+  wh.insertAdjacentHTML("beforeend",pos.map((p,k)=>`<span class="wlt" data-p="${k}" style="left:${p.x}px;top:${p.y}px">${p.ch}</span>`).join(""));
   svg.setAttribute("viewBox",`0 0 ${2*R} ${2*R}`);let path=[],cur=null,down=false;
   const say=(t,cls)=>{msg.textContent=t;msg.className="wow-msg "+(cls||"");clearTimeout(say._t);say._t=setTimeout(()=>{msg.textContent="";},1800);};
   const draw=()=>{const pts=path.map(k=>pos[k]);let d=pts.map((p,i)=>(i?"L":"M")+p.x+" "+p.y).join(" ");if(cur&&pts.length)d+=` L${cur.x} ${cur.y}`;svg.innerHTML=pts.length?`<path d="${d}"/>`:"";
-    wh.querySelectorAll(".wl").forEach(e=>e.classList.toggle("sel",path.includes(+e.dataset.p)));wd.textContent=path.map(k=>pos[k].ch).join("");wd.classList.toggle("on",path.length>0);};
+    wh.querySelectorAll(".wlt").forEach(e=>e.classList.toggle("sel",path.includes(+e.dataset.p)));wd.textContent=path.map(k=>pos[k].ch).join("");wd.classList.toggle("on",path.length>0);};
   const hit=(x,y)=>{for(let k=0;k<pos.length;k++){if(Math.hypot(pos[k].x-x,pos[k].y-y)<ls*.58)return k;}return -1;};
   const pt=e=>{const b=wh.getBoundingClientRect();return {x:(e.clientX-b.left)*(2*R)/b.width,y:(e.clientY-b.top)*(2*R)/b.height};};
   const add=k=>{if(k<0)return;if(path.length>1&&path[path.length-2]===k){path.pop();return;}if(!path.includes(k))path.push(k);};
@@ -6849,6 +6925,40 @@ function iIcon(x){const n=(x.n||"").toLocaleLowerCase("tr-TR");const hit=(k)=>n=
   if(e)return `<span class="shi-e no-mi">${e[1]}</span>`;
   const C={manav:["#E3F1D8","#4E8A3E"],kasap:["#F8DAD2","#A8392A"],sut:["#E4F0FA","#2C7FB5"],temel:["#F6E6C6","#9A6A20"],temiz:["#DDF1F1","#1F8A8A"],bakim:["#F3E0F0","#9A3E8A"],diger:["#EFE6DD","#7A5A40"]}[x.cat]||["#EFE6DD","#7A5A40"];
   return `<span class="shi-l" style="background:${C[0]};color:${C[1]}">${esc((x.n||"?").trim().charAt(0).toLocaleUpperCase("tr-TR"))}</span>`;}
+
+/* ===== v170: Çocuklarım — pastel oyun parkı ===== */
+const KP_C=["#F7A8B8","#8FCBEF","#FFD36E","#B6E3A8","#C9B3F2"],KP_BG="linear-gradient(135deg,#8FCBEF,#C9B3F2)";
+function kWeek0(){const t=new Date();t.setHours(0,0,0,0);t.setDate(t.getDate()-((t.getDay()+6)%7));return t;}
+function kSub(){const el=document.getElementById("kh-sub");if(!el)return;const K=kids(),c=kSel();if(!c){el.textContent="Minik kahramanlarını ekle, günlerini birlikte planlayalım 🎈";return;}
+  const t0=new Date(dkey()+"T00:00"),dd=d=>Math.round((new Date(d+"T00:00")-t0)/864e5);const nm=c.name;
+  const hw=K.hw.filter(h=>h.kid===c.id&&!h.done&&dd(h.due)>=0&&dd(h.due)<=1);const evs=K.ev.filter(e=>e.kid===c.id&&dd(e.d)>=0&&dd(e.d)<=2).sort((a,b)=>a.d.localeCompare(b.d));
+  const L=kList(c)||[],C=kChecked(c)||[];const bagOk=L.length&&L.every(l=>C.includes(l[0]));const h=new Date().getHours();
+  el.textContent=L.length&&!bagOk&&h<10?`${nm}'in çantası hazır mı? 🎒`:hw.length?`${hw.length} ödev ${dd(hw[0].due)===0?"bugün":"yarın"} teslim ✏️`:evs.length?`${(KEV.find(x=>x[0]===evs[0].ty)||KEV[5])[2]} ${dd(evs[0].d)===0?"bugün":dd(evs[0].d)===1?"yarın":dd(evs[0].d)+" gün sonra"} 📅`:bagOk?`Çanta tamam, ${nm} okula hazır 🦸`:`${nm} ile bugün nasıl bir macera? 🎈`;}
+function kSettle(){stickFix(document.querySelector(".kseg"));const P=document.getElementById("kpanel");if(P){P.classList.remove("pr-in");void P.offsetWidth;P.classList.add("pr-in");}}
+function kBagCard(c){const L=kList(c)||[];if(!L.length)return "";const C=kChecked(c)||[];const ok=L.filter(l=>C.includes(l[0])).length,all=ok===L.length;
+  const icons=L.filter(l=>C.includes(l[0])).slice(0,5).map((l,i)=>`<text x="${[34,52,70,43,61][i]}" y="${[20,14,20,8,8][i]}" font-size="14" text-anchor="middle" class="kb-it" style="animation-delay:${i*.06}s">${l[1]}</text>`).join("");
+  return `<div class="lcard kbcard${all?" done":""}"><svg viewBox="0 0 104 112" class="kbag" aria-hidden="true">${icons}
+    <path d="M30 34c0-12 10-20 22-20s22 8 22 20" fill="none" stroke="#6C8FC9" stroke-width="5" stroke-linecap="round"/>
+    <rect x="16" y="30" width="72" height="76" rx="20" fill="#8FCBEF"/><rect x="16" y="30" width="72" height="30" rx="20" fill="#A7D8F5"/>
+    <path d="M18 58h68" stroke="${all?"#FFD36E":"#6C8FC9"}" stroke-width="3" stroke-dasharray="${all?"0":"4 3"}"/><circle cx="${all?84:30}" cy="58" r="4.5" fill="#FFD36E" class="kzip"/>
+    <rect x="30" y="68" width="44" height="28" rx="10" fill="#F7A8B8"/><path d="M38 80h28" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+    <circle cx="40" cy="44" r="3" fill="#2E4A6B"/><circle cx="64" cy="44" r="3" fill="#2E4A6B"/><path d="${all?"M44 49q8 7 16 0":"M46 51q6 3 12 0"}" stroke="#2E4A6B" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="34" cy="50" r="3" fill="#F7A8B8" opacity=".7"/><circle cx="70" cy="50" r="3" fill="#F7A8B8" opacity=".7"/></svg>
+    <div class="kb-i"><b>${all?`${esc(c.name)} okula hazır! 🦸`:`Çantada ${ok}/${L.length}`}</b><small>${all?"Fermuar kapandı, haydi okula 🚌":"Aşağıdan koyduklarını işaretle, çanta dolsun"}</small><span class="kb-bar"><i style="width:${Math.round(100*ok/L.length)}%"></i></span></div></div>`;}
+function kStarCard(c){const K=kids(),w0=kWeek0(),w1=new Date(w0);w1.setDate(w1.getDate()+7);const H=K.hw.filter(h=>h.kid===c.id&&new Date(h.due+"T00:00")>=w0&&new Date(h.due+"T00:00")<w1);const dn=H.filter(h=>h.done).length;const goal=Math.max(5,H.length);
+  const stars=Array.from({length:goal},(_,i)=>`<svg viewBox="0 0 24 24" class="kst${i<dn?" on":""}" style="animation-delay:${i*.06}s"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg>`).join("");
+  const badge=dn>=5?`<span class="kbadge">🏅 Süper öğrenci</span>`:"";
+  return `<div class="lcard kscard"><h3><span class="step no-mi">⭐</span>${esc(c.name)}'in yıldız tablosu${badge}</h3><div class="kstars">${stars}</div><p class="ks-m">${dn>=5?`Bu hafta ${dn} yıldız! Bir dondurmayı hak etti 🍦`:dn?`Bu hafta ${dn} yıldız topladı. ${5-dn} yıldız daha, rozet geliyor 🏅`:"Biten her ödev bir yıldız. 5 yıldız = Süper öğrenci rozeti 🏅"}</p></div>`;}
+function kNextCard(c){const K=kids();const t0=new Date(dkey()+"T00:00"),dd=d=>Math.round((new Date(d+"T00:00")-t0)/864e5);const E=K.ev.filter(e=>e.kid===c.id&&dd(e.d)>=0).sort((a,b)=>a.d.localeCompare(b.d));if(!E.length)return "";
+  const e=E[0],T=KEV.find(x=>x[0]===e.ty)||KEV[5],x=dd(e.d);
+  return `<div class="lcard kncard"><span class="kn-bal no-mi">🎈</span><div class="kn-i"><small>Sıradaki macera</small><b>${esc(e.t||T[2])}</b><span>${new Date(e.d+"T00:00").toLocaleDateString("tr-TR",{day:"numeric",month:"long",weekday:"long"})}${e.tm?" · "+e.tm:""}</span></div><div class="kn-d"><b>${x===0?"🎉":x}</b><small>${x===0?"bugün":x===1?"yarın":"gün kaldı"}</small></div></div>`;}
+(function(){const _k=kidsRender;let wasAll={},wasDn={};kidsRender=function(){_k.apply(this,arguments);try{
+  document.querySelectorAll(".kseg button").forEach(b=>{b.onclick=()=>{if(ktab===b.dataset.kt)return;ktab=b.dataset.kt;kidsRender();kSettle();};});
+  kSub();const K=kids(),c=kSel(),P=document.getElementById("kpanel");if(!P||!c||!K.list.length||ktab==="add")return;
+  if(ktab==="today"){const bc=kBagCard(c);if(bc){const ck=P.querySelector(".kchk");const card=ck&&ck.closest(".lcard");if(card)card.insertAdjacentHTML("beforebegin",bc);}
+    const L=kList(c)||[],C=kChecked(c)||[];const all=L.length&&L.every(l=>C.includes(l[0]));if(all&&wasAll[c.id]===false)mfConfetti(`${c.name} okula hazır! 🎒`,KP_C,KP_BG);wasAll[c.id]=!!all;}
+  if(ktab==="hw"){P.insertAdjacentHTML("afterbegin",kStarCard(c));const dn=K.hw.filter(h=>h.kid===c.id&&h.done).length;if(wasDn[c.id]!=null&&dn>wasDn[c.id])mfConfetti(`Aferin ${c.name}! ⭐`,KP_C,KP_BG);wasDn[c.id]=dn;}
+  if(ktab==="cal"){P.insertAdjacentHTML("afterbegin",kNextCard(c));}
+  P.querySelectorAll(".lcard").forEach(x=>x.classList.add("kpc"));}catch(e){console.error(e);}};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
