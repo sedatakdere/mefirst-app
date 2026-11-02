@@ -3226,6 +3226,54 @@ html[data-mf="dusk"] .qt b{color:#F6A77E}
 
 html[data-mf="dusk"] .evv .wcat[aria-selected="true"],html[data-mf="dusk"] .fit .wcat[aria-selected="true"]{background:linear-gradient(135deg,#E07A4F,#B8502E)!important;color:#fff!important}
 html[data-mf="dusk"] .fit .wcat[aria-selected="true"]{background:linear-gradient(135deg,#6E9E82,#3F6F5A)!important}
+
+/* v168: Sepetim */
+.bagcard{cursor:pointer;transition:transform .15s}
+.bagcard:active{transform:scale(.98)}
+.bag-open{font-size:12px;font-weight:800;color:#B8502E;margin-top:4px}
+.evv .esum span:first-child{cursor:pointer}
+#eh-sub.shop{cursor:pointer;text-decoration:underline;text-decoration-color:rgba(255,255,255,.5);text-underline-offset:3px}
+.shs{position:fixed;inset:0;z-index:85;background:rgba(60,25,12,.45);display:flex;align-items:flex-end;justify-content:center;opacity:0;transition:opacity .28s;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.shs.on{opacity:1}
+.shs-c{width:100%;max-width:520px;max-height:88vh;display:flex;flex-direction:column;background:linear-gradient(180deg,#FFF7EE,#FBEBDA);border-radius:28px 28px 0 0;padding:8px 16px calc(14px + env(safe-area-inset-bottom,0px));box-shadow:0 -20px 50px -20px rgba(60,25,12,.5);transform:translateY(40px);transition:transform .35s cubic-bezier(.2,1.2,.4,1)}
+.shs.on .shs-c{transform:none}
+.shs-grab{width:44px;height:5px;border-radius:3px;background:rgba(142,59,34,.25);margin:2px auto 10px}
+.shs-h{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding-bottom:10px;border-bottom:1px dashed rgba(200,100,59,.3)}
+.shs-h>div{flex:1;display:flex;flex-direction:column;gap:3px}
+.shs-h small{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#B8502E}
+.shs-h b{font-family:var(--f-display);font-weight:400;font-size:26px;line-height:1.1;color:#4A2416}
+.shs-h em{font-style:normal;font-size:12px;color:#9A6A50;font-weight:600}
+.shs-x{flex:none;width:38px;height:38px;border-radius:50%;border:0;background:rgba(200,100,59,.12);color:#8E3B22;font-size:16px;cursor:pointer}
+.shs-b{overflow-y:auto;padding:10px 2px 6px;flex:1;-webkit-overflow-scrolling:touch}
+.shs-g{margin-bottom:12px}
+.shs-gh{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:800;color:#8E3B22;margin:0 2px 8px}
+.shs-gh i{font-style:normal;margin-left:auto;font-size:11px;background:#F6D9BE;border-radius:99px;padding:2px 8px}
+.shs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.shi{position:relative;font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 6px 10px;border-radius:18px;border:1.5px solid rgba(200,100,59,.15);background:#fff;color:#4A2416;box-shadow:0 6px 14px -10px rgba(142,59,34,.4);transition:transform .15s,background .25s}
+.shi:active{transform:scale(.94)}
+.shi-e{font-size:34px;line-height:1.1;transition:transform .3s}
+.shi b{font-size:13px;font-weight:700;line-height:1.2;text-align:center}
+.shi small{font-size:11px;font-weight:800;color:#C8643B;background:#FBE9D6;border-radius:99px;padding:1px 8px}
+.shi-ck{position:absolute;top:6px;right:6px;width:20px;height:20px;border-radius:50%;border:1.5px solid rgba(200,100,59,.35);background:#fff}
+.shi.on{background:#F1F4E6;border-color:rgba(122,139,74,.35)}
+.shi.on .shi-e{transform:scale(.8) rotate(-8deg);filter:grayscale(.4);opacity:.6}
+.shi.on b{text-decoration:line-through;opacity:.55}
+.shi.on small{background:#E3E9CF;color:#5A6A32}
+.shi.on .shi-ck{background:#7A8B4A;border-color:#7A8B4A;animation:ckPop .35s cubic-bezier(.2,1.6,.4,1)}
+.shi.on .shi-ck::after{content:"";position:absolute;left:6px;top:3px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+@keyframes ckPop{from{transform:scale(.3)}}
+.shs-empty{text-align:center;color:#9A6A50;padding:24px 10px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.shs-empty span{font-size:44px}
+.shs-f{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding-top:10px;border-top:1px dashed rgba(200,100,59,.3)}
+.shs-f .pl-add{background:linear-gradient(135deg,#25D366,#128C7E)}
+.shs-f .pl-add.ev-b2{background:linear-gradient(135deg,#E07A4F,#B8502E)}
+.shs-tip{margin:8px 0 0;text-align:center;font-size:12px;color:#9A6A50}
+html[data-mf="dusk"] .shs-c{background:linear-gradient(180deg,#3A2219,#2A1812)}
+html[data-mf="dusk"] .shs-h b{color:#FBE6CC}
+html[data-mf="dusk"] .shi{background:rgba(255,236,214,.06);color:#FBE6CC;border-color:rgba(242,193,78,.15)}
+html[data-mf="dusk"] .shi small,html[data-mf="dusk"] .shs-gh i{background:rgba(242,193,78,.15);color:#F6CFA8}
+html[data-mf="dusk"] .shi.on{background:rgba(122,139,74,.15)}
+html[data-mf="dusk"] .shs-gh{color:#F6CFA8}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -6692,11 +6740,11 @@ function bagCard(){const E=ev(),tot=E.shop.length,done=E.shop.filter(x=>x.done).
   const em=[];E.shop.filter(x=>!x.done).forEach(x=>{const c=SCAT.find(y=>y[0]===x.cat)||SCAT[6];if(em.length<7&&!em.includes(c[1]))em.push(c[1]);});
   const pos=[[40,12,-14],[60,6,6],[80,12,16],[50,0,-4],[70,-2,10],[30,16,-20],[90,16,22]];
   const all=tot&&!open;
-  return `<div class="lcard bagcard${all?" done":""}"><div class="bag-w"><svg viewBox="0 0 120 120" class="bag" aria-hidden="true">
+  return `<div class="lcard bagcard${all?" done":""}" role="button" tabindex="0" aria-label="Sepetimi aç"><div class="bag-w"><svg viewBox="0 0 120 120" class="bag" aria-hidden="true">
      <g class="bag-it">${em.map((e,i)=>`<text x="${pos[i][0]}" y="${pos[i][1]+30}" font-size="22" text-anchor="middle" transform="rotate(${pos[i][2]} ${pos[i][0]} ${pos[i][1]+30})" style="animation-delay:${i*.07}s">${e}</text>`).join("")}</g>
      <path d="M18 46h84l-8 64a6 6 0 0 1-6 5H32a6 6 0 0 1-6-5z" fill="#E9B98A"/><path d="M18 46h84l-1.5 10H19.5z" fill="#D9A06D"/><path d="M42 46v-8a18 18 0 0 1 36 0v8" fill="none" stroke="#B8502E" stroke-width="4" stroke-linecap="round"/>
      <circle cx="60" cy="82" r="16" fill="#FFF4E6" opacity=".55"/><text x="60" y="88" font-size="16" text-anchor="middle" font-weight="800" fill="#8E3B22">${all?"✓":open}</text></svg></div>
-    <div class="bag-i"><b>${!tot?"Poşet boş":all?"Sepet tamam! 🎉":open+" ürün alınacak"}</b><small>${!tot?"Aşağıdan dokunarak doldurmaya başla":all?"Hepsi alındı, eve dönüş vakti 🏡":`${done} alındı · ${open} kaldı`}</small>${tot?`<span class="bag-bar"><i style="width:${Math.round(100*done/tot)}%"></i></span>`:""}</div></div>`;}
+    <div class="bag-i"><b>${!tot?"Poşet boş":all?"Sepet tamam! 🎉":open+" ürün alınacak"}</b><small>${!tot?"Aşağıdan dokunarak doldurmaya başla":all?"Hepsi alındı, eve dönüş vakti 🏡":`${done} alındı · ${open} kaldı`}</small>${tot?`<span class="bag-bar"><i style="width:${Math.round(100*done/tot)}%"></i></span><span class="bag-open">Sepetin içine bak ›</span>`:""}</div></div>`;}
 /* Ne pişsin çarkı */
 function whLines(t){const w=t.split(/\s+/);const out=[];for(let i=0;i<w.length;i++){if(w[i].length<=3&&i<w.length-1){w[i+1]=w[i]+" "+w[i+1];continue;}out.push(w[i]);}
   while(out.length>3){const x=out.pop();out[out.length-1]+=" "+x;}return out;}
@@ -6747,6 +6795,33 @@ function qtTick(){if(!qtT)return;const l=Math.max(0,qtEnd-Date.now());const e=do
   if(etab==="bill"){P.insertAdjacentHTML("afterbegin",billCard());billWire();}
   if(etab==="chore"){P.insertAdjacentHTML("afterbegin",choreCard());choreWire();}
   P.querySelectorAll(".lcard").forEach(c=>c.classList.add("evc"));}catch(e){console.error(e);}};})();
+
+/* ===== v168: Sepetim — sepetin içi ===== */
+const IEMO=[["domates","🍅"],["salatalık","🥒"],["soğan","🧅"],["sarımsak","🧄"],["patates","🥔"],["limon","🍋"],["muz","🍌"],["elma","🍎"],["armut","🍐"],["portakal","🍊"],["mandalina","🍊"],["üzüm","🍇"],["çilek","🍓"],["karpuz","🍉"],["kiraz","🍒"],["şeftali","🍑"],["havuç","🥕"],["biber","🫑"],["mantar","🍄"],["patlıcan","🍆"],["mısır","🌽"],["brokoli","🥦"],["marul","🥬"],["ıspanak","🥬"],["maydanoz","🌿"],["dereotu","🌿"],["avokado","🥑"],["kıyma","🥩"],["kuşbaşı","🥩"],["et","🥩"],["tavuk","🍗"],["balık","🐟"],["somon","🐟"],["sucuk","🌭"],["süt","🥛"],["yumurta","🥚"],["peynir","🧀"],["kaşar","🧀"],["yoğurt","🥣"],["tereyağ","🧈"],["zeytin","🫒"],["bal","🍯"],["reçel","🍯"],["ekmek","🍞"],["simit","🥯"],["pirinç","🍚"],["bulgur","🌾"],["un","🌾"],["makarna","🍝"],["mercimek","🫘"],["fasulye","🫘"],["nohut","🫘"],["yağ","🫒"],["şeker","🍬"],["tuz","🧂"],["çay","🍵"],["kahve","☕"],["su","💧"],["meyve suyu","🧃"],["çikolata","🍫"],["bisküvi","🍪"],["deterjan","🧴"],["yumuşatıcı","🧴"],["sabun","🧼"],["şampuan","🧴"],["diş","🪥"],["tuvalet","🧻"],["peçete","🧻"],["kağıt havlu","🧻"],["çöp","🗑"],["sünger","🧽"],["çamaşır suyu","🧴"],["bez","🧷"],["mama","🍼"]];
+function iEmo(x){const n=(x.n||"").toLocaleLowerCase("tr-TR");let best=null;IEMO.forEach(([k,e])=>{if((n===k||n.startsWith(k+" ")||n.startsWith(k)||n.includes(" "+k))&&(!best||k.length>best[0].length))best=[k,e];});return best?best[1]:(SCAT.find(y=>y[0]===x.cat)||SCAT[6])[1];}
+function shopOpen(){let O=document.getElementById("shs");if(!O){O=document.createElement("div");O.id="shs";O.className="shs";O.setAttribute("role","dialog");O.setAttribute("aria-label","Sepetim");document.body.appendChild(O);
+    O.addEventListener("click",e=>{if(e.target===O)shopClose();});}
+  shopSheet();O.hidden=false;requestAnimationFrame(()=>O.classList.add("on"));document.body.style.overflow="hidden";try{history.pushState({shs:1},"");}catch(e){}}
+function shopClose(fromPop){const O=document.getElementById("shs");if(!O||O.hidden)return;O.classList.remove("on");setTimeout(()=>{O.hidden=true;},280);document.body.style.overflow="";if(fromPop!==true&&history.state&&history.state.shs)try{history.back();}catch(e){}if(step===80)evRender();}
+window.addEventListener("popstate",()=>{const O=document.getElementById("shs");if(O&&!O.hidden)shopClose(true);});
+function shopSheet(){const O=document.getElementById("shs");if(!O)return;const E=ev(),tot=E.shop.length,done=E.shop.filter(x=>x.done).length,open=tot-done;
+  const groups=SCAT.map(([id,e,l])=>[id,e,l,E.shop.filter(x=>x.cat===id)]).filter(g=>g[3].length);
+  const scroll=(O.querySelector(".shs-b")||{}).scrollTop||0;
+  O.innerHTML=`<div class="shs-c"><div class="shs-grab"></div>
+    <div class="shs-h"><div><small>Sepetim</small><b>${!tot?"Sepet boş":open?`${open} ürün alınacak`:"Hepsi alındı! 🎉"}</b>${tot?`<span class="bag-bar"><i style="width:${Math.round(100*done/tot)}%"></i></span><em>${done}/${tot} alındı</em>`:""}</div><button type="button" class="shs-x" aria-label="Kapat">✕</button></div>
+    <div class="shs-b">${tot?groups.map(([id,e,l,items])=>`<div class="shs-g"><div class="shs-gh"><span class="no-mi">${e}</span>${l}<i>${items.filter(x=>!x.done).length||"✓"}</i></div><div class="shs-grid">${items.map(x=>{const i=E.shop.indexOf(x);return `<button type="button" class="shi${x.done?" on":""}" data-shi="${i}"><span class="shi-e no-mi">${iEmo(x)}</span><b>${esc(x.n)}</b><small>${sFmt(x.n,qv(x))}</small><i class="shi-ck"></i></button>`;}).join("")}</div></div>`).join("")
+      :`<p class="shs-empty"><span class="no-mi">🧺</span>Sepetin bomboş. Market sekmesinden dokunarak doldurabilirsin.</p>`}</div>
+    ${tot?`<div class="shs-f"><button type="button" class="pl-add" id="shs-wa">WhatsApp'ta gönder</button><button type="button" class="pl-add ev-b2" id="shs-cp">📋 Kopyala</button>${done?`<button type="button" class="ghost" id="shs-clr">Alınanları kaldır</button>`:""}</div><p class="shs-tip" id="shs-msg">Markette ürüne dokun, alındı olarak işaretlensin 🛒</p>`:""}</div>`;
+  const b=O.querySelector(".shs-b");if(b)b.scrollTop=scroll;
+  O.querySelector(".shs-x").onclick=()=>shopClose();
+  O.querySelectorAll("[data-shi]").forEach(el=>el.onclick=()=>{const x=E.shop[+el.dataset.shi];x.done=!x.done;save();const was=E.shop.every(y=>y.done);shopSheet();if(was&&x.done)mfConfetti("Sepet tamam! 🛍",EV_C,EV_BG);});
+  const txt=()=>"🛒 Alışveriş listesi\n"+SCAT.map(([id,e,l])=>{const it=E.shop.filter(x=>x.cat===id&&!x.done);return it.length?`\n${l}:\n`+it.map(x=>"• "+x.n+sTxt(x)).join("\n"):"";}).join("");
+  const wa=document.getElementById("shs-wa");if(wa)wa.onclick=()=>{window.open("https://wa.me/?text="+encodeURIComponent(txt()),"_blank","noopener");};
+  const cp=document.getElementById("shs-cp");if(cp)cp.onclick=()=>{const m=document.getElementById("shs-msg");try{navigator.clipboard.writeText(txt()).then(()=>m.textContent="Kopyalandı! 📋",()=>m.textContent="Kopyalanamadı.");}catch(e){m.textContent="Kopyalanamadı.";}};
+  const cl=document.getElementById("shs-clr");if(cl)cl.onclick=()=>{E.shop=E.shop.filter(x=>!x.done);save();shopSheet();};}
+document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest(".bagcard,.esum span:first-child,#eh-sub.shop");if(t&&step===80){shopOpen();}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")shopClose();if((e.key==="Enter"||e.key===" ")&&document.activeElement&&document.activeElement.classList.contains("bagcard")){e.preventDefault();shopOpen();}});
+(function(){const _s=evSub;evSub=function(){_s();const el=document.getElementById("eh-sub");if(el)el.classList.toggle("shop",/^Sepette/.test(el.textContent));};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
