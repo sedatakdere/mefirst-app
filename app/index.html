@@ -3486,6 +3486,80 @@ html[data-mf="dusk"] .ward .wcat[aria-selected="true"]{background:rgba(255,255,2
 
 .ward #wsave{background:linear-gradient(135deg,#D9A2AE,#B07A86)!important;color:#fff!important}
 .ward .wadd{border-radius:24px!important}
+
+/* ===== v175: Ne giysem — stil stüdyom ===== */
+.final.gn{display:flex;flex-direction:column;gap:14px}
+.gn-hero{position:relative;overflow:hidden;border-radius:28px;padding:16px 18px 18px;color:#5A2E44;background:radial-gradient(70% 60% at 100% 0%,rgba(255,240,210,.95),transparent 60%),radial-gradient(70% 70% at 0% 100%,rgba(242,196,206,.75),transparent 60%),linear-gradient(160deg,#F9E9DC,#F2D1D8 55%,#E9BFCF);box-shadow:0 18px 40px -22px rgba(176,122,134,.85)}
+.gn-hero .lhero-top{position:relative;z-index:3}
+.gn-hero .homebtn{background:rgba(255,255,255,.55)!important;border-color:rgba(255,255,255,.85)!important}
+.gn-hg{position:relative;z-index:2;display:grid;grid-template-columns:1fr 112px;gap:8px;align-items:end;margin-top:-30px}
+.gn-ht{display:flex;flex-direction:column;gap:4px;min-width:0}
+.gn-eye{font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#B07A86}
+.gn-hero h2{margin:0;font-family:var(--f-display);font-weight:400;font-size:34px;line-height:1.02;color:#5A2E44}
+.gn-hero h2 em{color:#B07A86;font-style:italic}
+.gn-sub{margin:2px 0 0;font-size:13px;line-height:1.4;opacity:.9}
+.gn-title{margin-top:8px;padding:10px 12px;border-radius:16px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.85)}
+.gn-title h3{margin:0 0 6px;font-family:var(--f-display);font-weight:400;font-size:19px;line-height:1.15;color:#5A2E44}
+.gn-title .palette{margin:0!important;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.gn-title .sw{width:20px!important;height:20px!important}
+.gn-title small{font-size:11px;opacity:.8}
+.gn-mnq{position:relative;animation:dmBob 4s ease-in-out infinite}
+.gn-mnq .mnq-s{width:112px;height:auto;display:block;filter:drop-shadow(0 12px 16px rgba(176,122,134,.4))}
+.gn-mnq.pop .mnq-b{animation:gnSpin .5s ease}
+@keyframes gnSpin{0%{transform:scaleX(1)}50%{transform:scaleX(0)}100%{transform:scaleX(1)}}
+.gn-worn{position:relative;z-index:2;margin-top:12px;width:100%;font:inherit;font-size:14px;font-weight:800;color:#fff;border:0;border-radius:16px;padding:12px;cursor:pointer;background:linear-gradient(135deg,#D9A2AE,#B07A86);box-shadow:0 10px 20px -12px rgba(176,122,134,.9)}
+.gn-worn.on{background:linear-gradient(135deg,#C9A24A,#B08A3A)}
+.gn-pick{display:flex;flex-direction:column;gap:10px;padding:14px 0 12px;border-radius:24px;background:color-mix(in srgb,#FFF6F2 90%,var(--surface));border:1px solid rgba(217,162,174,.3)}
+.gn-row{display:flex;flex-direction:column;gap:6px}
+.gn-rl{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#B07A86;padding:0 14px}
+.gn-ch{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:0 14px 2px}
+.gn-ch::-webkit-scrollbar{display:none}
+.gn-c{flex:none;font:inherit;font-size:13px;font-weight:700;color:#5A2E44;background:var(--surface);border:1.5px solid rgba(217,162,174,.4);border-radius:99px;padding:7px 12px;display:flex;gap:6px;align-items:center;cursor:pointer;transition:transform .15s}
+.gn-c:active{transform:scale(.94)}
+.gn-c[aria-pressed="true"]{background:linear-gradient(135deg,#D9A2AE,#B07A86);color:#fff;border-color:transparent;box-shadow:0 6px 14px -8px rgba(176,122,134,.9)}
+.seg.gnseg{position:sticky;top:calc(env(safe-area-inset-top,0px) + 6px);z-index:20;display:flex;gap:4px;padding:5px;border-radius:999px;background:color-mix(in srgb,#FBE6EA 96%,var(--surface));border:1px solid rgba(217,162,174,.4);box-shadow:0 10px 22px -12px rgba(176,122,134,.45)}
+.seg.gnseg button{flex:1;font:inherit;font-size:13px;font-weight:700;color:#8A4A5E;background:none;border:0;border-radius:999px;padding:9px 4px;cursor:pointer;white-space:nowrap}
+.seg.gnseg button[aria-selected="true"]{background:linear-gradient(135deg,#D9A2AE,#B07A86);color:#fff;box-shadow:0 6px 14px -8px rgba(176,122,134,.9)}
+.gn-p{display:flex;flex-direction:column;gap:12px}
+.gn-p.pr-in{animation:prIn .35s ease both}
+.final.gn .item{border-radius:22px!important}
+.gn-draw{border-color:rgba(176,122,134,.5)!important;background:repeating-linear-gradient(-45deg,color-mix(in srgb,#FFF1F3 92%,var(--surface)) 0 10px,color-mix(in srgb,#FBE3E8 92%,var(--surface)) 10px 20px)!important}
+.gn-fl .ktfal-in{min-height:250px}
+.gn-fl .ktfal-b{background:linear-gradient(160deg,#D9A2AE,#7A3E58);color:#FFE3EA}
+.gn-fl .ktfal-a{background:linear-gradient(160deg,#FFF5F2,#FBDDE4);border-color:#E9B9C4}
+.gn-fe{font-size:36px}
+.gn-fk{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#B07A86}
+.gn-fl .ktfal-a p{font-family:var(--f-display);font-style:normal;font-size:19px;color:#5A2E44;line-height:1.3}
+.gn-fl .ktbtn{background:#B07A86}
+.gn-bp{background:linear-gradient(160deg,#FFF6F2,#FBE7EC)!important;border-radius:24px!important;align-items:center}
+.gn-kit{width:100%;max-width:320px}
+.gn-pl{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.gn-pl span{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:700;background:#fff;border-radius:99px;padding:4px 10px 4px 5px;box-shadow:0 4px 10px -8px rgba(90,46,68,.5)}
+.gn-pl i{width:16px;height:16px;border-radius:50%;border:1px solid rgba(0,0,0,.08)}
+.gn-wk{border-radius:24px!important;background:linear-gradient(160deg,#FFF6F2,#FBE7EC)!important}
+.gn-wr{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.gn-wd{display:flex;flex-direction:column;align-items:center;gap:3px}
+.gn-wd .mnq-s{width:100%;height:auto}
+.gn-wd small{font-size:10px;color:var(--muted);text-transform:capitalize}
+.gn-wd.td small{color:#B07A86;font-weight:800}
+.gn-wm{margin:4px 0 0;text-align:center;font-family:var(--f-display);font-size:16px;line-height:1.3;color:var(--ink)}
+html[data-mf="dusk"] .gn-hero{background:radial-gradient(70% 60% at 100% 0%,rgba(201,162,74,.22),transparent 60%),linear-gradient(160deg,#4A2E3C,#3E2636 55%,#2E1E2A);color:#F7E1E8}
+html[data-mf="dusk"] .gn-hero h2,html[data-mf="dusk"] .gn-title h3{color:#F7E1E8}
+html[data-mf="dusk"] .gn-hero h2 em{color:#E7B3C0}
+html[data-mf="dusk"] .gn-title{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)}
+html[data-mf="dusk"] .gn-pick{background:rgba(242,196,206,.06);border-color:rgba(242,196,206,.15)}
+html[data-mf="dusk"] .gn-c{background:rgba(255,255,255,.06);color:#F7E1E8;border-color:rgba(242,196,206,.25)}
+html[data-mf="dusk"] .gn-c[aria-pressed="true"]{color:#fff}
+html[data-mf="dusk"] .seg.gnseg{background:rgba(46,30,42,.96);border-color:rgba(242,196,206,.2)}
+html[data-mf="dusk"] .seg.gnseg button{color:#E7B3C0}
+html[data-mf="dusk"] .seg.gnseg button[aria-selected="true"]{color:#fff}
+html[data-mf="dusk"] .gn-bp,html[data-mf="dusk"] .gn-wk{background:rgba(242,196,206,.06)!important}
+html[data-mf="dusk"] .gn-pl span{background:rgba(255,255,255,.1);color:#F7E1E8}
+html[data-mf="dusk"] .gn-draw{background:rgba(242,196,206,.07)!important}
+
+.final.gn .gn-c[aria-pressed="true"],html[data-mf="dusk"] .final.gn .gn-c[aria-pressed="true"]{background:linear-gradient(135deg,#D9A2AE,#B07A86)!important;color:#fff!important;border-color:transparent!important}
+.final.gn .seg.gnseg button[aria-selected="true"],html[data-mf="dusk"] .final.gn .seg.gnseg button[aria-selected="true"]{background:linear-gradient(135deg,#D9A2AE,#B07A86)!important;color:#fff!important}
+html[data-mf="dusk"] .final.gn .seg.gnseg button:not([aria-selected="true"]){background:none!important}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -5093,7 +5167,7 @@ function surRender(){document.querySelectorAll(".gsur[data-sec]").forEach(el=>{c
 function goTo(el,off){if(!el)return;requestAnimationFrame(()=>{try{surRender();}catch(e){}const y=Math.max(0,el.getBoundingClientRect().top+window.scrollY-(off??12));const need=y+window.innerHeight;document.body.style.minHeight="";document.querySelectorAll(".gsur").forEach(g=>g.style.minHeight="");let gap=need-document.documentElement.scrollHeight;
     if(gap>0){const g=[...document.querySelectorAll(".gsur")].find(x=>x.offsetParent!==null&&!x.hidden);if(g){const add=Math.min(gap,Math.max(0,440-g.offsetHeight));if(add>0){g.style.minHeight=(g.offsetHeight+add)+"px";gap-=add;}}}
     if(gap>0)document.body.style.minHeight=(document.documentElement.scrollHeight+gap)+"px";window.scrollTo({top:y,behavior:"smooth"});});}
-document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest('[role="tab"],[role="tablist"]>button,.g-card');if(!b||b.closest('#pracs,.ktseg,.fseg,.eseg,.kseg,.love .lhero .seg,.bzseg,.subseg,#zsh,.bnav,.onb,.lk2'))return;
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest('[role="tab"],[role="tablist"]>button,.g-card');if(!b||b.closest('#pracs,.ktseg,.fseg,.eseg,.kseg,.gnseg,.love .lhero .seg,.bzseg,.subseg,#zsh,.bnav,.onb,.lk2'))return;
   const tl=b.closest('[role="tablist"]'),aid=b.classList.contains("g-card")?"gm":(b.closest("[id]")||{}).id;
   setTimeout(()=>{const el=tl&&tl.isConnected?tl:(aid&&document.getElementById(aid));if(el&&el.offsetParent!==null)goTo(el,10);},40);});
 function pracRender(){
@@ -6113,12 +6187,12 @@ clen.value=st.clen||28;document.getElementById("last").value=st.last||"";
 document.getElementById("last").addEventListener("change",e=>{st.last=e.target.value;if(st.last&&!(st.hist||[]).some(h=>h.s===st.last)){(st.hist=st.hist||[]).push({s:st.last,e:"",f:"",p:""});syncHist();}save();loveRender();});
 clen.addEventListener("change",e=>{st.clen=e.target.value;save();loveRender();});
 let step=0;
-document.getElementById("go-style").onclick=()=>{if(!profDone()){afterProf=true;step=30;profRender();show();return;}step=st.day===TODAY?5:1;show();};
+document.getElementById("go-style").onclick=()=>{if(!profDone()){afterProf=true;step=30;profRender();show();return;}st.day=TODAY;save();step=5;show();try{render();gnRefresh();}catch(e){}window.scrollTo({top:0});};
 let afterProf=false;
 document.getElementById("go-prof").onclick=()=>{afterProf=false;step=30;profRender();show();};
 document.getElementById("prof-home").onclick=()=>{step=0;show();};
 document.getElementById("prof-save").onclick=()=>{if(!profDone()){const miss=["giyim","boy","beden"].find(k=>!prof()[k]);document.querySelector(`[data-prof="${miss}"]`).closest(".pgroup").scrollIntoView({behavior:"smooth",block:"center"});return;}
-  render();step=afterProf?(st.day===TODAY?5:1):(st.day===TODAY?5:0);afterProf=false;show();};
+  render();step=afterProf?5:(st.day===TODAY?5:0);if(step===5){st.day=TODAY;save();}afterProf=false;show();};
 document.querySelector(".brand").onclick=()=>{step=0;show();};
 document.querySelectorAll(".path.soon").forEach(b=>b.onclick=()=>{const m=document.getElementById("soon-msg");m.textContent="✨ "+b.dataset.soon+" bölümü üzerinde çalışıyoruz, çok yakında burada!";m.hidden=false;});
 petName.value=(st.pet&&st.pet.name)||"";render();show();petRender();
@@ -7202,6 +7276,67 @@ function styleMirror(){if(step!==5)return;const top=document.querySelector(".fin
 (function(){const _w=wardRender;wardRender=function(){_w.apply(this,arguments);try{wardRail();wardVit();}catch(e){console.error(e);}};
   const _k=wkRender;wkRender=function(){_k.apply(this,arguments);try{styleMirror();const sh=document.getElementById("wk-sh");if(sh)sh.addEventListener("click",()=>setTimeout(styleMirror,30));}catch(e){console.error(e);}};
   const _s=show;show=function(){_s.apply(this,arguments);try{if(step===5)setTimeout(styleMirror,30);}catch(e){}};})();
+
+/* ===== v175: Ne giysem — stil stüdyom (Kitap köşem tarzı) ===== */
+let gntab="look";
+const STF=["Bugün bir aksesuarı değiştir: küpeni ya da saatini. Küçük değişim, büyük fark ✨","Rujunu bir ton koyu seç; yüzün anında toparlanır 💄","Gömleğinin önünü pantolonun içine sok; bel ortaya çıkar, boy uzar 👖","Kollarını iki kez kıvır; rahat ama şık görünürsün 👚","Kemerle belini ortaya çıkar; elbise de olur, triko da ⭐","Tepeden tırnağa tek renk giy, rengi sadece çantada kullan 👜","Parfümünü saçına da bir kez sık; gün boyu iz bırakır 🌸","En sevdiğin parçayı bugün giy, özel günü bekleme 💖","Beyaz sneaker her kombini gençleştirir 👟","Bir fular ya da şalla kombine renk kat 🧣","Oje rengini kıyafetinle eşle, bütünlük yakala 💅","Saçını diğer taraftan ayır; yüzün bambaşka görünür 💇‍♀️","Minik altın küpeler, büyük fark ✨","Çantanı değiştir; aynı kombin yepyeni olur 👛","Bugün güneş gözlüğün yanında olsun 🕶","Aynada kendine bir iltifat et, sonra kapıdan çık 🪞"];
+function gnSt(){let o={};try{o=JSON.parse(localStorage.getItem("mefirst-worn")||"{}");}catch(e){}return o;}
+function gnSave(o){try{const ks=Object.keys(o).sort();while(ks.length>40)delete o[ks.shift()];localStorage.setItem("mefirst-worn",JSON.stringify(o));}catch(e){}}
+function gnLook(){let look=[];try{if(W.length)look=pickOutfit(typeof wshuf!=="undefined"?wshuf:0).look||[];}catch(e){}
+  if(look.length)return {L:lookCols(look),w:1};const pal=MOOD[st.mood].pal;const ex=st.plan==="aksam"||st.plan==="davet";return {L:ex?{dress:pal[1],shoe:pal[0],bag:pal[2]}:{top:pal[0],alt:pal[1],shoe:pal[1],bag:pal[2]},w:0};}
+function gnBuild(){const F=document.querySelector('.final[data-step="5"]');if(!F||document.getElementById("gn-hero"))return;
+  const lab=k=>OPTS[k].map(([v,l])=>{const sp=l.indexOf(" ");return [v,l.slice(0,sp),l.slice(sp+1)];});
+  const hero=document.createElement("div");hero.className="gn-hero";hero.id="gn-hero";
+  hero.innerHTML=`<span class="bspk" aria-hidden="true"><i style="--x:10%;--y:24%;--d:0s"></i><i style="--x:52%;--y:14%;--d:.9s"></i><i style="--x:40%;--y:78%;--d:1.7s"></i><i style="--x:20%;--y:60%;--d:2.4s"></i></span>
+    <div class="lhero-top"><span></span><button class="iconbtn homebtn" id="gn-home" type="button" aria-label="Ana sayfaya dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></button></div>
+    <div class="gn-hg"><div class="gn-ht"><small class="gn-eye">Bugünün görünümü</small><h2>Bugün ne <em>giysem?</em></h2><p class="gn-sub" id="gn-sub"></p><div class="gn-title" id="gn-title"></div></div><div class="gn-mnq" id="gn-mnq"></div></div>
+    <button type="button" class="gn-worn" id="gn-worn">Bunu giydim ✓</button>`;
+  const pick=document.createElement("div");pick.className="gn-pick";pick.id="gn-pick";
+  pick.innerHTML=[["mood","Ruh halim"],["plan","Bugün"],["weather","Hava"],["style","Tarzım"]].map(([k,t])=>`<div class="gn-row"><span class="gn-rl">${t}</span><div class="gn-ch" data-gk="${k}">${lab(k).map(([v,e,l])=>`<button type="button" class="gn-c" data-gv="${v}" aria-pressed="${st[k]===v}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div></div>`).join("");
+  const seg=document.createElement("div");seg.className="seg gnseg";seg.setAttribute("role","tablist");
+  seg.innerHTML=[["look","Görünüm"],["beauty","Güzellik"],["ward","Dolabımdan"],["week","Haftam"]].map(([id,l])=>`<button type="button" role="tab" data-gt="${id}">${l}</button>`).join("");
+  const P={};["look","beauty","ward","week"].forEach(id=>{const d=document.createElement("div");d.className="gn-p";d.dataset.gp=id;P[id]=d;});
+  const item=id=>{const e=document.getElementById(id);return e?e.closest(".item"):null;};
+  const fal=document.createElement("div");fal.id="gn-fal";
+  P.look.append(...[item("r-outfit"),item("r-dc"),fal,item("r-me"),item("r-quote")].filter(Boolean));
+  const bx=document.createElement("div");bx.id="gn-beauty";P.beauty.append(bx,...[item("r-makeup"),item("r-hair")].filter(Boolean));
+  const wk=document.getElementById("wk");if(wk)P.ward.append(wk);
+  const wkd=document.createElement("div");wkd.id="gn-week";P.week.append(wkd);
+  const salon=document.getElementById("salon"),note=F.querySelector(".note");
+  if(salon)P.look.append(salon);if(note)P.look.append(note);
+  const rt=F.querySelector(".result-top");const tt=hero.querySelector("#gn-title");if(rt){tt.append(document.getElementById("r-title"),document.getElementById("r-palette"));}
+  F.prepend(hero,pick,seg,P.look,P.beauty,P.ward,P.week);
+  const res=F.querySelector("article.result");if(res)res.hidden=true;const sm=document.getElementById("summary");if(sm)sm.hidden=true;F.classList.add("gn");
+  document.getElementById("gn-home").onclick=()=>{step=0;show();};
+  pick.querySelectorAll(".gn-c").forEach(b=>b.onclick=()=>{const k=b.parentElement.dataset.gk;st[k]=b.dataset.gv;st.day=TODAY;save();render();gnRefresh(true);});
+  seg.querySelectorAll("[data-gt]").forEach(b=>b.onclick=()=>{if(gntab===b.dataset.gt)return;gntab=b.dataset.gt;gnRefresh();stickFix(seg);const p=F.querySelector(`[data-gp="${gntab}"]`);if(p){p.classList.remove("pr-in");void p.offsetWidth;p.classList.add("pr-in");}});
+  document.getElementById("gn-worn").onclick=()=>{const o=gnSt();const g=gnLook();o[dkey()]={L:g.L,t:MOOD[st.mood].title};gnSave(o);mfConfetti("Bugün harika görünüyorsun! 💖",BT_C,BT_BG);gnRefresh();};}
+function gnRefresh(pop){const F=document.querySelector(".final.gn");if(!F)return;
+  F.querySelectorAll(".gn-ch").forEach(r=>{const k=r.dataset.gk;r.querySelectorAll(".gn-c").forEach(b=>b.setAttribute("aria-pressed",st[k]===b.dataset.gv));});
+  F.querySelectorAll("[data-gt]").forEach(b=>b.setAttribute("aria-selected",b.dataset.gt===gntab));F.querySelectorAll("[data-gp]").forEach(p=>p.hidden=p.dataset.gp!==gntab);
+  const g=gnLook();const m=document.getElementById("gn-mnq");m.innerHTML=mannequin(g.L)+`<span class="mnq-tag">${g.w?"Dolabından":"Bugünün renkleri"}</span>`;if(pop){m.classList.remove("pop");void m.offsetWidth;m.classList.add("pop");}
+  const lt=k=>{const x=OPTS[k].find(o=>o[0]===st[k]);return x?x[1].slice(x[1].indexOf(" ")+1).toLocaleLowerCase("tr-TR"):"";};const nm=(st.name||"").trim();
+  document.getElementById("gn-sub").textContent=`${nm?nm+", ":""}${lt("weather")} bir ${st.plan==="ev"?"ev günü":lt("plan")+" günü"} için ${lt("style")} bir görünüm hazırladım ✨`;
+  const worn=gnSt()[dkey()];const wb=document.getElementById("gn-worn");wb.textContent=worn?"Bugün giyildi ✓ 💖":"Bunu giydim ✓";wb.classList.toggle("on",!!worn);
+  /* stil falı */
+  const fl=document.getElementById("gn-fal");if(fl&&!fl.dataset.on){fl.innerHTML=`<button type="button" class="ktdraw gn-draw" id="gn-draw"><span class="no-mi">🎀</span><span><strong>Stil falı çek</strong><small>Kartı çevir, bugünün stil sırrını gör</small></span><b class="no-mi">✨</b></button>`;
+    document.getElementById("gn-draw").onclick=()=>{fl.dataset.on=1;const t=STF[Math.floor(Math.random()*STF.length)];fl.innerHTML=`<div class="ktfal gn-fl"><div class="ktfal-in"><div class="ktfal-f ktfal-b"><span class="no-mi">🎀</span><b>Me First</b><small>stil falı</small></div><div class="ktfal-f ktfal-a"><span class="no-mi gn-fe">💫</span><small class="gn-fk">Bugünün stil sırrı</small><p>${t}</p><div class="ktb-a"><button type="button" class="ktbtn" id="gn-again">Bir daha çek 🎀</button></div></div></div></div>`;
+      setTimeout(()=>fl.querySelector(".ktfal").classList.add("on"),60);document.getElementById("gn-again").onclick=()=>{delete fl.dataset.on;gnRefresh();document.getElementById("gn-draw").click();};};}
+  /* güzellik paleti */
+  const pal=MOOD[st.mood].pal;const bx=document.getElementById("gn-beauty");
+  if(bx)bx.innerHTML=`<div class="lcard gn-bp"><h3><span class="step no-mi">💄</span>Bugünün güzellik paleti</h3><svg viewBox="0 0 280 110" class="gn-kit" aria-hidden="true">
+    <g transform="translate(20 8)"><rect x="6" y="40" width="28" height="56" rx="4" fill="#2E2230"/><rect x="8" y="30" width="24" height="14" rx="2" fill="#C9A24A"/><path d="M10 30V12q10-14 20 0v18z" fill="${pal[1]}"/><path d="M14 14q4-6 8 0" stroke="#fff" stroke-width="2" opacity=".5" fill="none"/></g>
+    <g transform="translate(78 14)"><rect width="116" height="84" rx="14" fill="#2E2230"/><rect x="4" y="4" width="108" height="76" rx="11" fill="#3E2E40"/>${pal.concat([pal[0]]).slice(0,4).map((c,i)=>`<circle cx="${22+(i%2)*36+(i>1?0:0)}" cy="${24+Math.floor(i/2)*36}" r="13" fill="${c}"/>`).join("")}<circle cx="94" cy="42" r="15" fill="#F4B6B6"/><circle cx="94" cy="42" r="15" fill="url(#gnsh)"/></g>
+    <g transform="translate(212 22)"><path d="M10 0h20l4 14H6z" fill="#E8D3A0"/><rect x="4" y="14" width="32" height="62" rx="8" fill="${pal[2]}" stroke="#E1CDB9"/><circle cx="20" cy="44" r="7" fill="#fff" opacity=".5"/></g>
+    <defs><radialGradient id="gnsh" cx=".35" cy=".3"><stop offset="0" stop-color="#fff" stop-opacity=".7"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs></svg>
+    <div class="gn-pl"><span><i style="background:${pal[1]}"></i>Dudak</span><span><i style="background:${pal[0]}"></i>Göz</span><span><i style="background:#F4B6B6"></i>Allık</span><span><i style="background:${pal[2]}"></i>Oje</span></div></div>`;
+  /* haftam */
+  const wd=document.getElementById("gn-week");if(wd){const o=gnSt();let n=0;const cells=Array.from({length:7},(_,i)=>{const d=new Date();d.setDate(d.getDate()-(6-i));const k=dkey(d),x=o[k];if(x)n++;
+      return `<div class="gn-wd${i===6?" td":""}">${x?mannequin(x.L):`<svg viewBox="0 0 80 150" class="mnq-s"><ellipse cx="40" cy="76" rx="37" ry="72" fill="none" stroke="#E2C9D0" stroke-width="3" stroke-dasharray="6 6"/><text x="40" y="84" font-size="22" text-anchor="middle" fill="#D9A2AE">?</text></svg>`}<small>${i===6?"Bugün":d.toLocaleDateString("tr-TR",{weekday:"short"})}</small></div>`;}).join("");
+    wd.innerHTML=`<div class="lcard gn-wk"><h3><span class="step no-mi">🪞</span>Haftalık aynam<span class="nextf">${n}/7</span></h3><div class="gn-wr">${cells}</div><p class="gn-wm">${n>=5?`Bu hafta ${n} gün kendini şımarttın, ikon gibisin 👑`:n?`Bu hafta ${n} gün "Bunu giydim" dedin. Her gün bir ayna anısı 🪞`:"Görünümün hoşuna gidince yukarıdaki “Bunu giydim” düğmesine bas; haftan burada dolsun 🪞"}</p></div>`;}}
+(function(){gnBuild();const _r=render;render=function(){_r.apply(this,arguments);try{gnRefresh();}catch(e){}};
+  const _k=wkRender;wkRender=function(){_k.apply(this,arguments);try{const sh=document.getElementById("wk-sh");if(sh)sh.addEventListener("click",()=>setTimeout(()=>gnRefresh(true),30));gnRefresh();}catch(e){}};
+  styleMirror=function(){};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
