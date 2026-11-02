@@ -3817,6 +3817,49 @@ html[data-mf="dusk"] #ktpanel .addgrid .field input{background:rgba(255,255,255,
 .ktwl{background:linear-gradient(160deg,#FFF3F5,#FDE6EB)!important;border-color:rgba(229,138,166,.35)!important}
 html[data-mf="dusk"] .ktwl{background:rgba(229,138,166,.08)!important}
 #ktpanel .lib-k{display:flex;gap:8px;flex-wrap:wrap;margin:2px 0}
+
+/* ===== v191: Beni tanı ===== */
+.prof .prhero{position:relative;overflow:hidden;border-radius:28px!important;padding:16px 18px 14px!important;color:#4A2E44;background:radial-gradient(70% 60% at 100% 0%,rgba(255,240,210,.95),transparent 60%),radial-gradient(70% 70% at 0% 100%,rgba(201,179,242,.7),transparent 60%),linear-gradient(160deg,#F6E4F0,#EBD7F2 55%,#F2D1DC)!important;box-shadow:0 18px 40px -22px rgba(140,90,150,.7)}
+.prof .prhero .lhero-top{position:relative;z-index:3}
+.prof .prhero .homebtn{background:rgba(255,255,255,.55)!important;border-color:rgba(255,255,255,.85)!important}
+.me-g{position:relative;z-index:2;display:grid;grid-template-columns:1fr 116px;gap:10px;align-items:end;margin-top:2px}
+.me-t{display:flex;flex-direction:column;gap:5px;min-width:0}
+.me-eye{font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#9C6AA8}
+.prof .prhero h2{margin:0!important;font-size:34px!important;color:#4A2E44;padding-right:0!important}
+.prof .prhero h2 em{color:#C2578A!important}
+.me-bub{margin:6px 0 0;align-self:flex-start;background:#fff;color:#4A2E44;font-size:12.5px;font-weight:600;line-height:1.35;padding:8px 11px;border-radius:14px 14px 14px 4px;box-shadow:0 6px 14px -8px rgba(90,46,68,.5)}
+.me-bub.pop{animation:ktPop .45s cubic-bezier(.2,1.4,.4,1)}
+.me-av .me-svg{width:116px;height:auto;display:block;filter:drop-shadow(0 12px 16px rgba(140,90,150,.35))}
+.me-av{animation:dmBob 4s ease-in-out infinite;padding-top:40px}
+.me-g{grid-template-columns:1fr 104px!important;margin-top:-30px!important}.me-av .me-svg{width:104px}
+.me-t{padding-top:30px}
+.me-av.pop .me-b{animation:gnSpin .5s ease}
+.me-fine{position:relative;z-index:2;margin:8px 0 0!important;font-size:11.5px;opacity:.7}
+.prof .pbar{background:rgba(255,255,255,.55)}
+.prof .pbar i{background:linear-gradient(90deg,#C9A24A,#C2578A)!important}
+.me-nav{position:sticky;top:calc(env(safe-area-inset-top,0px) + 6px);z-index:20;display:flex;gap:4px;padding:5px;margin:12px 0;border-radius:999px;background:color-mix(in srgb,#F4E6F4 96%,var(--surface));border:1px solid rgba(194,87,138,.25);box-shadow:0 10px 22px -12px rgba(140,90,150,.45);overflow-x:auto;scrollbar-width:none}
+.me-nav::-webkit-scrollbar{display:none}
+.me-nav button{flex:1 0 auto;font:inherit;font-size:12.5px;font-weight:700;color:#7A4A6E;background:none;border:0;border-radius:999px;padding:8px 10px;cursor:pointer;white-space:nowrap}
+.me-nav button[aria-selected="true"]{background:linear-gradient(135deg,#D98FB8,#9C6AA8);color:#fff;box-shadow:0 6px 14px -8px rgba(140,90,150,.9)}
+.prof .pgroup{border-radius:24px!important}
+.me-id{display:flex;flex-direction:column;align-items:center;gap:10px;margin:6px 0 4px}
+.me-idc{width:100%;box-sizing:border-box;display:grid;grid-template-columns:1fr 92px;gap:10px;align-items:center;padding:16px;border-radius:24px;color:#FFF4FA;background:radial-gradient(80% 70% at 100% 0%,rgba(201,162,74,.45),transparent 60%),linear-gradient(150deg,#7A3E6E,#4A2E5A);box-shadow:0 18px 36px -20px rgba(74,46,90,.8);position:relative;overflow:hidden}
+.me-idc::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 35%,rgba(255,255,255,.18) 50%,transparent 65%);transform:translateX(-100%);animation:ssShine 5s ease-in-out 1s infinite}
+.me-idl{display:flex;flex-direction:column;gap:6px;min-width:0}
+.me-idl small{font-size:9.5px;font-weight:800;letter-spacing:.14em;color:#E8D3A0}
+.me-idl b{font-family:var(--f-display);font-weight:400;font-size:26px;line-height:1}
+.me-tags{display:flex;flex-wrap:wrap;gap:4px}
+.me-tags span{font-size:11px;font-weight:700;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);border-radius:99px;padding:2px 8px}
+.me-fav{display:flex;align-items:center;gap:4px}
+.me-fav i{width:16px;height:16px;border-radius:50%;border:1.5px solid rgba(255,255,255,.7)}
+.me-fav em{font-style:normal;font-size:10.5px;opacity:.8;margin-left:4px}
+.me-idr .me-svg{width:92px;height:auto}
+.me-share{background:linear-gradient(135deg,#D98FB8,#9C6AA8)!important}
+html[data-mf="dusk"] .prof .prhero{background:radial-gradient(70% 60% at 100% 0%,rgba(201,162,74,.2),transparent 60%),linear-gradient(160deg,#3E2D55,#4A2A48 60%,#2E2340)!important;color:#F7E1F0}
+html[data-mf="dusk"] .prof .prhero h2{color:#F7E1F0}
+html[data-mf="dusk"] .me-nav{background:rgba(46,30,52,.96);border-color:rgba(217,143,184,.25)}
+html[data-mf="dusk"] .me-nav button{color:#E7C3DC}
+html[data-mf="dusk"] .me-nav button[aria-selected="true"]{color:#fff}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -3868,10 +3911,14 @@ html[data-mf="dusk"] .ktwl{background:rgba(229,138,166,.08)!important}
   <div class="prof" data-step="30">
     <div class="prhero">
       <div class="lhero-top"><span class="tag">👤 Beni tanı</span><button class="iconbtn homebtn" id="prof-home" type="button" aria-label="Ana sayfaya dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Ana sayfa</span></button></div>
-      <h2>Seni <em>tanıyalım</em></h2>
-      <div class="pbar"><i id="pbar-i"></i></div><div class="pbar-t" id="pbar-t"></div>
-      <p>Bir kez doldur; kıyafet, makyaj ve saç önerileri sana göre şekillensin. Bilgilerin sadece bu telefonda kalır.</p>
+      <span class="bspk" aria-hidden="true"><i style="--x:8%;--y:30%;--d:0s"></i><i style="--x:46%;--y:12%;--d:1s"></i><i style="--x:30%;--y:78%;--d:2s"></i></span>
+      <div class="me-g"><div class="me-t"><small class="me-eye">Stil kimliğim</small><h2>Seni <em>tanıyalım</em></h2>
+        <div class="pbar"><i id="pbar-i"></i></div><div class="pbar-t" id="pbar-t"></div>
+        <p class="me-bub" id="me-bub">Seçtikçe aynadaki sen de değişecek ✨</p></div>
+        <div class="me-av" id="me-av" aria-hidden="true"></div></div>
+      <p class="me-fine">Bilgilerin sadece bu telefonda kalır 🔒</p>
     </div>
+    <div class="me-nav" id="me-nav" role="tablist"><button type="button" data-mj="0">Ben</button><button type="button" data-mj="1">Tarzım</button><button type="button" data-mj="3">Bedenim</button><button type="button" data-mj="4">Renklerim</button><button type="button" data-mj="7">Detaylar</button></div>
     <div class="pgroup t-lilac"><h3><span class="step">1</span>Adın ve fotoğrafın</h3>
       <div class="phrow"><label class="phav" for="me-photo" id="me-phav" aria-label="Profil fotoğrafı seç"><span>📷</span></label><input id="me-photo" type="file" accept="image/*" hidden>
         <div class="name-row"><input id="name" type="text" placeholder="ör. Ayşe" maxlength="24" autocomplete="given-name" aria-label="Adın"></div></div>
@@ -7898,6 +7945,43 @@ function ktShelfCtx(){const P=document.getElementById("ktpanel");if(!P||kttab!==
   show(ktShelfI||0);let last=ktShelfI||0,tm=null;tr.addEventListener("scroll",()=>{clearTimeout(tm);tm=setTimeout(()=>{const i=Math.round(tr.scrollLeft/Math.max(1,tr.clientWidth));if(i!==last){last=i;show(i);}},120);},{passive:true});
   if(!window._ktRz){window._ktRz=1;window.addEventListener("resize",()=>{const t=document.querySelector(".ktsh-tr");if(t)t.scrollLeft=(ktShelfI||0)*t.clientWidth;});}}
 (function(){const _s=ktShelves;ktShelves=function(){_s.apply(this,arguments);try{requestAnimationFrame(ktShelfCtx);}catch(e){console.error(e);}};})();
+
+/* ===== v191: Beni tanı — stil kimliğim, canlı avatar ===== */
+const ME_SK={acik:"#F4DCCB",bugday:"#D9A97F",esmer:"#8E5B3D"},ME_HC={siyah:"#231c1f",kahve:"#5b3a29",kumral:"#9a6b45",sari:"#e8c77d",kizil:"#b5482b",gri:"#c9c6cf",renkli:"#d98fc0"};
+const ME_BD={kumsaati:[19,11,19],ustkum:[20,11,17],armut:[15,11,21],kasik:[16,9.5,21],elma:[18,18,17],dikdortgen:[17,15,17],ucgen:[21,14,15]};
+function meCol(id,d){const c=WCOL.find(x=>x[0]===id);return c&&id!=="desen"?c[2]:d;}
+function meAvatar(P){const sk=ME_SK[P.ten]||"#EAC4A8",hc=ME_HC[P.sacrenk]||"#5b3a29",[sw,ww,hw]=ME_BD[P.beden]||[17,13,18],sy=P.boy==="kisa"?.93:P.boy==="uzun"?1.06:1;
+  const fav=(P.fav||[]).filter(x=>x!=="desen"),c1=meCol(fav[0],"#E9B8C8"),c2=meCol(fav[1],"#4A3A52"),c3=meCol(fav[2],"#C9A24A");const G=(P.giyimL&&P.giyimL.length?P.giyimL:[P.giyim]).filter(Boolean);
+  const tes=G.includes("tesettur"),dress=!tes&&(G.includes("romantik")||G.includes("bohem"))&&!(P.kacin||[]).includes("etek"),sport=G.includes("spor")&&!dress,rock=G.includes("rock");
+  const top=rock?"#2B2B2E":c1,bot=rock?"#3A4A6A":c2;const X=60,yS=64,yW=102,yH=128;
+  const torso=`M${X-sw} ${yS} Q${X} ${yS-5} ${X+sw} ${yS} L${X+ww} ${yW} L${X-ww} ${yW} Z`;
+  const arms=`<path d="M${X-sw} ${yS} q-6 2 -9 18 l-3 26 6 1 4-24z" fill="${tes||dress?c1:top}"/><path d="M${X+sw} ${yS} q6 2 9 18 l3 26 -6 1 -4-24z" fill="${tes||dress?c1:top}"/><circle cx="${X-sw-12}" cy="${yS+46}" r="3.6" fill="${sk}"/><circle cx="${X+sw+12}" cy="${yS+46}" r="3.6" fill="${sk}"/>`;
+  let body;
+  if(tes)body=`<path d="M${X-sw} ${yS} Q${X} ${yS-5} ${X+sw} ${yS} L${X+hw+4} 168 L${X-hw-4} 168Z" fill="${c1}"/><path d="M${X-hw+2} 168 L${X-hw} 200 H${X-3} L${X-2} 168Z M${X+2} 168 L${X+3} 200 H${X+hw} L${X+hw-2} 168Z" fill="${c2}"/>`;
+  else if(dress)body=`<path d="${torso}" fill="${c1}"/><path d="M${X-ww} ${yW} L${X-hw-12} 176 Q${X} 184 ${X+hw+12} 176 L${X+ww} ${yW}Z" fill="${c1}"/><path d="M${X-ww} ${yW}h${ww*2}" stroke="${c3}" stroke-width="3"/><rect x="${X-9}" y="176" width="5" height="22" fill="${sk}"/><rect x="${X+4}" y="176" width="5" height="22" fill="${sk}"/>`;
+  else body=`<path d="M${X-ww} ${yW} L${X-hw} ${yH} L${X-hw+3} 198 H${X-3} L${X} 140 L${X+3} 198 H${X+hw-3} L${X+hw} ${yH} L${X+ww} ${yW}Z" fill="${sport?"#9AA3AE":bot}"/><path d="${torso}" fill="${top}"/>${sport?`<path d="M${X-sw+4} ${yS+8}h${sw*2-8}" stroke="#fff" stroke-width="2" opacity=".6"/>`:""}`;
+  const shoe=`<ellipse cx="${X-8}" cy="202" rx="8" ry="3.6" fill="${sport?"#fff":"#3A2A30"}" stroke="#ccc" stroke-width=".5"/><ellipse cx="${X+8}" cy="202" rx="8" ry="3.6" fill="${sport?"#fff":"#3A2A30"}" stroke="#ccc" stroke-width=".5"/>`;
+  const len=P.sac==="kisa"?50:P.sac==="uzun"?118:76;
+  const hairB=tes?"":`<path d="M${X-19} 34 Q${X-22} ${len*0.7} ${X-17} ${len} L${X+17} ${len} Q${X+22} ${len*0.7} ${X+19} 34 Q${X} 8 ${X-19} 34Z" fill="${hc}"/>`;
+  const hairF=tes?"":`<path d="M${X-16} 34 Q${X-10} 18 ${X+2} 22 Q${X+14} 20 ${X+16} 34 Q${X+8} 26 ${X} 28 Q${X-8} 27 ${X-16} 34Z" fill="${hc}"/>`;
+  const hij=tes?`<path d="M${X-21} 40 Q${X-22} 14 ${X} 14 Q${X+22} 14 ${X+21} 40 Q${X+24} 62 ${X+sw+4} 72 L${X-sw-4} 72 Q${X-24} 62 ${X-21} 40Z" fill="${c3}"/><ellipse cx="${X}" cy="40" rx="11.5" ry="13.5" fill="${sk}"/>`:"";
+  const ear=tes?"":P.taki?`${P.taki!=="gumus"?`<circle cx="${X-15.5}" cy="44" r="2" fill="#E3B341"/>`:`<circle cx="${X-15.5}" cy="44" r="2" fill="#C9CED6"/>`}${P.taki==="gumus"?`<circle cx="${X+15.5}" cy="44" r="2" fill="#C9CED6"/>`:P.taki==="karisik"?`<circle cx="${X+15.5}" cy="44" r="2" fill="#C9CED6"/>`:`<circle cx="${X+15.5}" cy="44" r="2" fill="#E3B341"/>`}<path d="M${X-8} 58 Q${X} 66 ${X+8} 58" fill="none" stroke="${P.taki==="gumus"?"#C9CED6":"#E3B341"}" stroke-width="1.4"/>`:"";
+  const face=`${tes?"":`<ellipse cx="${X}" cy="38" rx="14" ry="16" fill="${sk}"/>`}<rect x="${X-4}" y="50" width="8" height="10" fill="${sk}"/><circle cx="${X-5}" cy="38" r="1.6" fill="#3A2A30"/><circle cx="${X+5}" cy="38" r="1.6" fill="#3A2A30"/><path d="M${X-4} 45 q4 3 8 0" stroke="#C26A6A" stroke-width="1.4" fill="none" stroke-linecap="round"/><circle cx="${X-9}" cy="43" r="2.4" fill="#F4A3A8" opacity=".5"/><circle cx="${X+9}" cy="43" r="2.4" fill="#F4A3A8" opacity=".5"/>`;
+  return `<svg viewBox="0 0 120 214" class="me-svg"><defs><radialGradient id="meg" cx=".4" cy=".25"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#F6E9F3"/></radialGradient></defs><ellipse cx="60" cy="106" rx="56" ry="104" fill="url(#meg)" stroke="#C9A24A" stroke-width="3.5"/><g transform="translate(60 205) scale(${sy}) translate(-60 -205)" class="me-b">${hairB}${body}${arms}${shoe}${hij}${face}${hairF}${ear}</g><path d="M24 208h72" stroke="#C9A24A" stroke-width="3" stroke-linecap="round"/></svg>`;}
+const ME_SAY={kumsaati:"Kum saati! Belin senin süper gücün ✨",ustkum:"Belini ortaya çıkaran her şey sana çok yakışır 💫",armut:"Omuzlara dikkat çeken üstler seni harika dengeler 🍐",kasik:"Yüksek bel ve kemer senin en iyi dostun 💃",elma:"V yaka ve dökümlü kumaşlar seni çok güzel taşır 🍎",dikdortgen:"Kemer ve katmanlarla siluetin harika oynar ✂️",ucgen:"Geniş paça ve A kesim etekler seni dengeler 🌟",altin:"Altın tenine sıcacık bir ışık katar ✨",gumus:"Gümüş sana ferah ve modern bir hava verir 🤍",karisik:"Altın + gümüş: cesur ve çok şık 💛🤍",tesettur:"Şalın kombinin yıldızı olacak 🧕",acik:"Pastel ve pudra tonları sende ışıl ışıl",bugday:"Toprak tonları ve hardal sana çok yakışır",esmer:"Canlı renkler ve altın sende muhteşem durur"};
+let meLast="";
+function meExtra(){const P=prof();const av=document.getElementById("me-av");if(av){av.innerHTML=meAvatar(P);const sig=JSON.stringify([P.giyimL,P.boy,P.beden,P.ten,P.sac,P.sacrenk,P.fav,P.taki]);if(meLast&&sig!==meLast){av.classList.remove("pop");void av.offsetWidth;av.classList.add("pop");}
+    if(meLast&&sig!==meLast){const o=JSON.parse(meLast),n=JSON.parse(sig);const keys=["giyimL","boy","beden","ten","sac","sacrenk","fav","taki"];const ch=keys.find((k,i)=>JSON.stringify(o[i])!==JSON.stringify(n[i]));const v=ch==="giyimL"?((P.giyimL||[]).includes("tesettur")?"tesettur":null):P[ch];const t=v&&ME_SAY[v];const b=document.getElementById("me-bub");if(b&&t){b.textContent=t;b.classList.remove("pop");void b.offsetWidth;b.classList.add("pop");}}meLast=sig;}
+  /* kimlik kartı */
+  const sv=document.getElementById("prof-save");let idc=document.getElementById("me-id");if(!idc&&sv){idc=document.createElement("div");idc.id="me-id";idc.className="me-id";sv.before(idc);}
+  if(idc){const lab=(k,v)=>{const x=(PROF[k]||[]).find(o=>o[0]===v);return x?x[2]:"";};const G=(P.giyimL||[]).map(v=>lab("giyim",v)).filter(Boolean);const nm=(st.name||"").trim();
+    const tags=[...G,lab("beden",P.beden),lab("boy",P.boy),lab("ten",P.ten),P.taki?lab("taki",P.taki)+" takı":""].filter(Boolean);const favs=(P.fav||[]).map(id=>WCOL.find(c=>c[0]===id)).filter(Boolean);
+    idc.hidden=tags.length<3;idc.innerHTML=`<div class="me-idc"><div class="me-idl"><small>ME FIRST · STİL KİMLİĞİ</small><b>${esc(nm||"Sen")}</b><div class="me-tags">${tags.map(t=>`<span>${esc(t)}</span>`).join("")}</div>${favs.length?`<div class="me-fav">${favs.map(c=>`<i style="background:${c[2]}" title="${esc(c[1])}"></i>`).join("")}<em>sevdiğim renkler</em></div>`:""}</div><div class="me-idr">${meAvatar(P)}</div></div><button type="button" class="pl-add me-share" id="me-share">💌 Stil kimliğimi paylaş</button>`;
+    document.getElementById("me-share").onclick=()=>{const txt=`💖 Benim stil kimliğim (Me First)\n\n${nm?nm+" · ":""}${tags.join(" · ")}${favs.length?"\nSevdiğim renkler: "+favs.map(c=>c[1].split(" /")[0]).join(", "):""}\n\nSen de keşfet: mefirst.app`;if(navigator.share)navigator.share({text:txt}).catch(()=>{});else window.open("https://wa.me/?text="+encodeURIComponent(txt),"_blank","noopener");};}}
+(function(){const _p=profRender;profRender=function(){_p.apply(this,arguments);try{meExtra();}catch(e){console.error(e);}};
+  const nav=document.getElementById("me-nav");if(nav){nav.querySelectorAll("[data-mj]").forEach(b=>b.onclick=()=>{const g=[...document.querySelectorAll('.prof[data-step="30"] .pgroup')][+b.dataset.mj];if(!g)return;const y=g.getBoundingClientRect().top+window.scrollY-nav.offsetHeight-16;window.scrollTo({top:y,behavior:"smooth"});});
+    const groups=()=>[...document.querySelectorAll('.prof[data-step="30"] .pgroup')];window.addEventListener("scroll",()=>{if(step!==30)return;const G=groups();const y=nav.getBoundingClientRect().bottom+40;let cur=0;G.forEach((g,i)=>{if(g.getBoundingClientRect().top<y)cur=i;});const map=[0,1,1,3,4,4,4,7,7];nav.querySelectorAll("[data-mj]").forEach(b=>b.setAttribute("aria-selected",+b.dataset.mj===map[cur]));},{passive:true});}
+  const nm=document.getElementById("name");if(nm)nm.addEventListener("input",()=>{try{meExtra();}catch(e){}});})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
