@@ -3351,6 +3351,75 @@ html[data-mf="dusk"] .kst.on{fill:#FFC94A}
 html[data-mf="dusk"] .kn-d{background:rgba(255,255,255,.08)}
 html[data-mf="dusk"] .kids .lcard.kpc h3 .step{background:rgba(143,203,239,.18)!important}
 html[data-mf="dusk"] .kids .kci.on{background:rgba(182,227,168,.18)!important}
+
+/* ===== v171: Patili dostum ===== */
+.pet .phero{position:relative;overflow:hidden;border-radius:28px!important;padding:16px 18px 16px!important;color:#4A2A16;background:radial-gradient(70% 60% at 100% 0%,rgba(255,236,200,.8),transparent 60%),radial-gradient(70% 70% at 0% 100%,rgba(244,163,168,.4),transparent 60%),linear-gradient(160deg,#FBDDB0,#F2C38A 55%,#E3A56C)!important;box-shadow:0 18px 40px -22px rgba(168,98,58,.8)}
+.pet .phero h2{position:relative;font-size:34px!important;color:#4A2A16;padding-right:52px!important}
+.pet .phero h2 em{color:#A8623A!important;font-style:italic}
+.pet .phero .lhero-top,.pet .phero .prow2{position:relative;z-index:2}
+.pet .phero .homebtn{background:rgba(255,255,255,.5)!important;border-color:rgba(255,255,255,.8)!important}
+.pface{position:absolute;right:12px;top:54px;width:96px;height:96px;z-index:1;animation:dmBob 3s ease-in-out infinite;filter:drop-shadow(0 8px 10px rgba(120,60,20,.3))}
+.pface svg{width:100%;height:100%;overflow:visible}
+.pface[data-m="ac"]{animation:pHop .9s ease-in-out infinite}
+@keyframes pHop{50%{transform:translateY(-6px) rotate(-3deg)}}
+.pblink{animation:pBl 4s infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pBl{0%,92%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+.pear.l{transform-origin:30px 36px;animation:pEar 2.4s ease-in-out infinite}.pear.r{transform-origin:90px 36px;animation:pEar 2.4s ease-in-out infinite reverse}
+@keyframes pEar{50%{transform:rotate(6deg)}}
+.pz{animation:pZ 2s ease-in-out infinite}@keyframes pZ{50%{transform:translate(3px,-4px);opacity:.5}}
+.pht{animation:pHt 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}@keyframes pHt{50%{transform:scale(1.25)}}
+.pex{animation:pEx .7s ease-in-out infinite}@keyframes pEx{50%{transform:translateY(-3px)}}
+.pbub{position:relative;z-index:2;margin:2px 0 4px;align-self:flex-start;max-width:calc(100% - 108px);background:#fff;color:#4A2A16;font-size:13px;font-weight:600;line-height:1.35;padding:8px 12px;border-radius:16px 16px 16px 4px;box-shadow:0 6px 14px -8px rgba(120,60,20,.5)}
+.ppaws{position:absolute;inset:0;pointer-events:none}
+.ppaw{position:absolute;left:var(--x);top:var(--y);width:16px;height:16px;transform:rotate(var(--r));opacity:0;animation:pPaw 5s ease-in-out var(--dl) infinite;background:radial-gradient(circle at 50% 70%,rgba(168,98,58,.35) 0 34%,transparent 36%),radial-gradient(circle at 18% 30%,rgba(168,98,58,.35) 0 13%,transparent 15%),radial-gradient(circle at 40% 10%,rgba(168,98,58,.35) 0 13%,transparent 15%),radial-gradient(circle at 62% 10%,rgba(168,98,58,.35) 0 13%,transparent 15%),radial-gradient(circle at 84% 30%,rgba(168,98,58,.35) 0 13%,transparent 15%)}
+@keyframes pPaw{0%,5%{opacity:0;transform:rotate(var(--r)) scale(.6)}12%,55%{opacity:1;transform:rotate(var(--r)) scale(1)}75%,100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.ppaw,.pface{animation:none}}
+.pet .phero input{background:rgba(255,255,255,.6)!important;border:1.5px solid rgba(255,255,255,.9)!important}
+.pet .phero label{color:#7A4A2A}
+.pet .kind{background:rgba(255,255,255,.45)!important;border-color:rgba(255,255,255,.7)!important;color:#4A2A16!important}
+.pet .kind[aria-checked="true"]{background:#fff!important;border-color:#A8623A!important;box-shadow:0 6px 14px -8px rgba(120,60,20,.6)}
+.pet .lcard{border-radius:24px!important}
+.pet .lcard h3 .step{background:linear-gradient(150deg,#FBE3C4,#F7D0A6)!important}
+.pbowl{display:grid;grid-template-columns:104px 1fr;align-items:center;gap:12px}
+.bowl{width:104px;overflow:visible}
+.bowl circle{animation:bagIn .45s cubic-bezier(.2,1.6,.4,1) both}
+.bowl.fill{animation:kHop .8s ease}
+.pb-i{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.pb-i b{font-family:var(--f-display);font-weight:400;font-size:20px;line-height:1.15}
+.pb-go{font:inherit;font-size:13.5px;width:100%;justify-content:center;font-weight:800;color:#fff;border:0;border-radius:16px;padding:11px 14px;cursor:pointer;background:linear-gradient(135deg,#D9955A,#A8623A);box-shadow:0 10px 20px -12px rgba(168,98,58,.9);display:flex;gap:8px;align-items:center;white-space:nowrap}
+.pb-go small{font-weight:700;background:rgba(255,255,255,.25);border-radius:99px;padding:1px 7px;font-size:11.5px}
+.plove{background:linear-gradient(160deg,#FFF6EC,#FDECEF)!important}
+.pl-meter{display:flex;align-items:center;gap:12px}
+.pl-heart{width:64px;height:58px;flex:none;filter:drop-shadow(0 6px 8px rgba(226,104,138,.3))}
+.pl-fill{transition:y .6s cubic-bezier(.3,1.3,.5,1)}
+.pl-meter p{margin:0;font-family:var(--f-display);font-size:18px;line-height:1.25;color:var(--ink)}
+.pl-acts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pl-a{font:inherit;font-size:13px;font-weight:700;color:var(--ink);text-align:left;display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:16px;border:1.5px solid rgba(217,149,90,.3);background:var(--surface);cursor:pointer;transition:transform .15s}
+.pl-a span{font-size:20px}
+.pl-a:active{transform:scale(.95)}
+.pl-a.on{background:linear-gradient(150deg,#FDE4E8,#FBD3DA);border-color:#F4A3A8;color:#8A2E48}
+.pvn{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:18px;background:linear-gradient(150deg,#EEF7FD,#F4EEFC);border:1.5px dashed rgba(143,203,239,.7)}
+.pvn>span:first-child{font-size:28px}
+.pvn>span:nth-child(2){flex:1;display:flex;flex-direction:column}
+.pvn small{font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#5FAEDF}
+.pvn b{font-family:var(--f-display);font-weight:400;font-size:19px}
+.pvn-d{display:flex;flex-direction:column;align-items:center;min-width:58px;padding:5px 8px;border-radius:14px;background:#fff}
+.pvn-d b{font-size:24px;font-weight:800;line-height:1;color:#2C7FB5;font-family:inherit}
+.pvn-d small{font-size:10px;color:var(--muted);text-transform:none;letter-spacing:0}
+.pvaxc .vx{border-style:dashed!important}
+html[data-mf="dusk"] .pet .phero{background:radial-gradient(70% 60% at 100% 0%,rgba(255,220,170,.18),transparent 60%),linear-gradient(160deg,#5A3A24,#4A2E1E 55%,#36211A)!important;color:#FBE6CC}
+html[data-mf="dusk"] .pet .phero h2{color:#FBE6CC}
+html[data-mf="dusk"] .pet .phero h2 em{color:#F2C38A!important}
+html[data-mf="dusk"] .pbub{background:rgba(255,255,255,.92)}
+html[data-mf="dusk"] .pet .phero input{background:rgba(255,255,255,.1)!important;border-color:rgba(255,255,255,.2)!important;color:#FBE6CC}
+html[data-mf="dusk"] .pet .phero label{color:#F2C38A}
+html[data-mf="dusk"] .pet .kind{background:rgba(255,255,255,.08)!important;color:#FBE6CC!important;border-color:rgba(255,255,255,.12)!important}
+html[data-mf="dusk"] .pet .kind[aria-checked="true"]{background:rgba(255,255,255,.2)!important;border-color:#F2C38A!important}
+html[data-mf="dusk"] .plove,html[data-mf="dusk"] .pvn{background:rgba(244,163,168,.07)!important}
+html[data-mf="dusk"] .pl-a{background:rgba(255,255,255,.05)}
+html[data-mf="dusk"] .pl-a.on{background:rgba(244,163,168,.2);color:#FBD3DA}
+html[data-mf="dusk"] .pvn-d{background:rgba(255,255,255,.1)}
+html[data-mf="dusk"] .pet .lcard h3 .step{background:rgba(242,195,138,.18)!important}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -3632,7 +3701,10 @@ html[data-mf="dusk"] .kids .kci.on{background:rgba(182,227,168,.18)!important}
   <div class="pet" data-step="20">
     <div class="phero">
       <div class="lhero-top"><span class="tag">🐾 Ailenin bir ferdi</span><button class="iconbtn homebtn" id="pet-home" type="button" aria-label="Ana sayfaya dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Ana sayfa</span></button></div>
+      <span class="ppaws" aria-hidden="true"><i class="ppaw" style="--x:4%;--y:88%;--r:40deg;--dl:0.00s"></i><i class="ppaw" style="--x:12%;--y:74%;--r:40deg;--dl:0.45s"></i><i class="ppaw" style="--x:16%;--y:90%;--r:40deg;--dl:0.90s"></i><i class="ppaw" style="--x:24%;--y:70%;--r:40deg;--dl:1.35s"></i><i class="ppaw" style="--x:30%;--y:84%;--r:40deg;--dl:1.80s"></i><i class="ppaw" style="--x:38%;--y:62%;--r:40deg;--dl:2.25s"></i><i class="ppaw" style="--x:44%;--y:76%;--r:40deg;--dl:2.70s"></i><i class="ppaw" style="--x:52%;--y:56%;--r:40deg;--dl:3.15s"></i><i class="ppaw" style="--x:58%;--y:70%;--r:40deg;--dl:3.60s"></i></span>
+      <div class="pface" id="pface" aria-hidden="true"></div>
       <h2 id="pet-title">Patili <em>dostum</em></h2>
+      <p class="pbub" id="pbub"></p>
       <div class="prow2">
         <div class="field"><label for="pet-name">Adı</label><input id="pet-name" type="text" maxlength="16" placeholder="ör. Pamuk"></div>
         <div class="kinds" id="pet-kind" role="radiogroup" aria-label="Türü"></div>
@@ -3640,13 +3712,16 @@ html[data-mf="dusk"] .kids .kci.on{background:rgba(182,227,168,.18)!important}
     </div>
 
     <div class="lcard t-butter">
-      <h3><span class="step">🍽</span>Bugünkü mamalar<span class="nextf" id="pet-next"></span></h3>
+      <h3><span class="step">🍽</span>Mama saati<span class="nextf" id="pet-next"></span></h3>
+      <div class="pbowl" id="pbowl"></div>
       <div class="feeds" id="feeds"></div>
       <div class="addrow"><input type="time" id="feed-time" value="13:00" aria-label="Mama saati"><button class="pill" id="feed-add" type="button">+ Saat ekle</button></div>
     </div>
 
-    <div class="lcard t-sky">
-      <h3><span class="step">💉</span>Aşılar &amp; veteriner</h3>
+    <div class="lcard plove" id="plove"></div>
+    <div class="lcard t-sky pvaxc">
+      <h3><span class="step">💉</span>Aşı karnesi</h3>
+      <div id="pvaxn"></div>
       <div class="vaxes" id="vax"></div>
       <div class="addrow">
         <select id="vax-name" aria-label="Ne için?"><option>Karma aşı</option><option>Kuduz aşısı</option><option>İç parazit</option><option>Dış parazit</option><option>Veteriner kontrolü</option><option>Tırnak / tıraş</option></select>
@@ -6959,6 +7034,57 @@ function kNextCard(c){const K=kids();const t0=new Date(dkey()+"T00:00"),dd=d=>Ma
   if(ktab==="hw"){P.insertAdjacentHTML("afterbegin",kStarCard(c));const dn=K.hw.filter(h=>h.kid===c.id&&h.done).length;if(wasDn[c.id]!=null&&dn>wasDn[c.id])mfConfetti(`Aferin ${c.name}! ⭐`,KP_C,KP_BG);wasDn[c.id]=dn;}
   if(ktab==="cal"){P.insertAdjacentHTML("afterbegin",kNextCard(c));}
   P.querySelectorAll(".lcard").forEach(x=>x.classList.add("kpc"));}catch(e){console.error(e);}};})();
+
+/* ===== v171: Patili dostum — pati izleri ===== */
+const PT_C=["#E9B872","#D9955A","#A8623A","#F7D9B0","#F4A3A8"],PT_BG="linear-gradient(135deg,#D9955A,#A8623A)";
+const PSOUND={kedi:"Miyav!",kopek:"Hav hav!",kus:"Cik cik!",diger:"Hıh hıh!"};
+function petMood(P){const h=new Date().getHours(),nowM=h*60+new Date().getMinutes();
+  const due=P.feeds.filter(t=>!P.fed.includes(t)).map(t=>{const[a,b]=t.split(":").map(Number);return a*60+b;}).filter(m=>m<=nowM+20);
+  if(due.length)return "ac";if(h>=23||h<6)return "uyku";if(P.feeds.length&&P.feeds.every(t=>P.fed.includes(t)))return "tok";const L=pcare();if(L.n.length>=3)return "tok";return "normal";}
+function petFace(kind,mood){const C={kedi:["#F2B36B","#E39A4E","#FBE3C4"],kopek:["#C99566","#A8743F","#F1DCC2"],kus:["#8FCBEF","#5FAEDF","#E6F5FD"],diger:["#EEDCE2","#D9BCC6","#FFF6F8"]}[kind]||["#F2B36B","#E39A4E","#FBE3C4"];
+  const ears=kind==="kedi"?`<path d="M28 44L30 12l26 22z" fill="${C[0]}"/><path d="M92 44L90 12 64 34z" fill="${C[0]}"/><path d="M33 38l1-17 13 12z" fill="#F7B6BE"/><path d="M87 38l-1-17-13 12z" fill="#F7B6BE"/>`
+   :kind==="kopek"?`<path d="M30 34c-14 2-20 26-12 40 6 4 12-4 14-12z" fill="${C[1]}" class="pear l"/><path d="M90 34c14 2 20 26 12 40-6 4-12-4-14-12z" fill="${C[1]}" class="pear r"/>`
+   :kind==="diger"?`<path d="M44 40c-6-18-4-34 4-36s12 14 8 36z" fill="${C[0]}"/><path d="M76 40c6-18 4-34-4-36s-12 14-8 36z" fill="${C[0]}"/><path d="M47 36c-3-12-2-24 2-26s6 10 4 26z" fill="#F7B6BE"/><path d="M73 36c3-12 2-24-2-26s-6 10-4 26z" fill="#F7B6BE"/>`
+   :`<path d="M60 18c-4-8 4-12 6-6" fill="none" stroke="${C[1]}" stroke-width="4" stroke-linecap="round"/>`;
+  const eyes=mood==="uyku"?`<path d="M42 64q6 4 12 0M66 64q6 4 12 0" stroke="#3A2A20" stroke-width="3" fill="none" stroke-linecap="round"/>`
+   :mood==="tok"?`<path d="M42 66q6-7 12 0M66 66q6-7 12 0" stroke="#3A2A20" stroke-width="3" fill="none" stroke-linecap="round"/>`
+   :mood==="ac"?`<circle cx="48" cy="63" r="7" fill="#3A2A20"/><circle cx="72" cy="63" r="7" fill="#3A2A20"/><circle cx="50" cy="60" r="2.6" fill="#fff"/><circle cx="74" cy="60" r="2.6" fill="#fff"/><circle cx="46" cy="66" r="1.4" fill="#fff"/><circle cx="70" cy="66" r="1.4" fill="#fff"/>`
+   :`<circle cx="48" cy="64" r="5.5" fill="#3A2A20" class="pblink"/><circle cx="72" cy="64" r="5.5" fill="#3A2A20" class="pblink"/><circle cx="50" cy="62" r="1.8" fill="#fff"/><circle cx="74" cy="62" r="1.8" fill="#fff"/>`;
+  const nose=kind==="kus"?`<path d="M54 72l6 10 6-10z" fill="#F2A93B"/>`:`<path d="M56 74h8l-4 4z" fill="#3A2A20"/>`;
+  const mouth=kind==="kus"?"":mood==="ac"?`<ellipse cx="60" cy="86" rx="5" ry="6" fill="#3A2A20"/><ellipse cx="60" cy="89" rx="3" ry="2.4" fill="#F28B9B"/>`:mood==="tok"?`<path d="M52 80q8 10 16 0" fill="#F28B9B" stroke="#3A2A20" stroke-width="2.2"/>`:`<path d="M52 80q4 4 8 0q4 4 8 0" fill="none" stroke="#3A2A20" stroke-width="2.2" stroke-linecap="round"/>`;
+  const wh=kind==="kedi"?`<path d="M30 76h16M30 82l16-3M90 76H74M90 82l-16-3" stroke="#3A2A20" stroke-width="1.4" opacity=".5"/>`:"";
+  const extra=mood==="uyku"?`<text x="88" y="28" font-size="14" font-weight="800" fill="#fff" class="pz">z</text><text x="100" y="16" font-size="10" font-weight="800" fill="#fff" class="pz" style="animation-delay:.6s">z</text>`:mood==="tok"?`<path d="M96 22c-3-4-9-1-6 4l6 6 6-6c3-5-3-8-6-4z" fill="#F4A3A8" class="pht"/>`:mood==="ac"?`<text x="94" y="30" font-size="22" font-weight="900" fill="#fff" class="pex">!</text>`:"";
+  return `<svg viewBox="0 0 120 120">${ears}<ellipse cx="60" cy="70" rx="38" ry="34" fill="${C[0]}"/><ellipse cx="60" cy="80" rx="20" ry="15" fill="${C[2]}"/>${kind==="kedi"?`<path d="M50 40q10-6 20 0" stroke="${C[1]}" stroke-width="3" fill="none" stroke-linecap="round"/>`:""}<circle cx="38" cy="78" r="5" fill="#F7B6BE" opacity=".6"/><circle cx="82" cy="78" r="5" fill="#F7B6BE" opacity=".6"/>${eyes}${nose}${mouth}${wh}${extra}</svg>`;}
+function pcare(){let o={};try{o=JSON.parse(localStorage.getItem("mefirst-pcare")||"{}");}catch(e){}if(o.d!==dkey())o={d:dkey(),n:[]};return o;}
+function pcareSave(o){try{localStorage.setItem("mefirst-pcare",JSON.stringify(o));}catch(e){}}
+function pCareList(kind){const base=[["oyun","🎾","Oyun oynadık"],["sev","🤗","Bol bol sevdim"],["su","💧","Suyunu tazeledim"]];
+  return kind==="kopek"?[["yuru","🦮","Yürüyüşe çıktık"],...base,["tuy","🪮","Tüylerini taradım"]]:kind==="kedi"?[...base,["kum","🧹","Kumunu temizledim"],["tuy","🪮","Tüylerini taradım"]]:kind==="kus"?[["kafes","🧹","Kafesini temizledim"],["sev","🤗","Onunla konuştum"],["su","💧","Suyunu tazeledim"],["uc","🪶","Odada uçtu"]]:[...base,["kafes","🧹","Yuvasını temizledim"]];}
+let petWasAll=null,petWasLove=null;
+function petExtra(){const P=petData(),nm=P.name.trim()||"Dostun",k=P.kind,mood=petMood(P);
+  const f=document.getElementById("pface");if(f){f.innerHTML=petFace(k,mood);f.dataset.m=mood;}
+  const nowM=new Date().getHours()*60+new Date().getMinutes();const nextT=P.feeds.find(t=>!P.fed.includes(t));
+  document.getElementById("pbub").textContent=`${PSOUND[k]||"Merhaba!"} `+(mood==="ac"?`Karnım acıktı, mamam nerede? 🍽`:mood==="uyku"?"Uyuyorum, rüyamda seni görüyorum 💤":mood==="tok"?"Karnım tok, keyfim yerinde 💛":nextT?`Bir sonraki mamam ${nextT}'de, unutma 😺`:"Benimle oynar mısın? 🎾");
+  const pt=document.getElementById("pet-title");if(pt&&P.name.trim())pt.innerHTML=`${esc(P.name.trim())} <em>${k==="kedi"?"miyav":k==="kopek"?"hav":k==="kus"?"cik":"pati"}</em>`;
+  /* mama kabı */
+  const fed=P.fed.length,tot=P.feeds.length;const nx=P.feeds.slice().sort().find(t=>!P.fed.includes(t));const all=tot&&!nx;
+  const kib=Array.from({length:Math.round(10*(tot?fed/tot:0))},(_,i)=>`<circle cx="${30+((i*13)%60)}" cy="${48-Math.floor(i/5)*6-(i%2)*2}" r="5" fill="${["#C98A4B","#B5733A","#D9A066"][i%3]}"/>`).join("");
+  document.getElementById("pbowl").innerHTML=`<svg viewBox="0 0 120 70" class="bowl" aria-hidden="true">${kib}<path d="M14 44h92l-8 18a8 8 0 0 1-7 5H29a8 8 0 0 1-7-5z" fill="${k==="kopek"?"#E2688A":"#8FCBEF"}"/><path d="M14 44h92" stroke="#fff" stroke-width="3" opacity=".6"/><text x="60" y="61" font-size="10" font-weight="900" text-anchor="middle" fill="#fff" letter-spacing="1">${esc(nm.toLocaleUpperCase("tr-TR").slice(0,10))}</text></svg>
+    <div class="pb-i"><b>${!tot?"Mama saati ekle":all?"Bugünlük karnı tok 🎉":`${fed}/${tot} öğün verildi`}</b>${nx?`<button type="button" class="pb-go" id="pb-go">Mamayı verdim <small>${nx}</small></button>`:""}</div>`;
+  const g=document.getElementById("pb-go");if(g)g.onclick=()=>{P.fed.push(nx);save();petRender();const b=document.querySelector(".bowl");if(b){b.classList.add("fill");}};
+  if(all&&petWasAll===false)mfConfetti(`${nm} doydu! 🐾`,PT_C,PT_BG);petWasAll=!!all;
+  /* sevgi metresi */
+  const L=pCareList(k),C=pcare(),dn=L.filter(x=>C.n.includes(x[0])).length,full=dn===L.length;
+  document.getElementById("plove").innerHTML=`<h3><span class="step no-mi">💛</span>Mutluluk metresi<span class="nextf">${dn}/${L.length}</span></h3>
+    <div class="pl-meter"><svg viewBox="0 0 24 22" class="pl-heart"><defs><clipPath id="plc"><path d="M12 21C5 15 1 11.5 1 7a5.5 5.5 0 0 1 11-1 5.5 5.5 0 0 1 11 1c0 4.5-4 8-11 14z"/></clipPath></defs><path d="M12 21C5 15 1 11.5 1 7a5.5 5.5 0 0 1 11-1 5.5 5.5 0 0 1 11 1c0 4.5-4 8-11 14z" fill="#F7E1D0"/><rect clip-path="url(#plc)" x="0" y="${(22-22*dn/L.length).toFixed(1)}" width="24" height="22" fill="#F4A3A8" class="pl-fill"/><path d="M12 21C5 15 1 11.5 1 7a5.5 5.5 0 0 1 11-1 5.5 5.5 0 0 1 11 1c0 4.5-4 8-11 14z" fill="none" stroke="#E2688A" stroke-width="1.2"/></svg>
+    <p>${full?`${esc(nm)} dünyanın en mutlu ${k==="kedi"?"kedisi":k==="kopek"?"köpeği":k==="kus"?"kuşu":"dostu"} 💛`:dn?`${esc(nm)} mutlu oluyor, devam! 🐾`:`Bugün ${esc(nm)} için ne yaptın?`}</p></div>
+    <div class="pl-acts">${L.map(([id,e,l])=>`<button type="button" class="pl-a${C.n.includes(id)?" on":""}" data-pc="${id}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div>`;
+  document.querySelectorAll("[data-pc]").forEach(b=>b.onclick=()=>{const o=pcare(),id=b.dataset.pc;o.n=o.n.includes(id)?o.n.filter(x=>x!==id):[...o.n,id];pcareSave(o);petRender();});
+  if(full&&petWasLove===false)mfConfetti(`${nm} çok mutlu! 💛`,PT_C,PT_BG);petWasLove=full;
+  /* aşı geri sayımı */
+  const t0=new Date();t0.setHours(0,0,0,0);const up=P.vax.slice().sort((a,b)=>a.d.localeCompare(b.d)).find(v=>new Date(v.d+"T00:00")>=t0);const vn=document.getElementById("pvaxn");
+  if(vn)vn.innerHTML=up?(()=>{const x=Math.round((new Date(up.d+"T00:00")-t0)/864e5);return `<div class="pvn"><span class="no-mi">🩺</span><span><small>Sıradaki</small><b>${esc(up.n)}</b></span><span class="pvn-d"><b>${x===0?"!":x}</b><small>${x===0?"bugün":"gün kaldı"}</small></span></div>`;})():"";}
+(function(){const _p=petRender;petRender=function(){_p.apply(this,arguments);try{petExtra();}catch(e){console.error(e);}};})();
+setInterval(()=>{try{if(step===20)petExtra();}catch(e){}},60000);
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
