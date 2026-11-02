@@ -3608,7 +3608,9 @@ html[data-mf="dusk"] .tr-cl span.has{background:rgba(242,196,206,.2);color:#F7E1
 html[data-mf="dusk"] .tr-i .tr-how{color:#E7B3C0}
 html[data-mf="dusk"] .cv-loc{background:rgba(255,255,255,.1)}
 
-.ktph{background:radial-gradient(circle at 35% 30%,var(--p2,#F2B35C),var(--p1,#8C2E1E) 75%) center/cover no-repeat!important;position:relative}
+.ktph{position:relative}
+.ktph:not(.on){background:radial-gradient(circle at 35% 30%,var(--p2,#F2B35C),var(--p1,#8C2E1E) 75%)!important}
+.ktph.on{background-size:cover!important;background-position:center 20%!important;background-repeat:no-repeat!important}
 .ktph.on{background-color:transparent}
 .ktph.on .ktex{display:none}
 .ktex{position:absolute;inset:0;width:100%;height:100%;animation:exRot 30s linear infinite}
@@ -6911,8 +6913,8 @@ function ktConfetti(){const w=document.createElement("div");w.className="ktconf"
 function ktSlide(e){const a=e[1].filter(ktFollow)[0]||e[1][0];const x=ktDays(e[2]);const d=e[2]?new Date(e[2]+"T00:00"):null;
   const ini=a.split(" ").map(w=>w[0]).slice(0,2).join("").toLocaleUpperCase("tr-TR");
   const q=encodeURIComponent((e[4].split("·").pop().trim())+" "+e[5]);
-  let hh=0;for(const ch of a)hh=(hh*31+ch.charCodeAt(0))>>>0;const pal=[["#7A3322","#C9822B"],["#4F5D3A","#A8B26A"],["#5A2E44","#C98A9E"],["#2E4A6B","#7FA7CF"],["#6A4A20","#D9B36A"],["#3E2E5A","#9C8FE0"]][hh%6];
-  return `<div class="ktsd"><span class="ktph" data-kph="${esc(a)}" style="--p1:${pal[0]};--p2:${pal[1]}"><svg class="ktex" viewBox="0 0 100 100" aria-hidden="true"><defs><path id="exc${hh%997}" d="M50 50m-36 0a36 36 0 1 1 72 0a36 36 0 1 1-72 0"/></defs><circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,243,222,.55)" stroke-width="1.5" stroke-dasharray="2 4"/><text font-size="8.5" font-weight="800" letter-spacing="2.4" fill="rgba(255,243,222,.85)"><textPath href="#exc${hh%997}">EX LIBRIS · ${esc(a.toLocaleUpperCase("tr-TR").slice(0,22))} · </textPath></text><path d="M50 71l1.8 4.6 4.6 1.8-4.6 1.8L50 84l-1.8-4.6-4.6-1.8 4.6-1.8z" fill="rgba(255,226,176,.9)"/><path d="M50 16l1.4 3.4 3.4 1.4-3.4 1.4L50 26l-1.4-3.6-3.4-1.4 3.4-1.4z" fill="rgba(255,226,176,.7)"/></svg><b>${esc(ini)}</b></span><div class="ktsd-i">
+  let hh=0;for(const ch of a)hh=(hh*31+ch.charCodeAt(0))>>>0;const SEALC={roman:["#7A3322","#C9822B","ROMAN"],polisiye:["#1F3350","#5E86B8","POLİSİYE"],siir:["#5A2E44","#C98A9E","ŞİİR"],kisisel:["#4F5D3A","#A8B26A","İYİ YAŞAM"],psikoloji:["#3C5A4E","#8FBFA8","PSİKOLOJİ"],ebeveyn:["#8A4A2E","#E8A27A","AİLE"],tarih:["#6A4A20","#D9B36A","TARİH"],cocuk:["#3E2E5A","#9C8FE0","ÇOCUK"],romantik:["#7A2E4A","#E58AA6","AŞK"],dunya:["#2E4A6B","#7FA7CF","DÜNYA"],klasik:["#4A3A2E","#B89A7A","KLASİK"]};const sg=ktAG(a).find(g=>SEALC[g]);const pal=sg?SEALC[sg]:["#5A4A42","#B8A898","YAZAR"];
+  return `<div class="ktsd"><span class="ktph" data-kph="${esc(a)}" style="--p1:${pal[0]};--p2:${pal[1]}"><svg class="ktex" viewBox="0 0 100 100" aria-hidden="true"><defs><path id="exc${hh%997}" d="M50 50m-36 0a36 36 0 1 1 72 0a36 36 0 1 1-72 0"/></defs><circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,243,222,.55)" stroke-width="1.5" stroke-dasharray="2 4"/><text font-size="7.6" font-weight="800" letter-spacing="1.6" fill="rgba(255,243,222,.85)"><textPath href="#exc${hh%997}">EX LIBRIS · ${esc(a.toLocaleUpperCase("tr-TR").slice(0,20))} · ${pal[2]} · </textPath></text><path d="M50 71l1.8 4.6 4.6 1.8-4.6 1.8L50 84l-1.8-4.6-4.6-1.8 4.6-1.8z" fill="rgba(255,226,176,.9)"/><path d="M50 16l1.4 3.4 3.4 1.4-3.4 1.4L50 26l-1.4-3.6-3.4-1.4 3.4-1.4z" fill="rgba(255,226,176,.7)"/></svg><b>${esc(ini)}</b></span><div class="ktsd-i">
     <span class="ktcd">${x===null?"Kasım · tarih yakında":x===0?"Bugün! 🔥":x===1?"Yarın! ✨":x+" gün kaldı"}</span>
     <strong>${e[1].map(esc).join(" & ")}</strong>
     <small>${d?d.toLocaleDateString("tr-TR",{day:"numeric",month:"long",weekday:"long"})+" · "+e[3]:"Tarih netleşince haber veririm"}</small>
