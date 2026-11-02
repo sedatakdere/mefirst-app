@@ -3860,6 +3860,41 @@ html[data-mf="dusk"] .prof .prhero h2{color:#F7E1F0}
 html[data-mf="dusk"] .me-nav{background:rgba(46,30,52,.96);border-color:rgba(217,143,184,.25)}
 html[data-mf="dusk"] .me-nav button{color:#E7C3DC}
 html[data-mf="dusk"] .me-nav button[aria-selected="true"]{color:#fff}
+
+/* ===== v192: Beni tanı sihirbaz ===== */
+.prof.wiz .pgroup:not(.on){display:none!important}
+.prof.wiz .me-nav{display:none!important}
+.prof.wiz:not(.mw-sum) #prof-save,.prof.wiz:not(.mw-sum) #onb-again,.prof.wiz:not(.mw-sum) #me-id{display:none!important}
+.prof.wiz .me-av{animation:none}
+.prof.wiz .me-bub{font-weight:500}
+.prof.wiz .me-fine{display:none}
+.mw-top{display:flex;flex-direction:column;align-items:center;gap:6px;margin:14px 0 10px;text-align:center}
+.mw-top b{font-family:var(--f-display);font-weight:400;font-size:24px;color:var(--ink)}
+.mw-top span{font-size:12.5px;color:var(--ink-soft,#7a6a78);font-weight:600}
+.mw-dots{display:flex;gap:6px}
+.mw-dots i{width:8px;height:8px;border-radius:99px;background:rgba(156,106,168,.25);transition:all .3s}
+.mw-dots i.done{background:#C9A24A}
+.mw-dots i.cur{width:22px;background:#C2578A}
+.mw-why{margin:-2px 0 12px;font-size:13px;line-height:1.4;color:var(--ink-soft,#7a6a78);background:rgba(201,162,74,.12);border-radius:12px;padding:8px 11px}
+.prof.wiz .pgroup.on{animation:mwIn .35s ease}
+@keyframes mwIn{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+.mw-shake{animation:mwSh .4s ease!important}
+@keyframes mwSh{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.mw-nav{display:flex;gap:10px;margin:14px 0 6px}
+.mw-nav:empty{display:none}
+.mw-nav button{font:inherit;font-weight:700;font-size:15px;border-radius:999px;padding:13px 16px;cursor:pointer;border:0}
+.mw-back{flex:0 0 auto;background:var(--surface,#fff);color:var(--ink);border:1px solid rgba(156,106,168,.3)!important}
+.mw-back:disabled{opacity:.35}
+.mw-next{flex:1;color:#fff;background:linear-gradient(135deg,#D98FB8,#9C6AA8);box-shadow:0 10px 20px -12px rgba(140,90,150,.9)}
+.mw-list{display:flex;flex-direction:column;background:var(--surface,#fff);border-radius:22px;border:1px solid rgba(156,106,168,.18);overflow:hidden;margin-bottom:14px}
+.mw-row{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;font:inherit;text-align:left;background:none;border:0;border-bottom:1px solid rgba(156,106,168,.12);padding:13px 16px;cursor:pointer;color:var(--ink)}
+.mw-row:last-child{border-bottom:0}
+.mw-row span{font-size:13px;font-weight:700;color:var(--ink-soft,#7a6a78)}
+.mw-row em{font-style:normal;font-size:14px;font-weight:600;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mw-row em.mw-empty{color:#C2578A;font-weight:500}
+.mw-row i{font-style:normal;color:#9C6AA8;font-size:20px}
+html[data-mf="dusk"] .mw-list{background:rgba(46,30,52,.7)}
+html[data-mf="dusk"] .mw-back{background:rgba(46,30,52,.7);color:#F7E1F0}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -3908,13 +3943,12 @@ html[data-mf="dusk"] .me-nav button[aria-selected="true"]{color:#fff}
     <p class="soon-msg" id="soon-msg" hidden></p>
   </div>
 
-  <div class="prof" data-step="30">
+  <div class="prof wiz" data-step="30">
     <div class="prhero">
       <div class="lhero-top"><span class="tag">👤 Beni tanı</span><button class="iconbtn homebtn" id="prof-home" type="button" aria-label="Ana sayfaya dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Ana sayfa</span></button></div>
-      <span class="bspk" aria-hidden="true"><i style="--x:8%;--y:30%;--d:0s"></i><i style="--x:46%;--y:12%;--d:1s"></i><i style="--x:30%;--y:78%;--d:2s"></i></span>
       <div class="me-g"><div class="me-t"><small class="me-eye">Stil kimliğim</small><h2>Seni <em>tanıyalım</em></h2>
         <div class="pbar"><i id="pbar-i"></i></div><div class="pbar-t" id="pbar-t"></div>
-        <p class="me-bub" id="me-bub">Seçtikçe aynadaki sen de değişecek ✨</p></div>
+        <p class="me-bub" id="me-bub">Birkaç kısa soru. Ne giysem, makyaj ve alışveriş önerilerim sana göre gelsin.</p></div>
         <div class="me-av" id="me-av" aria-hidden="true"></div></div>
       <p class="me-fine">Bilgilerin sadece bu telefonda kalır 🔒</p>
     </div>
@@ -7982,6 +8016,37 @@ function meExtra(){const P=prof();const av=document.getElementById("me-av");if(a
   const nav=document.getElementById("me-nav");if(nav){nav.querySelectorAll("[data-mj]").forEach(b=>b.onclick=()=>{const g=[...document.querySelectorAll('.prof[data-step="30"] .pgroup')][+b.dataset.mj];if(!g)return;const y=g.getBoundingClientRect().top+window.scrollY-nav.offsetHeight-16;window.scrollTo({top:y,behavior:"smooth"});});
     const groups=()=>[...document.querySelectorAll('.prof[data-step="30"] .pgroup')];window.addEventListener("scroll",()=>{if(step!==30)return;const G=groups();const y=nav.getBoundingClientRect().bottom+40;let cur=0;G.forEach((g,i)=>{if(g.getBoundingClientRect().top<y)cur=i;});const map=[0,1,1,3,4,4,4,7,7];nav.querySelectorAll("[data-mj]").forEach(b=>b.setAttribute("aria-selected",+b.dataset.mj===map[cur]));},{passive:true});}
   const nm=document.getElementById("name");if(nm)nm.addEventListener("input",()=>{try{meExtra();}catch(e){}});})();
+
+/* ===== v192: Beni tanı — adım adım sihirbaz ===== */
+const MW_WHY=["Sana adınla seslenebilmem için. Fotoğraf isteğe bağlı.","Ne giysem'deki kombinleri bu tarza göre seçerim.","Elbise boyu, paça ve oranları buna göre öneririm.","Seni en güzel gösteren kesimleri bulmam için.","Makyaj tonların ve sana yakışan renkler buradan gelir.","Saç önerilerin ve renk uyumu için.","Kombinlerde bu renkleri öne çıkarırım.","Takı önerilerim bu tona göre olur.","Sevmediğin şeyleri sana hiç önermem."];
+const MW_LAB=["Adım","Tarzım","Boyum","Vücut şeklim","Ten rengim","Saçım","Sevdiğim renkler","Takılarım","Sevmediklerim"];
+let mwI=null;
+function mwGroups(){return [...document.querySelectorAll('.prof[data-step="30"] .pgroup')];}
+function mwVis(){return mwGroups().map((g,i)=>[g,i]).filter(([g])=>!g.hidden);}
+function mwVal(i){const P=prof(),lab=(k,v)=>{const x=(PROF[k]||[]).find(o=>o[0]===v);return x?x[2]:"";};
+  switch(i){case 0:return (st.name||"").trim();case 1:return (P.giyimL||[]).map(v=>lab("giyim",v)).join(", ");case 2:return lab("boy",P.boy);case 3:return lab("beden",P.beden);case 4:return lab("ten",P.ten);case 5:return [lab("sac",P.sac),lab("sacrenk",P.sacrenk)].filter(Boolean).join(", ");
+  case 6:return (P.fav||[]).map(id=>{const c=WCOL.find(x=>x[0]===id);return c?c[1].split(" /")[0]:"";}).join(", ");case 7:return lab("taki",P.taki);case 8:return (P.kacin||[]).map(v=>lab("kacin",v)).join(", ");}return "";}
+function mwRender(){const root=document.querySelector('.prof[data-step="30"]');if(!root)return;const V=mwVis(),n=V.length,G=mwGroups();
+  if(mwI===null)mwI=profDone()?n:0;if(mwI>n)mwI=n;const sum=mwI>=n;
+  G.forEach((g,i)=>{g.classList.toggle("on",!sum&&V[mwI]&&V[mwI][1]===i);if(!g.querySelector(".mw-why")){const w=document.createElement("p");w.className="mw-why";w.textContent="💡 "+MW_WHY[i];g.querySelector("h3").after(w);}});
+  root.classList.toggle("mw-sum",sum);const bb=document.getElementById("me-bub");if(bb)bb.textContent=sum?"Önerilerim artık tam sana göre ✨ Bir şey değişirse buradan güncelle.":"Birkaç kısa soru. Ne giysem, makyaj ve alışveriş önerilerim sana göre gelsin.";
+  let nav=document.getElementById("mw-nav");if(!nav){nav=document.createElement("div");nav.id="mw-nav";nav.className="mw-nav";G[G.length-1].after(nav);}
+  let top=document.getElementById("mw-top");if(!top){top=document.createElement("div");top.id="mw-top";top.className="mw-top";G[0].before(top);}
+  if(sum){top.innerHTML=`<b>Seni böyle tanıyorum 💕</b><span>Değiştirmek istediğine dokunman yeter.</span>`;nav.innerHTML="";
+    let ls=document.getElementById("mw-list");if(!ls){ls=document.createElement("div");ls.id="mw-list";ls.className="mw-list";top.after(ls);}
+    ls.innerHTML=V.map(([g,i],k)=>{const v=mwVal(i);return `<button type="button" class="mw-row" data-mwgo="${k}"><span>${MW_LAB[i]}</span><em class="${v?"":"mw-empty"}">${esc(v||"Henüz seçmedin")}</em><i>›</i></button>`;}).join("");
+    ls.querySelectorAll("[data-mwgo]").forEach(b=>b.onclick=()=>{mwI=+b.dataset.mwgo;mwRender();mwTop();});ls.hidden=false;}
+  else{const ls=document.getElementById("mw-list");if(ls)ls.hidden=true;const i=V[mwI][1];
+    top.innerHTML=`<div class="mw-dots">${V.map((x,k)=>`<i class="${k<mwI?"done":k===mwI?"cur":""}"></i>`).join("")}</div><span>Soru ${mwI+1} / ${n}</span>`;
+    const req=[1,2,3].includes(i),opt=i===0||i===8||i===5;
+    nav.innerHTML=`<button type="button" class="mw-back" ${mwI===0?"disabled":""}>‹ Geri</button><button type="button" class="mw-next">${mwI===n-1?"Bitir ✨":opt&&!mwVal(i)?"Şimdilik geç →":"Devam →"}</button>`;
+    nav.querySelector(".mw-back").onclick=()=>{if(mwI>0){mwI--;mwRender();mwTop();}};
+    nav.querySelector(".mw-next").onclick=()=>{if(req&&!mwVal(i)){const g=G[i];g.classList.remove("mw-shake");void g.offsetWidth;g.classList.add("mw-shake");const w=g.querySelector(".mw-why");if(w)w.textContent="👉 Bunu seçersen önerilerim tam sana göre olur.";return;}mwI++;mwRender();mwTop();};}}
+function mwTop(){const r=document.querySelector('.prof[data-step="30"] .prhero');if(r)window.scrollTo({top:Math.max(0,r.getBoundingClientRect().top+window.scrollY-10),behavior:"smooth"});}
+(function(){const _p=profRender;profRender=function(){_p.apply(this,arguments);try{mwRender();}catch(e){console.error(e);}};
+  const _s=show;show=function(){const was=step;_s.apply(this,arguments);try{if(step===30&&was!==30){mwI=null;mwRender();}}catch(e){}};
+  const sv=document.getElementById("prof-save");if(sv)sv.addEventListener("click",e=>{if(!profDone()){e.stopImmediatePropagation();const miss=["giyim","boy","beden"].find(k=>!prof()[k]);const gi=mwGroups().findIndex(g=>g.querySelector(`[data-prof="${miss}"]`));mwI=mwVis().findIndex(([g,i])=>i===gi);mwRender();mwTop();}},true);
+  /* seçimden sonra tek seçimli sorularda otomatik ilerleme yok — kullanıcı kontrolde */})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
