@@ -7085,7 +7085,7 @@ function petExtra(){const P=petData(),nm=P.name.trim()||"Dostun",k=P.kind,mood=p
   if(all&&petWasAll===false)mfConfetti(`${nm} doydu! 🐾`,PT_C,PT_BG);petWasAll=!!all;
   /* sevgi metresi */
   const L=pCareList(k),C=pcare(),dn=L.filter(x=>C.n.includes(x[0])).length,full=dn===L.length;
-  document.getElementById("plove").innerHTML=`<h3><span class="step no-mi">💛</span>Mutluluk metresi<span class="nextf">${dn}/${L.length}</span></h3>
+  document.getElementById("plove").innerHTML=`<h3><span class="step no-mi">💛</span>${P.name.trim()?esc(trEk(P.name.trim(),"gen"))+" ":""}mutluluk kalbi<span class="nextf">${dn}/${L.length}</span></h3>
     <div class="pl-meter"><svg viewBox="0 0 24 22" class="pl-heart"><defs><clipPath id="plc"><path d="M12 21C5 15 1 11.5 1 7a5.5 5.5 0 0 1 11-1 5.5 5.5 0 0 1 11 1c0 4.5-4 8-11 14z"/></clipPath></defs><path d="M12 21C5 15 1 11.5 1 7a5.5 5.5 0 0 1 11-1 5.5 5.5 0 0 1 11 1c0 4.5-4 8-11 14z" fill="#F7E1D0"/><rect clip-path="url(#plc)" x="0" y="${(22-22*dn/L.length).toFixed(1)}" width="24" height="22" fill="#F4A3A8" class="pl-fill"/><path d="M12 21C5 15 1 11.5 1 7a5.5 5.5 0 0 1 11-1 5.5 5.5 0 0 1 11 1c0 4.5-4 8-11 14z" fill="none" stroke="#E2688A" stroke-width="1.2"/></svg>
     <p>${full?`${esc(nm)} dünyanın en mutlu ${k==="kedi"?"kedisi":k==="kopek"?"köpeği":k==="kus"?"kuşu":"dostu"} 💛`:dn?`${esc(nm)} mutlu oluyor, devam! 🐾`:`Bugün ${esc(nm)} için ne yaptın?`}</p></div>
     <div class="pl-acts">${L.map(([id,e,l])=>`<button type="button" class="pl-a${C.n.includes(id)?" on":""}" data-pc="${id}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div>`;
