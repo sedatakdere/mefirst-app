@@ -6698,11 +6698,14 @@ function bagCard(){const E=ev(),tot=E.shop.length,done=E.shop.filter(x=>x.done).
      <circle cx="60" cy="82" r="16" fill="#FFF4E6" opacity=".55"/><text x="60" y="88" font-size="16" text-anchor="middle" font-weight="800" fill="#8E3B22">${all?"✓":open}</text></svg></div>
     <div class="bag-i"><b>${!tot?"Poşet boş":all?"Sepet tamam! 🎉":open+" ürün alınacak"}</b><small>${!tot?"Aşağıdan dokunarak doldurmaya başla":all?"Hepsi alındı, eve dönüş vakti 🏡":`${done} alındı · ${open} kaldı`}</small>${tot?`<span class="bag-bar"><i style="width:${Math.round(100*done/tot)}%"></i></span>`:""}</div></div>`;}
 /* Ne pişsin çarkı */
+function whLines(t){const w=t.split(/\s+/);const out=[];for(let i=0;i<w.length;i++){if(w[i].length<=3&&i<w.length-1){w[i+1]=w[i]+" "+w[i+1];continue;}out.push(w[i]);}
+  while(out.length>3){const x=out.pop();out[out.length-1]+=" "+x;}return out;}
 let whRot=0,whRes=null,whBusy=false;
 function wheelCard(){const list=DISH.filter(d=>dcat==="hepsi"||d[1]===dcat);const di=di0();const W=[];for(let i=0;i<Math.min(8,list.length);i++)W.push(list[(di*3+i*Math.max(1,Math.floor(list.length/8)))%list.length]);
   const uniq=[...new Map(W.map(d=>[d[0],d])).values()];const n=uniq.length;if(n<2)return "";const a=360/n;const cols=["#E07A4F","#E2A93B","#7A8B4A","#F2C8A0","#B8502E","#EFD58C","#9AAB62","#F6E3C8"];
-  const sl=uniq.map((d,i)=>{const a0=(i*a-90)*Math.PI/180,a1=((i+1)*a-90)*Math.PI/180;const x0=60+56*Math.cos(a0),y0=60+56*Math.sin(a0),x1=60+56*Math.cos(a1),y1=60+56*Math.sin(a1);const mid=i*a+a/2;const nm=d[0].length>13?d[0].slice(0,12)+"…":d[0];
-    return `<path d="M60 60L${x0.toFixed(2)} ${y0.toFixed(2)}A56 56 0 0 1 ${x1.toFixed(2)} ${y1.toFixed(2)}Z" fill="${cols[i%8]}" stroke="#FFF4E6" stroke-width="1.5"/><text transform="rotate(${mid} 60 60)" x="60" y="15" font-size="5.6" font-weight="800" text-anchor="middle" fill="${[3,5,7].includes(i%8)?"#8E3B22":"#FFF8EE"}">${esc(nm)}</text>`;}).join("");
+  const sl=uniq.map((d,i)=>{const a0=(i*a-90)*Math.PI/180,a1=((i+1)*a-90)*Math.PI/180;const x0=60+56*Math.cos(a0),y0=60+56*Math.sin(a0),x1=60+56*Math.cos(a1),y1=60+56*Math.sin(a1);const mid=i*a+a/2;const L=whLines(d[0]);const sinh=Math.sin(Math.PI/n);
+    const tx=L.map((ln,j)=>{const y=14+j*7.2,r=60-y,w=2*r*sinh*.86;const fs=Math.max(4.2,Math.min(6.4,w/(ln.length*.56)));return `<tspan x="60" y="${y.toFixed(1)}" font-size="${fs.toFixed(2)}">${esc(ln)}</tspan>`;}).join("");
+    return `<path d="M60 60L${x0.toFixed(2)} ${y0.toFixed(2)}A56 56 0 0 1 ${x1.toFixed(2)} ${y1.toFixed(2)}Z" fill="${cols[i%8]}" stroke="#FFF4E6" stroke-width="1.5"/><text transform="rotate(${mid} 60 60)" font-weight="800" text-anchor="middle" fill="${[3,5,7].includes(i%8)?"#8E3B22":"#FFF8EE"}">${tx}</text>`;}).join("");
   wheelCard.list=uniq;
   return `<div class="lcard whcard"><h3><span class="step no-mi">🎡</span>Bu akşam ne pişsin?<span class="nextf">${GUN7[eday]}</span></h3>
     <div class="wh-w"><div class="wh-ptr"></div><svg viewBox="0 0 120 120" class="wh" id="wh" style="transform:rotate(${whRot}deg)">${sl}<circle cx="60" cy="60" r="11" fill="#FFF4E6" stroke="#E2A93B" stroke-width="2"/><text x="60" y="64" font-size="10" text-anchor="middle">🍲</text></svg></div>
