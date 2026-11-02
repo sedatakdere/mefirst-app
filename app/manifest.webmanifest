@@ -1,7 +1,7 @@
 {
   "name": "Me First · Önce sen",
   "short_name": "Me First",
-  "description": "Kadınlar ve anneler için kişisel yardımcın: kombin, ritüeller, döngü, çocuklar ve ikiniz.",
+  "description": "Kadınlar ve anneler için kişisel yardımcın: ritüeller, kitaplar, döngü, çocuklar ve ikiniz.",
   "lang": "tr",
   "dir": "ltr",
   "id": "/app/",
@@ -81,13 +81,13 @@
       ]
     },
     {
-      "name": "Ne giysem?",
-      "short_name": "Ne giysem",
-      "description": "Günün kombini",
-      "url": "/app/?go=style",
+      "name": "Kitap köşem",
+      "short_name": "Kitap",
+      "description": "Kitapların ve imza günleri",
+      "url": "/app/?go=kitap",
       "icons": [
         {
-          "src": "/icons/sc-style.png",
+          "src": "/icons/sc-kitap.png",
           "sizes": "96x96",
           "type": "image/png"
         }
