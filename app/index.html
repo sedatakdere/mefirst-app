@@ -8027,7 +8027,7 @@ function kbbSet(el,ic,tx,on){el.innerHTML=`<i class="no-mi">${ic}</i><span>${tx}
 
 /* istek listesi kısayolu */
 function ktWishChip(){const P=document.getElementById("ktpanel");if(!P||kttab!=="oneri")return;const n=kt().shelf.filter(x=>x.s==="istek").length;let c=document.getElementById("kt-wchip");
-  if(!n){if(c)c.remove();return;}if(!c){c=document.createElement("button");c.type="button";c.id="kt-wchip";c.className="kt-wchip";const m=P.querySelector(".ktmood");(m||P.firstChild)&&P.insertBefore(c,m||P.firstChild);c.onclick=()=>{kttab="raf";kitapRender();ktSettle();};}
+  if(!n){if(c)c.remove();return;}if(!c){c=document.createElement("button");c.type="button";c.id="kt-wchip";c.className="kt-wchip";const m=P.querySelector(".ktmood");(m||P.firstChild)&&P.insertBefore(c,m||P.firstChild);c.onclick=()=>{kttab="raf";ktShelfI=1;kitapRender();ktSettle();};}
   c.innerHTML=`<span class="no-mi">💝</span><b>İstek listem</b><i>${n}</i><em>›</em>`;}
 (function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{ktWishChip();}catch(e){}};})();
 
