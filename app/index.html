@@ -9220,12 +9220,15 @@ falRounds3=(function(){return function(P){let seed=7;P.forEach((x,i)=>{x.order.f
     [0,1,2].forEach(i=>{const inp=document.getElementById("kf-p"+i);if(!inp)return;inp.onchange=async e=>{const f=e.target.files&&e.target.files[0];e.target.value="";if(!f)return;
       const lab=document.querySelector(`label[for="kf-p${i}"]`);if(lab)lab.classList.add("busy");
       try{const r=await falPhoto(f);const dup=KF.phs.some((x,j)=>j!==i&&x&&x.sig===r.sig);
-        if(dup){KF.perr[i]="Bu fotoğrafı zaten yükledin 😄 Fincanı çevirip yeni bir açıdan çek.";}
-        else if(!r.ok){KF.perr[i]=r.why;KF.prej=KF.prej||[];KF.prej[i]=r;}else{KF.perr[i]=null;KF.phs[i]=r;}}catch(err){KF.perr[i]="Bu fotoğraf okunamadı, bir daha dener misin? ☕";}
+        if(dup){KF.perr[i]=i===2?"Bu fotoğrafı zaten yükledin 😄 Burada tabağın fotoğrafı lazım.":"Bu fotoğrafı zaten yükledin 😄 Fincanı çevirip yeni bir açıdan çek.";}
+        else if(!r.ok){KF.perr[i]=falWhy(r.why,i);KF.prej=KF.prej||[];KF.prej[i]=r;}else{KF.perr[i]=null;KF.phs[i]=r;}}catch(err){KF.perr[i]="Bu fotoğraf okunamadı, bir daha dener misin? ☕";}
       keyRender();if(KF.perr[i]){const sl=document.querySelector(`label[for="kf-p${i}"]`);if(sl){sl.classList.add("mw-shake");}}};});
-    KF.perr.forEach((m,i)=>{if(!m)return;const sl=document.querySelector(`label[for="kf-p${i}"]`);if(sl){sl.classList.add("err");const t=sl.querySelector(".kf-3t small");if(t)t.innerHTML=`<span class="kf-perr">⚠️ ${esc(m)}</span>${KF.prej&&KF.prej[i]?`<button type="button" class="kf-anyway" data-any="${i}">Bu benim fincanım, yine de kullan ✓</button>`:""}`;}});
+    KF.perr.forEach((m,i)=>{if(!m)return;const sl=document.querySelector(`label[for="kf-p${i}"]`);if(sl){sl.classList.add("err");const t=sl.querySelector(".kf-3t small");if(t)t.innerHTML=`<span class="kf-perr">⚠️ ${esc(m)}</span>${KF.prej&&KF.prej[i]?`<button type="button" class="kf-anyway" data-any="${i}">${i===2?"Bu benim tabağım":"Bu benim fincanım"}, yine de kullan ✓</button>`:""}`;}});
     document.querySelectorAll("[data-any]").forEach(b=>b.onclick=e=>{e.preventDefault();e.stopPropagation();const i=+b.dataset.any;KF.phs[i]=KF.prej[i];KF.prej[i]=null;KF.perr[i]=null;keyRender();});}catch(e){console.error(e);}};})();
 document.addEventListener("click",e=>{if(e.target&&(e.target.id==="kf-new"||e.target.id==="kf-gophotos"))KF.perr=[null,null,null];},true);
+
+function falWhy(w,i){if(i!==2)return w;return w.replace("fincana hiç benzemiyor","tabağa hiç benzemiyor").replace("Burada fincanın açık renkli içini göremedim. Fincanı yakından, ışıkta çeker misin?","Tabağın açık renkli yüzeyini göremedim. Tabağı yakından, ışıkta çeker misin?")
+  .replace("Telve göremedim 🤔 Fincanı kapatıp biraz bekledin mi? İçinde kahve izi olmalı.","Tabakta telve göremedim 🤔 Fincanı tabağa ters kapatıp beklettin mi? Tabağa biraz telve akmış olmalı.").replace("fincanın içi tam görünmüyor","tabak tam görünmüyor");}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
