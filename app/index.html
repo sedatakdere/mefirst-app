@@ -9044,7 +9044,7 @@ function falScan3(P,cb){const O=document.getElementById("zsh");O.innerHTML=`<div
 document.addEventListener("click",e=>{if(e.target&&e.target.id==="kf-new"){KF.phs=null;try{sessionStorage.removeItem("mefirst-kfph3");}catch(_){}}},true);
 
 /* ===== v212: falcı ritüeli — kararan ortam, şekillerin üzerinde gezen ışık, yavaş yorum ===== */
-function falRitual(P,RR,cb){const O=document.getElementById("zsh");O.classList.add("kf-dark");
+function falRitual(P,RR,cb){const O=document.getElementById("zsh");O.classList.add("kf-dark");mfWake(true);
   const per=[[...RR[0],...RR[1]],[...RR[2],...RR[3]],[...RR[4]]].map((a,i)=>a.slice(0,i?2:3));
   const T=[["Fincanın içine bakıyorum…","dipte ve ortada"],["Şimdi kulp tarafına…","evinde ve kenarda"],["Ve tabak…","dileğinin cevabı"]];
   O.innerHTML=`<div class="kfr"><div class="kfr-smoke"><i></i><i></i><i></i></div><div class="kfr-dust">${Array.from({length:18},(_,i)=>`<i style="--x:${(i*53)%100}%;--d:${(i*.7)%6}s;--s:${.5+(i%4)*.3}"></i>`).join("")}</div>
@@ -9052,9 +9052,9 @@ function falRitual(P,RR,cb){const O=document.getElementById("zsh");O.classList.a
    <div class="kfr-h"><small id="kfr-k">1 / 3 · ${FPH[0][1]}</small><h2 id="kfr-t">Fincanına bakıyorum…</h2></div>
    <div class="kfr-c" id="kfr-c"><img id="kfr-i" alt=""><svg class="kfr-trail" viewBox="0 0 100 100" preserveAspectRatio="none"><path id="kfr-p" d=""/></svg><span class="kfr-grid"></span><span class="kfr-sw" id="kfr-w"></span><span class="kfr-ring" id="kfr-r"></span><span class="kfr-orb" id="kfr-o"></span><div id="kfr-l"></div></div>
    <p class="kfr-n" id="kfr-n"></p><div class="kfr-cd"><span class="kfr-candle"></span></div><button type="button" class="kfr-skip" id="kfr-s" hidden>Hemen göster ›</button></div>`;
-  document.getElementById("zs-x").onclick=()=>{O.classList.remove("kf-dark");zodClose();};
+  document.getElementById("zs-x").onclick=()=>{stop=true;mfWake(false);O.classList.remove("kf-dark");zodClose();};
   let stop=false,raf=0;const sk=document.getElementById("kfr-s");setTimeout(()=>{if(sk&&sk.isConnected)sk.hidden=false;},6000);
-  const fin=()=>{if(stop)return;stop=true;cancelAnimationFrame(raf);O.classList.remove("kf-dark");cb();};sk.onclick=fin;
+  const fin=()=>{if(stop)return;stop=true;cancelAnimationFrame(raf);O.classList.remove("kf-dark");mfWake(false);cb();};sk.onclick=fin;
   const wait=ms=>new Promise(r=>setTimeout(r,ms));
   const type=async(el,txt,sp=38)=>{el.textContent="";for(const ch of txt){if(stop)return;el.textContent+=ch;await wait(sp);}};
   const orb=document.getElementById("kfr-o"),path=document.getElementById("kfr-p"),lab=document.getElementById("kfr-l"),img=document.getElementById("kfr-i"),nar=document.getElementById("kfr-n");
@@ -9105,6 +9105,13 @@ const FICO=[`<svg viewBox="0 0 100 100" class="kf-ico"><defs><linearGradient id=
  <circle cx="50" cy="52" r="24" fill="#F7EFE4"/><circle cx="50" cy="52" r="24" fill="none" stroke="url(#fsG)" stroke-width="1.5"/>
  <path d="M38 50q5-9 13-5t11 6q-2 9-11 9t-13-10z" fill="#6B3E26" opacity=".9"/><circle cx="60" cy="61" r="2.6" fill="#6B3E26"/><circle cx="40" cy="61" r="1.8" fill="#6B3E26"/><circle cx="56" cy="42" r="1.5" fill="#6B3E26"/>
  <path d="M44 48q4-3 8 0" fill="none" stroke="#A0673F" stroke-width="1.5" stroke-linecap="round"/></svg>`];
+
+/* ekran kararmasın (fal seansı, sayaçlar): Screen Wake Lock */
+let mfWL=null,mfWLwant=false;
+async function mfWake(on){mfWLwant=on;try{if(on){if(!mfWL&&"wakeLock" in navigator){mfWL=await navigator.wakeLock.request("screen");mfWL.addEventListener("release",()=>{mfWL=null;});}}else if(mfWL){await mfWL.release();mfWL=null;}}catch(e){mfWL=null;}}
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&mfWLwant)mfWake(true);});
+
+(function(){const _t=gsTick;gsTick=function(){_t.apply(this,arguments);try{if(gsRun&&!mfWLwant)mfWake(true);}catch(e){}};const _e=gsEnd;gsEnd=function(){const r=_e.apply(this,arguments);try{mfWake(false);}catch(e){}return r;};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
