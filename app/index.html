@@ -4662,6 +4662,13 @@ html[data-mf="dusk"] .mp-set{background:rgba(46,30,52,.85)}
 .kf-fal2 #kf-n{min-height:0;height:58px!important;margin-top:8px}
 .kf-fal2 #kf-close{margin-top:10px}
 .kf-fal2 .kf-ph-or{margin:12px 0 10px!important}
+
+/* v254 fal seçim ekranı */
+.kf-note{margin:12px 8px 0;text-align:center;font-size:12.5px;line-height:1.45;color:#8A6A7A}
+.kf-chs{display:flex;flex-direction:column;gap:12px;margin-top:10px}
+.kf-chs .kf-phb{border:0;font:inherit;text-align:left;width:100%}
+.kf-phb.kf-self{background:linear-gradient(135deg,#C98AD8,#8A5BC8);box-shadow:0 16px 30px -18px rgba(110,60,160,.9)}
+.kf-rec{display:inline-block;font-style:normal;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:1px 8px;margin-bottom:3px}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -7098,8 +7105,7 @@ function falHTML(){const t=KF.st;KF.rounds=KF.rounds||[];
   if(t==="niyet")return `<div class="kf-hero sm"><h2>Fincanım</h2><p>Kahveni yudum yudum iç, sonra niyetini tut.</p></div>${cup(false)}
     <div class="g-box"><label class="kf-lab" for="kf-n">Niyetin <small>(isteğe bağlı; kimse görmez)</small></label><textarea id="kf-n" maxlength="120" rows="2" placeholder="İçinden geçeni yaz ya da sadece içinden tut…">${esc(KF.n||"")}</textarea>
     <button class="btn" id="kf-close" type="button">Fincanı kapat ☕</button></div>
-    <div class="kf-ph-or"><span>ya da</span></div>
-    <button type="button" class="kf-phb" id="kf-gophotos"><span class="no-mi">📸</span><span><b>Fincanımın fotoğraflarını çek</b><small>3 fotoğraf: fincanın içi, kulp tarafı ve tabak. Telveye ben bakayım</small></span><em>›</em></button>`;
+    <p class="kf-note">Fincanı kapattıktan sonra ister şekilleri kendin seç, ister fotoğrafını çek; telveye ben bakayım ✨</p>`;
   if(t==="wait"){const left=Math.max(0,Math.ceil((KF.end-Date.now())/1000));return `<div class="kf-hero sm"><h2>Fincan soğuyor…</h2><p>Telve yerine otursun; sen de bu arada derin bir nefes al.</p></div>${cup(true)}
     <div class="kf-timer" id="kf-t">${Math.floor(left/60)}:${String(left%60).padStart(2,"0")}</div><button class="ghost kf-skip" id="kf-skip" type="button">Sabredemedim, hemen bakalım 😅</button>`;}
   if(t==="photos")return falPhotosHTML();
@@ -9693,6 +9699,15 @@ function memMPbind(){const o=document.getElementById("mp-open");if(o)o.onclick=(
   const c=document.getElementById("mp-cancel");if(c)c.onclick=()=>{MPsetup=false;keyRender();};
   const g=document.getElementById("mp-go");if(g)g.onclick=()=>{MP={p:MPsetup.sel.map(n=>({n,s:0})),cur:0};MPsetup=false;memNew(MG.lv);keyRender();};
   ["mp-exit","mp-exit2"].forEach(id=>{const e=document.getElementById(id);if(e)e.onclick=()=>{MP=null;memNew(MG.lv);keyRender();};});}
+
+/* v254: önce fincanı kapat, sonra yolunu seç */
+(function(){const _h=falHTML;falHTML=function(){try{if(KF.st==="pick"&&!(KF.rounds&&KF.rounds.length)&&!KF.ch){
+  return `<div class="kf-hero sm"><h2>Fincanın hazır</h2><p>Telve yerine oturdu ✨ Nasıl bakalım?</p></div>${falCup(true)}
+   <div class="kf-chs">
+    <button type="button" class="kf-phb" id="kf-gophotos"><span class="no-mi">📸</span><span><i class="kf-rec">Önerilen</i><b>Fincanımın fotoğraflarını çek</b><small>3 fotoğraf: fincanın içi, kulp tarafı ve tabak. Telveye ben bakayım</small></span><em>›</em></button>
+    <button type="button" class="kf-phb kf-self" id="kf-chself"><span class="no-mi">🔮</span><span><b>Şekilleri ben seçeyim</b><small>Fincanına bak, gördüğün şekillere dokun; yorumu ben yapayım</small></span><em>›</em></button>
+   </div>`;}}catch(e){}return _h.apply(this,arguments);};
+ const _b=falBind;falBind=function(){_b.apply(this,arguments);try{const c=document.getElementById("kf-chself");if(c)c.onclick=()=>{KF.ch=1;keyRender();document.getElementById("zsh").scrollTop=0;};}catch(e){}};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
