@@ -4397,6 +4397,22 @@ html[data-mf="dusk"] .kf-3t b{color:#FBE3EE}html[data-mf="dusk"] .kf-3t small{co
 @keyframes kfRv{from{opacity:0;transform:translateY(18px);filter:blur(4px)}to{opacity:1;transform:none;filter:none}}
 .kf-rv>.kf-open{opacity:1;animation:none;min-height:1.4em}
 @media (prefers-reduced-motion:reduce){.kf-rv>*{animation:none;opacity:1}}
+
+/* v213 lazer tarama */
+.kfr-grid{position:absolute;inset:0;border-radius:50%;z-index:1;pointer-events:none;background:repeating-radial-gradient(circle at 50% 50%,transparent 0 9%,rgba(255,211,110,.14) 9% 9.4%);mix-blend-mode:screen}
+.kfr-sw{position:absolute;left:50%;top:50%;width:100%;height:100%;border-radius:50%;z-index:2;pointer-events:none;opacity:0;transition:opacity .4s;background:conic-gradient(from 0deg,rgba(255,211,110,0) 0deg,rgba(255,211,110,0) 300deg,rgba(255,211,110,.38) 352deg,rgba(255,246,214,.75) 360deg);mix-blend-mode:screen}
+.kfr-ring{position:absolute;left:50%;top:50%;width:0;height:0;transform:translate(-50%,-50%);border-radius:50%;z-index:3;pointer-events:none;opacity:0;transition:opacity .4s;border:3px solid #FFE16B;box-shadow:0 0 18px 4px rgba(255,200,90,.75),inset 0 0 18px 4px rgba(255,200,90,.45),0 0 0 6px rgba(255,120,200,.18)}
+.kfr-dot{position:absolute;z-index:3;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:radial-gradient(circle,#FFF6D6 0 30%,#FFD36E 55%,transparent 72%);box-shadow:0 0 14px 4px rgba(255,200,90,.7);animation:kfrDot .8s cubic-bezier(.2,1.6,.4,1) both}
+.kfr-dot::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(255,140,210,.8);animation:kfrHit 1.1s ease-out forwards}
+@keyframes kfrDot{from{transform:scale(0)}to{transform:scale(1)}}
+.kfr-orb{transition:opacity .4s}
+.kfr-c{animation:kfrGlow 3.2s ease-in-out infinite}
+@keyframes kfrGlow{50%{box-shadow:0 0 0 6px #2A1A20,0 0 0 9px #F2C26B,0 0 80px 18px rgba(255,140,200,.3)}}
+.kfr-h h2{animation:kfrHue 6s ease-in-out infinite}
+@keyframes kfrHue{50%{text-shadow:0 0 26px rgba(255,140,210,.6)}}
+.kfr-c{width:min(300px,78vw)!important;height:min(300px,78vw)!important;aspect-ratio:auto!important;flex:none}
+.kf-ico{width:86%;height:86%}
+.kf-3c:has(.kf-ico){background:linear-gradient(135deg,#FFF4F8,#EAFBF8)}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -8966,7 +8982,13 @@ async function falPhoto(file){const O=document.getElementById("zsh");const url=a
   for(let y=0;y<G;y++)for(let x=0;x<G;x++){const dx=x-G/2+.5,dy=y-G/2+.5,r=Math.sqrt(dx*dx+dy*dy)/(G/2);const v=L[y*G+x];const dark=Math.max(0,avg-v)/255;
     const ri=r<.33?0:r<.62?1:r<.92?2:4;const k=(dx>G*.18&&Math.abs(dy)<G*.2)?3:ri;reg[k]+=dark;cnt[k]++;if(r<.92)cells.push([dark,x,y]);}
   const tex=L.reduce((a,v,i)=>a+(i%G?Math.abs(v-L[i-1]):0),0)/(G*G);
-  cells.sort((a,b)=>b[0]-a[0]);const spots=[];cells.forEach(c=>{if(spots.length<6&&c[0]>.08&&spots.every(s=>Math.hypot(s[0]-c[1],s[1]-c[2])>7))spots.push([c[1],c[2]]);});
+  /* telve: porselene göre koyu ve kahverengi, fincanın içinde (merkez daire) */
+  const H=64,c2=document.createElement("canvas");c2.width=c2.height=H;const x2=c2.getContext("2d");x2.drawImage(im,(im.width-sq)/2,(im.height-sq)/2,sq,sq,0,0,H,H);const D2=x2.getImageData(0,0,H,H).data;
+  const LL=new Float32Array(H*H),BR=new Float32Array(H*H);for(let i=0;i<H*H;i++){const r=D2[i*4],g=D2[i*4+1],b=D2[i*4+2];LL[i]=.299*r+.587*g+.114*b;BR[i]=Math.max(0,(r-b)/255)*(r>=g*.92?1:.4);}
+  const W=5,LM=new Float32Array(H*H);for(let y=0;y<H;y++)for(let x=0;x<H;x++){let a=0,n=0;for(let yy=Math.max(0,y-W);yy<=Math.min(H-1,y+W);yy++)for(let xx=Math.max(0,x-W);xx<=Math.min(H-1,x+W);xx++){a+=LL[yy*H+xx];n++;}LM[y*H+x]=a/n;}
+  const gc=[];for(let y=0;y<H;y++)for(let x=0;x<H;x++){const dx=x-H/2+.5,dy=y-H/2+.5,rr=Math.sqrt(dx*dx+dy*dy)/(H/2);if(rr>.74)continue;const i=y*H+x;const con=Math.max(0,LM[i]-LL[i])/255;const g=con*(.45+BR[i])*(LM[i]>70?1:.3);gc.push([g,x,y,rr]);}
+  gc.sort((a,b)=>b[0]-a[0]);const spots=[];gc.forEach(c=>{if(spots.length<7&&c[0]>.03&&spots.every(s=>Math.hypot(s[0]-c[1]*G/H,s[1]-c[2]*G/H)>6))spots.push([c[1]*G/H,c[2]*G/H]);});
+  if(spots.length<3){cells.sort((a,b)=>b[0]-a[0]);cells.forEach(c=>{const dx=c[1]-G/2,dy=c[2]-G/2;if(spots.length<5&&Math.hypot(dx,dy)<G*.36&&spots.every(s=>Math.hypot(s[0]-c[1],s[1]-c[2])>6))spots.push([c[1],c[2]]);});}
   const feat=reg.map((v,i)=>cnt[i]?v/cnt[i]:0);
   /* bölge başına şekil seç: özelliklere göre, aynı fotoğraf hep aynı fal */
   let seed=Math.round(tex*10)*7+feat.reduce((a,v,i)=>a+Math.round(v*1000)*(i+3),0);const rnd=()=>{seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;};
@@ -8993,7 +9015,7 @@ document.addEventListener("click",e=>{if(e.target&&e.target.id==="kf-new"){KF.ph
 const FPH=[["☕","Fincanın içi","Fincanı yukarıdan, içi tam görünecek şekilde çek"],["🫖","Kulp tarafı","Fincanı kulpu sana bakacak şekilde çevir, iç yanını çek"],["🍽","Tabak","Tabağı ters çevirdiğin hâliyle yukarıdan çek"]];
 function falPhotosHTML(){KF.phs=KF.phs||[null,null,null];const n=KF.phs.filter(Boolean).length;
   return `<div class="kf-hero sm"><h2>Fincanını göster</h2><p>Üç fotoğraf: fincanın içi, kulp tarafı ve tabak. Ne kadar net, o kadar konuşkan ☕</p></div>
-   <div class="kf-3">${FPH.map((f,i)=>{const x=KF.phs[i];return `<label class="kf-3s${x?" ok":""}${!x&&KF.phs.slice(0,i).every(Boolean)?" next":""}" for="kf-p${i}"><span class="kf-3c">${x?`<img src="${x.thumb}" alt=""><b class="no-mi">✓</b>`:`<span class="no-mi">${f[0]}</span>`}</span><span class="kf-3t"><b>${i+1}. ${f[1]}</b><small>${x?"Hazır · değiştirmek için dokun":f[2]}</small></span></label><input type="file" id="kf-p${i}" accept="image/*" capture="environment" hidden>`;}).join("")}</div>
+   <div class="kf-3">${FPH.map((f,i)=>{const x=KF.phs[i];return `<label class="kf-3s${x?" ok":""}${!x&&KF.phs.slice(0,i).every(Boolean)?" next":""}" for="kf-p${i}"><span class="kf-3c">${x?`<img src="${x.thumb}" alt=""><b class="no-mi">✓</b>`:FICO[i]}</span><span class="kf-3t"><b>${i+1}. ${f[1]}</b><small>${x?"Hazır · değiştirmek için dokun":f[2]}</small></span></label><input type="file" id="kf-p${i}" accept="image/*" capture="environment" hidden>`;}).join("")}</div>
    <button class="btn kf-3go" id="kf-3go" type="button" ${n<3?"disabled":""}>${n<3?`${3-n} fotoğraf daha (${n}/3)`:"Falıma bak ✨"}</button>
    <button class="ghost kf-skip" id="kf-3back" type="button">‹ Vazgeç</button>`;}
 async function falAnalyze(file){const r=await falPhoto(file);/* falPhoto rounds'u kullanmıyoruz; özellikleri yeniden hesapla */
@@ -9023,12 +9045,12 @@ document.addEventListener("click",e=>{if(e.target&&e.target.id==="kf-new"){KF.ph
 
 /* ===== v212: falcı ritüeli — kararan ortam, şekillerin üzerinde gezen ışık, yavaş yorum ===== */
 function falRitual(P,RR,cb){const O=document.getElementById("zsh");O.classList.add("kf-dark");
-  const per=[[...RR[0],...RR[1]],[...RR[2],...RR[3]],[...RR[4]]].map(a=>a.slice(0,3));
+  const per=[[...RR[0],...RR[1]],[...RR[2],...RR[3]],[...RR[4]]].map((a,i)=>a.slice(0,i?2:3));
   const T=[["Fincanın içine bakıyorum…","dipte ve ortada"],["Şimdi kulp tarafına…","evinde ve kenarda"],["Ve tabak…","dileğinin cevabı"]];
   O.innerHTML=`<div class="kfr"><div class="kfr-smoke"><i></i><i></i><i></i></div><div class="kfr-dust">${Array.from({length:18},(_,i)=>`<i style="--x:${(i*53)%100}%;--d:${(i*.7)%6}s;--s:${.5+(i%4)*.3}"></i>`).join("")}</div>
    <button class="zs-x" type="button" id="zs-x" aria-label="Kapat">✕</button>
    <div class="kfr-h"><small id="kfr-k">1 / 3 · ${FPH[0][1]}</small><h2 id="kfr-t">Fincanına bakıyorum…</h2></div>
-   <div class="kfr-c" id="kfr-c"><img id="kfr-i" alt=""><svg class="kfr-trail" viewBox="0 0 100 100" preserveAspectRatio="none"><path id="kfr-p" d=""/></svg><span class="kfr-orb" id="kfr-o"></span><div id="kfr-l"></div></div>
+   <div class="kfr-c" id="kfr-c"><img id="kfr-i" alt=""><svg class="kfr-trail" viewBox="0 0 100 100" preserveAspectRatio="none"><path id="kfr-p" d=""/></svg><span class="kfr-grid"></span><span class="kfr-sw" id="kfr-w"></span><span class="kfr-ring" id="kfr-r"></span><span class="kfr-orb" id="kfr-o"></span><div id="kfr-l"></div></div>
    <p class="kfr-n" id="kfr-n"></p><div class="kfr-cd"><span class="kfr-candle"></span></div><button type="button" class="kfr-skip" id="kfr-s" hidden>Hemen göster ›</button></div>`;
   document.getElementById("zs-x").onclick=()=>{O.classList.remove("kf-dark");zodClose();};
   let stop=false,raf=0;const sk=document.getElementById("kfr-s");setTimeout(()=>{if(sk&&sk.isConnected)sk.hidden=false;},6000);
@@ -9045,13 +9067,19 @@ function falRitual(P,RR,cb){const O=document.getElementById("zsh");O.classList.a
     for(let i=0;i<3&&!stop;i++){const x=P[i];document.getElementById("kfr-k").textContent=`${i+1} / 3 · ${FPH[i][1]}`;
       const c=document.getElementById("kfr-c");c.classList.remove("in");void c.offsetWidth;img.src=x.thumb;c.classList.add("in");lab.innerHTML="";pts=[];path.setAttribute("d","");ox=50;oy=50;orb.style.left="50%";orb.style.top="50%";
       await type(document.getElementById("kfr-t"),T[i][0],32);await type(nar,`Telveyi okuyorum, ${T[i][1]}…`,24);await wait(300);
-      /* ortamı tara: önce rastgele bir tur */
-      await move(25+Math.random()*50,30+Math.random()*40,900);
-      const sp=x.spots.length?x.spots:[[40,40],[60,55],[45,70]];
-      for(let k=0;k<per[i].length&&!stop;k++){const s0=sp[k%sp.length],sym=KSYM[per[i][k]];await move(s0[0],s0[1],850);if(stop)break;
+      /* dipten kenara lazer halka: telve noktaları halka geçtikçe yanar */
+      const sp0=x.spots.length?x.spots:[[40,40],[60,55],[45,70]];const sp=sp0.slice().sort((a,b)=>Math.hypot(a[0]-50,a[1]-50)-Math.hypot(b[0]-50,b[1]-50));
+      orb.style.opacity=0;await type(nar,"Fincanın dibinden kenarına tarıyorum…",26);
+      await new Promise(res=>{const ring=document.getElementById("kfr-r"),sw=document.getElementById("kfr-w");const t0=performance.now(),DUR=i?3800:4800;ring.style.opacity=1;sw.style.opacity=1;const lit=new Set();
+        const st2=now=>{if(stop)return res();const k=Math.min(1,(now-t0)/DUR),R=(k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2)*52;ring.style.width=ring.style.height=(R*2)+"%";sw.style.transform=`translate(-50%,-50%) rotate(${(now-t0)*.22}deg)`;
+          sp0.forEach((p,j)=>{if(!lit.has(j)&&Math.hypot(p[0]-50,p[1]-50)<=R){lit.add(j);const d=document.createElement("i");d.className="kfr-dot";d.style.left=p[0]+"%";d.style.top=p[1]+"%";lab.appendChild(d);if(navigator.vibrate)try{navigator.vibrate(12);}catch(e){}}});
+          if(k<1)raf=requestAnimationFrame(st2);else{ring.style.opacity=0;sw.style.opacity=0;setTimeout(res,400);}};raf=requestAnimationFrame(st2);});
+      orb.style.opacity=1;
+      const LS=[];sp.forEach(p=>{if(LS.every(q=>Math.hypot(q[0]-p[0],q[1]-p[1])>24))LS.push(p);});sp.forEach(p=>{if(LS.length<per[i].length&&!LS.includes(p)&&LS.every(q=>Math.hypot(q[0]-p[0],q[1]-p[1])>14))LS.push(p);});
+      for(let k=0;k<per[i].length&&!stop;k++){const s0=LS[k%LS.length],sym=KSYM[per[i][k]];await move(s0[0],s0[1],950);if(stop)break;
         orb.classList.remove("hit");void orb.offsetWidth;orb.classList.add("hit");if(navigator.vibrate)try{navigator.vibrate(25);}catch(e){}
         const L=document.createElement("div");L.className="kfr-sym";L.style.left=s0[0]+"%";L.style.top=s0[1]+"%";L.innerHTML=`<span class="no-mi">${sym[0]}</span><b>${sym[1]}</b>`;lab.appendChild(L);
-        await type(nar,k===0?`Burada bir ${sym[1].toLocaleLowerCase("tr-TR")} görüyorum…`:k===1?`Hmm… şurada da ${sym[1].toLocaleLowerCase("tr-TR")} var…`:`Bak, bir de ${sym[1].toLocaleLowerCase("tr-TR")}…`,26);await wait(650);}
+        await type(nar,k===0?`Burada bir ${sym[1].toLocaleLowerCase("tr-TR")} görüyorum…`:k===1?`Hmm… şurada da ${sym[1].toLocaleLowerCase("tr-TR")} var…`:`Bak, bir de ${sym[1].toLocaleLowerCase("tr-TR")}…`,30);await wait(700);}
       await wait(300);}
     if(stop)return;document.getElementById("kfr-k").textContent="Fincan konuştu";await type(document.getElementById("kfr-t"),"Falın hazır ✨",50);await type(nar,"Şimdi sana anlatayım…",34);await wait(700);fin();})();}
 /* yorum yavaş yavaş açılsın */
@@ -9059,6 +9087,24 @@ function falRitual(P,RR,cb){const O=document.getElementById("zsh");O.classList.a
     box.classList.add("kf-rv");const parts=[...box.children];parts.forEach((el,i)=>{el.style.animationDelay=(0.4+i*1.1)+"s";});
     const op=box.querySelector(".kf-open");if(op){const t=op.textContent;op.textContent="";let j=0;const iv=setInterval(()=>{op.textContent=t.slice(0,++j);if(j>=t.length)clearInterval(iv);},32);}
     [...O.querySelectorAll(".kf-more,.m-act")].forEach((el,i)=>{el.style.opacity=0;el.style.transition="opacity .6s";setTimeout(()=>el.style.opacity=1,(0.4+parts.length*1.1)*1000);});}}catch(e){console.error(e);}};})();
+
+/* fotoğraf yuvası çizimleri: kulpu sana bakan eğik fincan, telveli fincan tabağı */
+const FICO=[`<svg viewBox="0 0 100 100" class="kf-ico"><defs><linearGradient id="ftB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3FC1C9"/><stop offset="1" stop-color="#1B6E8A"/></linearGradient><linearGradient id="ftG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F6D27A"/><stop offset=".5" stop-color="#FFF1B8"/><stop offset="1" stop-color="#D9A441"/></linearGradient></defs>
+ <path d="M84 44c10 0 12 14 2 16" fill="none" stroke="url(#ftG)" stroke-width="6" stroke-linecap="round"/><circle cx="48" cy="52" r="38" fill="url(#ftB)"/><circle cx="48" cy="52" r="33" fill="url(#ftG)"/><circle cx="48" cy="52" r="30" fill="#F7EFE4"/>
+ <path d="M34 50q4-12 15-8t13 10q-3 12-14 11t-14-13z" fill="#6B3E26" opacity=".9"/><circle cx="62" cy="40" r="2.6" fill="#6B3E26"/><circle cx="33" cy="64" r="2" fill="#6B3E26"/><circle cx="58" cy="66" r="1.6" fill="#6B3E26"/><path d="M40 46q5-3 10 0" fill="none" stroke="#A0673F" stroke-width="1.6" stroke-linecap="round"/></svg>`,
+`<svg viewBox="0 0 100 100" class="kf-ico"><defs><linearGradient id="fiB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3FC1C9"/><stop offset="1" stop-color="#1B6E8A"/></linearGradient><linearGradient id="fiG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F6D27A"/><stop offset=".5" stop-color="#FFF1B8"/><stop offset="1" stop-color="#D9A441"/></linearGradient></defs>
+ <ellipse cx="50" cy="86" rx="34" ry="7" fill="url(#fiB)"/><ellipse cx="50" cy="84.5" rx="30" ry="5.5" fill="url(#fiG)"/>
+ <g transform="rotate(-16 50 56)"><path d="M22 34h56l-6 38a13 13 0 0 1-13 11H41a13 13 0 0 1-13-11z" fill="url(#fiB)"/>
+ <ellipse cx="50" cy="34" rx="28" ry="13" fill="url(#fiG)"/><ellipse cx="50" cy="34.5" rx="24.5" ry="10.5" fill="#F7EFE4"/>
+ <path d="M34 33q7 7 15 3t17 3" fill="none" stroke="#6B3E26" stroke-width="3.4" stroke-linecap="round"/><circle cx="60" cy="30" r="2.4" fill="#6B3E26"/><circle cx="40" cy="39" r="1.8" fill="#6B3E26"/>
+ <path d="M28 50h44" stroke="url(#fiG)" stroke-width="2.4"/>
+ <ellipse cx="50" cy="62" rx="9" ry="10" fill="none" stroke="url(#fiG)" stroke-width="5"/><ellipse cx="50" cy="62" rx="4.5" ry="5.5" fill="#1B6E8A" opacity=".55"/></g></svg>`,
+`<svg viewBox="0 0 100 100" class="kf-ico"><defs><linearGradient id="fsB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3FC1C9"/><stop offset="1" stop-color="#1B6E8A"/></linearGradient><linearGradient id="fsG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F6D27A"/><stop offset=".5" stop-color="#FFF1B8"/><stop offset="1" stop-color="#D9A441"/></linearGradient></defs>
+ <circle cx="50" cy="52" r="40" fill="url(#fsB)"/><circle cx="50" cy="52" r="36" fill="none" stroke="url(#fsG)" stroke-width="3"/>
+ ${[0,1,2,3,4,5,6,7].map(k=>{const a=k/8*Math.PI*2;return `<circle cx="${(50+Math.cos(a)*31).toFixed(1)}" cy="${(52+Math.sin(a)*31).toFixed(1)}" r="2.4" fill="#F49AB8"/>`;}).join("")}
+ <circle cx="50" cy="52" r="24" fill="#F7EFE4"/><circle cx="50" cy="52" r="24" fill="none" stroke="url(#fsG)" stroke-width="1.5"/>
+ <path d="M38 50q5-9 13-5t11 6q-2 9-11 9t-13-10z" fill="#6B3E26" opacity=".9"/><circle cx="60" cy="61" r="2.6" fill="#6B3E26"/><circle cx="40" cy="61" r="1.8" fill="#6B3E26"/><circle cx="56" cy="42" r="1.5" fill="#6B3E26"/>
+ <path d="M44 48q4-3 8 0" fill="none" stroke="#A0673F" stroke-width="1.5" stroke-linecap="round"/></svg>`];
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
