@@ -4413,6 +4413,8 @@ html[data-mf="dusk"] .kf-3t b{color:#FBE3EE}html[data-mf="dusk"] .kf-3t small{co
 .kfr-c{width:min(300px,78vw)!important;height:min(300px,78vw)!important;aspect-ratio:auto!important;flex:none}
 .kf-ico{width:86%;height:86%}
 .kf-3c:has(.kf-ico){background:linear-gradient(135deg,#FFF4F8,#EAFBF8)}
+.kf-3s.err{border-color:#E8344E!important;border-style:solid!important;background:rgba(255,240,242,.92)!important}.kf-perr{color:#C2203A;font-weight:700}
+html[data-mf="dusk"] .kf-3s.err{background:rgba(80,20,30,.6)!important}html[data-mf="dusk"] .kf-perr{color:#FF9AA8}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -6843,10 +6845,10 @@ function falHTML(){const t=KF.st;KF.rounds=KF.rounds||[];
     <div class="kf-syms">${KSYM.map((x,i)=>{const u=used.includes(i);return `<button type="button" class="kf-sym${u?" used":""}" data-i="${i}" aria-pressed="${KF.sel.includes(i)}" ${u?"disabled":""}><span>${x[0]}</span>${x[1]}${u?'<em>✓</em>':""}</button>`;}).join("")}</div>
     <div class="kf-pickbar"><button class="btn" id="kf-read" type="button" ${KF.sel.length?"":"disabled"}>${KF.sel.length?`${ri?"Yoruma ekle":"Falımı yorumla"} (${KF.sel.length}/5)`:"En az bir şekil seç"}</button>
     ${ri?`<button class="ghost kf-skip" id="kf-back2" type="button">Vazgeç, yoruma dön</button>`:`<button class="ghost kf-skip" id="kf-rand" type="button">Göremedim, fincan kendi söylesin 🎲</button><button type="button" class="ghost kf-skip kf-phs" id="kf-gophotos">📸 3 fotoğraf çek, şekilleri ben bulayım</button>`}</div>`;
-  if(t==="res"){const op=dpick(KOPEN,"ko"),cl=dpick(KCLOSE,"kc"),last=KF.rounds.length>=KREG.length;
+  if(t==="res"){const op=ksPick(KOPEN2,1),cl=ksPick(KCLOSE2,2),last=KF.rounds.length>=KREG.length;
     const secs=KF.rounds.map((rd,k)=>`<section class="kf-sec"><h4><span>${k+1}</span>${KREG[Math.min(k,KREG.length-1)][0]} <small>· ${KREG[Math.min(k,KREG.length-1)][1]}</small></h4>
-      <div class="kf-tags">${rd.map(i=>`<span class="kf-tag">${KSYM[i][0]} ${KSYM[i][1]}</span>`).join("")}</div>${rd.map(i=>`<p><b>${KSYM[i][1]}</b> ${KSYM[i][2]}</p>`).join("")}</section>`).join("");
-    const plain=[op,...KF.rounds.map((rd,k)=>KREG[Math.min(k,KREG.length-1)][0]+": "+rd.map(i=>KSYM[i][1]+" — "+KSYM[i][2]).join(" ")),cl].join("\n\n");
+      <div class="kf-tags">${rd.map(i=>`<span class="kf-tag">${KSYM[i][0]} ${KSYM[i][1]}</span>`).join("")}</div>${rd.map(i=>`<p><b>${KSYM[i][1]}</b> ${ksM(i,k)}</p>`).join("")}</section>`).join("");
+    const plain=[op,...KF.rounds.map((rd,k)=>KREG[Math.min(k,KREG.length-1)][0]+": "+rd.map(i=>KSYM[i][1]+" — "+ksM(i,k)).join(" ")),cl].join("\n\n");
     const left=KSYM.length-KF.rounds.flat().length;
     return `<div class="kf-hero sm"><h2>Falın ✨</h2><p>${new Date().toLocaleDateString("tr-TR",{day:"numeric",month:"long",weekday:"long"})} · ${KF.rounds.flat().length} şekil</p></div>
     ${KF.phs&&KF.phs.every(Boolean)?`<div class="kf-r3">${KF.phs.map((x,i)=>`<div class="kf-r3i"><div class="kf-r3c"><img src="${x.thumb}" alt="">${x.spots.slice(0,4).map(p=>`<i style="left:${p[0]}%;top:${p[1]}%"></i>`).join("")}</div><small>${FPH[i][1]}</small></div>`).join("")}</div><p class="kf-r3t">3 fotoğrafından okundu ☕</p>`:""}
@@ -8994,7 +8996,10 @@ async function falPhoto(file){const O=document.getElementById("zsh");const url=a
   let seed=Math.round(tex*10)*7+feat.reduce((a,v,i)=>a+Math.round(v*1000)*(i+3),0);const rnd=()=>{seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;};
   const order=[0,1,2,3].sort((a,b)=>feat[b]-feat[a]);const used=new Set();const rounds=[];
   [0,1,2].forEach(k=>{const n=feat[k]>.12?3:feat[k]>.05?2:1;const rd=[];let g=0;while(rd.length<n&&g<99){g++;const i=Math.floor(rnd()*KSYM.length);if(!used.has(i)){used.add(i);rd.push(i);}}rounds.push(rd);});
-  return {thumb,rounds,spots:spots.map(([x,y])=>[Math.round((x+.5)/G*100),Math.round((y+.5)/G*100)]),order};}
+  let lit=0,grd=0,tot=0,grn=0;gc.forEach(c=>{const i=c[2]*H+c[1];const r=D2[i*4],g=D2[i*4+1],b=D2[i*4+2],mx=Math.max(r,g,b),mn=Math.min(r,g,b);tot++;if(LL[i]>145&&mx-mn<70)lit++;if(c[0]>.05)grd++;if(g>r*1.12&&g>b*1.05)grn++;});
+  const sig=spots.map(p=>p.map(v=>Math.round(v)).join(",")).join(";")+"|"+Math.round(avg);
+  const ok=lit/tot>=.22&&grd/tot>=.012&&grd/tot<=.6&&grn/tot<.35;const why=!ok?(grn/tot>=.35?"Bu fotoğrafta yeşillik var, fincana hiç benzemiyor 🌿":lit/tot<.22?"Burada fincanın açık renkli içini göremedim. Fincanı yakından, ışıkta çeker misin? ☕":grd/tot<.012?"Telve göremedim 🤔 Fincanı kapatıp biraz bekledin mi? İçinde kahve izi olmalı.":"Bu fotoğraf çok koyu; fincanın içi tam görünmüyor."):"";
+  return {ok,why,sig,thumb,rounds,spots:spots.map(([x,y])=>[Math.round((x+.5)/G*100),Math.round((y+.5)/G*100)]),order};}
 function falScan(ph,spots,cb){const O=document.getElementById("zsh");O.innerHTML=`<div class="ob-in zs-in kf-in kf-fal2"><button class="zs-x" type="button" id="zs-x" aria-label="Kapat">✕</button>
   <div class="kf-hero sm"><h2>Fincanın okunuyor…</h2><p>Telvenin izlerine, kenarına, dibine bakıyorum ☕</p></div>
   <div class="kf-scan"><img src="${ph}" alt=""><span class="kf-beam"></span>${spots.map((p,i)=>`<i style="left:${p[0]}%;top:${p[1]}%;animation-delay:${.4+i*.35}s"></i>`).join("")}</div>
@@ -9112,6 +9117,113 @@ async function mfWake(on){mfWLwant=on;try{if(on){if(!mfWL&&"wakeLock" in navigat
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&mfWLwant)mfWake(true);});
 
 (function(){const _t=gsTick;gsTick=function(){_t.apply(this,arguments);try{if(gsRun&&!mfWLwant)mfWake(true);}catch(e){}};const _e=gsEnd;gsEnd=function(){const r=_e.apply(this,arguments);try{mfWake(false);}catch(e){}return r;};})();
+/* mevcut 40 sembol için 2'şer ek yorum (sıra KSYM ile aynı) */
+const KSYM_V=[
+["Bir dostundan uzun zamandır beklediğin bir mesaj gelecek; cevabı seni gülümsetecek.","Kanatların açılıyor; içini daraltan bir şeyden kurtulup ferahlayacaksın."],
+["Yolun açık; ertelediğin bir adımı atmanın tam zamanı.","Kısa bir yolculuk, uzun zamandır görmediğin biriyle buluşturacak seni."],
+["Bolluk kapını çalıyor; küçük bir kazanç günlerini tatlandıracak.","Emeğinin karşılığını alacaksın; biri seni hiç beklemediğin bir şekilde ödüllendirecek."],
+["Sevdiğin biri seni düşünüyor; bir sürpriz yolda.","Kalbinde sakladığın bir dilek, sandığından daha yakın."],
+["Kıskanan gözler var ama sana dokunamaz; senin ışığın daha güçlü.","Etrafındakilerden biri seni çok takdir ediyor, ama söylemeye çekiniyor."],
+["Ailede tatlı bir haber; bir kutlama sofrası görüyorum.","Verilmiş bir sözün tutulacak; güvenin boşa çıkmayacak."],
+["Önündeki iş zor görünse de çıktığında manzara çok güzel olacak.","Sabırla tırmandığın yolun zirvesine az kaldı."],
+["Kökleri sağlam bir ilişki; ailenle bağların güçleniyor.","Ektiğin tohumlar filizleniyor; bir hayalin yeşermeye başlıyor."],
+["Evine huzur geliyor; yeni bir eşya ya da yenilik görüyorum.","Evinin kapısı misafire açılacak; kalabalık ve keyifli bir sofra var."],
+["Uzun zamandır kilitli kalan bir mesele çözülüyor.","Bir sırrın anahtarı sende; doğru zamanda doğru kişiye açacaksın."],
+["Yeni bir kapı aralanıyor; içinden geçmekten korkma.","Biri kapını çalacak; gelen haber yüzünü güldürecek."],
+["Şansın parlıyor; bu ay dileklerin için çok uygun.","Bir hayalin gerçeğe dönmek üzere; sana yol gösteren bir ışık var."],
+["Kendine verdiğin özen meyvesini veriyor; içten içe çiçek açıyorsun.","Biri sana çiçek getirecek; ya da sen kendine bir çiçek alacaksın."],
+["Çevrende dikkat etmen gereken biri var; ama sen yolunu biliyorsun.","Bir değişimin eşiğindesin; eski kabuğunu bırakıp yenileniyorsun."],
+["Adım adım yükseliyorsun; işte ya da evde bir terfi havası var.","Bir hedefe merdiven merdiven yaklaşıyorsun; acele etme, her basamak sağlam."],
+["Hayatına renk katacak yeni bir hobi ya da insan geliyor.","Hafiflik geliyor; omzundaki bir yük kalkıyor."],
+["Hızlı gelişen bir haber; bir işin beklenenden çabuk sonuçlanacak.","Gücün ve enerjin yerinde; istediğin şeye koşarak gideceksin."],
+["Sadık bir dostun sana destek olacak; yalnız değilsin.","Eski bir arkadaşla yeniden bağ kuracaksın."],
+["Bağımsızlığın güçleniyor; kendi kararlarını vermenin keyfini çıkar.","Sezgilerine güven; kalbin sana doğruyu söylüyor."],
+["Yeni bir başlangıç; bir proje ya da bir müjde doğuyor.","Ailende sevinçli bir gelişme var; minik bir mucize kapıda."],
+["Bir davet, bir mektup ya da önemli bir evrak geliyor.","Uzaktan bir haber alacaksın; seni duygulandıracak."],
+["Emeğinin takdir edileceği bir an geliyor; başın dik olacak.","Kendi hayatının kraliçesisin; kararlarında kendinden emin ol."],
+["Küçük bir kaygın var ama gelip geçici; yarın güneş açacak.","Kafandaki karışıklık dağılıyor; netlik geliyor."],
+["Aydınlık günler; enerjin ve neşen etrafına yayılacak.","Bir sorun güneşin altındaki kar gibi eriyecek."],
+["Ufukta bir fırsat görünüyor; yelkenleri şişir.","Uzaklardan bir haber ya da bir yolculuk planı var."],
+["Hayallerin uçuşa geçiyor; uzak bir yer seni çağırıyor.","Beklemediğin bir hızla bir işin yoluna girecek."],
+["Maddi bir rahatlama görünüyor; bir alacak ya da hediye.","Harcamalarına dikkat; ama kısmetin açık, eli boş kalmazsın."],
+["Zamanlama her şey; doğru anı bekle, o an geliyor.","Ertelediğin bir şeyin vakti geldi; saat senin için işliyor."],
+["Bir dileğin dualarla karşılık buluyor; içini ısıtan bir an var.","Karanlık sandığın bir konuya ışık tutacaksın."],
+["Duygusal bir dalgalanma var ama kısa sürecek; sakin limana yaklaşıyorsun.","Değişim rüzgârı esiyor; akışa güven."],
+["Yeni bir dönemin ilk günleri; kalbinde yepyeni bir heves var.","Bir dileğin ay büyüdükçe büyüyecek; sabret."],
+["Acele etmeden ama emin adımlarla hedefine ilerliyorsun.","Uzun ömürlü bir mutluluk; yavaş ama kalıcı."],
+["Bolluk ve güç; ailende güzel bir birliktelik var.","Hafızan güçlü; geçmişten gelen bir bilgi bugün işine yarayacak."],
+["Bilge biri sana yol gösterecek; dinle.","Gece düşüncelerin seni doğru cevaba götürecek."],
+["Hafiflik ve özgürlük; bir yükten kurtuluyorsun.","Küçük bir haber, büyük bir sevinç."],
+["Yeni bir alışveriş ya da hediye kapıda.","Taşıdığın sorumluluklar hafifliyor; biri yardım elini uzatacak."],
+["Bereket ve verimlilik; yeni bir fikir hızla çoğalacak.","Şansın yaver gidecek; küçük bir piyango havası var."],
+["Yeni bir yol, yeni adımlar; bir başlangıç görünüyor.","Bir davet ya da bir gezmeye çıkacaksın."],
+["Seni koruyan biri var; zor anda yanında olacak.","Gelen küçük bir yağmur, ardından gökkuşağı getirecek."],
+["Bir kutlama, bir hediye paketi; seni şımartacaklar.","Hayatında tatlı bir bağ kuruluyor; birileri sana bağlanıyor."]];
+/* yeni 40 sembol: [emoji, ad, [3 yorum]] */
+const KSYM_NEW=[
+["🌙","Ay ışığı",["Gece seni rahatlatan bir sohbet var; içini dökeceksin.","Sezgilerin bu dönem çok güçlü; rüyalarına kulak ver.","Sakin bir dönem başlıyor; kendine dön, dinlen."]],
+["🦋","Uğur böceği",["Küçük şans dokunuşları peşinde; bugün güzel bir tesadüf var.","Beklemediğin bir yerden sevindirici bir haber.","Sağlık ve huzur; içini ferahlatacak bir gelişme."]],
+["🍀","Yonca",["Şans kapında; bir çekiliş, bir fırsat ya da bir sürpriz.","Doğru yerde doğru zamanda olacaksın.","Dileklerinden biri hiç ummadığın bir anda gerçekleşecek."]],
+["🌈","Gökkuşağı",["Zor bir günün ardından renkli bir sürpriz.","Kırgınlıklar bitiyor; barışma havası var.","Hayatına renk katan biri geliyor."]],
+["🎁","Hediye",["Biri seni sevindirmek için bir şey hazırlıyor.","Emeğinin hediyesini alacaksın.","Sen birine sürpriz yapacaksın; o da çok mutlu olacak."]],
+["🔔","Çan",["Müjdeli bir haber geliyor; kulağın çınlayacak.","Bir davet, bir kutlama ya da önemli bir duyuru.","Uzun zamandır beklediğin telefon geliyor."]],
+["🪞","Ayna",["Kendine güzel bakma zamanı; içindeki ışığı fark edeceksin.","Biri seni örnek alıyor; ilham veriyorsun.","Kendinle barışık bir dönem başlıyor."]],
+["🌊","Deniz",["Bir tatil ya da deniz kenarında huzurlu bir gün görünüyor.","Duyguların derin ama berrak; kalbin rahatlıyor.","Uzaklardan bir fırsat dalga dalga geliyor."]],
+["🏔","Zirve",["Bir hedefin tamamlanıyor; gurur duyacağın bir an var.","Zorluğu aştın; artık manzaranın tadını çıkar.","Yükselişin başladı; işinde parlıyorsun."]],
+["🕊","Güvercin",["Barış ve huzur; bir küslük sona eriyor.","Uzaktan iyi bir haber geliyor.","İçini ferahlatan bir haber; omzundaki yük kalkıyor."]],
+["🐝","Arı",["Çalışkanlığının meyvesini alacaksın; bal gibi tatlı bir sonuç.","Kalabalık ama verimli günler; çok iş, çok bereket.","Bir ekip çalışması güzel sonuç verecek."]],
+["🌻","Ayçiçeği",["Yüzünü güneşe dön; neşen geri geliyor.","Sadakat ve sıcaklık; güvenebileceğin biri yanında.","Enerjin yükseliyor; içinde bir yaz havası var."]],
+["🍎","Elma",["Sağlığın ve enerjin yerinde; kendine iyi bakıyorsun.","Tatlı bir aşk ya da yeni bir heves görünüyor.","Bilgiyle gelen bir fırsat; öğrendiğin bir şey işine yarayacak."]],
+["🎈","Balon",["Hafif ve neşeli günler; bir kutlama var.","Çocuklarla ilgili sevindirici bir gelişme.","Kaygılarını bırak; hafifledikçe yükseleceksin."]],
+["💌","Mektup",["İçten bir itiraf ya da güzel bir mesaj geliyor.","Uzun zamandır yazmadığın birine yaz; cevap seni mutlu edecek.","Bir belge ya da onay bekliyorsan, olumlu gelecek."]],
+["🪁","Uçurtma",["Özgürlük ve hafiflik; bir hevesin gökyüzüne yükseliyor.","Çocukluğundan bir anı seni gülümsetecek.","Rüzgâr senden yana; şimdi başla."]],
+["🗝","Eski anahtar",["Geçmişte kalan bir mesele güzel bir şekilde kapanıyor.","Eski bir dostun kapısı yeniden açılıyor.","Aile büyüklerinden bir hatıra ya da miras konusu."]],
+["⚓","Çapa",["Sağlam bir zemin; güvende hissedeceğin bir dönem.","Bir karar netleşiyor; artık kararsızlık yok.","Ailen senin limanın; orada güç toplayacaksın."]],
+["🧭","Pusula",["Yönünü buluyorsun; içindeki ses sana doğruyu gösteriyor.","Bir yolculuk ya da taşınma fikri var.","Kararsız kaldığın konuda bir işaret alacaksın."]],
+["🎶","Nota",["Neşeli bir davet; müzikli, danslı bir akşam.","Bir şarkı sana önemli birini hatırlatacak.","Hayatın ritmi yerine oturuyor; uyum geliyor."]],
+["🍯","Bal",["Tatlı sözler, tatlı günler; ilişkinde balayı havası.","Emeklerinin tatlı karşılığı geliyor.","Ağzından bal damlayan biriyle tanışacaksın."]],
+["🦢","Kuğu",["Zarafet ve sadakat; ilişkin daha da derinleşiyor.","Kendini çok güzel hissedeceğin bir gün.","Bir dönüşümün tam ortasındasın; çok yakışıyor."]],
+["🐞","Uğurlu böcek",["Küçük bir şans dokunuşu; kaybettiğin bir şeyi bulacaksın.","Beklemediğin bir yardım geliyor.","Bugün sana şans getirecek bir renk giy."]],
+["🎀","Kurdele",["Bir kutlamaya hazırlık; senin için özel bir gün yaklaşıyor.","Bir ilişkiye güzel bir bağ atılıyor.","Kendini şımart; bunu hak ediyorsun."]],
+["🧁","Pasta",["Bir doğum günü ya da kutlama sofrası görünüyor.","Tatlı bir sürpriz seni bekliyor.","Mutfaktan güzel kokular; misafir ağırlayacaksın."]],
+["🪴","Saksı çiçeği",["Evine yeni bir canlılık geliyor; bir yenilik yapacaksın.","Sabırla büyüttüğün bir şey çiçek açıyor.","Kendine ayırdığın küçük zamanlar seni büyütüyor."]],
+["🌸","Bahar dalı",["Yeni bir başlangıç; içinde bahar havası esiyor.","Kalbinde yeni bir heyecan filizleniyor.","Bir dostlukta tazelenme var."]],
+["🦉","Gece kuşu",["Geç saatlerde güzel bir fikir gelecek; not al.","Bir sırrı öğreneceksin ama sende güvende.","Bilge birinden bir tavsiye alacaksın."]],
+["🕯","Çifte mum",["Romantik bir akşam görünüyor.","İki kişilik bir dilek; birlikte bir hayal kuruyorsunuz.","Evine sıcaklık ve huzur geliyor."]],
+["🌟","Kayan yıldız",["Bir dilek tut; bu dönem gerçekleşme ihtimali yüksek.","Ani ve güzel bir haber.","Parladığın bir an; herkes seni konuşacak."]],
+["🏡","Bahçeli ev",["Ev, taşınma ya da yuvayı güzelleştirme planı var.","Ailenle huzurlu bir hafta sonu görünüyor.","Uzun vadeli bir hayalin temeli atılıyor."]],
+["🚪","Açık kapı",["Bir fırsat sana gülümsüyor; içeri gir.","Yeni bir çevre, yeni insanlar.","Kapını çalan bir misafir sana iyi gelecek."]],
+["🐠","Süs balığı",["Küçük ama renkli bir kazanç.","Evine neşe getirecek bir gelişme.","Rahat ve keyifli bir dönem."]],
+["🦚","Tavus kuşu",["Göz alıcı bir dönem; görünürlüğün artıyor.","Kendini ifade etmekten çekinme; seni beğenecekler.","Bir davette çok güzel görüneceksin."]],
+["🐇","Beyaz tavşan",["Hızlı bir gelişme; beklediğin şey çabuk olacak.","Bereket ve yeni başlangıçlar.","Çocuklarla ilgili tatlı bir haber."]],
+["🌾","Başak",["Bereketli bir dönem; emeğinin hasadını yapacaksın.","Evine bolluk geliyor.","Sabrının karşılığını alacaksın."]],
+["💎","Pırlanta",["Değerin anlaşılıyor; seni çok kıymetli bulan biri var.","Kalıcı ve değerli bir hediye ya da kazanç.","Zorlukların seni daha da parlatıyor."]],
+["🎡","Dönme dolap",["Eğlenceli bir gezme planı var.","Hayatın çarkı senden yana dönüyor.","Biraz inişli çıkışlı ama keyifli bir dönem."]],
+["🧿","Nazar boncuğu",["Kem gözlerden korunuyorsun; rahat ol.","Biri sana iyi dileklerle dua ediyor.","Kıskançlıklar sana ulaşamıyor; yoluna devam."]],
+["☂️","Renkli şemsiye",["Seni koruyan, kollayan biri var.","Küçük bir sıkıntıyı kolayca atlatacaksın.","Yağmurdan sonra güzel bir sohbet."]]];
+const KOPEN2=["Fincanın sıcak, telvesi konuşkan…","Fincanını çevirdim, bak neler var…","Telve bugün çok cömert davranmış…","Fincanının dibi aydınlık, iyi bir işaret…","Kahven sana söyleyecek çok şey biriktirmiş…","Bu fincanda bir hareket var, durgun değil…","İlk bakışta içimi ferahlatan bir fincan…","Fincanın kenarları hafif, dibi derin… anlatayım…","Telve yollar çizmiş, bak bakalım nereye…","Bu fincan biraz utangaç ama çok şey saklıyor…","Hmm… fincanında güzel bir enerji var…","Kahveyi keyifle içmişsin, fincan da keyifli…","Bu fincanda kalabalık bir sofra görüyorum…","Fincanında küçük işaretler var, hepsi iyi…","Telve tam kıvamında; konuşmaya hazır…","Fincanın kalbin kadar sıcak…","Bu fincan yeni başlangıçlar fısıldıyor…","Fincanının içi bir masal gibi…","Bak, telve kendini resmetmiş…","Fincan dedi ki: önce gülümse, sonra dinle…"];
+const KCLOSE2=["Niyetin kabul olsun; kalbin rahat olsun. 💫","Gerisi senin gülümsemende saklı. ☕","Tabağın aydınlık; dileğin yolda. ✨","Kısmetin açık olsun, yüzün hep gülsün. 🌸","Fincanın kapandı, kapın açıldı. 🚪","Bu hafta kendine iyi bak; güzel şeyler geliyor. 💛","Dileğin, sandığından daha yakın. 🌙","Gönlünden geçen her şey hayra çıksın. 🧿","Fincanın tatlı, günlerin de tatlı olsun. 🍯","Bir dahaki fincanda müjdeyi konuşuruz. 💌","Kalbin hafif, yolun açık olsun. 🕊","Bu fincanı unutma; birkaç gün sonra hatırlayacaksın. 😉","Şans bu dönem senden yana; cesur ol. 🍀","Güzel haberler sırada bekliyor. 🔔","Kendine verdiğin söz tutulacak. 💍","Gülüşün en büyük kısmetin. 😊","Dileğine giden yol çiçeklerle dolu. 🌷","Fincanın son sözü: her şey yoluna giriyor. 🌈","Bugün kendine bir iyilik yap; gerisi gelir. ✨","Kahven bitti ama hikâyen yeni başlıyor. 📖"];
+
+/* ===== v214: fal çeşitliliği (80 şekil × 3 yorum, 20 açılış/kapanış) + fotoğraf kontrolü ===== */
+(function(){try{KSYM.forEach((x,i)=>{x.v=[x[2],...(KSYM_V[i]||[])];});KSYM_NEW.forEach(n=>{const a=[n[0],n[1],n[2][0]];a.v=n[2];KSYM.push(a);});}catch(e){console.error(e);}})();
+function ksSeed(){const src=JSON.stringify(KF.rounds||[])+"|"+(KF.n||"")+"|"+((KF.phs||[]).map(x=>x&&x.sig).join("/"));let h=2166136261;for(const c of src){h^=c.charCodeAt(0);h=Math.imul(h,16777619);}return h>>>0;}
+function ksM(i,k){const v=KSYM[i].v||[KSYM[i][2]];const h=(ksSeed()^Math.imul(i+1,2654435761)^Math.imul(k+3,40503))>>>0;return v[h%v.length];}
+function ksPick(A,salt){return A[((ksSeed()^Math.imul(salt,374761393))>>>0)%A.length];}
+
+/* her bölgede daha az ama daha özel şekil */
+falRounds3=(function(){return function(P){let seed=7;P.forEach((x,i)=>{x.order.forEach((o,j)=>seed=(seed*31+o*(j+1)+i*13)&0x7fffffff);x.spots.forEach(sp=>seed=(seed*17+sp[0]*3+sp[1])&0x7fffffff);});
+  const rnd=()=>{seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;};const used=new Set();const pick=n=>{const rd=[];let g=0;while(rd.length<n&&g<299){g++;const i=Math.floor(rnd()*KSYM.length);if(!used.has(i)){used.add(i);rd.push(i);}}return rd;};
+  const c=x=>x.spots.length>=4?2:1;return [pick(c(P[0])),pick(1),pick(c(P[1])),pick(1),pick(c(P[2]))];};})();
+/* fotoğraf yuvası: kontrol et, uygunsuzsa kabul etme */
+(function(){const _b=falBind;falBind=function(){_b.apply(this,arguments);try{if(KF.st!=="photos")return;KF.perr=KF.perr||[null,null,null];
+    [0,1,2].forEach(i=>{const inp=document.getElementById("kf-p"+i);if(!inp)return;inp.onchange=async e=>{const f=e.target.files&&e.target.files[0];e.target.value="";if(!f)return;
+      const lab=document.querySelector(`label[for="kf-p${i}"]`);if(lab)lab.classList.add("busy");
+      try{const r=await falPhoto(f);const dup=KF.phs.some((x,j)=>j!==i&&x&&x.sig===r.sig);
+        if(dup){KF.perr[i]="Bu fotoğrafı zaten yükledin 😄 Fincanı çevirip yeni bir açıdan çek.";}
+        else if(!r.ok){KF.perr[i]=r.why;}else{KF.perr[i]=null;KF.phs[i]=r;}}catch(err){KF.perr[i]="Bu fotoğraf okunamadı, bir daha dener misin? ☕";}
+      keyRender();if(KF.perr[i]){const sl=document.querySelector(`label[for="kf-p${i}"]`);if(sl){sl.classList.add("mw-shake");}}};});
+    KF.perr.forEach((m,i)=>{if(!m)return;const sl=document.querySelector(`label[for="kf-p${i}"]`);if(sl){sl.classList.add("err");const t=sl.querySelector(".kf-3t small");if(t)t.innerHTML=`<span class="kf-perr">⚠️ ${esc(m)}</span>`;}});}catch(e){console.error(e);}};})();
+document.addEventListener("click",e=>{if(e.target&&(e.target.id==="kf-new"||e.target.id==="kf-gophotos"))KF.perr=[null,null,null];},true);
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
