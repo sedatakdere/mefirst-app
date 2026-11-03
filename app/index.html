@@ -4228,6 +4228,69 @@ html[data-mf="dusk"] .lib-dup{background:rgba(242,169,59,.15);color:#F5D6A6;bord
 .bks-v.off video{opacity:.15}
 .bks-fl{position:absolute;left:10px;top:10px;z-index:3;font:inherit;font-size:12.5px;font-weight:800;background:rgba(0,0,0,.55);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:7px 12px;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .ktc b{word-break:normal;-webkit-hyphens:manual;hyphens:manual}
+
+/* v209 keyif köşem */
+.kf2{padding-top:10px!important}
+.kfh{position:relative;overflow:hidden;border-radius:30px;padding:22px 20px 16px;color:#fff;background:radial-gradient(70% 60% at 100% 0%,rgba(255,214,170,.55),transparent 60%),radial-gradient(70% 70% at 0% 100%,rgba(244,154,184,.55),transparent 60%),linear-gradient(155deg,#B9774E,#8A4A3A 55%,#6E3A52);box-shadow:0 22px 40px -24px rgba(90,40,30,.8);display:grid;grid-template-columns:1fr 124px;gap:6px;align-items:center;margin-top:30px}
+.kfh.night{background:radial-gradient(60% 50% at 90% 0%,rgba(255,214,170,.3),transparent 60%),radial-gradient(70% 70% at 0% 100%,rgba(156,106,200,.5),transparent 60%),linear-gradient(155deg,#5A3A6E,#3A2448 55%,#2A1A33)}
+.kfh-st{position:absolute;inset:0;pointer-events:none}
+.kfh-st i{position:absolute;left:var(--x);top:var(--y);width:3px;height:3px;border-radius:50%;background:#fff;opacity:.0;animation:kfTw 3s ease-in-out var(--d) infinite}
+.kfh.night .kfh-st i{opacity:.7}
+@keyframes kfTw{0%,100%{opacity:.15}50%{opacity:.9}}
+.kfh-t{position:relative;z-index:1}
+.kfh-t small{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.9}
+.kfh-t h2{margin:4px 0 4px!important;font-size:36px!important;color:#fff!important;line-height:1.05}
+.kfh-t h2 em{color:#FFD6E6!important}
+.kfh-t p{margin:0;font-size:13.5px;line-height:1.4;opacity:.95;color:#fff!important}
+.kfh-cup{width:124px;height:116px;animation:dmBob 3.6s ease-in-out infinite}
+.kfh-cup svg{width:100%;height:100%;filter:drop-shadow(0 10px 14px rgba(0,0,0,.25))}
+.kfh-sm path{fill:none;stroke:#fff;stroke-width:4;stroke-linecap:round;opacity:.85;animation:kfSm 2.8s ease-in-out infinite}
+.kfh-sm path:nth-child(2){animation-delay:.5s}.kfh-sm path:nth-child(3){animation-delay:1s}
+@keyframes kfSm{0%{opacity:0;transform:translateY(6px)}40%{opacity:.85}100%{opacity:0;transform:translateY(-8px)}}
+.kfh-p{grid-column:1/-1;display:flex;gap:6px;flex-wrap:wrap;position:relative;z-index:1;margin-top:6px}
+.kfh-p span{font-size:12px;font-weight:800;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.32);border-radius:99px;padding:5px 10px;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.kfq{perspective:900px;margin:14px 0 4px;height:136px;cursor:pointer}
+.kfq-in{position:relative;width:100%;height:100%;transition:transform .7s cubic-bezier(.3,1.3,.5,1);transform-style:preserve-3d}
+.kfq.on .kfq-in{transform:rotateY(180deg)}
+.kfq-f{position:absolute;inset:0;border-radius:24px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px 16px;box-shadow:0 14px 26px -18px rgba(90,40,80,.7)}
+.kfq-a{background:repeating-linear-gradient(45deg,rgba(255,255,255,.08) 0 10px,transparent 10px 20px),linear-gradient(135deg,#F49AB8,#9C6AA8);color:#fff}
+.kfq-a span{font-size:34px}.kfq-a b{font-family:var(--f-display);font-weight:400;font-size:24px;margin-top:2px}.kfq-a small{font-size:12px;font-weight:700;opacity:.9}
+.kfq-b{transform:rotateY(180deg);background:#fff;color:#3A2A40;border:2px solid #F3D6E6}
+.kfq-b small{font-size:10px;font-weight:900;letter-spacing:.14em;color:#C2578A}
+.kfq-b p{font-family:var(--f-display);font-size:19px;line-height:1.25;margin:6px 0 8px;transition:opacity .18s}
+.kfq-x{display:flex;gap:8px}
+.kfq-s,.kfq-n{font:inherit;font-size:12.5px;font-weight:800;border:0;border-radius:99px;padding:7px 12px;cursor:pointer}
+.kfq-s{background:linear-gradient(135deg,#F49AB8,#C2578A);color:#fff}.kfq-n{background:#F7EAF2;color:#8A4A72}
+.kfb{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:112px;gap:12px;margin-top:14px}
+.kb{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;text-align:left;font:inherit;color:#fff;border:0;border-radius:26px;padding:14px;cursor:pointer;background:linear-gradient(150deg,var(--a),var(--b));box-shadow:0 14px 26px -18px var(--b),inset 0 1px 0 rgba(255,255,255,.35);animation:bnIn .5s cubic-bezier(.2,1.2,.4,1) both;animation-delay:calc(var(--i)*60ms);transition:transform .18s}
+.kb:active{transform:scale(.96)}
+.kb::before{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:-50px;top:-60px;background:rgba(255,255,255,.18)}
+.kb.tall{grid-row:span 2}.kb.wide{grid-column:span 2}
+.kb-art{position:absolute;right:10px;top:10px;width:56px;height:56px;z-index:0;filter:drop-shadow(0 6px 10px rgba(0,0,0,.15))}
+.kb-art svg{width:100%;height:100%}
+.kb.tall .kb-art{width:104px;height:104px;right:6px;top:16px}
+.kb.wide .kb-art{width:120px;height:70px;right:12px;top:50%;transform:translateY(-50%)}
+.kb-tx{position:relative;z-index:2;display:flex;flex-direction:column;gap:3px}
+.kb.wide .kb-tx{max-width:58%}
+.kb-tx b{font-family:var(--f-display);font-weight:400;font-size:21px;line-height:1.05}
+.kb.tall .kb-tx b{font-size:26px}
+.kb-tx small{font-size:12px;font-weight:700;line-height:1.3;opacity:.95;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.kb-fal{--a:#C98A5E;--b:#7A3E2A}
+.kb-burc{--a:#7E63D6;--b:#3A2A7A}
+.kb-burc::after{content:"";position:absolute;inset:0;background:radial-gradient(1.5px 1.5px at 20% 30%,#fff,transparent),radial-gradient(1.5px 1.5px at 70% 75%,#fff,transparent),radial-gradient(1px 1px at 45% 55%,#fff,transparent),radial-gradient(1px 1px at 85% 40%,#fff,transparent);opacity:.8;pointer-events:none}
+.kb-z{font-size:44px;line-height:56px;text-align:center;color:#FFE9A8;filter:drop-shadow(0 0 10px rgba(255,233,168,.6))}
+.kb-mem{--a:#FF9EC4;--b:#D9457F}
+.kb-jig{--a:#5FC9C0;--b:#2F7F98}
+.kb-lt{display:flex;gap:4px;align-items:center;justify-content:flex-end}
+.kb-lt i{font-style:normal;width:26px;height:30px;border-radius:7px;background:#fff;color:var(--b,#C8507A);font-weight:900;font-size:16px;display:grid;place-items:center;box-shadow:0 4px 8px -3px rgba(0,0,0,.3)}
+.kb-lt i:nth-child(odd){transform:translateY(-5px) rotate(-6deg)}.kb-lt i:nth-child(even){transform:translateY(4px) rotate(5deg)}
+html[data-mf="dusk"] .kb{filter:saturate(.9) brightness(.92)}
+html[data-mf="dusk"] .kfq-b{background:#2E2236;color:#F7E1F0;border-color:rgba(244,154,184,.3)}
+html[data-mf="dusk"] .kfq-n{background:rgba(255,255,255,.08);color:#F3C4DC}
+@media (prefers-reduced-motion:reduce){.kb,.kfh-cup,.kfh-sm path{animation:none}}
+.kfh-t h2{font-family:var(--f-display)!important;font-weight:400!important;font-size:40px!important;letter-spacing:0!important}
+.kf2>*{margin-bottom:0}.kf2 .kfq{margin-top:12px!important}.kf2 .kfb{margin-top:12px!important}
+.kfh-p span{font-size:12.5px}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -8736,6 +8799,38 @@ function ktFitCovers(root){(root||document).querySelectorAll(".ktc b").forEach(b
 function trHyph(t){return (t||"").split(" ").map(w=>{if(w.length<8)return w;const V=/[aeıioöuüâîûAEIİOÖUÜÂÎÛ]/;const vi=[];for(let i=0;i<w.length;i++)if(V.test(w[i]))vi.push(i);const cut=[];
   for(let k=0;k+1<vi.length;k++){const a=vi[k],b=vi[k+1],cons=b-a-1;const at=cons===0?b:b-1;if(at>=3&&at<=w.length-3)cut.push(at);}
   let o="",p=0;cut.forEach(c=>{o+=w.slice(p,c)+"­";p=c;});return o+w.slice(p);}).join(" ");}
+
+/* ===== v209: Keyif köşem — kafe havası, bento oyunlar, günün sorusu ===== */
+const KQ=["Çocukken en sevdiğin çizgi film hangisiydi?","Bir gün boyunca istediğin bir şehirde olsan nereyi seçerdin?","Hayatında en çok güldüğün an hangisiydi?","Bir şarkı seni anlatsa hangisi olurdu?","Hiç unutamadığın bir lezzet var mı?","Gençliğine bir not yazabilsen ne derdin?","Seni en çok ne rahatlatır?","Bir süper gücün olsa ne olurdu?","En sevdiğin mevsim hangisi, neden?","Son okuduğun ve sana iyi gelen kitap hangisiydi?","Hayalindeki tatil nasıl bir yer?","Annenden öğrendiğin en güzel şey ne?","Bir günlüğüne başka bir meslek yapsan ne olurdu?","Seni hemen gülümseten bir anı?","Kahve mi çay mı, neden?","En sevdiğin film repliği ne?","Bir haftalık izin olsa ilk ne yapardın?","Çocukluğundan bir oyun seç, bugün yeniden oynasan?","Dünyada en çok görmek istediğin yer?","Bugün kendine hangi küçük hediyeyi verirdin?","Hangi kokuyu duyunca eskiye gidiyorsun?","Arkadaşlarının sende en çok sevdiği özellik ne?","Bir yemeği ömür boyu yesen hangisi olurdu?","En cesur kararın hangisiydi?","Bir gün dünyaca ünlü olsan hangi alanda olurdu?","Sabahları seni ne güne hazırlar?","En sevdiğin tatlı hangisi?","Bir hobiye başlasan ne olurdu?","Hayatının filmi çekilse adı ne olurdu?","Şu an hayatında minnettar olduğun üç şey?"];
+function kfDays(){let D=[];try{D=JSON.parse(localStorage.getItem("mefirst-kfdays")||"[]");}catch(e){}return D;}
+function kfMark(){const D=kfDays(),k=dkey();if(!D.includes(k)){D.push(k);while(D.length>60)D.shift();try{localStorage.setItem("mefirst-kfdays",JSON.stringify(D));}catch(e){}}}
+function kfStreak(){const D=new Set(kfDays());let n=0;const d=new Date();while(D.has(dkey(d))&&n<999){n++;d.setDate(d.getDate()-1);}return n;}
+let kfQi=null,kfQf=false;
+function kfHub(){const O=document.getElementById("zsh");const z=zodiac((st.prof||{}).dob);const nm=(st.name||"").trim();const fal=st.kf&&st.kf.d===dkey();
+  let zTxt="Burcunu öğren, her gün sana özel bir not";if(z){try{const el=ZEL[z[0]],D=ZDAY[el];let h=0;for(const c of z[0]+dkey())h=(h*31+c.charCodeAt(0))|0;h=Math.abs(h);zTxt=D.k[h%D.k.length];}catch(e){zTxt=z[0]+" · bugünkü notun";}}
+  const W=wowS(),ch=WCH[Math.floor((W.i%WLV.length)/5)%WCH.length];const mem=(st.games2||{}).mem;const sk=kfStreak();
+  if(kfQi===null)kfQi=di0()%KQ.length;const hr=new Date().getHours(),night=hr>=19||hr<6;
+  O.innerHTML=`<div class="ob-in zs-in kf-in kf2"><button class="zs-x" type="button" id="zs-x" aria-label="Kapat">✕</button>
+   <div class="kfh${night?" night":""}"><span class="kfh-st" aria-hidden="true">${Array.from({length:10},(_,i)=>`<i style="--x:${(i*37)%95}%;--y:${(i*23)%55}%;--d:${(i*.4)%3}s"></i>`).join("")}</span>
+    <div class="kfh-t"><small>${night?"Akşam keyfi 🌙":hr<11?"Sabah keyfi ☀️":"Öğleden sonra keyfi ☕"}</small><h2>Keyif <em>köşem</em></h2><p>${nm?esc(nm)+", k":"K"}ahveni al; bu beş dakika sadece senin.</p></div>
+    <div class="kfh-cup" aria-hidden="true"><svg viewBox="0 0 140 130"><ellipse cx="70" cy="116" rx="58" ry="9" fill="rgba(0,0,0,.18)"/><ellipse cx="70" cy="112" rx="52" ry="8" fill="#FFF1E6"/><path d="M30 46h80l-7 44a18 18 0 0 1-18 15H55a18 18 0 0 1-18-15z" fill="#fff"/><path d="M110 56c13 0 18 8 15 17s-12 13-19 10" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/><ellipse cx="70" cy="46" rx="40" ry="7" fill="#6B3E26"/><ellipse cx="62" cy="45" rx="10" ry="2" fill="#A0673F" opacity=".7"/><path d="M40 64h60" stroke="#F49AB8" stroke-width="4" opacity=".7"/><path d="M60 78c-5-4-8-7-8-10a4 4 0 0 1 8-1a4 4 0 0 1 8 1c0 3-3 6-8 10z" fill="#F49AB8"/>
+     <g class="kfh-sm"><path d="M54 36c-6-8 6-13 0-22"/><path d="M70 36c-6-8 6-13 0-22"/><path d="M86 36c-6-8 6-13 0-22"/></g></svg></div>
+    <div class="kfh-p no-mi"><span>${fal?"☕ Falın hazır":"☕ Falın bekliyor"}</span><span>${z?z[1]+"︎ "+z[0]:"🔮 Burcun?"}</span>${sk>1?`<span>🔥 ${sk} gündür buradasın</span>`:`<span>✨ Hoş geldin</span>`}</div></div>
+   <div class="kfq${kfQf?" on":""}" id="kfq" role="button" tabindex="0"><div class="kfq-in"><div class="kfq-f kfq-a"><span class="no-mi">💭</span><b>Günün sorusu</b><small>Dokun, kartı çevir</small></div>
+    <div class="kfq-f kfq-b"><small>GÜNÜN SORUSU</small><p>${esc(KQ[kfQi])}</p><div class="kfq-x"><button type="button" class="kfq-s" id="kfq-s">💌 Arkadaşına sor</button><button type="button" class="kfq-n" id="kfq-n">🔄 Başka soru</button></div></div></div></div>
+   <div class="kfb">
+    <button type="button" class="kb kb-fal tall" data-kv="fal" style="--i:0"><span class="kb-art no-mi"><svg viewBox="0 0 100 100"><path d="M22 40h56l-5 32a12 12 0 0 1-12 10H39a12 12 0 0 1-12-10z" fill="#fff"/><path d="M78 47c9 0 12 6 10 12s-8 9-13 7" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/><ellipse cx="50" cy="40" rx="28" ry="5" fill="#5B3A29"/><g class="kfh-sm" stroke="#fff"><path d="M40 32c-4-6 4-9 0-15"/><path d="M52 32c-4-6 4-9 0-15"/><path d="M64 32c-4-6 4-9 0-15"/></g><ellipse cx="50" cy="90" rx="38" ry="5" fill="#fff" opacity=".6"/></svg></span><span class="kb-tx"><b>Fincanım</b><small>${fal?"Bugünkü falın hazır, tekrar oku":"Niyet tut, fincanını kapat"}</small></span></button>
+    <button type="button" class="kb kb-burc" data-kv="burc" style="--i:1"><span class="kb-art kb-z no-mi">${z?z[1]+"︎":"🔮"}</span><span class="kb-tx"><b>${z?z[0]:"Burcum"}</b><small>${esc(zTxt)}</small></span></button>
+    <button type="button" class="kb kb-mem" data-kv="mem" style="--i:2"><span class="kb-art no-mi"><svg viewBox="0 0 100 100"><rect x="18" y="26" width="34" height="48" rx="6" fill="#fff" transform="rotate(-14 35 50)"/><rect x="40" y="22" width="34" height="48" rx="6" fill="#FFE1EE" transform="rotate(10 57 46)"/><path d="M57 38l2.5 5.5 6 .5-4.5 4 1.5 6-5.5-3.2-5.5 3.2 1.5-6-4.5-4 6-.5z" fill="#E2689A" transform="rotate(10 57 46)"/></svg></span><span class="kb-tx"><b>Hafıza</b><small>${mem?`Rekorun: ${mem} hamle`:"Kartları çevir, eşleri bul"}</small></span></button>
+    <button type="button" class="kb kb-wow wide" data-kv="wow" style="--i:3;--a:${ch[2]};--b:${ch[3]}"><span class="kb-art kb-lt no-mi"><i>K</i><i>E</i><i>Y</i><i>İ</i><i>F</i></span><span class="kb-tx"><b>Kelime yolculuğu</b><small>${ch[1]} ${esc(ch[0])} · Seviye ${W.i+1}</small></span></button>
+    <button type="button" class="kb kb-jig wide" data-kv="jig" style="--i:4"><span class="kb-art no-mi"><svg viewBox="0 0 120 80"><path d="M14 14h28v8a6 6 0 1 0 12 0v-8h28v28h-8a6 6 0 1 0 0 12h8v24H54v-8a6 6 0 1 0-12 0v8H14z" fill="#fff" opacity=".95"/><path d="M88 22h20v20h-6a5 5 0 1 0 0 10h6v20H88z" fill="#fff" opacity=".6" transform="rotate(8 98 46)"/></svg></span><span class="kb-tx"><b>Resim puzzle</b><small>Kendi fotoğrafınla, çocuğunun fotoğrafıyla da olur</small></span></button>
+   </div>
+   <p class="fine zs-fine">Fal ve burç eğlence ve ilham içindir; bilimsel bir iddiası yoktur. 💫</p></div>`;
+  document.getElementById("zs-x").onclick=zodClose;
+  const q=document.getElementById("kfq");q.onclick=e=>{if(e.target.closest("button"))return;kfQf=!kfQf;q.classList.toggle("on",kfQf);};
+  document.getElementById("kfq-n").onclick=e=>{e.stopPropagation();kfQi=(kfQi+1+Math.floor(Math.random()*(KQ.length-1)))%KQ.length;const p=q.querySelector(".kfq-b p");p.style.opacity=0;setTimeout(()=>{p.textContent=KQ[kfQi];p.style.opacity=1;},180);};
+  document.getElementById("kfq-s").onclick=e=>{e.stopPropagation();const t=`☕ Günün sorusu: ${KQ[kfQi]}\n\nSen ne cevap verirdin? 😊\n(Me First · Keyif köşem)`;if(navigator.share)navigator.share({text:t}).catch(()=>{});else window.open("https://wa.me/?text="+encodeURIComponent(t),"_blank","noopener");};}
+(function(){const _k=keyRender;keyRender=function(){_k.apply(this,arguments);try{if(kv==="hub"){kfMark();kfHub();}}catch(e){console.error(e);}};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
