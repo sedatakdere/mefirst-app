@@ -4416,6 +4416,9 @@ html[data-mf="dusk"] .kf-3t b{color:#FBE3EE}html[data-mf="dusk"] .kf-3t small{co
 .kf-3s.err{border-color:#E8344E!important;border-style:solid!important;background:rgba(255,240,242,.92)!important}.kf-perr{color:#C2203A;font-weight:700}
 html[data-mf="dusk"] .kf-3s.err{background:rgba(80,20,30,.6)!important}html[data-mf="dusk"] .kf-perr{color:#FF9AA8}
 .kf-anyway{display:inline-block;margin-top:6px;font:inherit;font-size:12.5px;font-weight:800;color:#fff;background:linear-gradient(135deg,#2A9DAE,#1B6E8A);border:0;border-radius:99px;padding:6px 12px;cursor:pointer}
+.kf-res p.kf-c{background:rgba(242,169,59,.12);border-left:3px solid #E9A23B;border-radius:0 10px 10px 0;padding:6px 10px}
+.kf-res p.kf-c b{color:#B86A12!important}
+html[data-mf="dusk"] .kf-res p.kf-c{background:rgba(242,169,59,.12)}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -6848,8 +6851,8 @@ function falHTML(){const t=KF.st;KF.rounds=KF.rounds||[];
     ${ri?`<button class="ghost kf-skip" id="kf-back2" type="button">Vazgeç, yoruma dön</button>`:`<button class="ghost kf-skip" id="kf-rand" type="button">Göremedim, fincan kendi söylesin 🎲</button><button type="button" class="ghost kf-skip kf-phs" id="kf-gophotos">📸 3 fotoğraf çek, şekilleri ben bulayım</button>`}</div>`;
   if(t==="res"){const op=ksPick(KOPEN2,1),cl=ksPick(KCLOSE2,2),last=KF.rounds.length>=KREG.length;
     const secs=KF.rounds.map((rd,k)=>`<section class="kf-sec"><h4><span>${k+1}</span>${KREG[Math.min(k,KREG.length-1)][0]} <small>· ${KREG[Math.min(k,KREG.length-1)][1]}</small></h4>
-      <div class="kf-tags">${rd.map(i=>`<span class="kf-tag">${KSYM[i][0]} ${KSYM[i][1]}</span>`).join("")}</div>${rd.map(i=>`<p><b>${KSYM[i][1]}</b> ${ksM(i,k)}</p>`).join("")}</section>`).join("");
-    const plain=[op,...KF.rounds.map((rd,k)=>KREG[Math.min(k,KREG.length-1)][0]+": "+rd.map(i=>KSYM[i][1]+" — "+ksM(i,k)).join(" ")),cl].join("\n\n");
+      <div class="kf-tags">${rd.map(i=>`<span class="kf-tag">${KSYM[i][0]} ${KSYM[i][1]}</span>`).join("")}</div>${rd.map(i=>{const c=ksCaut().has(i);return `<p${c?' class="kf-c"':""}><b>${KSYM[i][1]}</b> ${c?KCAU[KSYM[i][1]][ksSeed()%KCAU[KSYM[i][1]].length]:ksM(i,k)}</p>`;}).join("")}</section>`).join("");
+    const plain=[op,...KF.rounds.map((rd,k)=>KREG[Math.min(k,KREG.length-1)][0]+": "+rd.map(i=>KSYM[i][1]+" — "+(ksCaut().has(i)?KCAU[KSYM[i][1]][ksSeed()%KCAU[KSYM[i][1]].length]:ksM(i,k))).join(" ")),cl].join("\n\n");
     const left=KSYM.length-KF.rounds.flat().length;
     return `<div class="kf-hero sm"><h2>Falın ✨</h2><p>${new Date().toLocaleDateString("tr-TR",{day:"numeric",month:"long",weekday:"long"})} · ${KF.rounds.flat().length} şekil</p></div>
     ${KF.phs&&KF.phs.every(Boolean)?`<div class="kf-r3">${KF.phs.map((x,i)=>`<div class="kf-r3i"><div class="kf-r3c"><img src="${x.thumb}" alt="">${x.spots.slice(0,4).map(p=>`<i style="left:${p[0]}%;top:${p[1]}%"></i>`).join("")}</div><small>${FPH[i][1]}</small></div>`).join("")}</div><p class="kf-r3t">3 fotoğrafından okundu ☕</p>`:""}
@@ -9229,6 +9232,45 @@ document.addEventListener("click",e=>{if(e.target&&(e.target.id==="kf-new"||e.ta
 
 function falWhy(w,i){if(i!==2)return w;return w.replace("fincana hiç benzemiyor","tabağa hiç benzemiyor").replace("Burada fincanın açık renkli içini göremedim. Fincanı yakından, ışıkta çeker misin?","Tabağın açık renkli yüzeyini göremedim. Tabağı yakından, ışıkta çeker misin?")
   .replace("Telve göremedim 🤔 Fincanı kapatıp biraz bekledin mi? İçinde kahve izi olmalı.","Tabakta telve göremedim 🤔 Fincanı tabağa ters kapatıp beklettin mi? Tabağa biraz telve akmış olmalı.").replace("fincanın içi tam görünmüyor","tabak tam görünmüyor");}
+
+/* ===== v215: masum uyarılar — her falda 1-2 küçük "dikkat" ===== */
+const KCAU={
+"Yılan":["Çevrende tatlı dilli ama niyeti tam temiz olmayan biri var; sırlarını herkese açma.","Biri arkandan konuşabilir; duyarsan takma, yoluna devam et."],
+"Dağ":["Önündeki iş sandığından biraz uzun sürecek; sabırlı ol, acele etme.","Küçük bir engel çıkacak; zorlamak yerine bir gün bekle, kendiliğinden açılır."],
+"Bulut":["Birkaç gün canın sıkılabilir; kendini zorlama, kısa sürecek.","Kafan biraz karışık olacak; önemli kararı birkaç gün ertele."],
+"Dalga":["Duyguların inişli çıkışlı olabilir; tartışmalara bu hafta girme.","Küçük bir kırgınlık kapıda; büyütmeden konuşursan çabuk geçer."],
+"Göz":["Sevincini herkesle paylaşma; biraz kendine sakla, nazar değmesin.","Biri seni yakından izliyor; her şeyini anlatma."],
+"Saat":["Bir işte gecikme olabilir; son güne bırakma.","Unuttuğun bir randevu ya da ödeme var; takvimine bir bak."],
+"Mum":["Yorgunsun; ışığın sönmesin diye kendine dinlenme payı bırak.","Biri senden çok şey bekliyor; hayır demeyi unutma."],
+"Şemsiye":["Küçük bir hayal kırıklığı geliyor gibi; beklentini biraz düşük tut.","Ufak bir sağlık yorgunluğu; ılık bir çay ve erken uyku iyi gelir."],
+"Kedi":["Biri sana tam samimi davranmıyor; kalbini hemen açma.","Bağımsızlığın birini kırabilir; sevdiğine biraz daha vakit ayır."],
+"Para":["Harcamalarına dikkat; ay sonuna doğru elin sıkışabilir.","Borç verme konusunda bu dönem biraz temkinli ol."],
+"Zarf":["Bir haber biraz gecikecek; telaşlanma, gelecek.","Bir mesajı yanlış anlayabilirsin; cevap vermeden bir kez daha oku."],
+"Merdiven":["Hızlı yükselmek isterken bir basamağı atlama; detaylara dikkat.","İşte biraz yorucu bir dönem; molalarını ihmal etme."],
+"Kapı":["Açılmasını beklediğin bir kapı biraz daha kapalı kalacak; ısrar etme.","Gelen bir teklifi hemen kabul etme; bir gece üstünde düşün."],
+"Anahtar":["Bir şeyi kaybetme ihtimalin var; anahtarına, cüzdanına dikkat 😉","Bir sırrı saklamakta zorlanacaksın; dilini tut."],
+"Uçak":["Bir plan son anda değişebilir; esnek ol.","Yolculukta küçük bir aksilik olabilir; erken çık."],
+"Gemi":["Beklediğin bir şey biraz rötar yapacak; sabır.","Fırsat güzel ama hemen atlama; önce iyice araştır."],
+"Yol":["Önünde iki yol var; aceleyle seçme, kalbini dinle.","Bir yolculuk planı ertelenebilir; üzülme, daha iyisi gelecek."],
+"Hilal":["Bir dileğin biraz daha bekleyecek; vakti var.","Bu dönem duyguların hassas; kendini kırılmaktan koru."],
+"Kaplumbağa":["İşler yavaş ilerliyor; sabırsızlık seni yormasın.","Biri senden sözünü tutmanı bekliyor; ertelemeye çalışma."],
+"Tüy":["Bir sözün hafife alınabilir; önemli şeyleri yazılı söyle.","Kararsızlık seni yoruyor; bir karar ver ve rahatla."],
+"Çanta":["Üstlendiğin yük biraz ağır; yardım istemekten çekinme.","Bir eşyanı unutabilirsin; çıkmadan bir kez kontrol et."],
+"Ayakkabı":["Çok koşturuyorsun; ayaklarını, kendini dinlendir.","Bir davete gitmek istemeyebilirsin; zorlama, nazikçe hayır de."],
+"Ayna":["Kendine fazla yükleniyorsun; aynaya bakınca biraz daha şefkatli ol.","Başkasının fikrine fazla takılma; senin gözün önemli."],
+"Deniz":["Dalgalı bir hafta; büyük kararları sakin bir güne bırak.","Biri duygularınla oynayabilir; dikkatli ol."],
+"Dönme dolap":["Bir iniş bir çıkış; moralin dalgalanabilir ama geçecek.","Aynı konuda dönüp duruyorsun; artık bir karar ver."],
+"Ağaç":["Ailede küçük bir fikir ayrılığı olabilir; sakin kal, kökler sağlam.","Biraz yorgun düşmüşsün; kendine su ver, kendine bak."],
+"Ev":["Evde küçük bir arıza ya da dağınıklık seni sıkabilir; panik yok.","Misafir trafiği yorabilir; kendine de alan bırak."],
+"Köpek":["Bir dostun sana kırılmış olabilir; bir mesaj at.","Sadakatini sorgulatan küçük bir olay; doğrudan konuşmak en iyisi."],
+"Bal":["Tatlı sözlere hemen kanma; davranışlara bak.","Fazla tatlı bir teklifin arkasına bir kez bak."],
+"Pusula":["Yönünü biraz kaybetmiş gibisin; önceliklerini yaz.","Başkalarının yönlendirmesiyle hareket etme; kendi yolunu seç."],
+"Çan":["Bir haber kulağına yanlış gelebilir; teyit et.","Gürültülü bir hafta; kendine sessiz bir köşe bul."],
+"Kurdele":["Bir hediye beklediğin gibi çıkmayabilir; gülümse geç 😊","Bir ilişkide küçük bir düğüm var; sabırla çözülür."]};
+function ksCaut(){if(!KF.rounds)return new Set();const all=KF.rounds.flat().filter(i=>KCAU[KSYM[i]&&KSYM[i][1]]);if(!all.length)return new Set();const h=ksSeed();const n=Math.min(all.length,h%10<3?2:1);
+  const out=new Set();let k=h;while(out.size<n){k=(Math.imul(k,1103515245)+12345)>>>0;out.add(all[k%all.length]);}return out;}
+/* her falda en az bir uyarı adayı olsun */
+(function(){const _r=falRounds3;falRounds3=function(P){const R=_r(P);const flat=R.flat();if(!flat.some(i=>KCAU[KSYM[i][1]])){const cands=KSYM.map((x,i)=>i).filter(i=>KCAU[KSYM[i][1]]&&!flat.includes(i));let h=0;P.forEach(x=>x.spots.forEach(s=>h=(h*31+s[0]+s[1])>>>0));R[2][R[2].length-1]=cands[h%cands.length];}return R;};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
