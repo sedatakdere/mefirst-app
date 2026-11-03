@@ -91,7 +91,7 @@ section{padding:56px 0 0}
 .vwrap{display:grid;grid-template-columns:1fr auto;gap:50px;align-items:center}
 .vtx h2{font-size:clamp(36px,5vw,56px);margin:12px 0 10px}.vtx h2 em{color:var(--pink-d)}
 .vtx p{font-size:18px;color:#5A5370;max-width:36ch;margin:0 0 22px}
-.vbox{position:relative;width:min(340px,78vw);aspect-ratio:9/16;border-radius:38px;overflow:hidden;background:#1A1420;box-shadow:0 40px 80px -30px rgba(80,30,90,.55),0 0 0 8px #1A1420;margin:0 auto}
+#video{scroll-margin-top:90px}.vbox{position:relative;width:min(330px,78vw);aspect-ratio:9/16;border-radius:38px;overflow:hidden;background:#1A1420;box-shadow:0 40px 80px -30px rgba(80,30,90,.55),0 0 0 8px #1A1420;margin:0 auto}
 .vbox video{width:100%;height:100%;object-fit:cover;display:block}
 .vsnd{position:absolute;right:12px;bottom:12px;font:inherit;font-size:13px;font-weight:800;color:#fff;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:8px 13px;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .vplay{position:absolute;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#C2578A;font-size:32px;cursor:pointer;box-shadow:0 14px 30px -10px rgba(0,0,0,.5)}
@@ -106,19 +106,13 @@ section{padding:56px 0 0}
   <span class="eyebrow">Kadınlar ve anneler için</span>
   <h1>Önce <em>sen.</em></h1>
   <p class="l">Herkese yetişirken kendini unutma. Me First her sabah sana özel bir öneri, bir ritüel ve kendine ayıracağın küçük bir an getirir.</p>
-  <div class="ctas"><a class="btn" href="/app/">Ücretsiz dene ✨</a><a class="ghost" href="#video">▶ 30 saniyede izle</a></div>
+  <div class="ctas"><a class="btn" href="/app/">Ücretsiz dene ✨</a><a class="ghost" href="#video">▶ 50 saniyede izle</a><button type="button" class="ghost" id="vshare">💌 Arkadaşına gönder</button></div>
   <div class="soon"><span>App Store</span><span>Google Play</span><small>Mağazalarda çok yakında. Şimdilik tarayıcından deneyebilir, ana ekranına ekleyebilirsin.</small></div>
   <div class="trust"><span>🔒 Hesap açmak yok</span><span>📱 Veriler sadece telefonunda</span><span>🇹🇷 Türkçe</span></div>
  </div>
- <div class="phone" aria-label="Uygulama önizlemesi"><iframe src="/app/" title="Me First önizleme" loading="lazy"></iframe></div>
-</div></section>
-<section class="vsec" id="video"><div class="wrap vwrap">
- <div class="vtx"><span class="eyebrow">30 saniyede</span><h2>Me First'ü <em>izle</em> 🎬</h2><p>Kitaplarından can dostuna, çocuklarının çantasından ikinizin köşesine… Hepsi tek uygulamada, tamamen sana göre.</p>
-  <div class="ctas"><a class="btn" href="/app/">Hemen dene ✨</a><button type="button" class="ghost" id="vshare">💌 Arkadaşına gönder</button></div></div>
- <div class="vbox"><video id="mfv" src="/video/mefirst-reklam.mp4" poster="/video/poster.jpg" playsinline muted loop preload="metadata"></video>
+ <div class="vbox" id="video"><video id="mfv" src="/video/mefirst-reklam-50.mp4" poster="/video/poster-50.jpg" playsinline muted loop preload="metadata"></video>
   <button type="button" class="vsnd" id="vsnd" aria-label="Sesi aç">🔇 Sesi aç</button><button type="button" class="vplay" id="vplay" aria-label="Oynat">▶</button></div>
 </div></section>
-
 <section id="ozellikler"><div class="wrap">
  <div class="sh"><h2>Günün her anında yanında</h2><p>Sabah ritüelinden akşam huzuruna, çocukların çantasından ikinizin anılarına, sevdiğin yazarın imza gününe.</p></div>
  <div class="grid"><article class="feat nw"><span class="nwb">Yeni</span><span class="fe">📚</span><h3>Kitap köşem</h3><p>Zevkine göre yeni çıkan kitaplar; takip ettiğin yazarın imza günü ekranına düşer. İstek rafın, kütüphanen, emanet defterin ve barkodla kitap ekleme.</p></article><article class="feat"><span class="fe">💞</span><h3>Biz ikimiz</h3><p>Şifreli, sadece sana ait bir köşe: döngü takvimi, akşam planları, ona hazır mesajlar, anı kavanozu ve ikiniz için oyunlar.</p></article><article class="feat"><span class="fe">🏡</span><h3>Ev & düzen</h3><p>Görsel market sepetin, “bu akşam ne pişsin?” çarkı, fatura hatırlatıcıları ve ailece paylaşılan ev işleri.</p></article><article class="feat"><span class="fe">🌿</span><h3>Kendime iyi bak</h3><p>Su perisi Damla, sağlıklı tabağın, birlikte yapalım egzersizleri ve 30 dakikada çiçek açan haftalık enerji bahçen.</p></article><article class="feat"><span class="fe">🎒</span><h3>Çocuklarım</h3><p>Sınıfına göre ders programı, gülen okul çantası, ödev yıldız tablosu ve takvim. Okul sabahları artık daha sakin.</p></article><article class="feat"><span class="fe">🧘</span><h3>Manifest Me</h3><p>3·6·9 niyet yolculuğu, şükran, rehberli nefes, ay ritüelleri ve gelecekteki kendine mühürlü mektuplar.</p></article><article class="feat"><span class="fe">🐾</span><h3>Patili dostum</h3><p>Acıkınca seni çağıran minik dostun: mama saatleri, aşı karnesi ve her gün dolan mutluluk kalbi.</p></article><article class="feat"><span class="fe">☕</span><h3>Keyif köşem</h3><p>Kahve falı, günlük burç notların, ailenin burçları, Kelime yolculuğu ve küçük oyunlar.</p></article></div>
@@ -161,5 +155,5 @@ if("IntersectionObserver" in window){new IntersectionObserver(function(e){e.forE
 v.addEventListener("play",function(){p.hidden=true;});p.onclick=function(){play();};
 v.addEventListener("click",function(){if(v.paused)play();else v.pause();});
 s.onclick=function(e){e.stopPropagation();v.muted=!v.muted;if(!v.muted){v.currentTime=0;play();}s.textContent=v.muted?"🔇 Sesi aç":"🔊 Sesi kapat";};
-sh.onclick=function(){var u="https://mefirst.app/#video",t="Bak ne buldum 😍 Me First: kadınlar ve anneler için kişisel yardımcı. 30 saniyelik videoyu izle:";if(navigator.share){navigator.share({title:"Me First",text:t,url:u}).catch(function(){});}else{window.open("https://wa.me/?text="+encodeURIComponent(t+" "+u),"_blank","noopener");}};})();</script>
+sh.onclick=function(){var u="https://mefirst.app/#video",t="Bak ne buldum 😍 Me First: kadınlar ve anneler için kişisel yardımcı. 50 saniyelik videoyu izle:";if(navigator.share){navigator.share({title:"Me First",text:t,url:u}).catch(function(){});}else{window.open("https://wa.me/?text="+encodeURIComponent(t+" "+u),"_blank","noopener");}};})();</script>
 </body></html>
