@@ -4480,6 +4480,13 @@ html[data-mf="dusk"] .kf-res p.kf-c{background:rgba(242,169,59,.12)}
 .zs2 .zs-who button[aria-selected="true"]{background:rgba(255,255,255,.2)!important;border-color:var(--z1)!important;box-shadow:0 0 16px -4px var(--z1)}
 .zs2 .zs-who button small,.zs2 .zs-who button b{color:inherit!important}
 .zs-moon b{font-size:13.5px!important;font-weight:700}
+.kchip.ked{padding:4px 10px!important;opacity:.8}
+.kedit .btn{margin-top:6px}
+.kdel-box{margin-top:14px;padding:12px;border-radius:16px;background:rgba(232,52,78,.06);border:1px dashed rgba(232,52,78,.35)}
+.kdel-box p{margin:0 0 8px;font-size:12.5px;color:var(--muted)}
+.kdel{font:inherit;font-size:14px;font-weight:800;color:#C2203A;background:#fff;border:1.5px solid rgba(232,52,78,.45);border-radius:99px;padding:9px 14px;cursor:pointer;width:100%}
+.kdel.sure{background:#E8344E;color:#fff;border-color:#E8344E}
+html[data-mf="dusk"] .kdel{background:rgba(255,255,255,.06);color:#FF9AA8}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="spH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EF"/></linearGradient><linearGradient id="spSh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="spC"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z"/></clipPath></defs><g transform="rotate(-14 256 288)"><path d="M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z" fill="url(#spH)"/><g clip-path="url(#spC)"><rect class="sp-shine" x="-240" y="0" width="170" height="512" fill="url(#spSh)" transform="skewX(-18)"/></g></g></svg></div></div><div class="sp-wm"><span style="--i:0" class="me">M</span><span style="--i:1" class="me">e</span><span class="sp-gap"></span><span style="--i:2">F</span><span style="--i:3">i</span><span style="--i:4">r</span><span style="--i:5">s</span><span style="--i:6">t</span></div><div class="sp-tag"><span>Önce sen.</span></div></div><script>(function(){var s=document.getElementById("mf-splash");try{if(sessionStorage.getItem("mf-sp")){s.remove();return;}sessionStorage.setItem("mf-sp","1");}catch(e){}var rm=matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.getElementById("sp-dust"),h="";for(var i=0;i<28;i++){var a=Math.random()*6.283,r=150+Math.random()*260;h+='<i style="--sx:'+(Math.cos(a)*r).toFixed(0)+'px;--sy:'+(Math.sin(a)*r).toFixed(0)+'px;--dl:'+(Math.random()*.35).toFixed(2)+'s;--sz:'+(2+Math.random()*4).toFixed(1)+'px"></i>';}d.innerHTML=h;var done=false;function out(fast){if(done)return;done=true;s.classList.add(fast?"skip":"go");setTimeout(function(){s.classList.add("fade");},fast?40:120);setTimeout(function(){s.remove();},fast?800:1400);}setTimeout(function(){out(false);},rm?600:2750);s.addEventListener("pointerdown",function(){out(true);});})();</script>
@@ -9375,6 +9382,27 @@ function zodPlus(){const O=document.getElementById("zsh");const hero=O.querySele
   const body=O.querySelector(".zs-in section.obsec");if(body){body.classList.add("zs-today");body.insertAdjacentHTML("beforebegin",rings+moon);body.insertAdjacentHTML("afterend",week+comp);}
   O.querySelectorAll("[data-zc]").forEach(b=>b.onclick=()=>{zCmp=b.dataset.zc;const y=O.scrollTop;zodRender();O.scrollTop=y;});
   const sh=document.getElementById("zc-sh");if(sh)sh.onclick=()=>{const t=`💞 Burç uyumumuz: ${base} & ${zCmp} = %${pct}\n${ZCT[be][ce]}\n\n(Me First · Burcum)`;if(navigator.share)navigator.share({text:t}).catch(()=>{});else window.open("https://wa.me/?text="+encodeURIComponent(t),"_blank","noopener");};}
+
+/* ===== v217: çocuğu düzenle / listeden çıkar (kolay erişim) ===== */
+(function(){const _k=kidsRender;kidsRender=function(){if(ktab==="kedit"){const K=kids(),c=kSel();if(!c){ktab="today";return _k.apply(this,arguments);}
+      _k.apply(this,arguments);/* panel içeriğini düzenleme kartıyla değiştir */
+      const P=document.getElementById("kpanel");document.querySelectorAll(".kseg button").forEach(b=>b.setAttribute("aria-selected","false"));
+      P.innerHTML=`<div class="lcard t-sky kedit"><h3><span class="step no-mi">✏️</span>${esc(trEk(c.name,"gen"))} bilgileri</h3>
+        <div class="addgrid"><div class="field"><label for="ke-n">Adı</label><input id="ke-n" type="text" maxlength="16" value="${esc(c.name)}"></div>
+        <div class="field"><label for="ke-c">Sınıfı</label><select id="ke-c"><option>Anaokulu</option>${[1,2,3,4,5,6,7,8,9,10,11,12].map(n=>`<option${c.cls===n+". sınıf"?" selected":""}>${n}. sınıf</option>`).join("")}</select></div></div>
+        <div class="wl">Rengi</div><div class="kcols">${KCOL.map((x,i)=>`<button type="button" class="kcol" data-ec="${x}" aria-pressed="${x===c.col}" style="background:${x}" aria-label="Renk ${i+1}"></button>`).join("")}</div>
+        <button class="btn" id="ke-save" type="button">Kaydet</button>
+        <div class="kdel-box"><p>${esc(c.name)} artık listede olmasın mı? Ödevleri, takvimi ve programı da silinir.</p><button type="button" class="kdel" id="ke-del">🗑 ${esc(trEk(c.name,"acc"))} listeden çıkar</button></div>
+        <button class="ghost" id="ke-x" type="button">‹ Vazgeç</button></div>`;
+      if(c.cls==="Anaokulu")document.getElementById("ke-c").value="Anaokulu";let col=c.col;
+      P.querySelectorAll("[data-ec]").forEach(b=>b.onclick=()=>{col=b.dataset.ec;P.querySelectorAll("[data-ec]").forEach(x=>x.setAttribute("aria-pressed",x===b));});
+      document.getElementById("ke-save").onclick=()=>{const n=document.getElementById("ke-n").value.trim();if(!n){document.getElementById("ke-n").focus();return;}c.name=n;c.cls=document.getElementById("ke-c").value;c.col=col;save();ktab="today";kidsRender();};
+      document.getElementById("ke-x").onclick=()=>{ktab="today";kidsRender();};
+      document.getElementById("ke-del").onclick=function(){if(!this.dataset.sure){this.dataset.sure=1;this.textContent="Emin misin? Silmek için tekrar dokun";this.classList.add("sure");return;}
+        K.list=K.list.filter(x=>x.id!==c.id);K.hw=K.hw.filter(h=>h.kid!==c.id);K.ev=K.ev.filter(e=>e.kid!==c.id);delete K.prog[c.id];delete PH["k_"+c.id];phSave();K.sel=K.list[0]?K.list[0].id:null;ktab="today";save();kidsRender();};
+      return;}
+    _k.apply(this,arguments);
+    try{const ch=document.getElementById("kchips");const K=kids();if(ch&&K.list.length&&!document.getElementById("k-ed")){const b=document.createElement("button");b.type="button";b.id="k-ed";b.className="kchip ked";b.setAttribute("aria-label","Çocuğu düzenle");b.innerHTML='<span class="no-mi">✏️</span>';const add=document.getElementById("k-add");if(add)add.before(b);else ch.appendChild(b);b.onclick=()=>{ktab="kedit";kidsRender();};}}catch(e){}};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
