@@ -4937,6 +4937,51 @@ html[data-mf="dusk"] .apt-i,html[data-mf="dusk"] .apt-tb,html[data-mf="dusk"] .a
 .kpanel .kev2 ~ .addgrid input{height:44px}
 .kpanel .kev2 ~ #ev-add{height:48px;min-height:0;margin-top:6px;transition:background .3s}
 @media (max-width:380px){.kpanel .kev2 .act{font-size:12.2px;gap:5px;padding:0 6px 0 5px;letter-spacing:-.25px}.kpanel .kev2 .act>span:first-child{width:23px;height:23px;border-radius:7px}.kpanel .kev2 .act>span:first-child svg{width:15px;height:15px}}
+
+/* v0.13.7 Çocuklarım: kompakt, renkli, tek satır */
+.kpanel{--kpal:0}
+.kpanel .kv{--c:#8B6FD6;--b:#F1ECFC}
+.kpanel .kv.p0{--c:#8B6FD6;--b:#F1ECFC}.kpanel .kv.p1{--c:#3E9C93;--b:#E6F4F2}.kpanel .kv.p2{--c:#4C8FD6;--b:#E8F1FB}.kpanel .kv.p3{--c:#E2668F;--b:#FCEAF1}
+.kpanel .kv.p4{--c:#E89A3C;--b:#FDF1E2}.kpanel .kv.p5{--c:#5FA35A;--b:#EAF5E8}.kpanel .kv.p6{--c:#D9655B;--b:#FCECEA}.kpanel .kv.p7{--c:#7A7F95;--b:#F0F1F5}
+.kpanel .klessons,.kpanel .ksubs{gap:7px!important}
+.kpanel .kles.kv,.kpanel .ksub.kv{height:40px;min-height:0!important;padding:0 8px 0 6px!important;gap:7px!important;background:var(--b)!important;border:1.5px solid transparent!important;font-size:13px!important;font-weight:700;color:#3B3352;letter-spacing:-.15px;box-shadow:none;transition:transform .15s,background .2s,box-shadow .2s;border-radius:13px!important}
+.kpanel .kles.kv>span:first-child,.kpanel .ksub.kv>span:first-child{flex:0 0 27px!important;width:27px;height:27px;border-radius:9px;background:#fff;color:var(--c);box-shadow:0 2px 6px -3px var(--c)}
+.kpanel .kv>span:first-child svg{width:16px;height:16px}
+.kpanel .kv em{font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.kpanel .ksub.kv:active{transform:scale(.96)}
+.kpanel .ksub.kv[aria-pressed="true"]{background:linear-gradient(135deg,var(--c),color-mix(in srgb,var(--c) 70%,#fff))!important;color:#fff;box-shadow:0 8px 18px -10px var(--c);border-color:transparent!important}
+.kpanel .ksub.kv[aria-pressed="true"]>span:first-child{background:rgba(255,255,255,.25);color:#fff;box-shadow:none}
+.kpanel .ksub.kv[aria-pressed="true"]::after{display:none}
+/* günler */
+.kpanel .kdays{gap:6px}
+.kpanel .kday{min-height:0!important;height:46px;border-radius:13px;background:#F3F1F8;border:1.5px solid transparent;gap:0;justify-content:center;transition:transform .15s,background .2s}
+.kpanel .kday b{font-size:13px}.kpanel .kday small{font-size:10.5px;font-weight:700}
+.kpanel .kday[aria-pressed="true"]{background:linear-gradient(135deg,#8B6FD6,#B7A4EA);border-color:transparent;color:#fff;box-shadow:0 8px 18px -10px #8B6FD6}
+.kpanel .kday[aria-pressed="true"] small{color:rgba(255,255,255,.85)}
+/* çanta listesi */
+.kpanel .kchk{gap:6px!important}
+.kpanel .kci.kv{height:46px;padding:0 10px 0 7px;grid-template-columns:31px 1fr 24px;gap:9px;border-radius:14px;background:var(--b);font-size:14.5px;font-weight:650;transition:background .2s,transform .15s}
+.kpanel .kci.kv .kce{width:31px;height:31px;border-radius:10px;background:#fff;color:var(--c);box-shadow:0 2px 6px -3px var(--c)}
+.kpanel .kci.kv .kce .mi,.kpanel .kci.kv .kce svg{color:var(--c)}
+.kpanel .kci.kv i{border-color:color-mix(in srgb,var(--c) 45%,#fff);background:#fff}
+.kpanel .kci.kv:active{transform:scale(.98)}
+.kpanel .kci.kv.on{background:linear-gradient(135deg,var(--c),color-mix(in srgb,var(--c) 70%,#fff));color:#fff;box-shadow:0 8px 18px -12px var(--c)}
+.kpanel .kci.kv.on .kce{background:rgba(255,255,255,.25);box-shadow:none}
+.kpanel .kci.kv.on .kce .mi,.kpanel .kci.kv.on .kce svg{color:#fff}
+.kpanel .kci.kv.on>span:nth-child(2){opacity:.92}
+.kpanel .kci.kv.on i{background:#fff;border-color:#fff}
+.kpanel .kci.kv.on i::after{border-color:var(--c)}
+/* form alanları */
+.kpanel .field input,.kpanel .field select,.kpanel .zbox,.kpanel .addrow input,.kpanel .addrow select{height:44px!important;min-height:44px!important}
+.kpanel .addrow .pill{height:44px}
+.kpanel .btn{padding:12px 16px;font-size:15px;min-height:0;height:48px}
+.kpanel #hw-add{background:linear-gradient(135deg,#E89A3C,#F4C07A)!important;box-shadow:0 10px 22px -12px #E89A3C!important}
+.kpanel .hrow{min-height:50px}
+@media (max-width:380px){.kpanel .kv{font-size:12.2px!important;letter-spacing:-.25px}.kpanel .ksub.kv,.kpanel .kles.kv{gap:5px!important;padding:0 6px 0 5px!important}.kpanel .ksub.kv>span:first-child,.kpanel .kles.kv>span:first-child{flex-basis:23px!important;width:23px;height:23px;border-radius:7px}}
+.kpanel .kci.kv.on>span:nth-child(2){text-decoration:none!important;opacity:1!important}
+.kpanel .kles.kv{display:flex!important;flex-direction:row}
+.kids .kpanel .kci.kv.on{background:linear-gradient(135deg,var(--c),color-mix(in srgb,var(--c) 70%,#fff))!important}
+.kids .kpanel .kci.kv:not(.on){background:var(--b)!important}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -10207,6 +10252,16 @@ SND_OF["pp-apt"]="vax";
 /* bugün senin için: yaklaşan randevu */
 (function(){const _t=TC_MORE;TC_MORE=function(C,h){_t(C,h);try{const a=appts().filter(a=>{const x=aptDays(a.d);return x===0||x===1;}).sort((a,b)=>(a.d+(a.tm||""))<(b.d+(b.tm||""))?-1:1)[0];if(!a)return;const Tp=APT.find(z=>z[0]===a.ty)||APT[5],x=aptDays(a.d);
   C.unshift({t:"mint",e:"Randevun",h:`${x===0?"Bugün":"Yarın"}${a.tm?" "+a.tm:""}: ${a.n||Tp[2]}`,d:a.note||"Kendine ayırdığın zamanı unutma.",cta:"Randevularım",ic:Tp[1],go:()=>goFit("today")});}catch(e){}};})();
+
+/* v0.13.7 Çocuklarım renk+tek satır */
+(function(){const SH=n=>{const m={"Beden Eğitimi ve Oyun":"Beden Eğitimi","Beden Eğitimi ve Spor":"Beden Eğitimi","Proje / performans teslimi":"Proje/performans","Din Kültürü ve Ahlak Bilgisi":"Din Kültürü","Bilişim Teknolojileri ve Yazılım":"Bilişim","Teknoloji ve Tasarım":"Teknoloji Tasarım","Okul gezisi":"Okul gezisi"};if(m[n])return m[n];if(n.length>17&&n.includes(" ve "))return n.split(" ve ")[0];return n;};
+ const PAL={"türkçe":0,"matematik":2,"hayat bilgisi":5,"ingilizce":3,"görsel sanatlar":4,"müzik":6,"beden":1,"fen bilimleri":1,"sosyal bilgiler":4};
+ const hue=n=>{const k=n.toLocaleLowerCase("tr");for(const x in PAL)if(k.startsWith(x))return PAL[x];let h=0;for(const ch of k)h=(h*31+ch.charCodeAt(0))>>>0;return h%7;};
+ const deco=P=>{if(!P)return;P.querySelectorAll(".ksub,.kles").forEach(b=>{if(b.classList.contains("kv"))return;let lab="";[...b.childNodes].forEach(n=>{if(n.nodeType===3&&n.textContent.trim()){lab+=n.textContent.trim();n.remove();}});if(!lab)return;
+   if(!b.querySelector("span")){const m=lab.match(/^(\S+)\s+(.+)$/);if(m&&!/[A-Za-zÇĞİÖŞÜçğıöşü]/.test(m[1])){const sp=document.createElement("span");sp.textContent=m[1];b.prepend(sp);lab=m[2];}}
+   b.classList.add("kv","p"+hue(b.dataset.sb&&!/^[a-z]+$/.test(b.dataset.sb)?b.dataset.sb:lab));b.title=lab;const e=document.createElement("em");e.textContent=SH(lab);b.appendChild(e);});
+  let i=0;P.querySelectorAll(".kci").forEach(b=>{if(b.classList.contains("kv"))return;b.classList.add("kv","p"+[2,4,1,0,3,5,6,7][i++%8]);});};
+ const _k=kidsRender;kidsRender=function(){const r=_k.apply(this,arguments);try{deco(document.getElementById("kpanel"));}catch(e){}return r;};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
