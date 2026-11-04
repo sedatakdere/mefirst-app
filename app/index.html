@@ -4842,6 +4842,12 @@ html[data-mf="dusk"] #lb2-w,html[data-mf="dusk"] #lb-w{background:rgba(255,255,2
 html[data-mf="dusk"] .kwp{background:rgba(242,185,138,.12);color:#F2B98A}
 html[data-mf="dusk"] .kwg{background:rgba(240,200,120,.12);color:#F0C878}
 html[data-mf="dusk"] .kws{background:rgba(244,163,184,.12);color:#F4A3B8}
+
+/* v272 istek listesi butonları daha küçük */
+.ktwa{gap:6px!important}
+.kwb{flex-direction:row!important;gap:5px!important;min-height:0!important;height:36px;padding:0 6px!important;font-size:12px!important;border-radius:12px!important;white-space:nowrap}
+.kwb i{font-size:14px!important}
+.ktwl .ktsh{row-gap:8px!important;padding:10px 0!important}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -5340,7 +5346,7 @@ html[data-mf="dusk"] .kws{background:rgba(244,163,184,.12);color:#F4A3B8}
   <div class="lv-bg" aria-hidden="true"><span class="lk-glow g1"></span><span class="lk-glow g2"></span><i style="--x:12%;--d:1s;--s:.6"></i><i style="--x:34%;--d:4.2s;--s:.45"></i><i style="--x:63%;--d:2.5s;--s:.55"></i><i style="--x:88%;--d:6s;--s:.5"></i></div>
   <div class="onb zsh" id="zsh" hidden role="dialog" aria-modal="true" aria-label="Burcum"></div>
   <div class="onb sst" id="sst" hidden role="dialog" aria-modal="true" aria-label="Story stüdyom"></div>
-  <p class="foot">Me First · deneme sürümü</p>
+  <p class="foot">Me First · deneme sürümü<span id="mf-ver"></span></p>
 </div>
 
 <script>
@@ -8972,7 +8978,7 @@ function ktShelfCtx(){const P=document.getElementById("ktpanel");if(!P||kttab!==
   const add=document.getElementById("kt-st")&&document.getElementById("kt-st").closest(".lcard");const led=P.querySelector(".ledger");
   /* istek listesi detay kartı */
   let wl=P.querySelector(".ktwl");if(!wl){const W2=K.shelf.filter(x=>x.s==="istek");wl=document.createElement("div");wl.className="lcard ktcard ktwl";
-    wl.innerHTML=`<h3>İstek listem 💝</h3>${W2.length?W2.map(x=>{const i=K.shelf.indexOf(x);return `<div class="ktsh">${ktCover(x.t,x.a||"",false)}<span class="kti"><strong>${esc(x.t)}</strong><small>${esc(x.a||"")}</small></span><button type="button" class="ktx" data-kwx="${i}" aria-label="Kaldır">×</button><span class="ktwa"><button type="button" class="kwb kwp" data-kprice="${esc(x.t)}" data-kau="${esc(x.a||"")}"><i class="no-mi">🔍</i><span>Fiyat</span></button><button type="button" class="kwb kwg" data-kgot="${i}"><i class="no-mi">🎉</i><span>Aldım</span></button><button type="button" class="kwb kws" data-kws="${i}"><i class="no-mi">💌</i><span>Ruh eşime gönder</span></button></span></div>`;}).join("")+'<p class="ktfine">Hediye geldi ya da satın aldıysan “Aldım” de; kitap Kütüphanem\'e taşınsın 📚</p>':'<p class="ktfine">Kitap kartlarındaki 🤍 Keşke ile buraya eklenir. Sonra tek dokunuşla ruh eşine ipucu gönderebilirsin 💌</p>'}`;
+    wl.innerHTML=`<h3>İstek listem 💝</h3>${W2.length?W2.map(x=>{const i=K.shelf.indexOf(x);return `<div class="ktsh">${ktCover(x.t,x.a||"",false)}<span class="kti"><strong>${esc(x.t)}</strong><small>${esc(x.a||"")}</small></span><button type="button" class="ktx" data-kwx="${i}" aria-label="Kaldır">×</button><span class="ktwa"><button type="button" class="kwb kwp" data-kprice="${esc(x.t)}" data-kau="${esc(x.a||"")}"><i class="no-mi">🔍</i><span>Fiyat</span></button><button type="button" class="kwb kwg" data-kgot="${i}"><i class="no-mi">🎉</i><span>Aldım</span></button><button type="button" class="kwb kws" data-kws="${i}"><i class="no-mi">💌</i><span>Ruh eşime</span></button></span></div>`;}).join("")+'<p class="ktfine">Hediye geldi ya da satın aldıysan “Aldım” de; kitap Kütüphanem\'e taşınsın 📚</p>':'<p class="ktfine">Kitap kartlarındaki 🤍 Keşke ile buraya eklenir. Sonra tek dokunuşla ruh eşine ipucu gönderebilirsin 💌</p>'}`;
     (g0[0]||add||led)&&P.insertBefore(wl,g0[0]||add||led);
     wl.querySelectorAll("[data-kwx]").forEach(b=>b.onclick=()=>{K.shelf.splice(+b.dataset.kwx,1);save();kitapRender();});
     wl.querySelectorAll("[data-kws]").forEach(b=>b.onclick=()=>ktHintOne(K.shelf[+b.dataset.kws]));
@@ -10054,6 +10060,9 @@ document.addEventListener("click",e=>{const c=e.target.closest&&e.target.closest
 
 function libKNorm(){document.querySelectorAll(".lib-k .gn-c").forEach(b=>{if(b.querySelector(".kci"))return;const m=b.textContent.trim().match(/^(\S+)\s+(.+)$/);if(!m)return;b.innerHTML=`<span class="kci no-mi">${m[1]}</span><span>${esc(m[2])}</span>`;});}
 (function(){const _w=wishInject;wishInject=function(){_w.apply(this,arguments);try{libKNorm();}catch(e){}};const _l=libAddOpen;libAddOpen=function(){_l.apply(this,arguments);try{libKNorm();}catch(e){}};})();
+
+/* v272: hangi sürüm çalışıyor (yayındaki sw.js'ten okunur) */
+(function(){try{if(!/^https?:/.test(location.protocol))return;fetch("sw.js",{cache:"no-store"}).then(r=>r.ok?r.text():"").then(t=>{const m=t.match(/mefirst-v([0-9.]+)/);const e=document.getElementById("mf-ver");if(m&&e)e.textContent=" · v"+m[1];}).catch(()=>{});}catch(e){}})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
