@@ -4848,6 +4848,18 @@ html[data-mf="dusk"] .kws{background:rgba(244,163,184,.12);color:#F4A3B8}
 .kwb{flex-direction:row!important;gap:5px!important;min-height:0!important;height:36px;padding:0 6px!important;font-size:12px!important;border-radius:12px!important;white-space:nowrap}
 .kwb i{font-size:14px!important}
 .ktwl .ktsh{row-gap:8px!important;padding:10px 0!important}
+
+/* v274 ana sayfa zemini gerçekten akşam / gece olsun */
+html:not([data-mf="dusk"]) #wxbg.tod-aksam{background:linear-gradient(180deg,#F7C3AE 0%,#EFAFC4 30%,#D6B0E4 62%,#C4B4EC 100%)!important}
+html:not([data-mf="dusk"]) #wxbg.tod-gece{background:radial-gradient(70% 30% at 80% 6%,rgba(255,230,180,.14),transparent 70%),linear-gradient(180deg,#14122F 0%,#211C46 38%,#2F2659 72%,#3A2E66 100%)!important}
+#wxbg.tod-gece .wb-st{opacity:1}
+body.wb-gece .bn-h small,body.wb-gece #tc-h small{color:#F6B7D2!important}
+body.wb-gece .bn-h h2,body.wb-gece #tc-h h2,body.wb-gece .bn-h .world-h{color:#F4EEFA!important}
+body.wb-gece .bn-h h2 em,body.wb-gece #tc-h h2 em{color:#F7A8C8!important}
+body.wb-gece .foot{color:rgba(244,238,250,.6)!important}
+body.wb-gece .tc-dots i{background:rgba(255,255,255,.28)!important}body.wb-gece .tc-dots i.on{background:#F7A8C8!important}
+body.wb-gece #wxbg.wxk-cloud::after,body.wb-gece #wxbg.wxk-rain::after,body.wb-gece #wxbg.wxk-drizzle::after,body.wb-gece #wxbg.wxk-fog::after,body.wb-gece #wxbg.wxk-storm::after{background:linear-gradient(180deg,rgba(80,80,110,.35),transparent 70%)}
+body.wb-aksam .bn-h small,body.wb-aksam #tc-h small{color:#9A3E6E!important}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -9979,10 +9991,10 @@ function wxApply(){try{wxBg();}catch(e){}const hx=document.getElementById("hx");
 (function(){const _h=homeRender;homeRender=function(){_h.apply(this,arguments);try{wxApply();}catch(e){}};try{wxApply();}catch(e){}})();
 
 function wxBg(){let L=document.getElementById("wxbg");if(!L){L=document.createElement("div");L.id="wxbg";L.setAttribute("aria-hidden","true");document.body.prepend(L);}
-  if(step!==0){L.hidden=true;return;}L.hidden=false;
+  if(step!==0){L.hidden=true;document.body.classList.remove("wb-gece","wb-aksam");L.dataset.sig="";return;}L.hidden=false;
   const now=new Date(),H=now.getHours()+now.getMinutes()/60,SUN=sunTimes(now),tod=(H<SUN.rise-.6||H>=SUN.set+.35)?"gece":H<SUN.rise+3?"sabah":H<SUN.set-.75?"ogle":"aksam";
   const W=wxGet(),fresh=W&&W.code!=null&&W.t&&Date.now()-W.t<6*3600000,k=fresh?wxKind(W.code):"none";const sig=tod+"|"+k;if(L.dataset.sig===sig)return;L.dataset.sig=sig;
-  L.className="wxbg tod-"+tod+" wxk-"+k;const R=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join("");let fx="";
+  L.className="wxbg tod-"+tod+" wxk-"+k;document.body.classList.toggle("wb-gece",tod==="gece");document.body.classList.toggle("wb-aksam",tod==="aksam");const R=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join("");let fx="";
   if(tod==="gece"||tod==="aksam")fx+=R(tod==="gece"?34:12,i=>`<i class="wb-st" style="left:${(i*37+4)%98}%;top:${(i*53)%(tod==="gece"?70:30)+2}%;--s:${(.5+(i%4)*.3).toFixed(1)};--dl:${((i*.41)%3.6).toFixed(2)}s"></i>`);
   if(["cloud","rain","drizzle","storm","snow","fog","partly"].includes(k))fx+=R(k==="partly"?2:4,i=>`<span class="wb-cl" style="top:${[4,16,30,46][i]}%;--w:${[70,55,80,60][i]}%;--d:${[80,110,95,130][i]}s;--dl:-${[0,40,20,70][i]}s;--o:${[.75,.55,.6,.45][i]}"></span>`);
   if(k==="rain"||k==="storm"||k==="drizzle")fx+=R(k==="drizzle"?30:70,i=>`<i class="wb-r" style="left:${(i*37+3)%102}%;--d:${(.7+(i%6)*.1).toFixed(2)}s;--dl:-${((i*.17)%1.4).toFixed(2)}s;--o:${(.3+(i%3)*.17).toFixed(2)}"></i>`);
@@ -10063,6 +10075,11 @@ function libKNorm(){document.querySelectorAll(".lib-k .gn-c").forEach(b=>{if(b.q
 
 /* v272: hangi sürüm çalışıyor (yayındaki sw.js'ten okunur) */
 (function(){try{if(!/^https?:/.test(location.protocol))return;fetch("sw.js",{cache:"no-store"}).then(r=>r.ok?r.text():"").then(t=>{const m=t.match(/mefirst-v([0-9.]+)/);const e=document.getElementById("mf-ver");if(m&&e)e.textContent=" · v"+m[1];}).catch(()=>{});}catch(e){}})();
+
+/* v273: ana sayfa açık kalsa da gökyüzü/selamlama saatle birlikte değişsin */
+(function(){let last="";const sig=()=>{try{const n=new Date(),H=n.getHours()+n.getMinutes()/60,S=sunTimes(n),W=wxGet();const ph=(H<S.rise-.6||H>=S.set+.35)?"g":H<S.rise+3?"s":H<S.set-.75?"o":"a";const gr=(H<S.rise-.5||n.getHours()>=22)?"G":H<Math.max(11,S.rise+3)?"S":H<S.set-.75?"O":"A";return ph+gr+(W&&W.code!=null?W.code:"")+dkey();}catch(e){return "";}};
+  last=sig();setInterval(()=>{const x=sig();if(x&&x!==last){last=x;try{if(step===0)homeRender();}catch(e){}}},60000);
+  document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"){const x=sig();if(x!==last){last=x;try{if(step===0)homeRender();}catch(e){}}try{wxFetch();}catch(e){}}});})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
