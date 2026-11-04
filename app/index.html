@@ -10655,6 +10655,32 @@ window.mfRoomClose=function(fromPop){if(typeof nfRun!=="undefined"&&nfRun)nfStop
  const g=document.getElementById("go-rit");if(g){const o=g.onclick;g.onclick=function(){window.mfRoomOn=false;return o&&o.apply(this,arguments);};}
  const h=document.getElementById("rit-home");if(h){const o=h.onclick;h.onclick=function(){window.mfRoomOn=false;return o&&o.apply(this,arguments);};}
  document.addEventListener("click",e=>{const n=e.target.closest&&e.target.closest('[data-go2="go-rit"],[data-nv="rit"]');if(n)window.mfRoomOn=false;},true);})();
+
+/* v0.15.8 Bildirim sıklığı + akıllı fatura hatırlatması */
+function mfPopLog(){try{return JSON.parse(localStorage.getItem("mf-poplog")||"[]");}catch(e){return [];}}
+function mfPopLogAdd(p){try{const L=mfPopLog().filter(x=>Date.now()-x.t<2*864e5);L.push({t:Date.now(),p});localStorage.setItem("mf-poplog",JSON.stringify(L));}catch(e){}}
+function mfPopOk(c){const L=mfPopLog(),now=Date.now(),h=new Date().getHours(),T=dkey();const last=L.length?L[L.length-1].t:0,gap=(now-last)/6e4;
+ const today=L.filter(x=>dkey(new Date(x.t))===T),nT=today.length,lowT=today.filter(x=>x.p<60).length;
+ if(c.p>=90)return window.__mfChain||gap>=15;
+ if(h<8||h>=22)return false;
+ if(c.p>=60)return gap>=180&&nT<3;
+ return gap>=240&&nT<2&&lowT<1;}
+function mfBillCand(){const E=st.ev;if(!E||!E.bills)return null;const h=new Date().getHours();if(h<8||h>=22)return null;
+ const U=E.bills.filter(x=>!(x.paid||{})[ym()]&&x.day).map(x=>[x,billDue(x)]).filter(([x,d])=>d<=3&&d>=-10).sort((a,b)=>a[1]-b[1]);if(!U.length)return null;
+ const stg=d=>d<0?"l":d===0?"0":d===1?"1":"s";const nm=x=>{const T2=BTY.find(y=>y[0]===x.ty)||BTY[8];return x.n||T2[2];};
+ const top=U[0],d0=top[1],late=U.filter(u=>u[1]<0),tot=U.reduce((a,u)=>a+(+u[0].amt||0),0);
+ const when=d=>d<0?`${-d} gün gecikti`:d===0?"bugün son gün":d===1?"yarın son gün":`${d} gün kaldı`;
+ const list=U.slice(0,4).map(([x,d])=>{const T2=BTY.find(y=>y[0]===x.ty)||BTY[8];return `${T2[1]} <b>${esc(nm(x))}</b>${x.amt?" · "+(+x.amt).toLocaleString("tr-TR")+" ₺":""} · ${when(d)}`;}).join("<br>");
+ return {id:`bill2:${ym()}:`+U.map(([x,d])=>nm(x)+stg(d)).join(","),p:d0<0?92:d0===0?90:d0===1?80:65,cls:"pp-bill",k:"🧾 Fatura hatırlatması",dec:"🧾",
+  h:U.length>1?`${U.length} fatura<br><em>${late.length?late.length+" tanesi gecikti":d0===0?"bugün ödenmeli":"yaklaşıyor"}</em>`:`${esc(nm(top[0]))} faturası<br><em>${d0<0?"gecikti":d0===0?"bugün son gün":d0===1?"yarın son gün":d0+" gün sonra"}</em>`,
+  d:list+(U.length>1&&tot?`<br>Toplam <b>${tot.toLocaleString("tr-TR")} ₺</b>`:"")+`<br><small>Ödediysen işaretle, bir daha hatırlatmayayım.</small>`,
+  a:[["Faturalarıma git",()=>{etab="bill";document.getElementById("go-ev").click();}]],x:"Tamam 👍"};}
+(function(){const _c=mfPopCands;mfPopCands=function(){let L=_c.apply(this,arguments).filter(c=>!(c.cls==="pp-bill"&&/^bill:/.test(c.id)));
+  try{const B=mfBillCand();if(B&&!mfPopSeen()[B.id])L.push(B);}catch(e){}
+  L=L.sort((a,b)=>b.p-a.p).filter(mfPopOk);window.__mfTopP=L.length?L[0].p:0;return L;};
+ const _k=ktPop;ktPop=function(chain){window.__mfChain=!!chain;try{_k.apply(this,arguments);}finally{window.__mfChain=false;}
+};
+ new MutationObserver(ms=>{ms.forEach(m=>m.addedNodes.forEach(n=>{if(n.id==="ktpop")mfPopLogAdd(window.__mfTopP||50);}));}).observe(document.body,{childList:true});})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
