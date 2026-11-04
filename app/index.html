@@ -4889,6 +4889,25 @@ body.wb-gece .wb-fog{background:rgba(190,185,230,.22)!important}
 
 #bento .bn-pet .bn-art:has(.bn-cd){width:auto!important;height:auto!important;right:10px!important;top:8px!important;left:auto!important;transform:none!important}
 #bento .bn-pet .bn-art svg.bn-cd{display:block;width:80px!important;height:60px!important;filter:drop-shadow(0 6px 10px rgba(60,40,30,.25))}
+
+/* v280 Randevularım */
+.apt-card h3 .step{background:linear-gradient(150deg,#DDF1ED,#C3E5DF)!important}
+.apt-l{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.apt-i{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:16px;background:#F2F9F7;border:1.5px solid #D3EBE6}
+.apt-i.soon{background:linear-gradient(135deg,#E4F4F1,#CFEAE4);border-color:#8EC6BE}
+.apt-ic{font-size:22px}.apt-t{flex:1;min-width:0}.apt-t b{display:block;font-size:14.5px}.apt-t small{display:block;font-size:12.5px;color:var(--muted)}
+.apt-x{background:none;border:0;font-size:20px;opacity:.5;cursor:pointer;padding:4px}
+.apt-f{display:flex;flex-direction:column;gap:8px}
+.apt-ty{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.apt-tb{display:flex;flex-direction:column;align-items:center;gap:2px;font:inherit;font-size:12px;font-weight:700;padding:8px 4px;border-radius:14px;border:1.5px solid #D3EBE6;background:#F7FBFA;color:#2E5E5C;cursor:pointer}
+.apt-tb span{font-size:18px}
+.apt-tb[aria-pressed="true"]{background:linear-gradient(140deg,#8EC6BE,#3F7A78);color:#fff;border-color:transparent}
+.apt-f input{width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #D3EBE6;border-radius:14px;background:#fff;font:inherit;font-size:15px}
+.apt-dt{display:grid;grid-template-columns:1.4fr 1fr;gap:8px}
+#apt-add{background:linear-gradient(135deg,#6FAFA8,#3F7A78)!important;color:#fff!important}
+.ktpop-c.pp-apt{background:radial-gradient(120% 90% at 85% 0%,#D3EEE8 0%,transparent 55%),linear-gradient(160deg,#8EC6BE 0%,#3F7A78 100%)!important}
+.ktpop-c.pp-apt h3 em{color:#EFFFFB!important}.ktpop-c.pp-apt .ktbtn{color:#3F7A78!important}
+html[data-mf="dusk"] .apt-i,html[data-mf="dusk"] .apt-tb,html[data-mf="dusk"] .apt-f input{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);color:inherit}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -6688,7 +6707,7 @@ const KDERS=[["kutup","📚","Kütüphane günü","Kütüphane kitabını iade e
 let kday=0;
 const KGUN=["Pzt","Sal","Çar","Per","Cum"];
 const LUNCH=["Peynirli tam buğday sandviç, salatalık dilimleri ve bir mandalina","Haşlanmış yumurta, mini domatesler ve galeta","Ev yapımı poğaça ve küçük bir ayran","Sebzeli omlet dürüm ve birkaç çilek","Yoğurt, bir avuç yulaf ve muz dilimleri","Mercimek köftesi, marul yaprağı ve limon","Peynir küpleri, ceviz içi ve elma dilimleri","Tavuklu dürüm ve havuç çubukları","Kuru kayısı, leblebi ve küçük bir süt","Mini pankek, bal ve mevsim meyvesi","Zeytinyağlı börek ve salatalık","Kaşarlı tost ve bir portakal"];
-const KEV=[["veli","👥","Veli toplantısı"],["doktor","🩺","Doktor"],["asi","💉","Aşı"],["gosteri","🎉","Gösteri / etkinlik"],["dogum","🎂","Doğum günü"],["diger","📅","Diğer"]];
+const KEV=[["veli","👥","Veli toplantısı"],["doktor","🩺","Doktor / hastane"],["asi","💉","Aşı"],["gosteri","🎉","Gösteri / etkinlik"],["dogum","🎂","Doğum günü"],["diger","📅","Diğer"]];
 let ktab="today";
 function kids(){if(!st.kids)st.kids={list:[],sel:null,chk:{},hw:[],ev:[],prog:{}};return st.kids;}
 function kSel(){const K=kids();return K.list.find(x=>x.id===K.sel)||K.list[0]||null;}
@@ -10121,6 +10140,42 @@ function libKNorm(){document.querySelectorAll(".lib-k .gn-c").forEach(b=>{if(b.q
   document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"){const x=sig();if(x!==last){last=x;try{if(step===0)homeRender();}catch(e){}}try{wxFetch();}catch(e){}}});})();
 
 setInterval(()=>{try{if(step===0&&document.visibilityState==="visible")wxFetch();}catch(e){}},15*60000);
+
+/* ===== v280: Randevularım (kullanıcı) + çocuk randevu hatırlatmaları ===== */
+const APT=[["doktor","🩺","Doktor"],["dis","🦷","Diş"],["goz","👁","Göz"],["kuafor","💇‍♀️","Kuaför"],["guzellik","💅","Güzellik"],["diger","📌","Diğer"]];
+function appts(){if(!Array.isArray(st.appts))st.appts=[];return st.appts;}
+function aptDays(d){const t=new Date();t.setHours(0,0,0,0);return Math.round((new Date(d+"T00:00")-t)/864e5);}
+function aptWhen(a){const x=aptDays(a.d);const dd=x===0?"Bugün":x===1?"Yarın":x<7&&x>1?x+" gün sonra":new Date(a.d+"T00:00").toLocaleDateString("tr-TR",{day:"numeric",month:"long",weekday:"short"});return dd+(a.tm?" · "+a.tm:"");}
+let aptTy="doktor";
+function aptRender(){const pn=document.querySelector('[data-fp="today"]');if(!pn)return;let c=document.getElementById("apt-card");if(!c){c=document.createElement("div");c.id="apt-card";c.className="lcard apt-card";pn.prepend(c);}
+  const L=appts().filter(a=>aptDays(a.d)>=0).sort((a,b)=>(a.d+(a.tm||"99"))<(b.d+(b.tm||"99"))?-1:1);
+  c.innerHTML=`<h3><span class="step no-mi">📅</span>Randevularım</h3>
+   ${L.length?`<div class="apt-l">${L.map(a=>{const T=APT.find(x=>x[0]===a.ty)||APT[5],x=aptDays(a.d);return `<div class="apt-i${x<=1?" soon":""}"><span class="apt-ic no-mi">${T[1]}</span><span class="apt-t"><b>${esc(a.n||T[2])}</b><small>${aptWhen(a)}${a.note?" · "+esc(a.note):""}</small></span><button type="button" class="apt-x" data-ax="${a.id}" aria-label="Sil">×</button></div>`;}).join("")}</div>`:`<p class="ktfine">Doktor, diş, kuaför… Kendine ayırdığın randevuları buraya yaz; bir gün önce ve o sabah hatırlatayım 💚</p>`}
+   <div class="apt-f"><div class="apt-ty">${APT.map(([k,e,l])=>`<button type="button" class="apt-tb" data-at="${k}" aria-pressed="${aptTy===k}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div>
+    <input id="apt-n" type="text" maxlength="40" placeholder="ör. Dahiliye · Acıbadem, Dr. Ayşe">
+    <div class="apt-dt"><input id="apt-d" type="date" aria-label="Tarih"><input id="apt-tm" type="time" aria-label="Saat"></div>
+    <input id="apt-no" type="text" maxlength="60" placeholder="Not (isteğe bağlı): ör. aç karnına git">
+    <button type="button" class="btn" id="apt-add">Randevumu ekle</button></div>
+   <p class="fine">Randevuların sadece bu telefonda kalır.</p>`;
+  c.querySelectorAll("[data-at]").forEach(b=>b.onclick=()=>{aptTy=b.dataset.at;c.querySelectorAll("[data-at]").forEach(x=>x.setAttribute("aria-pressed",x===b));});
+  c.querySelectorAll("[data-ax]").forEach(b=>b.onclick=()=>{st.appts=appts().filter(a=>a.id!==b.dataset.ax);save();aptRender();});
+  document.getElementById("apt-add").onclick=()=>{const d=document.getElementById("apt-d").value;if(!d){document.getElementById("apt-d").focus();return;}
+    appts().push({id:"a"+Date.now().toString(36),ty:aptTy,n:document.getElementById("apt-n").value.trim(),d,tm:document.getElementById("apt-tm").value,note:document.getElementById("apt-no").value.trim()});save();aptRender();
+    mfConfetti("Randevun kaydedildi 📅",["#A6D4CB","#4A8A88","#fff"],"linear-gradient(135deg,#6FAFA8,#3F7A78)");};}
+(function(){const _f=fitRender;fitRender=function(){_f.apply(this,arguments);try{aptRender();}catch(e){console.error(e);}};})();
+/* açılış bildirimleri: kullanıcı randevusu + çocuk doktor/aşı */
+(function(){const _c=mfPopCands;mfPopCands=function(){const L=_c.apply(this,arguments);try{const S=mfPopSeen(),T=dkey(),h=new Date().getHours();
+  appts().forEach(a=>{const x=aptDays(a.d);if(x<0||x>1)return;if(x===0&&a.tm){const [hh,mm]=a.tm.split(":").map(Number);if(h*60+new Date().getMinutes()>hh*60+mm+60)return;}
+    const Tp=APT.find(z=>z[0]===a.ty)||APT[5];const c={id:`apt:${a.id}:${x}`,p:x===0?92:78,cls:"pp-apt",k:Tp[1]+" Randevun var",dec:"📅",h:`${esc(a.n||Tp[2])}<br><em>${x===0?"bugün":"yarın"}${a.tm?" "+a.tm+"'da":""}</em>`,
+      d:`${a.note?esc(a.note)+"<br>":""}Kendine ayırdığın bu zamanı unutma 💚`,a:[["Randevularım",()=>goFit("today")]],x:"Not aldım 💚"};if(!S[c.id])L.push(c);});
+  const K=st.kids;if(K&&K.ev&&K.list){K.ev.forEach(e=>{if(e.ty!=="doktor"&&e.ty!=="asi")return;const x=aptDays(e.d);if(x<0||x>1)return;const kid=K.list.find(k=>k.id===e.kid);if(!kid)return;
+    const c={id:`kev:${e.kid}:${e.d}:${e.ty}:${x}`,p:x===0?90:74,cls:"pp-bag",k:e.ty==="asi"?"💉 Aşı günü":"🩺 Doktor / hastane",dec:e.ty==="asi"?"💉":"🩺",h:`${esc(kid.name)}<br><em>${x===0?"bugün":"yarın"}${e.tm?" "+e.tm+"'da":""}</em>${e.ty==="asi"?" aşı oluyor":" doktorda"}`,
+      d:`${e.t?esc(e.t)+"<br>":""}${e.ty==="asi"?"Aşı kartını yanına almayı unutma.":"Sağlık karnesini ve kimliğini yanına al."}`,a:[["Takvime git",()=>{ktab="cal";document.getElementById("go-kids").click();}]],x:"Not aldım 💙"};if(!S[c.id])L.push(c);});}
+  L.sort((a,b)=>b.p-a.p);}catch(e){}return L;};})();
+SND_OF["pp-apt"]="vax";
+/* bugün senin için: yaklaşan randevu */
+(function(){const _t=TC_MORE;TC_MORE=function(C,h){_t(C,h);try{const a=appts().filter(a=>{const x=aptDays(a.d);return x===0||x===1;}).sort((a,b)=>(a.d+(a.tm||""))<(b.d+(b.tm||""))?-1:1)[0];if(!a)return;const Tp=APT.find(z=>z[0]===a.ty)||APT[5],x=aptDays(a.d);
+  C.unshift({t:"mint",e:"Randevun",h:`${x===0?"Bugün":"Yarın"}${a.tm?" "+a.tm:""}: ${a.n||Tp[2]}`,d:a.note||"Kendine ayırdığın zamanı unutma.",cta:"Randevularım",ic:Tp[1],go:()=>goFit("today")});}catch(e){}};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
