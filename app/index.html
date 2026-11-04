@@ -5101,6 +5101,11 @@ body.mf-on .rit .rhero{padding-top:calc(env(safe-area-inset-top,0px) + 40px)!imp
 .mf-mand{width:136px!important;height:136px!important;margin:-68px 0 0 -68px!important;opacity:.75}
 .rit .rh-monk{animation:floaty 6s ease-in-out infinite!important}
 body.mf-on .rit .rhero .lhero-top{position:absolute;top:calc(env(safe-area-inset-top,0px) + 8px);left:10px;right:10px}
+.mf-aff .mf-ab{flex-wrap:nowrap!important;gap:6px}
+.mf-aff .mf-ab button{flex:1 1 auto;white-space:nowrap;font-size:12px!important;padding:0 8px!important;height:32px}
+.mf-aff .mf-ab #mf-fc{flex:1.4 1 auto}
+body.mf-on .rit .pracs{margin:4px 0 10px!important}
+.mfday{margin-bottom:4px}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -10404,7 +10409,7 @@ function mfSteps(){const X=rx(),k=dkey(),R=rit(),RD=R&&R.d&&R.d[k]||{};const S36
  return [["s","☀️","Sabah","Niyet","369",S369],["y","🧘‍♀️","Beden","Yoga","yoga",X.yogaDay===k],["o","🫶","Gün içi","Şükran","sukran",(X.suk&&X.suk[k]||[]).filter(x=>x&&x.trim()).length>=5],["a","🌙","Akşam","Nefes","nefes",X.nefDay===k||X.birakDay===k]];}
 let mfPrev=null;
 function mfDayRender(){const R=document.querySelector(".rit");if(!R)return;const hero=R.querySelector(".rhero");if(!hero)return;let el=document.getElementById("mfday");
- if(!el){el=document.createElement("div");el.id="mfday";el.className="mfday";hero.insertAdjacentElement("afterend",el);}
+ if(!el){el=document.createElement("div");el.id="mfday";el.className="mfday";const pw=document.getElementById("pracs");(pw||hero).insertAdjacentElement("afterend",el);}
  const X=rx(),k=dkey(),St=mfSteps(),dn=St.filter(x=>x[5]).length;X.days=X.days||{};if(dn)X.days[k]=dn;else delete X.days[k];
  const ks=Object.keys(X.days).sort();while(ks.length>60)delete X.days[ks.shift()];
  let streak=0;{const d=new Date(k+"T00:00");if(!X.days[k])d.setDate(d.getDate()-1);while(X.days[dkey(d)]){streak++;d.setDate(d.getDate()-1);}}
@@ -10413,8 +10418,7 @@ function mfDayRender(){const R=document.querySelector(".rit");if(!R)return;const
  el.innerHTML=`<div class="mfday-h"><b>✨ Bugünün yolculuğu</b>${streak?`<span class="mf-str">🔥 ${streak} gün</span>`:""}</div>
   ${F&&!mfFocOpen?`<div class="mf-aff"><small class="no-mi">${F[1]} ${F[2]} · bugünün olumlaması</small><p>“${esc(mfAffText())}”</p><div class="mf-ab"><button type="button" class="mf-sh" id="mf-sh">Paylaş ↗</button><button type="button" id="mf-nx">↻ Başka</button><button type="button" id="mf-fc">Alanımı değiştir</button></div></div>`:
   `<div class="mf-aff"><small>Niyet alanını seç</small><p style="font-size:16px">Bu aralar en çok neyi çağırıyorsun?</p><div class="mf-foc no-mi">${MF_FOC.map(([id,e,l,c,b])=>`<button type="button" data-mff="${id}" style="--c:${c};--b:${b}" aria-pressed="${id===f}">${e} ${l}</button>`).join("")}</div></div>`}
-  <div class="mf-steps">${St.map(([id,e,t,l,go,ok])=>`<button type="button" class="mf-st${ok?" done":""}${!ok&&(id===nowK||(id==="y"&&nowK==="s"&&St[0][5]))?" now":""}" data-mfgo="${go}"><span class="e">${e}</span><small>${t}</small><b>${l}</b></button>`).join("")}</div>
-  <div class="mf-wk">${wk.join("")}</div>`;
+  <div class="mf-steps">${St.map(([id,e,t,l,go,ok])=>`<button type="button" class="mf-st${ok?" done":""}${!ok&&(id===nowK||(id==="y"&&nowK==="s"&&St[0][5]))?" now":""}" data-mfgo="${go}"><span class="e">${e}</span><small>${t}</small><b>${l}</b></button>`).join("")}</div>`;
  el.querySelectorAll("[data-mfgo]").forEach(b=>b.onclick=()=>{if(nfRun)nfStop();if(ygRun)ygStop();prac=b.dataset.mfgo;ritRender();try{pracSettle();}catch(e){}});
  el.querySelectorAll("[data-mff]").forEach(b=>b.onclick=()=>{X.foc=b.dataset.mff;X.affOff=0;mfFocOpen=false;save();mfDayRender();});
  const q=id=>document.getElementById(id);
