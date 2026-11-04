@@ -4879,6 +4879,13 @@ body.wb-gece .wb-fog{background:rgba(190,185,230,.22)!important}
 .pet .feed .fst{font-size:11.5px!important;line-height:1.1;max-width:100%}
 .pet .feed .fck{margin:0!important}
 .pet .feed .fdel{position:absolute;top:2px;right:2px;width:24px;height:24px;padding:0;font-size:14px;line-height:1;opacity:.55;background:none;border:0;cursor:pointer}
+
+/* v277 çocuk fotoğrafları ana sayfada */
+.bn-kph{display:flex;align-items:center}
+.bn-kph .bn-pph{width:52px;height:52px;margin-left:-16px;box-shadow:0 6px 14px -6px rgba(0,0,0,.35)}
+.bn-kph .bn-pph:first-child{margin-left:0}
+.bn-kph.n1 .bn-pph{width:62px;height:62px}
+.kedit .ke-ph{margin:2px 0 12px}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -9333,6 +9340,7 @@ function bentoRender(){const el=document.getElementById("bento");if(!el)return;c
   const T=[["go-rit","rit","Manifest Me",S.rit,"tall"],["go-fit","fit","Kendime iyi bak",S.fit,""],["go-pet","pet","Patili dostum",S.pet,""],
     ["go-kitap","kitap","Kitap köşem",S.kitap,"wide"],["go-kids","kids","Çocuklarım",S.kids,""],["go-ev","ev","Ev & düzen",S.ev,""],["go-zod","keyif","Keyif köşem",S.keyif,""],["go-love","love","Biz ikimiz","🔒 Sadece sana özel",""]];
   el.innerHTML=T.map(([id,k,t,sub,sz],i)=>{let art=BN_ART[k]||"";if(k==="fit")art=art.replace("{lvl}",(90-72*(S.fitw||0)).toFixed(0));
+    if(k==="kids"){try{const KL=(kids().list||[]).filter(x=>PH["k_"+x.id]).slice(0,3);if(KL.length)art=`<span class="bn-kph n${KL.length}">${KL.map(x=>`<span class="bn-pph"><img src="${PH["k_"+x.id]}" alt=""></span>`).join("")}</span>`;}catch(e){}}
     if(k==="pet")art=S.petph?`<span class="bn-pph"><img src="${S.petph}" alt=""></span>`:`<span class="no-mi">${petFace(S.petk||"kedi",S.pet&&S.pet.includes("doydu")?"tok":"normal")}</span>`;
     const ring=k==="rit"&&S.ritp!=null?`<svg class="bn-ring" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="3.5"/><circle cx="18" cy="18" r="15" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="${(94.2*S.ritp).toFixed(1)} 94.2" transform="rotate(-90 18 18)"/></svg>`:"";
     return `<button type="button" class="bn bn-${k} ${sz}${t.length>12?" long":""}" data-bgo="${id}" style="--i:${i}"><span class="bn-art" aria-hidden="true">${art}</span>${ring}<span class="bn-tx"><b>${t}</b><small>${esc(sub)}</small></span>${k==="love"?`<span class="bn-lock">ÖZEL</span>`:""}</button>`;}).join("");
@@ -9806,15 +9814,24 @@ function zodPlus(){const O=document.getElementById("zsh");const hero=O.querySele
       _k.apply(this,arguments);/* panel içeriğini düzenleme kartıyla değiştir */
       const P=document.getElementById("kpanel");document.querySelectorAll(".kseg button").forEach(b=>b.setAttribute("aria-selected","false"));
       P.innerHTML=`<div class="lcard t-sky kedit"><h3><span class="step no-mi">✏️</span>${esc(trEk(c.name,"gen"))} bilgileri</h3>
+        <div class="phrow ke-ph"><label class="phav kidph${PH["k_"+c.id]?" has":""}" for="ke-photo" ${phStyle("k_"+c.id)} aria-label="Fotoğraf seç">${PH["k_"+c.id]?'<span class="phx" id="ke-phx" role="button" aria-label="Fotoğrafı kaldır">×</span>':"<span>📷</span>"}</label><input id="ke-photo" type="file" accept="image/*" hidden><p class="fine" style="margin:0">${PH["k_"+c.id]?"Değiştirmek için fotoğrafa dokun.":esc(c.name)+" için bir fotoğraf ekle; sadece bu telefonda kalır."}</p></div>
         <div class="addgrid"><div class="field"><label for="ke-n">Adı</label><input id="ke-n" type="text" maxlength="16" value="${esc(c.name)}"></div>
         <div class="field"><label for="ke-c">Sınıfı</label><select id="ke-c"><option>Anaokulu</option>${[1,2,3,4,5,6,7,8,9,10,11,12].map(n=>`<option${c.cls===n+". sınıf"?" selected":""}>${n}. sınıf</option>`).join("")}</select></div></div>
+        <div class="addgrid"><div class="field"><label for="ke-dob">Doğum günü</label><input id="ke-dob" type="text" inputmode="numeric" maxlength="10" placeholder="GG.AA.YYYY" data-dmy autocomplete="off" value="${isoToDmy(c.dob)}"></div>
+        <div class="field"><label>Burcu</label><div class="zbox" id="ke-zod">${c.dob&&zodiac(c.dob)?`${zodiac(c.dob)[1]} ${zodiac(c.dob)[0]}`:"<small>Doğum gününü gir</small>"}</div></div></div>
         <div class="wl">Rengi</div><div class="kcols">${KCOL.map((x,i)=>`<button type="button" class="kcol" data-ec="${x}" aria-pressed="${x===c.col}" style="background:${x}" aria-label="Renk ${i+1}"></button>`).join("")}</div>
         <button class="btn" id="ke-save" type="button">Kaydet</button>
         <div class="kdel-box"><p>${esc(c.name)} artık listede olmasın mı? Ödevleri, takvimi ve programı da silinir.</p><button type="button" class="kdel" id="ke-del">🗑 ${esc(trEk(c.name,"acc"))} listeden çıkar</button></div>
         <button class="ghost" id="ke-x" type="button">‹ Vazgeç</button></div>`;
       if(c.cls==="Anaokulu")document.getElementById("ke-c").value="Anaokulu";let col=c.col;
       P.querySelectorAll("[data-ec]").forEach(b=>b.onclick=()=>{col=b.dataset.ec;P.querySelectorAll("[data-ec]").forEach(x=>x.setAttribute("aria-pressed",x===b));});
-      document.getElementById("ke-save").onclick=()=>{const n=document.getElementById("ke-n").value.trim();if(!n){document.getElementById("ke-n").focus();return;}c.name=n;c.cls=document.getElementById("ke-c").value;c.col=col;save();ktab="today";kidsRender();};
+      document.getElementById("ke-save").onclick=()=>{const n=document.getElementById("ke-n").value.trim();if(!n){document.getElementById("ke-n").focus();return;}c.name=n;c.cls=document.getElementById("ke-c").value;c.col=col;
+        const dv=dmyIso(document.getElementById("ke-dob").value);if(dv&&dv!==c.dob){c.dob=dv;K.ev=K.ev.filter(x=>!(x.kid===c.id&&x.ty==="dogum"));const [y,m,d]=dv.split("-").map(Number);const t=new Date();let nb=new Date(t.getFullYear(),m-1,d);if(nb<new Date(t.getFullYear(),t.getMonth(),t.getDate()))nb=new Date(t.getFullYear()+1,m-1,d);K.ev.push({kid:c.id,ty:"dogum",t:trEk(c.name,"gen")+" doğum günü",d:dkey(nb),tm:""});}
+        save();ktab="today";kidsRender();};
+      document.getElementById("ke-dob").addEventListener("input",e=>{const v=dmyIso(e.target.value);const z=v&&zodiac(v);document.getElementById("ke-zod").innerHTML=z?`${z[1]} ${z[0]}`:"<small>Doğum gününü gir</small>";});
+      document.getElementById("ke-photo").addEventListener("change",e=>{const f=e.target.files[0];e.target.value="";if(!f)return;const keep={n:document.getElementById("ke-n").value,c:document.getElementById("ke-c").value,d:document.getElementById("ke-dob").value};
+        phRead(f,d=>{PH["k_"+c.id]=d;if(!phSave()){delete PH["k_"+c.id];alertSoft("Telefon hafızası doldu; daha küçük bir fotoğraf dene.");}kidsRender();try{document.getElementById("ke-n").value=keep.n;document.getElementById("ke-c").value=keep.c;document.getElementById("ke-dob").value=keep.d;}catch(_){}},{w:480,h:480});});
+      const kpx=document.getElementById("ke-phx");if(kpx)kpx.onclick=e=>{e.preventDefault();e.stopPropagation();delete PH["k_"+c.id];phSave();kidsRender();};
       document.getElementById("ke-x").onclick=()=>{ktab="today";kidsRender();};
       document.getElementById("ke-del").onclick=function(){if(!this.dataset.sure){this.dataset.sure=1;this.textContent="Emin misin? Silmek için tekrar dokun";this.classList.add("sure");return;}
         K.list=K.list.filter(x=>x.id!==c.id);K.hw=K.hw.filter(h=>h.kid!==c.id);K.ev=K.ev.filter(e=>e.kid!==c.id);delete K.prog[c.id];delete PH["k_"+c.id];phSave();K.sel=K.list[0]?K.list[0].id:null;ktab="today";save();kidsRender();};
