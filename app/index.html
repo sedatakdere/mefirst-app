@@ -5684,8 +5684,8 @@ function homeRender(){
   document.getElementById("hello-p").textContent="Bugün önce sen varsın.";
   document.getElementById("today-strip").hidden=true;
   const hx=document.getElementById("hx");hx.hidden=!hub;if(!hub)return;
-  const now=new Date(),hr=now.getHours();
-  const tod=(hr<5||hr>=22)?["gece","İyi geceler","✨","Dinlenmek de kendine iyi bakmaktır."]:hr<11?["sabah","Günaydın","☀️","Yeni bir gün, yeni bir sen."]:hr<17?["ogle","Merhaba","🌤","Günün yarısı senin, tadını çıkar."]:hr<22?["aksam","İyi akşamlar","🌙","Günü güzelce kapatma zamanı."]:["gece","İyi geceler","✨","Dinlenmek de kendine iyi bakmaktır."];
+  const now=new Date(),hr=now.getHours();const SUN0=sunTimes(now),Hx=hr+now.getMinutes()/60;
+  const tod=(Hx<SUN0.rise-.5||hr>=22)?["gece","İyi geceler","✨","Dinlenmek de kendine iyi bakmaktır."]:Hx<Math.max(11,SUN0.rise+3)?["sabah","Günaydın","☀️","Yeni bir gün, yeni bir sen."]:Hx<SUN0.set-.75?["ogle","Merhaba","🌤","Günün yarısı senin, tadını çıkar."]:hr<22?["aksam","İyi akşamlar","🌙","Günü güzelce kapatma zamanı."]:["gece","İyi geceler","✨","Dinlenmek de kendine iyi bakmaktır."];
   const nm=(st.name||"").trim();const dc=DCOL[di%DCOL.length];
   const tiles=[];
   if(st.rit){const RD=st.rit.d[dkey()]||{s:0,o:0,a:0};const k=rnow(),S=SESS.find(x=>x[0]===k);tiles.push({i:"🧘",l:"Manifest",v:RD[k]>=S[3]?S[2]+" ✓":S[2]+" "+RD[k]+"/"+S[3],go:"go-rit"});}
