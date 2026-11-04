@@ -5075,7 +5075,7 @@ body.mf-on .rit .rhero{overflow:visible!important;padding-top:22px!important}
 .mf-dust{border-radius:26px}
 
 /* v0.14.1 Yoga figür, bahar kutuları, sade hero */
-.yg-ring .in .yfig{position:static!important;inset:auto;transform:none;width:132px;height:116px;animation:ygBr 6s ease-in-out infinite;margin-top:-6px}
+.yg-ring .in .yfig{position:static!important;inset:auto;transform:none;width:140px;height:122px;animation:ygBr 6s ease-in-out infinite;margin-top:-6px}
 .yg-ring .in b{margin-top:-4px}
 body.mf-on .rit .pracs{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:8px!important;overflow:visible!important;position:static!important;margin:2px 0 12px!important;padding:0!important;border-radius:0!important;background:none!important;border:0!important;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
 body.mf-on .rit .prac{--c:#E2689A;--b:#FCE6EF;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:4px!important;height:70px;padding:6px 4px!important;border-radius:18px!important;background:var(--b)!important;border:1.5px solid rgba(255,255,255,.9)!important;box-shadow:0 8px 18px -14px var(--c)!important;transition:transform .15s,background .25s,box-shadow .25s!important}
@@ -10543,30 +10543,38 @@ function ygTick(){ygStop();ygRun=setInterval(()=>{if(!ygCur){ygStop();return;}if
  const _s=save;let tm=null;save=function(){const r=_s.apply(this,arguments);clearTimeout(tm);tm=setTimeout(()=>{const R=document.querySelector(".rit");if(R&&R.offsetParent!==null)try{mfDayRender();}catch(e){}},120);return r;};
  const h=document.getElementById("rit-home");if(h){const o=h.onclick;h.onclick=function(){if(ygRun)ygStop();ygCur=null;return o&&o.apply(this,arguments);};}})();
 
-/* v0.14.1 Yoga çizgi figürleri */
+/* v0.15.3 Yoga figürleri: dolgun, yumuşak hatlı kadın silueti */
 const YFIG={
- dag:{h:[60,18],n:[60,29],p:[60,56],a1:[[53,42],[51,56]],a2:[[67,42],[69,56]],l1:[[57,72],[57,88]],l2:[[63,72],[63,88]]},
- uzan:{h:[60,24],n:[60,34],p:[60,58],a1:[[50,22],[53,7]],a2:[[70,22],[67,7]],l1:[[57,73],[57,88]],l2:[[63,73],[63,88]]},
- egil:{h:[67,80],n:[65,69],p:[55,44],c:[68,50],a1:[[67,79],[69,88]],a2:[[65,79],[66,88]],l1:[[56,66],[56,88]],l2:[[53,66],[52,88]]},
- kedi:{h:[33,46],n:[42,54],p:[78,54],c:[60,40],a1:[[42,71],[42,88]],a2:[[45,71],[46,88]],l1:[[78,88],[97,88]],l2:[[75,88],[94,88]]},
- kopek:{h:[41,66],n:[46,58],p:[64,30],a1:[[39,73],[32,88]],a2:[[41,74],[35,88]],l1:[[78,59],[90,88]],l2:[[76,59],[87,88]]},
- cocuk:{h:[36,83],n:[46,79],p:[79,77],c:[62,66],a1:[[33,87],[20,88]],a2:[[35,86],[23,87]],l1:[[60,88],[90,88]],l2:[[63,88],[92,87]]},
- boyun:{h:[53,37],n:[60,47],p:[60,74],a1:[[50,62],[46,75]],a2:[[70,62],[74,75]],l1:[[42,82],[64,87]],l2:[[78,82],[56,87]]},
- omuz:{h:[60,36],n:[60,47],p:[60,74],a1:[[46,52],[54,45]],a2:[[74,52],[66,45]],l1:[[42,82],[64,87]],l2:[[78,82],[56,87]]},
- burgu:{h:[54,36],n:[60,47],p:[60,74],a1:[[67,62],[77,77]],a2:[[50,58],[43,72]],l1:[[42,82],[64,87]],l2:[[78,82],[56,87]]},
- bilek:{h:[58,36],n:[60,47],p:[60,74],a1:[[76,49],[92,48]],a2:[[72,58],[88,50]],l1:[[42,82],[64,87]],l2:[[78,82],[56,87]]},
- katla:{h:[79,71],n:[68,72],p:[40,84],c:[52,72],a1:[[78,80],[90,83]],a2:[[76,82],[88,86]],l1:[[64,86],[92,86]],l2:[[64,87],[92,87]]},
- nefes:{h:[60,35],n:[60,46],p:[60,74],a1:[[47,60],[41,76]],a2:[[73,60],[79,76]],l1:[[42,82],[64,87]],l2:[[78,82],[56,87]]},
- yburgu:{h:[23,80],n:[33,83],p:[64,83],a1:[[24,87],[13,88]],a2:[[26,88],[15,88]],l1:[[74,66],[88,78]],l2:[[77,69],[91,81]]},
- bebek:{h:[24,80],n:[34,82],p:[64,82],a1:[[50,68],[70,55]],a2:[[52,70],[73,58]],l1:[[62,62],[74,52]],l2:[[66,64],[78,55]]},
- duvar:{h:[40,81],n:[50,83],p:[84,84],a1:[[58,87],[70,88]],a2:[[56,88],[66,88]],l1:[[86,62],[86,38]],l2:[[88,62],[88,38]],wall:1},
- savas:{h:[19,80],n:[29,82],p:[63,82],a1:[[40,86],[52,87]],a2:[[38,87],[49,88]],l1:[[80,84],[97,85]],l2:[[79,85],[96,86]]}};
-function yFig(k){const F=YFIG[k]||YFIG.dag;const L=(a,b,c)=>`M${a[0]} ${a[1]} L${b[0]} ${b[1]} L${c[0]} ${c[1]}`;
- const torso=F.c?`M${F.n[0]} ${F.n[1]} Q${F.c[0]} ${F.c[1]} ${F.p[0]} ${F.p[1]}`:`M${F.n[0]} ${F.n[1]} L${F.p[0]} ${F.p[1]}`;
- return `<svg class="yfig" viewBox="0 0 110 96" aria-hidden="true"><ellipse cx="55" cy="90" rx="50" ry="3.2" fill="var(--c)" opacity=".14"/>${F.wall?'<rect x="92" y="14" width="5" height="76" rx="2.5" fill="var(--c)" opacity=".18"/>':""}
- <g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="${L(F.p,F.l2[0],F.l2[1])}" stroke="var(--c)" stroke-opacity=".42" stroke-width="5.2"/><path d="${L(F.n,F.a2[0],F.a2[1])}" stroke="var(--c)" stroke-opacity=".42" stroke-width="4.4"/>
- <path d="${torso}" stroke="var(--c)" stroke-width="6.4"/><path d="${L(F.p,F.l1[0],F.l1[1])}" stroke="var(--c)" stroke-width="5.2"/><path d="${L(F.n,F.a1[0],F.a1[1])}" stroke="var(--c)" stroke-width="4.4"/></g>
- <circle cx="${F.h[0]}" cy="${F.h[1]}" r="6.6" fill="var(--c)"/></svg>`;}
+ dag:{fr:1,h:[60,15],n:[60,25],p:[60,52],a1:[[53,38],[51,51]],a2:[[67,38],[69,51]],l1:[[56.5,70],[56,87]],l2:[[63.5,70],[64,87]],b:[0,-7]},
+ uzan:{fr:1,h:[60,21],n:[60,31],p:[60,55],a1:[[52,19],[55,6]],a2:[[68,19],[65,6]],l1:[[56.5,72],[56,87]],l2:[[63.5,72],[64,87]],b:[0,-7]},
+ egil:{h:[63,79],n:[61,67],p:[52,45],c:[62,52],a1:[[62,77],[64,87]],a2:[[60,77],[61,87]],l1:[[53,66],[53,87]],l2:[[51,66],[50,87]],b:[4,4]},
+ kedi:{h:[31,47],n:[40,52],p:[76,52],c:[58,38],a1:[[40,70],[40,87]],a2:[[43,70],[43,87]],l1:[[76,87],[95,87]],l2:[[73,87],[92,87]],b:[-3,-6]},
+ kopek:{h:[39,69],n:[44,60],p:[64,28],a1:[[37,74],[30,87]],a2:[[39,75],[33,87]],l1:[[77,57],[88,87]],l2:[[75,57],[85,87]],b:[-4,4]},
+ cocuk:{h:[32,82],n:[42,77],p:[76,74],c:[58,62],a1:[[28,85],[16,86]],a2:[[30,84],[19,85]],l1:[[56,87],[86,87]],l2:[[59,87],[89,86]],b:[-6,0]},
+ boyun:{fr:1,h:[53,34],n:[60,44],p:[60,70],a1:[[50,58],[47,71]],a2:[[70,58],[73,71]],l1:[[44,80],[64,86]],l2:[[76,80],[56,86]],b:[-6,-4],seat:1},
+ omuz:{fr:1,h:[60,33],n:[60,44],p:[60,70],a1:[[46,49],[53,42]],a2:[[74,49],[67,42]],l1:[[44,80],[64,86]],l2:[[76,80],[56,86]],b:[0,-7],seat:1},
+ burgu:{fr:1,h:[55,33],n:[60,44],p:[60,70],a1:[[67,58],[75,73]],a2:[[50,55],[44,69]],l1:[[44,80],[64,86]],l2:[[76,80],[56,86]],b:[5,-5],seat:1},
+ bilek:{h:[58,33],n:[60,44],p:[60,70],a1:[[75,46],[90,45]],a2:[[71,55],[87,47]],l1:[[44,80],[64,86]],l2:[[76,80],[56,86]],b:[-5,-5],seat:1},
+ katla:{h:[78,70],n:[67,71],p:[38,83],c:[50,70],a1:[[77,79],[89,82]],a2:[[75,81],[87,85]],l1:[[63,85],[92,85]],l2:[[63,86],[92,86]],b:[3,-6]},
+ nefes:{fr:1,h:[60,32],n:[60,43],p:[60,70],a1:[[47,56],[42,72]],a2:[[73,56],[78,72]],l1:[[44,80],[64,86]],l2:[[76,80],[56,86]],b:[0,-7],seat:1},
+ yburgu:{h:[21,80],n:[31,82],p:[62,82],a1:[[22,86],[11,87]],a2:[[24,87],[13,87]],l1:[[72,66],[86,77]],l2:[[75,69],[89,80]],b:[-6,2]},
+ bebek:{h:[22,80],n:[32,82],p:[62,82],a1:[[48,68],[68,55]],a2:[[50,70],[71,58]],l1:[[61,62],[73,52]],l2:[[65,64],[77,55]],b:[-6,2]},
+ duvar:{h:[38,81],n:[48,83],p:[82,83],a1:[[56,86],[68,87]],a2:[[54,87],[64,87]],l1:[[84,62],[84,40]],l2:[[86.5,62],[86.5,40]],b:[-6,2],wall:1},
+ savas:{h:[17,80],n:[27,82],p:[61,82],a1:[[38,86],[50,87]],a2:[[36,87],[47,87]],l1:[[78,84],[95,85]],l2:[[77,85],[94,86]],b:[-6,2]}};
+function yFig(k){const F=YFIG[k]||YFIG.dag;
+ const seg=(a,b,wa,wb)=>{const dx=b[0]-a[0],dy=b[1]-a[1],L=Math.hypot(dx,dy)||1,nx=-dy/L,ny=dx/L;const f=v=>v.toFixed(2);
+  return `M${f(a[0]+nx*wa)} ${f(a[1]+ny*wa)}L${f(b[0]+nx*wb)} ${f(b[1]+ny*wb)}L${f(b[0]-nx*wb)} ${f(b[1]-ny*wb)}L${f(a[0]-nx*wa)} ${f(a[1]-ny*wa)}Z`+
+   `M${f(a[0]+wa)} ${f(a[1])}a${f(wa)} ${f(wa)} 0 1 0 ${f(-2*wa)} 0a${f(wa)} ${f(wa)} 0 1 0 ${f(2*wa)} 0Z`+`M${f(b[0]+wb)} ${f(b[1])}a${f(wb)} ${f(wb)} 0 1 0 ${f(-2*wb)} 0a${f(wb)} ${f(wb)} 0 1 0 ${f(2*wb)} 0Z`;};
+ const limb=(o,j)=>seg(o,j[0],2.9,2.3)+seg(j[0],j[1],2.3,1.6);
+ const leg=(o,j)=>seg(o,j[0],3.8,2.7)+seg(j[0],j[1],2.7,1.8);
+ const m=F.c?[.25*F.n[0]+.5*F.c[0]+.25*F.p[0],.25*F.n[1]+.5*F.c[1]+.25*F.p[1]]:[(F.n[0]+F.p[0])/2,(F.n[1]+F.p[1])/2];
+ const torso=seg(F.n,m,4.6,3.4)+seg(m,F.p,3.4,4.9);
+ const dn=[F.h[0]+(F.n[0]-F.h[0])*.55,F.h[1]+(F.n[1]-F.h[1])*.55];
+ const B=F.b||[0,-7];
+ return `<svg class="yfig" viewBox="0 0 110 96" aria-hidden="true"><rect x="6" y="87.5" width="98" height="4" rx="2" fill="var(--c)" opacity=".16"/>${F.wall?'<rect x="91" y="12" width="5" height="76" rx="2.5" fill="var(--c)" opacity=".16"/>':""}${F.seat?'<ellipse cx="60" cy="86" rx="22" ry="3" fill="var(--c)" opacity=".12"/>':""}
+ <path d="${leg(F.p,F.l2)+limb(F.n,F.a2)}" fill="${F.fr?"var(--c)":"color-mix(in srgb,var(--c) 45%,#fff)"}"/>
+ <path d="${torso+leg(F.p,F.l1)+limb(F.n,F.a1)+seg(dn,F.n,1.8,2.2)}" fill="var(--c)"/>
+ <circle cx="${F.h[0]}" cy="${F.h[1]}" r="5.8" fill="var(--c)"/><circle cx="${F.h[0]+B[0]*.95}" cy="${F.h[1]+B[1]*.95}" r="3.1" fill="var(--c)"/></svg>`;}
 
 /* v0.15 Manifest kapı düzeni: hub (9 kutu) → oda (ritüel ekranı) */
 window.mfRoomOn=false;
