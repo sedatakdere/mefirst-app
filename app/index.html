@@ -4986,6 +4986,93 @@ html[data-mf="dusk"] .apt-i,html[data-mf="dusk"] .apt-tb,html[data-mf="dusk"] .a
 .kn-doktor .kn-bal,.kn-asi .kn-bal,.kn-veli .kn-bal,.kn-diger .kn-bal{animation:none;font-size:34px;width:54px;height:54px;border-radius:17px;background:#fff;display:grid;place-items:center;box-shadow:0 6px 14px -10px rgba(62,156,147,.7)}
 .kn-doktor .kn-i small,.kn-asi .kn-i small{color:#3E9C93}.kn-doktor .kn-d b,.kn-asi .kn-d b{color:#3E9C93}
 html[data-mf="dusk"] .kncard.kn-doktor,html[data-mf="dusk"] .kncard.kn-asi{background:rgba(62,156,147,.1)!important}
+
+/* v0.14 Manifest Me: atmosfer + yolculuk + yoga */
+.rit .rh-monk{position:relative}
+.mf-mand{position:absolute;left:50%;top:50%;width:160px;height:160px;margin:-80px 0 0 -80px;pointer-events:none;z-index:-1;animation:mfSpin 80s linear infinite;opacity:.9}
+@keyframes mfSpin{to{transform:rotate(360deg)}}
+.mf-rays{position:absolute;left:50%;top:6px;width:340px;height:240px;margin-left:-170px;pointer-events:none;z-index:-2;background:conic-gradient(from 180deg at 50% 38%,transparent 0deg,rgba(255,214,150,.0) 10deg,rgba(255,214,150,.35) 18deg,transparent 26deg,transparent 40deg,rgba(255,200,220,.3) 50deg,transparent 60deg,transparent 80deg,rgba(255,214,150,.3) 92deg,transparent 104deg,transparent 256deg,rgba(255,214,150,.3) 268deg,transparent 280deg,transparent 300deg,rgba(255,200,220,.3) 310deg,transparent 320deg,transparent 334deg,rgba(255,214,150,.35) 342deg,transparent 350deg);-webkit-mask:radial-gradient(closest-side at 50% 38%,#000 20%,transparent 100%);mask:radial-gradient(closest-side at 50% 38%,#000 20%,transparent 100%);animation:mfRay 9s ease-in-out infinite alternate}
+@keyframes mfRay{from{opacity:.55;transform:rotate(-4deg)}to{opacity:1;transform:rotate(4deg)}}
+.mf-dust{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+.mf-dust b{position:absolute;bottom:-8px;left:var(--x);width:var(--s);height:var(--s);border-radius:50%;background:radial-gradient(circle,#FFE7B8,#E8C27A 60%,transparent 70%);box-shadow:0 0 8px #F5D08A;opacity:0;animation:mfRise var(--t) linear var(--d) infinite}
+@keyframes mfRise{0%{transform:translate(0,0);opacity:0}15%{opacity:.9}70%{opacity:.6}100%{transform:translate(var(--w),-260px);opacity:0}}
+.rit .rh-monk{animation:floaty 6s ease-in-out infinite,mfAura 4.5s ease-in-out infinite}
+@keyframes mfAura{0%,100%{filter:drop-shadow(0 0 0 rgba(232,194,122,0))}50%{filter:drop-shadow(0 0 18px rgba(232,194,122,.75))}}
+
+/* Bugünün yolculuğu */
+.mfday{position:relative;z-index:1;border-radius:24px;padding:14px 14px 12px;background:linear-gradient(160deg,rgba(255,255,255,.92),rgba(255,247,236,.92));border:1px solid rgba(201,150,58,.22);box-shadow:0 18px 40px -26px rgba(150,100,40,.55);display:flex;flex-direction:column;gap:10px}
+.mfday-h{display:flex;align-items:center;gap:8px}
+.mfday-h b{font-size:14.5px;font-weight:800;color:#5B4320;flex:1}
+.mfday-h .mf-str{font-size:12px;font-weight:800;color:#B5762A;background:#FFF0D9;border-radius:99px;padding:3px 9px}
+.mf-aff{border-radius:18px;padding:12px 12px 10px;background:linear-gradient(135deg,#FFF3E1,#FCE9F2 60%,#EFE8FD);position:relative;overflow:hidden}
+.mf-aff small{font-size:10.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#B5762A}
+.mf-aff p{margin:4px 0 8px;font-family:var(--f-display);font-size:19px;line-height:1.3;color:#3B2A4A;text-wrap:balance}
+.mf-aff .mf-ab{display:flex;gap:6px;flex-wrap:wrap}
+.mf-aff .mf-ab button{font:inherit;font-size:12.5px;font-weight:750;border:0;border-radius:99px;height:32px;padding:0 12px;cursor:pointer;background:#fff;color:#6B4E22;box-shadow:0 3px 10px -6px rgba(150,100,40,.6)}
+.mf-aff .mf-ab .mf-sh{background:linear-gradient(135deg,#E2689A,#E8A04C);color:#fff}
+.mf-foc{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.mf-foc button{font:inherit;font-size:12.5px;font-weight:750;height:38px;border-radius:12px;border:1.5px solid transparent;background:var(--b);color:#3B3352;display:flex;align-items:center;justify-content:center;gap:5px;cursor:pointer;white-space:nowrap}
+.mf-foc button[aria-pressed="true"]{background:linear-gradient(135deg,var(--c),color-mix(in srgb,var(--c) 65%,#fff));color:#fff;box-shadow:0 8px 16px -10px var(--c)}
+.mf-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.mf-st{font:inherit;cursor:pointer;border:1.5px solid transparent;border-radius:16px;padding:8px 2px 7px;background:#F7F2EA;display:flex;flex-direction:column;align-items:center;gap:2px;color:#5B4320;position:relative;transition:transform .15s}
+.mf-st:active{transform:scale(.95)}
+.mf-st .e{font-size:20px;line-height:1.1}
+.mf-st small{font-size:9.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;opacity:.6}
+.mf-st b{font-size:12px;font-weight:800;white-space:nowrap}
+.mf-st.now{border-color:#E8C27A;background:#FFF6E6;box-shadow:0 0 0 3px rgba(232,194,122,.2)}
+.mf-st.done{background:linear-gradient(150deg,#E8C27A,#F3D9A4);color:#4A3412}
+.mf-st.done::after{content:"✓";position:absolute;top:4px;right:6px;font-size:11px;font-weight:900;color:#fff;background:#C9963A;width:16px;height:16px;border-radius:50%;display:grid;place-items:center}
+.mf-wk{display:flex;justify-content:space-between;align-items:center;padding:0 2px}
+.mf-wk span{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;font-weight:700;color:#A08A6A}
+.mf-wk i{width:22px;height:22px;border-radius:50%;background:#F2ECE2;display:grid;place-items:center;font-style:normal;font-size:11px}
+.mf-wk i.l1{background:#F6E2BC}.mf-wk i.l2{background:#EECB86}.mf-wk i.l3{background:linear-gradient(135deg,#E8A04C,#E2689A);color:#fff}
+.mf-wk span.td{color:#B5762A}.mf-wk span.td i{box-shadow:0 0 0 2px #fff,0 0 0 3.5px #E8C27A}
+html[data-mf="dusk"] .mfday{background:rgba(255,255,255,.06);border-color:rgba(232,194,122,.25)}
+html[data-mf="dusk"] .mfday-h b,html[data-mf="dusk"] .mf-st{color:#F3E6CF}
+html[data-mf="dusk"] .mf-st{background:rgba(255,255,255,.06)}
+html[data-mf="dusk"] .mf-aff{background:rgba(232,194,122,.1)}html[data-mf="dusk"] .mf-aff p{color:#FBEFF6}
+
+/* Tören */
+.mfcer{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:radial-gradient(circle at 50% 42%,rgba(255,226,180,.97),rgba(226,104,154,.9) 45%,rgba(52,30,66,.96) 85%);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);animation:mfcIn .5s ease both;cursor:pointer}
+.mfcer.out{animation:mfcOut .6s ease forwards}
+@keyframes mfcIn{from{opacity:0}to{opacity:1}}@keyframes mfcOut{to{opacity:0}}
+.mfcer-c{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:0 30px}
+.mfcer-c svg{width:230px;height:230px;animation:mfSpin 14s linear infinite,mfcPop .9s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes mfcPop{from{transform:scale(.3);opacity:0}}
+.mfcer-c .mfc-e{position:absolute;top:84px;font-size:52px;line-height:62px;height:62px;animation:mfcPop 1s .15s cubic-bezier(.2,1.4,.4,1) both}
+.mfcer-c b{font-family:var(--f-display);font-weight:400;font-size:32px;color:#fff;text-shadow:0 2px 18px rgba(120,60,20,.6);margin-top:-6px}
+.mfcer-c small{font-size:14px;font-weight:600;color:rgba(255,255,255,.9);max-width:28ch}
+.mfcer-sp{position:absolute;left:50%;top:40%;width:8px;height:8px;border-radius:50%;background:#FFE3A6;box-shadow:0 0 10px #FFD27A;animation:mfcSp 1.6s ease-out forwards}
+@keyframes mfcSp{from{transform:translate(-50%,-50%) scale(1);opacity:1}to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(.2);opacity:0}}
+
+/* Yoga */
+.yg-flows{display:flex;flex-direction:column;gap:8px}
+.yg-f{font:inherit;text-align:left;cursor:pointer;display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:10px 12px;border-radius:18px;border:0;background:var(--b);color:#3B3352;box-shadow:0 8px 20px -16px var(--c);transition:transform .15s}
+.yg-f:active{transform:scale(.98)}
+.yg-f .e{width:52px;height:52px;border-radius:16px;background:#fff;display:grid;place-items:center;font-size:28px;box-shadow:0 4px 12px -8px var(--c)}
+.yg-f b{display:block;font-size:15px;font-weight:800}
+.yg-f small{display:block;font-size:12px;opacity:.75;margin-top:1px}
+.yg-f .go{font-size:12px;font-weight:800;color:#fff;background:var(--c);border-radius:99px;padding:6px 11px;white-space:nowrap}
+.yg-f.dn .go{background:#fff;color:var(--c)}
+.yg-play{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.yg-top{align-self:stretch;display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800;color:var(--c)}
+.yg-dots{display:flex;gap:4px}.yg-dots i{width:16px;height:5px;border-radius:9px;background:color-mix(in srgb,var(--c) 22%,#fff)}.yg-dots i.on{background:var(--c)}.yg-dots i.dn{background:color-mix(in srgb,var(--c) 55%,#fff)}
+.yg-ring{position:relative;width:210px;height:210px}
+.yg-ring svg{position:absolute;inset:0;transform:rotate(-90deg)}
+.yg-ring .in{position:absolute;inset:16px;border-radius:50%;background:radial-gradient(circle at 40% 30%,#fff,var(--b));display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7),0 16px 40px -22px var(--c)}
+.yg-ring .in .e{font-size:64px;line-height:1;animation:ygBr 6s ease-in-out infinite}
+@keyframes ygBr{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.yg-ring .in b{font-size:30px;font-weight:800;color:var(--c);margin-top:4px;font-variant-numeric:tabular-nums}
+.yg-play h4{margin:2px 0 0;font-family:var(--f-display);font-weight:400;font-size:26px;color:#3B2A4A}
+.yg-play .sk{font-size:12px;font-style:italic;color:var(--c);font-weight:600;margin-top:-6px}
+.yg-play p{margin:0;font-size:14px;line-height:1.45;color:#4A4260;max-width:32ch}
+.yg-next{font-size:12px;font-weight:700;color:#8A819E}
+.yg-ctl{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;align-self:stretch}
+.yg-ctl button{font:inherit;font-size:13.5px;font-weight:800;height:44px;border-radius:14px;border:0;cursor:pointer;background:var(--b);color:#3B3352}
+.yg-ctl .pr{background:linear-gradient(135deg,var(--c),color-mix(in srgb,var(--c) 65%,#fff));color:#fff;box-shadow:0 10px 20px -12px var(--c)}
+.yg1{--c:#E8A04C;--b:#FDF1E2}.yg2{--c:#3E9C93;--b:#E6F4F2}.yg3{--c:#8B6FD6;--b:#F1ECFC}
+body.mf-on .rit .rhero{overflow:visible!important;padding-top:22px!important}
+.mf-dust{border-radius:26px}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -5415,6 +5502,7 @@ html[data-mf="dusk"] .kncard.kn-doktor,html[data-mf="dusk"] .kncard.kn-asi{backg
     <div class="pracs" id="pracs" role="tablist"></div><span id="prac-anc" aria-hidden="true"></span>
     <div class="rpanel" data-pr="sukran" id="pr-sukran"></div>
     <div class="rpanel" data-pr="nefes" id="pr-nefes"></div>
+    <div class="rpanel" data-pr="yoga" id="pr-yoga"></div>
     <div class="rpanel" data-pr="soz" id="pr-soz"></div>
     <div class="rpanel" data-pr="birak" id="pr-birak"></div>
     <div class="rpanel" data-pr="ay" id="pr-ay"></div>
@@ -6562,7 +6650,7 @@ function mkRender(){const el=document.getElementById("pr-mektup");if(!el)return;
   el.querySelectorAll("[data-mo]").forEach(b=>b.onclick=()=>{const l=L.find(x=>x.id===b.dataset.mo);l.opened=true;save();mkOpen=l.id;mkRender();homeRender&&0;});
   el.querySelectorAll("[data-mr]").forEach(b=>b.onclick=()=>{mkOpen=b.dataset.mr;mkRender();});}
 
-const PRACS=[["369","✨","3·6·9","Niyet yazımı"],["sukran","🫶","Şükran 5","Günün 5 güzelliği"],["nefes","🌬","Nefes","Rehberli nefes"],["soz","📜","Bilge söz","Günün sözü"],["birak","🎈","Bırak gitsin","Yükünü bırak"],["ay","🌙","Ay ritüeli","Yeni ay · dolunay"],["pano","💫","Hayal panosu","Hedeflerin"],["mektup","💌","Gelecek bana","Kendine mektup"]];
+const PRACS=[["369","✨","3·6·9","Niyet yazımı"],["sukran","🫶","Şükran 5","Günün 5 güzelliği"],["nefes","🌬","Nefes","Rehberli nefes"],["yoga","🧘‍♀️","Yoga","Kısa akışlar"],["soz","📜","Bilge söz","Günün sözü"],["birak","🎈","Bırak gitsin","Yükünü bırak"],["ay","🌙","Ay ritüeli","Yeni ay · dolunay"],["pano","💫","Hayal panosu","Hedeflerin"],["mektup","💌","Gelecek bana","Kendine mektup"]];
 let prac="369";
 const SOZ=[["Gelin tanış olalım, işi kolay kılalım; sevelim, sevilelim, bu dünya kimseye kalmaz.","Yunus Emre"],["Bir ben vardır bende, benden içeru.","Yunus Emre"],["Ya olduğun gibi görün, ya göründüğün gibi ol.","Mevlânâ'ya atfedilir"],["Dün akıllıydım, dünyayı değiştirmek istedim. Bugün bilgeyim, kendimi değiştiriyorum.","Mevlânâ'ya atfedilir"],["Bin fersahlık yolculuk tek bir adımla başlar.","Lao Tzu"],["Doğa acele etmez, yine de her şey zamanında olur.","Lao Tzu"],["Hayatımız, düşüncelerimizin eseridir.","Marcus Aurelius"],["Sabah kalktığında, nefes almanın, düşünmenin, sevmenin ne büyük ayrıcalık olduğunu düşün.","Marcus Aurelius"],["Bazen yaşamak bile bir cesarettir.","Seneca"],["Sorunlarımız gerçekte olduğundan çok, zihnimizde büyür.","Seneca"],["Zihnini şimdiki ana getir; geçmiş geçti, gelecek henüz gelmedi.","Buda'ya atfedilir"],["Kendini sevmek, ömür boyu sürecek bir aşk hikâyesinin başlangıcıdır.","Oscar Wilde"],["Mutluluk, düşündüklerin, söylediklerin ve yaptıkların uyum içinde olduğunda gelir.","Gandhi'ye atfedilir"],["Bilmek yetmez, uygulamak gerekir. İstemek yetmez, yapmak gerekir.","Goethe"],["Tatlı dil yılanı deliğinden çıkarır.","Atasözü"],["Damlaya damlaya göl olur.","Atasözü"],["Sabreden derviş muradına ermiş.","Atasözü"],["Bir elin nesi var, iki elin sesi var.","Atasözü"],["Gönül ne kahve ister ne kahvehane; gönül sohbet ister, kahve bahane.","Atasözü"],["Her şey bitti dediğin yerde, yeni bir şey başlar.","Mevlânâ'ya atfedilir"],["Kalbinin sesini dinle; o, aklının bilmediğini bilir.","Halk sözü"],["Ne kadar yavaş gittiğin önemli değil, durmadığın sürece.","Konfüçyüs'e atfedilir"],["Mutluluk, hazır bir şey değildir. Senin eylemlerinden gelir.","Dalai Lama'ya atfedilir"],["Kendini bilen, Rabbini bilir.","Yunus Emre geleneği"],["Yaratılanı severiz Yaradan'dan ötürü.","Yunus Emre"],["En karanlık gece bile sona erer ve güneş yeniden doğar.","Victor Hugo"],["Hayal gücü bilgiden daha önemlidir.","Einstein'a atfedilir"],["Yolculuk, varış noktasından daha önemlidir.","Halk sözü"],["Az olsun, öz olsun.","Atasözü"],["Kendine iyi bakmak bencillik değil, gerekliliktir.","Modern söz"]];
 const NEF=[["kutu","Kutu nefes","Sakinleş",[["Nefes al",4],["Tut",4],["Ver",4],["Tut",4]]],["478","4-7-8","Uykuya hazırlan",[["Nefes al",4],["Tut",7],["Ver",8]]],["denge","5-5","Dengelen",[["Nefes al",5],["Ver",5]]]];
@@ -6661,7 +6749,7 @@ function pracRender(){
       fx.innerHTML=[...v].map(ch=>ch===" "?" ":`<span style="--dx:${(Math.random()*120-60).toFixed(0)}px;--dy:${(-60-Math.random()*160).toFixed(0)}px;--r:${(Math.random()*90-45).toFixed(0)}deg;--dl:${(Math.random()*.9).toFixed(2)}s">${esc(ch)}</span>`).join("");
       w.classList.add("bk-on");w.appendChild(fx);t.value="";const btn=document.getElementById("bk-go");btn.disabled=true;
       setTimeout(()=>{w.insertAdjacentHTML("beforeend",'<span class="bk-orb"></span>');},900);
-      setTimeout(()=>{fx.remove();const o=w.querySelector(".bk-orb");if(o)o.remove();w.classList.remove("bk-on");btn.disabled=false;X.birak++;save();document.getElementById("bk-m").textContent=`Bıraktın; artık senin değil. Şimdi derin bir nefes al 🤍${X.birak>1?` · ${X.birak}. kez hafifledin`:""}`;},3000);};}
+      setTimeout(()=>{fx.remove();const o=w.querySelector(".bk-orb");if(o)o.remove();w.classList.remove("bk-on");btn.disabled=false;X.birak++;X.birakDay=dkey();save();document.getElementById("bk-m").textContent=`Bıraktın; artık senin değil. Şimdi derin bir nefes al 🤍${X.birak>1?` · ${X.birak}. kez hafifledin`:""}`;},3000);};}
 }
 function nfStart(){const N=NEF.find(x=>x[0]===nfType);let ph=0,left=N[3][0][1];nfRound=1;
   const c=document.getElementById("nfc"),t=document.getElementById("nft"),n=document.getElementById("nfn"),r=document.getElementById("nfr");document.getElementById("nf-go").textContent="Durdur";
@@ -10267,6 +10355,99 @@ SND_OF["pp-apt"]="vax";
    b.classList.add("kv","p"+hue(b.dataset.sb&&!/^[a-z]+$/.test(b.dataset.sb)?b.dataset.sb:lab));b.title=lab;const e=document.createElement("em");e.textContent=SH(lab);b.appendChild(e);});
   let i=0;P.querySelectorAll(".kci").forEach(b=>{if(b.classList.contains("kv"))return;b.classList.add("kv","p"+[2,4,1,0,3,5,6,7][i++%8]);});};
  const _k=kidsRender;kidsRender=function(){const r=_k.apply(this,arguments);try{deco(document.getElementById("kpanel"));}catch(e){}return r;};})();
+
+/* v0.14 Manifest Me: atmosfer + günlük yolculuk + niyet alanı + paylaşım + yoga + tören */
+const MF_FOC=[["bolluk","💰","Bolluk","#E8A04C","#FDF1E2"],["ask","💗","Aşk","#E2668F","#FCEAF1"],["saglik","🌿","Sağlık","#3E9C93","#E6F4F2"],["kariyer","🚀","Kariyer","#4C8FD6","#E8F1FB"],["huzur","🕊","Huzur","#8B6FD6","#F1ECFC"],["aile","🏡","Aile","#D9655B","#FCECEA"]];
+const MF_AFF={
+ bolluk:["Bolluk bana kolayca ve sevgiyle akıyor.","Hak ettiğim her şeyi almaya açığım.","Paranın bana gelmesine izin veriyorum; değerimi biliyorum.","Her gün yeni bir fırsat kapımı çalıyor.","Verdikçe çoğalıyorum, aldıkça şükrediyorum.","Emeğimin karşılığı bereketle geliyor.","Yeterince var; ben de yeterliyim."],
+ ask:["Sevgiyi vermeye ve almaya kalbim açık.","Önce kendimi seviyorum; sevgi bana oradan geliyor.","Değer gördüğüm ilişkileri hak ediyorum.","Kalbim yumuşak ama sınırlarım net.","Sevildiğimi hissetmek için kendimi küçültmem gerekmiyor.","Bugün sevgimi küçük bir jestle göstereceğim.","Aşk bana güvenle ve huzurla geliyor."],
+ saglik:["Bedenim bana her gün iyilik yapıyor; ben de ona.","Her nefeste biraz daha hafifliyorum.","Bedenimi dinliyor, ihtiyacını veriyorum.","Dinlenmek de bir iyileşme.","Bugün bedenime su, hareket ve şefkat vereceğim.","Enerjim yükseliyor, ışığım parlıyor.","Sağlığım benim önceliğim."],
+ kariyer:["Yeteneklerim görülüyor ve değer buluyor.","Cesaretle bir adım atıyorum; gerisi geliyor.","İşimde hem üretken hem huzurluyum.","Fırsatlar beni buluyor çünkü hazırım.","Sesim önemli; fikirlerimi rahatça söylüyorum.","Her gün biraz daha ustalaşıyorum.","Başarım kimseyi küçültmez; ben de büyüyorum."],
+ huzur:["Şu an güvendeyim; nefesim yavaş ve derin.","Kontrol edemediklerimi bırakıyorum.","İçimde sakin bir göl var; hep oraya dönebilirim.","Mükemmel olmak zorunda değilim; yeterliyim.","Bugün kendime nazik davranacağım.","Gürültü dışarıda; huzur içimde.","Her şeyi bugün çözmek zorunda değilim."],
+ aile:["Evim sevgiyle doluyor, sofram bereketle.","Çocuklarıma sabırlı ve şefkatli bir anneyim.","Ailemle geçen her an bir hediye.","Önce ben iyi olursam evim de iyi olur.","Sevdiklerimle bağım her gün güçleniyor.","Evimde kahkaha, huzur ve anlayış var.","Yeterince iyi bir anneyim; bu fazlasıyla yeter."]};
+const YOGA=[
+ ["sabah","🌅","Güne uyan","5 dk · enerji ve esneklik","yg1",[["Dağ duruşu","Tadasana","🧍‍♀️",40,"Ayaklar kalça genişliğinde. Omuzlarını aşağı bırak, başının tepesinden yukarı uzan. Derin nefes al."],["Yukarı uzanma","Urdhva Hastasana","🙆‍♀️",30,"Nefes alırken kollarını yukarı kaldır, avuçları birbirine bak. Göğsünü aç, yüzünde hafif bir gülümseme."],["Öne eğilme","Uttanasana","🙇‍♀️",40,"Nefes verirken kalçadan öne katlan. Dizlerini yumuşat, başını ağırlığına bırak."],["Kedi – inek","Marjaryasana","🐈",60,"Dört ayak üstünde: nefes alırken sırtı çukurlaştır, verirken kedi gibi kamburlaştır. Kendi ritminde."],["Aşağı bakan köpek","Adho Mukha Svanasana","🐕",45,"Kalçanı yukarı it, ters V yap. Topukları yere doğru yaklaştır, dizleri gerekirse bük."],["Çocuk pozu","Balasana","🧎‍♀️",50,"Dizlerini aç, kalçanı topuklara bırak, alnını yere koy. Sırtına nefes gönder."]]],
+ ["masa","💻","Masa başı","4 dk · boyun, omuz, bel","yg2",[["Boyun esnetme","Kulak omuza","🙂",40,"Sağ kulağını sağ omzuna yaklaştır, 20 saniye; sonra sol. Omuzlar aşağıda kalsın."],["Omuz çevirme","Omuz rahatlatma","🤷‍♀️",30,"Omuzlarını kulaklara kaldır, geriye ve aşağı doğru yavaşça çevir. 5 kez geri, 5 kez ileri."],["Oturarak burgu","Bharadvajasana","🔄",40,"Sandalyede dik otur. Nefes alırken uzan, verirken sağa dön; yarı sürede sola geç."],["Bilek ve parmaklar","El esnetme","✋",30,"Kolunu öne uzat, diğer elinle parmakları kendine doğru çek. Sonra yumruk yap, aç."],["Oturarak öne eğilme","Rahat sırt","🙇‍♀️",40,"Sandalyenin önüne kay, ayaklar yerde. Göğsünü dizlere bırak, kollar sarkık."],["Üç derin nefes","Pranayama","🌬",40,"Gözlerini kapat. 4 sayıda al, 6 sayıda ver. Ekrana dönmeden önce kendine dön."]]],
+ ["aksam","🌙","Uykudan önce","6 dk · gevşeme ve uyku","yg3",[["Çocuk pozu","Balasana","🧎‍♀️",60,"Alnını yere bırak, kollar önde ya da yanda. Günün yükünü yere ver."],["Kedi – inek","Marjaryasana","🐈",45,"Yavaş ve yumuşak. Omurganı nefesinle dalgalandır."],["Yatarak burgu","Supta Matsyendrasana","🔄",60,"Sırtüstü uzan, dizleri bir yana bırak, başını öbür yana çevir. Yarı sürede taraf değiştir."],["Mutlu bebek","Ananda Balasana","👶",45,"Dizlerini göğsüne çek, ayak tabanlarını tut, hafifçe sağa sola sallan."],["Bacaklar duvarda","Viparita Karani","🦵",90,"Kalçanı duvara yaklaştır, bacaklarını duvara yasla. Yorgunluk aşağı aksın."],["Son dinlenme","Şavasana","😌",90,"Sırtüstü bırak kendini. Avuçlar yukarı. Hiçbir şey yapma; sadece ol."]]]];
+let ygRun=null,ygCur=null;
+function mfFoc(){return (st.rx&&st.rx.foc)||null;}
+function mfAffText(){const f=mfFoc();if(!f)return "";const L=MF_AFF[f];const d=Math.floor(new Date(dkey()+"T00:00")/864e5)+(rx().affOff||0);return L[((d%L.length)+L.length)%L.length];}
+function mfSteps(){const X=rx(),k=dkey(),R=rit(),RD=R&&R.d&&R.d[k]||{};const S369=R?((RD.s||0)>=3||(RD.o||0)>=6||(RD.a||0)>=9):false;
+ return [["s","☀️","Sabah","Niyet","369",S369],["y","🧘‍♀️","Beden","Yoga","yoga",X.yogaDay===k],["o","🫶","Gün içi","Şükran","sukran",(X.suk&&X.suk[k]||[]).filter(x=>x&&x.trim()).length>=5],["a","🌙","Akşam","Nefes","nefes",X.nefDay===k||X.birakDay===k]];}
+let mfPrev=null;
+function mfDayRender(){const R=document.querySelector(".rit");if(!R)return;const hero=R.querySelector(".rhero");if(!hero)return;let el=document.getElementById("mfday");
+ if(!el){el=document.createElement("div");el.id="mfday";el.className="mfday";hero.insertAdjacentElement("afterend",el);}
+ const X=rx(),k=dkey(),St=mfSteps(),dn=St.filter(x=>x[5]).length;X.days=X.days||{};if(dn)X.days[k]=dn;else delete X.days[k];
+ const ks=Object.keys(X.days).sort();while(ks.length>60)delete X.days[ks.shift()];
+ let streak=0;{const d=new Date(k+"T00:00");if(!X.days[k])d.setDate(d.getDate()-1);while(X.days[dkey(d)]){streak++;d.setDate(d.getDate()-1);}}
+ const h=new Date().getHours(),nowK=h<11?"s":h<17?"o":"a";
+ const f=mfFoc(),F=MF_FOC.find(x=>x[0]===f);const wk=[];for(let i=6;i>=0;i--){const d=new Date(k+"T00:00");d.setDate(d.getDate()-i);const n=X.days[dkey(d)]||0;wk.push(`<span class="${i?"":"td"}"><i class="l${Math.min(3,n)}">${n>=4?"✦":""}</i>${d.toLocaleDateString("tr-TR",{weekday:"short"}).slice(0,2)}</span>`);}
+ el.innerHTML=`<div class="mfday-h"><b>✨ Bugünün yolculuğu</b>${streak?`<span class="mf-str">🔥 ${streak} gün</span>`:""}</div>
+  ${F&&!mfFocOpen?`<div class="mf-aff"><small class="no-mi">${F[1]} ${F[2]} · bugünün olumlaması</small><p>“${esc(mfAffText())}”</p><div class="mf-ab"><button type="button" class="mf-sh" id="mf-sh">Paylaş ↗</button><button type="button" id="mf-nx">↻ Başka</button><button type="button" id="mf-fc">Alanımı değiştir</button></div></div>`:
+  `<div class="mf-aff"><small>Niyet alanını seç</small><p style="font-size:16px">Bu aralar en çok neyi çağırıyorsun?</p><div class="mf-foc no-mi">${MF_FOC.map(([id,e,l,c,b])=>`<button type="button" data-mff="${id}" style="--c:${c};--b:${b}" aria-pressed="${id===f}">${e} ${l}</button>`).join("")}</div></div>`}
+  <div class="mf-steps">${St.map(([id,e,t,l,go,ok])=>`<button type="button" class="mf-st${ok?" done":""}${!ok&&(id===nowK||(id==="y"&&nowK==="s"&&St[0][5]))?" now":""}" data-mfgo="${go}"><span class="e">${e}</span><small>${t}</small><b>${l}</b></button>`).join("")}</div>
+  <div class="mf-wk">${wk.join("")}</div>`;
+ el.querySelectorAll("[data-mfgo]").forEach(b=>b.onclick=()=>{if(nfRun)nfStop();if(ygRun)ygStop();prac=b.dataset.mfgo;ritRender();try{pracSettle();}catch(e){}});
+ el.querySelectorAll("[data-mff]").forEach(b=>b.onclick=()=>{X.foc=b.dataset.mff;X.affOff=0;mfFocOpen=false;save();mfDayRender();});
+ const q=id=>document.getElementById(id);
+ if(q("mf-nx"))q("mf-nx").onclick=()=>{X.affOff=(X.affOff||0)+1;save();mfDayRender();};
+ if(q("mf-fc"))q("mf-fc").onclick=()=>{mfFocOpen=true;mfDayRender();};
+ if(q("mf-sh"))q("mf-sh").onclick=()=>mfShare(mfAffText(),F);
+ const doneSet=St.filter(x=>x[5]).map(x=>x[0]);
+ if(mfPrev&&mfPrev.k===k){const nw=St.filter(x=>x[5]&&!mfPrev.d.includes(x[0]));if(nw.length){const n=nw[0];const all=doneSet.length===4;
+   setTimeout(()=>mfCeremony(all?"🌟":n[1],all?"Günün yolculuğu tamam":{s:"Niyetin evrene ulaştı",y:"Bedenine teşekkür et",o:"Kalbin dolu",a:"Hafifledin"}[n[0]],all?"Dört ritüelin hepsini yaptın. Bugün kendine söz verdin ve tuttun 🤍":streak>1?`${streak} gündür kendine zaman ayırıyorsun ✨`:"Bugün kendine bir an ayırdın ✨"),250);}}
+ mfPrev={k,d:doneSet};}
+let mfFocOpen=false;
+function mfMandSVG(sz,col){let p="";for(let i=0;i<12;i++){const a=i*30;p+=`<ellipse cx="50" cy="22" rx="6" ry="15" transform="rotate(${a} 50 50)" fill="none" stroke="${col}" stroke-width=".7"/>`;}
+ for(let i=0;i<24;i++){const a=i*15;p+=`<circle cx="50" cy="5" r="1.1" transform="rotate(${a} 50 50)" fill="${col}"/>`;}
+ return `<svg viewBox="0 0 100 100" width="${sz}" height="${sz}" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="${col}" stroke-width=".5" stroke-dasharray="1 2.5"/><circle cx="50" cy="50" r="40" fill="none" stroke="${col}" stroke-width=".4"/>${p}</svg>`;}
+function mfAtmos(){const H=document.querySelector(".rit .rhero");if(!H||H.dataset.atm)return;H.dataset.atm=1;const m=H.querySelector(".rh-monk");
+ if(m){const w=document.createElement("div");w.className="mf-mand";w.innerHTML=mfMandSVG(170,"#D4A24E").replace('<svg ','<svg style="width:100%;height:100%;-webkit-mask:radial-gradient(circle,transparent 27%,#000 30%);mask:radial-gradient(circle,transparent 27%,#000 30%)" ');m.appendChild(w);}
+ const r=document.createElement("div");r.className="mf-rays";H.prepend(r);
+ const d=document.createElement("div");d.className="mf-dust";let h="";for(let i=0;i<14;i++)h+=`<b style="--x:${Math.round(Math.random()*100)}%;--s:${(2+Math.random()*4).toFixed(1)}px;--t:${(6+Math.random()*6).toFixed(1)}s;--d:${(-Math.random()*10).toFixed(1)}s;--w:${Math.round(Math.random()*60-30)}px"></b>`;d.innerHTML=h;H.prepend(d);}
+SND.bowl=(C,o,t)=>{[[392,.3],[392*2.71,.1],[392*5.2,.04],[394.5,.22]].forEach(([f,a])=>sndTone(C,o,t,f,3.2,"sine",a,.02));sndBell(C,o,t+.5,1174.7,1.6,.1);sndBell(C,o,t+.75,1568,1.4,.08);};
+function mfCeremony(e,t,sub){const o=document.createElement("div");o.className="mfcer no-mi";let sp="";for(let i=0;i<22;i++){const a=Math.random()*Math.PI*2,r=110+Math.random()*90;sp+=`<i class="mfcer-sp" style="--dx:${Math.round(Math.cos(a)*r)}px;--dy:${Math.round(Math.sin(a)*r)}px;animation-delay:${(Math.random()*.3).toFixed(2)}s"></i>`;}
+ o.innerHTML=`<div class="mfcer-c">${mfMandSVG(230,"#FFE3A6")}<span class="mfc-e">${e}</span><b>${esc(t)}</b><small>${esc(sub)}</small></div>${sp}`;document.body.appendChild(o);try{sndPlay("bowl");}catch(x){}
+ if(navigator.vibrate)try{navigator.vibrate([30,60,30]);}catch(x){}
+ const cl=()=>{if(o.classList.contains("out"))return;o.classList.add("out");setTimeout(()=>o.remove(),600);};o.onclick=cl;setTimeout(cl,3400);}
+async function mfShare(txt,F){try{await document.fonts.ready;}catch(e){}const W=1080,H=1350,c=document.createElement("canvas");c.width=W;c.height=H;const g=c.getContext("2d");
+ let gr=g.createLinearGradient(0,0,W,H);gr.addColorStop(0,"#FFE6C7");gr.addColorStop(.5,"#FBD9E8");gr.addColorStop(1,"#E2D6FB");g.fillStyle=gr;g.fillRect(0,0,W,H);
+ const rg=g.createRadialGradient(W/2,420,10,W/2,420,520);rg.addColorStop(0,"rgba(255,255,255,.85)");rg.addColorStop(1,"rgba(255,255,255,0)");g.fillStyle=rg;g.fillRect(0,0,W,H);
+ for(let i=0;i<40;i++){const x=Math.random()*W,y=Math.random()*H,r=2+Math.random()*5;g.fillStyle=`rgba(212,162,78,${.2+Math.random()*.5})`;g.beginPath();g.arc(x,y,r,0,7);g.fill();}
+ g.save();g.translate(W/2,330);g.strokeStyle="rgba(201,150,58,.55)";g.lineWidth=2;for(let i=0;i<12;i++){g.rotate(Math.PI/6);g.beginPath();g.ellipse(0,-80,18,48,0,0,7);g.stroke();}g.beginPath();g.arc(0,0,150,0,7);g.stroke();g.restore();
+ g.font="120px serif";g.textAlign="center";g.textBaseline="middle";g.fillText(F?F[1]:"✨",W/2,335);
+ g.fillStyle="#B5762A";g.font="700 34px Inter, system-ui, sans-serif";g.fillText(((F?F[2]+" · ":"")+"BUGÜNÜN OLUMLAMASI").toLocaleUpperCase("tr"),W/2,560);
+ g.fillStyle="#3B2A4A";const fs=txt.length>60?62:72;g.font=`${fs}px "DM Serif Display", Georgia, serif`;const words=("“"+txt+"”").split(" ");const lines=[];let ln="";words.forEach(w=>{const t2=ln?ln+" "+w:w;if(g.measureText(t2).width>W-180){lines.push(ln);ln=w;}else ln=t2;});lines.push(ln);
+ const y0=800-(lines.length-1)*fs*.62;lines.forEach((l,i)=>g.fillText(l,W/2,y0+i*fs*1.24));
+ g.fillStyle="rgba(59,42,74,.75)";g.font="600 34px Inter, system-ui, sans-serif";g.fillText("Manifest Me · Me First",W/2,H-110);g.font="500 28px Inter, system-ui, sans-serif";g.fillStyle="rgba(59,42,74,.5)";g.fillText("mefirst.app",W/2,H-65);
+ c.toBlob(async b=>{if(!b)return;const file=new File([b],"olumlama.png",{type:"image/png"});
+  try{if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],text:txt+" ✨ #MeFirst"});return;}}catch(e){if(e&&e.name==="AbortError")return;}
+  const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="olumlama.png";document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1500);},"image/png");}
+/* Yoga */
+function ygStop(){clearInterval(ygRun);ygRun=null;}
+function ygRender(){const P=document.getElementById("pr-yoga");if(!P)return;const X=rx(),k=dkey();
+ document.getElementById("rit-int").textContent="Bedenine birkaç dakika ayır; nefesin rehberin.";document.getElementById("rit-prog").innerHTML="";
+ if(!ygCur){const dn=(X.ygDone||{})[k]||[];
+  P.innerHTML=`<div class="lcard t-butter"><h3><span class="step">🧘‍♀️</span>Kısa yoga akışları${X.yoga?`<span class="nextf">${X.yoga} akış</span>`:""}</h3><div class="yg-flows">${YOGA.map(([id,e,l,d,cl,ps])=>`<button type="button" class="yg-f ${cl}${dn.includes(id)?" dn":""}" data-yg="${id}"><span class="e">${e}</span><span><b>${l}</b><small>${d} · ${ps.length} poz</small></span><span class="go">${dn.includes(id)?"Tekrar ✓":"Başla"}</span></button>`).join("")}</div>
+  <p class="fine">Her poz ekranda süresiyle gelir, geçişlerde çan sesi çalar. Hamileysen, ağrın ya da sakatlığın varsa zorlamadan, kendi sınırında kal.</p></div>`;
+  P.querySelectorAll("[data-yg]").forEach(b=>b.onclick=()=>{ygCur={f:b.dataset.yg,i:0,left:YOGA.find(x=>x[0]===b.dataset.yg)[5][0][3],pause:false};ygRender();ygTick();});return;}
+ const Fw=YOGA.find(x=>x[0]===ygCur.f),ps=Fw[5],p=ps[ygCur.i],tot=p[3],nx=ps[ygCur.i+1];const C=2*Math.PI*94;
+ P.innerHTML=`<div class="lcard ${Fw[4]}"><div class="yg-play"><div class="yg-top"><span>${Fw[1]} ${Fw[2]}</span><span class="yg-dots">${ps.map((_,i)=>`<i class="${i<ygCur.i?"dn":i===ygCur.i?"on":""}"></i>`).join("")}</span></div>
+  <div class="yg-ring"><svg viewBox="0 0 210 210"><circle cx="105" cy="105" r="94" fill="none" stroke="color-mix(in srgb,var(--c) 18%,#fff)" stroke-width="9"/><circle id="yg-arc" cx="105" cy="105" r="94" fill="none" stroke="var(--c)" stroke-width="9" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C*(1-ygCur.left/tot)}" style="transition:stroke-dashoffset 1s linear"/></svg><div class="in"><span class="e">${p[2]}</span><b id="yg-n">${ygCur.left}</b></div></div>
+  <h4>${esc(p[0])}</h4><span class="sk">${esc(p[1])}</span><p>${esc(p[4])}</p><span class="yg-next">${nx?`Sıradaki: ${nx[2]} ${esc(nx[0])}`:"Son poz 🤍"}</span>
+  <div class="yg-ctl"><button type="button" id="yg-x">Bitir</button><button type="button" class="pr" id="yg-p">${ygCur.pause?"Devam ▶":"Duraklat ❚❚"}</button><button type="button" id="yg-s">Atla ›</button></div></div></div>`;
+ document.getElementById("yg-x").onclick=()=>{ygStop();ygCur=null;ygRender();};
+ document.getElementById("yg-p").onclick=()=>{ygCur.pause=!ygCur.pause;ygRender();};
+ document.getElementById("yg-s").onclick=()=>ygNext();}
+function ygNext(){const ps=YOGA.find(x=>x[0]===ygCur.f)[5];ygCur.i++;if(ygCur.i>=ps.length){const X=rx(),k=dkey();ygStop();X.yoga=(X.yoga||0)+1;X.yogaDay=k;X.ygDone=X.ygDone||{};const ks=Object.keys(X.ygDone).filter(d=>d!==k);ks.forEach(d=>delete X.ygDone[d]);X.ygDone[k]=[...new Set([...(X.ygDone[k]||[]),ygCur.f])];ygCur=null;save();ygRender();return;}
+ ygCur.left=ps[ygCur.i][3];try{sndPlay("bag");}catch(e){}ygRender();}
+function ygTick(){ygStop();ygRun=setInterval(()=>{if(!ygCur){ygStop();return;}if(prac!=="yoga"||!document.getElementById("yg-n")){return;}if(ygCur.pause)return;ygCur.left--;
+ if(ygCur.left<=0){ygNext();return;}const ps=YOGA.find(x=>x[0]===ygCur.f)[5],tot=ps[ygCur.i][3],C=2*Math.PI*94;document.getElementById("yg-n").textContent=ygCur.left;const a=document.getElementById("yg-arc");if(a)a.style.strokeDashoffset=C*(1-ygCur.left/tot);
+ if(ygCur.left===3)try{sndPlay("su");}catch(e){}},1000);}
+(function(){const _p=pracRender;pracRender=function(){const r=_p.apply(this,arguments);if(prac==="yoga")ygRender();try{mfAtmos();mfDayRender();}catch(e){console.error(e);}return r;};
+ const _r=ritRender;ritRender=function(){const r=_r.apply(this,arguments);try{mfAtmos();mfDayRender();}catch(e){console.error(e);}return r;};
+ const _s=save;let tm=null;save=function(){const r=_s.apply(this,arguments);clearTimeout(tm);tm=setTimeout(()=>{const R=document.querySelector(".rit");if(R&&R.offsetParent!==null)try{mfDayRender();}catch(e){}},120);return r;};
+ const h=document.getElementById("rit-home");if(h){const o=h.onclick;h.onclick=function(){if(ygRun)ygStop();ygCur=null;return o&&o.apply(this,arguments);};}})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
