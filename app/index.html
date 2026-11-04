@@ -5110,6 +5110,23 @@ body.mf-on .rit .prac{position:relative}
 body.mf-on .rit .prac.mf-ok::after{content:"✓";position:absolute;top:6px;right:7px;width:18px;height:18px;border-radius:50%;background:var(--c);color:#fff;font-size:11px;font-weight:900;display:grid;place-items:center;box-shadow:0 0 0 2px #fff}
 body.mf-on .rit .prac.mf-ok[aria-selected="true"]::after{background:#fff;color:var(--c);box-shadow:none}
 .mfday{gap:8px;padding:12px 12px 12px}
+
+/* v0.15 Manifest kapı düzeni */
+.rit.mf-hub .rpanel,.rit.mf-hub .gsur,.rit.mf-hub #mf-roomh{display:none!important}
+.rit.mf-in .rhero,.rit.mf-in #mfday,.rit.mf-in #pracs{display:none!important}
+#mf-roomh{position:relative;z-index:2;margin:calc(env(safe-area-inset-top,0px) + 6px) 0 4px;border-radius:26px;padding:12px 14px 16px;background:linear-gradient(150deg,var(--c),color-mix(in srgb,var(--c) 55%,#fff));color:#fff;box-shadow:0 18px 36px -22px var(--c);overflow:hidden;animation:mfrIn .35s ease both}
+@keyframes mfrIn{from{opacity:0;transform:translateY(-8px) scale(.98)}}
+#mf-roomh::before{content:"";position:absolute;right:-40px;top:-50px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.16)}
+#mf-roomh::after{content:"";position:absolute;right:40px;bottom:-70px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.1)}
+.mfr-top{position:relative;display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.mfr-back{font:inherit;font-size:13px;font-weight:800;color:#fff;background:rgba(255,255,255,.24);border:0;border-radius:99px;height:34px;padding:0 14px 0 10px;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.mfr-ok{font-size:11.5px;font-weight:800;background:#fff;color:var(--c);border-radius:99px;padding:4px 10px}
+.mfr-main{position:relative;display:flex;align-items:center;gap:12px}
+.mfr-ic{flex:none;width:56px;height:56px;border-radius:18px;background:rgba(255,255,255,.95);display:grid;place-items:center;color:var(--c);box-shadow:0 8px 18px -10px rgba(0,0,0,.3)}
+.mfr-ic .mi{width:30px;height:30px;color:var(--c)!important;--deep:var(--c)}
+.mfr-t b{display:block;font-family:var(--f-display);font-weight:400;font-size:28px;line-height:1.05}
+.mfr-t small{display:block;font-size:13.5px;font-weight:600;opacity:.95;margin-top:3px;line-height:1.35;text-wrap:balance}
+.rit.mf-in .rpanel:not([hidden]),.rit.mf-in #rit-main:not([hidden]),.rit.mf-in #rit-setup:not([hidden]){animation:prIn .4s .05s ease both}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -7338,7 +7355,7 @@ function navSync(){const c=navCur();document.querySelectorAll("#bnav [data-nv]")
   lastStep=step;}
 function renderStep(){try{if(step>=9&&step<=10){openLove();return;}
   const R={20:petRender,30:profRender,40:wardRender,50:fitRender,60:ritRender,70:kidsRender,80:evRender,90:kitapRender};show();if(R[step])R[step]();}catch(e){show();}}
-window.addEventListener("popstate",e=>{if(e.state&&(e.state.kpz||e.state.shs||e.state.zs||e.state.ss))return;const t=e.state&&typeof e.state.mf==="number"?e.state.mf:0;if(typeof nfRun!=="undefined"&&nfRun)nfStop();
+window.addEventListener("popstate",e=>{if(window.mfRoomOn&&window.mfRoomClose){window.mfRoomClose(true);return;}if(e.state&&(e.state.kpz||e.state.shs||e.state.zs||e.state.ss||e.state.mfr))return;const t=e.state&&typeof e.state.mf==="number"?e.state.mf:0;if(typeof nfRun!=="undefined"&&nfRun)nfStop();
   navLock=true;step=(t===9||t===10)?(love.unlocked?10:9):t;renderStep();navLock=false;});
 document.addEventListener("click",e=>{const b=e.target.closest("#bnav [data-nv]");if(!b)return;const v=b.dataset.nv;if(typeof nfRun!=="undefined"&&nfRun)nfStop();
   if(v==="home"){step=0;show();}
@@ -10510,6 +10527,30 @@ function yFig(k){const F=YFIG[k]||YFIG.dag;const L=(a,b,c)=>`M${a[0]} ${a[1]} L$
  <g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="${L(F.p,F.l2[0],F.l2[1])}" stroke="var(--c)" stroke-opacity=".42" stroke-width="5.2"/><path d="${L(F.n,F.a2[0],F.a2[1])}" stroke="var(--c)" stroke-opacity=".42" stroke-width="4.4"/>
  <path d="${torso}" stroke="var(--c)" stroke-width="6.4"/><path d="${L(F.p,F.l1[0],F.l1[1])}" stroke="var(--c)" stroke-width="5.2"/><path d="${L(F.n,F.a1[0],F.a1[1])}" stroke="var(--c)" stroke-width="4.4"/></g>
  <circle cx="${F.h[0]}" cy="${F.h[1]}" r="6.6" fill="var(--c)"/></svg>`;}
+
+/* v0.15 Manifest kapı düzeni: hub (9 kutu) → oda (ritüel ekranı) */
+window.mfRoomOn=false;
+function mfRoomApply(){const R=document.querySelector(".rit");if(!R)return;R.classList.toggle("mf-in",!!window.mfRoomOn);R.classList.toggle("mf-hub",!window.mfRoomOn);
+ const int=document.getElementById("rit-int");
+ document.querySelectorAll("#pracs .prac").forEach(b=>{const id=([...b.classList].find(c=>c.startsWith("pr-"))||"").slice(3);if(!id)return;
+  b.setAttribute("aria-selected","false");
+  b.onclick=()=>{if(typeof nfRun!=="undefined"&&nfRun)nfStop();prac=id;window.mfRoomOn=true;try{history.pushState({mfr:1},"");}catch(e){}ritRender();window.scrollTo(0,0);};});
+ let H=document.getElementById("mf-roomh");
+ if(!window.mfRoomOn){if(int&&!int.dataset.hub){}if(int)int.textContent="Bugün hangi ritüelle başlayalım?";const tg=document.getElementById("rit-tag");if(tg)tg.textContent="Ritüellerin";return;}
+ if(!H){H=document.createElement("div");H.id="mf-roomh";const anc=document.getElementById("prac-anc")||document.getElementById("pracs");anc.insertAdjacentElement("afterend",H);}
+ const P=PRACS.find(x=>x[0]===prac)||PRACS[0];const btn=document.querySelector("#pracs .pr-"+prac);
+ const c=btn?getComputedStyle(btn).getPropertyValue("--c").trim():"#E2689A";H.style.setProperty("--c",c||"#E2689A");
+ const ic=btn&&btn.querySelector(".pre")?btn.querySelector(".pre").innerHTML:P[1];
+ const desc=int?int.innerHTML:P[3];const ok=btn&&btn.classList.contains("mf-ok");
+ H.innerHTML=`<div class="mfr-top"><button type="button" class="mfr-back" id="mfr-back">← Ritüeller</button>${ok?'<span class="mfr-ok">✓ Bugün yaptın</span>':""}</div><div class="mfr-main"><span class="mfr-ic">${ic}</span><span class="mfr-t"><b>${esc(P[2])}</b><small>${desc}</small></span></div>`;
+ try{surRender();}catch(e){}
+ document.getElementById("mfr-back").onclick=()=>{try{history.back();}catch(e){window.mfRoomClose();}};}
+window.mfRoomClose=function(fromPop){if(typeof nfRun!=="undefined"&&nfRun)nfStop();if(typeof ygRun!=="undefined"&&ygRun){ygStop();}ygCur=null;window.mfRoomOn=false;ritRender();window.scrollTo(0,0);};
+(function(){const _r=ritRender;ritRender=function(){const r=_r.apply(this,arguments);try{mfRoomApply();}catch(e){console.error(e);}return r;};
+ const _p=pracRender;pracRender=function(){const r=_p.apply(this,arguments);try{mfRoomApply();}catch(e){console.error(e);}return r;};
+ const g=document.getElementById("go-rit");if(g){const o=g.onclick;g.onclick=function(){window.mfRoomOn=false;return o&&o.apply(this,arguments);};}
+ const h=document.getElementById("rit-home");if(h){const o=h.onclick;h.onclick=function(){window.mfRoomOn=false;return o&&o.apply(this,arguments);};}
+ document.addEventListener("click",e=>{const n=e.target.closest&&e.target.closest('[data-go2="go-rit"],[data-nv="rit"]');if(n)window.mfRoomOn=false;},true);})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
