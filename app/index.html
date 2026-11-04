@@ -4806,6 +4806,9 @@ html[data-mf="dusk"] #wxbg.tod-gece{background:linear-gradient(180deg,rgba(20,18
 
 #lb-save.wishgo{background:linear-gradient(135deg,#E58AA6,#B85C78)!important}
 .lib-k{flex-wrap:wrap}
+
+#kt-sadd.wishgo{background:linear-gradient(135deg,#E58AA6,#B85C78)!important}
+.kt-wadd{font:inherit;font-size:14px;font-weight:800;color:#B5486E;background:#fff;border:1.5px solid #F2C4D5;border-radius:999px;padding:9px 16px;margin-left:8px;cursor:pointer;box-shadow:0 8px 18px -12px rgba(180,70,110,.6)}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -9990,6 +9993,24 @@ const KT_CAT={"Ahmet Ümit": ["Patasana", "Sis ve Gece", "Kukla", "Beyoğlu Raps
     const x=ktOnShelf(t);if(x&&x.s==="istek"){libClose();alertSoft(`“${t}” zaten istek listende 💝`);return;}
     if(x){x.s="istek";if(a&&!x.a)x.a=a;save();libClose();mfConfetti("İstek listene taşındı 💝",["#F4A3A8","#E9B872","#C98A9E","#fff"],"linear-gradient(135deg,#E58AA6,#B85C78)");}
     else{libClose();ktWishToggle(t,a);}try{if(typeof ktShelfI!=="undefined")ktShelfI=1;kitapRender();}catch(_){}};}catch(err){}};})();
+
+/* v268: Kütüphanem kartında ve İstek rafında "Keşke benim olsa" */
+function wishAddOpen(){libAddOpen();setTimeout(()=>{const w=document.querySelector('.lib-k [data-lk="wish"]');if(w)w.click();const t=document.getElementById("lb-t");if(t)t.focus();},80);}
+function wishSave(t,a){const x=ktOnShelf(t);if(x&&x.s==="istek"){alertSoft(`“${t}” zaten istek listende 💝`);return;}
+  if(x){x.s="istek";if(a&&!x.a)x.a=a;save();mfConfetti("İstek listene taşındı 💝",["#F4A3A8","#E9B872","#C98A9E","#fff"],"linear-gradient(135deg,#E58AA6,#B85C78)");}else ktWishToggle(t,a);
+  try{if(typeof ktShelfI!=="undefined")ktShelfI=1;kitapRender();window.scrollTo({top:0,behavior:"smooth"});}catch(_){}}
+function wishInject(){try{
+  /* 1) satır içi "Kütüphaneme kitap ekle" kartı */
+  const btn=document.getElementById("kt-sadd"),row=document.querySelector('[data-lk2]')&&document.querySelector('[data-lk2]').parentElement;
+  if(btn&&row&&!row.querySelector('[data-lk2="wish"]')){const wb=document.createElement("button");wb.type="button";wb.className="gn-c";wb.dataset.lk2="wish";wb.setAttribute("aria-pressed","false");wb.textContent="💝 Keşke benim olsa";row.appendChild(wb);
+    const base=btn.textContent;let wish=false;const set=on=>{wish=on;btn.textContent=on?"İstek listeme ekle 💝":base;btn.classList.toggle("wishgo",on);};
+    row.querySelectorAll("[data-lk2]").forEach(b=>b.addEventListener("click",()=>{if(b===wb){row.querySelectorAll("[data-lk2]").forEach(x=>x.setAttribute("aria-pressed",x===wb));const wf=document.getElementById("lb2-whof");if(wf)wf.hidden=true;set(true);}else set(false);}));
+    const old=btn.onclick;btn.onclick=function(e){if(!wish)return old&&old.call(this,e);const ti=document.getElementById("kt-st"),t=ti.value.trim();if(!t){ti.focus();return;}wishSave(t,(document.getElementById("kt-sa").value||"").trim());};}
+  /* 2) İstek rafı slaytında ekleme düğmesi */
+  [...document.querySelectorAll("#ktpanel button")].filter(b=>/Ruh Eşime Gönder/.test(b.textContent)&&!b.dataset.wadd).forEach(b=>{b.dataset.wadd=1;const n=document.createElement("button");n.type="button";n.className="kt-wadd";n.innerHTML="＋ Kitap ekle";n.onclick=e=>{e.stopPropagation();wishAddOpen();};b.insertAdjacentElement("afterend",n);});
+}catch(err){}}
+(function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);wishInject();};const _c=ktShelfCtx;ktShelfCtx=function(){_c.apply(this,arguments);wishInject();};
+  const P=document.getElementById("ktpanel");if(P)new MutationObserver(()=>{clearTimeout(window.__wiT);window.__wiT=setTimeout(wishInject,30);}).observe(P,{childList:true,subtree:true});})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
