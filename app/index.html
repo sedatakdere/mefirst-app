@@ -4917,6 +4917,26 @@ html[data-mf="dusk"] .apt-i,html[data-mf="dusk"] .apt-tb,html[data-mf="dusk"] .a
 .apt-i.past{background:#FAFBFB;border-color:#E6ECEB;opacity:.9}
 .apt-x.sure{font-size:12px;font-weight:800;color:#C2203A;opacity:1}
 .apt-i small{text-transform:none}
+
+/* v0.13.6 çocuk randevu tipleri: kompakt, tek satır, renkli */
+.kpanel .ktypes.kev2{grid-template-columns:1fr 1fr;gap:7px;margin:2px 0 12px}
+.kpanel .kev2 .act{--c:#8B6FD6;--b:#F1ECFC;min-height:0;height:40px;padding:0 10px 0 6px;border-radius:13px;display:flex;align-items:center;gap:7px;justify-content:flex-start;background:var(--b);border:1.5px solid transparent;font-size:13px;font-weight:750;color:#3B3352;letter-spacing:-.15px;box-shadow:none;transition:transform .15s,background .2s,box-shadow .2s;position:relative;overflow:hidden}
+.kpanel .kev2 .act>span:first-child{flex:none;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:#fff;color:var(--c);font-size:15px;box-shadow:0 2px 6px -3px var(--c)}
+.kpanel .kev2 .act>span:first-child svg{width:17px;height:17px}
+.kpanel .kev2 .act em{font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.kpanel .kev2 .act:active{transform:scale(.96)}
+.kpanel .kev2 .act[aria-pressed="true"]{background:linear-gradient(135deg,var(--c),color-mix(in srgb,var(--c) 70%,#fff));color:#fff;border-color:transparent;box-shadow:0 8px 18px -10px var(--c);transform:translateY(-1px)}
+.kpanel .kev2 .act[aria-pressed="true"]>span:first-child{background:rgba(255,255,255,.25);color:#fff;box-shadow:none}
+.kpanel .kev2 .kv-veli{--c:#8B6FD6;--b:#F1ECFC}
+.kpanel .kev2 .kv-doktor{--c:#3E9C93;--b:#E6F4F2}
+.kpanel .kev2 .kv-asi{--c:#4C8FD6;--b:#E8F1FB}
+.kpanel .kev2 .kv-gosteri{--c:#E2668F;--b:#FCEAF1}
+.kpanel .kev2 .kv-dogum{--c:#E89A3C;--b:#FDF1E2}
+.kpanel .kev2 .kv-diger{--c:#7A7F95;--b:#F0F1F5}
+.kpanel .kev2 + .addgrid{gap:8px}
+.kpanel .kev2 ~ .addgrid input{height:44px}
+.kpanel .kev2 ~ #ev-add{height:48px;min-height:0;margin-top:6px;transition:background .3s}
+@media (max-width:380px){.kpanel .kev2 .act{font-size:12.2px;gap:5px;padding:0 6px 0 5px;letter-spacing:-.25px}.kpanel .kev2 .act>span:first-child{width:23px;height:23px;border-radius:7px}.kpanel .kev2 .act>span:first-child svg{width:15px;height:15px}}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -6776,14 +6796,14 @@ function kidsRender(){
     P.querySelectorAll("[data-hx]").forEach(b=>b.onclick=()=>{K.hw.splice(+b.dataset.hx,1);save();kidsRender();});}
   if(ktab==="cal"){const E=K.ev.filter(e=>e.kid===c.id).sort((a,b)=>a.d.localeCompare(b.d));const up=E.filter(e=>dd(e.d)>=0),past=E.filter(e=>dd(e.d)<0).slice(-3);
     P.innerHTML=`<div class="lcard t-lilac"><h3><span class="step">📅</span>Randevu ya da etkinlik ekle</h3>
-      <div class="ktypes">${KEV.map(([id,e,l],i)=>`<button type="button" class="act" data-ev="${id}" aria-pressed="${i===0}"><span>${e}</span>${l}</button>`).join("")}</div>
+      <div class="ktypes kev2">${KEV.map(([id,e,l],i)=>`<button type="button" class="act kv-${id}" data-ev="${id}" aria-pressed="${i===0}"><span>${e}</span><em>${l.replace(" / ","/")}</em></button>`).join("")}</div>
       <div class="addgrid"><div class="field wide2"><label for="ev-t">Not (isteğe bağlı)</label><input id="ev-t" type="text" maxlength="50" placeholder="ör. Göz kontrolü, Zeynep'in partisi"></div>
       <div class="field"><label for="ev-d">Tarih</label><input id="ev-d" type="date" value="${todayK}"></div><div class="field"><label for="ev-tm">Saat</label><input id="ev-tm" type="time"></div></div>
       <button class="btn" id="ev-add" type="button">Takvime ekle</button></div>
       <div class="lcard t-sky"><h3><span class="step">📌</span>Yaklaşanlar</h3>${up.length?up.map(e=>{const T=KEV.find(x=>x[0]===e.ty)||KEV[5];const x=dd(e.d);const dt=new Date(e.d+"T00:00");
         return `<div class="vx ${x<=3?"soon":"later"}"><span class="vdate"><b>${dt.getDate()}</b>${dt.toLocaleDateString("tr-TR",{month:"short"})}</span><span class="vname">${T[1]} ${esc(e.t||T[2])}${e.tm?`<small> · ${e.tm}</small>`:""}</span><span class="vbadge">${when(e.d)}</span><button type="button" class="fdel" data-ex="${K.ev.indexOf(e)}" aria-label="Sil">×</button></div>`;}).join(""):'<p class="empty">Yaklaşan bir şey yok.</p>'}
       ${past.length?`<p class="fine">Geçmiş: ${past.map(e=>esc(e.t||(KEV.find(x=>x[0]===e.ty)||KEV[5])[2])).join(" · ")}</p>`:""}</div>`;
-    let ty="veli";P.querySelectorAll("[data-ev]").forEach(b=>b.onclick=()=>{ty=b.dataset.ev;P.querySelectorAll("[data-ev]").forEach(x=>x.setAttribute("aria-pressed",x===b));});
+    let ty="veli";const kvTint=b=>{const c=getComputedStyle(b).getPropertyValue("--c").trim(),eb=document.getElementById("ev-add");if(eb&&c){eb.style.setProperty("background",`linear-gradient(135deg,${c},color-mix(in srgb,${c} 65%,#fff))`,"important");eb.style.setProperty("box-shadow",`0 10px 22px -12px ${c}`,"important");}};P.querySelectorAll("[data-ev]").forEach(b=>b.onclick=()=>{ty=b.dataset.ev;P.querySelectorAll("[data-ev]").forEach(x=>x.setAttribute("aria-pressed",x===b));kvTint(b);});{const b0=P.querySelector("[data-ev][aria-pressed=true]");if(b0)kvTint(b0);}
     document.getElementById("ev-add").onclick=()=>{const d=document.getElementById("ev-d").value;if(!d)return;K.ev.push({kid:c.id,ty,t:document.getElementById("ev-t").value.trim(),d,tm:document.getElementById("ev-tm").value});save();kidsRender();};
     P.querySelectorAll("[data-ex]").forEach(b=>b.onclick=()=>{K.ev.splice(+b.dataset.ex,1);save();kidsRender();});}
   if(ktab==="prog"){const pr=K.prog[c.id]=K.prog[c.id]||{};const wd=new Date().getDay();if(!kday)kday=wd>=1&&wd<=5?wd:1;
