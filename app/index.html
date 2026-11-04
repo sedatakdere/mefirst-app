@@ -10170,7 +10170,7 @@ function aptRender(){const pn=document.querySelector('[data-fp="today"]');if(!pn
       d:`${a.note?esc(a.note)+"<br>":""}Kendine ayırdığın bu zamanı unutma 💚`,a:[["Randevularım",()=>goFit("today")]],x:"Not aldım 💚"};if(!S[c.id])L.push(c);});
   const K=st.kids;if(K&&K.ev&&K.list){K.ev.forEach(e=>{if(e.ty!=="doktor"&&e.ty!=="asi")return;const x=aptDays(e.d);if(x<0||x>1)return;const kid=K.list.find(k=>k.id===e.kid);if(!kid)return;
     const c={id:`kev:${e.kid}:${e.d}:${e.ty}:${x}`,p:x===0?90:74,cls:"pp-bag",k:e.ty==="asi"?"💉 Aşı günü":"🩺 Doktor / hastane",dec:e.ty==="asi"?"💉":"🩺",h:`${esc(kid.name)}<br><em>${x===0?"bugün":"yarın"}${e.tm?" "+e.tm+"'da":""}</em>${e.ty==="asi"?" aşı oluyor":" doktorda"}`,
-      d:`${e.t?esc(e.t)+"<br>":""}${e.ty==="asi"?"Aşı kartını yanına almayı unutma.":"Sağlık karnesini ve kimliğini yanına al."}`,a:[["Takvime git",()=>{ktab="cal";document.getElementById("go-kids").click();}]],x:"Not aldım 💙"};if(!S[c.id])L.push(c);});}
+      d:`${e.t?esc(e.t)+"<br>":""}${e.ty==="asi"?"Kimliğini yanına al; aşı geçmişine e-Nabız'dan bakabilirsin.":"Kimliğini yanına almayı unutma."}`,a:[["Takvime git",()=>{ktab="cal";document.getElementById("go-kids").click();}]],x:"Not aldım 💙"};if(!S[c.id])L.push(c);});}
   L.sort((a,b)=>b.p-a.p);}catch(e){}return L;};})();
 SND_OF["pp-apt"]="vax";
 /* bugün senin için: yaklaşan randevu */
