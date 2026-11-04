@@ -5694,7 +5694,7 @@ function homeRender(){
     const full=P.feeds.length&&P.feeds.every(t=>P.fed.includes(t));tiles.push({i:"🐾",l:pn,v:full?"Doydu ✓":nx?"Mama "+nx:"Bugün tamam",go:"go-pet"});}
   if(tiles.length<3)tiles.push({i:"💞",l:"Biz ikimiz",v:"Özel alanın",go:"go-love"});
   const H=hr+now.getMinutes()/60;
-  const SUN=sunTimes(now),phase=(H<SUN.rise-.6||H>=SUN.set+.35)?"gece":H<SUN.rise+3?"sabah":H<SUN.set-1.5?"ogle":"aksam";
+  const SUN=sunTimes(now),phase=(H<SUN.rise-.6||H>=SUN.set+.35)?"gece":H<SUN.rise+3?"sabah":H<SUN.set-.75?"ogle":"aksam";
   hx.className="sky sky-"+phase;
   const LINES=["Bugün acele etmek zorunda değilsin.","Kendi hızında git; yol zaten senin.","Bugün bir şeye hayır de, kendine evet.","On dakika sadece senin. Gerisi bekleyebilir.","Yeterince iyisin. Bugün de.","Küçük bir mola, büyük bir iyilik.","Önce sen; sonra her şey daha kolay.","Bugün kendine bir arkadaşına davrandığın gibi davran.","Mükemmel değil, gerçek ol.","Yorgunsan dinlen, vazgeçme.","Bugünün tek görevi: kendine nazik olmak.","Gülümsemen bu evin ışığı.","Bir nefes al. Her şey yoluna giriyor.","Kendine ayırdığın zaman, herkese iyi gelir.","Bugün küçük bir şey için kendini tebrik et.","Sen de bir önceliksin.","Hayır demek de sevgidir; önce kendine.","Bugün güzel bir şey seni bekliyor.","Dünü bırak, yarını sonra düşün; bugün senin.","Aynaya bak ve teşekkür et; çok şey taşıyorsun.","Herkesi mutlu etmek zorunda değilsin.","Bugün bir kahveyi gerçekten oturarak iç.","Kendin için yaptığın her şey sayılır.","Yavaşlamak geride kalmak değildir.","Bugün sesini dinle; o hep haklı.","Güçlü olmak her şeyi tek başına yapmak değil.","Bugün yardım istemek serbest.","Işığını kısma; parla.","Bugün kendine bir çiçek al.","Her yeni gün, temiz bir sayfa."];
   const greet=tod[1]+(nm?" "+esc(nm):"");
@@ -9929,7 +9929,7 @@ function wxApply(){try{wxBg();}catch(e){}const hx=document.getElementById("hx");
 
 function wxBg(){let L=document.getElementById("wxbg");if(!L){L=document.createElement("div");L.id="wxbg";L.setAttribute("aria-hidden","true");document.body.prepend(L);}
   if(step!==0){L.hidden=true;return;}L.hidden=false;
-  const now=new Date(),H=now.getHours()+now.getMinutes()/60,SUN=sunTimes(now),tod=(H<SUN.rise-.6||H>=SUN.set+.35)?"gece":H<SUN.rise+3?"sabah":H<SUN.set-1.5?"ogle":"aksam";
+  const now=new Date(),H=now.getHours()+now.getMinutes()/60,SUN=sunTimes(now),tod=(H<SUN.rise-.6||H>=SUN.set+.35)?"gece":H<SUN.rise+3?"sabah":H<SUN.set-.75?"ogle":"aksam";
   const W=wxGet(),fresh=W&&W.code!=null&&W.t&&Date.now()-W.t<6*3600000,k=fresh?wxKind(W.code):"none";const sig=tod+"|"+k;if(L.dataset.sig===sig)return;L.dataset.sig=sig;
   L.className="wxbg tod-"+tod+" wxk-"+k;const R=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join("");let fx="";
   if(tod==="gece"||tod==="aksam")fx+=R(tod==="gece"?34:12,i=>`<i class="wb-st" style="left:${(i*37+4)%98}%;top:${(i*53)%(tod==="gece"?70:30)+2}%;--s:${(.5+(i%4)*.3).toFixed(1)};--dl:${((i*.41)%3.6).toFixed(2)}s"></i>`);
