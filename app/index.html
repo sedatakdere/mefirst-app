@@ -4686,6 +4686,16 @@ html[data-mf="dusk"] .mp-set{background:rgba(46,30,52,.85)}
 .pp-dec i{position:absolute;left:var(--x);top:-30px;font-style:normal;font-size:calc(22px * var(--s));opacity:.28;animation:ppFall var(--d) linear infinite;animation-delay:var(--dl)}
 @keyframes ppFall{0%{transform:translateY(0) rotate(-15deg)}100%{transform:translateY(420px) rotate(25deg)}}
 .pp-more{position:relative;display:block;margin-top:2px;font-size:11.5px;opacity:.78}
+
+/* v258 renkler ayrışsın */
+.ktpop-c.pp-pet{background:radial-gradient(120% 90% at 85% 0%,#C9F2B8 0%,transparent 55%),linear-gradient(160deg,#7CCB7E 0%,#2E8F63 100%)!important}
+.ktpop-c.pp-pet h3 em{color:#EAFFD9!important}.ktpop-c.pp-pet .ktbtn{color:#25805A!important}
+.ktpop-c.pp-bag{background:radial-gradient(120% 90% at 85% 0%,#D3D4FF 0%,transparent 55%),linear-gradient(160deg,#8C8EF2 0%,#4B45C2 100%)!important}
+.ktpop-c.pp-bag h3 em{color:#ECEBFF!important}.ktpop-c.pp-bag .ktbtn{color:#4640B8!important}
+.ktpop-c.pp-su{background:radial-gradient(120% 90% at 85% 0%,#C6F6FF 0%,transparent 55%),linear-gradient(160deg,#55CDE2 0%,#2389C6 100%)}
+.ktpop-c.pp-su h3 em{color:#E4FBFF}.ktpop-c.pp-su .ktbtn{color:#1F7DB8!important}
+.ktpop-c.pp-rit{background:radial-gradient(120% 90% at 85% 0%,#FFD2F0 0%,transparent 55%),linear-gradient(160deg,#E38AC6 0%,#9C3C94 100%)}
+.ktpop-c.pp-rit h3 em{color:#FFE6F6}.ktpop-c.pp-rit .ktbtn{color:#933A8C!important}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -9753,6 +9763,12 @@ function mfPopCands(){const C=[],now=new Date(),nm=now.getHours()*60+now.getMinu
     C.push({id:`bill:${n}:${ym()}:${dd<0?"l":dd}`,p:dd<0?92:dd===0?88:dd===1?70:60,cls:"pp-bill",k:"🧾 Fatura hatırlatması",dec:"🧾",
       h:`${esc(n)} faturası<br><em>${dd<0?"gecikti":dd===0?"bugün":dd===1?"yarın":"2 gün sonra"}</em>`,
       d:`${BA[0].amt?"<b>"+(+BA[0].amt).toLocaleString("tr-TR")+" ₺</b> · ":""}Ödediysen işaretle, aklında kalmasın.`,a:[["Faturalarıma git",()=>{etab="bill";document.getElementById("go-ev").click();}]],x:"Tamam 👍"});}}catch(e){}
+  /* 7) Su — gün içinde geride kaldıysa (düşük öncelik) */
+  try{if(h>=10&&h<21){const k=dkey(),F=st.fit&&st.fit.d&&st.fit.d[k]||{w:0},exp=Math.round((h-8)/13*8);if(F.w<exp-1)C.push({id:`su:${T}:${Math.floor(h/3)}`,p:50,cls:"pp-su",k:"💧 Küçük hatırlatma",dec:"💧",
+    h:`Bir bardak<br><em>su?</em>`,d:`Bugün <b>${F.w}</b> bardak içtin; bu saate kadar ${exp} idealdi. Vücudun teşekkür edecek 💙`,a:[["Su ekle 💧",()=>goFit("today")]],x:"Hemen içiyorum"});}}catch(e){}
+  /* 8) 3·6·9 niyet vakti (düşük öncelik) */
+  try{if(st.rit&&st.rit.text&&h>=6&&h<23){const k=rnow(),S=SESS.find(x=>x[0]===k),R=st.rit.d&&st.rit.d[T]||{s:0,o:0,a:0};if((R[k]||0)<S[3])C.push({id:`rit:${T}:${k}`,p:45,cls:"pp-rit",k:"🧘 3·6·9",dec:"✨",
+    h:`${S[2]} niyetin<br><em>seni bekliyor</em>`,d:`“${esc(st.rit.text)}”<br><b>${S[3]}</b> kez yaz, kendine söz ver.`,a:[[`Niyetimi yaz · ${R[k]||0}/${S[3]}`,()=>goPrac("369")]],x:"Birazdan ✨"});}}catch(e){}
   /* 5) Geçmişten mektup */
   try{const md=(st.rx&&st.rx.letters||[]).filter(l=>!l.opened&&l.o<=T);if(md.length)C.push({id:`letter:${md[0].w}:${md[0].o}`,p:72,cls:"pp-letter",k:"💌 Gelecek bana",dec:"💌",
     h:`Geçmişteki senden<br><em>bir mektup var</em>`,d:`${new Date(md[0].w+"T00:00").toLocaleDateString("tr-TR",{day:"numeric",month:"long",year:"numeric"})} tarihinde kendine yazmıştın. Açma zamanı geldi.`,a:[["Mektubu aç",()=>goPrac("mektup")]],x:"Birazdan 💜"});}catch(e){}
