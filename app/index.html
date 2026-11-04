@@ -9906,14 +9906,17 @@ function wxFetch(force){const W=wxGet();if(!W||W.lat==null||wxBusy)return;if(!fo
 function wxLocate(btn){if(!navigator.geolocation){alertSoft("Bu cihaz konum vermiyor; gökyüzü saate göre değişmeye devam edecek 🌙");return;}
   if(btn){btn.disabled=true;btn.textContent="📍 Konum bekleniyor…";}
   navigator.geolocation.getCurrentPosition(pos=>{const W=wxGet()||{};W.lat=Math.round(pos.coords.latitude*100)/100;W.lon=Math.round(pos.coords.longitude*100)/100;W.loc=Date.now();W.t=0;wxSet(W);wxFetch(true);if(step===0)homeRender();},
-    ()=>{try{localStorage.setItem("mefirst-wx-no","1");}catch(e){}if(step===0)homeRender();alertSoft("Sorun değil 😊 Gökyüzü yine gece-gündüze göre değişir. İstersen sonra Ayarlar'dan konum iznini açabilirsin.");},{timeout:12000,maximumAge:6*3600000});}
+    err=>{try{localStorage.setItem("mefirst-wx-no","1");}catch(e){}if(step===0)homeRender();
+      alertSoft(err&&err.code===1?"Konum izni kapalı görünüyor 😊 Zemin yine gece-gündüze göre değişir. Açmak istersen telefon ayarlarından tarayıcına konum izni ver, sonra sağ üstteki 📍 simgesine dokun.":"Konumunu şu an alamadım 📍 Biraz sonra sağ üstteki 📍 simgesine dokunup tekrar deneyebilirsin.");},{timeout:12000,maximumAge:6*3600000});}
 function wxApply(){try{wxBg();}catch(e){}const hx=document.getElementById("hx");if(!hx||hx.hidden)return;const W=wxGet(),bg=hx.querySelector(".sky-bg"),act=hx.querySelector(".sky-act");if(!bg)return;
   [...hx.classList].filter(c=>c.startsWith("wxk-")).forEach(c=>hx.classList.remove(c));
   const fresh=W&&W.code!=null&&W.t&&Date.now()-W.t<6*3600000;
   if(!fresh){let no=false;try{no=localStorage.getItem("mefirst-wx-no")==="1";}catch(e){}
     if(!no&&!(W&&W.lat!=null)&&!hx.querySelector(".wx-ask")){const b=document.createElement("button");b.type="button";b.className="wx-ask";b.innerHTML="🌦 Ana sayfa havana uysun";b.onclick=e=>{e.stopPropagation();wxLocate(b);};const who=hx.querySelector(".sky-who");if(who)who.after(b);}
+    if(no&&act&&!hx.querySelector(".wx-chip")){const c=document.createElement("button");c.type="button";c.className="wx-chip wx-off";c.innerHTML="📍";c.setAttribute("aria-label","Havaya göre zemini aç");
+      c.onclick=e=>{e.stopPropagation();try{localStorage.removeItem("mefirst-wx-no");}catch(x){}wxLocate(c);};act.prepend(c);}
     if(W&&W.lat!=null)wxFetch();return;}
-  const k=wxKind(W.code);if(Date.now()-W.t>40*60000)wxFetch();
+  const k=wxKind(W.code);hx.classList.add("wxk-"+k);if(Date.now()-W.t>40*60000)wxFetch();
   if(act&&!hx.querySelector(".wx-chip")){const L=WXL[k];const c=document.createElement("button");c.type="button";c.className="wx-chip";c.innerHTML=`${L[0]} ${W.temp}°`;c.setAttribute("aria-label",`${L[1]}, ${W.temp} derece`);
     c.onclick=e=>{e.stopPropagation();const info=document.getElementById("sky-info");if(!info)return;info.innerHTML=`${L[0]} Şu an ${L[1].toLocaleLowerCase("tr-TR")} · ${W.temp}°C${k==="rain"||k==="storm"?" · Şemsiyeni unutma ☂️":k==="snow"?" · Sıkı giyin, sıcak bir çay iç ❄️":k==="clear"&&W.day?" · Güneşin tadını çıkar 😎":""}`;info.hidden=info.dataset.k==="wx"?!info.hidden:false;info.dataset.k="wx";};act.prepend(c);}}
 (function(){const _h=homeRender;homeRender=function(){_h.apply(this,arguments);try{wxApply();}catch(e){}};try{wxApply();}catch(e){}})();
