@@ -4739,6 +4739,62 @@ html[data-mf="dusk"] .fit .fhero{background:radial-gradient(90% 70% at 90% 0%,rg
 .pet .feed .fck{border-color:#8A6B5A!important}
 .pet #feed-add{background:#EFE4DC!important;color:#5E463A!important}
 .pet #pet-next{color:#8A6B5A!important}
+
+/* v260 hava durumu gökyüzü */
+.wx-fx{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.wx-cl{position:absolute;height:46px;border-radius:50px;background:#fff;filter:blur(8px);opacity:.75;animation:wxCl 50s linear infinite}
+.wx-cl.a{width:60%;top:6%;left:-10%}.wx-cl.b{width:48%;top:22%;left:40%;animation-duration:70s;animation-delay:-20s;opacity:.6}.wx-cl.c{width:70%;top:38%;left:-30%;animation-duration:90s;animation-delay:-45s;opacity:.5}
+@keyframes wxCl{from{transform:translateX(-30%)}to{transform:translateX(60%)}}
+.sky.wxk-cloud .sky-bg,.sky.wxk-rain .sky-bg,.sky.wxk-drizzle .sky-bg,.sky.wxk-storm .sky-bg,.sky.wxk-snow .sky-bg,.sky.wxk-fog .sky-bg{background:linear-gradient(180deg,rgba(120,130,150,.32),rgba(170,175,190,.12) 70%,transparent)}
+.sky.wxk-storm .sky-bg{background:linear-gradient(180deg,rgba(70,72,100,.5),rgba(120,120,150,.2) 70%,transparent)}
+.sky.wxk-cloud .sun,.sky.wxk-rain .sun,.sky.wxk-storm .sun,.sky.wxk-snow .sun,.sky.wxk-fog .sun,.sky.wxk-drizzle .sun{opacity:.35;filter:blur(1px)}
+.sky.wxk-cloud .st,.sky.wxk-rain .st,.sky.wxk-storm .st,.sky.wxk-snow .st,.sky.wxk-fog .st{opacity:.15!important}
+.sky-gece .wx-cl,.sky-aksam .wx-cl{background:#8C86B0;opacity:.45}
+.wx-r{position:absolute;top:-20%;width:2px;height:22px;border-radius:2px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.9));opacity:var(--o);transform:rotate(12deg);animation:wxR var(--d) linear infinite;animation-delay:var(--dl)}
+.sky:not(.sky-gece):not(.sky-aksam) .wx-r{width:2.5px;height:26px;background:linear-gradient(180deg,rgba(80,100,150,0),rgba(70,90,145,.95))}
+@keyframes wxR{to{transform:translate(-40px,320px) rotate(12deg)}}
+.wx-s{position:absolute;top:-8%;width:var(--z);height:var(--z);border-radius:50%;background:#fff;box-shadow:0 0 6px rgba(255,255,255,.9);opacity:.9;animation:wxS var(--d) linear infinite;animation-delay:var(--dl)}
+@keyframes wxS{0%{transform:translate(0,0)}50%{transform:translate(var(--sw),160px)}100%{transform:translate(0,330px)}}
+.wx-fog{position:absolute;left:-20%;right:-20%;height:60px;border-radius:60px;background:rgba(255,255,255,.55);filter:blur(14px);animation:wxF 18s ease-in-out infinite alternate}
+.wx-fog.f1{top:30%}.wx-fog.f2{top:58%;animation-delay:-9s;opacity:.7}
+@keyframes wxF{to{transform:translateX(12%)}}
+.wx-flash{position:absolute;inset:0;background:#fff;opacity:0;animation:wxL 7s infinite}
+@keyframes wxL{0%,91%,100%{opacity:0}92%{opacity:.55}93%{opacity:.05}94.5%{opacity:.4}96%{opacity:0}}
+.wx-chip{font:inherit;font-size:13px;font-weight:800;color:var(--ink2,#3A3550);background:rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:6px 11px;margin-right:6px;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.sky-gece .wx-chip,.sky-aksam .wx-chip{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.25)}
+.sky-act{display:inline-flex;align-items:center}
+.wx-ask{position:relative;z-index:2;align-self:flex-start;margin:8px 0 2px;font:inherit;font-size:12.5px;font-weight:700;color:var(--ink2,#3A3550);background:rgba(255,255,255,.4);border:1px dashed rgba(255,255,255,.8);border-radius:999px;padding:6px 12px;cursor:pointer}
+@media (prefers-reduced-motion:reduce){.wx-r,.wx-s,.wx-cl,.wx-fog,.wx-flash{animation:none!important}}
+
+/* v260b tam ekran ana sayfa zemini: saat + hava */
+#wxbg{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;transition:background .8s}
+#wxbg[hidden]{display:none}
+#wxbg.tod-sabah{background:radial-gradient(90% 40% at 80% 0%,rgba(255,206,170,.55),transparent 70%),radial-gradient(80% 40% at 0% 10%,rgba(255,190,214,.45),transparent 70%)}
+#wxbg.tod-ogle{background:radial-gradient(100% 45% at 50% 0%,rgba(178,212,255,.55),transparent 70%),radial-gradient(70% 40% at 100% 30%,rgba(255,226,190,.3),transparent 70%)}
+#wxbg.tod-aksam{background:radial-gradient(100% 45% at 50% 0%,rgba(244,170,190,.55),transparent 70%),radial-gradient(80% 50% at 0% 40%,rgba(190,160,235,.35),transparent 70%)}
+#wxbg.tod-gece{background:linear-gradient(180deg,rgba(120,118,190,.5) 0%,rgba(170,160,220,.28) 40%,rgba(200,190,235,.1) 75%,transparent)}
+html[data-mf="dusk"] #wxbg.tod-gece{background:linear-gradient(180deg,rgba(20,18,50,.7),rgba(40,30,70,.35) 50%,transparent)}
+#wxbg.wxk-cloud::after,#wxbg.wxk-rain::after,#wxbg.wxk-drizzle::after,#wxbg.wxk-snow::after,#wxbg.wxk-fog::after,#wxbg.wxk-storm::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(130,140,165,.32),rgba(160,168,188,.12) 60%,transparent)}
+#wxbg.wxk-storm::after{background:linear-gradient(180deg,rgba(80,84,120,.45),rgba(130,130,160,.18) 60%,transparent)}
+#wxbg.wxk-snow::after{background:linear-gradient(180deg,rgba(200,210,235,.4),rgba(225,230,245,.15) 60%,transparent)}
+.wb-st{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;box-shadow:0 0 6px 1px rgba(255,255,255,.9);transform:scale(var(--s));animation:wbTw 3.6s ease-in-out infinite;animation-delay:var(--dl)}
+#wxbg:not(.tod-gece) .wb-st{opacity:.6}
+@keyframes wbTw{0%,100%{opacity:.25}50%{opacity:1}}
+.wb-cl{position:absolute;left:-20%;width:var(--w);height:90px;border-radius:90px;background:#fff;filter:blur(18px);opacity:var(--o);animation:wbCl var(--d) linear infinite;animation-delay:var(--dl);z-index:1}
+#wxbg.tod-gece .wb-cl,#wxbg.tod-aksam .wb-cl{background:#A9A3CC}
+#wxbg.wxk-storm .wb-cl{background:#9C9AB8}
+@keyframes wbCl{from{transform:translateX(-40%)}to{transform:translateX(120%)}}
+.wb-r{position:absolute;top:-6%;width:2px;height:34px;border-radius:2px;background:linear-gradient(180deg,rgba(90,110,160,0),rgba(90,110,165,.85));opacity:var(--o);z-index:2;animation:wbR var(--d) linear infinite;animation-delay:var(--dl)}
+#wxbg.tod-gece .wb-r{background:linear-gradient(180deg,rgba(255,255,255,0),rgba(235,235,255,.85))}
+@keyframes wbR{from{transform:translate(0,0) rotate(10deg)}to{transform:translate(-60px,110vh) rotate(10deg)}}
+.wb-s{position:absolute;top:-3%;width:var(--z);height:var(--z);border-radius:50%;background:#fff;box-shadow:0 0 6px rgba(180,190,230,.9);z-index:2;animation:wbS var(--d) linear infinite;animation-delay:var(--dl)}
+@keyframes wbS{0%{transform:translate(0,0)}50%{transform:translate(var(--sw),55vh)}100%{transform:translate(0,108vh)}}
+.wb-fog{position:absolute;left:-30%;right:-30%;height:140px;border-radius:140px;background:rgba(255,255,255,.6);filter:blur(26px);animation:wbF 22s ease-in-out infinite alternate}
+.wb-fog.f1{top:12%}.wb-fog.f2{top:42%;animation-delay:-8s;opacity:.7}.wb-fog.f3{top:72%;animation-delay:-15s;opacity:.55}
+@keyframes wbF{to{transform:translateX(15%)}}
+.wb-flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:3;animation:wbL 8s infinite}
+@keyframes wbL{0%,90%,100%{opacity:0}91%{opacity:.5}92%{opacity:.05}93.5%{opacity:.35}95%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.wb-r,.wb-s,.wb-cl,.wb-fog,.wb-flash,.wb-st{animation:none!important}}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -5608,7 +5664,7 @@ function petRender(){
 
 const AFF=["Bugün önce sen varsın.","Kendine ayırdığın 5 dakika, herkese iyi gelir.","Mükemmel olmak zorunda değilsin; yeterlisin.","Bugün de harikasın, bunu unutma.","Gülümsemen bu evin güneşi.","Kendine nazik ol, gerisi gelir.","Bugün küçük bir şey için kendini tebrik et."];
 const DCOL=[["Pudra","#e8c3bf","yumuşaklık ve şefkat"],["Lila","#c3b0ec","sezgi ve sakinlik"],["Mercan","#f4a6a0","neşe ve sıcaklık"],["Mint","#9fdcc3","tazelik ve yeni başlangıç"],["Vanilya","#f3dc93","ışık ve iyimserlik"],["Bebek mavisi","#a9c9f2","huzur ve netlik"],["Gül kurusu","#c98d95","zarafet ve özgüven"]];
-function sunTimes(d){d=d||new Date();let lat=41.0,lon=29.0;try{const tz=Intl.DateTimeFormat().resolvedOptions().timeZone||"";if(!/Istanbul|Europe\/Nicosia|Asia\/Famagusta/.test(tz)){lat=40;lon=-d.getTimezoneOffset()/4;}}catch(e){}
+function sunTimes(d){d=d||new Date();let lat=41.0,lon=29.0;try{const tz=Intl.DateTimeFormat().resolvedOptions().timeZone||"";if(!/Istanbul|Europe\/Nicosia|Asia\/Famagusta/.test(tz)){lat=40;lon=-d.getTimezoneOffset()/4;}}catch(e){}try{const W=JSON.parse(localStorage.getItem("mefirst-wx")||"null");if(W&&W.lat!=null){lat=W.lat;lon=W.lon;}}catch(e){}
   const r=Math.PI/180,n=Math.floor((new Date(d.getFullYear(),d.getMonth(),d.getDate())-new Date(d.getFullYear(),0,1))/864e5)+1,g=2*Math.PI/365*(n-1);
   const eqt=229.18*(.000075+.001868*Math.cos(g)-.032077*Math.sin(g)-.014615*Math.cos(2*g)-.040849*Math.sin(2*g));
   const dec=.006918-.399912*Math.cos(g)+.070257*Math.sin(g)-.006758*Math.cos(2*g)+.000907*Math.sin(2*g)-.002697*Math.cos(3*g)+.00148*Math.sin(3*g);
@@ -9836,6 +9892,45 @@ function ktPop(chain){if(step!==0||document.getElementById("ktpop"))return;let L
   d.querySelectorAll("[data-pa]").forEach(b=>b.onclick=()=>{close(false);try{c.a[+b.dataset.pa][1]();}catch(e){}});
   d.querySelectorAll("a.ktbtn").forEach(b=>b.addEventListener("click",()=>mark()));}
 function T_(){return dkey();}
+
+/* ===== v260: Gökyüzü gerçek havaya uysun (konum + Open-Meteo) ===== */
+function wxGet(){try{return JSON.parse(localStorage.getItem("mefirst-wx")||"null");}catch(e){return null;}}
+function wxSet(W){try{localStorage.setItem("mefirst-wx",JSON.stringify(W));}catch(e){}}
+function wxKind(c){c=+c;if(c===0||c===1)return "clear";if(c===2)return "partly";if(c===3)return "cloud";if(c===45||c===48)return "fog";
+  if((c>=71&&c<=77)||c===85||c===86)return "snow";if(c>=95)return "storm";if((c>=51&&c<=67)||(c>=80&&c<=82))return c===51||c===53||c===56||c===61||c===80?"drizzle":"rain";return "partly";}
+const WXL={clear:["☀️","Açık"],partly:["⛅","Parçalı bulutlu"],cloud:["☁️","Bulutlu"],fog:["🌫","Sisli"],drizzle:["🌦","Hafif yağmurlu"],rain:["🌧","Yağmurlu"],snow:["❄️","Karlı"],storm:["⛈","Fırtınalı"]};
+let wxBusy=false;
+function wxFetch(force){const W=wxGet();if(!W||W.lat==null||wxBusy)return;if(!force&&W.t&&Date.now()-W.t<40*60000)return;wxBusy=true;
+  fetch(`https://api.open-meteo.com/v1/forecast?latitude=${W.lat}&longitude=${W.lon}&current=temperature_2m,weather_code,is_day&timezone=auto`).then(r=>r.json()).then(j=>{const c=j&&j.current;if(!c)return;
+    const N=Object.assign(wxGet()||{},{t:Date.now(),code:c.weather_code,day:c.is_day,temp:Math.round(c.temperature_2m)});wxSet(N);if(step===0)homeRender();}).catch(()=>{}).finally(()=>{wxBusy=false;});}
+function wxLocate(btn){if(!navigator.geolocation){alertSoft("Bu cihaz konum vermiyor; gökyüzü saate göre değişmeye devam edecek 🌙");return;}
+  if(btn){btn.disabled=true;btn.textContent="📍 Konum bekleniyor…";}
+  navigator.geolocation.getCurrentPosition(pos=>{const W=wxGet()||{};W.lat=Math.round(pos.coords.latitude*100)/100;W.lon=Math.round(pos.coords.longitude*100)/100;W.loc=Date.now();W.t=0;wxSet(W);wxFetch(true);if(step===0)homeRender();},
+    ()=>{try{localStorage.setItem("mefirst-wx-no","1");}catch(e){}if(step===0)homeRender();alertSoft("Sorun değil 😊 Gökyüzü yine gece-gündüze göre değişir. İstersen sonra Ayarlar'dan konum iznini açabilirsin.");},{timeout:12000,maximumAge:6*3600000});}
+function wxApply(){try{wxBg();}catch(e){}const hx=document.getElementById("hx");if(!hx||hx.hidden)return;const W=wxGet(),bg=hx.querySelector(".sky-bg"),act=hx.querySelector(".sky-act");if(!bg)return;
+  [...hx.classList].filter(c=>c.startsWith("wxk-")).forEach(c=>hx.classList.remove(c));
+  const fresh=W&&W.code!=null&&W.t&&Date.now()-W.t<6*3600000;
+  if(!fresh){let no=false;try{no=localStorage.getItem("mefirst-wx-no")==="1";}catch(e){}
+    if(!no&&!(W&&W.lat!=null)&&!hx.querySelector(".wx-ask")){const b=document.createElement("button");b.type="button";b.className="wx-ask";b.innerHTML="🌦 Ana sayfa havana uysun";b.onclick=e=>{e.stopPropagation();wxLocate(b);};const who=hx.querySelector(".sky-who");if(who)who.after(b);}
+    if(W&&W.lat!=null)wxFetch();return;}
+  const k=wxKind(W.code);if(Date.now()-W.t>40*60000)wxFetch();
+  if(act&&!hx.querySelector(".wx-chip")){const L=WXL[k];const c=document.createElement("button");c.type="button";c.className="wx-chip";c.innerHTML=`${L[0]} ${W.temp}°`;c.setAttribute("aria-label",`${L[1]}, ${W.temp} derece`);
+    c.onclick=e=>{e.stopPropagation();const info=document.getElementById("sky-info");if(!info)return;info.innerHTML=`${L[0]} Şu an ${L[1].toLocaleLowerCase("tr-TR")} · ${W.temp}°C${k==="rain"||k==="storm"?" · Şemsiyeni unutma ☂️":k==="snow"?" · Sıkı giyin, sıcak bir çay iç ❄️":k==="clear"&&W.day?" · Güneşin tadını çıkar 😎":""}`;info.hidden=info.dataset.k==="wx"?!info.hidden:false;info.dataset.k="wx";};act.prepend(c);}}
+(function(){const _h=homeRender;homeRender=function(){_h.apply(this,arguments);try{wxApply();}catch(e){}};try{wxApply();}catch(e){}})();
+
+function wxBg(){let L=document.getElementById("wxbg");if(!L){L=document.createElement("div");L.id="wxbg";L.setAttribute("aria-hidden","true");document.body.prepend(L);}
+  if(step!==0){L.hidden=true;return;}L.hidden=false;
+  const now=new Date(),H=now.getHours()+now.getMinutes()/60,SUN=sunTimes(now),tod=(H<SUN.rise-.6||H>=SUN.set+.35)?"gece":H<SUN.rise+3?"sabah":H<SUN.set-1.5?"ogle":"aksam";
+  const W=wxGet(),fresh=W&&W.code!=null&&W.t&&Date.now()-W.t<6*3600000,k=fresh?wxKind(W.code):"none";const sig=tod+"|"+k;if(L.dataset.sig===sig)return;L.dataset.sig=sig;
+  L.className="wxbg tod-"+tod+" wxk-"+k;const R=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join("");let fx="";
+  if(tod==="gece"||tod==="aksam")fx+=R(tod==="gece"?34:12,i=>`<i class="wb-st" style="left:${(i*37+4)%98}%;top:${(i*53)%(tod==="gece"?70:30)+2}%;--s:${(.5+(i%4)*.3).toFixed(1)};--dl:${((i*.41)%3.6).toFixed(2)}s"></i>`);
+  if(["cloud","rain","drizzle","storm","snow","fog","partly"].includes(k))fx+=R(k==="partly"?2:4,i=>`<span class="wb-cl" style="top:${[4,16,30,46][i]}%;--w:${[70,55,80,60][i]}%;--d:${[80,110,95,130][i]}s;--dl:-${[0,40,20,70][i]}s;--o:${[.75,.55,.6,.45][i]}"></span>`);
+  if(k==="rain"||k==="storm"||k==="drizzle")fx+=R(k==="drizzle"?30:70,i=>`<i class="wb-r" style="left:${(i*37+3)%102}%;--d:${(.7+(i%6)*.1).toFixed(2)}s;--dl:-${((i*.17)%1.4).toFixed(2)}s;--o:${(.3+(i%3)*.17).toFixed(2)}"></i>`);
+  if(k==="snow")fx+=R(60,i=>`<i class="wb-s" style="left:${(i*29+2)%100}%;--d:${(9+(i%7)*1.6).toFixed(1)}s;--dl:-${((i*.97)%14).toFixed(1)}s;--z:${3+(i%4)*2}px;--sw:${i%2?18:-18}px"></i>`);
+  if(k==="fog")fx+=`<span class="wb-fog f1"></span><span class="wb-fog f2"></span><span class="wb-fog f3"></span>`;
+  if(k==="storm")fx+=`<span class="wb-flash"></span>`;
+  L.innerHTML=fx;}
+setInterval(()=>{try{if(step===0)wxBg();}catch(e){}},5*60000);
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
