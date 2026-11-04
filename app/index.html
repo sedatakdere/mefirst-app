@@ -5104,7 +5104,7 @@ body.mf-on .rit .rhero .lhero-top{position:absolute;top:calc(env(safe-area-inset
 .mf-aff .mf-ab{flex-wrap:nowrap!important;gap:6px}
 .mf-aff .mf-ab button{flex:1 1 auto;white-space:nowrap;font-size:12px!important;padding:0 8px!important;height:32px}
 .mf-aff .mf-ab #mf-fc{flex:1.4 1 auto}
-body.mf-on .rit .pracs{margin:4px 0 10px!important}
+body.mf-on .rit .pracs{margin:6px 0 10px!important}
 .mfday{margin-bottom:4px}
 body.mf-on .rit .prac{position:relative}
 body.mf-on .rit .prac.mf-ok::after{content:"✓";position:absolute;top:6px;right:7px;width:18px;height:18px;border-radius:50%;background:var(--c);color:#fff;font-size:11px;font-weight:900;display:grid;place-items:center;box-shadow:0 0 0 2px #fff}
@@ -10413,7 +10413,7 @@ function mfSteps(){const X=rx(),k=dkey(),R=rit(),RD=R&&R.d&&R.d[k]||{};const S36
  return [["s","☀️","Sabah","Niyet","369",S369],["y","🧘‍♀️","Beden","Yoga","yoga",X.yogaDay===k],["o","🫶","Gün içi","Şükran","sukran",(X.suk&&X.suk[k]||[]).filter(x=>x&&x.trim()).length>=5],["a","🌙","Akşam","Nefes","nefes",X.nefDay===k||X.birakDay===k]];}
 let mfPrev=null;
 function mfDayRender(){const R=document.querySelector(".rit");if(!R)return;const hero=R.querySelector(".rhero");if(!hero)return;let el=document.getElementById("mfday");
- if(!el){el=document.createElement("div");el.id="mfday";el.className="mfday";const pw=document.getElementById("pracs");(pw||hero).insertAdjacentElement("afterend",el);}
+ if(!el){el=document.createElement("div");el.id="mfday";el.className="mfday";hero.insertAdjacentElement("afterend",el);}
  const X=rx(),k=dkey(),St=mfSteps(),dn=St.filter(x=>x[5]).length;X.days=X.days||{};if(dn)X.days[k]=dn;else delete X.days[k];
  const ks=Object.keys(X.days).sort();while(ks.length>60)delete X.days[ks.shift()];
  let streak=0;{const d=new Date(k+"T00:00");if(!X.days[k])d.setDate(d.getDate()-1);while(X.days[dkey(d)]){streak++;d.setDate(d.getDate()-1);}}
