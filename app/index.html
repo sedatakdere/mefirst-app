@@ -4804,11 +4804,22 @@ html[data-mf="dusk"] #wxbg.tod-gece{background:linear-gradient(180deg,rgba(20,18
 
 
 
-#lb-save.wishgo{background:linear-gradient(135deg,#E58AA6,#B85C78)!important}
+
 .lib-k{flex-wrap:wrap}
 
-#kt-sadd.wishgo{background:linear-gradient(135deg,#E58AA6,#B85C78)!important}
+
 .kt-wadd{font:inherit;font-size:14px;font-weight:800;color:#B5486E;background:#fff;border:1.5px solid #F2C4D5;border-radius:999px;padding:9px 16px;margin-left:8px;cursor:pointer;box-shadow:0 8px 18px -12px rgba(180,70,110,.6)}
+
+/* v269 kitap ekleme seçenekleri: tek satır, her biri kendi renginde */
+.lib-k{display:grid!important;grid-template-columns:repeat(3,1fr);gap:8px!important;flex-wrap:nowrap!important}
+.lib-k .gn-c{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-width:0;width:100%;margin:0!important;padding:9px 6px!important;border-radius:16px!important;font-size:12px!important;font-weight:800!important;line-height:1.2;text-align:center;white-space:normal;border:1.5px solid var(--kc-b)!important;background:var(--kc-bg)!important;color:var(--kc-t)!important;box-shadow:none!important}
+.lib-k .gn-c .kci{display:block;font-size:19px;line-height:1}
+.lib-k .gn-c[aria-pressed="true"]{background:linear-gradient(140deg,var(--kc-1),var(--kc-2))!important;border-color:transparent!important;color:#fff!important;box-shadow:0 10px 20px -12px var(--kc-2)!important}
+.lib-k [data-lk="own"],.lib-k [data-lk2="own"]{--kc-1:#E0A05A;--kc-2:#A8492A;--kc-b:#EBCBA6;--kc-bg:#FFF6EC;--kc-t:#8A4524}
+.lib-k [data-lk="bor"],.lib-k [data-lk2="bor"]{--kc-1:#7FA6DE;--kc-2:#3F62AE;--kc-b:#C6D6F0;--kc-bg:#F2F6FD;--kc-t:#34529A}
+.lib-k [data-lk="wish"],.lib-k [data-lk2="wish"]{--kc-1:#EE9BB8;--kc-2:#B85C78;--kc-b:#F2C4D5;--kc-bg:#FFF3F7;--kc-t:#A3456A}
+#lb-save[data-k="bor"],#kt-sadd[data-k="bor"]{background:linear-gradient(135deg,#7FA6DE,#3F62AE)!important}
+#lb-save[data-k="wish"],#kt-sadd[data-k="wish"]{background:linear-gradient(135deg,#EE9BB8,#B85C78)!important}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -9985,7 +9996,7 @@ const KT_CAT={"Ahmet Ümit": ["Patasana", "Sis ve Gece", "Kukla", "Beyoğlu Raps
 (function(){const _p=bkPool;bkPool=function(){const L=_p();const m=new Set(L.map(b=>bkN(b.t)));Object.entries(KT_CAT).forEach(([a,T])=>T.forEach(t=>{const k=bkN(t);if(!m.has(k)){m.add(k);L.push({t,a,src:"c"});}}));return L;};})();
 
 /* v267: Kitap ekle → "Keşke benim olsa" ile istek listesine elle ekleme */
-(function(){const _l=libAddOpen;libAddOpen=function(){_l.apply(this,arguments);try{const row=document.querySelector(".lib-k");const sv=document.getElementById("lb-save");if(!row||!sv||row.querySelector('[data-lk="wish"]'))return;
+(function(){const _l=libAddOpen;libAddOpen=function(){_l.apply(this,arguments);try{const own=document.querySelector('.lib-k [data-lk="own"]'),row=own&&own.parentElement;const sv=document.getElementById("lb-save");if(!row||!sv||row.querySelector('[data-lk="wish"]'))return;
   const wb=document.createElement("button");wb.type="button";wb.className="gn-c";wb.dataset.lk="wish";wb.setAttribute("aria-pressed","false");wb.textContent="💝 Keşke benim olsa";row.appendChild(wb);
   const base=sv.textContent;let wish=false;const set=on=>{wish=on;sv.textContent=on?"İstek listeme ekle 💝":base;sv.classList.toggle("wishgo",on);};
   row.querySelectorAll("[data-lk]").forEach(b=>b.addEventListener("click",()=>{if(b===wb){row.querySelectorAll("[data-lk]").forEach(x=>x.setAttribute("aria-pressed",x===wb));const wf=document.getElementById("lb-whof");if(wf)wf.hidden=true;set(true);}else set(false);}));
@@ -10011,6 +10022,12 @@ function wishInject(){try{
 }catch(err){}}
 (function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);wishInject();};const _c=ktShelfCtx;ktShelfCtx=function(){_c.apply(this,arguments);wishInject();};
   const P=document.getElementById("ktpanel");if(P)new MutationObserver(()=>{clearTimeout(window.__wiT);window.__wiT=setTimeout(wishInject,30);}).observe(P,{childList:true,subtree:true});})();
+
+/* v269: seçilen seçeneğin rengi ekle düğmesine geçsin */
+document.addEventListener("click",e=>{const c=e.target.closest&&e.target.closest(".lib-k [data-lk],.lib-k [data-lk2]");if(!c)return;const k=c.dataset.lk||c.dataset.lk2;setTimeout(()=>{const box=c.closest(".lib-f,.lcard,.shs")||document;const b=box.querySelector("#lb-save,#kt-sadd");if(b)b.dataset.k=k;},0);},true);
+
+function libKNorm(){document.querySelectorAll(".lib-k .gn-c").forEach(b=>{if(b.querySelector(".kci"))return;const m=b.textContent.trim().match(/^(\S+)\s+(.+)$/);if(!m)return;b.innerHTML=`<span class="kci no-mi">${m[1]}</span><span>${esc(m[2])}</span>`;});}
+(function(){const _w=wishInject;wishInject=function(){_w.apply(this,arguments);try{libKNorm();}catch(e){}};const _l=libAddOpen;libAddOpen=function(){_l.apply(this,arguments);try{libKNorm();}catch(e){}};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
