@@ -4382,6 +4382,8 @@ html[data-mf="dusk"] .kf-3t b{color:#FBE3EE}html[data-mf="dusk"] .kf-3t small{co
 .kfr-sym{position:absolute;z-index:4;transform:translate(-50%,-135%);display:flex;align-items:center;gap:5px;white-space:nowrap;background:rgba(30,14,28,.82);border:1px solid rgba(217,164,65,.7);color:#FFE9C2;border-radius:99px;padding:5px 11px 5px 7px;font-size:13px;box-shadow:0 0 16px rgba(255,190,90,.35);animation:kfrSym .7s cubic-bezier(.2,1.4,.4,1) both}
 .kfr-sym span{font-size:18px}
 @keyframes kfrSym{from{opacity:0;transform:translate(-50%,-80%) scale(.4)}to{opacity:1;transform:translate(-50%,-135%) scale(1)}}
+.kfr-sym.dn{transform:translate(-50%,35%);animation-name:kfrSymD}
+@keyframes kfrSymD{from{opacity:0;transform:translate(-50%,-10%) scale(.4)}to{opacity:1;transform:translate(-50%,35%) scale(1)}}
 .kfr-n{min-height:52px;margin:26px 10px 0;text-align:center;font-family:var(--f-display);font-style:italic;font-size:21px;line-height:1.35;color:#F6E3C8}
 .kfr-cd{margin-top:auto;padding-top:20px}
 .kfr-candle{display:block;width:22px;height:60px;border-radius:6px 6px 3px 3px;background:linear-gradient(180deg,#FFF3DE,#E9CFA6);position:relative;box-shadow:0 0 40px 18px rgba(255,170,80,.25)}
@@ -5223,7 +5225,7 @@ body.mf-on .rit .prac.has-dn{border-color:color-mix(in srgb,var(--c) 45%,#fff)!i
 .ktnear.big{display:inline-flex;margin:0 0 6px;font-size:12px;padding:4px 11px}
 @keyframes ktNb{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
 
-.kfr-mask{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;object-fit:cover;z-index:1;pointer-events:none;mix-blend-mode:screen;filter:blur(.7px) drop-shadow(0 0 3px rgba(255,200,90,.9));animation:kfrMk 1.6s ease-in-out infinite alternate;display:none;-webkit-mask-image:radial-gradient(circle,transparent 0,transparent 0);mask-image:radial-gradient(circle,transparent 0,transparent 0)}
+.kfr-mask{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;object-fit:cover;z-index:1;pointer-events:none;mix-blend-mode:screen;filter:blur(1.1px) drop-shadow(0 0 3px rgba(255,200,90,.9));animation:kfrMk 1.6s ease-in-out infinite alternate;display:none;-webkit-mask-image:radial-gradient(circle,transparent 0,transparent 0);mask-image:radial-gradient(circle,transparent 0,transparent 0)}
 @keyframes kfrMk{from{opacity:.65}to{opacity:1}}
 
 /* v0.16.1 başka burçlara bak */
@@ -5240,8 +5242,14 @@ body.mf-on .rit .prac.has-dn{border-color:color-mix(in srgb,var(--c) 45%,#fff)!i
 
 /* v0.16.2 fal: galeriden yükle */
 .kf-3w{position:relative}
-.kf-gal{position:absolute;right:10px;top:50%;transform:translateY(-50%);font:inherit;font-size:12px;font-weight:800;border:0;border-radius:99px;padding:7px 11px;background:linear-gradient(135deg,#2A9DAE,#5EC2CC);color:#fff;cursor:pointer;box-shadow:0 6px 14px -8px #2A9DAE;z-index:2}
-.kf-3w .kf-3s{padding-right:98px}
+.kf-pk{position:absolute;right:10px;top:50%;transform:translateY(-50%);display:flex;gap:7px;z-index:2}
+.kf-pk button{width:40px;height:40px;display:grid;place-items:center;padding:0;border-radius:14px;cursor:pointer;transition:transform .15s}
+.kf-pk button:active{transform:scale(.9)}
+.kf-pk svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.kf-pk .cam{border:0;background:linear-gradient(140deg,#2A9DAE,#5EC2CC);color:#fff;box-shadow:0 6px 14px -8px #2A9DAE}
+.kf-pk .gal{border:1.5px solid #E8B8CC;background:#fff;color:#C9608E;box-shadow:0 6px 14px -10px #C9608E}
+html[data-mf="dusk"] .kf-pk .gal{background:rgba(255,255,255,.08);border-color:rgba(244,154,184,.5);color:#F6B6CC}
+.kf-3w .kf-3s{padding-right:104px}
 /* v0.16.2 yükselen burç */
 .zs-asc .za-who{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px}
 .zs-asc .za-who button{font:inherit;font-size:13px;font-weight:800;height:38px;border-radius:13px;border:1px solid rgba(255,225,170,.3);background:rgba(255,255,255,.07);color:#FBEFD8;cursor:pointer}
@@ -9723,8 +9731,8 @@ function bnStat(){const S={};const D=(()=>{try{return storyData();}catch(e){retu
   return S;}
 const BN_CATDOG=`<svg class="bn-cd" aria-hidden="true" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg"> <g> <ellipse cx="42" cy="54" rx="27" ry="25" fill="#F3D9B8"/> <path d="M18 34 C8 38 6 58 14 66 C20 70 25 62 24 50 Z" fill="#9A6440"/> <path d="M66 34 C76 38 78 58 70 66 C64 70 59 62 60 50 Z" fill="#9A6440"/> <ellipse cx="42" cy="64" rx="13" ry="10" fill="#FFF4E6"/> <circle cx="33" cy="52" r="3.6" fill="#3A2A22"/><circle cx="51" cy="52" r="3.6" fill="#3A2A22"/> <circle cx="34.2" cy="50.8" r="1.2" fill="#fff"/><circle cx="52.2" cy="50.8" r="1.2" fill="#fff"/> <ellipse cx="42" cy="60" rx="4.6" ry="3.4" fill="#3A2A22"/> <path d="M42 63.5 V67 M42 67 C39 70 36 69 35 67 M42 67 C45 70 48 69 49 67" stroke="#3A2A22" stroke-width="1.8" fill="none" stroke-linecap="round"/> <ellipse cx="27" cy="60" rx="4" ry="2.6" fill="#F4A3A8" opacity=".75"/><ellipse cx="57" cy="60" rx="4" ry="2.6" fill="#F4A3A8" opacity=".75"/> </g> <g> <path d="M68 40 L72 18 L86 32 Z" fill="#9AA3B5"/><path d="M106 40 L104 18 L90 32 Z" fill="#9AA3B5"/> <path d="M71.5 36 L73.5 24 L81 32 Z" fill="#F4B6C2"/><path d="M102.5 36 L102 24 L95 32 Z" fill="#F4B6C2"/> <ellipse cx="87" cy="52" rx="23" ry="21" fill="#C3CAD6"/> <path d="M80 33 Q87 30 94 33" stroke="#9AA3B5" stroke-width="2.4" fill="none" stroke-linecap="round"/> <path d="M83 37 Q87 35 91 37" stroke="#9AA3B5" stroke-width="2" fill="none" stroke-linecap="round"/> <ellipse cx="87" cy="60" rx="11" ry="8" fill="#F1F3F7"/> <path d="M77 50 Q80 47 83 50" stroke="#2E2A3A" stroke-width="2.4" fill="none" stroke-linecap="round"/> <path d="M91 50 Q94 47 97 50" stroke="#2E2A3A" stroke-width="2.4" fill="none" stroke-linecap="round"/> <path d="M84.5 56 L89.5 56 L87 59 Z" fill="#E88A9E"/> <path d="M87 59 V61 M87 61 C85 63 83 63 82 61.5 M87 61 C89 63 91 63 92 61.5" stroke="#2E2A3A" stroke-width="1.5" fill="none" stroke-linecap="round"/> <path d="M74 58 H64 M74 61 L65 63 M100 58 H110 M100 61 L109 63" stroke="#8A93A6" stroke-width="1.3" stroke-linecap="round"/> <ellipse cx="76" cy="57" rx="3.4" ry="2.2" fill="#F4A3A8" opacity=".75"/><ellipse cx="98" cy="57" rx="3.4" ry="2.2" fill="#F4A3A8" opacity=".75"/> </g> <path d="M60 14 c-3-4-9-2-8 3 c1 4 8 8 8 8 s7-4 8-8 c1-5-5-7-8-3z" fill="#FF8FB4"/> </svg>`;
 function bentoRender(){const el=document.getElementById("bento");if(!el)return;const S=bnStat();
-  const T=[["go-rit","rit","Manifest Me",S.rit,"tall"],["go-fit","fit","Kendime iyi bak",S.fit,""],["go-pet","pet","Patili dostum",S.pet,""],
-    ["go-kitap","kitap","Kitap köşem",S.kitap,"wide"],["go-kids","kids","Çocuklarım",S.kids,""],["go-ev","ev","Ev & düzen",S.ev,""],["go-zod","keyif","Keyif köşem",S.keyif,""],["go-love","love","Biz ikimiz","🔒 Sadece sana özel",""]];
+  const T=[["go-rit","rit","Manifest Me",S.rit,"tall"],["go-zod","keyif","Keyif köşem",S.keyif,""],["go-pet","pet","Patili dostum",S.pet,""],
+    ["go-kitap","kitap","Kitap köşem",S.kitap,"wide"],["go-kids","kids","Çocuklarım",S.kids,""],["go-ev","ev","Ev & düzen",S.ev,""],["go-fit","fit","Kendime iyi bak",S.fit,""],["go-love","love","Biz ikimiz","🔒 Sadece sana özel",""]];
   el.innerHTML=T.map(([id,k,t,sub,sz],i)=>{let art=BN_ART[k]||"";if(k==="fit")art=art.replace("{lvl}",(90-72*(S.fitw||0)).toFixed(0));
     if(k==="pet")art=BN_CATDOG;
     const ring=k==="rit"&&S.ritp!=null?`<svg class="bn-ring" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="3.5"/><circle cx="18" cy="18" r="15" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="${(94.2*S.ritp).toFixed(1)} 94.2" transform="rotate(-90 18 18)"/></svg>`:"";
@@ -9959,14 +9967,14 @@ function falRitual(P,RR,cb){const O=document.getElementById("zsh");O.classList.a
       const CC=x.cc||[50,50];const sp0=x.spots.length?x.spots:[CC];const sp=sp0.slice().sort((a,b)=>Math.hypot(a[0]-CC[0],a[1]-CC[1])-Math.hypot(b[0]-CC[0],b[1]-CC[1]));const MK=document.getElementById("kfr-m");if(MK){if(x.mask){MK.src=x.mask;MK.style.display="block";}else MK.style.display="none";}const ring0=document.getElementById("kfr-r"),sw0=document.getElementById("kfr-w");ring0.style.left=sw0.style.left=CC[0]+"%";ring0.style.top=sw0.style.top=CC[1]+"%";
       orb.style.opacity=0;await type(nar,"Fincanın dibinden kenarına tarıyorum…",26);
       await new Promise(res=>{const ring=document.getElementById("kfr-r"),sw=document.getElementById("kfr-w");const t0=performance.now(),DUR=i?3800:4800;ring.style.opacity=1;sw.style.opacity=1;const lit=new Set();
-        const st2=now=>{if(stop)return res();const k=Math.min(1,(now-t0)/DUR),RM=(x.cr||48)+4,R=(k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2)*RM;ring.style.width=ring.style.height=(R*2)+"%";if(MK&&x.mask){const g=`radial-gradient(circle at ${CC[0]}% ${CC[1]}%,#000 ${Math.max(0,R-3)}%,rgba(0,0,0,.35) ${R}%,transparent ${R+1}%)`;MK.style.webkitMaskImage=g;MK.style.maskImage=g;}sw.style.transform=`translate(-50%,-50%) rotate(${(now-t0)*.22}deg)`;
+        const st2=now=>{if(stop)return res();const k=Math.min(1,(now-t0)/DUR),RM=Math.min(58,(x.cr||48)+4),R=(k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2)*RM;ring.style.width=ring.style.height=(R*2)+"%";if(MK&&x.mask){const g=`radial-gradient(circle at ${CC[0]}% ${CC[1]}%,#000 ${Math.max(0,R-3)}%,rgba(0,0,0,.35) ${R}%,transparent ${R+1}%)`;MK.style.webkitMaskImage=g;MK.style.maskImage=g;}sw.style.transform=`translate(-50%,-50%) rotate(${(now-t0)*.22}deg)`;
           sp0.forEach((p,j)=>{if(x.spots.length&&!lit.has(j)&&Math.hypot(p[0]-CC[0],p[1]-CC[1])<=R){lit.add(j);const d=document.createElement("i");d.className="kfr-dot";d.style.left=p[0]+"%";d.style.top=p[1]+"%";lab.appendChild(d);if(navigator.vibrate)try{navigator.vibrate(12);}catch(e){}}});
           if(k<1)raf=requestAnimationFrame(st2);else{ring.style.opacity=0;sw.style.opacity=0;setTimeout(res,400);}};raf=requestAnimationFrame(st2);});
       orb.style.opacity=1;
       const LS=[];sp.forEach(p=>{if(LS.every(q=>Math.hypot(q[0]-p[0],q[1]-p[1])>24))LS.push(p);});sp.forEach(p=>{if(LS.length<per[i].length&&!LS.includes(p)&&LS.every(q=>Math.hypot(q[0]-p[0],q[1]-p[1])>14))LS.push(p);});
       for(let k=0;k<per[i].length&&!stop;k++){const s0=LS[k%LS.length],sym=KSYM[per[i][k]];await move(s0[0],s0[1],950);if(stop)break;
         orb.classList.remove("hit");void orb.offsetWidth;orb.classList.add("hit");if(navigator.vibrate)try{navigator.vibrate(25);}catch(e){}
-        const L=document.createElement("div");L.className="kfr-sym";L.style.left=s0[0]+"%";L.style.top=s0[1]+"%";L.innerHTML=`<span class="no-mi">${sym[0]}</span><b>${sym[1]}</b>`;lab.appendChild(L);
+        const L=document.createElement("div");const dn=[...lab.querySelectorAll(".kfr-sym")].some(o=>Math.abs(parseFloat(o.style.top)-s0[1])<13&&Math.abs(parseFloat(o.dataset.x||o.style.left)-s0[0])<38)||s0[1]<16;L.className="kfr-sym"+(dn?" dn":"");L.dataset.x=s0[0];L.style.left=Math.max(20,Math.min(80,s0[0]))+"%";L.style.top=s0[1]+"%";L.innerHTML=`<span class="no-mi">${sym[0]}</span><b>${sym[1]}</b>`;lab.appendChild(L);
         await type(nar,k===0?`Burada bir ${sym[1].toLocaleLowerCase("tr-TR")} görüyorum…`:k===1?`Hmm… şurada da ${sym[1].toLocaleLowerCase("tr-TR")} var…`:`Bak, bir de ${sym[1].toLocaleLowerCase("tr-TR")}…`,30);await wait(700);}
       await wait(300);}
     if(stop)return;document.getElementById("kfr-k").textContent="Fincan konuştu";await type(document.getElementById("kfr-t"),"Falın hazır ✨",50);await type(nar,"Şimdi sana anlatayım…",34);await wait(700);fin();})();}
@@ -10762,23 +10770,35 @@ function ktNearB(e,big){const N=ktNear(e);if(!N)return "";return `<span class="k
 
 /* v0.16.1 Telve dedektörü: fincanın içini bul, sadece telve renkli yerleri işaretle */
 async function falTelve(src){const im=await new Promise((r,j)=>{const i=new Image();i.onload=()=>r(i);i.onerror=j;i.src=src;});
- const N=96,cv=document.createElement("canvas");cv.width=cv.height=N;const g=cv.getContext("2d");const sq=Math.min(im.width,im.height);g.drawImage(im,(im.width-sq)/2,(im.height-sq)/2,sq,sq,0,0,N,N);
+ const N=128,cv=document.createElement("canvas");cv.width=cv.height=N;const g=cv.getContext("2d");const sq=Math.min(im.width,im.height);g.drawImage(im,(im.width-sq)/2,(im.height-sq)/2,sq,sq,0,0,N,N);
  const D=g.getImageData(0,0,N,N).data,L=new Float32Array(N*N),SA=new Float32Array(N*N),WM=new Float32Array(N*N),GR=new Uint8Array(N*N);
  for(let i=0;i<N*N;i++){const r=D[i*4],gg=D[i*4+1],b=D[i*4+2],mx=Math.max(r,gg,b),mn=Math.min(r,gg,b);L[i]=.299*r+.587*gg+.114*b;SA[i]=mx?(mx-mn)/mx:0;WM[i]=r-b;GR[i]=(gg>r*1.2&&gg>b*1.15&&mx-mn>35)?1:0;}
  /* porselen: parlak ve renksiz; merkeze yakın */
  const Ls=[];for(let y=0;y<N;y++)for(let x=0;x<N;x++){const dx=x-N/2,dy=y-N/2;if(dx*dx+dy*dy<(N*.46)**2)Ls.push(L[y*N+x]);}Ls.sort((a,b)=>a-b);const p70=Ls[Math.floor(Ls.length*.7)]||200;
- let sx=0,sy=0,n=0;for(let y=0;y<N;y++)for(let x=0;x<N;x++){const i=y*N+x,dx=x-N/2,dy=y-N/2;if(dx*dx+dy*dy>(N*.49)**2)continue;if(L[i]>=Math.min(p70,235)*.92&&SA[i]<.28){sx+=x;sy+=y;n++;}}
- let cx=N/2,cy=N/2,R=N*.42;if(n>N*N*.06){cx=sx/n;cy=sy/n;/* yarıçap: porselen + içindeki telve kapsansın */let far=[];for(let y=0;y<N;y++)for(let x=0;x<N;x++){const i=y*N+x;if(L[i]>=Math.min(p70,235)*.92&&SA[i]<.28)far.push(Math.hypot(x-cx,y-cy));}far.sort((a,b)=>a-b);R=Math.min(N*.5,Math.max(N*.2,far[Math.floor(far.length*.95)]||R));}
+ let sx=0,sy=0,n=0;for(let y=0;y<N;y++)for(let x=0;x<N;x++){const i=y*N+x,dx=x-N/2,dy=y-N/2;if(dx*dx+dy*dy>(N*.49)**2)continue;if(L[i]>=Math.min(p70,235)*.6&&SA[i]<.3){sx+=x;sy+=y;n++;}}
+ let cx=N/2,cy=N/2,R=N*.42;if(n>N*N*.06){cx=sx/n;cy=sy/n;/* yarıçap: porselen + içindeki telve kapsansın */let far=[];for(let y=0;y<N;y++)for(let x=0;x<N;x++){const i=y*N+x;if(L[i]>=Math.min(p70,235)*.6&&SA[i]<.3)far.push(Math.hypot(x-cx,y-cy));}far.sort((a,b)=>a-b);R=Math.min(N*.62,Math.max(N*.2,far[Math.floor(far.length*.95)]||R));}
  const por=[];for(let y=0;y<N;y++)for(let x=0;x<N;x++){const i=y*N+x;if(Math.hypot(x-cx,y-cy)<R&&L[i]>=Math.min(p70,235)*.92&&SA[i]<.28)por.push(L[i]);}por.sort((a,b)=>a-b);const Lp=por.length?por[Math.floor(por.length/2)]:p70;
  /* telve: porselene göre belirgin koyu, sıcak (kahverengi) ya da çok koyu; fincan çemberinin içinde */
  const LM=new Float32Array(N*N);{const W=4;for(let y=0;y<N;y++)for(let x=0;x<N;x++){let a=0,c=0;for(let v=Math.max(0,y-W);v<=Math.min(N-1,y+W);v++)for(let u=Math.max(0,x-W);u<=Math.min(N-1,x+W);u++){a+=L[v*N+u];c++;}LM[y*N+x]=a/c;}}
- const M=new Uint8Array(N*N);let inside=0,tv=0;for(let y=0;y<N;y++)for(let x=0;x<N;x++){const i=y*N+x,rr=Math.hypot(x-cx,y-cy);if(rr>R*.93)continue;inside++;
-  const brown=L[i]<Lp*.82&&WM[i]>10&&SA[i]>.22,loc=L[i]<LM[i]*.74&&SA[i]>.12,vdark=L[i]<Math.min(60,Lp*.4)&&SA[i]>.08;if(!GR[i]&&(brown||loc||vdark)){M[i]=1;tv++;}}
+ /* v0.16.3: porselenin kendi rengine göre beyaz dengesi (sarı ışıkta gölge telve sanılmasın) + uyarlanır eşik */
+ let pr=0,pg=0,pb=0,pn=0;for(let y=0;y<N;y++)for(let x=0;x<N;x++){const i=y*N+x;if(Math.hypot(x-cx,y-cy)<R&&L[i]>=Lp&&SA[i]<.28){pr+=D[i*4];pg+=D[i*4+1];pb+=D[i*4+2];pn++;}}
+ if(pn){pr=Math.max(40,pr/pn);pg=Math.max(40,pg/pn);pb=Math.max(40,pb/pn);}else{pr=pg=pb=Math.max(80,Lp);}
+ const Q=new Float32Array(N*N),WN=new Float32Array(N*N),hist=new Float32Array(64);let hn=0;
+ for(let y=0;y<N;y++)for(let x=0;x<N;x++){const i=y*N+x;const rn=D[i*4]/pr,gn=D[i*4+1]/pg,bn=D[i*4+2]/pb;const q=(rn*.299+gn*.587+bn*.114);Q[i]=q;WN[i]=(rn-bn)/Math.max(.15,q);
+  if(Math.hypot(x-cx,y-cy)<=R*.93){hist[Math.max(0,Math.min(63,Math.floor(q/1.3*64)))]++;hn++;}}
+ /* Otsu: porselen / telve ayrımı */let thr=.62;{let sum=0;for(let k=0;k<64;k++)sum+=k*hist[k];let sB=0,wB=0,best=-1;for(let k=0;k<64;k++){wB+=hist[k];if(!wB)continue;const wF=hn-wB;if(!wF)break;sB+=k*hist[k];const mB=sB/wB,mF=(sum-sB)/wF,v=wB*wF*(mB-mF)*(mB-mF);if(v>best){best=v;thr=(k+.5)/64*1.3;}}}
+ thr=Math.max(.42,Math.min(.7,thr));
+ const M=new Uint8Array(N*N),ST=new Float32Array(N*N);let inside=0,tv=0;
+ for(let pass=0;pass<4;pass++){M.fill(0);inside=0;tv=0;for(let y=0;y<N;y++)for(let x=0;x<N;x++){const i=y*N+x,rr=Math.hypot(x-cx,y-cy);if(rr>R*.96)continue;inside++;if(GR[i])continue;
+   const q=Q[i],w=WN[i];const brown=q<thr&&w>.06,vdark=q<thr*.7,loc=L[i]<LM[i]*.66&&q<Math.min(.86,thr+.18)&&w>.03;
+   if(brown||vdark||loc){M[i]=1;tv++;ST[i]=Math.min(1,Math.max(.35,(thr+.1-q)/(thr+.1)*2.2));}}
+  if(inside&&tv/inside>.55){thr*=.84;continue;}break;}
+ /* tek tük benekleri temizle */{const C=M.slice();for(let y=1;y<N-1;y++)for(let x=1;x<N-1;x++){const i=y*N+x;if(!C[i])continue;let c=0;for(let v=-1;v<=1;v++)for(let u=-1;u<=1;u++)c+=C[i+v*N+u];if(c<3){M[i]=0;tv--;}}}
  /* bağlı bileşenler */const lab=new Int32Array(N*N).fill(-1),comps=[];for(let i=0;i<N*N;i++){if(!M[i]||lab[i]>=0)continue;const q=[i];lab[i]=comps.length;let a=0,ax=0,ay=0;while(q.length){const j=q.pop();a++;ax+=j%N;ay+=(j/N)|0;
    const x=j%N,y=(j/N)|0;[[1,0],[-1,0],[0,1],[0,-1]].forEach(([u,v])=>{const X=x+u,Y=y+v;if(X<0||Y<0||X>=N||Y>=N)return;const k=Y*N+X;if(M[k]&&lab[k]<0){lab[k]=comps.length;q.push(k);}});}{const id=comps.length,mx=ax/a,my=ay/a;let bj=-1,bd=1e9;for(let k=0;k<N*N;k++){if(lab[k]!==id)continue;const d=(k%N-mx)**2+(((k/N)|0)-my)**2;if(d<bd){bd=d;bj=k;}}comps.push([a,bj%N,(bj/N)|0]);}}
- comps.sort((a,b)=>b[0]-a[0]);const spots=[],cmin=Math.max(8,(comps[0]?comps[0][0]:0)*.12);comps.forEach(c=>{if(c[0]<cmin||spots.length>=6)return;if(spots.every(s=>Math.hypot(s[0]-c[1],s[1]-c[2])>N*.11))spots.push([c[1],c[2]]);});
+ comps.sort((a,b)=>b[0]-a[0]);const spots=[],cmin=Math.max(12,(comps[0]?comps[0][0]:0)*.12);comps.forEach(c=>{if(c[0]<cmin||spots.length>=6)return;if(spots.every(s=>Math.hypot(s[0]-c[1],s[1]-c[2])>N*.11))spots.push([c[1],c[2]]);});
  /* büyük lekelerin içinden ek noktalar */if(spots.length<4){const pts=[];for(let i=0;i<N*N;i++)if(M[i]&&comps[lab[i]]&&false||M[i]&&(()=>{let c=0;for(let u=-2;u<=2;u++)for(let v=-2;v<=2;v++){const k=i+v*N+u;if(k>=0&&k<N*N&&M[k])c++;}return c>=14;})())pts.push([i%N,(i/N)|0]);for(let k=0;k<pts.length&&spots.length<5;k+=Math.max(1,Math.floor(pts.length/40))){const p=pts[k];if(spots.every(s=>Math.hypot(s[0]-p[0],s[1]-p[1])>N*.13))spots.push(p);}}
- /* parlayan telve maskesi */const mc=document.createElement("canvas");mc.width=mc.height=N;const mg=mc.getContext("2d"),MD=mg.createImageData(N,N);for(let i=0;i<N*N;i++)if(M[i]){MD.data[i*4]=255;MD.data[i*4+1]=205;MD.data[i*4+2]=110;MD.data[i*4+3]=200;}mg.putImageData(MD,0,0);
+ /* parlayan telve maskesi */const mc=document.createElement("canvas");mc.width=mc.height=N;const mg=mc.getContext("2d"),MD=mg.createImageData(N,N);for(let i=0;i<N*N;i++)if(M[i]){MD.data[i*4]=255;MD.data[i*4+1]=205;MD.data[i*4+2]=110;MD.data[i*4+3]=Math.round(90+140*ST[i]);}mg.putImageData(MD,0,0);
  const f=inside?tv/inside:0;const P=v=>Math.round((v+.5)/N*1000)/10;
  return {f,spots:spots.map(([x,y])=>[P(x),P(y)]),cc:[P(cx),P(cy)],cr:Math.round(R/N*1000)/10,mask:mc.toDataURL("image/png")};}
 (function(){const _p=falPhoto;falPhoto=async function(file){const r=await _p.apply(this,arguments);try{const T=await falTelve(r.thumb);r.cc=T.cc;r.cr=T.cr;r.mask=T.mask;r.tf=T.f;
@@ -10807,8 +10827,9 @@ let zOther=null;
 /* v0.16.2 Fal: galeriden fotoğraf seç */
 (function(){const _b=falBind;falBind=function(){_b.apply(this,arguments);try{if(KF.st!=="photos")return;[0,1,2].forEach(i=>{const inp=document.getElementById("kf-p"+i),lab=document.querySelector(`label[for="kf-p${i}"]`);if(!inp||!lab||lab.parentElement.classList.contains("kf-3w"))return;
   const w=document.createElement("div");w.className="kf-3w";lab.parentNode.insertBefore(w,lab);w.appendChild(lab);
-  const g=document.createElement("input");g.type="file";g.accept="image/*";g.hidden=true;g.id="kf-g"+i;const bt=document.createElement("button");bt.type="button";bt.className="kf-gal";bt.innerHTML='<span class="no-mi">🖼</span> Galeriden';
-  bt.onclick=e=>{e.preventDefault();e.stopPropagation();g.click();};w.appendChild(bt);w.appendChild(g);
+  const g=document.createElement("input");g.type="file";g.accept="image/*";g.hidden=true;g.id="kf-g"+i;const pk=document.createElement("div");pk.className="kf-pk";
+  pk.innerHTML='<button type="button" class="cam" aria-label="Fotoğraf çek"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8.5a2 2 0 0 1 2-2h1.6l1.3-2h6.2l1.3 2H18a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.6" r="3.4"/></svg></button><button type="button" class="gal" aria-label="Galeriden seç"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="9" cy="9.6" r="1.6"/><path d="M4 17.5l5-4.6 3.6 3.2 2.6-2.2 4.8 4"/></svg></button>';
+  pk.querySelector(".cam").onclick=e=>{e.preventDefault();e.stopPropagation();inp.click();};pk.querySelector(".gal").onclick=e=>{e.preventDefault();e.stopPropagation();g.click();};w.appendChild(pk);w.appendChild(g);
   g.onchange=()=>{const f=g.files&&g.files[0];if(!f)return;try{const dt=new DataTransfer();dt.items.add(f);inp.files=dt.files;inp.dispatchEvent(new Event("change",{bubbles:true}));}catch(err){alertSoft("Bu cihazda galeriden seçim desteklenmiyor; fotoğrafı çekerek dener misin? ☕");}};});}catch(e){console.error(e);}};})();
 
 /* v0.16.2 Yükselen burç: doğum tarihi + saat + şehir */
