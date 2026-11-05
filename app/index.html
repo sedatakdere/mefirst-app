@@ -10158,7 +10158,7 @@ function zodPlus(){const O=document.getElementById("zsh");const hero=O.querySele
         <button class="ghost" id="ke-x" type="button">‹ Vazgeç</button></div>`;
       if(c.cls==="Anaokulu")document.getElementById("ke-c").value="Anaokulu";let col=c.col;
       P.querySelectorAll("[data-ec]").forEach(b=>b.onclick=()=>{col=b.dataset.ec;P.querySelectorAll("[data-ec]").forEach(x=>x.setAttribute("aria-pressed",x===b));});
-      document.getElementById("ke-save").onclick=()=>{const n=document.getElementById("ke-n").value.trim();if(!n){document.getElementById("ke-n").focus();return;}c.name=n;c.cls=document.getElementById("ke-c").value;c.col=col;
+      document.getElementById("ke-save").onclick=()=>{const n=document.getElementById("ke-n").value.trim();if(!n){document.getElementById("ke-n").focus();return;}const _on=(c.name||"").trim();c.name=n;if(_on&&_on!==n){const rx=new RegExp(_on.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"(?=['’]|\\b|\\s|$)","g");const sw=t=>{["gen","acc","dat"].forEach(k=>{t=t.split(trEk(_on,k)).join(trEk(n,k));});return t.replace(rx,n);};K.ev.forEach(x=>{if(x.kid===c.id&&x.t)x.t=sw(x.t);});(K.hw||[]).forEach(x=>{if(x.kid===c.id&&x.t)x.t=sw(x.t);});}c.cls=document.getElementById("ke-c").value;c.col=col;
         const dv=dmyIso(document.getElementById("ke-dob").value);if(dv&&dv!==c.dob){c.dob=dv;K.ev=K.ev.filter(x=>!(x.kid===c.id&&x.ty==="dogum"));const [y,m,d]=dv.split("-").map(Number);const t=new Date();let nb=new Date(t.getFullYear(),m-1,d);if(nb<new Date(t.getFullYear(),t.getMonth(),t.getDate()))nb=new Date(t.getFullYear()+1,m-1,d);K.ev.push({kid:c.id,ty:"dogum",t:trEk(c.name,"gen")+" doğum günü",d:dkey(nb),tm:""});}
         save();ktab="today";kidsRender();};
       document.getElementById("ke-dob").addEventListener("input",e=>{const v=dmyIso(e.target.value);const z=v&&zodiac(v);document.getElementById("ke-zod").innerHTML=z?`${z[1]} ${z[0]}`:"<small>Doğum gününü gir</small>";});
@@ -10681,6 +10681,10 @@ function mfBillCand(){const E=st.ev;if(!E||!E.bills)return null;const h=new Date
  const _k=ktPop;ktPop=function(chain){window.__mfChain=!!chain;try{_k.apply(this,arguments);}finally{window.__mfChain=false;}
 };
  new MutationObserver(ms=>{ms.forEach(m=>m.addedNodes.forEach(n=>{if(n.id==="ktpop")mfPopLogAdd(window.__mfTopP||50);}));}).observe(document.body,{childList:true});})();
+
+/* v0.15.9 çocuk adı değişince doğum günü etkinliği de güncellenir */
+(function(){const fix=()=>{try{const K=kids();(K.list||[]).forEach(c=>{const nm=(c.name||"").trim();if(!nm)return;const t=trEk(nm,"gen")+" doğum günü";(K.ev||[]).forEach(x=>{if(x.kid===c.id&&x.ty==="dogum"&&/doğum günü$/.test(x.t||"")&&x.t!==t)x.t=t;});});}catch(e){}};
+ const _k=kidsRender;kidsRender=function(){fix();return _k.apply(this,arguments);};try{fix();}catch(e){}})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
