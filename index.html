@@ -106,11 +106,11 @@ section{padding:56px 0 0}
   <span class="eyebrow">Kadınlar ve anneler için</span>
   <h1>Önce <em>sen.</em></h1>
   <p class="l">Herkese yetişirken kendini unutma. Me First her sabah sana özel bir öneri, bir ritüel ve kendine ayıracağın küçük bir an getirir.</p>
-  <div class="ctas"><a class="btn" href="/app/">Ücretsiz dene ✨</a><a class="ghost" href="#video">▶ 50 saniyede izle</a><button type="button" class="ghost" id="vshare">💌 Arkadaşına gönder</button></div>
+  <div class="ctas"><a class="btn" href="/app/">Ücretsiz dene ✨</a><a class="ghost" href="#video">▶ 1 dakikada izle</a><button type="button" class="ghost" id="vshare">💌 Arkadaşına gönder</button></div>
   <div class="soon"><span>App Store</span><span>Google Play</span><small>Mağazalarda çok yakında. Şimdilik tarayıcından deneyebilir, ana ekranına ekleyebilirsin.</small></div>
   <div class="trust"><span>🔒 Hesap açmak yok</span><span>📱 Veriler sadece telefonunda</span><span>🇹🇷 Türkçe</span></div>
  </div>
- <div class="vbox" id="video"><video id="mfv" src="/video/mefirst-reklam-50.mp4" poster="/video/poster-50.jpg" playsinline muted loop preload="metadata"></video>
+ <div class="vbox" id="video"><video id="mfv" src="/video/mefirst-reklam-60.mp4" poster="/video/poster-60.jpg" playsinline muted loop preload="metadata"></video>
   <button type="button" class="vsnd" id="vsnd" aria-label="Sesi aç">🔇 Sesi aç</button><button type="button" class="vplay" id="vplay" aria-label="Oynat">▶</button></div>
 </div></section>
 <section id="ozellikler"><div class="wrap">
@@ -155,5 +155,5 @@ if("IntersectionObserver" in window){new IntersectionObserver(function(e){e.forE
 v.addEventListener("play",function(){p.hidden=true;});p.onclick=function(){play();};
 v.addEventListener("click",function(){if(v.paused)play();else v.pause();});
 s.onclick=function(e){e.stopPropagation();v.muted=!v.muted;if(!v.muted){v.currentTime=0;play();}s.textContent=v.muted?"🔇 Sesi aç":"🔊 Sesi kapat";};
-sh.onclick=function(){var u="https://mefirst.app/#video",t="Bak ne buldum 😍 Me First: kadınlar ve anneler için kişisel yardımcı. 50 saniyelik videoyu izle:";if(navigator.share){navigator.share({title:"Me First",text:t,url:u}).catch(function(){});}else{window.open("https://wa.me/?text="+encodeURIComponent(t+" "+u),"_blank","noopener");}};})();</script>
+sh.onclick=function(){var u="https://mefirst.app/#video",t="Bak ne buldum 😍 Me First: kadınlar ve anneler için kişisel yardımcı. 1 dakikalık videoyu izle:";if(navigator.share){navigator.share({title:"Me First",text:t,url:u}).catch(function(){});}else{window.open("https://wa.me/?text="+encodeURIComponent(t+" "+u),"_blank","noopener");}};})();</script>
 </body></html>
