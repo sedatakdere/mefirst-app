@@ -5222,6 +5222,21 @@ body.mf-on .rit .prac.has-dn{border-color:color-mix(in srgb,var(--c) 45%,#fff)!i
 .ktnear.far{background:linear-gradient(135deg,#C9822B,#E0A84A);box-shadow:0 4px 10px -5px #C9822B;animation:none}
 .ktnear.big{display:inline-flex;margin:0 0 6px;font-size:12px;padding:4px 11px}
 @keyframes ktNb{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+.kfr-mask{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;object-fit:cover;z-index:1;pointer-events:none;mix-blend-mode:screen;filter:blur(.7px) drop-shadow(0 0 3px rgba(255,200,90,.9));animation:kfrMk 1.6s ease-in-out infinite alternate;display:none;-webkit-mask-image:radial-gradient(circle,transparent 0,transparent 0);mask-image:radial-gradient(circle,transparent 0,transparent 0)}
+@keyframes kfrMk{from{opacity:.65}to{opacity:1}}
+
+/* v0.16.1 başka burçlara bak */
+.zs-other{margin-top:4px}
+.zs-og{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.zs-og button{font:inherit;cursor:pointer;border:1px solid rgba(255,225,170,.28);background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.03));color:#FBEFD8;border-radius:14px;padding:7px 0 6px;display:flex;flex-direction:column;align-items:center;gap:1px;transition:transform .15s,background .25s,box-shadow .25s}
+.zs-og button span{font-size:20px;line-height:1;filter:drop-shadow(0 0 6px rgba(255,210,130,.55))}
+.zs-og button small{font-size:9.5px;font-weight:700;opacity:.85;letter-spacing:.01em}
+.zs-og button:active{transform:scale(.94)}
+.zs-og button[aria-pressed="true"]{background:linear-gradient(160deg,#E8B860,#C9608E);border-color:transparent;box-shadow:0 8px 20px -10px #E8B860}
+.zs-og button.me{border-color:rgba(255,215,140,.75)}
+.zs-ob{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:4px 0 12px;padding:9px 12px;border-radius:16px;background:linear-gradient(135deg,rgba(232,184,96,.25),rgba(201,96,142,.22));border:1px solid rgba(255,220,160,.35);color:#FFF1D8;font-size:13px;font-weight:700}
+.zs-ob button{font:inherit;font-size:12px;font-weight:800;border:0;border-radius:99px;padding:6px 12px;background:#FFF1D8;color:#8A3A5A;cursor:pointer;white-space:nowrap}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -9891,7 +9906,7 @@ function falRitual(P,RR,cb){const O=document.getElementById("zsh");O.classList.a
   O.innerHTML=`<div class="kfr"><div class="kfr-smoke"><i></i><i></i><i></i></div><div class="kfr-dust">${Array.from({length:18},(_,i)=>`<i style="--x:${(i*53)%100}%;--d:${(i*.7)%6}s;--s:${.5+(i%4)*.3}"></i>`).join("")}</div>
    <button class="zs-x" type="button" id="zs-x" aria-label="Kapat">✕</button>
    <div class="kfr-h"><small id="kfr-k">1 / 3 · ${FPH[0][1]}</small><h2 id="kfr-t">Fincanına bakıyorum…</h2></div>
-   <div class="kfr-c" id="kfr-c"><img id="kfr-i" alt=""><svg class="kfr-trail" viewBox="0 0 100 100" preserveAspectRatio="none"><path id="kfr-p" d=""/></svg><span class="kfr-grid"></span><span class="kfr-sw" id="kfr-w"></span><span class="kfr-ring" id="kfr-r"></span><span class="kfr-orb" id="kfr-o"></span><div id="kfr-l"></div></div>
+   <div class="kfr-c" id="kfr-c"><img id="kfr-i" alt=""><img id="kfr-m" class="kfr-mask" alt=""><svg class="kfr-trail" viewBox="0 0 100 100" preserveAspectRatio="none"><path id="kfr-p" d=""/></svg><span class="kfr-grid"></span><span class="kfr-sw" id="kfr-w"></span><span class="kfr-ring" id="kfr-r"></span><span class="kfr-orb" id="kfr-o"></span><div id="kfr-l"></div></div>
    <p class="kfr-n" id="kfr-n"></p><div class="kfr-cd"><span class="kfr-candle"></span></div><button type="button" class="kfr-skip" id="kfr-s" hidden>Hemen göster ›</button></div>`;
   document.getElementById("zs-x").onclick=()=>{stop=true;mfWake(false);O.classList.remove("kf-dark");zodClose();};
   let stop=false,raf=0;const sk=document.getElementById("kfr-s");setTimeout(()=>{if(sk&&sk.isConnected)sk.hidden=false;},6000);
@@ -9909,11 +9924,11 @@ function falRitual(P,RR,cb){const O=document.getElementById("zsh");O.classList.a
       const c=document.getElementById("kfr-c");c.classList.remove("in");void c.offsetWidth;img.src=x.thumb;c.classList.add("in");lab.innerHTML="";pts=[];path.setAttribute("d","");ox=50;oy=50;orb.style.left="50%";orb.style.top="50%";
       await type(document.getElementById("kfr-t"),T[i][0],32);await type(nar,`Telveyi okuyorum, ${T[i][1]}…`,24);await wait(300);
       /* dipten kenara lazer halka: telve noktaları halka geçtikçe yanar */
-      const sp0=x.spots.length?x.spots:[[40,40],[60,55],[45,70]];const sp=sp0.slice().sort((a,b)=>Math.hypot(a[0]-50,a[1]-50)-Math.hypot(b[0]-50,b[1]-50));
+      const CC=x.cc||[50,50];const sp0=x.spots.length?x.spots:[CC];const sp=sp0.slice().sort((a,b)=>Math.hypot(a[0]-CC[0],a[1]-CC[1])-Math.hypot(b[0]-CC[0],b[1]-CC[1]));const MK=document.getElementById("kfr-m");if(MK){if(x.mask){MK.src=x.mask;MK.style.display="block";}else MK.style.display="none";}const ring0=document.getElementById("kfr-r"),sw0=document.getElementById("kfr-w");ring0.style.left=sw0.style.left=CC[0]+"%";ring0.style.top=sw0.style.top=CC[1]+"%";
       orb.style.opacity=0;await type(nar,"Fincanın dibinden kenarına tarıyorum…",26);
       await new Promise(res=>{const ring=document.getElementById("kfr-r"),sw=document.getElementById("kfr-w");const t0=performance.now(),DUR=i?3800:4800;ring.style.opacity=1;sw.style.opacity=1;const lit=new Set();
-        const st2=now=>{if(stop)return res();const k=Math.min(1,(now-t0)/DUR),R=(k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2)*52;ring.style.width=ring.style.height=(R*2)+"%";sw.style.transform=`translate(-50%,-50%) rotate(${(now-t0)*.22}deg)`;
-          sp0.forEach((p,j)=>{if(!lit.has(j)&&Math.hypot(p[0]-50,p[1]-50)<=R){lit.add(j);const d=document.createElement("i");d.className="kfr-dot";d.style.left=p[0]+"%";d.style.top=p[1]+"%";lab.appendChild(d);if(navigator.vibrate)try{navigator.vibrate(12);}catch(e){}}});
+        const st2=now=>{if(stop)return res();const k=Math.min(1,(now-t0)/DUR),RM=(x.cr||48)+4,R=(k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2)*RM;ring.style.width=ring.style.height=(R*2)+"%";if(MK&&x.mask){const g=`radial-gradient(circle at ${CC[0]}% ${CC[1]}%,#000 ${Math.max(0,R-3)}%,rgba(0,0,0,.35) ${R}%,transparent ${R+1}%)`;MK.style.webkitMaskImage=g;MK.style.maskImage=g;}sw.style.transform=`translate(-50%,-50%) rotate(${(now-t0)*.22}deg)`;
+          sp0.forEach((p,j)=>{if(x.spots.length&&!lit.has(j)&&Math.hypot(p[0]-CC[0],p[1]-CC[1])<=R){lit.add(j);const d=document.createElement("i");d.className="kfr-dot";d.style.left=p[0]+"%";d.style.top=p[1]+"%";lab.appendChild(d);if(navigator.vibrate)try{navigator.vibrate(12);}catch(e){}}});
           if(k<1)raf=requestAnimationFrame(st2);else{ring.style.opacity=0;sw.style.opacity=0;setTimeout(res,400);}};raf=requestAnimationFrame(st2);});
       orb.style.opacity=1;
       const LS=[];sp.forEach(p=>{if(LS.every(q=>Math.hypot(q[0]-p[0],q[1]-p[1])>24))LS.push(p);});sp.forEach(p=>{if(LS.length<per[i].length&&!LS.includes(p)&&LS.every(q=>Math.hypot(q[0]-p[0],q[1]-p[1])>14))LS.push(p);});
@@ -10283,10 +10298,10 @@ function mfPopSeen(){if(!st.pops||typeof st.pops!=="object")st.pops={};return st
 function mfPopCands(){const C=[],now=new Date(),nm=now.getHours()*60+now.getMinutes(),h=now.getHours(),T=dkey();
   /* 1) Mama saati — tüm dostlar tek kartta */
   try{const late=[],soon=[];(st.pets||[]).filter(p=>(p.name||"").trim()).forEach(p=>{const fed=p.fedDay===TODAY?(p.fed||[]):[];
-      (p.feeds||[]).slice().sort().forEach(t=>{if(fed.includes(t))return;const d=feedM(t)-nm;if(d>30||d<-180)return;(d<=0?late:soon).push([p,t,d]);});});
+      const FS=(p.feeds||[]).slice().sort();FS.forEach((t,ix)=>{if(fed.includes(t))return;const d=feedM(t)-nm,nx=FS[ix+1],end=nx?feedM(nx)-30:23*60+30;if(d>30||nm>=end)return;(d<=0?late:soon).push([p,t,d]);});});
     const ad=L=>{const n=[...new Set(L.map(x=>x[0].name.trim()))];return n.length>1?n.slice(0,-1).join(", ")+" ve "+n[n.length-1]:n[0];};
     const go=p=>()=>{st.petCur=p.id;st.pet=null;petData();save();document.getElementById("go-pet").click();};
-    if(late.length){const ts=[...new Set(late.map(x=>x[1]))].join(", ");C.push({id:"feedL:"+T+":"+late.map(x=>x[0].id+x[1]).join(","),p:95,cls:"pp-pet",k:"🐾 Mama saati",dec:"🐾",
+    if(late.length){const ts=[...new Set(late.map(x=>x[1]))].join(", ");C.push({id:"feedL:"+T+":"+late.map(x=>x[0].id+x[1]).join(",")+":"+Math.floor(nm/45),p:95,cls:"pp-pet",k:"🐾 Mama saati",dec:"🐾",
       h:`${esc(ad(late))}<br><em>acıktı${late.length>1?"lar":""}!</em>`,d:`Saat <b>${ts}</b> maması henüz verilmedi. Gözleri kapıda, seni bekliyor${late.length>1?"lar":""} 🥺`,a:[["Mamaya git 🥣",go(late[0][0])]],x:"Tamam, birazdan 🐾"});}
     else if(soon.length){const m=Math.min(...soon.map(x=>x[2]));C.push({id:"feedS:"+T+":"+soon.map(x=>x[0].id+x[1]).join(","),p:85,cls:"pp-pet",k:"🐾 Mama saati",dec:"🐾",
       h:`${esc(ad(soon))}<br><em>${m} dk sonra</em> acıkacak`,d:`Saat <b>${soon[0][1]}</b> maması yaklaşıyor. Kabını hazırlamaya ne dersin?`,a:[["Mamaya git 🥣",go(soon[0][0])]],x:"Tamam 🐾"});}}catch(e){}
@@ -10483,16 +10498,16 @@ function aptRender(){const pn=document.querySelector('[data-fp="today"]');if(!pn
 (function(){const _f=fitRender;fitRender=function(){_f.apply(this,arguments);try{aptRender();}catch(e){console.error(e);}};})();
 /* açılış bildirimleri: kullanıcı randevusu + çocuk doktor/aşı */
 (function(){const _c=mfPopCands;mfPopCands=function(){const L=_c.apply(this,arguments);try{const S=mfPopSeen(),T=dkey(),h=new Date().getHours();
-  appts().forEach(a=>{const x=aptDays(a.d);if(x<0||x>1)return;if(x===0&&a.tm){const [hh,mm]=a.tm.split(":").map(Number);if(h*60+new Date().getMinutes()>hh*60+mm+60)return;}
+  appts().forEach(a=>{const x=aptDays(a.d);if(x<0||x>1)return;if(x===0&&a.tm){const [hh,mm]=a.tm.split(":").map(Number);if(h*60+new Date().getMinutes()>=hh*60+mm)return;}
     const Tp=APT.find(z=>z[0]===a.ty)||APT[5];const c={id:`apt:${a.id}:${x}`,p:x===0?92:78,cls:"pp-apt",k:Tp[1]+" Randevun var",dec:"📅",h:`${esc(a.n||Tp[2])}<br><em>${x===0?"bugün":"yarın"}${a.tm?" "+a.tm+"'da":""}</em>`,
       d:`${a.note?esc(a.note)+"<br>":""}Kendine ayırdığın bu zamanı unutma 💚`,a:[["Randevularım",()=>goFit("today")]],x:"Not aldım 💚"};if(!S[c.id])L.push(c);});
-  const K=st.kids;if(K&&K.ev&&K.list){K.ev.forEach(e=>{if(e.ty!=="doktor"&&e.ty!=="asi")return;const x=aptDays(e.d);if(x<0||x>1)return;const kid=K.list.find(k=>k.id===e.kid);if(!kid)return;
+  const K=st.kids;if(K&&K.ev&&K.list){K.ev.forEach(e=>{if(e.ty!=="doktor"&&e.ty!=="asi")return;const x=aptDays(e.d);if(x<0||x>1)return;const kid=K.list.find(k=>k.id===e.kid);if(!kid)return;if(x===0&&e.tm){const [hh,mm]=e.tm.split(":").map(Number);if(h*60+new Date().getMinutes()>=hh*60+mm)return;}
     const c={id:`kev:${e.kid}:${e.d}:${e.ty}:${x}`,p:x===0?90:74,cls:"pp-bag",k:e.ty==="asi"?"💉 Aşı günü":"🩺 Doktor / hastane",dec:e.ty==="asi"?"💉":"🩺",h:`${esc(kid.name)}<br><em>${x===0?"bugün":"yarın"}${e.tm?" "+e.tm+"'da":""}</em>${e.ty==="asi"?" aşı oluyor":" doktorda"}`,
       d:`${e.t?esc(e.t)+"<br>":""}${e.ty==="asi"?"Kimliğini yanına al; aşı geçmişine e-Nabız'dan bakabilirsin.":"Kimliğini yanına almayı unutma."}`,a:[["Takvime git",()=>{ktab="cal";document.getElementById("go-kids").click();}]],x:"Not aldım 💙"};if(!S[c.id])L.push(c);});}
   L.sort((a,b)=>b.p-a.p);}catch(e){}return L;};})();
 SND_OF["pp-apt"]="vax";
 /* bugün senin için: yaklaşan randevu */
-(function(){const _t=TC_MORE;TC_MORE=function(C,h){_t(C,h);try{const a=appts().filter(a=>{const x=aptDays(a.d);return x===0||x===1;}).sort((a,b)=>(a.d+(a.tm||""))<(b.d+(b.tm||""))?-1:1)[0];if(!a)return;const Tp=APT.find(z=>z[0]===a.ty)||APT[5],x=aptDays(a.d);
+(function(){const _t=TC_MORE;TC_MORE=function(C,h){_t(C,h);try{const a=appts().filter(a=>{const x=aptDays(a.d);if(x===0&&a.tm){const [hh,mm]=a.tm.split(":").map(Number),n=new Date();if(n.getHours()*60+n.getMinutes()>=hh*60+mm)return false;}return x===0||x===1;}).sort((a,b)=>(a.d+(a.tm||""))<(b.d+(b.tm||""))?-1:1)[0];if(!a)return;const Tp=APT.find(z=>z[0]===a.ty)||APT[5],x=aptDays(a.d);
   C.unshift({t:"mint",e:"Randevun",h:`${x===0?"Bugün":"Yarın"}${a.tm?" "+a.tm:""}: ${a.n||Tp[2]}`,d:a.note||"Kendine ayırdığın zamanı unutma.",cta:"Randevularım",ic:Tp[1],go:()=>goFit("today")});}catch(e){}};})();
 
 /* v0.13.7 Çocuklarım renk+tek satır */
@@ -10712,6 +10727,50 @@ function ktNearB(e,big){const N=ktNear(e);if(!N)return "";return `<span class="k
   if(E.length){const e=E[0],x=ktDays(e[2]),id="ktn:"+e[0];if(!S[id]&&mfPopOk({p:62}))L.push({id,p:62,cls:"pp-kt",k:"📍 Şehrinde imza günü",leaves:1,
    h:`${esc(e[1].join(" & "))}<br><em>${x===0?"bugün":x===1?"yarın":"2 gün sonra"}</em> senin şehrinde`,d:`<b>${e[3]}</b> · ${esc(e[4])}<br>Takip etmiyorsun ama yakınında; belki uğramak istersin 📚`,
    a:[["Yol tarifi",null,`https://www.google.com/maps/search/${encodeURIComponent(e[4].split("·").pop().trim()+" "+e[5])}`],["Yazarı takip et 🔔",()=>{try{const K=kt();if(!K.au.includes(e[1][0]))K.au.push(e[1][0]);save();}catch(z){}}]],x:"Tamam 💛"});L.sort((a,b)=>b.p-a.p);}}}}catch(z){}return L;};})();
+
+/* v0.16.1 Telve dedektörü: fincanın içini bul, sadece telve renkli yerleri işaretle */
+async function falTelve(src){const im=await new Promise((r,j)=>{const i=new Image();i.onload=()=>r(i);i.onerror=j;i.src=src;});
+ const N=96,cv=document.createElement("canvas");cv.width=cv.height=N;const g=cv.getContext("2d");const sq=Math.min(im.width,im.height);g.drawImage(im,(im.width-sq)/2,(im.height-sq)/2,sq,sq,0,0,N,N);
+ const D=g.getImageData(0,0,N,N).data,L=new Float32Array(N*N),SA=new Float32Array(N*N),WM=new Float32Array(N*N),GR=new Uint8Array(N*N);
+ for(let i=0;i<N*N;i++){const r=D[i*4],gg=D[i*4+1],b=D[i*4+2],mx=Math.max(r,gg,b),mn=Math.min(r,gg,b);L[i]=.299*r+.587*gg+.114*b;SA[i]=mx?(mx-mn)/mx:0;WM[i]=r-b;GR[i]=(gg>r*1.2&&gg>b*1.15&&mx-mn>35)?1:0;}
+ /* porselen: parlak ve renksiz; merkeze yakın */
+ const Ls=[];for(let y=0;y<N;y++)for(let x=0;x<N;x++){const dx=x-N/2,dy=y-N/2;if(dx*dx+dy*dy<(N*.46)**2)Ls.push(L[y*N+x]);}Ls.sort((a,b)=>a-b);const p70=Ls[Math.floor(Ls.length*.7)]||200;
+ let sx=0,sy=0,n=0;for(let y=0;y<N;y++)for(let x=0;x<N;x++){const i=y*N+x,dx=x-N/2,dy=y-N/2;if(dx*dx+dy*dy>(N*.49)**2)continue;if(L[i]>=Math.min(p70,235)*.92&&SA[i]<.28){sx+=x;sy+=y;n++;}}
+ let cx=N/2,cy=N/2,R=N*.42;if(n>N*N*.06){cx=sx/n;cy=sy/n;/* yarıçap: porselen + içindeki telve kapsansın */let far=[];for(let y=0;y<N;y++)for(let x=0;x<N;x++){const i=y*N+x;if(L[i]>=Math.min(p70,235)*.92&&SA[i]<.28)far.push(Math.hypot(x-cx,y-cy));}far.sort((a,b)=>a-b);R=Math.min(N*.5,Math.max(N*.2,far[Math.floor(far.length*.95)]||R));}
+ const por=[];for(let y=0;y<N;y++)for(let x=0;x<N;x++){const i=y*N+x;if(Math.hypot(x-cx,y-cy)<R&&L[i]>=Math.min(p70,235)*.92&&SA[i]<.28)por.push(L[i]);}por.sort((a,b)=>a-b);const Lp=por.length?por[Math.floor(por.length/2)]:p70;
+ /* telve: porselene göre belirgin koyu, sıcak (kahverengi) ya da çok koyu; fincan çemberinin içinde */
+ const LM=new Float32Array(N*N);{const W=4;for(let y=0;y<N;y++)for(let x=0;x<N;x++){let a=0,c=0;for(let v=Math.max(0,y-W);v<=Math.min(N-1,y+W);v++)for(let u=Math.max(0,x-W);u<=Math.min(N-1,x+W);u++){a+=L[v*N+u];c++;}LM[y*N+x]=a/c;}}
+ const M=new Uint8Array(N*N);let inside=0,tv=0;for(let y=0;y<N;y++)for(let x=0;x<N;x++){const i=y*N+x,rr=Math.hypot(x-cx,y-cy);if(rr>R*.93)continue;inside++;
+  const brown=L[i]<Lp*.82&&WM[i]>10&&SA[i]>.22,loc=L[i]<LM[i]*.74&&SA[i]>.12,vdark=L[i]<Math.min(60,Lp*.4)&&SA[i]>.08;if(!GR[i]&&(brown||loc||vdark)){M[i]=1;tv++;}}
+ /* bağlı bileşenler */const lab=new Int32Array(N*N).fill(-1),comps=[];for(let i=0;i<N*N;i++){if(!M[i]||lab[i]>=0)continue;const q=[i];lab[i]=comps.length;let a=0,ax=0,ay=0;while(q.length){const j=q.pop();a++;ax+=j%N;ay+=(j/N)|0;
+   const x=j%N,y=(j/N)|0;[[1,0],[-1,0],[0,1],[0,-1]].forEach(([u,v])=>{const X=x+u,Y=y+v;if(X<0||Y<0||X>=N||Y>=N)return;const k=Y*N+X;if(M[k]&&lab[k]<0){lab[k]=comps.length;q.push(k);}});}{const id=comps.length,mx=ax/a,my=ay/a;let bj=-1,bd=1e9;for(let k=0;k<N*N;k++){if(lab[k]!==id)continue;const d=(k%N-mx)**2+(((k/N)|0)-my)**2;if(d<bd){bd=d;bj=k;}}comps.push([a,bj%N,(bj/N)|0]);}}
+ comps.sort((a,b)=>b[0]-a[0]);const spots=[],cmin=Math.max(8,(comps[0]?comps[0][0]:0)*.12);comps.forEach(c=>{if(c[0]<cmin||spots.length>=6)return;if(spots.every(s=>Math.hypot(s[0]-c[1],s[1]-c[2])>N*.11))spots.push([c[1],c[2]]);});
+ /* büyük lekelerin içinden ek noktalar */if(spots.length<4){const pts=[];for(let i=0;i<N*N;i++)if(M[i]&&comps[lab[i]]&&false||M[i]&&(()=>{let c=0;for(let u=-2;u<=2;u++)for(let v=-2;v<=2;v++){const k=i+v*N+u;if(k>=0&&k<N*N&&M[k])c++;}return c>=14;})())pts.push([i%N,(i/N)|0]);for(let k=0;k<pts.length&&spots.length<5;k+=Math.max(1,Math.floor(pts.length/40))){const p=pts[k];if(spots.every(s=>Math.hypot(s[0]-p[0],s[1]-p[1])>N*.13))spots.push(p);}}
+ /* parlayan telve maskesi */const mc=document.createElement("canvas");mc.width=mc.height=N;const mg=mc.getContext("2d"),MD=mg.createImageData(N,N);for(let i=0;i<N*N;i++)if(M[i]){MD.data[i*4]=255;MD.data[i*4+1]=205;MD.data[i*4+2]=110;MD.data[i*4+3]=200;}mg.putImageData(MD,0,0);
+ const f=inside?tv/inside:0;const P=v=>Math.round((v+.5)/N*1000)/10;
+ return {f,spots:spots.map(([x,y])=>[P(x),P(y)]),cc:[P(cx),P(cy)],cr:Math.round(R/N*1000)/10,mask:mc.toDataURL("image/png")};}
+(function(){const _p=falPhoto;falPhoto=async function(file){const r=await _p.apply(this,arguments);try{const T=await falTelve(r.thumb);r.cc=T.cc;r.cr=T.cr;r.mask=T.mask;r.tf=T.f;
+  if(T.f<.004){r.ok=false;r.why=r.why||"Telve göremedim 🤔 Fincanı kapatıp biraz bekledin mi? İçinde kahve izi olmalı.";r.spots=[];}
+  else if(T.f>.9){r.ok=false;r.why=r.why||"Bu fotoğraf çok koyu; fincanın içi tam görünmüyor. Işıkta bir daha çeker misin? ☕";}
+  else r.spots=T.spots;}catch(e){console.error(e);}return r;};})();
+
+/* v0.16.1 Burç: başka burçları da oku (atmosfer korunur) */
+let zOther=null;
+(function(){const _z=zodRender;const _zz=zodiac;
+ zodRender=function(){const P=st.prof||{};const mine=_zz(P.dob);
+  if(zOther&&mine&&zOther!==mine[0]){const Z=ZOD.find(x=>x[0]===zOther);if(Z){const dd=new Date(2001,Z[2][0]-1,Z[2][1]+4);const iso=`2001-${String(dd.getMonth()+1).padStart(2,"0")}-${String(dd.getDate()).padStart(2,"0")}`;
+   const zs=zWho;zWho="me";zodiac=function(d){return d===P.dob?_zz(iso):_zz(d);};try{_z.apply(this,arguments);}finally{zodiac=_zz;zWho=zs;}}}
+  else{zOther=null;_z.apply(this,arguments);}
+  try{const O=document.getElementById("zsh");const box=O.querySelector(".zs-in");if(!box||!mine)return;
+   if(zOther){box.querySelectorAll(".zs-who").forEach(e=>e.remove());const hero=box.querySelector(".zs-hero");const Z=ZOD.find(x=>x[0]===zOther);
+    if(hero)hero.insertAdjacentHTML("afterend",`<div class="zs-ob"><span>${Z[1]}︎ ${Z[0]} burcunu okuyorsun</span><button type="button" id="zs-mine">${mine[1]}︎ Kendi burcuma dön</button></div>`);
+    const h2=box.querySelector(".zs-hero h2");box.querySelectorAll(".obsec h4").forEach(h=>{if(/Bugün senin için/.test(h.textContent))h.innerHTML=h.innerHTML.replace("Bugün senin için",`Bugün ${Z[0]} için`);});
+    const bm=document.getElementById("zs-mine");if(bm)bm.onclick=()=>{zOther=null;zodRender();document.getElementById("zsh").scrollTop=0;};}
+   const fine=box.querySelector(".zs-fine");const cur=zOther||mine[0];
+   const sec=`<section class="obsec zs-other"><h4><i>✦</i>Başka bir burca bak<small>dokun, oku</small></h4><div class="zs-og">${ZOD.slice(3).concat(ZOD.slice(0,3)).map(z=>`<button type="button" data-zo="${z[0]}" class="${z[0]===mine[0]?"me":""}" aria-pressed="${z[0]===cur}"><span>${z[1]}︎</span><small>${z[0]}</small></button>`).join("")}</div></section>`;
+   if(fine)fine.insertAdjacentHTML("beforebegin",sec);else box.insertAdjacentHTML("beforeend",sec);
+   box.querySelectorAll("[data-zo]").forEach(b=>b.onclick=()=>{const v=b.dataset.zo;zOther=v===mine[0]?null:v;zodRender();const O2=document.getElementById("zsh");O2.scrollTo({top:0,behavior:"smooth"});});}catch(e){console.error(e);}};
+ const _c=zodClose;zodClose=function(){zOther=null;return _c.apply(this,arguments);};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
