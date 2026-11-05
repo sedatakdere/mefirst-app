@@ -8983,7 +8983,7 @@ function petExtra(){const P=petData(),nm=P.name.trim()||"Dostun",k=P.kind,mood=p
   /* mama kabı */
   const fed=P.fed.length,tot=P.feeds.length;const nx=P.feeds.slice().sort().find(t=>!P.fed.includes(t));const all=tot&&!nx;
   const kib=Array.from({length:Math.round(10*(tot?fed/tot:0))},(_,i)=>`<circle cx="${30+((i*13)%60)}" cy="${48-Math.floor(i/5)*6-(i%2)*2}" r="5" fill="${["#C98A4B","#B5733A","#D9A066"][i%3]}"/>`).join("");
-  document.getElementById("pbowl").innerHTML=`<svg viewBox="0 0 120 70" class="bowl" aria-hidden="true">${kib}<path d="M14 44h92l-8 18a8 8 0 0 1-7 5H29a8 8 0 0 1-7-5z" fill="${k==="kopek"?"#E2688A":"#8FCBEF"}"/><path d="M14 44h92" stroke="#fff" stroke-width="3" opacity=".6"/><text x="60" y="61" font-size="10" font-weight="900" text-anchor="middle" fill="#fff" letter-spacing="1">${esc(nm.toLocaleUpperCase("tr-TR").slice(0,10))}</text></svg>
+  document.getElementById("pbowl").innerHTML=`<svg viewBox="0 0 120 70" class="bowl" aria-hidden="true">${kib}<path d="M14 44h92l-8 18a8 8 0 0 1-7 5H29a8 8 0 0 1-7-5z" fill="${k==="kopek"?"#E2688A":"#8FCBEF"}"/><path d="M14 44h92" stroke="#fff" stroke-width="3" opacity=".6"/><text x="60" y="61" font-size="10" font-weight="900" text-anchor="middle" fill="${k==="kopek"?"#fff":"#1F5F86"}" letter-spacing="1">${esc(nm.toLocaleUpperCase("tr-TR").slice(0,10))}</text></svg>
     <div class="pb-i"><b>${!tot?"Mama saati ekle":all?"Bugünlük karnı tok 🎉":`${fed}/${tot} öğün verildi`}</b>${nx?`<button type="button" class="pb-go" id="pb-go">Mamayı verdim <small>${nx}</small></button>`:""}</div>`;
   const g=document.getElementById("pb-go");if(g&&!feedOpen(nx)){g.disabled=true;g.classList.add("lock");g.innerHTML=`⏳ Sıradaki mama <small>${nx}</small>`;}if(g)g.onclick=()=>{if(!feedOpen(nx))return;P.fed.push(nx);save();petRender();const b=document.querySelector(".bowl");if(b){b.classList.add("fill");}};
   if(all&&petWasAll===false)mfConfetti(`${nm} doydu! 🐾`,PT_C,PT_BG);petWasAll=!!all;
@@ -10943,6 +10943,24 @@ function zaScroll(){const O=document.getElementById("zsh"),e=O&&O.querySelector(
 .inst button{font:inherit;cursor:pointer;border:0;border-radius:99px}
 #inst-go{padding:8px 14px;font-weight:700;background:linear-gradient(135deg,#E2689A,#C98BE6);color:#fff}
 .inst-x{width:30px;height:30px;background:var(--bg);color:var(--ink)}
+/* v0.16.6 karanlık mod: okunmayan yazılar */
+html[data-mf="dusk"] .pet .feed{background:rgba(255,255,255,.07)!important;border-color:rgba(255,255,255,.16)!important}
+html[data-mf="dusk"] .pet .feed.done{background:rgba(127,211,176,.14)!important;border-color:rgba(127,211,176,.45)!important}
+html[data-mf="dusk"] .pet .feed.late{background:rgba(242,154,110,.14)!important;border-color:rgba(242,154,110,.55)!important}
+html[data-mf="dusk"] .pet .feed .ftime{color:#FFF4EC!important}
+html[data-mf="dusk"] .pet .feed .fst{color:rgba(255,240,232,.72)!important}
+html[data-mf="dusk"] .pet .feed.done .fst{color:#9FE3C6!important}
+html[data-mf="dusk"] .pet .feed.late .fst{color:#FFB894!important}
+html[data-mf="dusk"] .pet .feed .fdel{color:#FFE6DA!important}
+html[data-mf="dusk"] .pet .feed .fck{border-color:#E9C8B4!important}
+html[data-mf="dusk"] .pet .feed.done .fck{background:#5FC39E!important;border-color:#5FC39E!important}
+html[data-mf="dusk"] .pet #pet-next{color:#E9C8B4!important}
+html[data-mf="dusk"] .pid-h{color:#F2C38A!important}
+html[data-mf="dusk"] .pid-cp,html[data-mf="dusk"] .pid-add{color:#F6B57A!important}
+html[data-mf="dusk"] body.mf-on .rit .prac strong{color:rgba(255,244,248,.9)!important}
+html[data-mf="dusk"] .kf2>.zs-x{color:#3A2A30!important}
+html[data-mf="dusk"] .sky-top .wm .wm-me{color:#C94F86}
+html[data-mf="dusk"] .sky-aksam .sky-top .wm .wm-me,html[data-mf="dusk"] .sky-gece .sky-top .wm .wm-me{color:#FFC2D8}
 </style>
 <script>
 const MF_CFG={ver:"0.9",wa:"905326608118",mail:"destek@mefirst.app"};
