@@ -11155,7 +11155,7 @@ function bkKey(x){return "bk_"+((x.t||"")+"|"+(x.a||"")).toLocaleLowerCase("tr-T
 let bkI=-1;
 function bkClose(fromPop){const O=document.getElementById("bkp");if(!O)return;O.classList.remove("on");document.body.style.overflow="";setTimeout(()=>O.remove(),380);if(!fromPop)try{if(history.state&&history.state.bkp)history.back();}catch(e){}}
 window.bkClose=bkClose;
-function bkPol(x,c,isNew){const ph=PH[bkKey(x)];const fe=(x.fe||[]).slice(0,3).join("");const hs=x.rt?"♥".repeat(x.rt):"";
+function bkPol(x,c,isNew){const ph=PH.me;const fe=(x.fe||[]).slice(0,3).join("");const hs=x.rt?"♥".repeat(x.rt):"";
  return `<div class="pol${isNew?" drop":""}" style="--c1:${c[0]};--c2:${c[1]}"><span class="clip"></span><button type="button" class="pdel" id="bk-pdel" aria-label="Yorumu kaldır">✕</button>
   <div class="img">${ph?`<img src="${ph}" alt="">`:`<div class="cv"><b>${esc(x.t)}</b><i>${esc(x.a||"")}</i></div>`}${fe?`<span class="stk no-mi">${fe}</span>`:""}</div>
   <div class="txt">${esc(x.cm)}</div><div class="meta"><span>${esc((st.prof&&st.prof.name)||"Ben")} · ${new Date((x.cmd||dkey())+"T00:00").toLocaleDateString("tr-TR",{day:"numeric",month:"short"})}</span><span class="hs">${hs}</span></div></div>`;}
@@ -11178,7 +11178,7 @@ function bookOpen(i,anim){const L=klib(),x=L[i];if(!x)return;bkI=i;const c=bkCol
    <h4 style="margin-top:14px">Sana ne hissettirdi?</h4><div class="bk-fe">${BK_FE.map(([e,l])=>`<button type="button" data-fe="${e}" aria-pressed="${(x.fe||[]).includes(e)}"><span class="no-mi">${e}</span> ${l}</button>`).join("")}</div></section>
   <section class="bkp-sec"><h4>Okur ipi <small>polaroidini as 🧷</small></h4>
    ${x.cm?"":`<textarea class="bk-ta" id="bk-ta" maxlength="160" placeholder="Bu kitap için bir cümle… ör. 'Raif Efendi'yi hiç unutmayacağım.'">${esc(x.cmdraft||"")}</textarea>
-   <div class="bk-row"><label class="bk-ph" for="bk-phf"><span class="no-mi">📷</span> ${PH[bkKey(x)]?"Fotoğrafı değiştir":"Fotoğraf ekle"}</label><input type="file" accept="image/*" id="bk-phf" hidden><button type="button" class="bk-hang" id="bk-hang"><span class="no-mi">🧷</span> İpe as</button></div>`}
+   <div class="bk-row"><button type="button" class="bk-hang" id="bk-hang"><span class="no-mi">🧷</span> ${PH.me?"Fotoğrafımla ipe as":"İpe as"}</button></div>`}
    <div class="bk-line" id="bk-line">${x.cm?bkPol(x,c,anim==="hang"):""}${[0,1].map(()=>`<div class="pol empty"><span class="clip"></span><div class="img no-mi">👥</div><div class="txt">Diğer okurların polaroidleri buraya asılacak</div></div>`).join("")}</div>
    <p class="bk-soon">🧷 Okur topluluğu çok yakında: bu kitabı okuyan herkesin polaroidi aynı ipe asılacak.</p>
    ${x.cm?`<button type="button" class="bk-share" id="bk-share">Polaroidimi paylaş ↗</button>`:""}</section>
@@ -11207,10 +11207,10 @@ function bookOpen(i,anim){const L=klib(),x=L[i];if(!x)return;bkI=i;const c=bkCol
  const qa=g("bk-qadd");if(qa)qa.onclick=()=>{const t=g("bk-qt").value.trim();if(!t){g("bk-qt").focus();return;}x.q=x.q||[];x.q.push({t,p:g("bk-qp").value.trim()});save();re();};
  O.querySelectorAll("[data-qx]").forEach(b=>b.onclick=()=>{x.q.splice(+b.dataset.qx,1);save();re();});}
 async function bkShare(x,c){try{await document.fonts.ready;}catch(e){}const W=1080,H=1350,cv=document.createElement("canvas");cv.width=W;cv.height=H;const g=cv.getContext("2d");
- let gr=g.createRadialGradient(W/2,-100,50,W/2,H*.4,H);gr.addColorStop(0,"#7A4A30");gr.addColorStop(.5,"#3A2118");gr.addColorStop(1,"#1E120E");g.fillStyle=gr;g.fillRect(0,0,W,H);
- g.strokeStyle="#C9A57A";g.lineWidth=5;g.beginPath();g.moveTo(0,190);g.quadraticCurveTo(W/2,240,W,190);g.stroke();
+ let gr=g.createRadialGradient(W/2,-100,50,W/2,H*.4,H);gr.addColorStop(0,"#F6C98E");gr.addColorStop(.45,"#FBEBD6");gr.addColorStop(1,"#F2D9BC");g.fillStyle=gr;g.fillRect(0,0,W,H);
+ g.strokeStyle="#A8743F";g.lineWidth=5;g.beginPath();g.moveTo(0,190);g.quadraticCurveTo(W/2,240,W,190);g.stroke();
  g.save();g.translate(W/2,250);g.rotate(-.045);const pw=660,ph=900;g.shadowColor="rgba(0,0,0,.6)";g.shadowBlur=50;g.shadowOffsetY=30;g.fillStyle="#FBF7EE";g.fillRect(-pw/2,0,pw,ph);g.shadowColor="transparent";
- const ix=-pw/2+36,iy=36,iw=pw-72;const img=PH[bkKey(x)];
+ const ix=-pw/2+36,iy=36,iw=pw-72;const img=PH.me;
  if(img){const im=await new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src=img;});if(im){const s=Math.min(im.width,im.height);g.drawImage(im,(im.width-s)/2,(im.height-s)/2,s,s,ix,iy,iw,iw);}}
  else{const gg=g.createLinearGradient(ix,iy,ix+iw,iy+iw);gg.addColorStop(0,c[0]);gg.addColorStop(1,c[1]);g.fillStyle=gg;g.fillRect(ix,iy,iw,iw);g.fillStyle="#FFE7B0";g.textAlign="center";g.font='64px "DM Serif Display",serif';
   const ws=x.t.split(" ");let ln=[],cur="";ws.forEach(w=>{const t=cur?cur+" "+w:w;if(g.measureText(t).width>iw-80){ln.push(cur);cur=w;}else cur=t;});ln.push(cur);ln.forEach((l,k)=>g.fillText(l,0,iy+iw/2-(ln.length-1)*38+k*76));g.font='800 26px "Nunito Sans",sans-serif';g.fillText((x.a||"").toLocaleUpperCase("tr-TR"),0,iy+iw/2+ln.length*40+30);}
@@ -11218,7 +11218,7 @@ async function bkShare(x,c){try{await document.fonts.ready;}catch(e){}const W=10
  g.fillStyle="#2E2420";g.textAlign="left";g.font='54px "Allura",cursive';const ws2=("“"+x.cm+"”").split(" ");let l2=[],c2="";ws2.forEach(w=>{const t=c2?c2+" "+w:w;if(g.measureText(t).width>iw){l2.push(c2);c2=w;}else c2=t;});l2.push(c2);l2.slice(0,3).forEach((l,k)=>g.fillText(l,ix,iy+iw+64+k*52));
  g.font='800 24px "Nunito Sans",sans-serif';g.fillStyle="#8A6E5E";g.fillText(x.t+" · "+(x.a||""),ix,ph-40);g.textAlign="right";g.fillStyle="#E2465E";g.fillText(x.rt?"♥".repeat(x.rt):"",ix+iw,ph-40);
  g.fillStyle="#C08A55";g.fillRect(-14,-50,28,68);g.restore();
- g.fillStyle="#FBEEDC";g.textAlign="center";g.font='600 34px "Nunito Sans",sans-serif';g.fillText("Me First · Kitap köşem",W/2,H-80);g.font='500 28px "Nunito Sans",sans-serif';g.fillStyle="rgba(251,238,220,.6)";g.fillText("mefirst.app",W/2,H-38);
+ g.fillStyle="#7A3A1E";g.textAlign="center";g.font='600 34px "Nunito Sans",sans-serif';g.fillText("Me First · Kitap köşem",W/2,H-80);g.font='500 28px "Nunito Sans",sans-serif';g.fillStyle="rgba(122,58,30,.6)";g.fillText("mefirst.app",W/2,H-38);
  cv.toBlob(async b=>{if(!b)return;const f=new File([b],"polaroid.png",{type:"image/png"});try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],text:`"${x.t}" · ${x.cm} 📚 #MeFirst`});return;}}catch(e){if(e&&e.name==="AbortError")return;}
   const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="polaroid.png";document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1500);},"image/png");}
 const libBookOpen0=libBookOpen;libBookOpen=function(i){bookOpen(i);};
