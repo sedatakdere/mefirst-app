@@ -5474,6 +5474,26 @@ html[data-mf="dusk"] .bk-info .bi-row b{color:#FFF1DC}
 .bk-swipe i{font-style:normal;animation:bkSw 1.6s ease-in-out infinite}
 @keyframes bkSw{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
 .ktb .ktc,.ktb .ktb-i>strong,.ktfal-a .ktc{cursor:pointer}
+
+/* v0.17.4 Okuma defterim */
+.kdf{margin-top:14px}
+.kdf .kdf-seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:2px 0 12px}
+.kdf .kdf-seg button{font:inherit;font-size:13px;font-weight:800;height:38px;border-radius:13px;border:1px solid rgba(201,130,43,.25);background:#fff;color:#7A3A1E;cursor:pointer}
+.kdf .kdf-seg button[aria-pressed="true"]{background:linear-gradient(135deg,#E9A55A,#A8492A);color:#fff;border-color:transparent}
+.kdf .kdf-line{position:relative;display:flex;gap:10px;overflow-x:auto;padding:24px 2px 6px;scrollbar-width:none}
+.kdf .kdf-line::-webkit-scrollbar{display:none}
+.kdf .kdf-line::before{content:"";position:absolute;left:0;top:13px;height:2px;width:var(--lw,100%);background:linear-gradient(90deg,#A8743F,#C9A57A 50%,#A8743F);border-radius:2px}
+.kdf .pol{cursor:pointer}
+.kdf .pol .bt{display:block;font-size:8px;font-weight:800;color:#A8492A;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kdf .kq{display:block;width:100%;text-align:left;font:inherit;cursor:pointer;border:0;background:#FFFDF6;color:#3A2A22;padding:12px 14px 10px;margin-bottom:9px;border-radius:2px;box-shadow:0 8px 16px -12px rgba(120,60,30,.6);font-family:"DM Serif Display",serif;font-size:15.5px;line-height:1.4;transform:rotate(var(--r,-.6deg));position:relative}
+.kdf .kq:nth-child(2n){--r:.7deg}
+.kdf .kq::before{content:"";position:absolute;left:50%;top:-6px;width:54px;height:14px;margin-left:-27px;background:rgba(233,165,90,.35);transform:rotate(-3deg)}
+.kdf .kq small{display:block;font-family:"Nunito Sans",sans-serif;font-size:11px;font-weight:800;color:#A8492A;margin-top:5px}
+.kdf .kdf-e{font-size:13px;color:#9A6A4A;text-align:center;padding:10px 6px;line-height:1.45}
+.kdf .kdf-more{display:block;margin:4px auto 0;font:inherit;font-size:12.5px;font-weight:800;border:0;background:none;color:#A8492A;cursor:pointer}
+.bk-flash{animation:bkFl 1.8s ease 2}
+@keyframes bkFl{0%,100%{box-shadow:0 0 0 0 rgba(233,165,90,0)}40%{box-shadow:0 0 0 6px rgba(233,165,90,.55)}}
+html[data-mf="dusk"] .kdf .kdf-seg button{background:rgba(255,255,255,.06);color:#FBEEDC}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -11200,7 +11220,7 @@ function bookOpen(i,anim,X){const L=klib(),x=X||L[i];if(!x)return;bkI=X?bkKey(x)
    <div class="bk-line" id="bk-line">${x.cm?bkPol(x,c,anim==="hang"):""}${[0,1,2,3].map(()=>`<div class="pol empty"><span class="clip"></span><div class="img no-mi">👥</div><div class="txt">Diğer okurların polaroidleri buraya</div></div>`).join("")}</div><div class="bk-swipe">kaydır, diğerlerini gör <i>→</i></div>
    <p class="bk-soon">🧷 Okur topluluğu çok yakında: bu kitabı okuyan herkesin polaroidi aynı ipe asılacak.</p>
    ${x.cm?`<button type="button" class="bk-share" id="bk-share">Polaroidimi paylaş ↗</button>`:""}</section>
-  <section class="bkp-sec"><h4>Altını çizdiklerim <small>${Q.length||""}</small></h4><div class="bk-qs">${Q.map((q,k)=>`<div class="bk-q">“${esc(q.t)}”<small>${q.p?"s. "+esc(q.p)+" · ":""}${esc(x.t)}</small><button type="button" data-qx="${k}" aria-label="Sil">✕</button></div>`).join("")}</div>
+  <section class="bkp-sec"><h4>Altını çizdiklerim <small>${Q.length||""}</small></h4><div class="bk-qs">${Q.map((q,k)=>`<div class="bk-q" data-qi="${k}">“${esc(q.t)}”<small>${q.p?"s. "+esc(q.p)+" · ":""}${esc(x.t)}</small><button type="button" data-qx="${k}" aria-label="Sil">✕</button></div>`).join("")}</div>
    <div class="bk-qa"><input id="bk-qt" type="text" maxlength="220" placeholder="Bir cümle yaz…"><input id="bk-qp" class="pgn" type="text" inputmode="numeric" maxlength="4" placeholder="Sayfa"><button type="button" id="bk-qadd">Ekle</button></div></section>
   ${(other.length||evs.length)?`<section class="bkp-sec"><h4>${esc(x.a||"Yazar")} köşesi</h4>${other.length?`<div class="bk-au">${other.map(b=>{const cc=bkCol(b[0]);return `<div class="mini" style="--c1:${cc[0]};--c2:${cc[1]}"><b>${esc(b[0])}</b><small>${esc(b[3]||"")}</small></div>`;}).join("")}</div>`:""}
    ${evs.map(e=>`<div class="bk-ev"><span class="no-mi">✍️</span><span><b>${esc(e[1].join(" & "))}</b> imza gününde · ${e[3]} · ${esc(e[5])} ${typeof ktNearB==="function"?ktNearB(e):""}</span></div>`).join("")}</section>`:""}
@@ -11270,6 +11290,29 @@ function bookOpenAny(t,a){if(!t)return;const L=klib(),j=L.findIndex(y=>ktN(y.t)=
  const K=kt();K.bkd=K.bkd||{};const key=bkKey({t,a});const X=K.bkd[key]||(K.bkd[key]={t,a:a||""});bookOpen(-1,null,X);}
 document.addEventListener("click",e=>{const el=e.target;if(!el.closest)return;if(el.closest("button,a,input,label,select,textarea"))return;
  const card=el.closest(".ktb,.ktfal-a");if(!card||card.closest("#bkp"))return;const t=card.querySelector("strong"),a=card.querySelector(".ktau");if(!t)return;e.preventDefault();e.stopPropagation();bookOpenAny(t.textContent.trim(),a?a.textContent.trim():"");},true);
+
+/* v0.17.4 Okuma defterim: tüm polaroid yorumlar ve alıntılar tek yerde, dokun → o kitabın o yerine git */
+let kdfTab="cm",kdfAll=false,bkFocus=null;
+function kdfItems(){const out=[];klib().forEach((x,i)=>{if(x.cm||(x.q&&x.q.length))out.push({x,i});});const K=kt();Object.values(K.bkd||{}).forEach(x=>{if((x.cm||(x.q&&x.q.length))&&!klib().some(y=>ktN(y.t)===ktN(x.t)))out.push({x,i:-1});});return out;}
+function kdfOpen(it,focus){bkFocus=focus;if(it.i>=0)bookOpen(it.i);else bookOpen(-1,null,it.x);}
+function kdfHTML(){const I=kdfItems();const cms=I.filter(o=>o.x.cm).sort((a,b)=>(b.x.cmd||"")<(a.x.cmd||"")?-1:1);const qs=[];I.forEach((o,n)=>(o.x.q||[]).forEach((q,k)=>qs.push({o,q,k})));
+ if(!cms.length&&!qs.length)return "";
+ const cmH=cms.length?`<div class="kdf-line">${cms.map((o,n)=>{const c=bkCol(o.x.t);return bkPol(o.x,c,false).replace('<div class="pol"',`<div class="pol" data-kdc="${n}"`).replace(/<button type="button" class="pdel"[^>]*>✕<\/button>/,"").replace('</div></div>',`</div><span class="bt">${esc(o.x.t)}</span></div>`);}).join("")}</div>`:`<p class="kdf-e">Henüz polaroid asmadın. Bir kitabı açıp yorumunu ipe as 🧷</p>`;
+ const qlist=kdfAll?qs:qs.slice(-4).reverse();
+ const qH=qs.length?qlist.map((z,n)=>`<button type="button" class="kq" data-kdq="${qs.indexOf(z)}">“${esc(z.q.t)}”<small>— ${esc(z.o.x.t)}${z.o.x.a?" · "+esc(z.o.x.a):""}${z.q.p?" · s. "+esc(z.q.p):""}</small></button>`).join("")+(qs.length>4?`<button type="button" class="kdf-more" id="kdf-more">${kdfAll?"Daha az göster":"Tümünü göster ("+qs.length+")"}</button>`:""):`<p class="kdf-e">Henüz altını çizdiğin bir cümle yok. Kitap sayfasında "Altını çizdiklerim"e ekleyebilirsin ✍️</p>`;
+ return `<div class="lcard ktcard kdf" id="kdf"><h3><span class="step no-mi">📒</span>Okuma defterim</h3>
+  <div class="kdf-seg"><button type="button" data-kdt="cm" aria-pressed="${kdfTab==="cm"}">🧷 Yorumlarım · ${cms.length}</button><button type="button" data-kdt="q" aria-pressed="${kdfTab==="q"}">✍️ Alıntılarım · ${qs.length}</button></div>
+  ${kdfTab==="cm"?cmH:qH}</div>`;}
+function kdfBind(){const B=document.getElementById("kdf");if(!B)return;const I=kdfItems();const cms=I.filter(o=>o.x.cm).sort((a,b)=>(b.x.cmd||"")<(a.x.cmd||"")?-1:1);const qs=[];I.forEach(o=>(o.x.q||[]).forEach((q,k)=>qs.push({o,q,k})));
+ B.querySelectorAll("[data-kdt]").forEach(b=>b.onclick=()=>{kdfTab=b.dataset.kdt;kdfRefresh();});
+ B.querySelectorAll("[data-kdc]").forEach(b=>b.onclick=()=>kdfOpen(cms[+b.dataset.kdc],{t:"cm"}));
+ B.querySelectorAll("[data-kdq]").forEach(b=>b.onclick=()=>{const z=qs[+b.dataset.kdq];kdfOpen(z.o,{t:"q",k:z.k});});
+ const m=document.getElementById("kdf-more");if(m)m.onclick=()=>{kdfAll=!kdfAll;kdfRefresh();};}
+function kdfRefresh(){const B=document.getElementById("kdf");if(!B)return;const h=kdfHTML();if(!h){B.remove();return;}B.outerHTML=h;kdfBind();}
+(function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{if(kttab!=="raf")return;const old=document.getElementById("kdf");if(old)old.remove();const h=kdfHTML();if(!h)return;
+  const anc=document.querySelector(".ledger")||document.querySelector(".ktshv");if(anc)anc.insertAdjacentHTML("afterend",h);kdfBind();}catch(e){console.error(e);}};
+ const _b=bookOpen;bookOpen=function(){const r=_b.apply(this,arguments);if(bkFocus){const F=bkFocus;bkFocus=null;setTimeout(()=>{const O=document.getElementById("bkp");if(!O)return;const el=F.t==="cm"?O.querySelector("#bk-line .pol:not(.empty)")||O.querySelector("#bk-line"):O.querySelector(`.bk-q[data-qi="${F.k}"]`);if(el){el.scrollIntoView({behavior:"smooth",block:"center"});el.classList.add("bk-flash");setTimeout(()=>el.classList.remove("bk-flash"),3800);}},520);}return r;};
+ const _c=bkClose;bkClose=function(){const r=_c.apply(this,arguments);setTimeout(()=>{try{if(kttab==="raf"&&document.getElementById("kdf")!==null||kttab==="raf")kitapRender();}catch(e){}},400);return r;};window.bkClose=bkClose;})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
