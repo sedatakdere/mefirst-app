@@ -11265,24 +11265,31 @@ const libBookOpen0=libBookOpen;libBookOpen=function(i){bookOpen(i);};
 
 /* v0.17.1 kitap bilgisi: Google Books (önbellekli) + yerel katalog */
 function bkInfoAll(){try{return JSON.parse(localStorage.getItem("mf-bkinfo")||"{}");}catch(e){return {};}}
-function bkInfoGet(x){const A=bkInfoAll();return A[bkKey(x)]||null;}
+function bkInfoGet(x){const A=bkInfoAll(),r=A[bkKey(x)];if(r&&r.none&&Date.now()-r.at>864e5)return null;return r||null;}
 const _bkPend={};
 function bkInfoFetch(x){const k=bkKey(x);if(_bkPend[k])return _bkPend[k];if(!navigator.onLine)return Promise.resolve(null);
- const q=`intitle:"${x.t}"`+(x.a?`+inauthor:"${x.a}"`:"");
- _bkPend[k]=fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=6&printType=books`).then(r=>r.ok?r.json():null).then(j=>{const it=(j&&j.items||[]).map(i=>i.volumeInfo||{});if(!it.length)return null;
-  const tn=ktN(x.t);const mt=v=>{const q=ktN(v.title||"");return q===tn||q.includes(tn)||tn.includes(q)&&q.length>3;};let v=it.find(v=>ktN(v.title||"")===tn&&v.description)||it.find(v=>mt(v)&&v.description)||it.find(mt);if(!v)return null;
-  const pages=Math.max(...it.filter(w=>ktN(w.title||"")===ktN(v.title||"")).map(w=>w.pageCount||0),v.pageCount||0);
-  const imgv=it.find(w=>w.imageLinks&&ktN(w.title||"")===tn)||v;let img=imgv.imageLinks&&(imgv.imageLinks.thumbnail||imgv.imageLinks.smallThumbnail)||"";img=img.replace("http://","https://").replace("&edge=curl","").replace("zoom=1","zoom=2");
-  const R={d:(v.description||"").replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim(),pg:pages||0,pub:v.publisher||"",yr:(v.publishedDate||"").slice(0,4),cat:(v.categories||[]).slice(0,3),img,at:Date.now()};
-  const A=bkInfoAll();A[k]=R;try{localStorage.setItem("mf-bkinfo",JSON.stringify(A));}catch(e){}return R;}).catch(()=>null).finally(()=>{delete _bkPend[k];});return _bkPend[k];}
-function bkInfoHTML(x){const I=bkInfoGet(x);const kb=KT_BOOKS.find(b=>ktN(b[0])===ktN(x.t));
- const d=(I&&I.d)||(kb&&kb[5])||"";const pub=(I&&I.pub)||(kb&&kb[3])||"",yr=(I&&I.yr)||(kb&&kb[4]||"").slice(0,4),pg=I&&I.pg;
+ const tn=ktN(x.t),an=ktN(x.a||"");const mt=v=>{const q=ktN(v.title||"");return q===tn||(q.includes(tn)&&tn.length>3)||(tn.includes(q)&&q.length>3);};
+ const tmo=(u)=>{const c=window.AbortController?new AbortController():null;const t=setTimeout(()=>c&&c.abort(),9000);return fetch(u,c?{signal:c.signal}:{}).then(r=>r.ok?r.json():null).catch(()=>null).finally(()=>clearTimeout(t));};
+ const gb=q=>tmo(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=10&printType=books`).then(j=>(j&&j.items||[]).map(i=>i.volumeInfo||{}));
+ const pick=it=>{it=it.filter(mt);if(!it.length)return null;const byA=it.filter(v=>!an||(v.authors||[]).some(a=>ktN(a).includes(an.split(" ").pop())));const P=byA.length?byA:it;
+  const v=P.find(v=>v.description&&ktN(v.title||"")===tn)||P.find(v=>v.description)||P[0];const pages=Math.max(0,...P.map(w=>w.pageCount||0));
+  const iv=P.find(w=>w.imageLinks)||{};let img=iv.imageLinks?(iv.imageLinks.thumbnail||iv.imageLinks.smallThumbnail||""):"";img=img.replace("http://","https://").replace("&edge=curl","");
+  return {d:(v.description||"").replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim(),pg:pages,pub:v.publisher||"",yr:(v.publishedDate||"").slice(0,4),cat:(v.categories||[]).slice(0,3),img,src:"Google Books"};};
+ const ol=()=>tmo(`https://openlibrary.org/search.json?title=${encodeURIComponent(x.t)}${x.a?"&author="+encodeURIComponent(x.a):""}&limit=5&fields=title,author_name,number_of_pages_median,first_publish_year,publisher,cover_i,key,subject`).then(j=>{const d=(j&&j.docs||[]).find(v=>mt(v));if(!d)return null;
+  return {d:"",pg:d.number_of_pages_median||0,pub:(d.publisher||[])[0]||"",yr:String(d.first_publish_year||""),cat:[],img:d.cover_i?`https://covers.openlibrary.org/b/id/${d.cover_i}-M.jpg`:"",src:"Open Library"};});
+ _bkPend[k]=(async()=>{let R=null;
+  try{R=pick(await gb(`intitle:${x.t}${x.a?" inauthor:"+x.a:""}`));if(!R||!R.d){const R2=pick(await gb(`${x.t} ${x.a||""}`));if(R2&&(!R||R2.d))R=Object.assign({},R2,R?{pg:R.pg||R2.pg,img:R.img||R2.img}:{});}}catch(e){}
+  if(!R||(!R.pg&&!R.d)){try{const O=await ol();if(O)R=R?Object.assign({},O,{d:R.d||"",cat:R.cat||[]}):O;}catch(e){}}
+  const A=bkInfoAll();A[k]=R?Object.assign(R,{at:Date.now()}):{none:1,at:Date.now()};try{localStorage.setItem("mf-bkinfo",JSON.stringify(A));}catch(e){}return A[k];})().finally(()=>{delete _bkPend[k];});
+ return _bkPend[k];}
+function bkInfoHTML(x){let I=bkInfoGet(x);const kb=KT_BOOKS.find(b=>ktN(b[0])===ktN(x.t));
+ if(I&&I.none)I=null;const d=(I&&I.d)||(kb&&kb[5])||"";const pub=(I&&I.pub)||(kb&&kb[3])||"",yr=(I&&I.yr)||(kb&&kb[4]||"").slice(0,4),pg=I&&I.pg;
  const cats=(I&&I.cat&&I.cat.length?I.cat:(kb?kb[2]:[])).map(c=>({"polisiye":"Polisiye","roman":"Roman","dunya":"Dünya edebiyatı","Fiction":"Roman","Biography & Autobiography":"Biyografi","History":"Tarih","Poetry":"Şiir","Juvenile Fiction":"Çocuk","Self-Help":"Kişisel gelişim","Psychology":"Psikoloji"}[c]||c));
- if(!I&&!kb)return `<h4>Kitap hakkında</h4><p class="bi-ld">${navigator.onLine?"<i></i> Kitabın bilgilerini getiriyorum…":"📶 Kitap bilgisi için internet bağlantısı gerekiyor."}</p>`;
+ if((!I||I.none)&&!kb)return `<h4>Kitap hakkında</h4><p class="bi-ld">${I&&I.none?"📚 Bu kitabın bilgilerini bulamadım. İlk polaroidi sen as, okurlar senden duysun 🧷":navigator.onLine?"<i></i> Kitabın bilgilerini getiriyorum…":"📶 Kitap bilgisi için internet bağlantısı gerekiyor."}</p>`;
  return `<h4>Kitap hakkında</h4>${(pg||pub||yr)?`<div class="bi-row"><div><b>${pg||"—"}</b><small>sayfa</small></div><div><b>${esc(yr||"—")}</b><small>yıl</small></div><div><b style="font-size:${pub.length>12?12:15}px">${esc(pub||"—")}</b><small>yayınevi</small></div></div>`:""}
   ${cats.length?`<div class="bi-cat">${cats.map(c=>`<span>${esc(c)}</span>`).join("")}</div>`:""}
   ${d?`<p class="bi-d" id="bk-desc">${esc(d)}</p>${d.length>260?`<button type="button" class="bi-m" id="bk-more-d">Devamını oku</button>`:""}`:`<p class="bi-d" style="max-height:none">Bu kitabın tanıtım yazısını bulamadım; ilk polaroidi sen as, okurlar senden duysun 🧷</p>`}
-  ${I?`<p class="bi-src">Bilgiler Google Books'tan</p>`:""}`;}
+  ${I&&!I.none?`<p class="bi-src">Kaynak: ${esc(I.src||"Google Books")}</p>`:""}`;}
 function bkZoom(pl){const z=document.createElement("div");z.className="bkz";const c=pl.cloneNode(true);c.classList.remove("drop");z.appendChild(c);document.body.appendChild(z);try{sndPlay("bag");}catch(e){}z.onclick=()=>{z.style.opacity="0";z.style.transition="opacity .2s";setTimeout(()=>z.remove(),200);};}
 
 /* v0.17.3 her yerde kitaba dokun → kitap sayfası */
