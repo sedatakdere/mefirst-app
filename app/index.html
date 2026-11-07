@@ -5579,6 +5579,63 @@ html[data-mf="dusk"] .kdf .kdf-seg button{background:rgba(255,255,255,.06);color
 
 .bk-info .bi-warn{margin:10px 0 0;font-size:12.5px;color:#8A4A2A;background:rgba(201,130,43,.12);border-radius:10px;padding:8px 10px;line-height:1.45}
 .bk-info .bi-warn button{margin-left:4px;border:0;background:#A8492A;color:#fff;font-weight:800;font-size:12px;border-radius:999px;padding:4px 10px}
+
+/* ===== Okurların gündemi + kitap arama ===== */
+#trend-home:empty{display:none}
+.trh{margin:4px 0 18px;border-radius:24px;padding:14px 14px 12px;background:linear-gradient(160deg,#FFF6EA,#FBE6CF);border:1px solid rgba(201,130,43,.25);box-shadow:0 10px 26px rgba(168,73,42,.12);position:relative;overflow:hidden}
+.trh::before{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(233,165,90,.35),transparent 70%)}
+.trh-h{display:flex;align-items:center;gap:8px;margin-bottom:10px;position:relative}
+.trh-h strong{font-size:15.5px;color:#7A3A1E;font-weight:800}.trh-h strong i{font-style:normal}
+.trh-h small{font-size:11px;color:#A8492A;background:rgba(168,73,42,.1);border-radius:999px;padding:2px 8px;font-weight:700}
+.trh-h button{margin-left:auto;border:0;background:#A8492A;color:#fff;font-weight:800;font-size:12px;border-radius:999px;padding:7px 12px;box-shadow:0 4px 10px rgba(168,73,42,.25)}
+.trh-p{display:flex;gap:12px;align-items:center;background:#fff;border-radius:16px;padding:10px;margin-bottom:10px;box-shadow:0 4px 12px rgba(122,58,30,.08);cursor:pointer;position:relative}
+.trh-pol{flex:0 0 66px;background:#fff;padding:5px 5px 14px;box-shadow:0 3px 10px rgba(0,0,0,.18);transform:rotate(-4deg);border-radius:2px;position:relative}
+.trh-pol::before{content:"";position:absolute;top:-6px;left:50%;width:14px;height:10px;margin-left:-7px;background:#C9822B;border-radius:2px;opacity:.85}
+.trh-pol .im{width:56px;height:56px;background:linear-gradient(150deg,var(--c1),var(--c2));display:flex;align-items:center;justify-content:center;overflow:hidden}
+.trh-pol .im img{width:100%;height:100%;object-fit:cover}.trh-pol .im b{color:#fff;font-size:8.5px;text-align:center;padding:3px;line-height:1.15}
+.trh-q{min-width:0;flex:1}
+.trh-q p{margin:0 0 4px;font-family:"Caveat",cursive;font-size:19px;line-height:1.12;color:#3A1E14;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.trh-q small{display:block;font-size:11.5px;color:#8A5A3A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.trh-q small b{color:#7A3A1E}
+.trh-q .st{display:inline-flex;gap:8px;margin-top:4px;font-size:11.5px;font-weight:800;color:#A8492A}
+.trh-tag{position:absolute;top:8px;right:10px;font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#E07A3F,#C9822B);border-radius:999px;padding:2px 8px}
+.trh-row{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 4px;scrollbar-width:none}.trh-row::-webkit-scrollbar{display:none}
+.trh-b{flex:0 0 92px;scroll-snap-align:start;border:0;background:none;padding:0;text-align:left;position:relative;cursor:pointer}
+.trh-b .ktc{width:92px;height:128px;display:flex}
+.trh-b .rk{position:absolute;top:-4px;left:-4px;z-index:2;width:24px;height:24px;border-radius:50%;background:#7A3A1E;color:#FFF1DC;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.trh-b:first-child .rk{background:linear-gradient(135deg,#F0C27A,#C9822B);color:#5C2A12}
+.trh-b strong{display:block;margin-top:6px;font-size:12px;line-height:1.2;color:#3A1E14;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.trh-b small{display:block;font-size:10.5px;color:#A8492A;font-weight:700;margin-top:2px}
+.trh-f{margin:8px 0 0;font-size:11px;color:#8A5A3A;text-align:center}
+html[data-mf="dusk"] .trh{background:linear-gradient(160deg,#3A2418,#2A1A12);border-color:rgba(240,194,122,.2)}
+html[data-mf="dusk"] .trh-h strong{color:#FFE2B8}html[data-mf="dusk"] .trh-b strong{color:#FFF1DC}html[data-mf="dusk"] .trh-p{background:#4A3020}html[data-mf="dusk"] .trh-q p{color:#FFF1DC}
+.ktsr{position:relative;margin:0 0 14px}
+.ktsr-i{display:flex;align-items:center;gap:8px;background:#fff;border-radius:16px;padding:4px 6px 4px 14px;border:1.5px solid rgba(201,130,43,.35);box-shadow:0 6px 16px rgba(122,58,30,.08)}
+.ktsr-i:focus-within{border-color:#A8492A;box-shadow:0 0 0 4px rgba(168,73,42,.12)}
+.ktsr-i span{font-size:16px}
+.ktsr-i input{flex:1;border:0;outline:0;background:none;font:inherit;font-size:15px;padding:10px 0;color:#3A1E14;min-width:0}
+.ktsr-i button{border:0;background:rgba(168,73,42,.1);color:#A8492A;border-radius:50%;width:30px;height:30px;font-size:15px;font-weight:800}
+.ktsr-r{margin-top:8px;background:#fff;border-radius:16px;box-shadow:0 10px 26px rgba(122,58,30,.14);overflow:hidden}
+.ktsr-r:empty{display:none}
+.ksr{display:flex;gap:12px;align-items:center;width:100%;border:0;background:none;text-align:left;padding:10px 12px;border-bottom:1px solid rgba(201,130,43,.15);cursor:pointer}
+.ksr:last-child{border-bottom:0}.ksr:active{background:rgba(201,130,43,.08)}
+.ksr .cv{flex:0 0 40px;height:58px;border-radius:4px;overflow:hidden;background:linear-gradient(150deg,var(--c1),var(--c2));display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.ksr .cv img{width:100%;height:100%;object-fit:cover}.ksr .cv b{color:#fff;font-size:7px;text-align:center;padding:2px;line-height:1.1}
+.ksr .tx{min-width:0;flex:1}.ksr strong{display:block;font-size:14px;color:#3A1E14;line-height:1.25}.ksr small{display:block;font-size:12px;color:#8A5A3A;margin-top:2px}
+.ksr em{display:inline-block;margin-top:4px;font-style:normal;font-size:10.5px;font-weight:800;color:#A8492A;background:rgba(168,73,42,.1);border-radius:999px;padding:2px 8px}
+.ksr em.hot{color:#fff;background:linear-gradient(90deg,#E07A3F,#C9822B)}
+.ksr-m{padding:12px 14px;font-size:13px;color:#8A5A3A}.ksr-m i{display:inline-block;width:12px;height:12px;border:2px solid #C9822B;border-right-color:transparent;border-radius:50%;animation:ksrsp .8s linear infinite;vertical-align:-2px;margin-right:6px}
+@keyframes ksrsp{to{transform:rotate(360deg)}}
+.kttr .ktwhy{color:#A8492A;font-weight:800}
+
+.trh-tag{position:static;display:inline-block;margin-bottom:4px}
+.trc{display:flex;flex-direction:column;justify-content:space-between;width:92px;height:128px;border-radius:4px 10px 10px 4px;padding:22px 8px 9px 12px;background:linear-gradient(155deg,var(--c1),var(--c2));box-shadow:inset 5px 0 0 rgba(0,0,0,.14),0 6px 14px rgba(122,58,30,.22);color:#fff;box-sizing:border-box;overflow:hidden}
+.trc b{font-family:var(--f-display);font-weight:600;font-size:13px;line-height:1.15;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.trc i{font-style:normal;font-size:8.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.trh-b .rk{top:-6px;left:-6px}
+.trh-row{padding:8px 2px 4px 8px;margin-left:-6px}
+
+.trh-b{display:flex;flex-direction:column;align-self:flex-start}
+.trh-b small{margin-top:6px;white-space:nowrap}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -5613,6 +5670,7 @@ html[data-mf="dusk"] .kdf .kdf-seg button{background:rgba(255,255,255,.06);color
     <div class="stories" id="stories" role="list"></div>
     <div class="bn-h bn-h2" id="tc-h"><small>Şimdi</small><h2 class="world-h">Bugün <em>senin için</em></h2></div>
     <div id="todaycard"></div>
+    <div id="trend-home"></div>
     <div class="bn-h"><small>Nereye gidelim?</small><h2 class="world-h">Benim <em>dünyam</em></h2></div><div class="bento" id="bento"></div>
     <button class="feature" id="go-style" type="button">
       <span class="fe">👗</span>
@@ -8791,7 +8849,78 @@ const KT_BOOKS=[
 ["İçimizdeki Çocuk","Doğan Cüceloğlu",["psikoloji","ebeveyn"],"Remzi","","Kendimizi ve çocuklarımızı anlamak için sıcak bir rehber."],
 ["Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli","Adele Faber & Elaine Mazlish",["ebeveyn"],"","","Evde iletişimi değiştiren, uygulaması kolay bir klasik."],
 ["Türklerin Tarihi","İlber Ortaylı",["tarih"],"Timaş","","Ortaylı'nın akıcı anlatımıyla bozkırdan Anadolu'ya."],
-["Üvercinka","Cemal Süreya",["siir","klasik"],"YKY","","Türk şiirinin en sevilen aşk dizelerinden."]];
+["Üvercinka","Cemal Süreya",["siir","klasik"],"YKY","","Türk şiirinin en sevilen aşk dizelerinden."],
+["Tutunamayanlar","Oğuz Atay",["klasik","roman"],"İletişim","","Turgut'un, intihar eden dostu Selim'in izini sürerken kendi hayatını sorguladığı kült roman."],
+["Tehlikeli Oyunlar","Oğuz Atay",["klasik","roman"],"İletişim","","Hikmet Benol'un gecekonduda kurduğu oyunlar ve gerçeklikten kaçışı."],
+["İnce Memed","Yaşar Kemal",["klasik","roman"],"YKY","","Toros dağlarında ağaya başkaldıran bir köylü çocuğun destanı."],
+["Aylak Adam","Yusuf Atılgan",["klasik","roman"],"YKY","","İstanbul sokaklarında 'o'nu arayan C.'nin yalnızlığı."],
+["Anayurt Oteli","Yusuf Atılgan",["klasik","polisiye"],"YKY","","Kasabadaki bir otelin kâtibi Zebercet'in karanlık iç dünyası."],
+["İçimizdeki Şeytan","Sabahattin Ali",["klasik","romantik"],"YKY","","Ömer ile Macide'nin aşkı ve insanın kendi zaaflarıyla hesaplaşması."],
+["Kuyucaklı Yusuf","Sabahattin Ali",["klasik","romantik"],"YKY","","Yetim Yusuf ile Muazzez'in kasabada filizlenen aşkı."],
+["Çalıkuşu","Reşat Nuri Güntekin",["klasik","romantik"],"İnkılâp","","Feride'nin Anadolu'da öğretmenlik yaparken büyüyüp olgunlaşması."],
+["Yaprak Dökümü","Reşat Nuri Güntekin",["klasik","roman"],"İnkılâp","","Ali Rıza Bey ailesinin değişen değerler karşısında dağılışı."],
+["Aşk-ı Memnu","Halit Ziya Uşaklıgil",["klasik","romantik"],"","","Bihter, Adnan Bey ve Behlül arasında yasak bir tutku."],
+["Huzur","Ahmet Hamdi Tanpınar",["klasik","romantik"],"Dergâh","","Mümtaz ile Nuran'ın İstanbul'da, savaşın eşiğinde yaşanan aşkı."],
+["Sinekli Bakkal","Halide Edib Adıvar",["klasik","roman"],"Can","","Rabia'nın İstanbul'un bir mahallesinde büyüyen hikâyesi."],
+["Kiralık Konak","Yakup Kadri Karaosmanoğlu",["klasik"],"İletişim","","Eski bir konakta üç kuşak; değişen İstanbul ve kuşak çatışması."],
+["Puslu Kıtalar Atlası","İhsan Oktay Anar",["roman","tarih"],"İletişim","","Osmanlı İstanbul'unda düşler, rüyalar ve gizemli bir atlasın peşinde."],
+["Kar","Orhan Pamuk",["roman"],"YKY","","Şair Ka'nın karla kapanan Kars'ta geçirdiği üç gün."],
+["Kırmızı Saçlı Kadın","Orhan Pamuk",["roman"],"YKY","","Bir kuyucu ustası, çırağı ve kırmızı saçlı bir kadın; babalar ve oğullar üzerine."],
+["Veba Geceleri","Orhan Pamuk",["roman","tarih"],"YKY","","Hayali Minger adasında bir veba salgını ve siyasi entrika."],
+["Baba ve Piç","Elif Şafak",["roman"],"Doğan","","İstanbul'da kadınlarla dolu bir ev ve Amerika'dan gelen genç bir kızın aile sırları."],
+["On Dakika Otuz Sekiz Saniye","Elif Şafak",["roman"],"Doğan","","Leyla'nın son dakikalarında zihninden geçen hatıralar ve onu hiç bırakmayan dostları."],
+["Kayıp Ağaçlar Adası","Elif Şafak",["roman","romantik"],"Doğan","","Kıbrıs'ta bölünmüş bir aşk ve her şeye tanık olan bir incir ağacı."],
+["Mutluluk","Zülfü Livaneli",["roman"],"Doğan","","Töre kurbanı olmaktan kurtulan Meryem'in yeni bir hayata yolculuğu."],
+["Kardeşimin Hikâyesi","Zülfü Livaneli",["roman","polisiye"],"Doğan","","Sahil kasabasında yalnız yaşayan bir mühendisin anlattığı gizemli hikâye."],
+["Sultanı Öldürmek","Ahmet Ümit",["polisiye","tarih"],"Everest","","Fatih Sultan Mehmet'in ölümünün sırrı ile bugünün cinayeti iç içe."],
+["İstanbul Hatırası","Ahmet Ümit",["polisiye","tarih"],"Everest","","İstanbul'un tarihi mekânlarında bırakılan cesetler ve Başkomiser Nevzat."],
+["Patasana","Ahmet Ümit",["polisiye","tarih"],"Everest","","Bir kazı alanında işlenen cinayetler ve binlerce yıllık bir tablet."],
+["Adı: Aylin","Ayşe Kulin",["roman","tarih"],"Everest","","Dünyaca ünlü psikiyatrist Ayşe Aylin Devrim'in sıra dışı hayatı."],
+["Fi","Azra Kohen",["roman","psikoloji"],"Destek","","Üç karakterin hayatları üzerinden aşk, sanat ve insan doğası."],
+["Kayıp Gül","Serdar Özkan",["kisisel","roman"],"Timaş","","Diana'nın kayıp ikiz kardeşini ararken kendini bulma yolculuğu."],
+["Memleketimden İnsan Manzaraları","Nazım Hikmet",["siir","klasik"],"YKY","","Nazım'ın memleketin insanlarını destansı bir dille anlattığı büyük eseri."],
+["Sevda Sözleri","Cemal Süreya",["siir"],"YKY","","Cemal Süreya'nın bütün şiirleri bir arada."],
+["Bir Ömür Nasıl Yaşanır?","İlber Ortaylı",["tarih","kisisel"],"Kronik","","Ortaylı'dan hayat, aile, okuma ve sanat üzerine tavsiyeler."],
+["Şeker Portakalı","José Mauro de Vasconcelos",["dunya","klasik"],"Can","","Küçük Zezé'nin portakal fidanıyla dostluğu; yürek burkan bir çocukluk."],
+["Küçük Prens","Antoine de Saint-Exupéry",["dunya","klasik"],"","","Bir gezegenden gelen küçük prensin büyüklere hatırlattıkları."],
+["1984","George Orwell",["dunya","klasik"],"Can","","Büyük Birader'in her şeyi gördüğü distopik bir dünya."],
+["Hayvan Çiftliği","George Orwell",["dunya","klasik"],"Can","","Sahiplerine başkaldıran hayvanların kurduğu çiftlikte iktidarın hikâyesi."],
+["Suç ve Ceza","Fyodor Dostoyevski",["klasik","dunya"],"","","Raskolnikov'un işlediği cinayet ve vicdanıyla hesaplaşması."],
+["Beyaz Geceler","Fyodor Dostoyevski",["klasik","romantik"],"","","Petersburg'un beyaz gecelerinde yalnız bir hayalperestin dört gecelik aşkı."],
+["Yüzyıllık Yalnızlık","Gabriel García Márquez",["dunya","klasik"],"Can","","Buendía ailesinin Macondo'da kuşaklar süren büyülü hikâyesi."],
+["Kolera Günlerinde Aşk","Gabriel García Márquez",["dunya","romantik"],"Can","","Florentino'nun Fermina'yı yarım asırdan fazla beklediği aşk."],
+["Bülbülü Öldürmek","Harper Lee",["dunya","klasik"],"Sel","","Küçük Scout'un gözünden Amerika'nın güneyinde adalet ve önyargı."],
+["Jane Eyre","Charlotte Brontë",["klasik","romantik"],"","","Yetim Jane'in bağımsızlığı ve Bay Rochester'la sırlarla dolu aşkı."],
+["Uğultulu Tepeler","Emily Brontë",["klasik","romantik"],"","","Heathcliff ile Catherine'in kuşaklara yayılan tutkulu ve karanlık aşkı."],
+["Sefiller","Victor Hugo",["klasik","dunya"],"","","Jean Valjean'ın bir somun ekmekle başlayan hayatı ve insanlığın hikâyesi."],
+["Madame Bovary","Gustave Flaubert",["klasik","dunya"],"","","Taşra hayatından sıkılan Emma'nın hayalleri ve hayal kırıklıkları."],
+["Dönüşüm","Franz Kafka",["klasik","dunya"],"","","Bir sabah dev bir böceğe dönüşerek uyanan Gregor Samsa."],
+["Bilinmeyen Bir Kadının Mektubu","Stefan Zweig",["klasik","romantik"],"","","Bir kadının hayatı boyunca sessizce sevdiği adama yazdığı mektup."],
+["Fareler ve İnsanlar","John Steinbeck",["klasik","dunya"],"","","İki gezgin işçinin kendi topraklarına sahip olma hayali."],
+["Martin Eden","Jack London",["klasik","dunya"],"","","Yazar olmaya karar veren genç bir denizcinin tutkulu mücadelesi."],
+["Kendine Ait Bir Oda","Virginia Woolf",["klasik","siir"],"","","Bir kadının yazabilmesi için gereken para ve oda üzerine deneme."],
+["Uçurtma Avcısı","Khaled Hosseini",["dunya","roman"],"Everest","","Kabil'de iki çocukluk arkadaşı; ihanet, pişmanlık ve kefaret."],
+["Bin Muhteşem Güneş","Khaled Hosseini",["dunya","roman"],"Everest","","Afganistan'da kaderleri birleşen iki kadının dostluğu."],
+["Normal İnsanlar","Sally Rooney",["dunya","romantik"],"","","Marianne ile Connell'in yıllara yayılan, yakınlaşıp uzaklaşan ilişkisi."],
+["Bir Gün","David Nicholls",["dunya","romantik"],"","","Emma ile Dexter'ı yirmi yıl boyunca her 15 Temmuz'da yeniden gördüğümüz hikâye."],
+["Senden Önce Ben","Jojo Moyes",["dunya","romantik"],"Pegasus","","Louisa'nın felçli Will'e bakarken hayatının değişmesi."],
+["Ben, Kirke","Madeline Miller",["dunya","roman"],"","","Yunan mitolojisinin cadısı Kirke'nin kendi sesinden hikâyesi."],
+["Evelyn Hugo'nun Yedi Kocası","Taylor Jenkins Reid",["dunya","romantik"],"","","Efsanevi bir Hollywood yıldızının yedi evliliğinin ardındaki gerçek aşk."],
+["Sessiz Hasta","Alex Michaelides",["polisiye","dunya"],"Epsilon","","Kocasını vurduktan sonra bir daha hiç konuşmayan ressam Alicia."],
+["Ejderha Dövmeli Kız","Stieg Larsson",["polisiye","dunya"],"","","Gazeteci Mikael ve hacker Lisbeth kırk yıllık bir kayboluşun izinde."],
+["Ve Sonra Hiç Kalmadı","Agatha Christie",["polisiye","klasik"],"Altın","","Bir adaya davet edilen on yabancı birer birer ölmeye başlar."],
+["Da Vinci Şifresi","Dan Brown",["polisiye","dunya"],"Altın","","Louvre'daki bir cinayetle başlayan, sembollerle dolu bir kovalamaca."],
+["Hayvanlardan Tanrılara: Sapiens","Yuval Noah Harari",["tarih"],"Kolektif","","İnsanlığın taş devrinden bugüne kısa tarihi."],
+["Kurtlarla Koşan Kadınlar","Clarissa Pinkola Estés",["psikoloji","kisisel"],"Ayrıntı","","Masallar ve mitler üzerinden kadının vahşi ruhunu keşfetmek."],
+["İnsanın Anlam Arayışı","Viktor E. Frankl",["psikoloji","kisisel"],"Okuyan Us","","Toplama kampından sağ çıkan bir psikiyatristin anlam üzerine tanıklığı."],
+["Şimdinin Gücü","Eckhart Tolle",["kisisel"],"","","Zihnin gürültüsünden çıkıp şimdiki anda yaşamak üzerine."],
+["Beden Kayıt Tutar","Bessel van der Kolk",["psikoloji"],"","","Travmanın beden ve zihindeki izleri ve iyileşmenin yolları."],
+["Bütün Beyinli Çocuk","Daniel J. Siegel",["ebeveyn","psikoloji"],"","","Çocuğun gelişen beynini anlayarak duygularını yönetmesine yardım etmek."],
+["Keşke Ailemin Okuduğu Bir Kitap Olsaydı","Philippa Perry",["ebeveyn","psikoloji"],"","","Çocuklarımızla ilişkimizi kendi çocukluğumuzun izleriyle birlikte düşünmek."],
+["Pal Sokağı Çocukları","Ferenc Molnár",["cocuk","klasik"],"","","Budapeşte'de bir arsayı korumak için birleşen çocukların hikâyesi."],
+["Matilda","Roald Dahl",["cocuk"],"Can","","Kitaplara âşık, olağanüstü yetenekli küçük bir kız."],
+["Charlie'nin Çikolata Fabrikası","Roald Dahl",["cocuk"],"Can","","Altın bileti bulan Charlie'nin Willy Wonka'nın fabrikasındaki macerası."],
+["Momo","Michael Ende",["cocuk","dunya"],"","","Zaman hırsızı duman adamlara karşı koyan küçük Momo."]];
 const KT_POP=["Ahmet Ümit","Elif Şafak","Zülfü Livaneli","Sabahattin Ali","Kemal Sayar","Hatice Kübra Tongar","Şermin Yaşar","Kahraman Tazeoğlu","Şükrü Erbaş","Isabel Allende","Colleen Hoover","Paulo Coelho","Ayşe Kulin","Canan Tan","Orhan Pamuk","İlber Ortaylı","Yekta Kopan","Gabor Maté","Oliver Burkeman","Donna Tartt"];
 /* Okur-yazar buluşmaları & imza günleri (kaynak: okuryazarbulusmasi.com, Kasım 2026) */
 const KT_EV=[
@@ -11522,6 +11651,84 @@ function sbReplies(pid,iOwn,onCount){const m=document.createElement("div");m.cla
 new MutationObserver(ms=>{ms.forEach(m=>m.addedNodes.forEach(n=>{if(n.id==="ktpop"&&SB_NOTI.length&&/Okur ipi/.test(n.textContent||"")){const ids=SB_NOTI.map(x=>x.id);SB_NOTI=[];sbBadge();sbReq("PATCH",`notifications?id=in.(${ids.join(",")})`,{read:true},"return=minimal");}}));}).observe(document.body,{childList:true});
 
 function sbShrink(src,W,q){return new Promise(res=>{const im=new Image();im.onload=()=>{const c=document.createElement("canvas"),k=Math.min(1,W/im.width);c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext("2d").drawImage(im,0,0,c.width,c.height);res(c.toDataURL("image/jpeg",q));};im.onerror=()=>res(null);im.src=src;});}
+
+/* ===== v0.19: Okurların gündemi (beğeni + yanıt + tazelik algoritması), kitap arama, günlük dönen öneriler ===== */
+(function(){const _kr=ktRecs;ktRecs=function(){const d=dkey();const h=t=>{let x=7;for(const c of t+d)x=(x*31+c.charCodeAt(0))>>>0;return (x%1000)/1000;};return _kr().map(r=>[r[0],r[1]+h(r[0][0])*1.2,r[2]]).sort((a,b)=>b[1]-a[1]);};})();
+const SB_TR={at:0,books:[],pol:null};
+async function sbGet(path){if(navigator.onLine===false)return null;try{const r=await fetch(SB_URL+"/rest/v1/"+path,{headers:{apikey:SB_KEY,Authorization:"Bearer "+SB_KEY}});if(!r.ok)return null;return await r.json();}catch(e){return null;}}
+function trCalc(R){const now=Date.now(),B={};let fol=a=>false;try{if(st.kitap)fol=ktFollow;}catch(e){}
+ R.forEach(p=>{const age=Math.max(0,(now-new Date(p.created_at).getTime())/864e5);const w=Math.pow(.5,age/5);
+  p._s=(1+2*(p.like_count||0)+3*(p.reply_count||0)+((p.body||"").length>60?.5:0))*w;
+  const b=B[p.book_key]||(B[p.book_key]={k:p.book_key,t:p.book_title,a:p.book_author||"",s:0,n:0,l:0,r:0,u:new Set(),top:null});
+  b.s+=p._s;b.n++;b.l+=p.like_count||0;b.r+=p.reply_count||0;b.u.add(p.user_id);if(!b.top||p._s>b.top._s)b.top=p;});
+ const L=Object.values(B).map(b=>{b.s*=1+.25*(b.u.size-1);if(fol(b.a))b.s*=1.3;b.u=b.u.size;delete b.top;return b;}).sort((a,b)=>b.s-a.s);
+ const P=R.filter(p=>p.body&&now-new Date(p.created_at).getTime()<14*864e5).sort((a,b)=>b._s-a._s);
+ return {books:L.slice(0,10),pol:P[0]||null};}
+async function trLoad(force){let C=null;try{C=JSON.parse(localStorage.getItem("mf-trend")||"null");}catch(e){}
+ if(C&&!force&&Date.now()-C.at<6e5){Object.assign(SB_TR,C);return SB_TR;}
+ const since=new Date(Date.now()-30*864e5).toISOString();
+ const R=await sbGet(`polaroid_feed?select=id,user_id,book_key,book_title,book_author,body,hearts,created_at,name,like_count,reply_count&created_at=gte.${encodeURIComponent(since)}&order=created_at.desc&limit=400`);
+ if(!Array.isArray(R)){if(C)Object.assign(SB_TR,C);return SB_TR;}
+ const T=trCalc(R);if(T.pol){let im=await sbGet(`polaroid_feed?select=photo,avatar&id=eq.${T.pol.id}`);if(!Array.isArray(im))im=await sbGet(`polaroid_feed?select=avatar&id=eq.${T.pol.id}`);if(Array.isArray(im)&&im[0])T.pol.img=im[0].photo||im[0].avatar||"";}
+ const O={at:Date.now(),books:T.books,pol:T.pol};try{localStorage.setItem("mf-trend",JSON.stringify(O));}catch(e){try{O.pol&&(O.pol.img="");localStorage.setItem("mf-trend",JSON.stringify(O));}catch(_){}}
+ Object.assign(SB_TR,O);return SB_TR;}
+function trCol(t){let h=2166136261;for(const c of (t||""))h=Math.imul(h^c.charCodeAt(0),16777619)>>>0;const P=[["#7A2E3A","#C2546A"],["#2E4A6B","#5E86B8"],["#3E5A3A","#7A9A5A"],["#5A3A6B","#9A6ABF"],["#8A4A1E","#D08A4A"],["#1E4A4A","#3E8A82"],["#6B2E1E","#B85A3A"],["#2A2A4A","#5A5A9A"]];return P[(h>>>5)%P.length];}
+function trBookBits(b){return [b.n?`${b.n} polaroid`:"",b.l?`❤ ${b.l}`:"",b.r?`💬 ${b.r}`:""].filter(Boolean).join(" · ");}
+function trHome(){const H=document.getElementById("trend-home");if(!H)return;const B=SB_TR.books||[],P=SB_TR.pol;if(!B.length){H.innerHTML="";return;}
+ const c=P?trCol(P.book_title):null;
+ H.innerHTML=`<div class="trh"><div class="trh-h"><strong><i class="no-mi">🔥</i> Okurlar bunu konuşuyor</strong><button type="button" id="trh-s">🔍 Kitap ara</button></div>
+  ${P?`<div class="trh-p" id="trh-p"><div class="trh-pol" style="--c1:${c[0]};--c2:${c[1]}"><div class="im">${P.img?`<img src="${P.img}" alt="">`:`<b>${esc(P.book_title)}</b>`}</div></div>
+   <div class="trh-q"><span class="trh-tag">✨ Haftanın polaroidi</span><p>“${esc(P.body)}”</p><small>${esc(P.name||"Bir okur")} · <b>${esc(P.book_title)}</b></small><span class="st">${P.like_count?`<span>❤ ${P.like_count}</span>`:""}${P.reply_count?`<span>💬 ${P.reply_count}</span>`:""}${P.hearts?`<span>${"★".repeat(P.hearts)}</span>`:""}</span></div></div>`:""}
+  <div class="trh-row">${B.slice(0,8).map((b,i)=>`<button type="button" class="trh-b" data-trb="${i}" style="--c1:${trCol(b.t)[0]};--c2:${trCol(b.t)[1]}"><span class="rk">${i+1}</span><span class="trc"><b>${esc(b.t)}</b><i>${esc(b.a)}</i></span><small>${[b.l?"❤ "+b.l:"",b.r?"💬 "+b.r:"",!b.l&&!b.r?b.n+" polaroid":""].filter(Boolean).join(" · ")}</small></button>`).join("")}</div>
+  <p class="trh-f">Beğeni, yanıt ve tazeliğe göre her saat yenilenir</p></div>`;
+ H.querySelectorAll("[data-trb]").forEach(x=>x.onclick=()=>{const b=B[+x.dataset.trb];bookOpenAny(b.t,b.a);});
+ const pp=document.getElementById("trh-p");if(pp)pp.onclick=()=>{bkFocus={t:"cm"};bookOpenAny(P.book_title,P.book_author||"");};
+ document.getElementById("trh-s").onclick=()=>{kttab=kt().setup?"oneri":kttab;step=90;show();kitapRender();window.scrollTo({top:0});setTimeout(()=>{const q=document.getElementById("kt-q");if(q)q.focus();},250);};}
+(function(){const _h=homeRender;homeRender=function(){_h.apply(this,arguments);try{trHome();}catch(e){}};})();
+function trRefresh(force){trLoad(force).then(()=>{try{trHome();if(step===90)ktTrendInject();}catch(e){}});}
+setTimeout(()=>trRefresh(false),1200);setInterval(()=>{if(document.visibilityState==="visible")trRefresh(true);},36e5);
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&Date.now()-(SB_TR.at||0)>6e5)trRefresh(true);});
+/* Kitap sekmesinde gündem rafı */
+function ktTrendInject(){const P=document.getElementById("ktpanel");if(!P||kttab!=="oneri")return;const old=document.getElementById("kt-trend");if(old)old.remove();
+ const B=(SB_TR.books||[]).slice(0,8);if(!B.length)return;const anchor=document.getElementById("kt-live");if(!anchor)return;
+ anchor.insertAdjacentHTML("beforebegin",`<div id="kt-trend" class="kttr"><div class="kthead"><span>Okurların gündemi 🔥</span><small>topluluk</small></div><div class="ktrow">${B.map((b,i)=>ktCard([[b.t,b.a,[],"","",""],0,`#${i+1} · ${trBookBits(b)}`])).join("")}</div></div>`);
+ const box=document.getElementById("kt-trend"),K=kt();
+ box.querySelectorAll("[data-kadd]").forEach(b=>b.onclick=()=>{const x=ktOnShelf(b.dataset.kadd);if(!x)K.shelf.unshift({t:b.dataset.kadd,a:b.dataset.kau,s:"oku",d:dkey()});else if(x.s==="istek")x.s="oku";save();kbbSet(b,"✓","Rafında",true);b.disabled=true;});
+ box.querySelectorAll("[data-kfol]").forEach(b=>b.onclick=()=>{const a=b.dataset.kfol;if(!ktFollow(a))K.au.push(a);save();kitapRender();});}
+/* Kitap arama */
+let ktQ="",ktQS=0,ktQT=0;const KQ_C={};
+function ktSearchBox(){return `<div class="ktsr"><label class="ktsr-i"><span class="no-mi">🔍</span><input id="kt-q" type="text" enterkeyhint="search" autocomplete="off" maxlength="60" placeholder="Kitap ya da yazar ara…" value="${esc(ktQ)}"><button type="button" id="kt-qx" aria-label="Temizle"${ktQ?"":" hidden"}>×</button></label><div class="ktsr-r" id="kt-qr"></div></div>`;}
+function ksrRow(r){const c=trCol(r.t);const tag=r.hot?`<em class="hot">🔥 ${esc(r.hot)}</em>`:r.src==="lib"?"<em>Kütüphanende</em>":r.src==="sh"?"<em>Rafında</em>":r.src==="k"?"<em>Me First önerisi</em>":"";
+ return `<button type="button" class="ksr" data-kq="${esc(r.t)}" data-kqa="${esc(r.a)}"><span class="cv" style="--c1:${c[0]};--c2:${c[1]}">${r.img?`<img src="${esc(r.img)}" alt="" loading="lazy" onerror="this.remove()">`:`<b>${esc(r.t.slice(0,30))}</b>`}</span><span class="tx"><strong>${esc(r.t)}</strong><small>${esc([r.a,r.y].filter(Boolean).join(" · "))}</small>${tag}</span></button>`;}
+function ktSearch(q){ktQ=q;const box=document.getElementById("kt-qr"),X=document.getElementById("kt-qx");if(X)X.hidden=!q;if(!box)return;q=q.trim();const my=++ktQS;clearTimeout(ktQT);
+ if(q.length<2){box.innerHTML="";return;}const n=ktN(q),M=new Map();
+ const key=(t,a)=>ktN(t)+"|"+(ktN(a||"").split(" ").pop()||"");
+ const add=(o)=>{const k=key(o.t,o.a);const ex=M.get(k);if(ex){if(!ex.img&&o.img)ex.img=o.img;if(!ex.y&&o.y)ex.y=o.y;if(o.hot)ex.hot=o.hot;return;}M.set(k,o);};
+ const hit=(t,a)=>ktN(t).includes(n)||ktN(a||"").includes(n);
+ (SB_TR.books||[]).forEach(b=>{if(hit(b.t,b.a))add({t:b.t,a:b.a,src:"tr",hot:trBookBits(b)});});
+ try{klib().forEach(b=>{if(hit(b.t,b.a))add({t:b.t,a:b.a||"",src:"lib"});});}catch(e){}
+ try{kt().shelf.forEach(b=>{if(hit(b.t,b.a))add({t:b.t,a:b.a||"",src:"sh"});});}catch(e){}
+ KT_BOOKS.forEach(b=>{if(hit(b[0],b[1]))add({t:b[0],a:b[1],src:"k"});});
+ const tr=new Map((SB_TR.books||[]).map(b=>[key(b.t,b.a),b]));
+ const draw=(loading,fail)=>{if(my!==ktQS)return;const L=[...M.values()].map(r=>{const T=tr.get(key(r.t,r.a));if(T&&!r.hot)r.hot=trBookBits(T);return r;});
+  L.sort((a,b)=>(b.hot?1:0)-(a.hot?1:0)||(ktN(b.t).startsWith(n)?1:0)-(ktN(a.t).startsWith(n)?1:0));
+  box.innerHTML=L.slice(0,14).map(ksrRow).join("")+(loading?`<div class="ksr-m"><i></i>Kitapçılarda arıyorum…</div>`:!L.length?`<div class="ksr-m">${fail?"📶 İnternete bağlanamadım, birazdan tekrar dene.":"Bu isimle bir kitap bulamadım 🤔 Yazımını kontrol eder misin?"}</div>`:"");
+  box.querySelectorAll("[data-kq]").forEach(b=>b.onclick=()=>{bookOpenAny(b.dataset.kq,b.dataset.kqa);});};
+ const C=KQ_C[n];if(C){C.forEach(add);draw(false);return;}
+ draw(navigator.onLine!==false);if(navigator.onLine===false)return;
+ ktQT=setTimeout(async()=>{const gb=async lr=>{try{const r=await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=20&printType=books${lr?"&langRestrict=tr":""}${window.GB_KEY?"&key="+GB_KEY:""}`);if(!r.ok)return null;const j=await r.json();return (j.items||[]).map(i=>i.volumeInfo||{});}catch(e){return null;}};
+  let A=await gb(true);if(my!==ktQS)return;if(!A||A.length<6){const B2=await gb(false);if(my!==ktQS)return;if(B2)A=(A||[]).concat(B2);}
+  const out=[];(A||[]).forEach(v=>{if(!v.title)return;const t=v.title+(v.subtitle&&v.subtitle.length<30&&!/roman|novel/i.test(v.subtitle)?"":"");const a=(v.authors||[])[0]||"";const im=v.imageLinks?(v.imageLinks.thumbnail||v.imageLinks.smallThumbnail||"").replace("http://","https://").replace("&edge=curl",""):"";
+   out.push({t,a,src:"gb",img:im,y:(v.publishedDate||"").slice(0,4)});});
+  KQ_C[n]=out;out.forEach(add);draw(false,A===null);},450);}
+(function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{const P=document.getElementById("ktpanel");if(!P)return;
+  P.insertAdjacentHTML("afterbegin",ktSearchBox());const q=document.getElementById("kt-q");q.oninput=e=>ktSearch(e.target.value);q.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();q.blur();}};
+  document.getElementById("kt-qx").onclick=()=>{q.value="";ktSearch("");q.focus();};if(ktQ)ktSearch(ktQ);ktTrendInject();}catch(e){console.warn(e);}};})();
+/* Günde bir kez: gündem bildirimi (düşük öncelik) */
+(function(){const _c=mfPopCands;mfPopCands=function(){const L=_c.apply(this,arguments);try{const h=new Date().getHours(),id="trend:"+dkey();const b=(SB_TR.books||[])[0],P=SB_TR.pol;
+  if(h>=11&&h<21&&b&&b.n>=2&&!mfPopSeen()[id]&&mfPopOk({p:45}))L.push({id,p:45,cls:"pp-kt",k:"🔥 Okurların gündemi",leaves:1,
+   h:`Bu hafta okurlar <em>${esc(b.t)}</em> kitabını konuşuyor`,d:P&&P.book_key===b.k?`“${esc(P.body.slice(0,110))}”<br><small>${esc(P.name||"Bir okur")}</small>`:`${esc(trBookBits(b))} · sen de ipe bir polaroid as 🧷`,
+   a:[["Kitaba bak 📖",()=>bookOpenAny(b.t,b.a)]],x:"Sonra 💛"});}catch(e){}return L;};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
