@@ -5581,7 +5581,7 @@ html[data-mf="dusk"] .kdf .kdf-seg button{background:rgba(255,255,255,.06);color
 .bk-info .bi-warn button{margin-left:4px;border:0;background:#A8492A;color:#fff;font-weight:800;font-size:12px;border-radius:999px;padding:4px 10px}
 
 /* ===== Okurların gündemi + kitap arama ===== */
-#trend-home:empty{display:none}
+#kt-trh:empty{display:none}
 .trh{margin:4px 0 18px;border-radius:24px;padding:14px 14px 12px;background:linear-gradient(160deg,#FFF6EA,#FBE6CF);border:1px solid rgba(201,130,43,.25);box-shadow:0 10px 26px rgba(168,73,42,.12);position:relative;overflow:hidden}
 .trh::before{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(233,165,90,.35),transparent 70%)}
 .trh-h{display:flex;align-items:center;gap:8px;margin-bottom:10px;position:relative}
@@ -5636,6 +5636,9 @@ html[data-mf="dusk"] .trh-h strong{color:#FFE2B8}html[data-mf="dusk"] .trh-b str
 
 .trh-b{display:flex;flex-direction:column;align-self:flex-start}
 .trh-b small{margin-top:6px;white-space:nowrap}
+
+.ksr-rt{margin-left:6px;border:0;background:#A8492A;color:#fff;font-weight:800;font-size:12px;border-radius:999px;padding:4px 10px}
+#kt-trh .trh{margin:0 0 16px}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -5670,7 +5673,6 @@ html[data-mf="dusk"] .trh-h strong{color:#FFE2B8}html[data-mf="dusk"] .trh-b str
     <div class="stories" id="stories" role="list"></div>
     <div class="bn-h bn-h2" id="tc-h"><small>Şimdi</small><h2 class="world-h">Bugün <em>senin için</em></h2></div>
     <div id="todaycard"></div>
-    <div id="trend-home"></div>
     <div class="bn-h"><small>Nereye gidelim?</small><h2 class="world-h">Benim <em>dünyam</em></h2></div><div class="bento" id="bento"></div>
     <button class="feature" id="go-style" type="button">
       <span class="fe">👗</span>
@@ -11674,27 +11676,22 @@ async function trLoad(force){let C=null;try{C=JSON.parse(localStorage.getItem("m
  Object.assign(SB_TR,O);return SB_TR;}
 function trCol(t){let h=2166136261;for(const c of (t||""))h=Math.imul(h^c.charCodeAt(0),16777619)>>>0;const P=[["#7A2E3A","#C2546A"],["#2E4A6B","#5E86B8"],["#3E5A3A","#7A9A5A"],["#5A3A6B","#9A6ABF"],["#8A4A1E","#D08A4A"],["#1E4A4A","#3E8A82"],["#6B2E1E","#B85A3A"],["#2A2A4A","#5A5A9A"]];return P[(h>>>5)%P.length];}
 function trBookBits(b){return [b.n?`${b.n} polaroid`:"",b.l?`❤ ${b.l}`:"",b.r?`💬 ${b.r}`:""].filter(Boolean).join(" · ");}
-function trHome(){const H=document.getElementById("trend-home");if(!H)return;const B=SB_TR.books||[],P=SB_TR.pol;if(!B.length){H.innerHTML="";return;}
+function trHome(){const H=document.getElementById("kt-trh");if(!H)return;const B=SB_TR.books||[],P=SB_TR.pol;if(!B.length){H.innerHTML="";return;}
  const c=P?trCol(P.book_title):null;
- H.innerHTML=`<div class="trh"><div class="trh-h"><strong><i class="no-mi">🔥</i> Okurlar bunu konuşuyor</strong><button type="button" id="trh-s">🔍 Kitap ara</button></div>
+ H.innerHTML=`<div class="trh"><div class="trh-h"><strong><i class="no-mi">🔥</i> Okurlar bunu konuşuyor</strong></div>
   ${P?`<div class="trh-p" id="trh-p"><div class="trh-pol" style="--c1:${c[0]};--c2:${c[1]}"><div class="im">${P.img?`<img src="${P.img}" alt="">`:`<b>${esc(P.book_title)}</b>`}</div></div>
    <div class="trh-q"><span class="trh-tag">✨ Haftanın polaroidi</span><p>“${esc(P.body)}”</p><small>${esc(P.name||"Bir okur")} · <b>${esc(P.book_title)}</b></small><span class="st">${P.like_count?`<span>❤ ${P.like_count}</span>`:""}${P.reply_count?`<span>💬 ${P.reply_count}</span>`:""}${P.hearts?`<span>${"★".repeat(P.hearts)}</span>`:""}</span></div></div>`:""}
   <div class="trh-row">${B.slice(0,8).map((b,i)=>`<button type="button" class="trh-b" data-trb="${i}" style="--c1:${trCol(b.t)[0]};--c2:${trCol(b.t)[1]}"><span class="rk">${i+1}</span><span class="trc"><b>${esc(b.t)}</b><i>${esc(b.a)}</i></span><small>${[b.l?"❤ "+b.l:"",b.r?"💬 "+b.r:"",!b.l&&!b.r?b.n+" polaroid":""].filter(Boolean).join(" · ")}</small></button>`).join("")}</div>
   <p class="trh-f">Beğeni, yanıt ve tazeliğe göre her saat yenilenir</p></div>`;
  H.querySelectorAll("[data-trb]").forEach(x=>x.onclick=()=>{const b=B[+x.dataset.trb];bookOpenAny(b.t,b.a);});
  const pp=document.getElementById("trh-p");if(pp)pp.onclick=()=>{bkFocus={t:"cm"};bookOpenAny(P.book_title,P.book_author||"");};
- document.getElementById("trh-s").onclick=()=>{kttab=kt().setup?"oneri":kttab;step=90;show();kitapRender();window.scrollTo({top:0});setTimeout(()=>{const q=document.getElementById("kt-q");if(q)q.focus();},250);};}
-(function(){const _h=homeRender;homeRender=function(){_h.apply(this,arguments);try{trHome();}catch(e){}};})();
-function trRefresh(force){trLoad(force).then(()=>{try{trHome();if(step===90)ktTrendInject();}catch(e){}});}
+}
+function trRefresh(force){trLoad(force).then(()=>{try{if(step===90)ktTrendInject();}catch(e){}});}
 setTimeout(()=>trRefresh(false),1200);setInterval(()=>{if(document.visibilityState==="visible")trRefresh(true);},36e5);
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&Date.now()-(SB_TR.at||0)>6e5)trRefresh(true);});
 /* Kitap sekmesinde gündem rafı */
-function ktTrendInject(){const P=document.getElementById("ktpanel");if(!P||kttab!=="oneri")return;const old=document.getElementById("kt-trend");if(old)old.remove();
- const B=(SB_TR.books||[]).slice(0,8);if(!B.length)return;const anchor=document.getElementById("kt-live");if(!anchor)return;
- anchor.insertAdjacentHTML("beforebegin",`<div id="kt-trend" class="kttr"><div class="kthead"><span>Okurların gündemi 🔥</span><small>topluluk</small></div><div class="ktrow">${B.map((b,i)=>ktCard([[b.t,b.a,[],"","",""],0,`#${i+1} · ${trBookBits(b)}`])).join("")}</div></div>`);
- const box=document.getElementById("kt-trend"),K=kt();
- box.querySelectorAll("[data-kadd]").forEach(b=>b.onclick=()=>{const x=ktOnShelf(b.dataset.kadd);if(!x)K.shelf.unshift({t:b.dataset.kadd,a:b.dataset.kau,s:"oku",d:dkey()});else if(x.s==="istek")x.s="oku";save();kbbSet(b,"✓","Rafında",true);b.disabled=true;});
- box.querySelectorAll("[data-kfol]").forEach(b=>b.onclick=()=>{const a=b.dataset.kfol;if(!ktFollow(a))K.au.push(a);save();kitapRender();});}
+function ktTrendInject(){const P=document.getElementById("ktpanel");if(!P)return;let H=document.getElementById("kt-trh");
+ if(kttab!=="oneri"){if(H)H.remove();return;}if(!H){const sr=P.querySelector(".ktsr");if(!sr)return;sr.insertAdjacentHTML("afterend",'<div id="kt-trh"></div>');}trHome();}
 /* Kitap arama */
 let ktQ="",ktQS=0,ktQT=0;const KQ_C={};
 function ktSearchBox(){return `<div class="ktsr"><label class="ktsr-i"><span class="no-mi">🔍</span><input id="kt-q" type="text" enterkeyhint="search" autocomplete="off" maxlength="60" placeholder="Kitap ya da yazar ara…" value="${esc(ktQ)}"><button type="button" id="kt-qx" aria-label="Temizle"${ktQ?"":" hidden"}>×</button></label><div class="ktsr-r" id="kt-qr"></div></div>`;}
@@ -11712,15 +11709,15 @@ function ktSearch(q){ktQ=q;const box=document.getElementById("kt-qr"),X=document
  const tr=new Map((SB_TR.books||[]).map(b=>[key(b.t,b.a),b]));
  const draw=(loading,fail)=>{if(my!==ktQS)return;const L=[...M.values()].map(r=>{const T=tr.get(key(r.t,r.a));if(T&&!r.hot)r.hot=trBookBits(T);return r;});
   L.sort((a,b)=>(b.hot?1:0)-(a.hot?1:0)||(ktN(b.t).startsWith(n)?1:0)-(ktN(a.t).startsWith(n)?1:0));
-  box.innerHTML=L.slice(0,14).map(ksrRow).join("")+(loading?`<div class="ksr-m"><i></i>Kitapçılarda arıyorum…</div>`:!L.length?`<div class="ksr-m">${fail?"📶 İnternete bağlanamadım, birazdan tekrar dene.":"Bu isimle bir kitap bulamadım 🤔 Yazımını kontrol eder misin?"}</div>`:"");
-  box.querySelectorAll("[data-kq]").forEach(b=>b.onclick=()=>{bookOpenAny(b.dataset.kq,b.dataset.kqa);});};
+  box.innerHTML=L.slice(0,14).map(ksrRow).join("")+(loading?`<div class="ksr-m"><i></i>Kitapçılarda arıyorum…</div>`:!L.length?`<div class="ksr-m">${fail?(navigator.onLine===false?"📶 İnternet bağlantın yok gibi görünüyor.":"Kitapçılardan şu an cevap gelmedi 🤔")+' <button type="button" class="ksr-rt" id="ksr-rt">Tekrar dene ↻</button>':"Bu isimle bir kitap bulamadım 🤔 Yazımını kontrol eder misin?"}</div>`:"");
+  box.querySelectorAll("[data-kq]").forEach(b=>b.onclick=()=>{bookOpenAny(b.dataset.kq,b.dataset.kqa);});const rt=document.getElementById("ksr-rt");if(rt)rt.onclick=()=>ktSearch(ktQ);};
  const C=KQ_C[n];if(C){C.forEach(add);draw(false);return;}
  draw(navigator.onLine!==false);if(navigator.onLine===false)return;
  ktQT=setTimeout(async()=>{const gb=async lr=>{try{const r=await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=20&printType=books${lr?"&langRestrict=tr":""}${window.GB_KEY?"&key="+GB_KEY:""}`);if(!r.ok)return null;const j=await r.json();return (j.items||[]).map(i=>i.volumeInfo||{});}catch(e){return null;}};
-  let A=await gb(true);if(my!==ktQS)return;if(!A||A.length<6){const B2=await gb(false);if(my!==ktQS)return;if(B2)A=(A||[]).concat(B2);}
+  let A=await gb(true);if(my!==ktQS)return;if(A===null){await new Promise(r=>setTimeout(r,900));if(my!==ktQS)return;A=await gb(true);}if(my!==ktQS)return;if(!A||A.length<6){const B2=await gb(false);if(my!==ktQS)return;if(B2)A=(A||[]).concat(B2);}
   const out=[];(A||[]).forEach(v=>{if(!v.title)return;const t=v.title+(v.subtitle&&v.subtitle.length<30&&!/roman|novel/i.test(v.subtitle)?"":"");const a=(v.authors||[])[0]||"";const im=v.imageLinks?(v.imageLinks.thumbnail||v.imageLinks.smallThumbnail||"").replace("http://","https://").replace("&edge=curl",""):"";
    out.push({t,a,src:"gb",img:im,y:(v.publishedDate||"").slice(0,4)});});
-  KQ_C[n]=out;out.forEach(add);draw(false,A===null);},450);}
+  if(A!==null)KQ_C[n]=out;out.forEach(add);draw(false,A===null);},450);}
 (function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{const P=document.getElementById("ktpanel");if(!P)return;
   P.insertAdjacentHTML("afterbegin",ktSearchBox());const q=document.getElementById("kt-q");q.oninput=e=>ktSearch(e.target.value);q.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();q.blur();}};
   document.getElementById("kt-qx").onclick=()=>{q.value="";ktSearch("");q.focus();};if(ktQ)ktSearch(ktQ);ktTrendInject();}catch(e){console.warn(e);}};})();
