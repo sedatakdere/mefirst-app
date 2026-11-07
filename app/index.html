@@ -5541,6 +5541,14 @@ html[data-mf="dusk"] .kdf .kdf-seg button{background:rgba(255,255,255,.06);color
 .rp-f{display:flex;gap:8px}
 .rp-f input{flex:1;min-width:0;font:inherit;font-size:16px;height:48px;border-radius:14px;border:1px solid rgba(201,130,43,.35);background:#fff;padding:0 14px;color:#3A1E14}
 .rp-f button{flex:none;height:48px;border:0;border-radius:14px;padding:0 16px;font:inherit;font-weight:800;color:#fff;background:linear-gradient(135deg,#E9A55A,#A8492A);cursor:pointer}
+
+/* v0.18.2 hareketsiz polaroid + bildirim rozeti */
+.pol,.pol:nth-child(2n),.pol:nth-child(3n){animation:none!important;transform:rotate(var(--r,-2deg))}
+.pol.drop{animation:polDrop .9s cubic-bezier(.2,1.3,.35,1) both!important}
+.bkz .pol{animation:bkzPop .4s cubic-bezier(.2,1.4,.4,1) both!important;transform:none}
+.pol .pst,.pol .meta .hs,.bk-stars button,.bkp-chips span{animation:none!important;transition:none!important}
+#bnav [data-nv="kitap"]{position:relative}
+.sbdot{position:absolute;top:2px;left:50%;margin-left:6px;min-width:17px;height:17px;padding:0 4px;border-radius:99px;background:#E2465E;color:#fff;font-size:10px;font-weight:800;display:grid;place-items:center;box-shadow:0 0 0 2px #fff;line-height:1}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -11427,8 +11435,10 @@ function sbBindLine(O,x,re){O.querySelectorAll("[data-lk]").forEach(b=>b.onclick
  if(x.cm&&!x.sbs&&sbPublic()&&sbPublic().ok)sbHang(x);}
 /* bildirimler */
 let SB_NOTI=[],SB_NOTI_AT=0;
-async function sbNotiPull(){const P=sbPublic();if(!P||!P.ok||!navigator.onLine)return;if(Date.now()-SB_NOTI_AT<4*60000)return;SB_NOTI_AT=Date.now();
- const r=await sbReq("GET","notifications?read=eq.false&order=created_at.desc&limit=30");if(Array.isArray(r))SB_NOTI=r;}
+async function sbNotiPull(force){const P=sbPublic();if(!P||!P.ok||!navigator.onLine)return;if(!force&&Date.now()-SB_NOTI_AT<90000)return;SB_NOTI_AT=Date.now();
+ const r=await sbReq("GET","notifications?read=eq.false&order=created_at.desc&limit=30");if(Array.isArray(r)){const nw=r.length&&(!SB_NOTI.length||r[0].id!==SB_NOTI[0].id);SB_NOTI=r;sbBadge();
+  if(nw)setTimeout(()=>{try{if(!document.getElementById("ktpop")&&!document.getElementById("bkp")&&!document.querySelector(".zsh.on,#zsh:not([hidden])"))(window.__ktPopOrig||ktPop)();}catch(e){}},400);}}
+function sbBadge(){const b=document.querySelector('#bnav [data-nv="kitap"]');if(!b)return;let d=b.querySelector(".sbdot");const n=SB_NOTI.length;if(!n){if(d)d.remove();return;}if(!d){d=document.createElement("span");d.className="sbdot";b.appendChild(d);}d.textContent=n>9?"9+":n;}
 function sbNotiCand(){if(!SB_NOTI.length)return null;const N=SB_NOTI;const likes=N.filter(n=>n.kind==="like"),pols=N.filter(n=>n.kind==="pol"),qs=N.filter(n=>n.kind==="quote"),rps=N.filter(n=>n.kind==="reply"||n.kind==="reply2");
  const top=rps[0]||pols[0]||likes[0]||qs[0];const uniq=a=>[...new Set(a.map(n=>n.actor))];let h,d;
  if(rps.length){const a=uniq(rps);const mine=rps.some(n=>n.kind==="reply");h=`${esc(a[0])}${a.length>1?` ve ${a.length-1} okur daha`:""}<br><em>${mine?"polaroidine yanıt yazdı":"de yanıt yazdı"} 💬</em>`;d=`<b>${esc(rps[0].book_title)}</b> ${mine?"polaroidinin altında sohbet başladı.":"ipindeki sohbete yeni bir yanıt geldi."}`;if(likes.length)d+=`<br>Ayrıca polaroidin ${likes.length} beğeni aldı ❤️`;}
@@ -11436,11 +11446,11 @@ function sbNotiCand(){if(!SB_NOTI.length)return null;const N=SB_NOTI;const likes
  else if(likes.length){h=`Polaroidin<br><em>${likes.length} beğeni aldı ❤️</em>`;d=`${uniq(likes).slice(0,3).map(esc).join(", ")} <b>${esc(likes[0].book_title)}</b> polaroidini beğendi.`;}
  else{const a=uniq(qs);h=`${esc(a[0])}<br><em>altını çizdi ✍️</em>`;d=`<b>${esc(qs[0].book_title)}</b> kitabından senin gibi bir cümlenin altını çizdi.`;}
  if(likes.length&&pols.length)if(!rps.length&&likes.length&&pols.length)d+=`<br>Ayrıca polaroidin ${likes.length} beğeni aldı ❤️`;
- const ids=N.map(n=>n.id);const done=()=>{SB_NOTI=[];sbReq("PATCH",`notifications?id=in.(${ids.join(",")})`,{read:true},"return=minimal");};
- return {id:"sbn:"+ids[0],p:70,cls:"pp-kt",k:"🧷 Okur ipi",leaves:1,h,d,a:[["Kitaba git 📖",()=>{done();bkFocus={t:"cm"};const tb=top.book_title,au=(N.find(n=>n.book_key===top.book_key)||{}).book_key||"";const L=klib();const j=L.findIndex(y=>bkKey(y)===top.book_key);if(j>=0)bookOpen(j);else{const K=kt();K.bkd=K.bkd||{};const o=Object.values(K.bkd).find(y=>bkKey(y)===top.book_key);if(o)bookOpen(-1,null,o);else bookOpenAny(tb,"");}}]],x:"Tamam 💛",onx:done};}
-(function(){const _c=mfPopCands;mfPopCands=function(){const L=_c.apply(this,arguments);try{const C=sbNotiCand();if(C&&!mfPopSeen()[C.id]&&mfPopOk(C)){L.push(C);L.sort((a,b)=>b.p-a.p);}}catch(e){}return L;};
- setTimeout(()=>sbNotiPull(),2500);setInterval(()=>{if(document.visibilityState==="visible")sbNotiPull();},5*60000);
- document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")sbNotiPull().then(()=>{try{if(step===0&&SB_NOTI.length)ktPop();}catch(e){}});});})();
+ const ids=N.map(n=>n.id);const done=()=>{return;SB_NOTI=[];sbBadge();sbReq("PATCH",`notifications?id=in.(${ids.join(",")})`,{read:true},"return=minimal");};
+ return {id:"sbn:"+ids[0],p:91,cls:"pp-kt",k:"🧷 Okur ipi",leaves:1,h,d,a:[["Kitaba git 📖",()=>{done();bkFocus={t:"cm"};const tb=top.book_title,au=(N.find(n=>n.book_key===top.book_key)||{}).book_key||"";const L=klib();const j=L.findIndex(y=>bkKey(y)===top.book_key);if(j>=0)bookOpen(j);else{const K=kt();K.bkd=K.bkd||{};const o=Object.values(K.bkd).find(y=>bkKey(y)===top.book_key);if(o)bookOpen(-1,null,o);else bookOpenAny(tb,"");}}]],x:"Tamam 💛",onx:done};}
+(function(){const _c=mfPopCands;mfPopCands=function(){const L=_c.apply(this,arguments);try{const C=sbNotiCand();if(C&&!mfPopSeen()[C.id]){L.unshift(C);}}catch(e){}return L;};
+ setTimeout(()=>sbNotiPull(true),2500);setInterval(()=>{if(document.visibilityState==="visible")sbNotiPull();},2*60000);
+ document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")sbNotiPull(true);});})();
 
 /* v0.18.1 polaroid yanıtları */
 function sbAgo(t){const m=Math.round((Date.now()-new Date(t))/6e4);return m<1?"şimdi":m<60?m+" dk":m<1440?Math.round(m/60)+" sa":Math.round(m/1440)+" gün";}
@@ -11456,6 +11466,9 @@ function sbReplies(pid,iOwn,onCount){const m=document.createElement("div");m.cla
   const r=await sbReq("POST","polaroid_replies",{polaroid_id:pid,body:v},"return=representation");b.disabled=false;if(!r||!r[0]){b.textContent="Tekrar dene";return;}b.textContent="Gönder";
   const pf=sbPublic()||{};L.push({id:r[0].id,user_id:(sbSess()||{}).uid,body:v,created_at:r[0].created_at,name:pf.name||"Ben",avatar:pf.photo?await sbAvatar():null});t.value="";draw();onCount&&onCount(L.length);try{sndPlay("bag");}catch(e){}};
  m.querySelector("#rp-s").onclick=send;m.querySelector("#rp-t").addEventListener("keydown",e=>{if(e.key==="Enter")send();});}
+
+/* okur ipi bildirimi görüldüğünde okundu say, rozeti temizle */
+new MutationObserver(ms=>{ms.forEach(m=>m.addedNodes.forEach(n=>{if(n.id==="ktpop"&&SB_NOTI.length&&/Okur ipi/.test(n.textContent||"")){const ids=SB_NOTI.map(x=>x.id);SB_NOTI=[];sbBadge();sbReq("PATCH",`notifications?id=in.(${ids.join(",")})`,{read:true},"return=minimal");}}));}).observe(document.body,{childList:true});
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
