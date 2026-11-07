@@ -5549,6 +5549,21 @@ html[data-mf="dusk"] .kdf .kdf-seg button{background:rgba(255,255,255,.06);color
 .pol .pst,.pol .meta .hs,.bk-stars button,.bkp-chips span{animation:none!important;transition:none!important}
 #bnav [data-nv="kitap"]{position:relative}
 .sbdot{position:absolute;top:2px;left:50%;margin-left:6px;min-width:17px;height:17px;padding:0 4px;border-radius:99px;background:#E2465E;color:#fff;font-size:10px;font-weight:800;display:grid;place-items:center;box-shadow:0 0 0 2px #fff;line-height:1}
+
+/* v0.18.3 */
+.bk-info .bi-row div{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:3px;min-height:64px;padding:8px 4px}
+.bk-info .bi-row small{order:-1;display:block;line-height:1}
+.bk-info .bi-row b{line-height:1.15;display:flex;align-items:center;justify-content:center;flex:1;text-align:center}
+.bk-info .bi-d{max-height:9.4em;color:#3A1E14}
+.bk-info .bi-d:not(.open)::after{height:1.1em}
+.pol .img{aspect-ratio:5/4}
+.pol .txt{-webkit-line-clamp:4;min-height:0}
+.bkz .pol .img{aspect-ratio:5/4}
+.bk-pick{display:flex;align-items:center;gap:10px;margin-top:10px;padding:8px;border-radius:15px;background:#fff;border:1px solid rgba(201,130,43,.25)}
+.bk-pick img,.bk-pick>span:first-child{width:44px;height:36px;border-radius:6px;object-fit:cover;flex:none;background:#FBE7D0;display:grid;place-items:center}
+.bk-pick>span:nth-child(2){flex:1;min-width:0;font-size:12.5px;font-weight:700;color:#7A3A1E}
+.bk-galb{flex:none;font-size:12.5px;font-weight:800;border-radius:99px;padding:8px 12px;background:linear-gradient(135deg,#E9A55A,#A8492A);color:#fff;cursor:pointer;display:inline-flex;gap:4px;align-items:center}
+.bk-galx{flex:none;border:0;background:none;color:#A8492A;font-size:14px;cursor:pointer;padding:4px}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -11248,7 +11263,7 @@ function bkKey(x){return "bk_"+((x.t||"")+"|"+(x.a||"")).toLocaleLowerCase("tr-T
 let bkI=-1;
 function bkClose(fromPop){const O=document.getElementById("bkp");if(!O)return;O.classList.remove("on");document.body.style.overflow="";setTimeout(()=>O.remove(),380);if(!fromPop)try{if(history.state&&history.state.bkp)history.back();}catch(e){}}
 window.bkClose=bkClose;
-function bkPol(x,c,isNew){const ph=PH.me;const fe=(x.fe||[]).slice(0,3).join("");const hs=x.rt?"★".repeat(x.rt):"";
+function bkPol(x,c,isNew){const ph=PH[bkKey(x)]||PH.me;const fe=(x.fe||[]).slice(0,3).join("");const hs=x.rt?"★".repeat(x.rt):"";
  return `<div class="pol${isNew?" drop":""}" style="--c1:${c[0]};--c2:${c[1]}"><span class="clip"></span><button type="button" class="pdel" id="bk-pdel" aria-label="Yorumu kaldır">✕</button>
   <div class="img">${ph?`<img src="${ph}" alt="">`:`<div class="cv"><b>${esc(x.t)}</b><i>${esc(x.a||"")}</i></div>`}${fe?`<span class="stk no-mi">${fe}</span>`:""}</div>
   <div class="txt">${esc(x.cm)}</div><div class="meta"><span>${esc((st.prof&&st.prof.name)||"Ben")} · ${new Date((x.cmd||dkey())+"T00:00").toLocaleDateString("tr-TR",{day:"numeric",month:"short"})}</span><span class="hs">${hs}</span></div></div>`;}
@@ -11271,7 +11286,8 @@ function bookOpen(i,anim,X){const L=klib(),x=X||L[i];if(!x)return;bkI=X?bkKey(x)
    <h4 style="margin-top:14px">Sana ne hissettirdi?</h4><div class="bk-fe">${BK_FE.map(([e,l])=>`<button type="button" data-fe="${e}" aria-pressed="${(x.fe||[]).includes(e)}"><span class="no-mi">${e}</span> ${l}</button>`).join("")}</div></section>
   <section class="bkp-sec"><h4>Okur ipi <small>polaroidini as 🧷</small></h4>
    ${x.cm?"":`<textarea class="bk-ta" id="bk-ta" maxlength="160" placeholder="Bu kitap için bir cümle… ör. 'Raif Efendi'yi hiç unutmayacağım.'">${esc(x.cmdraft||"")}</textarea>
-   <div class="bk-row"><button type="button" class="bk-hang" id="bk-hang"><span class="no-mi">🧷</span> ${PH.me?"Fotoğrafımla ipe as":"İpe as"}</button></div>`}
+   <div class="bk-pick">${(PH[bkKey(x)]||PH.me)?`<img src="${PH[bkKey(x)]||PH.me}" alt="">`:`<span class="no-mi">📚</span>`}<span>${PH[bkKey(x)]?"Galeriden seçtiğin fotoğraf":PH.me?"Profil fotoğrafın":"Kitabın kapağı"}</span><label for="bk-gal" class="bk-galb"><span class="no-mi">🖼</span> ${PH[bkKey(x)]?"Değiştir":"Galeriden seç"}</label>${PH[bkKey(x)]?`<button type="button" class="bk-galx" id="bk-galx">✕</button>`:""}<input type="file" accept="image/*" id="bk-gal" hidden></div>
+   <div class="bk-row"><button type="button" class="bk-hang" id="bk-hang"><span class="no-mi">🧷</span> İpe as</button></div>`}
    <div class="bk-line" id="bk-line">${x.cm?bkPol(x,c,anim==="hang"):""}${sbPolsHTML(x)}${[0,1,2,3].slice(0,Math.max(0,3-sbPolsCount(x))).map(()=>`<div class="pol empty"><span class="clip"></span><div class="img no-mi">👥</div><div class="txt">Diğer okurların polaroidleri buraya</div></div>`).join("")}</div><div class="bk-swipe">kaydır, diğerlerini gör <i>→</i></div>
    <p class="bk-soon" id="bk-soon">${sbPolsCount(x)?`🧷 Bu ipte ${sbPolsCount(x)+(x.cm?1:0)} okurun polaroidi var`:"🧷 Bu kitaba henüz kimse polaroid asmadı; ilk sen as!"}</p>
    ${x.cm?`<button type="button" class="bk-share" id="bk-share">Polaroidimi paylaş ↗</button>`:""}</section>
@@ -11296,6 +11312,8 @@ function bookOpen(i,anim,X){const L=klib(),x=X||L[i];if(!x)return;bkI=X?bkKey(x)
  O.querySelectorAll("[data-fe]").forEach(b=>b.onclick=()=>{const e=b.dataset.fe;x.fe=x.fe||[];x.fe=x.fe.includes(e)?x.fe.filter(y=>y!==e):[...x.fe,e].slice(-3);save();re();});
  const ta=g("bk-ta");if(ta)ta.oninput=()=>{x.cmdraft=ta.value;};
  const pf=g("bk-phf");if(pf)pf.onchange=()=>{const f=pf.files[0];if(!f)return;phRead(f,d=>{PH[bkKey(x)]=d;if(!phSave()){delete PH[bkKey(x)];alertSoft("Fotoğraf için yer kalmadı; daha küçük bir fotoğraf dener misin?");}save();re();},{w:720,h:720});};
+ const gl=g("bk-gal");if(gl)gl.onchange=()=>{const f=gl.files[0];if(!f)return;phRead(f,d=>{PH[bkKey(x)]=d;if(!phSave()){delete PH[bkKey(x)];alertSoft("Fotoğraf için yer kalmadı; daha küçük bir fotoğraf dener misin?");}re();},{w:720,h:576});};
+ const gx=g("bk-galx");if(gx)gx.onclick=()=>{delete PH[bkKey(x)];phSave();re();};
  const hg=g("bk-hang");if(hg)hg.onclick=()=>{const v=(ta.value||"").trim();if(!v){ta.focus();ta.placeholder="Önce bir cümle yaz, sonra asalım 🧷";return;}x.cm=v;x.cmd=dkey();delete x.cmdraft;if(!x.rs)x.rs="read";save();sbHang(x);try{sndPlay("bag");}catch(e){}if(navigator.vibrate)try{navigator.vibrate([20,40,20]);}catch(e){}re("hang");setTimeout(()=>{const l=g("bk-line");if(l)l.scrollIntoView({behavior:"smooth",block:"center"});},60);};
  const pd=g("bk-pdel");if(pd)pd.onclick=()=>{if(!pd.dataset.sure){pd.dataset.sure=1;pd.textContent="?";setTimeout(()=>{if(pd.isConnected){delete pd.dataset.sure;pd.textContent="✕";}},2500);return;}x.cmdraft=x.cm;delete x.cm;delete x.cmd;save();sbUnhang(x);re();};
  const sh=g("bk-share");if(sh)sh.onclick=()=>bkShare(x,c);
@@ -11306,12 +11324,12 @@ async function bkShare(x,c){try{await document.fonts.ready;}catch(e){}const W=10
  let gr=g.createRadialGradient(W/2,-100,50,W/2,H*.4,H);gr.addColorStop(0,"#F6C98E");gr.addColorStop(.45,"#FBEBD6");gr.addColorStop(1,"#F2D9BC");g.fillStyle=gr;g.fillRect(0,0,W,H);
  g.strokeStyle="#A8743F";g.lineWidth=5;g.beginPath();g.moveTo(0,190);g.quadraticCurveTo(W/2,240,W,190);g.stroke();
  g.save();g.translate(W/2,250);g.rotate(-.045);const pw=660,ph=900;g.shadowColor="rgba(0,0,0,.6)";g.shadowBlur=50;g.shadowOffsetY=30;g.fillStyle="#FBF7EE";g.fillRect(-pw/2,0,pw,ph);g.shadowColor="transparent";
- const ix=-pw/2+36,iy=36,iw=pw-72;const img=PH.me;
- if(img){const im=await new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src=img;});if(im){const s=Math.min(im.width,im.height);g.drawImage(im,(im.width-s)/2,(im.height-s)/2,s,s,ix,iy,iw,iw);}}
- else{const gg=g.createLinearGradient(ix,iy,ix+iw,iy+iw);gg.addColorStop(0,c[0]);gg.addColorStop(1,c[1]);g.fillStyle=gg;g.fillRect(ix,iy,iw,iw);g.fillStyle="#FFE7B0";g.textAlign="center";g.font='64px "DM Serif Display",serif';
-  const ws=x.t.split(" ");let ln=[],cur="";ws.forEach(w=>{const t=cur?cur+" "+w:w;if(g.measureText(t).width>iw-80){ln.push(cur);cur=w;}else cur=t;});ln.push(cur);ln.forEach((l,k)=>g.fillText(l,0,iy+iw/2-(ln.length-1)*38+k*76));g.font='800 26px "Nunito Sans",sans-serif';g.fillText((x.a||"").toLocaleUpperCase("tr-TR"),0,iy+iw/2+ln.length*40+30);}
- if(x.fe&&x.fe.length){g.font="64px serif";g.textAlign="right";g.fillText(x.fe.slice(0,3).join(""),ix+iw-14,iy+iw-20);}
- g.fillStyle="#2E2420";g.textAlign="left";g.font='54px "Allura",cursive';const ws2=("“"+x.cm+"”").split(" ");let l2=[],c2="";ws2.forEach(w=>{const t=c2?c2+" "+w:w;if(g.measureText(t).width>iw){l2.push(c2);c2=w;}else c2=t;});l2.push(c2);l2.slice(0,3).forEach((l,k)=>g.fillText(l,ix,iy+iw+64+k*52));
+ const ix=-pw/2+36,iy=36,iw=pw-72;const img=PH[bkKey(x)]||PH.me;
+ const ih=Math.round(iw*.8);if(img){const im=await new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src=img;});if(im){const ar=iw/ih;let sw=im.width,sh=sw/ar;if(sh>im.height){sh=im.height;sw=sh*ar;}g.drawImage(im,(im.width-sw)/2,(im.height-sh)/2,sw,sh,ix,iy,iw,ih);}}
+ else{const gg=g.createLinearGradient(ix,iy,ix+iw,iy+ih);gg.addColorStop(0,c[0]);gg.addColorStop(1,c[1]);g.fillStyle=gg;g.fillRect(ix,iy,iw,ih);g.fillStyle="#FFE7B0";g.textAlign="center";g.font='64px "DM Serif Display",serif';
+  const ws=x.t.split(" ");let ln=[],cur="";ws.forEach(w=>{const t=cur?cur+" "+w:w;if(g.measureText(t).width>iw-80){ln.push(cur);cur=w;}else cur=t;});ln.push(cur);ln.forEach((l,k)=>g.fillText(l,0,iy+ih/2-(ln.length-1)*38+k*76));g.font='800 26px "Nunito Sans",sans-serif';g.fillText((x.a||"").toLocaleUpperCase("tr-TR"),0,iy+ih/2+ln.length*40+30);}
+ if(x.fe&&x.fe.length){g.font="64px serif";g.textAlign="right";g.fillText(x.fe.slice(0,3).join(""),ix+iw-14,iy+ih-20);}
+ g.fillStyle="#2E2420";g.textAlign="left";g.font='54px "Allura",cursive';const ws2=("“"+x.cm+"”").split(" ");let l2=[],c2="";ws2.forEach(w=>{const t=c2?c2+" "+w:w;if(g.measureText(t).width>iw){l2.push(c2);c2=w;}else c2=t;});l2.push(c2);l2.slice(0,4).forEach((l,k)=>g.fillText(l,ix,iy+ih+64+k*52));
  g.font='800 24px "Nunito Sans",sans-serif';g.fillStyle="#8A6E5E";g.fillText(x.t+" · "+(x.a||""),ix,ph-40);g.textAlign="right";g.fillStyle="#D99A2B";g.fillText(x.rt?"★".repeat(x.rt):"",ix+iw,ph-40);
  g.fillStyle="#C08A55";g.fillRect(-14,-50,28,68);g.restore();
  g.fillStyle="#7A3A1E";g.textAlign="center";g.font='600 34px "Nunito Sans",sans-serif';g.fillText("Me First · Kitap köşem",W/2,H-80);g.font='500 28px "Nunito Sans",sans-serif';g.fillStyle="rgba(122,58,30,.6)";g.fillText("mefirst.app",W/2,H-38);
@@ -11403,7 +11421,7 @@ function sbJoin(){const P=sbPublic();if(P&&P.ok)return Promise.resolve(P);return
   const b=m.querySelector("#sb-go");b.textContent="Bağlanıyorum…";b.disabled=true;const S=await sbAuth();if(!S){b.textContent="Bağlanamadım; internetini kontrol et 🙏";b.disabled=false;return;}
   const av=useP?await sbAvatar():null;const r=await sbReq("POST","profiles?on_conflict=id",{id:S.uid,name:n,avatar:av},"resolution=merge-duplicates,return=minimal");
   if(r===null){b.textContent="Bir sorun çıktı, tekrar dener misin?";b.disabled=false;return;}const P={ok:1,name:n,photo:useP};try{localStorage.setItem("mf-sbp",JSON.stringify(P));}catch(e){}cl(P);};});}
-async function sbHang(x){const P=await sbJoin();if(!P)return;const r=await sbReq("POST","polaroids?on_conflict=book_key,user_id",{book_key:bkKey(x),book_title:x.t,book_author:x.a||"",body:x.cm,feelings:x.fe||[],hearts:x.rt||0},"resolution=merge-duplicates,return=minimal");
+async function sbHang(x){const P=await sbJoin();if(!P)return;const row={book_key:bkKey(x),book_title:x.t,book_author:x.a||"",body:x.cm,feelings:x.fe||[],hearts:x.rt||0};const gp=PH[bkKey(x)];if(gp)row.photo=await sbShrink(gp,420,.72);let r=await sbReq("POST","polaroids?on_conflict=book_key,user_id",row,"resolution=merge-duplicates,return=minimal");if(r===null&&row.photo){delete row.photo;r=await sbReq("POST","polaroids?on_conflict=book_key,user_id",row,"resolution=merge-duplicates,return=minimal");}
  if(r!==null){x.sbs=1;save();(x.q||[]).filter(q=>!q.sid).forEach(q=>sbQuote(x,q,1));}}
 async function sbUnhang(x){const S=sbSess();if(!S||!x.sbs)return;await sbReq("DELETE",`polaroids?book_key=eq.${encodeURIComponent(bkKey(x))}&user_id=eq.${S.uid}`);x.sbs=0;save();}
 async function sbQuote(x,q,silent){const P=sbPublic();if(!P||!P.ok)return;const r=await sbReq("POST","quotes",{book_key:bkKey(x),book_title:x.t,book_author:x.a||"",body:q.t,page:q.p||""},"return=representation");if(r&&r[0]){q.sid=r[0].id;save();}}
@@ -11411,7 +11429,7 @@ async function sbQuote(x,q,silent){const P=sbPublic();if(!P||!P.ok)return;const 
 const SB_BK={};
 function sbPolsCount(x){const L=SB_BK[bkKey(x)];return L?L.list.length:0;}
 function sbPolsHTML(x){const L=SB_BK[bkKey(x)];if(!L)return "";return L.list.map((p,k)=>{const c=bkCol(p.book_title);const liked=L.mine.has(p.id);
- return `<div class="pol oth" data-sbp="${k}" style="--c1:${c[0]};--c2:${c[1]}"><span class="clip"></span><div class="img">${p.avatar?`<img src="${p.avatar}" alt="">`:`<div class="cv"><b>${esc(p.book_title)}</b><i>${esc(p.book_author||"")}</i></div>`}${(p.feelings||[]).length?`<span class="stk no-mi">${p.feelings.slice(0,3).join("")}</span>`:""}</div>
+ return `<div class="pol oth" data-sbp="${k}" style="--c1:${c[0]};--c2:${c[1]}"><span class="clip"></span><div class="img">${p.photo||p.avatar?`<img src="${p.photo||p.avatar}" alt="">`:`<div class="cv"><b>${esc(p.book_title)}</b><i>${esc(p.book_author||"")}</i></div>`}${(p.feelings||[]).length?`<span class="stk no-mi">${p.feelings.slice(0,3).join("")}</span>`:""}</div>
   <div class="txt">${esc(p.body)}</div>${p.hearts?`<div class="pst">${"★".repeat(p.hearts)}</div>`:""}<div class="meta"><span class="who">${esc(p.name||"Okur")}</span><span class="acts">${p.reply_count?`<span class="rc"><i class="no-mi">💬</i>${p.reply_count}</span>`:""}<button type="button" class="lk${liked?" on":""}" data-lk="${k}" aria-label="Beğen"><i class="no-mi">${liked?"❤️":"🤍"}</i>${p.like_count||""}</button></span></div></div>`;}).join("");}
 async function sbBookLoad(x,re){const k=bkKey(x);if(SB_BK[k]&&Date.now()-SB_BK[k].at<60000)return;SB_BK[k]=SB_BK[k]||{list:[],mine:new Set(),at:0};SB_BK[k].at=Date.now();
  const S=sbSess();const r=await sbReq("GET",`polaroid_feed?book_key=eq.${encodeURIComponent(k)}&order=like_count.desc,created_at.desc&limit=40`);if(!Array.isArray(r))return;
@@ -11469,6 +11487,8 @@ function sbReplies(pid,iOwn,onCount){const m=document.createElement("div");m.cla
 
 /* okur ipi bildirimi görüldüğünde okundu say, rozeti temizle */
 new MutationObserver(ms=>{ms.forEach(m=>m.addedNodes.forEach(n=>{if(n.id==="ktpop"&&SB_NOTI.length&&/Okur ipi/.test(n.textContent||"")){const ids=SB_NOTI.map(x=>x.id);SB_NOTI=[];sbBadge();sbReq("PATCH",`notifications?id=in.(${ids.join(",")})`,{read:true},"return=minimal");}}));}).observe(document.body,{childList:true});
+
+function sbShrink(src,W,q){return new Promise(res=>{const im=new Image();im.onload=()=>{const c=document.createElement("canvas"),k=Math.min(1,W/im.width);c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext("2d").drawImage(im,0,0,c.width,c.height);res(c.toDataURL("image/jpeg",q));};im.onerror=()=>res(null);im.src=src;});}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
