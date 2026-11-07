@@ -5519,6 +5519,28 @@ html[data-mf="dusk"] .kdf .kdf-seg button{background:rgba(255,255,255,.06);color
 .sbm-c .go{width:100%;height:50px;border:0;border-radius:16px;font:inherit;font-size:15px;font-weight:800;color:#fff;background:linear-gradient(135deg,#E9A55A,#A8492A);cursor:pointer}
 .sbm-c .no{width:100%;margin-top:6px;height:40px;border:0;background:none;font:inherit;font-size:13px;font-weight:800;color:#A8492A;cursor:pointer}
 .bkz-act button{white-space:nowrap;display:inline-flex;align-items:center;gap:5px}
+
+/* v0.18.1 yıldız puan + yanıtlar */
+.bk-stars button{font-size:36px;color:#E2D3C0;filter:none!important;transform:none!important;animation:none!important;line-height:1}
+.bk-stars button.on{color:#E9A82B;text-shadow:0 2px 6px rgba(201,130,43,.35)}
+.pol .meta .hs{color:#D99A2B;letter-spacing:0;font-size:8px}
+.pol .pst{font-size:8px;color:#D99A2B;letter-spacing:.5px;margin:0 1px 1px}
+.pol .meta .acts{display:inline-flex;align-items:center;gap:4px;flex:none}
+.pol .rc{display:inline-flex;align-items:center;gap:1px;font-size:8.5px;font-weight:800;color:#7A5A8A}
+.pol .rc i{font-style:normal;font-size:9px}
+.bkz .pol .pst,.bkz .pol .meta .hs{font-size:15px}.bkz .pol .rc{font-size:14px}.bkz .pol .rc i{font-size:16px}
+.bkz-act button.rp{padding:10px 13px}
+.rps{max-height:52vh;overflow-y:auto;margin:0 -4px 12px;padding:0 4px;display:flex;flex-direction:column;gap:10px}
+.rp-i{display:flex;gap:10px;align-items:flex-start}
+.rp-i img,.rp-i .ra{width:36px;height:36px;border-radius:50%;object-fit:cover;flex:none;background:#FBE7D0;display:grid;place-items:center;font-size:16px}
+.rp-i .rb{flex:1;min-width:0;background:#fff;border:1px solid rgba(201,130,43,.2);border-radius:4px 16px 16px 16px;padding:8px 11px}
+.rp-i .rb b{font-size:12.5px;color:#A8492A}.rp-i .rb small{font-size:10.5px;color:#9A7A6A;margin-left:6px}
+.rp-i .rb p{margin:2px 0 0;font-size:14px;line-height:1.4;color:#3A1E14;word-break:break-word}
+.rp-i .rx{border:0;background:none;color:#9A7A6A;font-size:13px;cursor:pointer;padding:4px}
+.rp-e{text-align:center;font-size:13.5px;color:#9A6A4A;padding:14px 4px}
+.rp-f{display:flex;gap:8px}
+.rp-f input{flex:1;min-width:0;font:inherit;font-size:16px;height:48px;border-radius:14px;border:1px solid rgba(201,130,43,.35);background:#fff;padding:0 14px;color:#3A1E14}
+.rp-f button{flex:none;height:48px;border:0;border-radius:14px;padding:0 16px;font:inherit;font-weight:800;color:#fff;background:linear-gradient(135deg,#E9A55A,#A8492A);cursor:pointer}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -11218,7 +11240,7 @@ function bkKey(x){return "bk_"+((x.t||"")+"|"+(x.a||"")).toLocaleLowerCase("tr-T
 let bkI=-1;
 function bkClose(fromPop){const O=document.getElementById("bkp");if(!O)return;O.classList.remove("on");document.body.style.overflow="";setTimeout(()=>O.remove(),380);if(!fromPop)try{if(history.state&&history.state.bkp)history.back();}catch(e){}}
 window.bkClose=bkClose;
-function bkPol(x,c,isNew){const ph=PH.me;const fe=(x.fe||[]).slice(0,3).join("");const hs=x.rt?"♥".repeat(x.rt):"";
+function bkPol(x,c,isNew){const ph=PH.me;const fe=(x.fe||[]).slice(0,3).join("");const hs=x.rt?"★".repeat(x.rt):"";
  return `<div class="pol${isNew?" drop":""}" style="--c1:${c[0]};--c2:${c[1]}"><span class="clip"></span><button type="button" class="pdel" id="bk-pdel" aria-label="Yorumu kaldır">✕</button>
   <div class="img">${ph?`<img src="${ph}" alt="">`:`<div class="cv"><b>${esc(x.t)}</b><i>${esc(x.a||"")}</i></div>`}${fe?`<span class="stk no-mi">${fe}</span>`:""}</div>
   <div class="txt">${esc(x.cm)}</div><div class="meta"><span>${esc((st.prof&&st.prof.name)||"Ben")} · ${new Date((x.cmd||dkey())+"T00:00").toLocaleDateString("tr-TR",{day:"numeric",month:"short"})}</span><span class="hs">${hs}</span></div></div>`;}
@@ -11233,11 +11255,11 @@ function bookOpen(i,anim,X){const L=klib(),x=X||L[i];if(!x)return;bkI=X?bkKey(x)
  O.innerHTML=`<div class="bkp-dust">${dust}</div><div class="bkp-in">
   <div class="bkp-top"><button type="button" id="bk-x">← ${inLib?"Kütüphanem":"Geri"}</button>${inLib?`<button type="button" id="bk-lend">${x.k==="bor"?"📥 Emanet":"📤 Ödünç"}</button>`:""}</div>
   <div class="bk3-wrap"><div class="bk3" style="--c1:${c[0]};--c2:${c[1]}"><span class="sp"></span><span class="pg"></span><div class="fc${bkInfoGet(x)&&bkInfoGet(x).img?" hasimg":""}">${bkInfoGet(x)&&bkInfoGet(x).img?`<img class="fci" src="${bkInfoGet(x).img}" alt="" onerror="this.parentNode.classList.remove('hasimg');this.remove()">`:""}<b>${esc(x.t)}</b><span class="orn">❦</span><i>${esc(x.a||"")}</i></div></div></div><div class="bk3-sh"></div>
-  <div class="bkp-h"><h2>${esc(x.t)}</h2><p>${esc(x.a||"")}</p><div class="bkp-chips"><span>${where}</span>${x.rt?`<span>${"♥".repeat(x.rt)} senin puanın</span>`:""}${Q.length?`<span>✍️ ${Q.length} alıntı</span>`:""}</div></div>
+  <div class="bkp-h"><h2>${esc(x.t)}</h2><p>${esc(x.a||"")}</p><div class="bkp-chips"><span>${where}</span>${x.rt?`<span>${"★".repeat(x.rt)} senin puanın</span>`:""}${Q.length?`<span>✍️ ${Q.length} alıntı</span>`:""}</div></div>
   <section class="bkp-sec bk-info" id="bk-info">${bkInfoHTML(x)}</section>
   <section class="bkp-sec"><h4>Okuma durumun</h4><div class="bk-rs">${[["read","📚","Okudum"],["reading","📖","Okuyorum"],["want","💝","Okuyacağım"]].map(([k,e,l])=>`<button type="button" data-rs="${k}" aria-pressed="${x.rs===k}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div>
    ${x.rs==="reading"?`<div class="bk-prog"><span>%${x.pr||0}</span><input type="range" min="0" max="100" step="5" value="${x.pr||0}" id="bk-pr"><span>📖</span></div>`:""}</section>
-  <section class="bkp-sec"><h4>Kalbin ne diyor? <small>${x.rt?"değiştirmek için dokun":"dokun, puanla"}</small></h4><div class="bk-hearts">${[1,2,3,4,5].map(n=>`<button type="button" data-ht="${n}" class="${(x.rt||0)>=n?"on":""}" aria-label="${n} kalp"><span class="no-mi">❤️</span></button>`).join("")}</div><p class="bk-hl">${BK_HL[x.rt||0]}</p>
+  <section class="bkp-sec"><h4>Puanın <small>${x.rt?"değiştirmek için dokun":"dokun, puanla"}</small></h4><div class="bk-hearts bk-stars">${[1,2,3,4,5].map(n=>`<button type="button" data-ht="${n}" class="${(x.rt||0)>=n?"on":""}" aria-label="${n} yıldız">★</button>`).join("")}</div><p class="bk-hl">${BK_HL[x.rt||0]}</p>
    <h4 style="margin-top:14px">Sana ne hissettirdi?</h4><div class="bk-fe">${BK_FE.map(([e,l])=>`<button type="button" data-fe="${e}" aria-pressed="${(x.fe||[]).includes(e)}"><span class="no-mi">${e}</span> ${l}</button>`).join("")}</div></section>
   <section class="bkp-sec"><h4>Okur ipi <small>polaroidini as 🧷</small></h4>
    ${x.cm?"":`<textarea class="bk-ta" id="bk-ta" maxlength="160" placeholder="Bu kitap için bir cümle… ör. 'Raif Efendi'yi hiç unutmayacağım.'">${esc(x.cmdraft||"")}</textarea>
@@ -11262,7 +11284,7 @@ function bookOpen(i,anim,X){const L=klib(),x=X||L[i];if(!x)return;bkI=X?bkKey(x)
  if(g("bk-own"))g("bk-own").onclick=()=>addL("own");if(g("bk-wish"))g("bk-wish").onclick=()=>addL("wish");
  O.querySelectorAll("[data-rs]").forEach(b=>b.onclick=()=>{const v=b.dataset.rs;x.rs=x.rs===v?"":v;if(x.rs==="read"&&!x.rdd)x.rdd=dkey();save();re();if(x.rs==="read")try{mfConfetti("Bir kitap daha bitti! 📚",KT_C,"linear-gradient(135deg,#C9822B,#A8492A)");}catch(e){}});
  const pr=g("bk-pr");if(pr)pr.oninput=()=>{x.pr=+pr.value;pr.previousElementSibling.textContent="%"+x.pr;};if(pr)pr.onchange=()=>{save();if(x.pr>=100){x.rs="read";x.rdd=dkey();save();re();}};
- O.querySelectorAll("[data-ht]").forEach(b=>b.onclick=()=>{const n=+b.dataset.ht;x.rt=x.rt===n?0:n;save();re();try{sndPlay("bag");}catch(e){}const nb=O.querySelector(`[data-ht="${n}"]`);if(nb)nb.classList.add("pop");});
+ O.querySelectorAll("[data-ht]").forEach(b=>b.onclick=()=>{const n=+b.dataset.ht;x.rt=x.rt===n?0:n;save();re();try{sndPlay("bag");}catch(e){}});
  O.querySelectorAll("[data-fe]").forEach(b=>b.onclick=()=>{const e=b.dataset.fe;x.fe=x.fe||[];x.fe=x.fe.includes(e)?x.fe.filter(y=>y!==e):[...x.fe,e].slice(-3);save();re();});
  const ta=g("bk-ta");if(ta)ta.oninput=()=>{x.cmdraft=ta.value;};
  const pf=g("bk-phf");if(pf)pf.onchange=()=>{const f=pf.files[0];if(!f)return;phRead(f,d=>{PH[bkKey(x)]=d;if(!phSave()){delete PH[bkKey(x)];alertSoft("Fotoğraf için yer kalmadı; daha küçük bir fotoğraf dener misin?");}save();re();},{w:720,h:720});};
@@ -11282,7 +11304,7 @@ async function bkShare(x,c){try{await document.fonts.ready;}catch(e){}const W=10
   const ws=x.t.split(" ");let ln=[],cur="";ws.forEach(w=>{const t=cur?cur+" "+w:w;if(g.measureText(t).width>iw-80){ln.push(cur);cur=w;}else cur=t;});ln.push(cur);ln.forEach((l,k)=>g.fillText(l,0,iy+iw/2-(ln.length-1)*38+k*76));g.font='800 26px "Nunito Sans",sans-serif';g.fillText((x.a||"").toLocaleUpperCase("tr-TR"),0,iy+iw/2+ln.length*40+30);}
  if(x.fe&&x.fe.length){g.font="64px serif";g.textAlign="right";g.fillText(x.fe.slice(0,3).join(""),ix+iw-14,iy+iw-20);}
  g.fillStyle="#2E2420";g.textAlign="left";g.font='54px "Allura",cursive';const ws2=("“"+x.cm+"”").split(" ");let l2=[],c2="";ws2.forEach(w=>{const t=c2?c2+" "+w:w;if(g.measureText(t).width>iw){l2.push(c2);c2=w;}else c2=t;});l2.push(c2);l2.slice(0,3).forEach((l,k)=>g.fillText(l,ix,iy+iw+64+k*52));
- g.font='800 24px "Nunito Sans",sans-serif';g.fillStyle="#8A6E5E";g.fillText(x.t+" · "+(x.a||""),ix,ph-40);g.textAlign="right";g.fillStyle="#E2465E";g.fillText(x.rt?"♥".repeat(x.rt):"",ix+iw,ph-40);
+ g.font='800 24px "Nunito Sans",sans-serif';g.fillStyle="#8A6E5E";g.fillText(x.t+" · "+(x.a||""),ix,ph-40);g.textAlign="right";g.fillStyle="#D99A2B";g.fillText(x.rt?"★".repeat(x.rt):"",ix+iw,ph-40);
  g.fillStyle="#C08A55";g.fillRect(-14,-50,28,68);g.restore();
  g.fillStyle="#7A3A1E";g.textAlign="center";g.font='600 34px "Nunito Sans",sans-serif';g.fillText("Me First · Kitap köşem",W/2,H-80);g.font='500 28px "Nunito Sans",sans-serif';g.fillStyle="rgba(122,58,30,.6)";g.fillText("mefirst.app",W/2,H-38);
  cv.toBlob(async b=>{if(!b)return;const f=new File([b],"polaroid.png",{type:"image/png"});try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],text:`"${x.t}" · ${x.cm} 📚 #MeFirst`});return;}}catch(e){if(e&&e.name==="AbortError")return;}
@@ -11382,12 +11404,12 @@ const SB_BK={};
 function sbPolsCount(x){const L=SB_BK[bkKey(x)];return L?L.list.length:0;}
 function sbPolsHTML(x){const L=SB_BK[bkKey(x)];if(!L)return "";return L.list.map((p,k)=>{const c=bkCol(p.book_title);const liked=L.mine.has(p.id);
  return `<div class="pol oth" data-sbp="${k}" style="--c1:${c[0]};--c2:${c[1]}"><span class="clip"></span><div class="img">${p.avatar?`<img src="${p.avatar}" alt="">`:`<div class="cv"><b>${esc(p.book_title)}</b><i>${esc(p.book_author||"")}</i></div>`}${(p.feelings||[]).length?`<span class="stk no-mi">${p.feelings.slice(0,3).join("")}</span>`:""}</div>
-  <div class="txt">${esc(p.body)}</div><div class="meta"><span class="who">${esc(p.name||"Okur")}</span><button type="button" class="lk${liked?" on":""}" data-lk="${k}" aria-label="Beğen"><i class="no-mi">${liked?"❤️":"🤍"}</i>${p.like_count||""}</button></div></div>`;}).join("");}
+  <div class="txt">${esc(p.body)}</div>${p.hearts?`<div class="pst">${"★".repeat(p.hearts)}</div>`:""}<div class="meta"><span class="who">${esc(p.name||"Okur")}</span><span class="acts">${p.reply_count?`<span class="rc"><i class="no-mi">💬</i>${p.reply_count}</span>`:""}<button type="button" class="lk${liked?" on":""}" data-lk="${k}" aria-label="Beğen"><i class="no-mi">${liked?"❤️":"🤍"}</i>${p.like_count||""}</button></span></div></div>`;}).join("");}
 async function sbBookLoad(x,re){const k=bkKey(x);if(SB_BK[k]&&Date.now()-SB_BK[k].at<60000)return;SB_BK[k]=SB_BK[k]||{list:[],mine:new Set(),at:0};SB_BK[k].at=Date.now();
  const S=sbSess();const r=await sbReq("GET",`polaroid_feed?book_key=eq.${encodeURIComponent(k)}&order=like_count.desc,created_at.desc&limit=40`);if(!Array.isArray(r))return;
  const me=(sbSess()||{}).uid;const list=r.filter(p=>p.user_id!==me);let mine=new Set();
  if(me&&list.length){const L=await sbReq("GET",`likes?select=polaroid_id&user_id=eq.${me}&polaroid_id=in.(${list.map(p=>p.id).join(",")})`);if(Array.isArray(L))mine=new Set(L.map(l=>l.polaroid_id));}
- const mineRow=r.find(p=>p.user_id===me);if(mineRow)x.sbLikes=mineRow.like_count;
+ const mineRow=r.find(p=>p.user_id===me);if(mineRow){x.sbLikes=mineRow.like_count;x.sbid=mineRow.id;x.sbRep=mineRow.reply_count||0;}
  SB_BK[k]={list,mine,at:Date.now()};if(document.getElementById("bkp")&&(list.length||mineRow))re();}
 function sbToggleLike(x,k,re){const L=SB_BK[bkKey(x)];if(!L)return;const p=L.list[k];if(!p)return;const me=(sbSess()||{}).uid;if(!me){sbJoin().then(P=>{if(P)sbToggleLike(x,k,re);});return;}
  if(L.mine.has(p.id)){L.mine.delete(p.id);p.like_count=Math.max(0,(p.like_count||1)-1);sbReq("DELETE",`likes?polaroid_id=eq.${p.id}&user_id=eq.${me}`);}
@@ -11395,27 +11417,45 @@ function sbToggleLike(x,k,re){const L=SB_BK[bkKey(x)];if(!L)return;const p=L.lis
  re();}
 function sbBindLine(O,x,re){O.querySelectorAll("[data-lk]").forEach(b=>b.onclick=e=>{e.stopPropagation();sbToggleLike(x,+b.dataset.lk,re);});
  O.querySelectorAll(".pol.oth").forEach(pl=>pl.addEventListener("click",e=>{if(e.target.closest(".lk"))return;const k=+pl.dataset.sbp;setTimeout(()=>{const Z=document.querySelector(".bkz");if(!Z)return;const L=SB_BK[bkKey(x)],p=L&&L.list[k];if(!p)return;
-   const a=document.createElement("div");a.className="bkz-act";const liked=()=>L.mine.has(p.id);a.innerHTML=`<button type="button" class="lkb${liked()?" on":""}">${liked()?"❤️ Beğendin":"🤍 Beğen"}</button><button type="button" class="rp">🚩 Şikâyet et</button>`;Z.appendChild(a);
+   const a=document.createElement("div");a.className="bkz-act";const liked=()=>L.mine.has(p.id);a.innerHTML=`<button type="button" class="lkb${liked()?" on":""}">${liked()?"❤️ Beğendin":"🤍 Beğen"}</button><button type="button" class="rpl">💬 Yanıtla${p.reply_count?" · "+p.reply_count:""}</button><button type="button" class="rp">🚩</button>`;Z.appendChild(a);
+   a.querySelector(".rpl").onclick=ev=>{ev.stopPropagation();Z.remove();sbReplies(p.id,false,n=>{p.reply_count=n;re();});};
    a.querySelector(".lkb").onclick=ev=>{ev.stopPropagation();sbToggleLike(x,k,re);const on=liked();ev.target.classList.toggle("on",on);ev.target.textContent=on?"❤️ Beğendin":"🤍 Beğen";};
-   a.querySelector(".rp").onclick=async ev=>{ev.stopPropagation();if(!ev.target.dataset.sure){ev.target.dataset.sure=1;ev.target.textContent="Emin misin? Tekrar dokun";return;}await sbReq("POST","reports",{polaroid_id:p.id},"return=minimal");ev.target.textContent="Teşekkürler, inceleyeceğiz 🙏";ev.target.disabled=true;L.list.splice(k,1);setTimeout(()=>{Z.click();re();},900);};},30);}));
- const mine=O.querySelector("#bk-line .pol:not(.empty):not(.oth) .meta .hs");if(mine&&x.sbLikes)mine.insertAdjacentHTML("afterend",`<span class="lk on" style="pointer-events:none"><i class="no-mi">❤️</i>${x.sbLikes}</span>`);
+   a.querySelector(".rp").onclick=async ev=>{ev.stopPropagation();if(!ev.target.dataset.sure){ev.target.dataset.sure=1;ev.target.textContent="🚩 Şikâyet et? Tekrar dokun";return;}await sbReq("POST","reports",{polaroid_id:p.id},"return=minimal");ev.target.textContent="Teşekkürler, inceleyeceğiz 🙏";ev.target.disabled=true;L.list.splice(k,1);setTimeout(()=>{Z.click();re();},900);};},30);}));
+ const mine=O.querySelector("#bk-line .pol:not(.empty):not(.oth) .meta .hs");if(mine&&(x.sbLikes||x.sbRep))mine.insertAdjacentHTML("afterend",`${x.sbRep?`<span class="rc"><i class="no-mi">💬</i>${x.sbRep}</span>`:""}${x.sbLikes?`<span class="lk on" style="pointer-events:none"><i class="no-mi">❤️</i>${x.sbLikes}</span>`:""}`);
+ const own=O.querySelector("#bk-line .pol:not(.empty):not(.oth)");if(own)own.addEventListener("click",e=>{if(e.target.closest(".pdel"))return;setTimeout(()=>{const Z=document.querySelector(".bkz");if(!Z||!x.sbid)return;const a=document.createElement("div");a.className="bkz-act";a.innerHTML=`<button type="button" class="rpl">💬 Yanıtlar${x.sbRep?" · "+x.sbRep:""}</button>`;Z.appendChild(a);a.querySelector(".rpl").onclick=ev=>{ev.stopPropagation();Z.remove();sbReplies(x.sbid,true,n=>{x.sbRep=n;re();});};},30);});
  /* eski, senkronlanmamış polaroidi yükle */
  if(x.cm&&!x.sbs&&sbPublic()&&sbPublic().ok)sbHang(x);}
 /* bildirimler */
 let SB_NOTI=[],SB_NOTI_AT=0;
 async function sbNotiPull(){const P=sbPublic();if(!P||!P.ok||!navigator.onLine)return;if(Date.now()-SB_NOTI_AT<4*60000)return;SB_NOTI_AT=Date.now();
  const r=await sbReq("GET","notifications?read=eq.false&order=created_at.desc&limit=30");if(Array.isArray(r))SB_NOTI=r;}
-function sbNotiCand(){if(!SB_NOTI.length)return null;const N=SB_NOTI;const likes=N.filter(n=>n.kind==="like"),pols=N.filter(n=>n.kind==="pol"),qs=N.filter(n=>n.kind==="quote");
- const top=pols[0]||likes[0]||qs[0];const uniq=a=>[...new Set(a.map(n=>n.actor))];let h,d;
- if(pols.length){const a=uniq(pols);h=`${esc(a[0])}${a.length>1?` ve ${a.length-1} okur daha`:""}<br><em>polaroid astı</em>`;d=`Senin yorum yaptığın <b>${esc(pols[0].book_title)}</b> ipine yeni bir polaroid asıldı 🧷`;}
+function sbNotiCand(){if(!SB_NOTI.length)return null;const N=SB_NOTI;const likes=N.filter(n=>n.kind==="like"),pols=N.filter(n=>n.kind==="pol"),qs=N.filter(n=>n.kind==="quote"),rps=N.filter(n=>n.kind==="reply"||n.kind==="reply2");
+ const top=rps[0]||pols[0]||likes[0]||qs[0];const uniq=a=>[...new Set(a.map(n=>n.actor))];let h,d;
+ if(rps.length){const a=uniq(rps);const mine=rps.some(n=>n.kind==="reply");h=`${esc(a[0])}${a.length>1?` ve ${a.length-1} okur daha`:""}<br><em>${mine?"polaroidine yanıt yazdı":"de yanıt yazdı"} 💬</em>`;d=`<b>${esc(rps[0].book_title)}</b> ${mine?"polaroidinin altında sohbet başladı.":"ipindeki sohbete yeni bir yanıt geldi."}`;if(likes.length)d+=`<br>Ayrıca polaroidin ${likes.length} beğeni aldı ❤️`;}
+ else if(pols.length){const a=uniq(pols);h=`${esc(a[0])}${a.length>1?` ve ${a.length-1} okur daha`:""}<br><em>polaroid astı</em>`;d=`Senin yorum yaptığın <b>${esc(pols[0].book_title)}</b> ipine yeni bir polaroid asıldı 🧷`;}
  else if(likes.length){h=`Polaroidin<br><em>${likes.length} beğeni aldı ❤️</em>`;d=`${uniq(likes).slice(0,3).map(esc).join(", ")} <b>${esc(likes[0].book_title)}</b> polaroidini beğendi.`;}
  else{const a=uniq(qs);h=`${esc(a[0])}<br><em>altını çizdi ✍️</em>`;d=`<b>${esc(qs[0].book_title)}</b> kitabından senin gibi bir cümlenin altını çizdi.`;}
- if(likes.length&&pols.length)d+=`<br>Ayrıca polaroidin ${likes.length} beğeni aldı ❤️`;
+ if(likes.length&&pols.length)if(!rps.length&&likes.length&&pols.length)d+=`<br>Ayrıca polaroidin ${likes.length} beğeni aldı ❤️`;
  const ids=N.map(n=>n.id);const done=()=>{SB_NOTI=[];sbReq("PATCH",`notifications?id=in.(${ids.join(",")})`,{read:true},"return=minimal");};
  return {id:"sbn:"+ids[0],p:70,cls:"pp-kt",k:"🧷 Okur ipi",leaves:1,h,d,a:[["Kitaba git 📖",()=>{done();bkFocus={t:"cm"};const tb=top.book_title,au=(N.find(n=>n.book_key===top.book_key)||{}).book_key||"";const L=klib();const j=L.findIndex(y=>bkKey(y)===top.book_key);if(j>=0)bookOpen(j);else{const K=kt();K.bkd=K.bkd||{};const o=Object.values(K.bkd).find(y=>bkKey(y)===top.book_key);if(o)bookOpen(-1,null,o);else bookOpenAny(tb,"");}}]],x:"Tamam 💛",onx:done};}
 (function(){const _c=mfPopCands;mfPopCands=function(){const L=_c.apply(this,arguments);try{const C=sbNotiCand();if(C&&!mfPopSeen()[C.id]&&mfPopOk(C)){L.push(C);L.sort((a,b)=>b.p-a.p);}}catch(e){}return L;};
  setTimeout(()=>sbNotiPull(),2500);setInterval(()=>{if(document.visibilityState==="visible")sbNotiPull();},5*60000);
  document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")sbNotiPull().then(()=>{try{if(step===0&&SB_NOTI.length)ktPop();}catch(e){}});});})();
+
+/* v0.18.1 polaroid yanıtları */
+function sbAgo(t){const m=Math.round((Date.now()-new Date(t))/6e4);return m<1?"şimdi":m<60?m+" dk":m<1440?Math.round(m/60)+" sa":Math.round(m/1440)+" gün";}
+function sbReplies(pid,iOwn,onCount){const m=document.createElement("div");m.className="sbm";m.innerHTML=`<div class="sbm-c"><h3>💬 Yanıtlar</h3><div class="rps" id="rps"><p class="rp-e">Yükleniyor…</p></div>
+ <div class="rp-f"><input type="text" id="rp-t" maxlength="300" placeholder="Bir yanıt yaz…" enterkeyhint="send"><button type="button" id="rp-s">Gönder</button></div><button type="button" class="no" id="rp-x">Kapat</button></div>`;
+ document.body.appendChild(m);const me=(sbSess()||{}).uid;let L=[];
+ const draw=()=>{const B=m.querySelector("#rps");if(!L.length){B.innerHTML=`<p class="rp-e">Henüz yanıt yok. İlk yanıtı sen yaz ✨</p>`;return;}
+  B.innerHTML=L.map((r,k)=>`<div class="rp-i">${r.avatar?`<img src="${r.avatar}" alt="">`:`<span class="ra no-mi">📚</span>`}<div class="rb"><b>${esc(r.name||"Okur")}</b><small>${sbAgo(r.created_at)}</small><p>${esc(r.body)}</p></div>${(r.user_id===me||iOwn)?`<button type="button" class="rx" data-rx="${k}" aria-label="Sil">✕</button>`:""}</div>`).join("");
+  B.scrollTop=B.scrollHeight;B.querySelectorAll("[data-rx]").forEach(b=>b.onclick=async()=>{if(!b.dataset.sure){b.dataset.sure=1;b.textContent="Sil?";return;}const r=L[+b.dataset.rx];L.splice(+b.dataset.rx,1);draw();onCount&&onCount(L.length);await sbReq("DELETE","polaroid_replies?id=eq."+r.id);});};
+ sbReq("GET",`reply_feed?polaroid_id=eq.${pid}&order=created_at.asc&limit=100`).then(r=>{L=Array.isArray(r)?r:[];if(!Array.isArray(r))m.querySelector("#rps").innerHTML=`<p class="rp-e">Yanıtlar yüklenemedi; internetini kontrol et 🙏</p>`;else draw();});
+ const close=()=>m.remove();m.querySelector("#rp-x").onclick=close;m.addEventListener("click",e=>{if(e.target===m)close();});
+ const send=async()=>{const t=m.querySelector("#rp-t"),v=t.value.trim();if(!v){t.focus();return;}const P=await sbJoin();if(!P)return;const b=m.querySelector("#rp-s");b.disabled=true;
+  const r=await sbReq("POST","polaroid_replies",{polaroid_id:pid,body:v},"return=representation");b.disabled=false;if(!r||!r[0]){b.textContent="Tekrar dene";return;}b.textContent="Gönder";
+  const pf=sbPublic()||{};L.push({id:r[0].id,user_id:(sbSess()||{}).uid,body:v,created_at:r[0].created_at,name:pf.name||"Ben",avatar:pf.photo?await sbAvatar():null});t.value="";draw();onCount&&onCount(L.length);try{sndPlay("bag");}catch(e){}};
+ m.querySelector("#rp-s").onclick=send;m.querySelector("#rp-t").addEventListener("keydown",e=>{if(e.key==="Enter")send();});}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
