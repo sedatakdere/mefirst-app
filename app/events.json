@@ -1,0 +1,40 @@
+{
+"updated":"2026-11-08",
+"note":"Me First imza günleri ve kitap fuarları. ev: [id,[yazarlar],YYYY-MM-DD,HH:MM,mekan,il]. fair: [ad,baslangic,bitis,yer,not,il]",
+"ev":[
+["e1", ["Mert Arık"], "2026-11-01", "13:00", "Samsun Kitap Fuarı", "Samsun"],
+["e2", ["Kemal Sayar"], "2026-11-01", "14:00", "Samsun Kitap Fuarı", "Samsun"],
+["e3", ["Sertaç Abi", "Oytun Erbaş"], "2026-11-01", "16:00", "Samsun Kitap Fuarı", "Samsun"],
+["e4", ["Adnan Demircan"], "2026-11-01", "13:00", "Malatya Kitap Fuarı", "Malatya"],
+["e5", ["Vehbi Vakkasoğlu"], "2026-11-01", "15:00", "Malatya Kitap Fuarı", "Malatya"],
+["e6", ["Altay Cem Meriç"], "2026-11-01", "14:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"],
+["e7", ["Birsen Ekim Özen"], "2026-11-01", "15:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"],
+["e8", ["Hatice Kübra Tongar"], "2026-11-01", "17:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"],
+["e9", ["Şermin Yaşar"], "2026-11-06", "14:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"],
+["e10", ["Kahraman Tazeoğlu"], "2026-11-07", "18:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"],
+["e11", ["Hatice Nur Ege"], "2026-11-08", "16:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"],
+["e12", ["Dilek Cesur"], "2026-11-08", "17:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"],
+["e13", ["Şükrü Erbaş"], "2026-11-11", "18:00", "Okur buluşması", "Kastamonu"],
+["e14", ["Figen Şakacı"], "2026-11-15", "15:00", "TESAK · Kadıköy", "İstanbul"],
+["e15", ["Ahmet Ümit"], "2026-11-03", "16:00", "Bartın 28. Kitap Fuarı", "Bartın"],
+["e16", ["Nurettin İlgi"], "2026-11-06", "15:00", "Bartın 28. Kitap Fuarı · söyleşi", "Bartın"],
+["e17", ["Işıl Işık"], "2026-11-07", "13:00", "Bartın 28. Kitap Fuarı", "Bartın"],
+["e18", ["Emre Gürlek"], "2026-11-07", "15:00", "Bartın 28. Kitap Fuarı", "Bartın"],
+["e19", ["Deniz Ergen"], "2026-11-07", "13:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"],
+["e20", ["Oytun Erbaş"], "2026-11-07", "14:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"],
+["e21", ["Mert Arık"], "2026-11-07", "15:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"],
+["e22", ["Nurullah Genç"], "2026-11-07", "16:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"],
+["e23", ["Vehbi Vakkasoğlu"], "2026-11-07", "17:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"],
+["e24", ["Yasin Pişgin"], "2026-11-07", "17:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"],
+["e25", ["Canten Kaya"], "2026-11-07", "17:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"],
+["e26", ["Sertaç Abi"], "2026-11-08", "14:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"],
+["e27", ["İsmail Hakkı Aydın"], "2026-11-08", "15:00", "İnegöl Kitap Günleri · Kültürpark Modef", "Bursa"]
+],
+"fair":[
+["Bartın 28. Kitap Fuarı", "2026-10-31", "2026-11-08", "Bartın", "Ahmet Ümit 3 Kasım 16:00'da", "Bartın"],
+["Aydın Kitap Fuarı", "2026-10-30", "2026-11-08", "Fuar Aydın · Efeler", "Giriş ücretsiz", "Aydın"],
+["Ümraniye Kitap Fuarı", "2026-11-21", "2026-11-29", "İstanbul", "Program yakında", "İstanbul"],
+["Şanlıurfa Kitap Fuarı", "2026-11-20", "2026-11-29", "Şanlıurfa", "Program yakında", "Şanlıurfa"],
+["43. TÜYAP İstanbul Kitap Fuarı", "2026-12-12", "2026-12-20", "TÜYAP Büyükçekmece", "Onur yazarı Latife Tekin · imza programı açıklanınca burada", "İstanbul"]
+]
+}
