@@ -5727,6 +5727,12 @@ html[data-mf="dusk"] .bk-info .bi-src,html[data-mf="dusk"] .bk-info .bi-ld{color
 html[data-mf="dusk"] .bk-info .bi-row small{color:#F2B98A!important;opacity:1}
 html[data-mf="dusk"] .bk-info .bi-m{color:#FFB98A}
 html[data-mf="dusk"] .bk-info h4{color:#F2B98A}
+
+.ktsh-tr>*{flex:0 0 100%!important;margin:0!important;scroll-snap-align:center;box-sizing:border-box}
+@keyframes jfol{0%{transform:scale(.7)}45%{transform:scale(1.18)}70%{transform:scale(.95)}100%{transform:scale(1)}}
+@keyframes jbell{0%,100%{transform:rotate(0)}20%{transform:rotate(22deg)}40%{transform:rotate(-18deg)}60%{transform:rotate(12deg)}80%{transform:rotate(-6deg)}}
+.kb2 .kbb.justfol{animation:jfol .5s cubic-bezier(.3,1.5,.5,1);background:#FFF0D2!important;box-shadow:inset 0 0 0 1.5px #E9A23B}
+.kb2 .kbb.justfol .kbi{animation:jbell .9s ease .15s;transform-origin:50% 15%}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -11912,8 +11918,10 @@ let ktLeft=null,ktWasIn=false;
  const lib=tr.querySelector(".lsh"),wsh=tr.querySelector(".wsh"),sh=[...tr.children].find(c=>c!==lib&&c!==wsh);if(lib&&wsh&&sh)tr.append(lib,wsh,sh);
  dots.innerHTML='<button type="button" aria-label="Kütüphanem"><i></i>Kütüphanem</button><button type="button" aria-label="İstek rafım"><i></i>İstek rafım</button><button type="button" aria-label="Okuma rafım"><i></i>Okuma rafım</button>';
  const set=i=>{ktShelfI=i;dots.querySelectorAll("button").forEach((b,j)=>b.classList.toggle("on",j===i));};
- dots.querySelectorAll("button").forEach((b,j)=>b.onclick=()=>tr.scrollTo({left:j*tr.clientWidth,behavior:"smooth"}));
- requestAnimationFrame(()=>{tr.scrollLeft=ktShelfI*tr.clientWidth;set(ktShelfI);});
+ const posOf=j=>{const el=tr.children[j];return el?el.offsetLeft-tr.children[0].offsetLeft:0;};
+ dots.querySelectorAll("button").forEach((b,j)=>b.onclick=()=>{tr.scrollTo({left:posOf(j),behavior:"smooth"});set(j);});
+ tr.addEventListener("scroll",()=>{clearTimeout(tr._st);tr._st=setTimeout(()=>{let best=0,bd=1e9;[...tr.children].forEach((c,j)=>{const d=Math.abs(posOf(j)-tr.scrollLeft);if(d<bd){bd=d;best=j;}});set(best);},80);},{passive:true});
+ requestAnimationFrame(()=>{tr.scrollLeft=posOf(ktShelfI);set(ktShelfI);});
  const t=sh&&sh.querySelector(".ktshelf-t strong");if(t&&/Rafın seni bekliyor/.test(t.textContent))t.textContent="Okuma rafım 📚";}catch(e){console.error(e);}};})();
 
 /* ===== Bugünün imza günleri: takip etmesen de, şehrinde olmasa da günde bir haber ===== */
@@ -12062,6 +12070,11 @@ function m3Walk(root){if(!root||root.nodeType!==1&&root.nodeType!==11)return;
 let m3Busy=false;
 new MutationObserver(ms=>{if(m3Busy)return;m3Busy=true;try{ms.forEach(m=>{if(m.type==="characterData"){if(m.target.parentElement)m3Walk(m.target.parentElement);return;}m.addedNodes.forEach(n=>{if(n.nodeType===1)m3Walk(n);else if(n.nodeType===3&&n.parentElement)m3Walk(n.parentElement);});});}finally{m3Busy=false;}}).observe(document.body,{childList:true,subtree:true,characterData:true});
 m3Walk(document.body);
+
+/* Yazarı takip: net geri bildirim */
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-kfol]");if(!b||b.dataset.fb)return;const a=b.dataset.kfol;if(!a||ktFollow(a))return;
+ setTimeout(()=>{if(!ktFollow(a))return;try{mfConfetti(`🔔 ${a} takipte!`,["#F2C46B","#E9A23B","#FFE2A8","#fff"],"linear-gradient(135deg,#E9A23B,#B7791F)");}catch(_){}
+  document.querySelectorAll("[data-kunf]").forEach(x=>{if(ktN(x.dataset.kunf)===ktN(a)){x.classList.remove("justfol");void x.offsetWidth;x.classList.add("justfol");}});},60);},true);
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
