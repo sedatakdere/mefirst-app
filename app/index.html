@@ -11898,6 +11898,21 @@ function trDeck(PS){const D=document.getElementById("trd");if(!D)return;const C=
     setTimeout(()=>{trDI=(trDI+(dx>0?n-1:1))%n;lay();},260);}else lay();};
   c.addEventListener("pointerup",end);c.addEventListener("pointercancel",()=>{drag=false;lay();});});
  if(N)N.onclick=()=>{trDI=(trDI+1)%n;lay();};}
+
+/* ===== v0.20.7: profil fotoğrafı topluluğa sonradan da gitsin ===== */
+function sbAvHash(){const s=PH.me||"";return s?s.length+":"+s.slice(-48):"";}
+async function sbAvSync(){const P=sbPublic(),S=sbSess();if(!P||!P.ok||!P.photo||!S||!PH.me||navigator.onLine===false)return;const h=sbAvHash();if(P.avh===h)return;
+ const av=await sbAvatar();if(!av)return;const r=await sbReq("PATCH",`profiles?id=eq.${S.uid}`,{avatar:av},"return=minimal");
+ if(r!==null){const Q=sbPublic()||P;Q.avh=h;try{localStorage.setItem("mf-sbp",JSON.stringify(Q));localStorage.removeItem("mf-trend");}catch(e){}Object.keys(SB_BK).forEach(k=>delete SB_BK[k]);}}
+function sbAvAsk(){const P=sbPublic();if(!P||!P.ok||P.photo||P.phAsk||!PH.me||document.querySelector(".sbm"))return;P.phAsk=1;try{localStorage.setItem("mf-sbp",JSON.stringify(P));}catch(e){}
+ const m=document.createElement("div");m.className="sbm";m.innerHTML=`<div class="sbm-c"><div class="av"><img src="${PH.me}" alt=""><div><h3>Fotoğrafın ipte görünsün mü?</h3></div></div>
+  <p>Kendi telefonunda polaroidlerinde fotoğrafın görünüyor, ama diğer okurlar şu an fotoğraf yerine kitabın adını görüyor. İstersen profil fotoğrafını topluluktaki polaroidlerine ekleyelim.</p>
+  <button type="button" class="go" id="sbav-y">Evet, görünsün 📸</button><button type="button" class="no" id="sbav-n">Hayır, kitap adı kalsın</button></div>`;
+ document.body.appendChild(m);m.querySelector("#sbav-n").onclick=()=>m.remove();
+ m.querySelector("#sbav-y").onclick=async()=>{const b=m.querySelector("#sbav-y");b.textContent="Ekliyorum…";b.disabled=true;const Q=sbPublic()||P;Q.photo=true;try{localStorage.setItem("mf-sbp",JSON.stringify(Q));}catch(e){}await sbAvSync();m.remove();};}
+setTimeout(()=>sbAvSync().catch(()=>{}),3500);
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")sbAvSync().catch(()=>{});});
+(function(){let asked=0;const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);if(!asked){asked=1;setTimeout(()=>{try{if(step===90)sbAvAsk();}catch(e){}},1600);}};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
