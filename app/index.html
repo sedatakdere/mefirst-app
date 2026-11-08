@@ -11828,9 +11828,9 @@ setTimeout(()=>{try{poolMine().slice(0,80).forEach(([t,a])=>poolTouch(t,a,"add")
 (function(){const _b=bookOpenAny;bookOpenAny=function(t,a){try{poolTouch(t,a||"","view");}catch(e){}return _b.apply(this,arguments);};
  const _l=libBookOpen;libBookOpen=function(i){try{const x=klib()[i];if(x)poolTouch(x.t,x.a||"","view");}catch(e){}return _l.apply(this,arguments);};})();
 function ktPoolInject(){const P=document.getElementById("ktpanel");if(!P||kttab!=="oneri")return;const o=document.getElementById("kt-pool");if(o)o.remove();
- const mine=new Set(poolMine().map(([t])=>ktN(t)));const L=(POOL.list||[]).filter(b=>b.adds>0&&!mine.has(ktN(b.title))).slice(0,12);if(L.length<2)return;
+ const mine=new Set(poolMine().map(([t])=>ktN(t)));const A=(POOL.list||[]).filter(b=>b.adds>0||b.views>0);const L=A.filter(b=>!mine.has(ktN(b.title))).concat(A.filter(b=>mine.has(ktN(b.title)))).slice(0,20);if(!L.length)return;
  const anchor=document.getElementById("kt-live");if(!anchor)return;
- anchor.insertAdjacentHTML("beforebegin",`<div id="kt-pool"><div class="kthead"><span>Me First ailesinin rafından 👭</span><small>${POOL.list.length} kitap</small></div><div class="ktrow">${L.map(b=>ktCard([[b.title,b.author||"",[],"","",""],0,`👭 ${b.adds} okurun rafında`])).join("")}</div></div>`);
+ anchor.insertAdjacentHTML("beforebegin",`<div id="kt-pool"><div class="kthead"><span>Me First ailesinin rafından 👭</span><small>${A.length} kitap</small></div><div class="ktrow">${L.map(b=>ktCard([[b.title,b.author||"",[],"","",""],0,mine.has(ktN(b.title))?(b.adds>1?`✓ Sende ve ${b.adds-1} okurda daha`:"✓ Senin rafından"):b.adds?`👭 ${b.adds} okurun rafında`:`👀 ${b.views} okur baktı`])).join("")}</div></div>`);
  ktBindBar(document.getElementById("kt-pool"));}
 (function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{ktPoolInject();}catch(e){}};})();
 setTimeout(()=>poolLoad(false).then(()=>{if(step===90)try{ktPoolInject();}catch(e){}}),1800);
