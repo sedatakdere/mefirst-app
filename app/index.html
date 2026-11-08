@@ -11568,7 +11568,7 @@ function bkInfoHTML(x){let I=bkInfoGet(x);const kb=KT_BOOKS.find(b=>ktN(b[0])===
   ${I.au?`<details class="bi-x bi-au"><summary>${I.auImg?`<img src="${I.auImg}" alt="">`:"✍️"} Yazar hakkında: ${esc(x.a||"")}</summary><p>${esc(I.au)}</p></details>`:""}
   ${(I.thin||!main)&&I.st&&I.st.gb&&I.st.gb!==200?`<p class="bi-warn">Kitap kaynağı şu an cevap vermedi (${esc(String(I.st.gb))}), bu yüzden bilgi kısa. <button type="button" id="bk-rt">Yeniden dene ↻</button></p>`:""}
   ${(I.isbn||I.src)?`<p class="bi-src">${I.isbn?"ISBN "+esc(I.isbn)+" · ":""}${I.src?"Kaynak: "+esc([].concat(I.src).join(", ")):""}</p>`:""}`;}
-function bkZoom(pl){const z=document.createElement("div");z.className="bkz";const c=pl.cloneNode(true);c.classList.remove("drop");z.appendChild(c);document.body.appendChild(z);try{sndPlay("bag");}catch(e){}z.onclick=()=>{z.style.opacity="0";z.style.transition="opacity .2s";setTimeout(()=>z.remove(),200);};}
+function bkZoom(pl){const z=document.createElement("div");z.className="bkz";const c=pl.cloneNode(true);c.classList.remove("drop");z.appendChild(c);document.body.appendChild(z);z.onclick=()=>{z.style.opacity="0";z.style.transition="opacity .2s";setTimeout(()=>z.remove(),200);};}
 
 /* v0.17.3 her yerde kitaba dokun → kitap sayfası */
 function bookOpenAny(t,a){if(!t)return;const L=klib(),j=L.findIndex(y=>ktN(y.t)===ktN(t)&&(!a||!y.a||ktN(y.a)===ktN(a)));if(j>=0){bookOpen(j);return;}
