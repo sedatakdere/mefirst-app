@@ -5639,6 +5639,23 @@ html[data-mf="dusk"] .trh-h strong{color:#FFE2B8}html[data-mf="dusk"] .trh-b str
 
 .ksr-rt{margin-left:6px;border:0;background:#A8492A;color:#fff;font-weight:800;font-size:12px;border-radius:999px;padding:4px 10px}
 #kt-trh .trh{margin:0 0 16px}
+
+/* v0.20 kapaklar, aile kütüphanesi, sade arama */
+[data-cvt]{position:relative;overflow:hidden}
+img.cvimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:4;border-radius:inherit;opacity:0;transition:opacity .35s}
+.hascv>img.cvimg{opacity:1}
+.ktc.hascv>b,.ktc.hascv>small,.trc.hascv>b,.trc.hascv>i,.mini.hascv>b,.mini.hascv>small,.cv.hascv>b,.im.hascv>b{visibility:hidden}
+.ktc.hascv::after{content:"";position:absolute;inset:0;z-index:5;background:linear-gradient(90deg,rgba(0,0,0,.22),rgba(255,255,255,.08) 7%,transparent 14%);pointer-events:none}
+.bk-au .mini{border:0;cursor:pointer;font:inherit;text-align:left}
+.bk-au .mini:active{transform:scale(.96)}
+.ktsr{margin:0 0 10px}
+.ktsr-i{padding:0 4px 0 12px;border-radius:999px;border:1px solid rgba(201,130,43,.28);box-shadow:none;background:rgba(255,255,255,.7);gap:6px}
+.ktsr-i:focus-within{box-shadow:0 0 0 3px rgba(168,73,42,.1);background:#fff}
+.ktsr-i span{font-size:13px;opacity:.65}
+.ktsr-i input{padding:8px 0;font-size:14px}
+.ktsr-i button{width:24px;height:24px;font-size:13px}
+.ktlvau{font-size:11px;font-weight:800;color:#B5486E;background:rgba(181,72,110,.1);border-radius:999px;padding:2px 8px}
+.trh-b .rk{z-index:6}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -8984,7 +9001,7 @@ function ktScore(b){const K=kt();let s=0,why="";
 function ktRecs(){const K=kt();return KT_BOOKS.filter(b=>!ktOnShelf(b[0])&&!K.fav.map(ktN).includes(ktN(b[0]))).map(b=>[b,...ktScore(b)]).sort((a,b)=>b[1]-a[1]);}
 const KT_COL=[["#B5532D","#E9A55A"],["#6B7A3A","#C8B45A"],["#8C3B2E","#D9824A"],["#4F5D3A","#B98A3C"],["#9A4A2C","#F0C27A"],["#5C3A2E","#C47A4C"]];
 function ktCover(t,a,big){let h=0;for(const c of t)h=(h*31+c.charCodeAt(0))>>>0;const c=KT_COL[h%KT_COL.length];
-  return `<span class="ktc${big?" big":""}" style="--c1:${c[0]};--c2:${c[1]}" aria-hidden="true"><i></i><b lang="tr">${esc(trHyph(t.length>34?t.slice(0,32)+"…":t))}</b><small>${esc(a)}</small></span>`;}
+  return `<span class="ktc${big?" big":""}" data-cvt="${esc(t)}" data-cva="${esc(a||"")}" style="--c1:${c[0]};--c2:${c[1]}" aria-hidden="true"><i></i><b lang="tr">${esc(trHyph(t.length>34?t.slice(0,32)+"…":t))}</b><small>${esc(a)}</small></span>`;}
 function ktCard(r,feat){const b=r[0];const pub=[b[3],b[4]?new Date(b[4]+"-01T00:00").toLocaleDateString("tr-TR",{month:"long",year:"numeric"}):""].filter(Boolean).join(" · ");const fol=ktFollow(b[1]);
   return `<div class="ktb${feat?" feat":""}">${ktCover(b[0],b[1],feat)}<div class="ktb-i">${b[4]?'<span class="ktnew">Yeni 🥐</span>':""}<strong>${esc(b[0])}</strong><span class="ktau">${esc(b[1])}</span>${pub?`<small class="ktpub">${esc(pub)}</small>`:""}
     ${feat?`<p class="ktnote">${esc(b[5])}</p>`:""}<em class="ktwhy">${esc(r[2])}</em>
@@ -11422,7 +11439,7 @@ function bookOpen(i,anim,X){const L=klib(),x=X||L[i];if(!x)return;bkI=X?bkKey(x)
  let dust="";for(let k=0;k<16;k++)dust+=`<b style="--x:${Math.round(Math.random()*100)}%;--y:${Math.round(30+Math.random()*60)}%;--s:${(1.5+Math.random()*2.5).toFixed(1)}px;--t:${(5+Math.random()*6).toFixed(1)}s;--d:${(-Math.random()*8).toFixed(1)}s;--w:${Math.round(Math.random()*40-20)}px"></b>`;
  const Q=x.q||[];
  O.innerHTML=`<div class="bkp-dust">${dust}</div><div class="bkp-in">
-  <div class="bkp-top"><button type="button" id="bk-x">← ${inLib?"Kütüphanem":"Geri"}</button>${inLib?`<button type="button" id="bk-lend">${x.k==="bor"?"📥 Emanet":"📤 Ödünç"}</button>`:""}</div>
+  <div class="bkp-top"><button type="button" id="bk-x">← Kitap köşem</button>${inLib?`<button type="button" id="bk-lend">${x.k==="bor"?"📥 Emanet":"📤 Ödünç"}</button>`:""}</div>
   <div class="bk3-wrap"><div class="bk3" style="--c1:${c[0]};--c2:${c[1]}"><span class="sp"></span><span class="pg"></span><div class="fc${bkInfoGet(x)&&bkInfoGet(x).img?" hasimg":""}">${bkInfoGet(x)&&bkInfoGet(x).img?`<img class="fci" src="${bkInfoGet(x).img}" alt="" onerror="this.parentNode.classList.remove('hasimg');this.remove()">`:""}<b>${esc(x.t)}</b><span class="orn">❦</span><i>${esc(x.a||"")}</i></div></div></div><div class="bk3-sh"></div>
   <div class="bkp-h"><h2>${esc(x.t)}</h2><p>${esc(x.a||"")}</p><div class="bkp-chips"><span>${where}</span>${x.rt?`<span>${"★".repeat(x.rt)} senin puanın</span>`:""}${Q.length?`<span>✍️ ${Q.length} alıntı</span>`:""}</div></div>
   <section class="bkp-sec bk-info" id="bk-info">${bkInfoHTML(x)}</section>
@@ -11439,7 +11456,7 @@ function bookOpen(i,anim,X){const L=klib(),x=X||L[i];if(!x)return;bkI=X?bkKey(x)
    ${x.cm?`<button type="button" class="bk-share" id="bk-share">Polaroidimi paylaş ↗</button>`:""}</section>
   <section class="bkp-sec"><h4>Altını çizdiklerim <small>${Q.length||""}</small></h4><div class="bk-qs">${Q.map((q,k)=>`<div class="bk-q" data-qi="${k}">“${esc(q.t)}”<small>${q.p?"s. "+esc(q.p)+" · ":""}${esc(x.t)}</small><button type="button" data-qx="${k}" aria-label="Sil">✕</button></div>`).join("")}</div>
    <div class="bk-qa"><input id="bk-qt" type="text" maxlength="220" placeholder="Bir cümle yaz…"><input id="bk-qp" class="pgn" type="text" inputmode="numeric" maxlength="4" placeholder="Sayfa"><button type="button" id="bk-qadd">Ekle</button></div></section>
-  ${(other.length||evs.length)?`<section class="bkp-sec"><h4>${esc(x.a||"Yazar")} köşesi</h4>${other.length?`<div class="bk-au">${other.map(b=>{const cc=bkCol(b[0]);return `<div class="mini" style="--c1:${cc[0]};--c2:${cc[1]}"><b>${esc(b[0])}</b><small>${esc(b[3]||"")}</small></div>`;}).join("")}</div>`:""}
+  ${(x.a||other.length||evs.length)?`<section class="bkp-sec"><h4>${esc(x.a||"Yazar")} köşesi</h4>${x.a||other.length?`<div class="bk-au" data-aul="${esc(x.a||"")}" data-aut="${esc(x.t)}">${other.map(b=>{const cc=trCol(b[0]);return `<button type="button" class="mini" data-bt="${esc(b[0])}" data-ba="${esc(b[1])}" data-cvt="${esc(b[0])}" data-cva="${esc(b[1])}" style="--c1:${cc[0]};--c2:${cc[1]}"><b>${esc(b[0])}</b><small>${esc(b[3]||"")}</small></button>`;}).join("")}</div>`:""}
    ${evs.map(e=>`<div class="bk-ev"><span class="no-mi">✍️</span><span><b>${esc(e[1].join(" & "))}</b> imza gününde · ${e[3]} · ${esc(e[5])} ${typeof ktNearB==="function"?ktNearB(e):""}</span></div>`).join("")}</section>`:""}
   ${inLib?`<button type="button" class="bk-more" id="bk-lend2">${x.k==="bor"?"📥 Emanet işlemleri":"📤 Ödünç ver / geri al · kütüphaneden çıkar"}</button>`:`<div class="bk-row" style="margin-top:14px"><button type="button" class="bk-hang" id="bk-own"><span class="no-mi">📚</span> Rafıma koy</button><button type="button" class="bk-ph" id="bk-wish"><span class="no-mi">💝</span> Keşke benim olsa</button></div>`}
  </div>`;
@@ -11511,7 +11528,7 @@ function bkInfoFetch(x){const k=bkKey(x);if(_bkPend[k])return _bkPend[k];if(!nav
   try{const w=await wiki(`${x.t} ${x.a||""}`,sm=>{const e=ktN(sm.extract);return ktN(sm.title).includes(tn.split(" ")[0])&&(!sur||e.includes(sur))&&/roman|kitap|öykü|eser|yapıt|şiir|anı|deneme|novel/.test(e);});
    if(w){R.src.push("Vikipedi");R.d2=clean(w.extract);if(!R.img&&w.thumbnail)R.img=w.thumbnail.source;}}catch(e){}
   try{if(x.a){const wa=await wiki(x.a,sm=>ktN(sm.title).includes(sur)&&/yazar|şair|romancı|gazeteci|edebiyat/.test(ktN(sm.extract)));if(wa){R.au=clean(wa.extract);if(wa.thumbnail)R.auImg=wa.thumbnail.source;}}}catch(e){}
-  R.st=ST;R.thin=!(R.d.length>120||R.d2.length>120);const ok=R.d||R.d2||R.pg||R.yr;const A=bkInfoAll();A[k]=ok?Object.assign(R,{at:Date.now()}):{none:1,v:3,st:ST,at:Date.now()};try{localStorage.setItem("mf-bkinfo",JSON.stringify(A));}catch(e){}return A[k];})().finally(()=>{delete _bkPend[k];});
+  if(R.img)try{covSet(x.t,x.a,R.img);}catch(e){}R.st=ST;R.thin=!(R.d.length>120||R.d2.length>120);const ok=R.d||R.d2||R.pg||R.yr;const A=bkInfoAll();A[k]=ok?Object.assign(R,{at:Date.now()}):{none:1,v:3,st:ST,at:Date.now()};try{localStorage.setItem("mf-bkinfo",JSON.stringify(A));}catch(e){}return A[k];})().finally(()=>{delete _bkPend[k];});
  return _bkPend[k];}
 function bkInfoHTML(x){let I=bkInfoGet(x);const kb=KT_BOOKS.find(b=>ktN(b[0])===ktN(x.t));
  if((!I||I.none)&&!kb)return `<h4>Kitap hakkında</h4><p class="bi-ld">${I&&I.none?"📚 Bu kitabın bilgilerini bulamadım. İlk polaroidi sen as, okurlar senden duysun 🧷":navigator.onLine?"<i></i> Kitabın bilgilerini topluyorum…":"📶 Kitap bilgisi için internet bağlantısı gerekiyor."}</p>`;
@@ -11679,9 +11696,9 @@ function trBookBits(b){return [b.n?`${b.n} polaroid`:"",b.l?`❤ ${b.l}`:"",b.r?
 function trHome(){const H=document.getElementById("kt-trh");if(!H)return;const B=SB_TR.books||[],P=SB_TR.pol;if(!B.length){H.innerHTML="";return;}
  const c=P?trCol(P.book_title):null;
  H.innerHTML=`<div class="trh"><div class="trh-h"><strong><i class="no-mi">🔥</i> Okurlar bunu konuşuyor</strong></div>
-  ${P?`<div class="trh-p" id="trh-p"><div class="trh-pol" style="--c1:${c[0]};--c2:${c[1]}"><div class="im">${P.img?`<img src="${P.img}" alt="">`:`<b>${esc(P.book_title)}</b>`}</div></div>
+  ${P?`<div class="trh-p" id="trh-p"><div class="trh-pol" style="--c1:${c[0]};--c2:${c[1]}"><div class="im"${P.img?"":` data-cvt="${esc(P.book_title)}" data-cva="${esc(P.book_author||"")}"`}>${P.img?`<img src="${P.img}" alt="">`:`<b>${esc(P.book_title)}</b>`}</div></div>
    <div class="trh-q"><span class="trh-tag">✨ Haftanın polaroidi</span><p>“${esc(P.body)}”</p><small>${esc(P.name||"Bir okur")} · <b>${esc(P.book_title)}</b></small><span class="st">${P.like_count?`<span>❤ ${P.like_count}</span>`:""}${P.reply_count?`<span>💬 ${P.reply_count}</span>`:""}${P.hearts?`<span>${"★".repeat(P.hearts)}</span>`:""}</span></div></div>`:""}
-  <div class="trh-row">${B.slice(0,8).map((b,i)=>`<button type="button" class="trh-b" data-trb="${i}" style="--c1:${trCol(b.t)[0]};--c2:${trCol(b.t)[1]}"><span class="rk">${i+1}</span><span class="trc"><b>${esc(b.t)}</b><i>${esc(b.a)}</i></span><small>${[b.l?"❤ "+b.l:"",b.r?"💬 "+b.r:"",!b.l&&!b.r?b.n+" polaroid":""].filter(Boolean).join(" · ")}</small></button>`).join("")}</div>
+  <div class="trh-row">${B.slice(0,8).map((b,i)=>`<button type="button" class="trh-b" data-trb="${i}" style="--c1:${trCol(b.t)[0]};--c2:${trCol(b.t)[1]}"><span class="rk">${i+1}</span><span class="trc" data-cvt="${esc(b.t)}" data-cva="${esc(b.a)}"><b>${esc(b.t)}</b><i>${esc(b.a)}</i></span><small>${[b.l?"❤ "+b.l:"",b.r?"💬 "+b.r:"",!b.l&&!b.r?b.n+" polaroid":""].filter(Boolean).join(" · ")}</small></button>`).join("")}</div>
   <p class="trh-f">Beğeni, yanıt ve tazeliğe göre her saat yenilenir</p></div>`;
  H.querySelectorAll("[data-trb]").forEach(x=>x.onclick=()=>{const b=B[+x.dataset.trb];bookOpenAny(b.t,b.a);});
  const pp=document.getElementById("trh-p");if(pp)pp.onclick=()=>{bkFocus={t:"cm"};bookOpenAny(P.book_title,P.book_author||"");};
@@ -11695,8 +11712,8 @@ function ktTrendInject(){const P=document.getElementById("ktpanel");if(!P)return
 /* Kitap arama */
 let ktQ="",ktQS=0,ktQT=0;const KQ_C={};
 function ktSearchBox(){return `<div class="ktsr"><label class="ktsr-i"><span class="no-mi">🔍</span><input id="kt-q" type="text" enterkeyhint="search" autocomplete="off" maxlength="60" placeholder="Kitap ya da yazar ara…" value="${esc(ktQ)}"><button type="button" id="kt-qx" aria-label="Temizle"${ktQ?"":" hidden"}>×</button></label><div class="ktsr-r" id="kt-qr"></div></div>`;}
-function ksrRow(r){const c=trCol(r.t);const tag=r.hot?`<em class="hot">🔥 ${esc(r.hot)}</em>`:r.src==="lib"?"<em>Kütüphanende</em>":r.src==="sh"?"<em>Rafında</em>":r.src==="k"?"<em>Me First önerisi</em>":"";
- return `<button type="button" class="ksr" data-kq="${esc(r.t)}" data-kqa="${esc(r.a)}"><span class="cv" style="--c1:${c[0]};--c2:${c[1]}">${r.img?`<img src="${esc(r.img)}" alt="" loading="lazy" onerror="this.remove()">`:`<b>${esc(r.t.slice(0,30))}</b>`}</span><span class="tx"><strong>${esc(r.t)}</strong><small>${esc([r.a,r.y].filter(Boolean).join(" · "))}</small>${tag}</span></button>`;}
+function ksrRow(r){const c=trCol(r.t);const tag=r.hot?`<em class="hot">🔥 ${esc(r.hot)}</em>`:r.src==="lib"?"<em>Kütüphanende</em>":r.src==="sh"?"<em>Rafında</em>":r.src==="k"?"<em>Me First önerisi</em>":r.src==="pool"?`<em>👭 Me First ailesinden${r.fam?" · "+r.fam+" okur":""}</em>`:"";
+ return `<button type="button" class="ksr" data-kq="${esc(r.t)}" data-kqa="${esc(r.a)}"><span class="cv"${r.img?"":` data-cvt="${esc(r.t)}" data-cva="${esc(r.a)}"`} style="--c1:${c[0]};--c2:${c[1]}">${r.img?`<img src="${esc(r.img)}" alt="" loading="lazy" onerror="this.remove()">`:`<b>${esc(r.t.slice(0,30))}</b>`}</span><span class="tx"><strong>${esc(r.t)}</strong><small>${esc([r.a,r.y].filter(Boolean).join(" · "))}</small>${tag}</span></button>`;}
 function ktSearch(q){ktQ=q;const box=document.getElementById("kt-qr"),X=document.getElementById("kt-qx");if(X)X.hidden=!q;if(!box)return;q=q.trim();const my=++ktQS;clearTimeout(ktQT);
  if(q.length<2){box.innerHTML="";return;}const n=ktN(q),M=new Map();
  const key=(t,a)=>ktN(t)+"|"+(ktN(a||"").split(" ").pop()||"");
@@ -11706,6 +11723,7 @@ function ktSearch(q){ktQ=q;const box=document.getElementById("kt-qr"),X=document
  try{klib().forEach(b=>{if(hit(b.t,b.a))add({t:b.t,a:b.a||"",src:"lib"});});}catch(e){}
  try{kt().shelf.forEach(b=>{if(hit(b.t,b.a))add({t:b.t,a:b.a||"",src:"sh"});});}catch(e){}
  KT_BOOKS.forEach(b=>{if(hit(b[0],b[1]))add({t:b[0],a:b[1],src:"k"});});
+ (POOL.list||[]).forEach(b=>{if(hit(b.title,b.author))add({t:b.title,a:b.author||"",src:"pool",img:b.cover||"",fam:b.adds});});
  const tr=new Map((SB_TR.books||[]).map(b=>[key(b.t,b.a),b]));
  const draw=(loading,fail)=>{if(my!==ktQS)return;const L=[...M.values()].map(r=>{const T=tr.get(key(r.t,r.a));if(T&&!r.hot)r.hot=trBookBits(T);return r;});
   L.sort((a,b)=>(b.hot?1:0)-(a.hot?1:0)||(ktN(b.t).startsWith(n)?1:0)-(ktN(a.t).startsWith(n)?1:0));
@@ -11716,7 +11734,7 @@ function ktSearch(q){ktQ=q;const box=document.getElementById("kt-qr"),X=document
  ktQT=setTimeout(async()=>{const gb=async lr=>{try{const r=await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=20&printType=books${lr?"&langRestrict=tr":""}${window.GB_KEY?"&key="+GB_KEY:""}`);if(!r.ok)return null;const j=await r.json();return (j.items||[]).map(i=>i.volumeInfo||{});}catch(e){return null;}};
   let A=await gb(true);if(my!==ktQS)return;if(A===null){await new Promise(r=>setTimeout(r,900));if(my!==ktQS)return;A=await gb(true);}if(my!==ktQS)return;if(!A||A.length<6){const B2=await gb(false);if(my!==ktQS)return;if(B2)A=(A||[]).concat(B2);}
   const out=[];(A||[]).forEach(v=>{if(!v.title)return;const t=v.title+(v.subtitle&&v.subtitle.length<30&&!/roman|novel/i.test(v.subtitle)?"":"");const a=(v.authors||[])[0]||"";const im=v.imageLinks?(v.imageLinks.thumbnail||v.imageLinks.smallThumbnail||"").replace("http://","https://").replace("&edge=curl",""):"";
-   out.push({t,a,src:"gb",img:im,y:(v.publishedDate||"").slice(0,4)});});
+   out.push({t,a,src:"gb",img:im,y:(v.publishedDate||"").slice(0,4)});if(im)covSet(t,a,im);});
   if(A!==null)KQ_C[n]=out;out.forEach(add);draw(false,A===null);},450);}
 (function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{const P=document.getElementById("ktpanel");if(!P)return;
   P.insertAdjacentHTML("afterbegin",ktSearchBox());const q=document.getElementById("kt-q");q.oninput=e=>ktSearch(e.target.value);q.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();q.blur();}};
@@ -11726,6 +11744,92 @@ function ktSearch(q){ktQ=q;const box=document.getElementById("kt-qr"),X=document
   if(h>=11&&h<21&&b&&b.n>=2&&!mfPopSeen()[id]&&mfPopOk({p:45}))L.push({id,p:45,cls:"pp-kt",k:"🔥 Okurların gündemi",leaves:1,
    h:`Bu hafta okurlar <em>${esc(b.t)}</em> kitabını konuşuyor`,d:P&&P.book_key===b.k?`“${esc(P.body.slice(0,110))}”<br><small>${esc(P.name||"Bir okur")}</small>`:`${esc(trBookBits(b))} · sen de ipe bir polaroid as 🧷`,
    a:[["Kitaba bak 📖",()=>bookOpenAny(b.t,b.a)]],x:"Sonra 💛"});}catch(e){}return L;};})();
+
+/* ===== v0.20: gerçek kapaklar, okur ruhu yazarları, Me First ailesi kütüphanesi, Sana özel ile açılış, raf sırası ===== */
+const COV=(()=>{try{return JSON.parse(localStorage.getItem("mf-cov")||"{}");}catch(e){return {};}})();
+let covQ=[],covBusy=0;const covIn={};
+function covKey(t,a){return ktN(t||"")+"|"+(ktN(a||"").split(" ").pop()||"");}
+function covSave(){try{const k=Object.keys(COV);if(k.length>700)k.slice(0,k.length-700).forEach(x=>delete COV[x]);localStorage.setItem("mf-cov",JSON.stringify(COV));}catch(e){}}
+function covSet(t,a,u){if(!u||!/^https:/.test(u))return;const k=covKey(t,a);if(typeof COV[k]!=="string"){COV[k]=u;covSave();}}
+function covGet(t,a){const v=COV[covKey(t,a)];return typeof v==="string"?v:(typeof v==="number"&&Date.now()-v<3*864e5?null:undefined);}
+async function covFetch(t,a){const tn=ktN(t),sur=ktN(a||"").split(" ").pop()||"";const mt=x=>{const q=ktN(x||"");return q===tn||(q.startsWith(tn)&&tn.length>3)||(tn.startsWith(q)&&q.length>4);};
+ const get=async u=>{try{const c=window.AbortController?new AbortController():null;const tm=setTimeout(()=>c&&c.abort(),7000);const r=await fetch(u,c?{signal:c.signal}:{});clearTimeout(tm);return r.ok?await r.json():null;}catch(e){return null;}};
+ const j=await get(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent("intitle:"+t+(a?" inauthor:"+a:""))}&maxResults=10&printType=books${window.GB_KEY?"&key="+GB_KEY:""}`);
+ const V=((j&&j.items)||[]).map(i=>i.volumeInfo||{}).filter(v=>mt(v.title)&&v.imageLinks&&(!sur||(v.authors||[]).some(x=>ktN(x).includes(sur))));
+ V.sort((x,y)=>(y.language==="tr")-(x.language==="tr"));
+ if(V.length){const L=V[0].imageLinks;return (L.thumbnail||L.smallThumbnail).replace(/^http:/,"https:").replace("&edge=curl","");}
+ const o=await get(`https://openlibrary.org/search.json?title=${encodeURIComponent(t)}${a?"&author="+encodeURIComponent(a):""}&limit=5&fields=title,cover_i`);
+ const d=((o&&o.docs)||[]).find(x=>x.cover_i&&mt(x.title));return d?`https://covers.openlibrary.org/b/id/${d.cover_i}-M.jpg`:"";}
+function covApply(el,u){if(!u||el.querySelector(":scope>img.cvimg"))return;const i=new Image();i.className="cvimg";i.alt="";i.decoding="async";
+ i.onload=()=>{if(i.naturalWidth<20){i.remove();return;}el.classList.add("hascv");};i.onerror=()=>i.remove();i.src=u;el.appendChild(i);}
+function covPump(){while(covBusy<2&&covQ.length){const [t,a,k]=covQ.shift();covBusy++;covFetch(t,a).then(u=>{if(u){COV[k]=u;}else COV[k]=Date.now();covSave();
+  document.querySelectorAll("[data-cvt]").forEach(el=>{if(covKey(el.dataset.cvt,el.dataset.cva)===k&&u)covApply(el,u);});}).finally(()=>{delete covIn[k];covBusy--;covPump();});}}
+function covScan(){if(navigator.onLine===false)return;document.querySelectorAll("[data-cvt]:not([data-cvd])").forEach(el=>{el.dataset.cvd=1;const t=el.dataset.cvt,a=el.dataset.cva||"";if(!t)return;
+  const u=covGet(t,a);if(u){covApply(el,u);return;}if(u===null)return;const k=covKey(t,a);if(covIn[k]||covQ.length>60)return;covIn[k]=1;covQ.push([t,a,k]);});covPump();}
+let covT=0;new MutationObserver(()=>{clearTimeout(covT);covT=setTimeout(()=>{covScan();try{auFill();}catch(e){}},120);}).observe(document.body,{childList:true,subtree:true});
+/* Yazarın kitapları (Google Books, 3 gün önbellek) */
+const AUB=(()=>{try{return JSON.parse(localStorage.getItem("mf-aub")||"{}");}catch(e){return {};}})();const auPend={};
+function auBooks(a){const k=ktN(a);const C=AUB[k];if(C&&Date.now()-C.at<3*864e5)return Promise.resolve(C.items);if(auPend[k])return auPend[k];
+ if(navigator.onLine===false)return Promise.resolve(C?C.items:[]);const sur=k.split(" ").pop();
+ auPend[k]=fetch(`https://www.googleapis.com/books/v1/volumes?q=inauthor:%22${encodeURIComponent(a)}%22&maxResults=40&printType=books&langRestrict=tr${window.GB_KEY?"&key="+GB_KEY:""}`).then(r=>r.ok?r.json():null).then(j=>{
+  if(!j)return C?C.items:[];const seen=new Set(),out=[];(j.items||[]).forEach(it=>{const v=it.volumeInfo||{};if(!v.title||!(v.authors||[]).some(x=>ktN(x).includes(sur)))return;
+   if(/\b(seti|set|kutu|külliyat|toplu eserleri|2\s*cilt)\b/i.test(v.title))return;const base=ktN(v.title.split(/[:(\-–]/)[0]).trim();if(!base||seen.has(base))return;seen.add(base);
+   const im=v.imageLinks?(v.imageLinks.thumbnail||v.imageLinks.smallThumbnail||"").replace(/^http:/,"https:").replace("&edge=curl",""):"";const t=v.title.split(/\s*[:(]\s*/)[0].trim();if(im)covSet(t,a,im);
+   out.push({t,a,y:(v.publishedDate||"").slice(0,4),p:v.publisher||"",img:im});});
+  AUB[k]={at:Date.now(),items:out.slice(0,24)};try{localStorage.setItem("mf-aub",JSON.stringify(AUB));}catch(e){}return AUB[k].items;}).catch(()=>C?C.items:[]).finally(()=>{delete auPend[k];});
+ return auPend[k];}
+/* Kitap sayfası: yazar köşesini internetten doldur */
+function auFill(){document.querySelectorAll("#bkp .bk-au[data-aul]:not([data-auld])").forEach(box=>{box.dataset.auld=1;const a=box.dataset.aul;if(!a)return;
+ const have=new Set([...box.querySelectorAll("[data-bt]")].map(b=>ktN(b.dataset.bt)).concat([ktN(box.dataset.aut||"")]));
+ auBooks(a).then(L=>{if(!box.isConnected)return;const add=L.filter(b=>!have.has(ktN(b.t))).slice(0,Math.max(0,10-have.size+1));
+  box.insertAdjacentHTML("beforeend",add.map(b=>{const cc=trCol(b.t);return `<button type="button" class="mini" data-bt="${esc(b.t)}" data-ba="${esc(a)}" data-cvt="${esc(b.t)}" data-cva="${esc(a)}" style="--c1:${cc[0]};--c2:${cc[1]}"><b>${esc(b.t)}</b><small>${esc(b.y||"")}</small></button>`;}).join(""));
+  if(!box.children.length){const s=box.closest(".bkp-sec");if(s&&!s.querySelector(".bk-ev"))s.remove();}});});}
+document.addEventListener("click",e=>{const m=e.target.closest&&e.target.closest("#bkp .bk-au [data-bt]");if(!m)return;e.preventDefault();e.stopPropagation();
+ const O=document.getElementById("bkp");if(O)O.scrollTop=0;bookOpenAny(m.dataset.bt,m.dataset.ba);},true);
+/* Okur ruhumdaki yazarlar: her biri için kendi rafı */
+ktLive=function(){const K=kt(),box=document.getElementById("kt-live");if(!box||!K.au.length)return;const A=K.au.slice(0,6);
+ const render=()=>{const b=document.getElementById("kt-live");if(!b)return;let H="";
+  A.forEach(a=>{const cat=KT_BOOKS.filter(x=>ktN(x[1])===ktN(a)).map(x=>({t:x[0],a:x[1],p:x[3],y:(x[4]||"").slice(0,4),k:1}));const C=AUB[ktN(a)];const live=C?C.items:[];
+   const seen=new Set(),L=[];cat.concat(live).forEach(x=>{const n=ktN(x.t);if(seen.has(n))return;seen.add(n);L.push(x);});const R=L.filter(x=>ktOnShelf(x.t)?false:true).slice(0,12);if(!R.length)return;
+   H+=`<div class="kthead"><span>${esc(a)} rafı 💘</span><small class="ktlvau">okur ruhundan</small></div><div class="ktrow">${R.map(x=>ktCard([[x.t,a,[],x.p||"","",""],0,x.y?`${x.y} baskısı`:"Okur ruhundan 💘"])).join("")}</div>`;});
+  b.innerHTML=H;ktBindBar(b);};
+ render();Promise.all(A.map(a=>auBooks(a))).then(render);};
+function ktBindBar(box){const K=kt();box.querySelectorAll("[data-kadd]").forEach(b=>b.onclick=e=>{e.stopPropagation();const x=ktOnShelf(b.dataset.kadd);if(!x)K.shelf.unshift({t:b.dataset.kadd,a:b.dataset.kau,s:"oku",d:dkey()});else if(x.s==="istek")x.s="oku";save();kbbSet(b,"✓","Rafında",true);b.disabled=true;});
+ box.querySelectorAll("[data-kfol]").forEach(b=>b.onclick=e=>{e.stopPropagation();const a=b.dataset.kfol;if(!ktFollow(a))K.au.push(a);save();kitapRender();});}
+/* Me First ailesinin kütüphanesi (Supabase: books + book_touch) */
+const POOL={at:0,list:[]};
+async function poolLoad(force){let C=null;try{C=JSON.parse(localStorage.getItem("mf-pool")||"null");}catch(e){}
+ if(C&&!force&&Date.now()-C.at<36e5*3){POOL.at=C.at;POOL.list=C.list;return POOL;}
+ const R=await sbGet("books?select=key,title,author,cover,adds,views&order=adds.desc,views.desc&limit=400");
+ if(Array.isArray(R)){POOL.at=Date.now();POOL.list=R;R.forEach(b=>{if(b.cover)covSet(b.title,b.author,b.cover);});try{localStorage.setItem("mf-pool",JSON.stringify(POOL));}catch(e){}}
+ else if(C){POOL.at=C.at;POOL.list=C.list;}return POOL;}
+function poolTouch(t,a,kind){if(!t||navigator.onLine===false)return;const k=bkKey({t,a}),d=dkey();let M={};try{M=JSON.parse(localStorage.getItem("mf-pt")||"{}");}catch(e){}
+ const id=k+"|"+kind;if(M[id]===d||(kind==="add"&&M[id]))return;M[id]=d;try{const ks=Object.keys(M);if(ks.length>800)ks.slice(0,200).forEach(x=>delete M[x]);localStorage.setItem("mf-pt",JSON.stringify(M));}catch(e){}
+ const c=covGet(t,a)||"";fetch(SB_URL+"/rest/v1/rpc/book_touch",{method:"POST",headers:{apikey:SB_KEY,Authorization:"Bearer "+SB_KEY,"Content-Type":"application/json"},body:JSON.stringify({k,t:String(t).slice(0,160),a:String(a||"").slice(0,120),c:c||"",kind})}).catch(()=>{});}
+function poolMine(){try{const K=kt();return K.shelf.map(x=>[x.t,x.a||""]).concat(klib().map(x=>[x.t,x.a||""]));}catch(e){return [];}}
+(function(){const _s=save;save=function(){const r=_s.apply(this,arguments);try{poolMine().forEach(([t,a])=>poolTouch(t,a,"add"));}catch(e){}return r;};})();
+setTimeout(()=>{try{poolMine().slice(0,80).forEach(([t,a])=>poolTouch(t,a,"add"));}catch(e){}},4000);
+(function(){const _b=bookOpenAny;bookOpenAny=function(t,a){try{poolTouch(t,a||"","view");}catch(e){}return _b.apply(this,arguments);};
+ const _l=libBookOpen;libBookOpen=function(i){try{const x=klib()[i];if(x)poolTouch(x.t,x.a||"","view");}catch(e){}return _l.apply(this,arguments);};})();
+function ktPoolInject(){const P=document.getElementById("ktpanel");if(!P||kttab!=="oneri")return;const o=document.getElementById("kt-pool");if(o)o.remove();
+ const mine=new Set(poolMine().map(([t])=>ktN(t)));const L=(POOL.list||[]).filter(b=>b.adds>0&&!mine.has(ktN(b.title))).slice(0,12);if(L.length<2)return;
+ const anchor=document.getElementById("kt-live");if(!anchor)return;
+ anchor.insertAdjacentHTML("beforebegin",`<div id="kt-pool"><div class="kthead"><span>Me First ailesinin rafından 👭</span><small>${POOL.list.length} kitap</small></div><div class="ktrow">${L.map(b=>ktCard([[b.title,b.author||"",[],"","",""],0,`👭 ${b.adds} okurun rafında`])).join("")}</div></div>`);
+ ktBindBar(document.getElementById("kt-pool"));}
+(function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{ktPoolInject();}catch(e){}};})();
+setTimeout(()=>poolLoad(false).then(()=>{if(step===90)try{ktPoolInject();}catch(e){}}),1800);
+/* Kitap köşesi her girişte Sana özel ile açılır */
+let ktLeft=null,ktWasIn=false;
+(function(){const _s=show;show=function(){if(ktWasIn&&step!==90)ktLeft=kttab;ktWasIn=step===90;return _s.apply(this,arguments);};
+ const g=document.getElementById("go-kitap");const _c=g.onclick;g.onclick=function(e){try{if(kt().setup&&(ktLeft===null||kttab===ktLeft))kttab="oneri";}catch(_){}ktLeft=null;return _c.call(this,e);};})();
+/* Raf sırası: Kütüphanem · İstek rafım · Okuma rafım */
+(function(){const _s=ktShelves;ktShelves=function(){_s.apply(this,arguments);try{const tr=document.querySelector(".ktsh-tr"),dots=document.querySelector(".ktsh-dots");if(!tr||!dots||tr.dataset.ord)return;tr.dataset.ord=1;
+ const lib=tr.querySelector(".lsh"),wsh=tr.querySelector(".wsh"),sh=[...tr.children].find(c=>c!==lib&&c!==wsh);if(lib&&wsh&&sh)tr.append(lib,wsh,sh);
+ dots.innerHTML='<button type="button" aria-label="Kütüphanem"><i></i>Kütüphanem</button><button type="button" aria-label="İstek rafım"><i></i>İstek rafım</button><button type="button" aria-label="Okuma rafım"><i></i>Okuma rafım</button>';
+ const set=i=>{ktShelfI=i;dots.querySelectorAll("button").forEach((b,j)=>b.classList.toggle("on",j===i));};
+ dots.querySelectorAll("button").forEach((b,j)=>b.onclick=()=>tr.scrollTo({left:j*tr.clientWidth,behavior:"smooth"}));
+ requestAnimationFrame(()=>{tr.scrollLeft=ktShelfI*tr.clientWidth;set(ktShelfI);});
+ const t=sh&&sh.querySelector(".ktshelf-t strong");if(t&&/Rafın seni bekliyor/.test(t.textContent))t.textContent="Okuma rafım 📚";}catch(e){console.error(e);}};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
