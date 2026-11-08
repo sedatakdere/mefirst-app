@@ -5656,6 +5656,19 @@ img.cvimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-in
 .ktsr-i button{width:24px;height:24px;font-size:13px}
 .ktlvau{font-size:11px;font-weight:800;color:#B5486E;background:rgba(181,72,110,.1);border-radius:999px;padding:2px 8px}
 .trh-b .rk{z-index:6}
+
+/* v0.20.1 kitap ekleme: yazdıkça öneri */
+.acw{position:relative}
+.acl{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:60;background:#fff;border-radius:14px;box-shadow:0 14px 34px rgba(60,30,15,.22);overflow:hidden;max-height:300px;overflow-y:auto;border:1px solid rgba(201,130,43,.22)}
+.acl:empty{display:none}
+.aci{display:flex;gap:10px;align-items:center;width:100%;border:0;background:none;text-align:left;padding:8px 10px;border-bottom:1px solid rgba(201,130,43,.12);cursor:pointer;font:inherit}
+.aci:last-child{border-bottom:0}.aci:active,.aci.on{background:rgba(201,130,43,.1)}
+.aci .cv{flex:0 0 30px;height:44px;border-radius:3px;background:linear-gradient(150deg,var(--c1),var(--c2));overflow:hidden;position:relative}
+.aci .cv img{width:100%;height:100%;object-fit:cover}
+.aci .au{flex:0 0 30px;height:30px;border-radius:50%;background:rgba(168,73,42,.12);display:flex;align-items:center;justify-content:center;font-size:14px}
+.aci .tx{min-width:0;flex:1}.aci strong{display:block;font-size:13.5px;color:#3A1E14;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.aci small{display:block;font-size:11.5px;color:#8A5A3A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.acm{padding:9px 12px;font-size:12px;color:#8A5A3A}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -9828,10 +9841,10 @@ function bkRemote(q,cb){if(!window.fetch||bkN(q).length<3)return cb([]);clearTim
   fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=8&printType=books&langRestrict=tr`,bkCtl?{signal:bkCtl.signal}:{}).then(r=>r.ok?r.json():null).then(j=>{const out=[];const seen=new Set();(j&&j.items||[]).forEach(it=>{const v=it.volumeInfo||{};if(!v.title)return;const k=bkN(v.title);if(seen.has(k))return;seen.add(k);out.push({t:v.title+(v.subtitle&&v.subtitle.length<30?": "+v.subtitle:""),a:(v.authors||[])[0]||"",img:((v.imageLinks||{}).smallThumbnail||"").replace(/^http:/,"https:"),y:(v.publishedDate||"").slice(0,4),src:"g"});});cb(out.slice(0,6));}).catch(()=>cb([]));},320);}
 function bkAttach(tEl,aEl,opts){if(!tEl||tEl.dataset.bk)return;tEl.dataset.bk=1;tEl.removeAttribute("list");tEl.setAttribute("autocomplete","off");if(aEl){aEl.setAttribute("autocomplete","off");aEl.removeAttribute("list");}
   const box=document.createElement("div");box.className="bkp";box.hidden=true;tEl.insertAdjacentElement("afterend",box);
-  const pick=(t,a)=>{tEl.value=t;if(aEl&&a)aEl.value=a;box.hidden=true;tEl.dispatchEvent(new Event("change",{bubbles:true}));if(opts&&opts.onPick)opts.onPick(t,a);(aEl&&!a?aEl:tEl).focus();};
+  const pick=(t,a)=>{try{BK_OK.add(ktN(t));}catch(e){}tEl.value=t;if(aEl&&a)aEl.value=a;box.hidden=true;tEl.dispatchEvent(new Event("change",{bubbles:true}));if(opts&&opts.onPick)opts.onPick(t,a);(aEl&&!a?aEl:tEl).focus();};
   const draw=(L,R,q)=>{const n=bkN(q);if(n.length<2){box.hidden=true;return;}
     const rows=[];if(L.author){rows.push(`<div class="bkp-h">✒️ ${esc(L.author)} · kitapları</div>`);}
-    L.books.forEach(b=>rows.push(`<button type="button" class="bkp-r" data-t="${esc(b.t)}" data-a="${esc(b.a)}">${ktCover(b.t,b.a)}<span><b>${esc(b.t)}</b><small>${esc(b.a||"")}</small></span>${b.src==="r"?'<em>rafında</em>':""}</button>`));
+    L.books.forEach(b=>rows.push(`<button type="button" class="bkp-r" data-t="${esc(b.t)}" data-a="${esc(b.a)}">${ktCover(b.t,b.a)}<span><b>${esc(b.t)}</b><small>${esc(b.a||"")}</small></span>${b.src==="r"?'<em>rafında</em>':b.src==="p"?'<em>👭 aileden</em>':""}</button>`));
     const R2=(R||[]).filter(r=>!L.books.some(b=>bkN(b.t)===bkN(r.t)));if(R2.length){rows.push(`<div class="bkp-h">🌐 İnternetten</div>`);R2.forEach(b=>rows.push(`<button type="button" class="bkp-r" data-t="${esc(b.t)}" data-a="${esc(b.a)}">${b.img?`<span class="ktc img"><img src="${esc(b.img)}" alt="" loading="lazy"></span>`:ktCover(b.t,b.a)}<span><b>${esc(b.t)}</b><small>${esc([b.a,b.y].filter(Boolean).join(" · "))}</small></span></button>`));}
     if(R===null)rows.push(`<div class="bkp-l">İnternette aranıyor…</div>`);
     if(!rows.length)rows.push(`<div class="bkp-l">Eşleşme yok; yazdığın gibi eklenecek ✍️</div>`);
@@ -11803,7 +11816,10 @@ async function poolLoad(force){let C=null;try{C=JSON.parse(localStorage.getItem(
  const R=await sbGet("books?select=key,title,author,cover,adds,views&order=adds.desc,views.desc&limit=400");
  if(Array.isArray(R)){POOL.at=Date.now();POOL.list=R;R.forEach(b=>{if(b.cover)covSet(b.title,b.author,b.cover);});try{localStorage.setItem("mf-pool",JSON.stringify(POOL));}catch(e){}}
  else if(C){POOL.at=C.at;POOL.list=C.list;}return POOL;}
-function poolTouch(t,a,kind){if(!t||navigator.onLine===false)return;const k=bkKey({t,a}),d=dkey();let M={};try{M=JSON.parse(localStorage.getItem("mf-pt")||"{}");}catch(e){}
+const BK_OK=new Set();
+function poolKnown(t){const n=ktN(t);return BK_OK.has(n)||KT_BOOKS.some(b=>ktN(b[0])===n)||(POOL.list||[]).some(b=>ktN(b.title)===n)||(SB_TR.books||[]).some(b=>ktN(b.t)===n);}
+function poolTouch(t,a,kind){if(!t||navigator.onLine===false)return;
+ if(kind==="add"&&!poolKnown(t)&&typeof covGet(t,a)!=="string"){const k0="pv|"+ktN(t);if(poolTouch[k0]||(poolTouch.n=(poolTouch.n||0)+1)>12)return;poolTouch[k0]=1;covFetch(t,a).then(u=>{if(u){covSet(t,a,u);BK_OK.add(ktN(t));poolTouch(t,a,kind);}});return;}const k=bkKey({t,a}),d=dkey();let M={};try{M=JSON.parse(localStorage.getItem("mf-pt")||"{}");}catch(e){}
  const id=k+"|"+kind;if(M[id]===d||(kind==="add"&&M[id]))return;M[id]=d;try{const ks=Object.keys(M);if(ks.length>800)ks.slice(0,200).forEach(x=>delete M[x]);localStorage.setItem("mf-pt",JSON.stringify(M));}catch(e){}
  const c=covGet(t,a)||"";fetch(SB_URL+"/rest/v1/rpc/book_touch",{method:"POST",headers:{apikey:SB_KEY,Authorization:"Bearer "+SB_KEY,"Content-Type":"application/json"},body:JSON.stringify({k,t:String(t).slice(0,160),a:String(a||"").slice(0,120),c:c||"",kind})}).catch(()=>{});}
 function poolMine(){try{const K=kt();return K.shelf.map(x=>[x.t,x.a||""]).concat(klib().map(x=>[x.t,x.a||""]));}catch(e){return [];}}
@@ -11830,6 +11846,22 @@ let ktLeft=null,ktWasIn=false;
  dots.querySelectorAll("button").forEach((b,j)=>b.onclick=()=>tr.scrollTo({left:j*tr.clientWidth,behavior:"smooth"}));
  requestAnimationFrame(()=>{tr.scrollLeft=ktShelfI*tr.clientWidth;set(ktShelfI);});
  const t=sh&&sh.querySelector(".ktshelf-t strong");if(t&&/Rafın seni bekliyor/.test(t.textContent))t.textContent="Okuma rafım 📚";}catch(e){console.error(e);}};})();
+
+/* ===== Bugünün imza günleri: takip etmesen de, şehrinde olmasa da günde bir haber ===== */
+(function(){const _c=mfPopCands;mfPopCands=function(){const L=_c.apply(this,arguments);try{if(!st.kitap)return L;const h=new Date().getHours();if(h<9||h>=20)return L;
+  const T=dkey(),id="ktday:"+T,S=mfPopSeen();if(S[id])return L;if(L.some(c=>c.cls==="pp-kt"&&/^kt[n]?:/.test(c.id||"")&&!S[c.id]))return L;
+  const E=KT_EV.filter(e=>e[2]===T&&(!e[3]||(()=>{const[hh,mm]=e[3].split(":").map(Number);const n=new Date();return n.getHours()*60+n.getMinutes()<hh*60+mm;})())).sort((x,y)=>(x[3]||"").localeCompare(y[3]||""));if(!E.length)return L;
+  const near=E.filter(e=>ktNear(e)),fol=E.filter(e=>e[1].some(ktFollow));const top=(fol[0]||near[0]||E[0]);const cities=[...new Set(E.map(e=>e[5]))];
+  if(!mfPopOk({p:90}))return L;
+  L.push({id,p:90,cls:"pp-kt",k:"✍️ Bugün imza günü var",leaves:1,
+   h:`Bugün <em>${E.length} imza günü</em> var`,
+   d:E.slice(0,4).map(e=>`<b>${esc(e[1].join(" & "))}</b> · ${esc(e[3]||"")} · ${esc(e[5])}${ktNear(e)?" 📍":""}`).join("<br>")+(E.length>4?`<br><small>+${E.length-4} etkinlik daha · ${esc(cities.join(", "))}</small>`:""),
+   a:[["Hepsini gör",()=>{kttab="etk";step=90;show();kitapRender();window.scrollTo({top:0});}]],x:"Sonra 💛"});}catch(e){}return L;};})();
+
+/* aile havuzu ve gündem kitapları yazarken öneride */
+(function(){const _p=bkPool;bkPool=function(){const L=_p.apply(this,arguments);const have=new Set(L.map(b=>bkN(b.t)));
+ (POOL.list||[]).forEach(b=>{const k=bkN(b.title);if(!have.has(k)){have.add(k);L.push({t:b.title,a:b.author||"",src:"p"});}});
+ (SB_TR.books||[]).forEach(b=>{const k=bkN(b.t);if(!have.has(k)){have.add(k);L.push({t:b.t,a:b.a||"",src:"p"});}});return L;};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
