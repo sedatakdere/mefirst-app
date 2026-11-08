@@ -5769,6 +5769,72 @@ html[data-mf="dusk"] .bnav button span.nvi svg{filter:drop-shadow(0 0 1.2px rgba
 .evr-e{font-size:13px;color:var(--muted);line-height:1.5;margin:4px 0}
 .evr-m{margin-top:8px;font:inherit;font-size:12.5px;font-weight:800;color:#4FA37A;background:none;border:0;cursor:pointer}
 .evd b.rg{font-size:13px;letter-spacing:-.02em}
+
+/* ===== Macera köşem ===== */
+.mhero{position:relative;overflow:hidden;border-radius:28px;padding:16px 18px 22px;color:#fff;min-height:200px;background:linear-gradient(180deg,#F7B48A 0%,#E98A6B 38%,#4A9C8C 100%);box-shadow:0 18px 34px -18px rgba(30,77,92,.8)}
+.mhero .mh-art{position:absolute;left:0;right:0;bottom:0;width:100%;height:150px;pointer-events:none}
+.mhero .mh-pg{animation:mhPg 7s ease-in-out infinite alternate}
+@keyframes mhPg{from{transform:translate(0,0) rotate(-2deg)}to{transform:translate(-26px,10px) rotate(3deg)}}
+.mhero .mh-cl{animation:mhCl 30s linear infinite}.mhero .mh-cl.c2{animation-duration:44s}
+@keyframes mhCl{from{transform:translateX(-40px)}to{transform:translateX(380px)}}
+.mhero>*:not(.mh-art){position:relative;z-index:1}
+.mhero h2{font-family:var(--f-display);font-size:34px;line-height:1.05;margin:14px 0 6px;color:#fff;text-shadow:0 2px 12px rgba(30,40,50,.25)}.mhero h2 em{font-style:italic}
+.mhero p{margin:0 0 12px;font-size:14px;font-weight:600;max-width:74%;text-shadow:0 1px 6px rgba(30,40,50,.3)}
+.mac-ruh{font:inherit;font-weight:800;font-size:13px;color:#1E4D5C;background:rgba(255,255,255,.9);border:0;border-radius:999px;padding:8px 14px;cursor:pointer;box-shadow:0 6px 14px -6px rgba(0,0,0,.35)}
+.macera .lhero-top .tag{background:rgba(255,255,255,.25)}
+.macseg{margin:14px 0 12px;background:color-mix(in srgb,#D7EFE8 75%,var(--surface))!important;border-color:rgba(47,127,114,.25)!important}
+.macseg button{color:#2F6F5E!important}.macseg button[aria-selected="true"]{background:linear-gradient(135deg,#3E8C80,#1E4D5C)!important;color:#fff!important;box-shadow:0 6px 14px -8px rgba(30,77,92,.9)!important}
+.macpanel .kthead{display:flex;align-items:baseline;justify-content:space-between;margin:18px 2px 8px}.macpanel .kthead span{font-family:var(--f-display);font-size:20px;color:var(--ink)}.macpanel .kthead small{font-size:11px;font-weight:800;color:#2F7F72;text-transform:uppercase;letter-spacing:.06em}
+.mrow{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 10px;scrollbar-width:none;margin:0 -16px;padding-left:16px;padding-right:16px}.mrow::-webkit-scrollbar{display:none}
+.mcard{flex:0 0 200px;scroll-snap-align:start;border:0;padding:0;text-align:left;font:inherit;cursor:pointer;border-radius:20px;overflow:hidden;background:var(--surface,#fff);box-shadow:0 8px 20px -10px rgba(30,60,70,.35)}
+.mcard:active{transform:scale(.97)}
+.mc-top{display:flex;align-items:center;justify-content:space-between;height:86px;padding:0 14px;background:linear-gradient(140deg,var(--a),var(--b));position:relative}
+.mc-top .mti{width:58px;height:58px}
+.mc-d{background:rgba(255,255,255,.92);border-radius:12px;padding:5px 9px;text-align:center;line-height:1;color:var(--b)}.mc-d b{display:block;font-size:17px;font-weight:900}.mc-d small{font-size:10.5px;font-weight:800;text-transform:uppercase}
+.mc-b{display:block;padding:10px 12px 12px}.mc-b strong{display:block;font-size:14.5px;line-height:1.25;color:var(--ink);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.mc-b small{display:block;font-size:12px;color:var(--muted);margin:3px 0 4px}
+.mc-go,.mc-soon{display:inline-block;margin-top:4px;font-style:normal;font-size:10.5px;font-weight:800;border-radius:99px;padding:2px 8px;color:#fff;background:#2F7F72}.mc-soon{background:#E8508A}
+.mti{display:inline-block;width:40px;height:40px;flex:none}.mti svg{width:100%;height:100%;display:block;filter:drop-shadow(0 2px 2px rgba(0,0,0,.2)) drop-shadow(0 5px 8px rgba(0,0,0,.15))}
+.mnext{display:flex;gap:14px;align-items:center;width:100%;border:0;font:inherit;text-align:left;cursor:pointer;padding:14px 16px;border-radius:22px;color:#fff;background:linear-gradient(140deg,var(--a),var(--b));box-shadow:0 12px 24px -14px var(--b);margin-bottom:6px}
+.mnext .mti{width:56px;height:56px}.mnext small{display:block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;opacity:.9}.mnext strong{display:block;font-family:var(--f-display);font-size:20px;line-height:1.15}.mnext em{display:block;font-style:normal;font-size:12.5px;font-weight:700;margin-top:3px}
+.mruh-card{border-radius:22px;padding:16px;background:linear-gradient(160deg,#E4F4EE,#FFF1E6);border:1px solid rgba(47,127,114,.2)}.mruh-card h3{margin:0 0 4px;font-family:var(--f-display);font-size:20px;color:#1E4D5C}.mruh-card p{margin:0 0 10px;font-size:13px;color:var(--muted)}
+.mempty{margin:0 2px}
+.mcats{margin:4px 0 6px}.mmon{margin:16px 2px 8px;font-family:var(--f-display);font-size:19px;color:var(--ink);font-weight:400}
+.mcal{display:flex;flex-direction:column;gap:8px}
+.mevr .evd{background:linear-gradient(160deg,#4A9C8C,#1E4D5C)}
+.mstats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:2px 0 4px}.mstats div{border-radius:18px;padding:12px 6px;text-align:center;background:linear-gradient(160deg,#E4F4EE,#D7EFE8)}.mstats b{display:block;font-size:24px;font-weight:900;color:#1E4D5C}.mstats small{font-size:11.5px;font-weight:800;color:#2F7F72}
+.mhat{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding:6px 2px}
+.mpol{position:relative;border:0;font:inherit;text-align:left;cursor:pointer;background:#FBF7EE;padding:8px 8px 10px;box-shadow:0 6px 16px rgba(0,0,0,.18);transform:rotate(-1.6deg)}.mpol:nth-child(2n){transform:rotate(1.8deg)}
+.mpol .clip{position:absolute;top:-7px;left:50%;width:16px;height:12px;margin-left:-8px;background:#C08A55;border-radius:2px}
+.mpol .im{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:linear-gradient(150deg,var(--a),var(--b));overflow:hidden}.mpol .im img{width:100%;height:100%;object-fit:cover}.mpol .im .mti{width:60px;height:60px}
+.mpol b{display:block;margin-top:6px;font-family:"Caveat",cursive;font-size:17px;line-height:1.1;color:#2E2420;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.mpol small{display:block;font-size:10.5px;color:#8A6E5E;margin-top:2px}
+.mcta{display:block;width:100%;margin-top:14px;font:inherit;font-weight:800;font-size:14px;color:#fff;background:linear-gradient(135deg,#3E8C80,#1E4D5C);border:0;border-radius:999px;padding:12px;cursor:pointer}
+.mruh-b{padding:4px 18px 22px}.mruh-b p{font-size:13.5px;color:var(--muted);margin:0 0 12px}
+/* etkinlik sayfası */
+.mep{position:fixed;inset:0;z-index:1200;overflow-y:auto;background:var(--bg,#FBF6F2);transform:translateY(24px);opacity:0;transition:transform .25s ease,opacity .25s ease;padding-bottom:calc(30px + env(safe-area-inset-bottom,0px))}
+.mep.on{transform:none;opacity:1}
+.mep-h{position:relative;padding:calc(env(safe-area-inset-top,0px) + 16px) 20px 26px;color:#fff;background:linear-gradient(150deg,var(--a),var(--b));border-radius:0 0 30px 30px;text-align:center}
+.mep-h .mti{width:96px;height:96px;margin:14px auto 6px;display:block}
+.mep-x{position:absolute;left:14px;top:calc(env(safe-area-inset-top,0px) + 12px);font:inherit;font-weight:800;font-size:13px;color:#fff;background:rgba(255,255,255,.2);border:0;border-radius:999px;padding:7px 12px;cursor:pointer}
+.mep-h small{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;opacity:.9}.mep-h h2{font-family:var(--f-display);font-size:28px;line-height:1.1;margin:6px 0 4px}.mep-h p{margin:0;font-weight:700;opacity:.95}
+.mep-b{padding:16px 16px 0;max-width:560px;margin:0 auto}
+.mep-info{display:grid;grid-template-columns:1.4fr 1fr;gap:10px}.mep-info div{background:var(--surface,#fff);border-radius:18px;padding:12px 14px;box-shadow:0 4px 12px rgba(30,40,50,.06)}.mep-info small{display:block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#2F7F72}.mep-info b{display:block;font-size:15px;color:var(--ink);margin:3px 0 2px}
+.mep-note{margin:12px 2px 0;font-size:14px;color:var(--ink);line-height:1.5}
+.mep-act{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.mgo{flex:1 1 100%;font:inherit;font-weight:900;font-size:16px;color:#fff;background:linear-gradient(135deg,#FF8A5B,#E8508A);border:0;border-radius:999px;padding:14px;cursor:pointer;box-shadow:0 10px 20px -10px #E8508A}
+.mgo.on{background:linear-gradient(135deg,#3E8C80,#1E4D5C);box-shadow:0 10px 20px -10px #1E4D5C}
+.mbtn{flex:1 1 auto;text-align:center;text-decoration:none;font:inherit;font-weight:800;font-size:13.5px;color:#1E4D5C;background:var(--surface,#fff);border:1.5px solid rgba(47,127,114,.3);border-radius:999px;padding:11px 14px;cursor:pointer}.mbtn.pri{color:#fff;background:linear-gradient(135deg,#3E8C80,#1E4D5C);border-color:transparent}
+.mep-hat{margin-top:22px}.mep-hat h4{font-family:var(--f-display);font-size:20px;font-weight:400;margin:0 0 12px;color:var(--ink)}
+.mep-pol{position:relative;background:#FBF7EE;padding:12px 12px 10px;box-shadow:0 8px 22px rgba(0,0,0,.18);transform:rotate(-1.2deg);max-width:320px;margin:0 auto}
+.mep-pol .clip{position:absolute;top:-8px;left:50%;width:18px;height:13px;margin-left:-9px;background:#C08A55;border-radius:2px}
+.mep-pol .im{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:linear-gradient(150deg,#E4F4EE,#FFE3C2);cursor:pointer;overflow:hidden;text-align:center;color:#2F7F72;font-weight:800;font-size:13px}.mep-pol .im img{width:100%;height:100%;object-fit:cover}
+.mep-pol textarea{width:100%;box-sizing:border-box;margin-top:8px;border:0;background:transparent;font-family:"Caveat",cursive;font-size:21px;color:#2E2420;resize:none;min-height:56px;outline:none}
+html[data-mf="dusk"] .mep{background:#1E1428}html[data-mf="dusk"] .mep-info div,html[data-mf="dusk"] .mcard,html[data-mf="dusk"] .mbtn{background:rgba(255,255,255,.07)}html[data-mf="dusk"] .mbtn{color:#BFE3D6}
+html[data-mf="dusk"] .mstats div,html[data-mf="dusk"] .mruh-card{background:rgba(111,191,166,.12)}html[data-mf="dusk"] .mstats b,html[data-mf="dusk"] .mruh-card h3{color:#BFE3D6}
+@media (prefers-reduced-motion:reduce){.mhero .mh-pg,.mhero .mh-cl{animation:none}}
+.mep{z-index:3000!important}
+.mhero p{max-width:64%}
+@keyframes mhPg{from{transform:translate(52px,34px) rotate(-2deg)}to{transform:translate(30px,44px) rotate(3deg)}}
+.mpol b{font-size:15.5px}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -6256,11 +6322,24 @@ html[data-mf="dusk"] .bnav button span.nvi svg{filter:drop-shadow(0 0 1.2px rgba
     <div class="gsur" data-sec="ev" hidden></div>
   </div>
 
+  <div class="macera" data-step="95" hidden>
+    <div class="mhero"><svg class="mh-art" viewBox="0 0 360 150" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><defs><linearGradient id="mhm1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3E8C80"/><stop offset="1" stop-color="#1E4D5C"/></linearGradient><linearGradient id="mhm2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6FBFA6"/><stop offset="1" stop-color="#2F7F72"/></linearGradient></defs>
+<circle cx="318" cy="40" r="20" fill="#FFD27A" opacity=".9"/><path d="M0 120L52 66l34 34 40-52 52 60 38-34 58 54 48-40 38 32V150H0z" fill="url(#mhm1)" opacity=".85"/><path d="M126 48l-12 16 8-3 5 6 6-5 7 3z" fill="#fff" opacity=".9"/><path d="M0 150v-22l40-26 46 30 54-36 60 34 54-28 58 30 48-22v40z" fill="url(#mhm2)"/>
+<g class="mh-pg" transform="translate(52 34)"><path d="M200 40c6-12 40-12 46 0-7-2.6-15-3.6-23-3.6s-16 1-23 3.6z" fill="#FF8A5B" stroke="#3A1E14" stroke-width="1.6" stroke-linejoin="round"/><path d="M201 40l20 18M245 40l-20 18" stroke="#3A1E14" stroke-width="1"/><circle cx="223" cy="60" r="3.2" fill="#FFD9A8" stroke="#3A1E14" stroke-width="1.4"/></g>
+<g class="mh-cl"><ellipse cx="60" cy="34" rx="22" ry="7" fill="#fff" opacity=".35"/><ellipse cx="72" cy="30" rx="12" ry="7" fill="#fff" opacity=".35"/></g><g class="mh-cl c2"><ellipse cx="170" cy="22" rx="16" ry="5" fill="#fff" opacity=".3"/></g></svg>
+      <div class="lhero-top"><span class="tag">🧭 Macera</span><button class="iconbtn homebtn" id="mac-home" type="button" aria-label="Ana sayfaya dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Ana sayfa</span></button></div>
+      <h2>Macera <em>köşem</em></h2>
+      <p id="mac-sub"></p>
+      <button type="button" class="mac-ruh" id="mac-ruh"><span class="no-mi">🧭</span> Macera ruhum</button>
+    </div>
+    <div class="ktseg macseg" role="tablist"><button type="button" role="tab" data-mt="oneri">Sana özel</button><button type="button" role="tab" data-mt="takvim">Takvim</button><button type="button" role="tab" data-mt="benim">Maceralarım</button></div>
+    <div class="macpanel" id="macpanel"></div>
+  </div>
   <nav class="bnav" id="bnav" aria-label="Ana menü">
     <button type="button" data-nv="home"><span>🏠</span><small>Ana sayfa</small></button>
     <button type="button" data-nv="kitap"><span>📚</span><small>Kitap</small></button>
     <button type="button" data-nv="rit"><span>🧘</span><small>Manifest</small></button>
-    <button type="button" data-nv="fit"><span>🌿</span><small>Önce ben</small></button>
+    <button type="button" data-nv="fit"><span>🌿</span><small>Macera</small></button>
     <button type="button" data-nv="love"><span>💞</span><small>Biz ikimiz</small></button>
   </nav>
   <div class="onb" id="onb" hidden></div>
@@ -12170,6 +12249,106 @@ function ptRender2(){const fe=document.getElementById("feeds");if(!fe)return;con
    L.push({id,p,cls,k:`${t[0]} ${dd<=0?"Bugün şehrinde":dd===1?"Yarın şehrinde":"Bu hafta şehrinde"}`,leaves:1,h:`<em>${esc(e[1])}</em>`,d:`${esc([e[6],e[7]].filter(Boolean).join(", "))} · ${evDate(e).d} ${evDate(e).m}${e[5]?" · "+esc(e[5]):""}${e[9]?"<br><small>"+esc(e[9])+"</small>":""}`,a:[["Detaylara bak",()=>{window.open(e[8]&&/^https:/.test(e[8])?e[8]:"https://www.google.com/search?q="+encodeURIComponent(e[1]+" "+e[3].slice(0,4)),"_blank","noopener");}],["Göster",go]],x:"Sonra 💛"});});};
  if(want.size)pick(EV_SP,SP_T,e=>want.has(e[2]),"sp","pp-fit",()=>{document.getElementById("go-fit").click();});
  const kinds=new Set((st.pets||[]).map(p=>p.kind));if(kinds.size)pick(EV_PT,PT_T,e=>!e[10]||kinds.has(e[10]),"pt","pp-pet",()=>{const g=document.getElementById("go-pet");if(g)g.click();});}catch(e){}return L;};})();
+
+/* ===== v0.23: MACERA KÖŞEM ===== */
+const MTI={"kosu": "<svg viewBox=\"0 0 48 48\" aria-hidden=\"true\"><path d=\"M6 30c0-3 1.5-9 4-13l5 2.6c1.4 2.6 4 4.2 8 4.8 5 .8 12 2.4 16 5.4 3 2.2 3 5 3 7.2H6z\" fill=\"#F0607E\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M6 33h36\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/><path d=\"M6 37h36v3H6z\" fill=\"#FFF3E8\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M17 20.5l2.4-2.6M20 22.5l2.4-2.6M23 23.5l2.2-2.4\" stroke=\"#fff\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M33 13l5-3M35 18l6-1M30 9l2-4\" stroke=\"#F2A33A\" stroke-width=\"2.4\" stroke-linecap=\"round\"/></svg>", "trail": "<svg viewBox=\"0 0 48 48\" aria-hidden=\"true\"><path d=\"M3 40L18 14l8 12 5-7 14 21z\" fill=\"#6FA287\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 14l-4.6 8 2.6-1 2 2.4 2.2-2.2 2.6 1.4z\" fill=\"#fff\" stroke=\"#3A1E14\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M31 19v-9\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/><path d=\"M31 10l7 2.4-7 2.6z\" fill=\"#F0505E\" stroke=\"#3A1E14\" stroke-width=\"2\" stroke-linejoin=\"round\"/><circle cx=\"40\" cy=\"9\" r=\"3\" fill=\"#FFC857\" stroke=\"#3A1E14\" stroke-width=\"2\"/></svg>", "yuruyus": "<svg viewBox=\"0 0 48 48\" aria-hidden=\"true\"><path d=\"M14 6h12v14c4 1 11 3 13 7.5V36H10V12c0-3.3 1.7-6 4-6z\" fill=\"#C9906A\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M8 36h33v4H8z\" fill=\"#5E4636\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M17 12l6 2M17 17l6 2M17 22l6 2\" stroke=\"#FFE2B8\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M14 6h12\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>", "bisiklet": "<svg viewBox=\"0 0 48 48\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"31\" r=\"8\" fill=\"#BFD6EA\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"36\" cy=\"31\" r=\"8\" fill=\"#BFD6EA\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"31\" r=\"2\" fill=\"#3A1E14\"/><circle cx=\"36\" cy=\"31\" r=\"2\" fill=\"#3A1E14\"/><path d=\"M12 31l7-13h12l5 13M19 18l6 13h-13M25 31l6-13\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/><path d=\"M16.5 14h6M29 13h5\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/><path d=\"M19 18h12l-6 13z\" fill=\"#F0607E\" stroke=\"#3A1E14\" stroke-width=\"2.2\" stroke-linejoin=\"round\"/></svg>", "yoga": "<svg viewBox=\"0 0 48 48\" aria-hidden=\"true\"><ellipse cx=\"24\" cy=\"18\" rx=\"5\" ry=\"11\" fill=\"#C9B3F0\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" transform=\"rotate(-55 24 30)\"/><ellipse cx=\"24\" cy=\"18\" rx=\"5\" ry=\"11\" fill=\"#C9B3F0\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" transform=\"rotate(55 24 30)\"/><ellipse cx=\"24\" cy=\"18\" rx=\"5\" ry=\"11\" fill=\"#F7A3C0\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" transform=\"rotate(-25 24 30)\"/><ellipse cx=\"24\" cy=\"18\" rx=\"5\" ry=\"11\" fill=\"#F7A3C0\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" transform=\"rotate(25 24 30)\"/><ellipse cx=\"24\" cy=\"18\" rx=\"5\" ry=\"11\" fill=\"#F48FB1\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" transform=\"rotate(0 24 30)\"/><path d=\"M8 38c5 3 27 3 32 0\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>", "yuzme": "<svg viewBox=\"0 0 48 48\" aria-hidden=\"true\"><circle cx=\"31\" cy=\"12\" r=\"5\" fill=\"#FFD9A8\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M6 24c4-3 8-3 12 0s8 3 12 0 8-3 12 0\" fill=\"none\" stroke=\"#3E8BD6\" stroke-width=\"3.4\" stroke-linecap=\"round\"/><path d=\"M6 32c4-3 8-3 12 0s8 3 12 0 8-3 12 0\" fill=\"none\" stroke=\"#7CC4F2\" stroke-width=\"3.4\" stroke-linecap=\"round\"/><path d=\"M6 40c4-3 8-3 12 0s8 3 12 0 8-3 12 0\" fill=\"none\" stroke=\"#3E8BD6\" stroke-width=\"3.4\" stroke-linecap=\"round\"/><path d=\"M16 21l8-5 7 6\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>", "macera": "<svg viewBox=\"0 0 48 48\" aria-hidden=\"true\"><path d=\"M5 18C9 8 39 8 43 18c-6-2.4-12-3.4-19-3.4S11 15.6 5 18z\" fill=\"#FF8A5B\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M14 13.5c1.6 1.6 1.6 3.6 1.2 5M24 12.4v6M34 13.5c-1.6 1.6-1.6 3.6-1.2 5\" stroke=\"#FFD45C\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><path d=\"M6 18l16 16M42 18L26 34M15 18.5l8 15.5M33 18.5l-8 15.5\" stroke=\"#3A1E14\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><circle cx=\"24\" cy=\"36\" r=\"3.2\" fill=\"#FFD9A8\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 40l3 4 3-4\" fill=\"#7CB8E8\" stroke=\"#3A1E14\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"};
+Object.keys(MTI).forEach(k=>{MTI[k]=mf3d(MTI[k],"mt"+k);});
+NVI.fit=mf3d('<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M3 41L17 17l8 11 6-8 14 21z" fill="#6FBFA6" stroke="#3A1E14" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 17l-4.2 7.2 2.4-.9 1.8 2.2 2-2 2.4 1.2z" fill="#fff" stroke="#3A1E14" stroke-width="1.8" stroke-linejoin="round"/><path d="M22 12c4-9 20-9 24 0-4.4-1.6-8-2.2-12-2.2s-7.6.6-12 2.2z" fill="#FF8A5B" stroke="#3A1E14" stroke-width="2" stroke-linejoin="round"/><path d="M23 12l10 10M45 12L35 22" stroke="#3A1E14" stroke-width="1.2"/><circle cx="34" cy="23.5" r="2.2" fill="#FFD9A8" stroke="#3A1E14" stroke-width="1.4"/><circle cx="9" cy="10" r="4" fill="#FFC857" stroke="#3A1E14" stroke-width="2"/></svg>',"nvmac");
+(function(){const sp=document.querySelector('#bnav [data-nv="fit"] span');if(sp){sp.dataset.nvi="";delete sp.dataset.nvi;sp.innerHTML="";}navIcons();})();
+const MT_C={kosu:["#F0607E","#B8456A"],trail:["#6FA287","#2F6F5E"],yuruyus:["#C9906A","#8A5A3A"],bisiklet:["#5FA6DE","#2E6FA8"],yoga:["#B996E8","#7A5AB8"],yuzme:["#3EA6C8","#1E6F8F"],macera:["#FF8A5B","#C9502A"]};
+function mac(){const m=st.mac=st.mac||{};m.evi=m.evi||((st.fit&&st.fit.evi)||[]).slice();m.go=m.go||{};m.hat=m.hat||{};return m;}
+let mactab="oneri",macCat="",macPick=false;
+function macEv(id){return EV_SP.find(e=>e[0]===id);}
+function macWant(){const M=mac();return new Set(SP_I.filter(x=>M.evi.includes(x[0])).flatMap(x=>x[3]));}
+function macIco(t){return `<i class="mti">${MTI[t]||MTI.macera}</i>`;}
+function macCard(e){const D=evDate(e),c=MT_C[e[2]]||MT_C.macera,t=SP_T[e[2]]||["",""],go=mac().go[e[0]],dd=evDays(e);
+ return `<button type="button" class="mcard" data-mev="${esc(e[0])}" style="--a:${c[0]};--b:${c[1]}"><span class="mc-top">${macIco(e[2])}<span class="mc-d"><b>${D.d}</b><small>${D.m}</small></span></span>
+  <span class="mc-b"><strong>${esc(e[1])}</strong><small>${t[1]} · ${esc(e[7]||e[6]||"")}</small>${evNearB(e)}${go?`<i class="mc-go">✓ Gidiyorum</i>`:dd>=0&&dd<=7?`<i class="mc-soon">${dd<=0?"Bugün":dd===1?"Yarın":dd+" gün"}</i>`:""}</span></button>`;}
+function macRow(title,L,more){return L.length?`<div class="kthead"><span>${title}</span>${more?`<small>${more}</small>`:""}</div><div class="ktrow mrow">${L.map(macCard).join("")}</div>`:"";}
+function macSort(L){return L.slice().sort((a,b)=>{const na=evNear(a),nb=evNear(b);return ((nb&&nb.same?2:nb?1:0)-(na&&na.same?2:na?1:0))||a[3].localeCompare(b[3]);});}
+function macRender(){const P=document.getElementById("macpanel");if(!P)return;const M=mac(),U=evUp(EV_SP),W=macWant();
+ const near=U.filter(e=>{const n=evNear(e);return n&&n.same;});
+ document.getElementById("mac-sub").textContent=near.length?`Bu ay şehrinde ${near.length} macera seni bekliyor 📍`:"Ayakkabılarını bağla, yeni bir maceraya hazır mısın?";
+ document.querySelectorAll("[data-mt]").forEach(b=>{b.setAttribute("aria-selected",b.dataset.mt===mactab);b.onclick=()=>{mactab=b.dataset.mt;macRender();window.scrollTo({top:0,behavior:"smooth"});};});
+ document.getElementById("mac-ruh").onclick=macRuh;document.getElementById("mac-home").onclick=()=>{step=0;show();window.scrollTo({top:0});};
+ let H="";
+ if(mactab==="oneri"){
+  const mine=Object.keys(M.go).map(macEv).filter(e=>e&&evEnd(e)>=dkey()).sort((a,b)=>a[3].localeCompare(b[3]));
+  if(mine.length){const e=mine[0],dd=evDays(e),c=MT_C[e[2]]||MT_C.macera;H+=`<button type="button" class="mnext" data-mev="${esc(e[0])}" style="--a:${c[0]};--b:${c[1]}">${macIco(e[2])}<span><small>Sıradaki maceran</small><strong>${esc(e[1])}</strong><em>${dd<=0?"Bugün! Başarılar 💪":dd===1?"Yarın · son hazırlıklar":dd+" gün kaldı"} · ${esc(e[7]||"")}</em></span></button>`;}
+  if(!M.evi.length||macPick)H+=`<div class="mruh-card"><h3>Macera ruhun ne?</h3><p>Seç, sana uygun etkinlikleri getireyim. Şehrindekileri hemen haber veririm.</p><div class="evr-ch">${SP_I.map(([id,e,l])=>`<button type="button" data-mevi="${id}" aria-pressed="${M.evi.includes(id)}">${e} ${l}</button>`).join("")}</div>${M.evi.length?`<button type="button" class="mcta" id="mpick-ok">Tamam, maceralarımı göster →</button>`:""}</div>`;
+  H+=macRow("Şehrinde 📍",macSort(near).slice(0,10),near.length?near.length+" etkinlik":"");
+  const pool=W.size?U.filter(e=>W.has(e[2])):U;
+  if(W.size)SP_I.filter(x=>M.evi.includes(x[0])).forEach(([id,e,l,ts])=>{const L=macSort(U.filter(v=>ts.includes(v[2])));H+=L.length?macRow(`${l} ${e}`,L.slice(0,10),L.length+" etkinlik"):`<div class="kthead"><span>${l} ${e}</span></div><p class="evr-e mempty">Yakında bu dalda etkinlik görünmüyor. Haftada iki kez tarıyorum, çıkınca haber vereceğim.</p>`;});
+  else H+=macRow("Yaklaşan maceralar",macSort(pool).slice(0,10));
+  if(!U.length)H+=`<p class="evr-e">Şu an listede yaklaşan etkinlik yok. Haftada iki kez tarıyorum 🧭</p>`;}
+ else if(mactab==="takvim"){
+  const L=macCat?U.filter(e=>(SP_I.find(x=>x[0]===macCat)||[0,0,0,[]])[3].includes(e[2])):U;
+  H+=`<div class="evr-ch mcats"><button type="button" data-mcat="" aria-pressed="${!macCat}">Tümü</button>${SP_I.map(([id,e,l])=>`<button type="button" data-mcat="${id}" aria-pressed="${macCat===id}">${e} ${l}</button>`).join("")}</div>`;
+  const MN=["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];let cur="";
+  H+=L.length?`<div class="mcal">${L.map(e=>{const m=e[3].slice(0,7);let h="";if(m!==cur){cur=m;h=`<h4 class="mmon">${MN[+m.slice(5)-1]} ${m.slice(0,4)}</h4>`;}return h+evRow(e,SP_T).replace('class="evr"',`class="evr mevr" data-mev="${esc(e[0])}"`).replace(/data-evq="[^"]*"\s*data-evu="[^"]*"/,"");}).join("")}</div>`:`<p class="evr-e">Bu dalda yaklaşan etkinlik yok.</p>`;}
+ else{const ids=Object.keys(M.go);const all=ids.map(macEv).filter(Boolean);const up=all.filter(e=>evEnd(e)>=dkey()).sort((a,b)=>a[3].localeCompare(b[3])),past=all.filter(e=>evEnd(e)<dkey()).sort((a,b)=>b[3].localeCompare(a[3]));
+  const cities=new Set(past.map(e=>e[7]).filter(Boolean));
+  H+=`<div class="mstats"><div><b>${past.length}</b><small>macera</small></div><div><b>${cities.size}</b><small>şehir</small></div><div><b>${up.length}</b><small>sırada</small></div></div>`;
+  H+=up.length?`<div class="kthead"><span>Gideceklerim</span></div><div class="mcal">${up.map(e=>evRow(e,SP_T).replace('class="evr"',`class="evr mevr" data-mev="${esc(e[0])}"`)).join("")}</div>`:"";
+  H+=`<div class="kthead"><span>Gittiklerim · hatıra ipim 🧷</span></div>`+(past.length?`<div class="mhat">${past.map(e=>{const h=M.hat[e[0]]||{},ph=PH["mac:"+e[0]],c=MT_C[e[2]]||MT_C.macera;return `<button type="button" class="mpol" data-mev="${esc(e[0])}" style="--a:${c[0]};--b:${c[1]}"><span class="clip"></span><span class="im">${ph?`<img src="${ph}" alt="">`:macIco(e[2])}</span><b>${esc(h.cm||e[1])}</b><small>${evDate(e).d} ${evDate(e).m} · ${esc(e[7]||"")}</small></button>`;}).join("")}</div>`:`<p class="evr-e">Bir etkinliğe "Gidiyorum" dediğinde burada görünür. Etkinlik bitince fotoğrafını ve hislerini asarsın, hatıra ipin dolar 🧷</p>`);
+  if(!ids.length)H+=`<button type="button" class="mcta" id="mac-cta">Maceraları keşfet →</button>`;}
+ P.innerHTML=H;
+ P.querySelectorAll("[data-mev]").forEach(b=>b.onclick=()=>macOpen(b.dataset.mev));
+ P.querySelectorAll("[data-mevi]").forEach(b=>b.onclick=()=>{const M=mac(),id=b.dataset.mevi;macPick=true;M.evi=M.evi.includes(id)?M.evi.filter(x=>x!==id):[...M.evi,id];save();macRender();});
+ const pk=document.getElementById("mpick-ok");if(pk)pk.onclick=()=>{macPick=false;macRender();};
+ P.querySelectorAll("[data-mcat]").forEach(b=>b.onclick=()=>{macCat=b.dataset.mcat;macRender();});
+ const cta=document.getElementById("mac-cta");if(cta)cta.onclick=()=>{mactab="oneri";macRender();};}
+function macRuh(){let O=document.getElementById("mruh");if(O)O.remove();O=document.createElement("div");O.id="mruh";O.className="shs";O.innerHTML=`<div class="shs-c"><div class="shs-grab"></div><div class="shs-h"><div><small>Macera ruhum</small><b>Neleri seversin?</b></div><button type="button" class="shs-x" aria-label="Kapat">✕</button></div>
+  <div class="mruh-b"><p>Seçtiğin dallarda şehrindeki etkinlikleri haber veririm.</p><div class="evr-ch">${SP_I.map(([id,e,l])=>`<button type="button" data-mevi="${id}" aria-pressed="${mac().evi.includes(id)}">${e} ${l}</button>`).join("")}</div><button type="button" class="mcta" id="mruh-ok">Tamam</button></div></div>`;
+ document.body.appendChild(O);requestAnimationFrame(()=>O.classList.add("on"));const close=()=>{O.classList.remove("on");setTimeout(()=>O.remove(),250);macRender();};
+ O.onclick=e=>{if(e.target===O)close();};O.querySelector(".shs-x").onclick=close;O.querySelector("#mruh-ok").onclick=close;
+ O.querySelectorAll("[data-mevi]").forEach(b=>b.onclick=()=>{const M=mac(),id=b.dataset.mevi;M.evi=M.evi.includes(id)?M.evi.filter(x=>x!==id):[...M.evi,id];save();b.setAttribute("aria-pressed",M.evi.includes(id));});}
+/* Etkinlik sayfası */
+function macIcs(e){const d=e[3].replace(/-/g,""),d2=(e[4]||e[3]);const n=new Date(d2+"T00:00");n.setDate(n.getDate()+1);const de=n.toISOString().slice(0,10).replace(/-/g,"");
+ const ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//MeFirst//TR","BEGIN:VEVENT","UID:"+e[0]+"@mefirst.app","DTSTAMP:"+new Date().toISOString().replace(/[-:]/g,"").slice(0,15)+"Z",e[5]?"DTSTART:"+d+"T"+e[5].replace(":","")+"00":"DTSTART;VALUE=DATE:"+d,e[5]?"DURATION:PT3H":"DTEND;VALUE=DATE:"+de,"SUMMARY:"+e[1],"LOCATION:"+[e[6],e[7]].filter(Boolean).join(", "),"DESCRIPTION:"+(e[9]||"")+" · Me First Macera köşem","END:VEVENT","END:VCALENDAR"].join("\r\n");
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([ics],{type:"text/calendar"}));a.download=e[1].replace(/[^\wğüşöçıİĞÜŞÖÇ ]+/g,"").slice(0,40)+".ics";document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1500);}
+function macOpen(id){const e=macEv(id);if(!e)return;let O=document.getElementById("mep");const fresh=!O;if(!O){O=document.createElement("div");O.id="mep";O.className="mep";document.body.appendChild(O);try{history.pushState({mep:1},"");}catch(_){}}
+ const M=mac(),c=MT_C[e[2]]||MT_C.macera,t=SP_T[e[2]]||["",""],D=evDate(e),dd=evDays(e),go=!!M.go[id],past=evEnd(e)<dkey(),h=M.hat[id]||{},ph=PH["mac:"+id];
+ const link=e[8]&&/^https:/.test(e[8])?e[8]:"https://www.google.com/search?q="+encodeURIComponent(e[1]+" "+e[3].slice(0,4));
+ O.innerHTML=`<div class="mep-h" style="--a:${c[0]};--b:${c[1]}"><button type="button" class="mep-x" id="mep-x">← Macera köşem</button>${macIco(e[2])}<small>${t[1]}</small><h2>${esc(e[1])}</h2><p>${D.d} ${D.m} ${e[3].slice(0,4)}${e[5]?" · "+esc(e[5]):""}</p></div>
+  <div class="mep-b"><div class="mep-info"><div><small>Nerede</small><b>${esc([e[6],e[7]].filter((v,i,a)=>v&&a.indexOf(v)===i).join(", ")||"—")}</b>${evNearB(e)}</div><div><small>Ne zaman</small><b>${past?"Geçti":dd<=0?"Bugün":dd===1?"Yarın":dd+" gün sonra"}</b></div></div>
+  ${e[9]?`<p class="mep-note">${esc(e[9])}</p>`:""}
+  <div class="mep-act">${past?"":`<button type="button" class="mgo${go?" on":""}" id="mep-go">${go?"✓ Gidiyorum":"Ben de gidiyorum 🙋‍♀️"}</button>`}<a class="mbtn" href="${esc(link)}" target="_blank" rel="noopener">Detay & kayıt ↗</a>${past?"":`<button type="button" class="mbtn" id="mep-ics">📅 Takvimime ekle</button>`}</div>
+  ${(go||past)?`<section class="mep-hat"><h4>${past?"Hatıranı as 🧷":"Hatıra ipin"}</h4>${past||go?`<div class="mep-pol"><span class="clip"></span><label class="im" for="mep-ph">${ph?`<img src="${ph}" alt="">`:`<span>📷<br>Fotoğraf ekle</span>`}</label><input type="file" id="mep-ph" accept="image/*" hidden><textarea id="mep-cm" maxlength="160" placeholder="${past?"Nasıldı? Bir cümleyle anlat…":"Etkinlikten sonra buraya hislerini yazarsın"}">${esc(h.cm||"")}</textarea></div>
+   <div class="mep-act"><button type="button" class="mbtn" id="mep-save">Kaydet</button>${(ph||h.cm)?`<button type="button" class="mbtn pri" id="mep-share">📸 Hikâyede paylaş</button>`:""}</div>`:""}</section>`:""}
+  </div>`;
+ const close=back=>{O.classList.remove("on");setTimeout(()=>O.remove(),220);if(!back){try{history.back();}catch(_){}}if(step===95)macRender();};window.macClose=close;
+ if(fresh)requestAnimationFrame(()=>O.classList.add("on"));else O.classList.add("on");
+ O.querySelector("#mep-x").onclick=()=>close(false);
+ const g=O.querySelector("#mep-go");if(g)g.onclick=()=>{if(M.go[id])delete M.go[id];else{M.go[id]={d:dkey()};try{mfConfetti("Maceran takvimde! 🧭",["#6FBFA6","#FF8A5B","#FFD45C","#fff"],"linear-gradient(135deg,#3E8C80,#1E4D5C)");}catch(_){}}save();macOpen(id);};
+ const ic=O.querySelector("#mep-ics");if(ic)ic.onclick=()=>macIcs(e);
+ const pf=O.querySelector("#mep-ph");if(pf)pf.onchange=()=>{const f=pf.files[0];if(!f)return;phRead(f,d=>{PH["mac:"+id]=d;phSave();macOpen(id);},{w:720,h:720});};
+ const sv=O.querySelector("#mep-save");if(sv)sv.onclick=()=>{M.hat[id]={cm:O.querySelector("#mep-cm").value.trim(),d:dkey()};M.go[id]=M.go[id]||{d:dkey()};save();macOpen(id);};
+ const sh=O.querySelector("#mep-share");if(sh)sh.onclick=()=>macShare(e);}
+window.addEventListener("popstate",()=>{const O=document.getElementById("mep");if(O&&window.macClose)window.macClose(true);});
+async function macShare(e){try{await document.fonts.ready;}catch(_){}const M=mac(),h=M.hat[e[0]]||{},W=1080,HS=1920,cv=document.createElement("canvas");cv.width=W;cv.height=HS;const g=cv.getContext("2d"),c=MT_C[e[2]]||MT_C.macera;
+ const bg=g.createLinearGradient(0,0,0,HS);bg.addColorStop(0,"#FFE3C2");bg.addColorStop(.55,"#F7D7C4");bg.addColorStop(1,"#BFE3D6");g.fillStyle=bg;g.fillRect(0,0,W,HS);
+ g.fillStyle="rgba(47,127,114,.85)";g.beginPath();g.moveTo(0,HS);g.lineTo(0,1640);g.lineTo(260,1500);g.lineTo(470,1640);g.lineTo(720,1460);g.lineTo(1080,1660);g.lineTo(1080,HS);g.fill();
+ g.strokeStyle="#A8743F";g.lineWidth=5;g.beginPath();g.moveTo(0,300);g.quadraticCurveTo(W/2,352,W,300);g.stroke();
+ g.save();g.translate(W/2,330);g.rotate(-.04);const pw=640,ip=34,iw=pw-ip*2,ph=ip+iw+150;g.shadowColor="rgba(0,0,0,.45)";g.shadowBlur=44;g.shadowOffsetY=24;g.fillStyle="#FBF7EE";g.fillRect(-pw/2,0,pw,ph);g.shadowColor="transparent";
+ const ix=-pw/2+ip,iy=ip,img=PH["mac:"+e[0]]||PH.me;let ok=false;if(img){const im=await new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src=img;});if(im){const m=Math.min(im.width,im.height);g.drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,ix,iy,iw,iw);ok=true;}}
+ if(!ok){const gg=g.createLinearGradient(ix,iy,ix+iw,iy+iw);gg.addColorStop(0,c[0]);gg.addColorStop(1,c[1]);g.fillStyle=gg;g.fillRect(ix,iy,iw,iw);}
+ g.fillStyle="#2E2420";g.textAlign="left";g.font='600 52px "Caveat",cursive';const T=h.cm||"Bir macera daha tamam!";let L=[],cur="";T.split(" ").forEach(w=>{const tt=cur?cur+" "+w:w;if(g.measureText(tt).width>iw){L.push(cur);cur=w;}else cur=tt;});L.push(cur);L.slice(0,2).forEach((l,k)=>g.fillText(l,ix,iy+iw+66+k*54));
+ g.fillStyle="#C08A55";g.fillRect(-14,-46,28,62);g.restore();
+ g.textAlign="center";g.fillStyle="#2E2420";g.font='64px "DM Serif Display",serif';g.fillText(e[1].length>26?e[1].slice(0,25)+"…":e[1],W/2,1330);
+ g.font='800 34px "Nunito Sans",sans-serif';g.fillStyle="#8A5A3A";g.fillText(`🏅 ${evDate(e).d} ${evDate(e).m} ${e[3].slice(0,4)} · ${e[7]||""}`,W/2,1392);
+ g.fillStyle="#fff";g.font='600 34px "Nunito Sans",sans-serif';g.fillText("Me First · Macera köşem",W/2,HS-150);g.font='500 28px "Nunito Sans",sans-serif';g.fillStyle="rgba(255,255,255,.8)";g.fillText("mefirst.app",W/2,HS-108);
+ bkCanvasShare(cv,"macera.png",`${e[1]} 🏅 ${h.cm||""} #MeFirst`);}
+/* gezinme: alt menü "Macera" → Macera köşem */
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest('#bnav [data-nv="fit"]');if(!b)return;e.stopPropagation();e.preventDefault();step=95;show();macRender();window.scrollTo({top:0});},true);
+(function(){const _n=navCur;navCur=function(){return step===95?"fit":step===50?"":_n();};const _r=renderStep;renderStep=function(){if(step===95){show();macRender();return;}return _r.apply(this,arguments);};})();
+(function(){const _s=show;show=function(){const r=_s.apply(this,arguments);try{navSync();}catch(_){}return r;};})();
+/* Önce ben'deki eski kart artık Macera köşem'de */
+evrRender=function(){const c=document.getElementById("evr-card");if(c)c.remove();};
+/* bildirimler Macera köşem'i açsın ve ilgi listesi oradan gelsin */
+(function(){const _c=mfPopCands;mfPopCands=function(){const L=_c.apply(this,arguments);try{const W=macWant();if(W.size&&!(st.fit&&(st.fit.evi||[]).length)){const S=mfPopSeen(),h=new Date().getHours();if(h>=9&&h<21)evUp(EV_SP).filter(e=>W.has(e[2])).forEach(e=>{const N=evNear(e);if(!N||!N.same)return;const dd=evDays(e);if(dd>7)return;const id="sp:"+e[0]+(dd<=0?":g":":h");if(S[id]||L.some(c=>c.id===id))return;const p=dd<=0?86:72;if(!mfPopOk({p}))return;const t=SP_T[e[2]];
+   L.push({id,p,cls:"pp-fit",k:`${t[0]} ${dd<=0?"Bugün şehrinde":dd===1?"Yarın şehrinde":"Bu hafta şehrinde"}`,leaves:1,h:`<em>${esc(e[1])}</em>`,d:`${esc([e[6],e[7]].filter(Boolean).join(", "))} · ${evDate(e).d} ${evDate(e).m}`,a:[["Etkinliğe bak",()=>{step=95;show();macRender();macOpen(e[0]);}]],x:"Sonra 💛"});});}
+  L.forEach(c=>{if(/^sp:/.test(c.id||"")&&c.a){const eid=c.id.split(":")[1];c.a=[["Etkinliğe bak",()=>{step=95;show();macRender();macOpen(eid);}]];}});}catch(_){}return L;};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
