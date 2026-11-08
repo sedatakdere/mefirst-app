@@ -1,6 +1,6 @@
 {
 "updated":"2026-11-08",
-"note":"Me First imza günleri ve kitap fuarları. ev: [id,[yazarlar],YYYY-MM-DD,HH:MM,mekan,il]. fair: [ad,baslangic,bitis,yer,not,il]",
+"note":"Me First etkinlikleri. ev (imza günü): [id,[yazarlar],YYYY-MM-DD,HH:MM,mekan,il]. fair: [ad,baslangic,bitis,yer,not,il]. spor: [id,ad,tur(kosu|trail|yuruyus|bisiklet|yoga|yuzme|macera),baslangic,bitis|'',saat|'',mekan,il,url|'',kisa not]. pati: [id,ad,tur(sahip|yuruyus|kosu|fuar|asi|kisir|egitim|diger),baslangic,bitis|'',saat|'',mekan,il,url|'',kisa not,hayvan(kopek|kedi|'')]",
 "ev":[
 ["e1", ["Mert Arık"], "2026-11-01", "13:00", "Samsun Kitap Fuarı", "Samsun"],
 ["e2", ["Kemal Sayar"], "2026-11-01", "14:00", "Samsun Kitap Fuarı", "Samsun"],
@@ -36,5 +36,19 @@
 ["Ümraniye Kitap Fuarı", "2026-11-21", "2026-11-29", "İstanbul", "Program yakında", "İstanbul"],
 ["Şanlıurfa Kitap Fuarı", "2026-11-20", "2026-11-29", "Şanlıurfa", "Program yakında", "Şanlıurfa"],
 ["43. TÜYAP İstanbul Kitap Fuarı", "2026-12-12", "2026-12-20", "TÜYAP Büyükçekmece", "Onur yazarı Latife Tekin · imza programı açıklanınca burada", "İstanbul"]
+],
+"spor":[
+["s20261114-latmos", "Latmos Ultra Maratonu", "trail", "2026-11-14", "2026-11-15", "", "Bafa Gölü", "Muğla", "", "Trail yarışı"],
+["s20261115-soli", "Soli 10K", "kosu", "2026-11-15", "", "", "Soli Pompeiopolis", "Mersin", "", "10K yol koşusu"],
+["s20261122-gazi", "8. Gazi Yarı Maratonu", "kosu", "2026-11-22", "", "", "Ankara", "Ankara", "", "21K · 10K · ücretsiz halk koşusu"],
+["s20261122-cenedag", "Çenedağ Ultra Trail", "trail", "2026-11-22", "", "", "Çenedağ", "Kocaeli", "", "Trail yarışı"],
+["s20261128-ida", "İda Ultra", "trail", "2026-11-28", "2026-11-29", "", "Kazdağları", "Çanakkale", "", "Trail yarışı"],
+["s20261205-nicholas", "St. Nicholas Yarı Maratonu", "kosu", "2026-12-05", "2026-12-06", "", "Demre", "Antalya", "", "Yarı maraton"],
+["s20261213-mersin", "Mersin Maratonu", "kosu", "2026-12-13", "", "", "Mersin", "Mersin", "", "Maraton"],
+["s20261225-antalyault", "Antalya Ultra", "trail", "2026-12-25", "2026-12-27", "", "Antalya", "Antalya", "", "Trail yarışı"],
+["s20261227-ataturk", "Büyük Atatürk Koşusu", "kosu", "2026-12-27", "", "", "Ankara", "Ankara", "", "Yol koşusu"]
+],
+"pati":[
+
 ]
 }
