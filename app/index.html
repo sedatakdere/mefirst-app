@@ -5679,6 +5679,7 @@ img.cvimg{object-position:50% 0}
 .trd-n{display:flex;align-items:center;justify-content:center;gap:5px;margin:2px 0 10px;cursor:pointer}
 .trd-n i{width:6px;height:6px;border-radius:50%;background:rgba(168,73,42,.25);transition:all .25s}.trd-n i.on{width:16px;border-radius:3px;background:#A8492A}
 .trd-n span{margin-left:6px;font-size:11px;font-weight:700;color:#A8492A}
+.bkz-act button.del{color:#A8492A}.bkz-act button.del.sure{background:#A8492A;color:#fff}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -11913,6 +11914,13 @@ function sbAvAsk(){const P=sbPublic();if(!P||!P.ok||P.photo||P.phAsk||!PH.me||do
 setTimeout(()=>sbAvSync().catch(()=>{}),3500);
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")sbAvSync().catch(()=>{});});
 (function(){let asked=0;const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);if(!asked){asked=1;setTimeout(()=>{try{if(step===90)sbAvAsk();}catch(e){}},1600);}};})();
+
+/* Kendi polaroidini büyütünce: Yorumu sil */
+document.addEventListener("click",e=>{const pl=e.target.closest&&e.target.closest("#bkp .pol");if(!pl||!pl.querySelector("#bk-pdel")||e.target.closest(".pdel"))return;
+ setTimeout(()=>{const Z=document.querySelector(".bkz");if(!Z||Z.querySelector(".del"))return;let a=Z.querySelector(".bkz-act");if(!a){a=document.createElement("div");a.className="bkz-act";Z.appendChild(a);}
+  const b=document.createElement("button");b.type="button";b.className="del";b.textContent="🗑 Yorumu sil";a.appendChild(b);
+  b.onclick=ev=>{ev.stopPropagation();if(!b.dataset.sure){b.dataset.sure=1;b.textContent="Emin misin? Sil";b.classList.add("sure");setTimeout(()=>{if(b.isConnected){delete b.dataset.sure;b.textContent="🗑 Yorumu sil";b.classList.remove("sure");}},3000);return;}
+   Z.remove();const pd=document.getElementById("bk-pdel");if(pd){pd.dataset.sure=1;pd.click();}};},150);});
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
