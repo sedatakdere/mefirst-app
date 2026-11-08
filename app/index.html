@@ -5671,6 +5671,14 @@ img.cvimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-in
 .acm{padding:9px 12px;font-size:12px;color:#8A5A3A}
 img.cvimg{object-position:50% 0}
 .ksr .cv img,.trh-pol .im img{object-position:50% 0}
+
+.trd{position:relative;height:calc(var(--trdh,112px) + (var(--n) - 1) * 11px);margin-bottom:8px}
+.trd-c{position:absolute;left:0;right:0;top:0;margin:0;touch-action:pan-y;user-select:none;-webkit-user-select:none;box-shadow:0 6px 16px rgba(122,58,30,.14);min-height:96px;transform-origin:50% 100%}
+.trd-c:not(.top){filter:saturate(.85)}
+.trd-c .trh-q p{-webkit-line-clamp:2}
+.trd-n{display:flex;align-items:center;justify-content:center;gap:5px;margin:2px 0 10px;cursor:pointer}
+.trd-n i{width:6px;height:6px;border-radius:50%;background:rgba(168,73,42,.25);transition:all .25s}.trd-n i.on{width:16px;border-radius:3px;background:#A8492A}
+.trd-n span{margin-left:6px;font-size:11px;font-weight:700;color:#A8492A}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -11697,26 +11705,27 @@ function trCalc(R){const now=Date.now(),B={};let fol=a=>false;try{if(st.kitap)fo
   b.s+=p._s;b.n++;b.l+=p.like_count||0;b.r+=p.reply_count||0;b.u.add(p.user_id);if(!b.top||p._s>b.top._s)b.top=p;});
  const L=Object.values(B).map(b=>{b.s*=1+.25*(b.u.size-1);if(fol(b.a))b.s*=1.3;b.u=b.u.size;delete b.top;return b;}).sort((a,b)=>b.s-a.s);
  const P=R.filter(p=>p.body&&now-new Date(p.created_at).getTime()<14*864e5).sort((a,b)=>b._s-a._s);
- return {books:L.slice(0,10),pol:P[0]||null};}
+ return {books:L.slice(0,10),pol:P[0]||null,pols:P.slice(0,6)};}
 async function trLoad(force){let C=null;try{C=JSON.parse(localStorage.getItem("mf-trend")||"null");}catch(e){}
  if(C&&!force&&Date.now()-C.at<6e5){Object.assign(SB_TR,C);return SB_TR;}
  const since=new Date(Date.now()-30*864e5).toISOString();
  const R=await sbGet(`polaroid_feed?select=id,user_id,book_key,book_title,book_author,body,hearts,created_at,name,like_count,reply_count&created_at=gte.${encodeURIComponent(since)}&order=created_at.desc&limit=400`);
  if(!Array.isArray(R)){if(C)Object.assign(SB_TR,C);return SB_TR;}
- const T=trCalc(R);if(T.pol){let im=await sbGet(`polaroid_feed?select=photo,avatar&id=eq.${T.pol.id}`);if(!Array.isArray(im))im=await sbGet(`polaroid_feed?select=avatar&id=eq.${T.pol.id}`);if(Array.isArray(im)&&im[0])T.pol.img=im[0].photo||im[0].avatar||"";}
- const O={at:Date.now(),books:T.books,pol:T.pol};try{localStorage.setItem("mf-trend",JSON.stringify(O));}catch(e){try{O.pol&&(O.pol.img="");localStorage.setItem("mf-trend",JSON.stringify(O));}catch(_){}}
+ const T=trCalc(R);if(T.pols.length){const ids=T.pols.map(p=>p.id).join(",");let im=await sbGet(`polaroid_feed?select=id,photo,avatar&id=in.(${ids})`);if(!Array.isArray(im))im=await sbGet(`polaroid_feed?select=id,avatar&id=in.(${ids})`);
+  if(Array.isArray(im))T.pols.forEach(p=>{const m=im.find(x=>x.id===p.id);if(m)p.img=m.photo||m.avatar||"";});}
+ const O={at:Date.now(),books:T.books,pol:T.pols[0]||null,pols:T.pols};try{localStorage.setItem("mf-trend",JSON.stringify(O));}catch(e){try{(O.pols||[]).forEach(p=>p.img="");localStorage.setItem("mf-trend",JSON.stringify(O));}catch(_){}}
  Object.assign(SB_TR,O);return SB_TR;}
 function trCol(t){let h=2166136261;for(const c of (t||""))h=Math.imul(h^c.charCodeAt(0),16777619)>>>0;const P=[["#7A2E3A","#C2546A"],["#2E4A6B","#5E86B8"],["#3E5A3A","#7A9A5A"],["#5A3A6B","#9A6ABF"],["#8A4A1E","#D08A4A"],["#1E4A4A","#3E8A82"],["#6B2E1E","#B85A3A"],["#2A2A4A","#5A5A9A"]];return P[(h>>>5)%P.length];}
 function trBookBits(b){return [b.n?`${b.n} polaroid`:"",b.l?`❤ ${b.l}`:"",b.r?`💬 ${b.r}`:""].filter(Boolean).join(" · ");}
-function trHome(){const H=document.getElementById("kt-trh");if(!H)return;const B=SB_TR.books||[],P=SB_TR.pol;if(!B.length){H.innerHTML="";return;}
+function trHome(){const H=document.getElementById("kt-trh");if(!H)return;const B=SB_TR.books||[],P=SB_TR.pol,PS=(SB_TR.pols&&SB_TR.pols.length?SB_TR.pols:(P?[P]:[]));if(!B.length){H.innerHTML="";return;}
  const c=P?trCol(P.book_title):null;
  H.innerHTML=`<div class="trh"><div class="trh-h"><strong><i class="no-mi">🔥</i> Okurlar bunu konuşuyor</strong></div>
-  ${P?`<div class="trh-p" id="trh-p"><div class="trh-pol" style="--c1:${c[0]};--c2:${c[1]}"><div class="im"${P.img?"":` data-cvt="${esc(P.book_title)}" data-cva="${esc(P.book_author||"")}"`}>${P.img?`<img src="${P.img}" alt="">`:`<b>${esc(P.book_title)}</b>`}</div></div>
-   <div class="trh-q"><span class="trh-tag">✨ Haftanın polaroidi</span><p>“${esc(P.body)}”</p><small>${esc(P.name||"Bir okur")} · <b>${esc(P.book_title)}</b></small><span class="st">${P.like_count?`<span>❤ ${P.like_count}</span>`:""}${P.reply_count?`<span>💬 ${P.reply_count}</span>`:""}${P.hearts?`<span>${"★".repeat(P.hearts)}</span>`:""}</span></div></div>`:""}
+  ${PS.length?`<div class="trd" id="trd" style="--n:${Math.min(PS.length,3)}">${PS.map((q,i)=>{const cc=trCol(q.book_title);return `<div class="trh-p trd-c" data-i="${i}"><div class="trh-pol" style="--c1:${cc[0]};--c2:${cc[1]}"><div class="im"${q.img?"":` data-cvt="${esc(q.book_title)}" data-cva="${esc(q.book_author||"")}"`}>${q.img?`<img src="${q.img}" alt="">`:`<b>${esc(q.book_title)}</b>`}</div></div>
+   <div class="trh-q"><span class="trh-tag">${i===0?"✨ Haftanın polaroidi":`#${i+1} en çok konuşulan`}</span><p>“${esc(q.body)}”</p><small>${esc(q.name||"Bir okur")} · <b>${esc(q.book_title)}</b></small><span class="st">${q.like_count?`<span>❤ ${q.like_count}</span>`:""}${q.reply_count?`<span>💬 ${q.reply_count}</span>`:""}${q.hearts?`<span>${"★".repeat(q.hearts)}</span>`:""}</span></div></div>`;}).join("")}</div>${PS.length>1?`<div class="trd-n" id="trd-n"></div>`:""}`:""}
   <div class="trh-row">${B.slice(0,8).map((b,i)=>`<button type="button" class="trh-b" data-trb="${i}" style="--c1:${trCol(b.t)[0]};--c2:${trCol(b.t)[1]}"><span class="rk">${i+1}</span><span class="trc" data-cvt="${esc(b.t)}" data-cva="${esc(b.a)}"><b>${esc(b.t)}</b><i>${esc(b.a)}</i></span><small>${[b.l?"❤ "+b.l:"",b.r?"💬 "+b.r:"",!b.l&&!b.r?b.n+" polaroid":""].filter(Boolean).join(" · ")}</small></button>`).join("")}</div>
   <p class="trh-f">Beğeni, yanıt ve tazeliğe göre her saat yenilenir</p></div>`;
  H.querySelectorAll("[data-trb]").forEach(x=>x.onclick=()=>{const b=B[+x.dataset.trb];bookOpenAny(b.t,b.a);});
- const pp=document.getElementById("trh-p");if(pp)pp.onclick=()=>{bkFocus={t:"cm"};bookOpenAny(P.book_title,P.book_author||"");};
+ trDeck(PS);
 }
 function trRefresh(force){trLoad(force).then(()=>{try{if(step===90)ktTrendInject();}catch(e){}});}
 setTimeout(()=>trRefresh(false),1200);setInterval(()=>{if(document.visibilityState==="visible")trRefresh(true);},36e5);
@@ -11872,6 +11881,23 @@ let ktLeft=null,ktWasIn=false;
  try{const c=JSON.parse(localStorage.getItem("mf-events")||"null");if(c)ap(c);}catch(e){}
  if(!/^https?:$/.test(location.protocol)||!window.fetch)return;
  fetch("events.json?d="+dkey(),{cache:"no-store"}).then(r=>r.ok?r.json():null).then(j=>{if(j&&ap(j)){try{localStorage.setItem("mf-events",JSON.stringify(j));}catch(e){}try{if(step===90)kitapRender();}catch(e){}}}).catch(()=>{});})();
+
+/* Polaroid destesi: üst üste, kaydırdıkça alttaki okunur */
+let trDI=0;
+function trDeck(PS){const D=document.getElementById("trd");if(!D)return;const C=[...D.querySelectorAll(".trd-c")],n=C.length,N=document.getElementById("trd-n");if(trDI>=n)trDI=0;
+ const lay=()=>{C.forEach((c,i)=>{const k=(i-trDI+n)%n;c.style.zIndex=10-k;c.style.transition="transform .35s cubic-bezier(.2,.8,.2,1),opacity .35s";
+   c.style.transform=k===0?"none":k===1?"translateY(11px) scale(.955) rotate(1.4deg)":k===2?"translateY(21px) scale(.91) rotate(-1.6deg)":"translateY(26px) scale(.88)";c.style.opacity=k>2?0:1;c.style.pointerEvents=k===0?"auto":"none";c.classList.toggle("top",k===0);});
+  if(N)N.innerHTML=`${C.map((_,i)=>`<i class="${i===trDI?"on":""}"></i>`).join("")}<span>${trDI+1} / ${n} · kaydır</span>`;};
+ const fit=()=>{const h=Math.max(...C.map(c=>{c.style.minHeight="";return c.offsetHeight;}));if(!h)return;C.forEach(c=>c.style.minHeight=h+"px");D.style.height=(h+Math.min(n-1,2)*11)+"px";};
+ lay();fit();requestAnimationFrame(fit);
+ C.forEach((c,i)=>{let x0=0,y0=0,dx=0,drag=false,moved=false;
+  c.addEventListener("pointerdown",e=>{if(!c.classList.contains("top"))return;x0=e.clientX;y0=e.clientY;dx=0;drag=true;moved=false;c.style.transition="none";try{c.setPointerCapture(e.pointerId);}catch(_){}});
+  c.addEventListener("pointermove",e=>{if(!drag)return;dx=e.clientX-x0;const dy=e.clientY-y0;if(!moved&&Math.abs(dy)>Math.abs(dx)&&Math.abs(dy)>8){drag=false;c.style.transition="";lay();return;}if(Math.abs(dx)>6)moved=true;if(moved){e.preventDefault();c.style.transform=`translateX(${dx}px) rotate(${dx/18}deg)`;}});
+  const end=()=>{if(!drag)return;drag=false;if(!moved){const q=PS[i];bkFocus={t:"cm"};bookOpenAny(q.book_title,q.book_author||"");return;}
+   if(Math.abs(dx)>55&&n>1){c.style.transition="transform .3s ease-in,opacity .3s";c.style.transform=`translateX(${dx>0?420:-420}px) rotate(${dx>0?18:-18}deg)`;c.style.opacity=0;
+    setTimeout(()=>{trDI=(trDI+(dx>0?n-1:1))%n;lay();},260);}else lay();};
+  c.addEventListener("pointerup",end);c.addEventListener("pointercancel",()=>{drag=false;lay();});});
+ if(N)N.onclick=()=>{trDI=(trDI+1)%n;lay();};}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
