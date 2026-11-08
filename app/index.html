@@ -12519,6 +12519,12 @@ BN_ART.mac=`<svg viewBox="0 0 100 100"><circle cx="74" cy="26" r="11" fill="#fff
 (function(){const _b=bnStat;bnStat=function(){const S=_b.apply(this,arguments);try{const M=st.mac||{},go=Object.keys(M.go||{}).map(macEv).filter(e=>e&&evEnd(e)>=dkey()).sort((a,b)=>a[3].localeCompare(b[3]));
  if(go.length){const d=evDays(go[0]);S.mac=`🧭 ${go[0][1].length>18?go[0][1].slice(0,17)+"…":go[0][1]} · ${d<=0?"bugün":d+" gün"}`;}
  else{const n=evUp(EV_SP).filter(e=>{const x=evNear(e);return x&&x.same;}).length;S.mac=n?`📍 Şehrinde ${n} etkinlik`:"Koşu, yürüyüş, paraşüt…";}}catch(_){}return S;};})();
+
+/* ana sayfa Kitap köşem kutusu: şehrindeki imza günleri ve fuarlar */
+(function(){const _b=bnStat;bnStat=function(){const S=_b.apply(this,arguments);try{const T=dkey(),lim=new Date(Date.now()+14*864e5).toISOString().slice(0,10);
+ const ev=KT_EV.filter(e=>e[2]>=T&&e[2]<=lim&&(()=>{const n=ktNear(e);return n&&n.same;})());
+ const fa=KT_FAIR.filter(f=>f[2]>=T&&f[1]<=lim&&(()=>{const n=ktNear([0,[],f[1],"",f[3]||"",f[5]||f[3]||""]);return n&&n.same;})());
+ if(fa.length)S.kitap=`📍 Şehrinde kitap fuarı${ev.length?" · "+ev.length+" imza":""}`;else if(ev.length)S.kitap=`📍 Şehrinde ${ev.length} imza günü`;}catch(_){}return S;};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
