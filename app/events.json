@@ -38,15 +38,15 @@
 ["43. TÜYAP İstanbul Kitap Fuarı", "2026-12-12", "2026-12-20", "TÜYAP Büyükçekmece", "Onur yazarı Latife Tekin · imza programı açıklanınca burada", "İstanbul"]
 ],
 "spor":[
-["s20261114-latmos", "Latmos Ultra Maratonu", "trail", "2026-11-14", "2026-11-15", "", "Bafa Gölü", "Muğla", "", "Trail yarışı"],
-["s20261115-soli", "Soli 10K", "kosu", "2026-11-15", "", "", "Soli Pompeiopolis", "Mersin", "", "10K yol koşusu"],
-["s20261122-gazi", "8. Gazi Yarı Maratonu", "kosu", "2026-11-22", "", "", "Ankara", "Ankara", "", "21K · 10K · ücretsiz halk koşusu"],
-["s20261122-cenedag", "Çenedağ Ultra Trail", "trail", "2026-11-22", "", "", "Çenedağ", "Kocaeli", "", "Trail yarışı"],
-["s20261128-ida", "İda Ultra", "trail", "2026-11-28", "2026-11-29", "", "Kazdağları", "Çanakkale", "", "Trail yarışı"],
-["s20261205-nicholas", "St. Nicholas Yarı Maratonu", "kosu", "2026-12-05", "2026-12-06", "", "Demre", "Antalya", "", "Yarı maraton"],
-["s20261213-mersin", "Mersin Maratonu", "kosu", "2026-12-13", "", "", "Mersin", "Mersin", "", "Maraton"],
-["s20261225-antalyault", "Antalya Ultra", "trail", "2026-12-25", "2026-12-27", "", "Antalya", "Antalya", "", "Trail yarışı"],
-["s20261227-ataturk", "Büyük Atatürk Koşusu", "kosu", "2026-12-27", "", "", "Ankara", "Ankara", "", "Yol koşusu"]
+["s20261114-latmos", "Latmos Ultra Maratonu", "trail", "2026-11-14", "2026-11-15", "", "Bafa Gölü", "Muğla", "https://nirvanahaber.com/kasim-ayi-etkinlikleri/kasim-2026-kosu-trail-takvimi", "Trail yarışı"],
+["s20261115-soli", "Soli 10K", "kosu", "2026-11-15", "", "", "Soli Pompeiopolis", "Mersin", "https://nirvanahaber.com/kasim-ayi-etkinlikleri/kasim-2026-kosu-trail-takvimi", "10K yol koşusu"],
+["s20261122-gazi", "8. Gazi Yarı Maratonu", "kosu", "2026-11-22", "", "", "Ankara", "Ankara", "https://nirvanahaber.com/kasim-ayi-etkinlikleri/kasim-2026-kosu-trail-takvimi", "21K · 10K · ücretsiz halk koşusu"],
+["s20261122-cenedag", "Çenedağ Ultra Trail", "trail", "2026-11-22", "", "", "Çenedağ", "Kocaeli", "https://nirvanahaber.com/kasim-ayi-etkinlikleri/kasim-2026-kosu-trail-takvimi", "Trail yarışı"],
+["s20261128-ida", "İda Ultra", "trail", "2026-11-28", "2026-11-29", "", "Kazdağları", "Çanakkale", "https://nirvanahaber.com/kasim-ayi-etkinlikleri/kasim-2026-kosu-trail-takvimi", "Trail yarışı"],
+["s20261205-nicholas", "St. Nicholas Yarı Maratonu", "kosu", "2026-12-05", "2026-12-06", "", "Demre", "Antalya", "https://nirvanahaber.com/kasim-ayi-etkinlikleri/kasim-2026-kosu-trail-takvimi", "Yarı maraton"],
+["s20261213-mersin", "Mersin Maratonu", "kosu", "2026-12-13", "", "", "Mersin", "Mersin", "https://nirvanahaber.com/kasim-ayi-etkinlikleri/kasim-2026-kosu-trail-takvimi", "Maraton"],
+["s20261225-antalyault", "Antalya Ultra", "trail", "2026-12-25", "2026-12-27", "", "Antalya", "Antalya", "https://nirvanahaber.com/kasim-ayi-etkinlikleri/kasim-2026-kosu-trail-takvimi", "Trail yarışı"],
+["s20261227-ataturk", "Büyük Atatürk Koşusu", "kosu", "2026-12-27", "", "", "Ankara", "Ankara", "https://nirvanahaber.com/kasim-ayi-etkinlikleri/kasim-2026-kosu-trail-takvimi", "Yol koşusu"]
 ],
 "pati":[
 
