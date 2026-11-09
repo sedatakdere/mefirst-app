@@ -12111,7 +12111,7 @@ function auFill(){document.querySelectorAll("#bkp .bk-au[data-aul]:not([data-aul
 document.addEventListener("click",e=>{const m=e.target.closest&&e.target.closest("#bkp .bk-au [data-bt]");if(!m)return;e.preventDefault();e.stopPropagation();
  const O=document.getElementById("bkp");if(O)O.scrollTop=0;bookOpenAny(m.dataset.bt,m.dataset.ba);},true);
 /* Okur ruhumdaki yazarlar: her biri için kendi rafı */
-ktLive=function(){const K=kt(),box=document.getElementById("kt-live");if(!box||!K.au.length)return;const A=K.au.slice(0,6);
+ktLive=function(){const K=kt(),box=document.getElementById("kt-live");if(!box||!K.au.length)return;const A=auToday(K.au,2);
  const render=()=>{const b=document.getElementById("kt-live");if(!b)return;let H="";
   A.forEach(a=>{const cat=KT_BOOKS.filter(x=>ktN(x[1])===ktN(a)).map(x=>({t:x[0],a:x[1],p:x[3],y:(x[4]||"").slice(0,4),k:1}));const C=AUB[ktN(a)];const live=C?C.items:[];
    const seen=new Set(),L=[];cat.concat(live).forEach(x=>{const n=ktN(x.t);if(seen.has(n))return;seen.add(n);L.push(x);});const R=L.filter(x=>ktOnShelf(x.t)?false:true).slice(0,12);if(!R.length)return;
@@ -12633,6 +12633,10 @@ try{KT_EV.splice(0,KT_EV.length,...evFlat(KT_EV.slice()));}catch(e){}
 (function(){const A={"agla": ["Şeker Portakalı", "Uçurtma Avcısı", "Bin Muhteşem Güneş", "Senden Önce Ben", "Yaprak Dökümü", "Fareler ve İnsanlar", "Bilinmeyen Bir Kadının Mektubu", "Kayıp Ağaçlar Adası"], "gul": ["Tutunamayanlar", "Matilda", "Charlie'nin Çikolata Fabrikası", "Hayvan Çiftliği", "Bir Gün"], "ger": ["Sessiz Hasta", "Ejderha Dövmeli Kız", "Ve Sonra Hiç Kalmadı", "Da Vinci Şifresi", "Sultanı Öldürmek", "İstanbul Hatırası", "Patasana", "Anayurt Oteli", "1984", "Kardeşimin Hikâyesi"], "ask": ["Bir Gün", "Normal İnsanlar", "Senden Önce Ben", "Kolera Günlerinde Aşk", "Beyaz Geceler", "Jane Eyre", "Uğultulu Tepeler", "Çalıkuşu", "Aşk-ı Memnu", "İçimizdeki Şeytan", "Kuyucaklı Yusuf", "Evelyn Hugo'nun Yedi Kocası", "Piraye"], "iyi": ["Şimdinin Gücü", "İnsanın Anlam Arayışı", "Kurtlarla Koşan Kadınlar", "Küçük Prens", "Kendine Ait Bir Oda", "Kayıp Gül", "Bir Ömür Nasıl Yaşanır?", "Beden Kayıt Tutar"], "kac": ["Yüzyıllık Yalnızlık", "Ben, Kirke", "Puslu Kıtalar Atlası", "Martin Eden", "Momo", "Küçük Prens", "Melek", "Hizmetçi ve Profesör"]};KT_MOOD.forEach(m=>{(A[m[0]]||[]).forEach(t=>{if(!m[3].includes(t))m[3].push(t);});});})();
 function ktMoodRow(R){const m=KT_MOOD.find(x=>x[0]===ktMood);if(!m)return "";const L=R.filter(r=>m[3].includes(r[0][0]));if(!L.length)return "";
   return `<div class="ktmrow-h"><span>${L.length} kitap</span><span>kaydır →</span></div><div class="ktrow ktmrow">${L.map(r=>ktCard(r,true)).join("")}</div>`;}
+
+/* çeşitlilik: okur ruhundan rafları her gün başka yazarlar; öneri listesinde aynı yazar üst üste yığılmasın */
+function auToday(L,n){if(L.length<=n)return L.slice();const d=Math.floor(new Date(dkey()+"T00:00")/864e5);const o=(d*n)%L.length;return L.slice(o).concat(L.slice(0,o)).slice(0,n);}
+(function(){const _kr=ktRecs;ktRecs=function(){const K=kt();const star=K.au.length>1?ktN(auToday(K.au.slice().reverse(),1)[0]):"";const R=_kr().map(r=>ktN(r[0][1])===star?[r[0],r[1]+4,r[2]]:r).sort((a,b)=>b[1]-a[1]);const c={};return R.map(r=>{const a=ktN(r[0][1]);const k=c[a]=(c[a]||0)+1;return [r[0],r[1]-(k-1)*3.5,r[2]];}).sort((a,b)=>b[1]-a[1]);};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
