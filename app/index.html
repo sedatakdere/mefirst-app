@@ -11982,7 +11982,7 @@ function bookOpen(i,anim,X){const L=klib(),x=X||L[i];if(!x)return;try{bkRsPull(x
  const Q=x.q||[];
  O.innerHTML=`<div class="bkp-dust">${dust}</div><div class="bkp-in">
   <div class="bkp-top"><button type="button" id="bk-x">← Kitap köşem</button>${inLib?`<button type="button" id="bk-lend">${x.k==="bor"?"📥 Emanet":"📤 Ödünç"}</button>`:""}</div>
-  <div class="bk3-wrap"><div class="bk3" style="--c1:${c[0]};--c2:${c[1]}"><span class="sp"></span><span class="pg"></span><div class="fc${bkInfoGet(x)&&bkInfoGet(x).img?" hasimg":""}">${bkInfoGet(x)&&bkInfoGet(x).img?`<img class="fci" src="${bkInfoGet(x).img}" alt="" onerror="this.parentNode.classList.remove('hasimg');this.remove()">`:""}<b>${esc(x.t)}</b><span class="orn">❦</span><i>${esc(x.a||"")}</i></div></div></div><div class="bk3-sh"></div>
+  <div class="bk3-wrap"><div class="bk3" style="--c1:${c[0]};--c2:${c[1]}"><span class="sp"></span><span class="pg"></span><div class="fc${bkCv(x)?" hasimg":""}">${bkCv(x)?`<img class="fci" src="${esc(bkCv(x))}" alt="" onerror="this.parentNode.classList.remove('hasimg');this.remove()">`:""}<b>${esc(x.t)}</b><span class="orn">❦</span><i>${esc(x.a||"")}</i></div></div></div><div class="bk3-sh"></div>
   <div class="bkp-h"><h2>${esc(x.t)}</h2><p>${esc(x.a||"")}</p><div class="bkp-chips"><span>${where}</span>${x.rt?`<span>${"★".repeat(x.rt)} senin puanın</span>`:""}${Q.length?`<span>✍️ ${Q.length} alıntı</span>`:""}</div></div>
   <section class="bkp-sec bk-info" id="bk-info">${bkInfoHTML(x)}</section>
   <section class="bkp-sec"><h4>Okuma durumun</h4><div class="bk-rs">${[["read","📚","Okudum"],["reading","📖","Okuyorum"],["want","💝","Okuyacağım"]].map(([k,e,l])=>`<button type="button" data-rs="${k}" aria-pressed="${x.rs===k}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div>
@@ -12053,7 +12053,7 @@ const libBookOpen0=libBookOpen;libBookOpen=function(i){bookOpen(i);};
 
 /* v0.17.1 kitap bilgisi: Google Books (önbellekli) + yerel katalog */
 function bkInfoAll(){try{return JSON.parse(localStorage.getItem("mf-bkinfo")||"{}");}catch(e){return {};}}
-function bkInfoGet(x){const A=bkInfoAll(),r=A[bkKey(x)];if(!r)return null;if(r.v!==4)return null;if(r.part&&!_bkPend[bkKey(x)])return null;if((r.none||r.thin)&&Date.now()-r.at>(r.st&&r.st.gb!==200?18e5:864e5))return null;return r;}
+function bkInfoGet(x){const A=bkInfoAll(),r=A[bkKey(x)];if(!r)return null;if(r.v!==5)return null;if(r.part&&!_bkPend[bkKey(x)])return null;if((r.none||r.thin)&&Date.now()-r.at>(r.st&&r.st.gb!==200?18e5:864e5))return null;return r;}
 const _bkPend={};
 function bkInfoFetch(x,onStep){const k=bkKey(x);if(_bkPend[k]){if(onStep)(_bkPend[k].steps=_bkPend[k].steps||[]).push(onStep);return _bkPend[k];}if(!navigator.onLine)return Promise.resolve(null);
  const tn=ktN(x.t),an=ktN(x.a||""),sur=an.split(" ").pop()||"";const mt=v=>{const q=ktN(v.title||"");return q===tn||(q.includes(tn)&&tn.length>3)||(tn.includes(q)&&q.length>3);};
@@ -12063,7 +12063,7 @@ function bkInfoFetch(x,onStep){const k=bkKey(x);if(_bkPend[k]){if(onStep)(_bkPen
  const gb=q=>tmoR(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=20&printType=books${window.GB_KEY?"&key="+GB_KEY:""}`,"gb").then(j=>(j&&j.items||[]).map(i=>i.volumeInfo||{}));
  const wiki=async(q,check)=>{const sr=await tmo(`https://tr.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(q)}&srlimit=3&format=json&origin=*`);const hits=(sr&&sr.query&&sr.query.search)||[];
   const S=await Promise.all(hits.map(h=>tmo(`https://tr.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(h.title.replace(/ /g,"_"))}`)));return S.find(sm=>sm&&sm.extract&&sm.type!=="disambiguation"&&check(sm))||null;};
- _bkPend[k]=(async()=>{const R={v:4,dEn:"",d:"",d2:"",pg:0,pub:"",yr:"",cat:[],img:"",isbn:"",lang:"",gr:0,gn:0,au:"",auImg:"",src:[]};
+ _bkPend[k]=(async()=>{const R={v:5,dEn:"",d:"",d2:"",pg:0,pub:"",yr:"",cat:[],img:"",isbn:"",lang:"",gr:0,gn:0,au:"",auImg:"",src:[]};
   const steps=[];if(onStep)steps.push(onStep);
   const put=()=>{if(!(R.d||R.d2||R.pg||R.yr||R.img))return;const A=bkInfoAll();A[k]=Object.assign({},R,{part:1,st:ST,thin:false,at:Date.now()});try{localStorage.setItem("mf-bkinfo",JSON.stringify(A));}catch(e){}
    const P=_bkPend[k];[...steps,...((P&&P.steps)||[])].forEach(f=>{try{f();}catch(e){}});};
@@ -12083,7 +12083,7 @@ function bkInfoFetch(x,onStep){const k=bkKey(x);if(_bkPend[k]){if(onStep)(_bkPen
    if(w){R.src.push("Vikipedi");R.d2=clean(w.extract);if(!R.img&&w.thumbnail)R.img=w.thumbnail.source;}}catch(e){}put();})();
   const pAu=(async()=>{try{if(x.a){const wa=await wiki(x.a,sm=>ktN(sm.title).includes(sur)&&/yazar|şair|romancı|gazeteci|edebiyat/.test(ktN(sm.extract)));if(wa){R.au=clean(wa.extract);if(wa.thumbnail)R.auImg=wa.thumbnail.source;}}}catch(e){}put();})();
   await Promise.all([pG,pW,pAu]);
-  if(R.img)try{covSet(x.t,x.a,R.img);}catch(e){}R.st=ST;R.thin=!(R.d.length>120||R.d2.length>120);const ok=R.d||R.d2||R.pg||R.yr;const A=bkInfoAll();A[k]=ok?Object.assign(R,{at:Date.now()}):{none:1,v:4,st:ST,at:Date.now()};try{localStorage.setItem("mf-bkinfo",JSON.stringify(A));}catch(e){}return A[k];})().finally(()=>{delete _bkPend[k];});
+  if(R.img)try{covSet(x.t,x.a,R.img);}catch(e){}R.st=ST;R.thin=!(R.d.length>120||R.d2.length>120);const ok=R.d||R.d2||R.pg||R.yr||R.dEn;const A=bkInfoAll();A[k]=ok?Object.assign(R,{at:Date.now()}):{none:1,v:5,st:ST,at:Date.now()};try{localStorage.setItem("mf-bkinfo",JSON.stringify(A));}catch(e){}return A[k];})().finally(()=>{delete _bkPend[k];});
  return _bkPend[k];}
 function bkInfoHTML(x){let I=bkInfoGet(x);const kb=KT_BOOKS.find(b=>ktN(b[0])===ktN(x.t));
  if((!I||I.none)&&!kb)return `<h4>Kitap hakkında</h4><p class="bi-ld">${I&&I.none?"📚 Bu kitabın bilgilerini bulamadım. İlk polaroidi sen as, okurlar senden duysun 🧷":navigator.onLine?"<i></i> Kitabın bilgilerini topluyorum…":"📶 Kitap bilgisi için internet bağlantısı gerekiyor."}</p>`;
@@ -12827,7 +12827,7 @@ async function bkCoverShot(x,noImg){const W=720,cv=document.createElement("canva
  const c=trCol(x.t);const bg=g.createLinearGradient(0,0,W,W);bg.addColorStop(0,"#F6E3CC");bg.addColorStop(1,"#E9C9A6");g.fillStyle=bg;g.fillRect(0,0,W,W);
  g.fillStyle="rgba(255,255,255,.35)";for(let i=0;i<9;i++){g.fillRect(0,i*84+40,W,2);}
 
- const url=noImg?"":(()=>{try{const I=bkInfoGet(x);if(I&&I.img)return I.img;}catch(_){}const u=covGet(x.t,x.a||"");return typeof u==="string"?u:"";})();
+ const url=noImg?"":bkCv(x);
  let im=null;if(url){try{const r=await fetch(url,{mode:"cors"});if(r.ok){const bl=await r.blob();const u2=URL.createObjectURL(bl);im=await new Promise(res=>{const i=new Image();i.onload=()=>res(i);i.onerror=()=>res(null);i.src=u2;});}}catch(_){}
   if(!im)im=await new Promise(res=>{const i=new Image();i.crossOrigin="anonymous";i.onload=()=>res(i);i.onerror=()=>res(null);i.src=url;});}
  const bh=560,bw=im?Math.round(bh*im.width/im.height):380,bx=(W-bw)/2,by=(W-bh)/2;
@@ -13134,7 +13134,11 @@ try{if(!localStorage.getItem("mf-cov-v2")){Object.keys(COV).forEach(k=>{if(typeo
 function trIs(t){t=" "+String(t||"").toLocaleLowerCase("tr-TR")+" ";if(t.length<20)return false;const tc=(t.match(/[çğıöşü]/g)||[]).length;
  const tw=(t.match(/ (ve|bir|bu|ile|için|olarak|da|de|gibi|daha|çok|ama|onun|kadar|sonra|her|olan|ise|mı|mi) /g)||[]).length;
  const ew=(t.match(/ (the|and|of|to|is|in|that|with|his|was|for|as|this|by|an|from|who|which) /g)||[]).length;
- return tc/t.length>0.012||tw>ew*1.5;}
+ const tu=(t.match(/[ğış]/g)||[]).length;const de=(t.match(/ (der|die|und|das|ist|mit|von|nicht|ein|eine|el|los|las|que|une|les|est|dans|il|che|di|per) /g)||[]).length;
+ return (tu/t.length>0.006&&ew+de<tw+3)||(tw>=2&&tw>(ew+de)*1.5);}
+
+/* Tek kapak kaynağı: kartta ne görünüyorsa kitap sayfasında da o */
+function bkCv(x){try{const u=covGet(x.t,x.a||"");if(typeof u==="string"&&u&&!(typeof COV_BAD!=="undefined"&&COV_BAD[u]))return u;const I=bkInfoGet(x);if(I&&I.img&&!(typeof COV_BAD!=="undefined"&&COV_BAD[I.img])){covSet(x.t,x.a||"",I.img);return I.img;}}catch(e){}return "";}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
