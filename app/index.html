@@ -13164,6 +13164,21 @@ function catAuthor(a){return TRCAT.au.get(ktN(a))||[];}
  return C.map(b=>({t:b.t,a:b.a,y:b.y||"",p:b.p||"",img:b.c||""})).concat(L.filter(x=>!have.has(catNorm(x.t))));});};})();
 /* otomatik tamamlama havuzu */
 (function(){const _p=bkPool;bkPool=function(){const L=_p();const m=new Set(L.map(b=>bkN(b.t)));TRCAT.list.forEach(b=>{const k=bkN(b.t);if(!m.has(k)){m.add(k);L.push({t:b.t,a:b.a,src:"c"});}});return L;};})();
+
+/* ===== Katalog istekleri: bulunamayan aramalar, katalogda olmayan yazar/kitaplar (anonim) ===== */
+function wantDev(){try{let d=localStorage.getItem("mf-dev");if(!d){d=(crypto.randomUUID?crypto.randomUUID():Math.random().toString(36).slice(2)+Date.now().toString(36));localStorage.setItem("mf-dev",d);}return d;}catch(e){return "";}}
+function wantTouch(q,kind){try{q=String(q||"").trim();if(q.length<3||q.length>80||navigator.onLine===false)return;const dev=wantDev();if(!dev)return;
+ const k="mf-want",M=JSON.parse(localStorage.getItem(k)||"{}"),id=kind+"|"+ktN(q);if(M[id]===dkey())return;M[id]=dkey();const ks=Object.keys(M);if(ks.length>300)ks.slice(0,100).forEach(x=>delete M[x]);localStorage.setItem(k,JSON.stringify(M));
+ fetch(SB_URL+"/rest/v1/rpc/want_touch",{method:"POST",headers:{apikey:SB_KEY,Authorization:"Bearer "+SB_KEY,"Content-Type":"application/json"},body:JSON.stringify({q,kind,dev})}).catch(()=>{});}catch(e){}}
+function wantKnownAuthor(a){return catAuthor(a).length>0||(typeof KT_CAT!=="undefined"&&!!KT_CAT[a]);}
+function wantKnownBook(t,a){return !!catFind(t,a);}
+/* arama: yazmayı bırakınca, katalogda karşılığı yoksa */
+(function(){const _s=ktSearch;let T=0;ktSearch=function(q){const r=_s.apply(this,arguments);clearTimeout(T);const v=String(q||"").trim();
+ if(v.length>=3)T=setTimeout(()=>{const n=ktN(v);const hit=TRCAT.idx.has(n)||TRCAT.idx.has(catNorm(v))||TRCAT.au.has(n)||[...TRCAT.idx.keys(),...TRCAT.au.keys()].some(k=>k.includes(n))||KT_BOOKS.some(b=>ktN(b[0])===n||ktN(b[1])===n);if(!hit)wantTouch(v,"ara");},2500);return r;};})();
+/* takip edilen yazar ve rafa eklenen kitaplar */
+(function(){let seenA=null,seenB=null;const init=()=>{try{const K=st&&st.kitap;if(K&&!seenA){seenA=new Set((K.au||[]).map(ktN));seenB=new Set([...(K.shelf||[]),...(K.lib||[])].map(x=>ktN(x.t)));}}catch(e){}};init();setTimeout(init,500);const _s=save;save=function(){init();const r=_s.apply(this,arguments);try{const K=st&&st.kitap;if(!K)return r;
+ const A=new Set((K.au||[]).map(ktN));if(seenA){(K.au||[]).forEach(a=>{if(!seenA.has(ktN(a))&&!wantKnownAuthor(a))wantTouch(a,"yazar");});}seenA=A;
+ const L=[...(K.shelf||[]),...(K.lib||[])];const B=new Set(L.map(x=>ktN(x.t)));if(seenB){L.forEach(x=>{if(!seenB.has(ktN(x.t))&&!wantKnownBook(x.t,x.a))wantTouch(x.t+(x.a?" — "+x.a:""),"kitap");});}seenB=B;}catch(e){}return r;};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
