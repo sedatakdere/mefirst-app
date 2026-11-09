@@ -13015,6 +13015,11 @@ function admDraw(O){const t=ADM.tab,L=ADM.data[t];const nq=(ADM.data.q||[]).filt
   if(r===true){ADM.data={};await admLoad(t);if(t!=="q")await admLoad("q");admDraw(O);try{localStorage.removeItem("mf-trend");}catch(e){}}else{it.classList.remove("busy");b.textContent="Olmadı, tekrar dene";}});}
 function admCheck(){if(location.hash==="#yonetim")setTimeout(admOpen,600);}
 window.addEventListener("hashchange",admCheck);admCheck();
+
+/* Yönetim paneline gizli giriş: Kitap köşem başlığına art arda 7 dokunuş */
+(function(){const h=document.querySelector(".kitap h2")||[...document.querySelectorAll("h2")].find(x=>/Kitap\s*köşem/.test(x.textContent));if(!h)return;let n=0,t=0;
+ h.addEventListener("click",()=>{const now=Date.now();n=now-t<700?n+1:1;t=now;if(n>=7){n=0;try{navigator.vibrate&&navigator.vibrate(30);}catch(e){}admOpen();}});})();
+window.addEventListener("pageshow",()=>{try{admCheck();}catch(e){}});
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
