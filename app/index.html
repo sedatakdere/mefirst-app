@@ -12435,7 +12435,14 @@ function macOpen(id){const e=macEv(id);if(!e)return;let O=document.getElementByI
 window.addEventListener("popstate",()=>{const O=document.getElementById("mep");if(O&&window.macClose)window.macClose(true);});
 async function macShare(e){try{await document.fonts.ready;}catch(_){}const M=mac(),h=M.hat[e[0]]||{},W=1080,HS=1920,cv=document.createElement("canvas");cv.width=W;cv.height=HS;const g=cv.getContext("2d"),c=MT_C[e[2]]||MT_C.macera;
  const bg=g.createLinearGradient(0,0,0,HS);bg.addColorStop(0,"#FFE3C2");bg.addColorStop(.55,"#F7D7C4");bg.addColorStop(1,"#BFE3D6");g.fillStyle=bg;g.fillRect(0,0,W,HS);
- g.fillStyle="rgba(47,127,114,.85)";g.beginPath();g.moveTo(0,HS);g.lineTo(0,1640);g.lineTo(260,1500);g.lineTo(470,1640);g.lineTo(720,1460);g.lineTo(1080,1660);g.lineTo(1080,HS);g.fill();
+ // manzara: güneş, arka ve ön dağlar (polaroidin arkasında), önde açık bir çayır
+ g.fillStyle="rgba(255,210,122,.85)";g.beginPath();g.arc(830,560,90,0,Math.PI*2);g.fill();
+ const mt=(pts,c1,c2,y0,y1)=>{const gr=g.createLinearGradient(0,y0,0,y1);gr.addColorStop(0,c1);gr.addColorStop(1,c2);g.fillStyle=gr;g.beginPath();g.moveTo(0,y1);pts.forEach(([x,y])=>g.lineTo(x,y));g.lineTo(W,y1);g.closePath();g.fill();};
+ mt([[0,820],[120,700],[230,780],[400,600],[560,760],[700,640],[860,780],[1000,690],[1080,740]],"rgba(122,186,170,.75)","rgba(122,186,170,.25)",600,1260);
+ g.fillStyle="rgba(255,255,255,.9)";[[400,600,-34,40],[700,640,-30,34]].forEach(([x,y,dx,dy])=>{g.beginPath();g.moveTo(x,y);g.lineTo(x+dx,y+dy);g.lineTo(x-6,y+dy-8);g.lineTo(x+10,y+dy+4);g.lineTo(x-dx,y+dy);g.closePath();g.fill();});
+ mt([[0,980],[180,840],[330,940],[520,800],[690,930],[860,820],[1080,960]],"#4E9C8C","rgba(47,127,114,.55)",800,1260);
+ const fog=g.createLinearGradient(0,1060,0,1220);fog.addColorStop(0,"rgba(255,236,214,0)");fog.addColorStop(1,"rgba(255,236,214,.95)");g.fillStyle=fog;g.fillRect(0,1060,W,170);
+ const md=g.createLinearGradient(0,1180,0,HS);md.addColorStop(0,"#FFECD6");md.addColorStop(1,"#F6D3B3");g.fillStyle=md;g.beginPath();g.moveTo(0,1230);g.quadraticCurveTo(W/2,1150,W,1230);g.lineTo(W,HS);g.lineTo(0,HS);g.closePath();g.fill();
  g.strokeStyle="#A8743F";g.lineWidth=5;g.beginPath();g.moveTo(0,300);g.quadraticCurveTo(W/2,352,W,300);g.stroke();
  g.save();g.translate(W/2,330);g.rotate(-.04);const pw=640,ip=34,iw=pw-ip*2,ph=ip+iw+150;g.shadowColor="rgba(0,0,0,.45)";g.shadowBlur=44;g.shadowOffsetY=24;g.fillStyle="#FBF7EE";g.fillRect(-pw/2,0,pw,ph);g.shadowColor="transparent";
  const ix=-pw/2+ip,iy=ip,img=PH["mac:"+e[0]]||PH.me;let ok=false;if(img){const im=await new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src=img;});if(im){const m=Math.min(im.width,im.height);g.drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,ix,iy,iw,iw);ok=true;}}
