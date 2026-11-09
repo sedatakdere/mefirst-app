@@ -6178,6 +6178,8 @@ html[data-mf="dusk"] .kto{background:linear-gradient(170deg,rgba(255,236,214,.08
 html[data-mf="dusk"] .kto h3{color:#F5E1CC}html[data-mf="dusk"] .kto p{color:#E0C8B4}html[data-mf="dusk"] .kto-s li{background:rgba(255,255,255,.06);border-color:rgba(233,165,90,.25);color:#E8CDB4}
 
 .bi-en{font-style:italic;opacity:.85}
+#ktpanel .ktsh .ktc,#ktpanel .ktsh .kti,#ktpanel .rdsh .ktsp{cursor:pointer}
+.bkp-chips .bkp-pr{all:unset;cursor:pointer;font-size:12px;font-weight:800;padding:5px 12px;border-radius:99px;background:linear-gradient(135deg,#E58AA6,#B5486E);color:#fff;box-shadow:0 3px 10px rgba(181,72,110,.25)}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -10285,7 +10287,7 @@ function ktSpine(x,wish){let h=0;for(const c of x.t)h=(h*31+c.charCodeAt(0))>>>0
 let ktShelfI=0;
 function ktShelves(){const P=document.getElementById("ktpanel");if(!P||kttab!=="raf")return;const sh=P.querySelector(".ktshelf");if(!sh||sh.closest(".ktshv"))return;const K=kt();const W2=K.shelf.filter(x=>x.s==="istek");
   const wish=document.createElement("div");wish.className="ktshelf wsh";
-  wish.innerHTML=`<div class="ktshelf-t"><strong>${W2.length?`İstek rafımda ${W2.length} kitap 💝`:"İstek rafım 💝"}</strong><span class="wsh-hint">${W2.length?"Kitaba dokun, fiyatını gör":""}</span></div>
+  wish.innerHTML=`<div class="ktshelf-t"><strong>${W2.length?`İstek rafımda ${W2.length} kitap 💝`:"İstek rafım 💝"}</strong><span class="wsh-hint">${W2.length?"Kitaba dokun, sayfası açılsın":""}</span></div>
     ${W2.length?(()=>{const R=[];for(let i=0;i<W2.length&&R.length<2;i+=8)R.push(W2.slice(i,i+8));const more=W2.length-R.flat().length;return R.map((r,k)=>`<div class="ktwood">${r.map(x=>ktSpine(x,1)).join("")}${k===R.length-1?(more>0?`<span class="wsh-more">+${more}</span>`:r.length<8?'<span class="ktplant no-mi">🎀</span>':""):""}</div><div class="ktplank wpl"></div>`).join("");})():'<div class="ktwood"><span class="ktempty">Keşke dediğin kitaplar burada sıralanacak 💝</span><span class="ktplant no-mi">🎀</span></div><div class="ktplank wpl"></div>'}
     ${W2.length?`<button type="button" class="pl-add wsh-go" id="kt-hint2">💌 Ruh Eşime Gönder</button>`:`<small class="ktfine">Kitap kartlarındaki 🤍 Keşke ile ekle</small>`}`;
   const wrap=document.createElement("div");wrap.className="ktshv";const tr=document.createElement("div");tr.className="ktsh-tr";sh.replaceWith(wrap);tr.append(sh,wish);wrap.append(tr);
@@ -11975,7 +11977,7 @@ function bkPol(x,c,isNew){const ph=PH[bkKey(x)]||PH.me;const fe=(x.fe||[]).slice
 function bookOpen(i,anim,X){const L=klib(),x=X||L[i];if(!x)return;try{bkRsPull(x);}catch(e){}bkI=X?bkKey(x):i;const inLib=!X;const c=bkCol(x.t);let O=document.getElementById("bkp");const first=!O;
  if(!O){O=document.createElement("div");O.id="bkp";O.setAttribute("role","dialog");O.className="no-mi-soft";document.body.appendChild(O);document.body.style.overflow="hidden";try{history.pushState({bkp:1},"");}catch(e){}}
  const sc=O.scrollTop;const dd=kDays(x.d);
- const where=!inLib?"📖 Rafında değil":x.k==="bor"?`📥 ${esc(trLoc(x.who,1))} emanet`:x.k==="wish"?"💝 İstek listemde":x.who?`📤 ${esc(trLoc(x.who))} · ${dd} gün`:"🏠 Rafımda";
+ const where=!inLib?(()=>{const e=(kt().shelf||[]).find(y=>ktN(y.t)===ktN(x.t));return !e?"📖 Rafında değil":({istek:"💝 İstek rafımda",okuyor:"📖 Şu an okuyorum",oku:"📚 Okuyacaklarımda",okudu:"✓ Okudum"})[e.s]||"📚 Kitaplığımda";})():x.k==="bor"?`📥 ${esc(trLoc(x.who,1))} emanet`:x.k==="wish"?"💝 İstek listemde":x.who?`📤 ${esc(trLoc(x.who))} · ${dd} gün`:"🏠 Rafımda";
  const other=KT_BOOKS.filter(b=>ktN(b[1])===ktN(x.a||"")&&ktN(b[0])!==ktN(x.t)).slice(0,6);
  const evs=(typeof KT_EV!=="undefined"?KT_EV:[]).filter(e=>e[2]&&ktDays(e[2])>=0&&e[1].some(a=>ktN(a)===ktN(x.a||""))).slice(0,1);
  let dust="";for(let k=0;k<16;k++)dust+=`<b style="--x:${Math.round(Math.random()*100)}%;--y:${Math.round(30+Math.random()*60)}%;--s:${(1.5+Math.random()*2.5).toFixed(1)}px;--t:${(5+Math.random()*6).toFixed(1)}s;--d:${(-Math.random()*8).toFixed(1)}s;--w:${Math.round(Math.random()*40-20)}px"></b>`;
@@ -11983,7 +11985,7 @@ function bookOpen(i,anim,X){const L=klib(),x=X||L[i];if(!x)return;try{bkRsPull(x
  O.innerHTML=`<div class="bkp-dust">${dust}</div><div class="bkp-in">
   <div class="bkp-top"><button type="button" id="bk-x">← Kitap köşem</button>${inLib?`<button type="button" id="bk-lend">${x.k==="bor"?"📥 Emanet":"📤 Ödünç"}</button>`:""}</div>
   <div class="bk3-wrap"><div class="bk3" style="--c1:${c[0]};--c2:${c[1]}"><span class="sp"></span><span class="pg"></span><div class="fc${bkCv(x)?" hasimg":""}">${bkCv(x)?`<img class="fci" src="${esc(bkCv(x))}" alt="" onerror="this.parentNode.classList.remove('hasimg');this.remove()">`:""}<b>${esc(x.t)}</b><span class="orn">❦</span><i>${esc(x.a||"")}</i></div></div></div><div class="bk3-sh"></div>
-  <div class="bkp-h"><h2>${esc(x.t)}</h2><p>${esc(x.a||"")}</p><div class="bkp-chips"><span>${where}</span>${x.rt?`<span>${"★".repeat(x.rt)} senin puanın</span>`:""}${Q.length?`<span>✍️ ${Q.length} alıntı</span>`:""}</div></div>
+  <div class="bkp-h"><h2>${esc(x.t)}</h2><p>${esc(x.a||"")}</p><div class="bkp-chips"><span>${where}</span>${(!inLib||x.k==="wish")?`<button type="button" class="bkp-pr" data-kprice="${esc(x.t)}" data-kau="${esc(x.a||"")}">🔍 Fiyatlara bak</button>`:""}${x.rt?`<span>${"★".repeat(x.rt)} senin puanın</span>`:""}${Q.length?`<span>✍️ ${Q.length} alıntı</span>`:""}</div></div>
   <section class="bkp-sec bk-info" id="bk-info">${bkInfoHTML(x)}</section>
   <section class="bkp-sec"><h4>Okuma durumun</h4><div class="bk-rs">${[["read","📚","Okudum"],["reading","📖","Okuyorum"],["want","💝","Okuyacağım"]].map(([k,e,l])=>`<button type="button" data-rs="${k}" aria-pressed="${x.rs===k}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div>
    ${x.rs==="reading"?`<div class="bk-prog"><span>%${x.pr||0}</span><input type="range" min="0" max="100" step="5" value="${x.pr||0}" id="bk-pr"><span>📖</span></div>`:""}</section>
@@ -13179,6 +13181,13 @@ function wantKnownBook(t,a){return !!catFind(t,a);}
 (function(){let seenA=null,seenB=null;const init=()=>{try{const K=st&&st.kitap;if(K&&!seenA){seenA=new Set((K.au||[]).map(ktN));seenB=new Set([...(K.shelf||[]),...(K.lib||[])].map(x=>ktN(x.t)));}}catch(e){}};init();setTimeout(init,500);const _s=save;save=function(){init();const r=_s.apply(this,arguments);try{const K=st&&st.kitap;if(!K)return r;
  const A=new Set((K.au||[]).map(ktN));if(seenA){(K.au||[]).forEach(a=>{if(!seenA.has(ktN(a))&&!wantKnownAuthor(a))wantTouch(a,"yazar");});}seenA=A;
  const L=[...(K.shelf||[]),...(K.lib||[])];const B=new Set(L.map(x=>ktN(x.t)));if(seenB){L.forEach(x=>{if(!seenB.has(ktN(x.t))&&!wantKnownBook(x.t,x.a))wantTouch(x.t+(x.a?" — "+x.a:""),"kitap");});}seenB=B;}catch(e){}return r;};})();
+
+/* ===== Her kitap dokununca kendi sayfasını açar: istek rafı sırtları, okuma rafı sırtları, raf listesi satırları ===== */
+window.addEventListener("click",e=>{const T=e.target;if(!T||!T.closest)return;if(T.closest("button:not(.ktsp),input,select,textarea,a,label,.pgt,.wsh-more,.cab-hint"))return;
+ let t="",a="";const sp=T.closest("#ktpanel .ktsp.wsp, #ktpanel .rdsh .ktsp");
+ if(sp){t=sp.dataset.kprice||sp.title||"";a=sp.dataset.kau||"";if(!a){const y=(kt().shelf||[]).find(z=>ktN(z.t)===ktN(t));if(y)a=y.a||"";}}
+ else{const r=T.closest("#ktpanel .ktsh");if(r&&(T.closest(".ktc,.kti")||T===r)){const st=r.querySelector(".kti strong"),sm=r.querySelector(".kti small");t=st?st.textContent:"";a=sm?sm.textContent:"";}}
+ if(!t)return;e.preventDefault();e.stopImmediatePropagation();try{bookOpenAny(t,a);}catch(err){console.error(err);}},true);
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
