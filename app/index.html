@@ -11801,7 +11801,7 @@ async function bkShare(x,c){try{await document.fonts.ready;}catch(e){}const W=10
  g.fillStyle="#2E2420";g.textAlign="left";g.font='600 50px "Caveat",cursive';const ws2=("“"+x.cm+"”").split(" ");let l2=[],c2="";ws2.forEach(w=>{const t=c2?c2+" "+w:w;if(g.measureText(t).width>iw){l2.push(c2);c2=w;}else c2=t;});l2.push(c2);l2.slice(0,4).forEach((l,k)=>g.fillText(l,ix,iy+ih+64+k*52));
  g.font='800 24px "Nunito Sans",sans-serif';g.fillStyle="#8A6E5E";g.fillText(x.t+" · "+(x.a||""),ix,ph-40);g.textAlign="right";g.fillStyle="#D99A2B";g.fillText(x.rt?"★".repeat(x.rt):"",ix+iw,ph-40);
  g.fillStyle="#C08A55";g.fillRect(-14,-50,28,68);g.restore();
- g.fillStyle="#7A3A1E";g.textAlign="center";g.font='600 34px "Nunito Sans",sans-serif';g.fillText("Me First · Kitap köşem",W/2,H-80);g.font='500 28px "Nunito Sans",sans-serif';g.fillStyle="rgba(122,58,30,.6)";g.fillText("mefirst.app",W/2,H-38);
+ await mfBrand(g,W/2,H-60,"Kitap köşem");
  cv.toBlob(async b=>{if(!b)return;const f=new File([b],"polaroid.png",{type:"image/png"});try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],text:`"${x.t}" · ${x.cm} 📚 #MeFirst`});return;}}catch(e){if(e&&e.name==="AbortError")return;}
   const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="polaroid.png";document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1500);},"image/png");}
 const libBookOpen0=libBookOpen;libBookOpen=function(i){bookOpen(i);};
@@ -12234,25 +12234,25 @@ document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest
 async function bkQuoteShare(x,q,c){if(!q)return;try{await document.fonts.ready;}catch(e){}const W=1080,HS=1920,cv=document.createElement("canvas");cv.width=W;cv.height=HS;const g=cv.getContext("2d");
  bkStoryBg(g,W,HS);
  g.strokeStyle="#A8743F";g.lineWidth=5;g.beginPath();g.moveTo(0,300);g.quadraticCurveTo(W/2,352,W,300);g.stroke();
- g.save();g.translate(W/2,330);g.rotate(-.05);const pw=500,ip=30,iw=pw-ip*2,ph=ip+iw+96;g.shadowColor="rgba(0,0,0,.5)";g.shadowBlur=44;g.shadowOffsetY=26;g.fillStyle="#FBF7EE";g.fillRect(-pw/2,0,pw,ph);g.shadowColor="transparent";
+ g.save();g.translate(W/2,330);g.rotate(-.05);const pw=640,ip=34,iw=pw-ip*2,ph=ip+iw+100;g.shadowColor="rgba(0,0,0,.5)";g.shadowBlur=44;g.shadowOffsetY=26;g.fillStyle="#FBF7EE";g.fillRect(-pw/2,0,pw,ph);g.shadowColor="transparent";
  const ix=-pw/2+ip,iy=ip,img=PH[bkKey(x)]||PH.me;let drawn=false;
  if(img){const im=await new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src=img;});if(im){const m=Math.min(im.width,im.height);g.drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,ix,iy,iw,iw);drawn=true;}}
  if(!drawn){const gg=g.createLinearGradient(ix,iy,ix+iw,iy+iw);gg.addColorStop(0,c[0]);gg.addColorStop(1,c[1]);g.fillStyle=gg;g.fillRect(ix,iy,iw,iw);g.fillStyle="#FFE7B0";g.textAlign="center";g.font='52px "DM Serif Display",serif';
   const ws=x.t.split(" ");let ln=[],cur="";ws.forEach(w=>{const t=cur?cur+" "+w:w;if(g.measureText(t).width>iw-60){ln.push(cur);cur=w;}else cur=t;});ln.push(cur);ln.forEach((l,k)=>g.fillText(l,0,iy+iw/2-(ln.length-1)*30+k*60));
   g.font='800 22px "Nunito Sans",sans-serif';g.fillText((x.a||"").toLocaleUpperCase("tr-TR"),0,iy+iw/2+ln.length*32+26);}
- g.fillStyle="#2E2420";g.textAlign="left";g.font='600 44px "Caveat",cursive';g.fillText("altını çizdim ✍️",ix,iy+iw+62);
+ g.fillStyle="#2E2420";g.textAlign="left";g.font='600 52px "Caveat",cursive';g.fillText("altını çizdim ✍️",ix,iy+iw+68);
  g.fillStyle="#C08A55";g.fillRect(-14,-46,28,62);g.restore();
  // söz
  const T=String(q.t||"").trim(),MX=880,X0=(W-MX)/2;let fs=60,L=[];
  const wrap=()=>{g.font=`${fs}px "DM Serif Display",serif`;L=[];let cur="";T.split(/\s+/).forEach(w=>{const t=cur?cur+" "+w:w;if(g.measureText(t).width>MX){if(cur)L.push(cur);cur=w;}else cur=t;});if(cur)L.push(cur);};
- wrap();while(L.length>7&&fs>34){fs-=4;wrap();}if(L.length>9){L=L.slice(0,9);L[8]=L[8].replace(/\s*\S*$/,"")+"…";}
- const lh=Math.round(fs*1.32),bh=90+(L.length-1)*lh+100,y0=Math.round(960+Math.max(0,(1720-960-bh)/2));
- g.fillStyle="rgba(192,138,85,.55)";g.font='200px "DM Serif Display",serif';g.textAlign="left";g.fillText("“",X0-30,y0+70);
- L.forEach((l,k)=>{const y=y0+90+k*lh;g.font=`${fs}px "DM Serif Display",serif`;const w=g.measureText(l).width;
+ wrap();while(L.length>5&&fs>32){fs-=4;wrap();}if(L.length>6){L=L.slice(0,6);L[5]=L[5].replace(/\s*\S*$/,"")+"…";}
+ const lh=Math.round(fs*1.3),bh=70+(L.length-1)*lh+70,y0=Math.round(1080+Math.max(0,(1440-1080-bh)/2));
+ g.fillStyle="rgba(192,138,85,.55)";g.font='170px "DM Serif Display",serif';g.textAlign="left";g.fillText("“",X0-30,y0+50);
+ L.forEach((l,k)=>{const y=y0+70+k*lh;g.font=`${fs}px "DM Serif Display",serif`;const w=g.measureText(l).width;
   g.fillStyle="rgba(243,190,90,.45)";g.beginPath();const hy=y-fs*.28,hh=fs*.42;g.moveTo(X0-6,hy+3);g.lineTo(X0+w+8,hy);g.lineTo(X0+w+4,hy+hh);g.lineTo(X0-8,hy+hh+2);g.closePath();g.fill();
   g.fillStyle="#2E2420";g.fillText(l,X0,y);});
- const yb=y0+90+(L.length-1)*lh+70;g.font='800 30px "Nunito Sans",sans-serif';g.fillStyle="#8A5A3A";g.fillText(`— ${x.a?x.a+", ":""}${x.t}${q.p?" · s. "+q.p:""}`.slice(0,60),X0,yb);
- g.textAlign="center";g.fillStyle="#7A3A1E";g.font='600 34px "Nunito Sans",sans-serif';g.fillText("Me First · Kitap köşem",W/2,HS-150);g.font='500 28px "Nunito Sans",sans-serif';g.fillStyle="rgba(122,58,30,.6)";g.fillText("mefirst.app",W/2,HS-108);
+ const yb=y0+70+(L.length-1)*lh+62;g.font='800 30px "Nunito Sans",sans-serif';g.fillStyle="#8A5A3A";g.fillText(`— ${x.a?x.a+", ":""}${x.t}${q.p?" · s. "+q.p:""}`.slice(0,60),X0,yb);
+ await mfBrand(g,W/2,1530,"Kitap köşem");
  bkCanvasShare(cv,"alinti.png",`“${T}” — ${x.a||""}, ${x.t} 📚 #MeFirst`);}
 
 /* ===== v0.20.17: Me First'e özel his ikonları ===== */
@@ -12442,9 +12442,9 @@ async function macShare(e){try{await document.fonts.ready;}catch(_){}const M=mac
  if(!ok){const gg=g.createLinearGradient(ix,iy,ix+iw,iy+iw);gg.addColorStop(0,c[0]);gg.addColorStop(1,c[1]);g.fillStyle=gg;g.fillRect(ix,iy,iw,iw);}
  g.fillStyle="#2E2420";g.textAlign="left";g.font='600 52px "Caveat",cursive';const T=h.cm||"Bir macera daha tamam!";let L=[],cur="";T.split(" ").forEach(w=>{const tt=cur?cur+" "+w:w;if(g.measureText(tt).width>iw){L.push(cur);cur=w;}else cur=tt;});L.push(cur);L.slice(0,2).forEach((l,k)=>g.fillText(l,ix,iy+iw+66+k*54));
  g.fillStyle="#C08A55";g.fillRect(-14,-46,28,62);g.restore();
- g.textAlign="center";g.fillStyle="#2E2420";g.font='64px "DM Serif Display",serif';g.fillText(e[1].length>26?e[1].slice(0,25)+"…":e[1],W/2,1330);
- g.font='800 34px "Nunito Sans",sans-serif';g.fillStyle="#8A5A3A";g.fillText(`🏅 ${evDate(e).d} ${evDate(e).m} ${e[3].slice(0,4)} · ${e[7]||""}`,W/2,1392);
- g.fillStyle="#fff";g.font='600 34px "Nunito Sans",sans-serif';g.fillText("Me First · Macera köşem",W/2,HS-150);g.font='500 28px "Nunito Sans",sans-serif';g.fillStyle="rgba(255,255,255,.8)";g.fillText("mefirst.app",W/2,HS-108);
+ g.textAlign="center";g.fillStyle="#2E2420";g.font='64px "DM Serif Display",serif';g.fillText(e[1].length>26?e[1].slice(0,25)+"…":e[1],W/2,1250);
+ g.font='800 34px "Nunito Sans",sans-serif';g.fillStyle="#8A5A3A";g.fillText(`🏅 ${evDate(e).d} ${evDate(e).m} ${e[3].slice(0,4)} · ${e[7]||""}`,W/2,1312);
+ await mfBrand(g,W/2,1520,"Macera köşem");
  bkCanvasShare(cv,"macera.png",`${e[1]} 🏅 ${h.cm||""} #MeFirst`);}
 /* gezinme: alt menü "Macera" → Macera köşem */
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest('#bnav [data-nv="fit"]');if(!b)return;e.stopPropagation();e.preventDefault();step=95;show();macRender();window.scrollTo({top:0});},true);
@@ -12584,6 +12584,18 @@ async function bkCoverShot(x,noImg){const W=720,cv=document.createElement("canva
   L.slice(0,5).forEach((l,k)=>g.fillText(l,W/2,by+150+k*64));g.font='800 22px "Nunito Sans",sans-serif';g.fillText((x.a||"").toLocaleUpperCase("tr-TR"),W/2,by+bh-60);}
  g.fillStyle="rgba(255,255,255,.12)";g.fillRect(bx,by,bw*.18,bh);g.restore();
  try{return cv.toDataURL("image/jpeg",.86);}catch(_){return noImg?null:bkCoverShot(x,true);}}
+
+/* Paylaşım kartlarında Me First logosu ve markası */
+const MF_LOGO_SVG="<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><defs><linearGradient id=\"bg\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#FFD9C7\"/><stop offset=\".5\" stop-color=\"#F7B3D2\"/><stop offset=\"1\" stop-color=\"#C9B6F2\"/></linearGradient>\n<radialGradient id=\"gl\" cx=\".3\" cy=\".25\" r=\".8\"><stop offset=\"0\" stop-color=\"#fff\" stop-opacity=\".7\"/><stop offset=\".6\" stop-color=\"#fff\" stop-opacity=\"0\"/></radialGradient>\n<linearGradient id=\"h\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#FFFFFF\"/><stop offset=\"1\" stop-color=\"#FFE9F2\"/></linearGradient>\n<linearGradient id=\"pk\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#F48FB8\"/><stop offset=\"1\" stop-color=\"#B98AF0\"/></linearGradient></defs><rect width=\"512\" height=\"512\" fill=\"url(#bg)\"/><rect width=\"512\" height=\"512\" fill=\"url(#gl)\"/><g transform=\"rotate(-14 256 288)\"><path d=\"M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z\" fill=\"url(#h)\"/></g><path transform=\"translate(404 110) scale(1.1)\" d=\"M0-20l4.9 13.5L18.4-2 4.9 2.9 0 16.4-4.9 2.9-18.4-2-4.9-6.5z\" fill=\"#fff\"/><circle cx=\"108\" cy=\"130\" r=\"7\" fill=\"#fff\" opacity=\".85\"/></svg>";
+let MF_LOGO_IMG=null;
+function mfLogoImg(){if(MF_LOGO_IMG)return Promise.resolve(MF_LOGO_IMG);return new Promise(r=>{const i=new Image();i.onload=()=>{MF_LOGO_IMG=i;r(i);};i.onerror=()=>r(null);i.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(MF_LOGO_SVG);});}
+async function mfBrand(g,cx,cy,sub){const im=await mfLogoImg();g.save();g.textAlign="left";g.textBaseline="alphabetic";
+ g.font='64px "DM Serif Display",serif';const tw=g.measureText("Me First").width;g.font='800 25px "Nunito Sans",sans-serif';const sw=g.measureText(sub+" · mefirst.app").width;
+ const L=104,gap=24,w=L+gap+Math.max(tw,sw)+64,h=140,x=cx-w/2,y=cy-h/2;
+ g.shadowColor="rgba(58,30,20,.28)";g.shadowBlur=30;g.shadowOffsetY=10;g.fillStyle="rgba(255,255,255,.94)";g.beginPath();g.roundRect?g.roundRect(x,y,w,h,h/2):g.rect(x,y,w,h);g.fill();g.shadowColor="transparent";
+ const lx=x+18,ly=cy-L/2;if(im){g.save();g.beginPath();g.roundRect?g.roundRect(lx,ly,L,L,26):g.rect(lx,ly,L,L);g.clip();g.drawImage(im,lx,ly,L,L);g.restore();}
+ const tx=lx+L+gap;g.fillStyle="#3A1E14";g.font='64px "DM Serif Display",serif';g.fillText("Me First",tx,cy+8);
+ g.fillStyle="#C2416E";g.font='800 25px "Nunito Sans",sans-serif';g.fillText(sub+" · mefirst.app",tx,cy+44);g.restore();}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
