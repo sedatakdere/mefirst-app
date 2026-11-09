@@ -12324,15 +12324,15 @@ function covScan(){if(navigator.onLine===false)return;document.querySelectorAll(
   const u=covGet(t,a);if(u){covApply(el,u);return;}if(u===null)return;const k=covKey(t,a);if(covIn[k]||covQ.length>60)return;covIn[k]=1;covQ.push([t,a,k]);});covPump();}
 let covT=0;new MutationObserver(()=>{clearTimeout(covT);covT=setTimeout(()=>{covScan();try{auFill();}catch(e){}},120);}).observe(document.body,{childList:true,subtree:true});
 /* Yazarın kitapları (Google Books, 3 gün önbellek) */
-const AUB=(()=>{try{return JSON.parse(localStorage.getItem("mf-aub")||"{}");}catch(e){return {};}})();const auPend={};
+const AUB=(()=>{try{localStorage.removeItem("mf-aub");return JSON.parse(localStorage.getItem("mf-aub2")||"{}");}catch(e){return {};}})();const auPend={};
 function auBooks(a){const k=ktN(a);const C=AUB[k];if(C&&Date.now()-C.at<3*864e5)return Promise.resolve(C.items);if(auPend[k])return auPend[k];
  if(navigator.onLine===false)return Promise.resolve(C?C.items:[]);const sur=k.split(" ").pop();
  auPend[k]=fetch(`https://www.googleapis.com/books/v1/volumes?q=inauthor:%22${encodeURIComponent(a)}%22&maxResults=40&printType=books&langRestrict=tr${window.GB_KEY?"&key="+GB_KEY:""}`).then(r=>r.ok?r.json():null).then(j=>{
-  if(!j)return C?C.items:[];const seen=new Set(),out=[];(j.items||[]).forEach(it=>{const v=it.volumeInfo||{};if(!v.title||!(v.authors||[]).some(x=>ktN(x).includes(sur)))return;
+  if(!j)return C?C.items:[];const seen=new Set(),out=[];(j.items||[]).forEach(it=>{const v=it.volumeInfo||{};if(!v.title||!(v.authors||[]).some(x=>ktN(x).includes(sur)))return;if(v.language!=="tr")return;if(/^(the|a|an) /i.test(v.title)&&!/[çğıöşüİ]/.test(v.title))return;
    if(/\b(seti|set|kutu|külliyat|toplu eserleri|2\s*cilt)\b/i.test(v.title))return;const base=ktN(v.title.split(/[:(\-–]/)[0]).trim();if(!base||seen.has(base))return;seen.add(base);
    const im=v.imageLinks?(v.imageLinks.thumbnail||v.imageLinks.smallThumbnail||"").replace(/^http:/,"https:").replace("&edge=curl",""):"";const t=v.title.split(/\s*[:(]\s*/)[0].trim();if(im)covSet(t,a,im);
    out.push({t,a,y:(v.publishedDate||"").slice(0,4),p:v.publisher||"",img:im});});
-  AUB[k]={at:Date.now(),items:out.slice(0,24)};try{localStorage.setItem("mf-aub",JSON.stringify(AUB));}catch(e){}return AUB[k].items;}).catch(()=>C?C.items:[]).finally(()=>{delete auPend[k];});
+  AUB[k]={at:Date.now(),items:out.slice(0,24)};try{localStorage.setItem("mf-aub2",JSON.stringify(AUB));}catch(e){}return AUB[k].items;}).catch(()=>C?C.items:[]).finally(()=>{delete auPend[k];});
  return auPend[k];}
 /* Kitap sayfası: yazar köşesini internetten doldur */
 function auFill(){document.querySelectorAll("#bkp .bk-au[data-aul]:not([data-auld])").forEach(box=>{box.dataset.auld=1;const a=box.dataset.aul;if(!a)return;
