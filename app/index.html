@@ -5928,6 +5928,18 @@ html[data-mf="dusk"] .tk-l::after{background:radial-gradient(circle at 6px 8px,#
 .mcity-q{display:flex;flex-direction:column;gap:8px;padding:12px 14px;border-radius:16px;background:#FFF6D6;color:#5A3A12;font-size:13.5px;margin-bottom:12px;box-shadow:inset 0 0 0 1.5px rgba(233,162,59,.35)}
 .mcity-q div{display:flex;gap:8px}.mcity-q button{font:inherit;font-weight:800;font-size:13px;border:0;border-radius:999px;padding:7px 14px;cursor:pointer;background:#fff;color:#2F7F72}.mcity-q button#mcq-n{background:#2F7F72;color:#fff}
 html[data-mf="dusk"] .mcity-q{background:rgba(255,212,92,.12);color:#FFE2B8}
+
+.bk-pick2{margin-top:10px;padding:10px;border-radius:16px;background:#fff;border:1px solid rgba(201,130,43,.25)}
+.bp-l{display:block;font-size:12px;font-weight:800;color:#A8492A;margin:0 2px 8px}
+.bp-o{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.bp-o>*{display:flex;flex-direction:column;align-items:center;gap:5px;font:inherit;font-size:12px;font-weight:800;color:#7A3A1E;background:#FFF8EF;border:1.5px solid rgba(201,130,43,.25);border-radius:14px;padding:8px 4px;cursor:pointer;text-align:center}
+.bp-o>[aria-pressed="true"]{border-color:#C9822B;background:#FFE9CC;box-shadow:0 3px 10px rgba(201,130,43,.25)}
+.bp-o>.ld{opacity:.6;pointer-events:none}
+.bp-i{width:52px;height:52px;border-radius:10px;overflow:hidden;display:grid;place-items:center;background:#FBE7D0;font-size:22px}
+.bp-i img{width:100%;height:100%;object-fit:cover}
+.bp-cov{position:relative;width:38px;height:52px;border-radius:3px;background:linear-gradient(150deg,#B85C3A,#7A2E3A);display:grid;place-items:center;overflow:hidden}
+.bp-cov b{color:#FFE7B0;font-size:6.5px;line-height:1.1;padding:2px;text-align:center}
+html[data-mf="dusk"] .bk-pick2{background:rgba(255,255,255,.06)}html[data-mf="dusk"] .bp-o>*{background:rgba(255,255,255,.06);color:#FFD9A8}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -11734,7 +11746,7 @@ function bookOpen(i,anim,X){const L=klib(),x=X||L[i];if(!x)return;bkI=X?bkKey(x)
    <h4 style="margin-top:14px">Sana ne hissettirdi?</h4><div class="bk-fe">${BK_FE.map(([e,l])=>`<button type="button" data-fe="${e}" aria-pressed="${(x.fe||[]).includes(e)}">${feIco(e)}<span>${l}</span></button>`).join("")}</div></section>
   <section class="bkp-sec"><h4>Okur ipi <small>polaroidini as 🧷</small></h4>
    ${x.cm?"":`<textarea class="bk-ta" id="bk-ta" maxlength="160" placeholder="Bu kitap için bir cümle… ör. 'Raif Efendi'yi hiç unutmayacağım.'">${esc(x.cmdraft||"")}</textarea>
-   <div class="bk-pick">${(PH[bkKey(x)]||PH.me)?`<img src="${PH[bkKey(x)]||PH.me}" alt="">`:`<span class="no-mi">📚</span>`}<span>${PH[bkKey(x)]?"Galeriden seçtiğin fotoğraf":PH.me?"Profil fotoğrafın":"Kitabın kapağı"}</span><label for="bk-gal" class="bk-galb"><span class="no-mi">🖼</span> ${PH[bkKey(x)]?"Değiştir":"Galeriden seç"}</label>${PH[bkKey(x)]?`<button type="button" class="bk-galx" id="bk-galx">✕</button>`:""}<input type="file" accept="image/*" id="bk-gal" hidden></div>
+   <div class="bk-pick2"><span class="bp-l">Polaroidinde ne görünsün?</span><div class="bp-o">${(()=>{const ps=PH[bkKey(x)]?(x.ps==="kapak"?"kapak":"gal"):"me";return `<button type="button" data-ps="me" aria-pressed="${ps==="me"}"><span class="bp-i">${PH.me?`<img src="${PH.me}" alt="">`:`<span class="no-mi">🙂</span>`}</span>Ben</button><button type="button" data-ps="kapak" aria-pressed="${ps==="kapak"}"><span class="bp-i">${ps==="kapak"?`<img src="${PH[bkKey(x)]}" alt="">`:`<span class="bp-cov" data-cvt="${esc(x.t)}" data-cva="${esc(x.a||"")}"><b>${esc(x.t.slice(0,22))}</b></span>`}</span>Kapak pozu</button><label for="bk-gal" data-ps="gal" aria-pressed="${ps==="gal"}" role="button"><span class="bp-i">${ps==="gal"?`<img src="${PH[bkKey(x)]}" alt="">`:`<span class="no-mi">🖼</span>`}</span>Galeriden</label>`;})()}</div><input type="file" accept="image/*" id="bk-gal" hidden></div>
    <div class="bk-row"><button type="button" class="bk-hang" id="bk-hang"><span class="no-mi">🧷</span> İpe as</button></div>`}
    <div class="bk-line" id="bk-line">${x.cm?bkPol(x,c,anim==="hang"):""}${sbPolsHTML(x)}${[0,1,2,3].slice(0,Math.max(0,3-sbPolsCount(x))).map(()=>`<div class="pol empty"><span class="clip"></span><div class="img no-mi">👥</div><div class="txt">Diğer okurların polaroidleri buraya</div></div>`).join("")}</div><div class="bk-swipe">kaydır, diğerlerini gör <i>→</i></div>
    <p class="bk-soon" id="bk-soon">${sbPolsCount(x)?`🧷 Bu ipte ${sbPolsCount(x)+(x.cm?1:0)} okurun polaroidi var`:"🧷 Bu kitaba henüz kimse polaroid asmadı; ilk sen as!"}</p>
@@ -11762,7 +11774,9 @@ function bookOpen(i,anim,X){const L=klib(),x=X||L[i];if(!x)return;bkI=X?bkKey(x)
  O.querySelectorAll("[data-fe]").forEach(b=>b.onclick=()=>{const e=b.dataset.fe;x.fe=x.fe||[];x.fe=x.fe.includes(e)?x.fe.filter(y=>y!==e):[...x.fe,e].slice(-3);save();re();});
  const ta=g("bk-ta");if(ta)ta.oninput=()=>{x.cmdraft=ta.value;};
  const pf=g("bk-phf");if(pf)pf.onchange=()=>{const f=pf.files[0];if(!f)return;phRead(f,d=>{PH[bkKey(x)]=d;if(!phSave()){delete PH[bkKey(x)];alertSoft("Fotoğraf için yer kalmadı; daha küçük bir fotoğraf dener misin?");}save();re();},{w:720,h:720});};
- const gl=g("bk-gal");if(gl)gl.onchange=()=>{const f=gl.files[0];if(!f)return;phRead(f,d=>{PH[bkKey(x)]=d;if(!phSave()){delete PH[bkKey(x)];alertSoft("Fotoğraf için yer kalmadı; daha küçük bir fotoğraf dener misin?");}re();},{w:720,h:576});};
+ O.querySelectorAll('.bk-pick2 button[data-ps]').forEach(b=>b.onclick=async()=>{const v=b.dataset.ps;if(v==="me"){delete PH[bkKey(x)];delete x.ps;phSave();save();re();return;}
+  b.classList.add("ld");const d=await bkCoverShot(x);b.classList.remove("ld");if(!d)return;PH[bkKey(x)]=d;x.ps="kapak";if(!phSave()){delete PH[bkKey(x)];delete x.ps;alertSoft("Fotoğraf için yer kalmadı.");}save();re();});
+ const gl=g("bk-gal");if(gl)gl.onchange=()=>{const f=gl.files[0];if(!f)return;phRead(f,d=>{PH[bkKey(x)]=d;delete x.ps;save();if(!phSave()){delete PH[bkKey(x)];alertSoft("Fotoğraf için yer kalmadı; daha küçük bir fotoğraf dener misin?");}re();},{w:720,h:576});};
  const gx=g("bk-galx");if(gx)gx.onclick=()=>{delete PH[bkKey(x)];phSave();re();};
  const hg=g("bk-hang");if(hg)hg.onclick=()=>{const v=(ta.value||"").trim();if(!v){ta.focus();ta.placeholder="Önce bir cümle yaz, sonra asalım 🧷";return;}x.cm=v;x.cmd=dkey();delete x.cmdraft;if(!x.rs)x.rs="read";save();sbHang(x);try{sndPlay("bag");}catch(e){}if(navigator.vibrate)try{navigator.vibrate([20,40,20]);}catch(e){}re("hang");setTimeout(()=>{const l=g("bk-line");if(l)l.scrollIntoView({behavior:"smooth",block:"center"});},60);};
  const pd=g("bk-pdel");if(pd)pd.onclick=()=>{if(!pd.dataset.sure){pd.dataset.sure=1;pd.textContent="?";setTimeout(()=>{if(pd.isConnected){delete pd.dataset.sure;pd.textContent="✕";}},2500);return;}x.cmdraft=x.cm;delete x.cm;delete x.cmd;save();sbUnhang(x);re();};
@@ -12554,6 +12568,22 @@ function cityPick(done){const cur=(mfCity()||{}).name||"";const O=mSheet(`<div c
  const L=Object.keys(MF_IL).sort((a,b)=>a.localeCompare(b,"tr"));const draw=q=>{const n=trN(q||"");document.getElementById("cp-l").innerHTML=L.filter(k=>!n||trN(k).includes(n)).map(k=>`<button type="button" data-cp="${k}" class="${k===cur?"on":""}">${k}${k===cur?" ✓":""}</button>`).join("");
   O.querySelectorAll("[data-cp]").forEach(b=>b.onclick=()=>{st.prof=st.prof||{};st.prof.city=b.dataset.cp;save();O.classList.remove("on");setTimeout(()=>O.remove(),250);try{mfConfetti(`📍 ${b.dataset.cp} seçildi`,["#6FBFA6","#FF8A5B","#FFD45C","#fff"],"linear-gradient(135deg,#3E8C80,#1E4D5C)");}catch(_){}done&&done();});};
  draw("");document.getElementById("cp-q").oninput=e=>draw(e.target.value);const a=document.getElementById("cp-auto");if(a)a.onclick=()=>{delete st.prof.city;save();O.classList.remove("on");setTimeout(()=>O.remove(),250);done&&done();};}
+
+/* Kapak pozu: kitabın kapağını polaroid fotoğrafı yap */
+async function bkCoverShot(x,noImg){const W=720,cv=document.createElement("canvas");cv.width=W;cv.height=W;const g=cv.getContext("2d");
+ const c=trCol(x.t);const bg=g.createLinearGradient(0,0,W,W);bg.addColorStop(0,"#F6E3CC");bg.addColorStop(1,"#E9C9A6");g.fillStyle=bg;g.fillRect(0,0,W,W);
+ g.fillStyle="rgba(255,255,255,.35)";for(let i=0;i<9;i++){g.fillRect(0,i*84+40,W,2);}
+
+ const url=noImg?"":(()=>{try{const I=bkInfoGet(x);if(I&&I.img)return I.img;}catch(_){}const u=covGet(x.t,x.a||"");return typeof u==="string"?u:"";})();
+ let im=null;if(url){try{const r=await fetch(url,{mode:"cors"});if(r.ok){const bl=await r.blob();const u2=URL.createObjectURL(bl);im=await new Promise(res=>{const i=new Image();i.onload=()=>res(i);i.onerror=()=>res(null);i.src=u2;});}}catch(_){}
+  if(!im)im=await new Promise(res=>{const i=new Image();i.crossOrigin="anonymous";i.onload=()=>res(i);i.onerror=()=>res(null);i.src=url;});}
+ const bh=560,bw=im?Math.round(bh*im.width/im.height):380,bx=(W-bw)/2,by=(W-bh)/2;
+ g.save();g.translate(W/2,W/2);g.rotate(-.05);g.translate(-W/2,-W/2);g.shadowColor="rgba(58,30,20,.45)";g.shadowBlur=36;g.shadowOffsetY=18;g.fillStyle="#fff";g.fillRect(bx,by,bw,bh);g.shadowColor="transparent";
+ if(im){g.drawImage(im,bx,by,bw,bh);}else{const gg=g.createLinearGradient(bx,by,bx+bw,by+bh);gg.addColorStop(0,c[0]);gg.addColorStop(1,c[1]);g.fillStyle=gg;g.fillRect(bx,by,bw,bh);
+  g.fillStyle="rgba(0,0,0,.18)";g.fillRect(bx,by,14,bh);g.fillStyle="#FFE7B0";g.textAlign="center";g.font='54px "DM Serif Display",serif';const ws=x.t.split(" ");let L=[],cur="";ws.forEach(w=>{const t=cur?cur+" "+w:w;if(g.measureText(t).width>bw-70){L.push(cur);cur=w;}else cur=t;});L.push(cur);
+  L.slice(0,5).forEach((l,k)=>g.fillText(l,W/2,by+150+k*64));g.font='800 22px "Nunito Sans",sans-serif';g.fillText((x.a||"").toLocaleUpperCase("tr-TR"),W/2,by+bh-60);}
+ g.fillStyle="rgba(255,255,255,.12)";g.fillRect(bx,by,bw*.18,bh);g.restore();
+ try{return cv.toDataURL("image/jpeg",.86);}catch(_){return noImg?null:bkCoverShot(x,true);}}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
