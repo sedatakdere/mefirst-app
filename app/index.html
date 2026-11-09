@@ -6006,7 +6006,7 @@ html[data-mf="dusk"] .ktsr-r{background:#2A211F;box-shadow:0 10px 26px rgba(0,0,
 .wsh-more{align-self:flex-end;font-size:13px;font-weight:900;color:#B0457A;background:#fff;border:1.5px dashed #E8A9BE;border-radius:10px;padding:6px 8px;margin-left:4px}
 
 /* Okuma karnem */
-.okc{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:flex;align-items:center;gap:14px;padding:14px 16px;margin:0 0 14px;border-radius:22px;color:#FFF3E6;background:radial-gradient(80% 90% at 100% 0%,#E9A55A,transparent 60%),linear-gradient(150deg,#7A3322,#A8492A 60%,#C9822B);box-shadow:0 16px 30px -18px rgba(122,51,34,.8)}
+.okc{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:flex;align-items:center;gap:14px;padding:14px 16px;margin:14px 0;border-radius:22px;color:#FFF3E6;background:radial-gradient(80% 90% at 100% 0%,#E9A55A,transparent 60%),linear-gradient(150deg,#7A3322,#A8492A 60%,#C9822B);box-shadow:0 16px 30px -18px rgba(122,51,34,.8)}
 .okc-r{position:relative;flex:0 0 66px;height:66px}.okc-r svg{width:100%;height:100%}
 .okc-r b{position:absolute;inset:0;display:grid;place-items:center;align-content:center;font-family:var(--f-display);font-weight:400;font-size:24px;line-height:1}.okc-r b small{font-family:var(--f-body);font-size:11px;font-weight:800;opacity:.8;margin-top:2px}
 .okc-t{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
@@ -12972,7 +12972,7 @@ async function okShare(D){try{await document.fonts.ready;}catch(e){}const W=1080
  await mfBrand(g,W/2,H-250,"Okuma karnem",true);
  cv.toBlob(async b=>{if(!b)return;const f=new File([b],"okuma-karnem.png",{type:"image/png"});try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],text:`${trLoc(D.Y)} ${D.n} kitap bitirdim 📚 #MeFirst #OkumaKarnem`});return;}}catch(e){if(e&&e.name==="AbortError")return;}
   const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="okuma-karnem.png";document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1500);},"image/png");}
-(function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{if(kttab!=="raf")return;const P=document.getElementById("ktpanel");if(!P||P.querySelector(".okc"))return;const sv=P.querySelector(".ktshv")||P.querySelector(".ktshelf");if(!sv)return;sv.insertAdjacentHTML("beforebegin",okCard());document.getElementById("ok-open").onclick=okOpen;}catch(e){console.warn(e);}};})();
+(function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{if(kttab!=="raf")return;const P=document.getElementById("ktpanel");if(!P||P.querySelector(".okc"))return;const sv=P.querySelector(".ktshv")||P.querySelector(".ktshelf");if(!sv)return;sv.insertAdjacentHTML("afterend",okCard());document.getElementById("ok-open").onclick=okOpen;}catch(e){console.warn(e);}};})();
 
 /* Türkçe bulunma eki: 2026'da, 2027'de, 2025'te */
 function trLoc(n){n=Math.abs(Math.round(n));const O=["","bir","iki","üç","dört","beş","altı","yedi","sekiz","dokuz"],T=["","on","yirmi","otuz","kırk","elli","altmış","yetmiş","seksen","doksan"];
@@ -13080,6 +13080,42 @@ function ktOnb(){const P=document.getElementById("ktpanel");if(!P||kttab!=="zevk
 }
  if(!P._onbW){P._onbW=1;const up=()=>setTimeout(()=>{if(kt().setup||kttab!=="zevk")return;const S=ktOnbSteps();P.querySelectorAll(".kto-s li").forEach((li,i)=>{li.classList.toggle("on",S[i]);li.querySelector("b").textContent=S[i]?"✓":i+1;});const d2=document.getElementById("kt-done");if(d2){const n=S.filter(Boolean).length;d2.innerHTML=n?`Hadi, raflara dalalım! 🍂 <small>${n}/3 hazır</small>`:"Şimdilik atla, önerilere geç 🍂";}},30);P.addEventListener("click",up);P.addEventListener("keydown",up);}}
 (function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{ktOnb();}catch(e){console.warn(e);}};})();
+
+/* ===== Kapaklar: kökten çözüm =====
+   1) Önce Me First ortak kapak hafızası (Supabase books.cover) – toplu sorgu
+   2) Yoksa Google Books (API anahtarıyla, varsa) → Open Library → başlık-tek arama
+   3) Bulunan kapak herkes için kaydedilir (cover_set)
+   4) Ağ/kota hatası "bulunamadı" sayılmaz; 1 saat sonra yeniden dener
+   5) Görsel açılmazsa o adres kara listeye alınır, başka kaynak denenir */
+const COV_BAD=(()=>{try{return JSON.parse(localStorage.getItem("mf-covbad")||"{}");}catch(e){return {};}})();
+function covBadSave(){try{localStorage.setItem("mf-covbad",JSON.stringify(COV_BAD));}catch(e){}}
+function covShare(t,a,u,bad){try{if(!u||navigator.onLine===false)return;fetch(SB_URL+"/rest/v1/rpc/cover_set",{method:"POST",headers:{apikey:SB_KEY,Authorization:"Bearer "+SB_KEY,"Content-Type":"application/json"},body:JSON.stringify({k:bkKey({t,a}),t:String(t).slice(0,160),a:String(a||"").slice(0,120),c:u,bad:bad||""})}).catch(()=>{});}catch(e){}}
+covFetch=async function(t,a){const tn=ktN(t),sur=ktN(a||"").split(" ").pop()||"";const mt=x=>{const q=ktN(x||"");return q===tn||(q.startsWith(tn)&&tn.length>3)||(tn.startsWith(q)&&q.length>4);};
+ let errs=0,tries=0;const get=async u=>{tries++;try{const c=window.AbortController?new AbortController():null;const tm=setTimeout(()=>c&&c.abort(),8000);const r=await fetch(u,c?{signal:c.signal}:{});clearTimeout(tm);if(!r.ok){errs++;return null;}return await r.json();}catch(e){errs++;return null;}};
+ const bad=u=>!!COV_BAD[u];const key=window.GB_KEY?"&key="+GB_KEY:"";
+ const gImg=v=>{const L=v.imageLinks||{};const u=(L.thumbnail||L.smallThumbnail||"").replace(/^http:/,"https:").replace("&edge=curl","");return u&&!bad(u)?u:"";};
+ const gPick=(j,needAu)=>{const V=((j&&j.items)||[]).map(i=>i.volumeInfo||{}).filter(v=>mt(v.title)&&gImg(v)&&(!needAu||!sur||(v.authors||[]).some(x=>ktN(x).includes(sur))));V.sort((x,y)=>(y.language==="tr")-(x.language==="tr"));return V.length?gImg(V[0]):"";};
+ let j=await get(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent("intitle:"+t+(a?" inauthor:"+a:""))}&maxResults=10&printType=books${key}`);let u=gPick(j,1);if(u)return {u};
+ const o=await get(`https://openlibrary.org/search.json?title=${encodeURIComponent(t)}${a?"&author="+encodeURIComponent(a):""}&limit=8&fields=title,cover_i,author_name`);
+ const d=((o&&o.docs)||[]).find(x=>x.cover_i&&mt(x.title)&&!bad(`https://covers.openlibrary.org/b/id/${x.cover_i}-M.jpg`));if(d)return {u:`https://covers.openlibrary.org/b/id/${d.cover_i}-M.jpg`};
+ j=await get(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(t+(a?" "+a:""))}&maxResults=15&printType=books${key}`);u=gPick(j,1);if(u)return {u};
+ return {u:"",err:errs>=Math.max(2,tries-1)};};
+covPump=function(){while(covBusy<2&&covQ.length){const [t,a,k]=covQ.shift();covBusy++;covFetch(t,a).then(r=>{r=r||{};const old=COV["bad|"+k];
+  if(r.u){COV[k]=r.u;delete COV["bad|"+k];covShare(t,a,r.u,old);}else COV[k]=r.err?Date.now()-3*864e5+36e5:Date.now()-864e5;covSave();
+  if(r.u)document.querySelectorAll("[data-cvt]").forEach(el=>{if(covKey(el.dataset.cvt,el.dataset.cva)===k)covApply(el,r.u);});}).catch(()=>{}).finally(()=>{delete covIn[k];covBusy--;covPump();});}};
+covApply=function(el,u){if(!u||el.querySelector(":scope>img.cvimg"))return;const i=new Image();i.className="cvimg";i.alt="";i.decoding="async";
+ i.onload=()=>{if(i.naturalWidth<20||(i.naturalWidth<=128&&i.naturalHeight<=200&&/books\.google/.test(u)&&i.naturalWidth/i.naturalHeight>0.9)){i.onerror();return;}el.classList.add("hascv");};
+ i.onerror=()=>{i.remove();el.classList.remove("hascv");const t=el.dataset.cvt,a=el.dataset.cva||"",k=covKey(t,a);if(COV_BAD[u])return;COV_BAD[u]=1;covBadSave();if(COV[k]===u){delete COV[k];COV["bad|"+k]=u;covSave();}
+  if(!covIn[k]){covIn[k]=1;covQ.push([t,a,k]);covPump();}};i.src=u;el.appendChild(i);};
+/* ortak hafıza: ekrandaki kapaksız kitapları tek sorguda sor */
+const covAsked={};let covShT=0,covShQ=[];
+function covSharedAsk(){clearTimeout(covShT);covShT=setTimeout(async()=>{const L=covShQ.splice(0,40);if(!L.length)return;const keys=L.map(x=>bkKey({t:x[0],a:x[1]}));
+ const R=await sbGet(`books?select=key,cover&cover=neq.&key=in.(${keys.map(k=>'"'+encodeURIComponent(k).replace(/%2C/g,",")+'"').join(",")})`);const M={};(Array.isArray(R)?R:[]).forEach(b=>{if(b.cover&&!COV_BAD[b.cover])M[b.key]=b.cover;});
+ L.forEach(([t,a,k],i)=>{const u=M[keys[i]];if(u){COV[k]=u;document.querySelectorAll("[data-cvt]").forEach(el=>{if(covKey(el.dataset.cvt,el.dataset.cva)===k)covApply(el,u);});}else if(!covIn[k]&&covQ.length<80){covIn[k]=1;covQ.push([t,a,k]);}});covSave();covPump();if(covShQ.length)covSharedAsk();},250);}
+covScan=function(){if(navigator.onLine===false)return;document.querySelectorAll("[data-cvt]:not([data-cvd])").forEach(el=>{el.dataset.cvd=1;const t=el.dataset.cvt,a=el.dataset.cva||"";if(!t)return;
+  const u=covGet(t,a);if(u&&!COV_BAD[u]){covApply(el,u);return;}if(u===null)return;const k=covKey(t,a);if(covIn[k]||covAsked[k])return;covAsked[k]=1;covShQ.push([t,a,k]);});if(covShQ.length)covSharedAsk();};
+/* Kapak yüklemesi başarısız kalanlara bağlantı gelince yeniden dene */
+window.addEventListener("online",()=>{document.querySelectorAll("[data-cvd]").forEach(el=>{if(!el.classList.contains("hascv"))delete el.dataset.cvd;});Object.keys(covAsked).forEach(k=>delete covAsked[k]);covScan();});
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
