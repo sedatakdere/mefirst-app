@@ -6079,15 +6079,15 @@ html[data-mf="dusk"] .cab-hint{color:#E9C77B;background:rgba(233,199,123,.12)}
 .cab-row{display:flex;align-items:flex-end;gap:3px;height:112px;padding:0 4px}
 .cab-shf{height:11px;margin:0 -10px 14px;background:linear-gradient(180deg,#9C6A3C,#6A4022);box-shadow:0 6px 10px -4px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,220,170,.35)}
 .cab-sp{all:unset;cursor:pointer;flex:none;position:relative;width:var(--w);height:var(--h);border-radius:3px 3px 1px 1px;background:linear-gradient(90deg,var(--c1),var(--c2) 50%,var(--c1));box-shadow:inset 0 5px 0 rgba(255,255,255,.16),inset 0 -7px 0 rgba(0,0,0,.18),inset 2px 0 0 rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(-14px);transition:transform .25s}
-.cab-ov.open .cab-sp{animation:cabIn .5s cubic-bezier(.2,1.3,.4,1) var(--d) forwards}
+.cab.open .cab-sp{animation:cabIn .5s cubic-bezier(.2,1.3,.4,1) var(--d) forwards}
 @keyframes cabIn{to{opacity:1;transform:none}}
 .cab-sp::before{content:"";position:absolute;left:3px;right:3px;top:12%;height:2px;background:rgba(233,199,123,.7);box-shadow:0 5px 0 rgba(233,199,123,.5)}
 .cab-sp b{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--f-display);font-weight:400;font-size:10px;color:#FFF5E6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-height:78%;margin-top:14%}
 .cab-sp:active,.cab-sp.pull{transform:translateY(-16px) rotate(-3deg)}
 .cab-door{position:absolute;top:34px;bottom:14px;width:calc(50% - 16px);display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;padding:10px;box-sizing:border-box;background:linear-gradient(90deg,#6A3E24,#7E4C2C 50%,#6A3E24);box-shadow:inset 0 0 0 3px #4A2A18,inset 0 0 0 5px rgba(233,199,123,.4),0 0 12px rgba(0,0,0,.4);transition:transform 1.1s cubic-bezier(.6,.05,.25,1),filter 1.1s;z-index:3}
-.cab-ov.open .cab-door{filter:brightness(.7)}
+.cab.open .cab-door{filter:brightness(.7)}
 .cab-door.l{left:16px;transform-origin:left center}.cab-door.r{right:16px;transform-origin:right center}
-.cab-ov.open .cab-door.l{transform:rotateY(-96deg)}.cab-ov.open .cab-door.r{transform:rotateY(96deg)}
+.cab.open .cab-door.l{transform:rotateY(-96deg)}.cab.open .cab-door.r{transform:rotateY(96deg)}
 .cab-gl{border-radius:3px 3px 2px 2px;background:linear-gradient(135deg,rgba(255,240,210,.22),rgba(120,160,170,.12) 40%,rgba(255,240,210,.08) 60%,rgba(0,0,0,.2));box-shadow:inset 0 0 0 2px #4A2A18,inset 0 0 0 3px rgba(233,199,123,.3)}
 .cab-gl:nth-child(1),.cab-gl:nth-child(2){border-radius:40% 40% 2px 2px/22% 22% 2px 2px}
 .cab-knob{position:absolute;top:50%;width:11px;height:11px;margin-top:-5px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FBE7B0,#B88A3C 55%,#6A4A18);box-shadow:0 2px 4px rgba(0,0,0,.6)}
@@ -6096,7 +6096,7 @@ html[data-mf="dusk"] .cab-hint{color:#E9C77B;background:rgba(233,199,123,.12)}
 .cab-base{height:22px;margin:0 -6px;background:linear-gradient(180deg,#5A3320,#3A2012);border-radius:0 0 6px 6px;box-shadow:inset 0 2px 0 rgba(233,199,123,.3),0 14px 20px -8px rgba(0,0,0,.8);position:relative}
 .cab-base i{position:absolute;bottom:-12px;width:26px;height:14px;border-radius:0 0 10px 10px;background:linear-gradient(180deg,#4A2A18,#2A170C)}.cab-base i:first-child{left:14px}.cab-base i:last-child{right:14px}
 .cab-x{font:inherit;font-weight:800;font-size:14px;color:#F3DDB5;background:rgba(255,236,200,.1);border:1.5px solid rgba(233,199,123,.45);border-radius:99px;padding:10px 22px;cursor:pointer;margin-top:10px}
-@media (prefers-reduced-motion:reduce){.cab-door{transition:none}.cab-ov.open .cab-sp{animation:none;opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.cab-door{transition:none}.cab.open .cab-sp{animation:none;opacity:1;transform:none}}
 
 .pgt{grid-column:1/-1;display:flex;flex-direction:column;gap:7px;margin-top:2px;padding:10px 12px;border-radius:14px;background:rgba(201,130,43,.08);border:1px solid rgba(201,130,43,.18)}
 .pgt-bar{height:8px;border-radius:5px;background:rgba(168,73,42,.14);overflow:hidden}.pgt-bar i{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,#E9A55A,#A8492A);transition:width .5s cubic-bezier(.2,1,.3,1)}
@@ -6142,6 +6142,21 @@ html[data-mf="dusk"] .pgt-tp{color:#E8CDB4}
 .adm-a button.del{color:#B3261E;border-color:rgba(179,38,30,.35)}.adm-a button.del.sure{background:#B3261E;color:#fff}
 html[data-mf="dusk"] .adm{background:#1E1820;color:#F2E8EE}html[data-mf="dusk"] .adm-i{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)}
 html[data-mf="dusk"] .adm-x{background:rgba(255,255,255,.1)}
+
+.cab-room{display:flex;gap:26px;width:100%;justify-content:center}
+.cab-room.many{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 calc(50% - min(180px,47vw));box-sizing:border-box}
+.cab-room.many::-webkit-scrollbar{display:none}
+.cab-room .cab{flex:none;scroll-snap-align:center}
+.cab-row{height:96px}
+.cab-in{max-height:min(52vh,480px)}
+.cab-top{text-align:center;color:#F3DDB5;display:flex;flex-direction:column;align-items:center;gap:4px}
+.cab-top b{font-family:var(--f-display);font-weight:400;font-size:24px}.cab-top small{font-size:12px;font-weight:800;opacity:.75}
+.cab-so{display:flex;gap:6px;margin-top:4px;flex-wrap:wrap;justify-content:center}
+.cab-so button{font:inherit;font-size:12px;font-weight:800;color:#F3DDB5;background:transparent;border:1.5px solid rgba(233,199,123,.35);border-radius:99px;padding:6px 11px;cursor:pointer}
+.cab-so button[aria-pressed="true"]{background:#E9C77B;color:#3A2410;border-color:#E9C77B}
+.cab-cnt{font-size:12.5px;font-weight:800;color:#E9C77B;letter-spacing:.08em}
+.cab-sp.lent::after{content:"";position:absolute;top:-2px;right:3px;width:7px;height:16px;background:#E2689A;clip-path:polygon(0 0,100% 0,100% 100%,50% 75%,0 100%)}
+.cab-ov{gap:10px}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -12947,23 +12962,35 @@ function trLoc(n){n=Math.abs(Math.round(n));const O=["","bir","iki","üç","dör
 
 /* ===== Kütüphane dolabı: oymalı, eskitme; kapaklar açılır ===== */
 function cabSp(x,i){let h=0;for(const c of x.t)h=(h*31+c.charCodeAt(0))>>>0;const c=KT_COL[h%KT_COL.length];
- return `<button type="button" class="cab-sp" data-ct="${esc(x.t)}" data-ca="${esc(x.a||"")}" style="--c1:${c[0]};--c2:${c[1]};--h:${74+h%24}%;--w:${24+h%11}px;--d:${.9+i*.035}s" aria-label="${esc(x.t)}"><b>${esc(x.t)}</b></button>`;}
-function cabOpen(title,books,sub){if(document.querySelector(".cab-ov"))return;const per=7,R=[];for(let i=0;i<books.length;i+=per)R.push(books.slice(i,i+per));while(R.length<3)R.push([]);
- const orn='<svg viewBox="0 0 320 60" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="cabg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#E9C77B"/><stop offset="1" stop-color="#9C7330"/></linearGradient></defs><path d="M0 60 L0 38 Q40 38 60 26 Q90 8 120 22 Q140 30 160 6 Q180 30 200 22 Q230 8 260 26 Q280 38 320 38 L320 60Z" fill="#4A2A18"/><path d="M118 30 Q140 32 160 12 Q180 32 202 30" fill="none" stroke="url(#cabg)" stroke-width="2.4"/><circle cx="160" cy="16" r="5" fill="url(#cabg)"/><path d="M70 34 q12-10 24-4 M226 30 q12-6 24 4" fill="none" stroke="url(#cabg)" stroke-width="1.6"/><path d="M0 46 H320" stroke="#2E180C" stroke-width="3"/></svg>';
+ return `<button type="button" class="cab-sp${x.lent?" lent":""}" data-ct="${esc(x.t)}" data-ca="${esc(x.a||"")}"${x.li!=null?` data-li="${x.li}"`:""} style="--c1:${c[0]};--c2:${c[1]};--h:${74+h%24}%;--w:${24+h%11}px;--d:${.5+i*.03}s" aria-label="${esc(x.t)}"><b>${esc(x.t)}</b></button>`;}
+const CAB_N=28,CAB_ROW=7;
+function cabKey(x,m){const n=v=>String(v||"").trim().toLocaleUpperCase("tr-TR");if(m==="t")return n(x.t);const a=String(x.a||"").trim().split(/\s+/);return n(a.length>1?a[a.length-1]:a[0]||x.t);}
+function cabSort(B,m){const C=new Intl.Collator("tr",{sensitivity:"base"});if(m==="new")return B.slice().reverse();return B.slice().sort((x,y)=>C.compare(cabKey(x,m),cabKey(y,m))||C.compare(x.t,y.t));}
+function cabOrn(){return '<svg viewBox="0 0 320 60" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="cabg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#E9C77B"/><stop offset="1" stop-color="#9C7330"/></linearGradient></defs><path d="M0 60 L0 38 Q40 38 60 26 Q90 8 120 22 Q140 30 160 6 Q180 30 200 22 Q230 8 260 26 Q280 38 320 38 L320 60Z" fill="#4A2A18"/><path d="M118 30 Q140 32 160 12 Q180 32 202 30" fill="none" stroke="url(#cabg)" stroke-width="2.4"/><circle cx="160" cy="16" r="5" fill="url(#cabg)"/><path d="M70 34 q12-10 24-4 M226 30 q12-6 24 4" fill="none" stroke="url(#cabg)" stroke-width="1.6"/><path d="M0 46 H320" stroke="#2E180C" stroke-width="3"/></svg>';}
+function cabHTML(books,plq,sub){const R=[];for(let i=0;i<books.length;i+=CAB_ROW)R.push(books.slice(i,i+CAB_ROW));while(R.length<4)R.push([]);
  const door=side=>`<div class="cab-door ${side}"><i class="cab-gl"></i><i class="cab-gl"></i><i class="cab-gl"></i><i class="cab-gl"></i><span class="cab-knob"></span>${side==="r"?'<span class="cab-key"></span>':""}</div>`;
- const O=document.createElement("div");O.className="cab-ov";O.setAttribute("role","dialog");O.setAttribute("aria-label",title);
- O.innerHTML=`<div class="cab"><div class="cab-crown">${orn}</div><div class="cab-plq"><b>${esc(title)}</b><small>${esc(sub||"")}</small></div>
-  <div class="cab-body"><div class="cab-in">${R.map(r=>`<div class="cab-row">${r.map((x,i)=>cabSp(x,i)).join("")}</div><div class="cab-shf"></div>`).join("")}</div>${door("l")}${door("r")}</div>
-  <div class="cab-base"><i></i><i></i></div></div><button type="button" class="cab-x" aria-label="Dolabı kapat">Dolabı kapat</button>`;
- document.body.appendChild(O);document.documentElement.style.overflow="hidden";
- requestAnimationFrame(()=>{O.classList.add("in");setTimeout(()=>O.classList.add("open"),420);});
- const close=()=>{O.classList.remove("open");setTimeout(()=>{O.classList.remove("in");document.documentElement.style.overflow="";setTimeout(()=>O.remove(),350);},500);};
- O.querySelector(".cab-x").onclick=close;O.addEventListener("click",e=>{if(e.target===O)close();});
- O.querySelectorAll(".cab-sp").forEach(b=>b.onclick=()=>{b.classList.add("pull");const t=b.dataset.ct,a=b.dataset.ca;setTimeout(()=>{O.remove();document.documentElement.style.overflow="";try{bookOpenAny(t,a);}catch(e){}},420);});}
+ return `<div class="cab"><div class="cab-crown">${cabOrn()}</div><div class="cab-plq"><b>${esc(plq)}</b><small>${esc(sub||"")}</small></div>
+  <div class="cab-body"><div class="cab-in">${R.map(r=>`<div class="cab-row">${r.map((x,i)=>cabSp(x,i)).join("")}</div><div class="cab-shf"></div>`).join("")}</div>${door("l")}${door("r")}</div><div class="cab-base"><i></i><i></i></div></div>`;}
+function cabOpen(title,books,sub,opt){if(document.querySelector(".cab-ov"))return;opt=opt||{};let mode=opt.sort||(books.length>CAB_N?"a":"none");
+ const O=document.createElement("div");O.className="cab-ov";O.setAttribute("role","dialog");O.setAttribute("aria-label",title);document.body.appendChild(O);document.documentElement.style.overflow="hidden";
+ const draw=()=>{const B=mode==="none"?books:cabSort(books,mode);const C=[];for(let i=0;i<B.length;i+=CAB_N)C.push(B.slice(i,i+CAB_N));if(!C.length)C.push([]);const many=C.length>1;
+  const rng=c=>{if(mode==="new"||mode==="none")return "";const f=cabKey(c[0],mode).charAt(0),l=cabKey(c[c.length-1],mode).charAt(0);return f===l?f:f+"–"+l;};
+  O.innerHTML=`${many||books.length>CAB_N?`<div class="cab-top"><b>${esc(title)}</b><small>${books.length} kitap · ${C.length} dolap</small><div class="cab-so">${[["a","Yazara göre"],["t","Kitap adına göre"],["new","Son eklenen"]].map(([k,l])=>`<button type="button" data-so="${k}" aria-pressed="${mode===k}">${l}</button>`).join("")}</div></div>`:""}
+   <div class="cab-room${many?" many":""}">${C.map((c,i)=>cabHTML(c,many?`Dolap ${i+1}${rng(c)?" · "+rng(c):""}`:title,many?`${c.length} kitap`:sub)).join("")}</div>
+   ${many?`<div class="cab-cnt"><span id="cab-n">1</span> / ${C.length}</div>`:""}<button type="button" class="cab-x" aria-label="Dolabı kapat">Dolabı kapat</button>`;
+  const room=O.querySelector(".cab-room"),cabs=[...room.children];
+  if(many&&"IntersectionObserver" in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("open");const n=O.querySelector("#cab-n");if(n)n.textContent=cabs.indexOf(e.target)+1;}}),{root:room,threshold:.6});cabs.forEach(c=>io.observe(c));}
+  else setTimeout(()=>cabs.forEach(c=>c.classList.add("open")),420);
+  O.querySelector(".cab-x").onclick=close;O.querySelectorAll("[data-so]").forEach(b=>b.onclick=()=>{mode=b.dataset.so;draw();});
+  O.querySelectorAll(".cab-sp").forEach(b=>b.onclick=()=>{b.classList.add("pull");const t=b.dataset.ct,a=b.dataset.ca,li=b.dataset.li;setTimeout(()=>{O.remove();document.documentElement.style.overflow="";try{if(li!=null)bookOpen(+li);else bookOpenAny(t,a);}catch(e){}},420);});};
+ const close=()=>{O.querySelectorAll(".cab").forEach(c=>c.classList.remove("open"));setTimeout(()=>{O.classList.remove("in");document.documentElement.style.overflow="";setTimeout(()=>O.remove(),350);},500);};
+ O.addEventListener("click",e=>{if(e.target===O)close();});draw();requestAnimationFrame(()=>O.classList.add("in"));}
 function cabBind(){const P=document.getElementById("ktpanel");if(!P||kttab!=="raf")return;const K=kt();
  const rd=P.querySelector(".rdsh");if(rd&&!rd.dataset.cab){rd.dataset.cab=1;const B=K.shelf.filter(x=>x.s==="okuyor").concat(K.shelf.filter(x=>x.s==="okudu"));
   if(B.length){rd.classList.add("cab-tap");rd.querySelectorAll(".ktwood,.ktplank").forEach(w=>w.addEventListener("click",()=>cabOpen("Okuma rafım",B,`${trLoc(new Date().getFullYear())} ${okData().n} kitap bitirdin`)));
    const t=rd.querySelector(".ktshelf-t");if(t&&!t.querySelector(".cab-hint"))t.insertAdjacentHTML("beforeend",'<span class="cab-hint">🗝 Dolabı aç</span>');const h=t&&t.querySelector(".cab-hint");if(h)h.onclick=()=>cabOpen("Okuma rafım",B,`${trLoc(new Date().getFullYear())} ${okData().n} kitap bitirdin`);}}
+ const ls=P.querySelector(".lsh");if(ls&&!ls.dataset.cab){ls.dataset.cab=1;const L=klib();if(L.length){const B=L.map((x,i)=>({t:x.t,a:x.a,li:i,lent:x.k==="own"&&!!x.who}));const op=()=>cabOpen("Kütüphanem",B,`${L.length} kitap`,{sort:L.length>CAB_N?"a":"none"});
+  const t=ls.querySelector(".ktshelf-t");if(t&&!t.querySelector(".cab-hint"))t.insertAdjacentHTML("beforeend",'<span class="cab-hint">🗝 Dolabı aç</span>');const h=t&&t.querySelector(".cab-hint");if(h)h.onclick=e=>{e.stopPropagation();op();};ls.querySelectorAll(".lpl").forEach(p=>{p.style.cursor="pointer";p.onclick=op;});}}
  const ws=P.querySelector(".wsh");if(ws&&!ws.dataset.cab){ws.dataset.cab=1;const W=K.shelf.filter(x=>x.s==="istek");const m=ws.querySelector(".wsh-more");if(m){m.setAttribute("role","button");m.onclick=e=>{e.stopPropagation();cabOpen("İstek rafım",W,`${W.length} kitap seni bekliyor 💝`);};}}}
 (function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{cabBind();}catch(e){console.warn(e);}};})();
 
