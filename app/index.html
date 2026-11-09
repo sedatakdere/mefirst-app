@@ -12343,7 +12343,7 @@ function auFill(){document.querySelectorAll("#bkp .bk-au[data-aul]:not([data-aul
 document.addEventListener("click",e=>{const m=e.target.closest&&e.target.closest("#bkp .bk-au [data-bt]");if(!m)return;e.preventDefault();e.stopPropagation();
  const O=document.getElementById("bkp");if(O)O.scrollTop=0;bookOpenAny(m.dataset.bt,m.dataset.ba);},true);
 /* Okur ruhumdaki yazarlar: her biri için kendi rafı */
-ktLive=function(){const K=kt(),box=document.getElementById("kt-live");if(!box||!K.au.length)return;const A=auToday(K.au,2);
+ktLive=function(){const K=kt(),box=document.getElementById("kt-live");if(!box||!K.au.length)return;const A=(()=>{const L=K.au,d=Math.floor(new Date(dkey()+"T00:00")/864e5),o=L.length?d%L.length:0;return L.slice(o).concat(L.slice(0,o)).slice(0,4);})();
  const render=()=>{const b=document.getElementById("kt-live");if(!b)return;let H="";
   A.forEach(a=>{const cat=KT_BOOKS.filter(x=>ktN(x[1])===ktN(a)).map(x=>({t:x[0],a:x[1],p:x[3],y:(x[4]||"").slice(0,4),k:1}));const C=AUB[ktN(a)];const live=C?C.items:[];
    const seen=new Set(),L=[];cat.concat(live).forEach(x=>{const n=ktN(x.t);if(seen.has(n))return;seen.add(n);L.push(x);});const R=L.filter(x=>ktOnShelf(x.t)?false:true).slice(0,12);if(!R.length)return;
