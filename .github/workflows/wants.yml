@@ -1,0 +1,34 @@
+name: Katalog istekleri
+on:
+  repository_dispatch:
+    types: [wants]
+permissions:
+  contents: write
+concurrency: wants
+jobs:
+  save:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: İstekleri kaydet
+        env:
+          PAYLOAD: ${{ toJson(github.event.client_payload) }}
+        run: |
+          python3 - <<'PY'
+          import json, os, datetime
+          p = json.loads(os.environ["PAYLOAD"] or "{}")
+          w = p.get("wants") or []
+          clean = []
+          for x in w[:60]:
+              q = str(x.get("q", ""))[:60].strip()
+              if len(q) < 2: continue
+              clean.append({"q": q, "kind": str(x.get("kind", ""))[:10], "n": int(x.get("n", 1)), "last": str(x.get("last", ""))[:10]})
+          out = {"updated": datetime.date.today().isoformat(), "wants": clean}
+          os.makedirs("app", exist_ok=True)
+          with open("app/wants.json", "w", encoding="utf-8") as f:
+              json.dump(out, f, ensure_ascii=False, indent=0)
+          PY
+          git config user.name "Me First"
+          git config user.email "sedatakdere18@gmail.com"
+          git add app/wants.json
+          git diff --cached --quiet || (git commit -m "Katalog istekleri güncellendi" && git push)
