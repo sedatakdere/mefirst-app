@@ -12444,7 +12444,7 @@ async function macShare(e){try{await document.fonts.ready;}catch(_){}const M=mac
  g.fillStyle="#C08A55";g.fillRect(-14,-46,28,62);g.restore();
  g.textAlign="center";g.fillStyle="#2E2420";g.font='64px "DM Serif Display",serif';g.fillText(e[1].length>26?e[1].slice(0,25)+"…":e[1],W/2,1250);
  g.font='800 34px "Nunito Sans",sans-serif';g.fillStyle="#8A5A3A";g.fillText(`🏅 ${evDate(e).d} ${evDate(e).m} ${e[3].slice(0,4)} · ${e[7]||""}`,W/2,1312);
- await mfBrand(g,W/2,1520,"Macera köşem");
+ await mfBrand(g,W/2,1420,"Macera köşem");
  bkCanvasShare(cv,"macera.png",`${e[1]} 🏅 ${h.cm||""} #MeFirst`);}
 /* gezinme: alt menü "Macera" → Macera köşem */
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest('#bnav [data-nv="fit"]');if(!b)return;e.stopPropagation();e.preventDefault();step=95;show();macRender();window.scrollTo({top:0});},true);
@@ -12589,13 +12589,13 @@ async function bkCoverShot(x,noImg){const W=720,cv=document.createElement("canva
 const MF_LOGO_SVG="<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><defs><linearGradient id=\"bg\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#FFD9C7\"/><stop offset=\".5\" stop-color=\"#F7B3D2\"/><stop offset=\"1\" stop-color=\"#C9B6F2\"/></linearGradient>\n<radialGradient id=\"gl\" cx=\".3\" cy=\".25\" r=\".8\"><stop offset=\"0\" stop-color=\"#fff\" stop-opacity=\".7\"/><stop offset=\".6\" stop-color=\"#fff\" stop-opacity=\"0\"/></radialGradient>\n<linearGradient id=\"h\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#FFFFFF\"/><stop offset=\"1\" stop-color=\"#FFE9F2\"/></linearGradient>\n<linearGradient id=\"pk\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#F48FB8\"/><stop offset=\"1\" stop-color=\"#B98AF0\"/></linearGradient></defs><rect width=\"512\" height=\"512\" fill=\"url(#bg)\"/><rect width=\"512\" height=\"512\" fill=\"url(#gl)\"/><g transform=\"rotate(-14 256 288)\"><path d=\"M256 432 L132 286 C96 244 100 168 160 146 C204 130 240 150 256 186 C272 150 308 130 352 146 C412 168 416 244 380 286 Z\" fill=\"url(#h)\"/></g><path transform=\"translate(404 110) scale(1.1)\" d=\"M0-20l4.9 13.5L18.4-2 4.9 2.9 0 16.4-4.9 2.9-18.4-2-4.9-6.5z\" fill=\"#fff\"/><circle cx=\"108\" cy=\"130\" r=\"7\" fill=\"#fff\" opacity=\".85\"/></svg>";
 let MF_LOGO_IMG=null;
 function mfLogoImg(){if(MF_LOGO_IMG)return Promise.resolve(MF_LOGO_IMG);return new Promise(r=>{const i=new Image();i.onload=()=>{MF_LOGO_IMG=i;r(i);};i.onerror=()=>r(null);i.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(MF_LOGO_SVG);});}
-async function mfBrand(g,cx,cy,sub){const im=await mfLogoImg();g.save();g.textAlign="left";g.textBaseline="alphabetic";
- g.font='64px "DM Serif Display",serif';const tw=g.measureText("Me First").width;g.font='800 25px "Nunito Sans",sans-serif';const sw=g.measureText(sub+" · mefirst.app").width;
- const L=104,gap=24,w=L+gap+Math.max(tw,sw)+64,h=140,x=cx-w/2,y=cy-h/2;
- g.shadowColor="rgba(58,30,20,.28)";g.shadowBlur=30;g.shadowOffsetY=10;g.fillStyle="rgba(255,255,255,.94)";g.beginPath();g.roundRect?g.roundRect(x,y,w,h,h/2):g.rect(x,y,w,h);g.fill();g.shadowColor="transparent";
- const lx=x+18,ly=cy-L/2;if(im){g.save();g.beginPath();g.roundRect?g.roundRect(lx,ly,L,L,26):g.rect(lx,ly,L,L);g.clip();g.drawImage(im,lx,ly,L,L);g.restore();}
- const tx=lx+L+gap;g.fillStyle="#3A1E14";g.font='64px "DM Serif Display",serif';g.fillText("Me First",tx,cy+8);
- g.fillStyle="#C2416E";g.font='800 25px "Nunito Sans",sans-serif';g.fillText(sub+" · mefirst.app",tx,cy+44);g.restore();}
+async function mfBrand(g,cx,cy,sub,light){const im=await mfLogoImg();g.save();g.textAlign="left";g.textBaseline="alphabetic";
+ g.font='56px "DM Serif Display",serif';const tw=g.measureText("Me First").width;g.font='800 23px "Nunito Sans",sans-serif';const sw=g.measureText(sub+" · mefirst.app").width;
+ const L=84,gap=20,w=L+gap+Math.max(tw,sw),x=cx-w/2,lx=x,ly=cy-L/2;
+ if(im){g.save();g.shadowColor="rgba(58,30,20,.35)";g.shadowBlur=18;g.shadowOffsetY=6;g.beginPath();g.roundRect?g.roundRect(lx,ly,L,L,22):g.rect(lx,ly,L,L);g.fillStyle="#fff";g.fill();g.shadowColor="transparent";g.clip();g.drawImage(im,lx,ly,L,L);g.restore();}
+ const tx=lx+L+gap;g.shadowColor=light?"rgba(0,0,0,.35)":"rgba(255,255,255,.6)";g.shadowBlur=light?8:6;
+ g.fillStyle=light?"#fff":"#3A1E14";g.font='56px "DM Serif Display",serif';g.fillText("Me First",tx,cy+6);
+ g.fillStyle=light?"rgba(255,255,255,.9)":"#C2416E";g.font='800 23px "Nunito Sans",sans-serif';g.fillText(sub+" · mefirst.app",tx,cy+38);g.restore();}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
