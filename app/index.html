@@ -6163,6 +6163,19 @@ html[data-mf="dusk"] .adm-x{background:rgba(255,255,255,.1)}
 .adm-id code{font-size:12px;word-break:break-all;background:rgba(0,0,0,.06);padding:8px 10px;border-radius:10px;user-select:all}
 .adm-id button{font:inherit;font-size:12.5px;font-weight:800;border:1.5px solid rgba(0,0,0,.15);background:transparent;border-radius:99px;padding:6px 14px;cursor:pointer;color:inherit}
 html[data-mf="dusk"] .adm-id code{background:rgba(255,255,255,.08)}
+
+.kto{position:relative;text-align:center;padding:20px 18px 16px;margin:0 0 14px;border-radius:24px;background:radial-gradient(80% 70% at 50% 0%,#FFE6C7,transparent 70%),linear-gradient(170deg,#FFF6EA,#FBEADB);border:1px solid #F0D7BC}
+.kto-e{font-size:40px;display:block;animation:ktoE 2.6s ease-in-out infinite}@keyframes ktoE{50%{transform:translateY(-5px) rotate(-5deg)}}
+.kto h3{font-family:var(--f-display);font-weight:400;font-size:24px;margin:6px 0 4px;color:#5A2A16}
+.kto p{margin:0 auto 12px;font-size:13.5px;color:#7A5A48;max-width:300px}
+.kto-s{list-style:none;display:flex;justify-content:center;gap:6px;margin:0;padding:0;flex-wrap:wrap}
+.kto-s li{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:#8C5A3C;background:#fff;border:1.5px solid #EED9C6;border-radius:99px;padding:5px 10px 5px 5px}
+.kto-s b{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:11px;background:#F3E3D2;color:#8C5A3C}
+.kto-s li.on{border-color:#C9822B;color:#A8492A}.kto-s li.on b{background:#C9822B;color:#fff}
+.kt-onb .kto-go{position:sticky;bottom:calc(96px + env(safe-area-inset-bottom,0px));z-index:5;box-shadow:0 14px 30px -12px rgba(122,51,34,.7)}
+.kto-go small{font-size:11px;font-weight:800;opacity:.85;margin-left:6px;background:rgba(255,255,255,.2);padding:2px 7px;border-radius:99px}
+html[data-mf="dusk"] .kto{background:linear-gradient(170deg,rgba(255,236,214,.08),rgba(201,130,43,.1));border-color:rgba(233,165,90,.25)}
+html[data-mf="dusk"] .kto h3{color:#F5E1CC}html[data-mf="dusk"] .kto p{color:#E0C8B4}html[data-mf="dusk"] .kto-s li{background:rgba(255,255,255,.06);border-color:rgba(233,165,90,.25);color:#E8CDB4}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -9551,7 +9564,7 @@ function kitapRender(){const K=kt();const P=document.getElementById("ktpanel");i
     const addFv=()=>{const i=document.getElementById("kt-fv"),v=i.value.trim();if(!v){i.focus();return;}if(!K.fav.some(x=>ktN(x)===ktN(v)))K.fav.push(v);const m=KT_BOOKS.find(b=>ktN(b[0])===ktN(v));if(m)m[2].forEach(g=>{if(!K.gen.includes(g)&&g!=="cocuk")K.gen.push(g);});save();kitapRender();};
     document.getElementById("kt-fva").onclick=addFv;document.getElementById("kt-fv").onkeydown=e=>{if(e.key==="Enter")addFv();};
     P.querySelectorAll("[data-kfx]").forEach(b=>b.onclick=()=>{K.fav.splice(+b.dataset.kfx,1);save();kitapRender();});
-    document.getElementById("kt-done").onclick=()=>{if(!K.gen.length&&!K.au.length&&!K.fav.length){P.querySelector(".ktchips").classList.add("shake");setTimeout(()=>P.querySelector(".ktchips")&&P.querySelector(".ktchips").classList.remove("shake"),500);return;}K.setup=true;save();kttab="oneri";kitapRender();window.scrollTo({top:0,behavior:"smooth"});};
+    document.getElementById("kt-done").onclick=()=>{if(K.setup&&!K.gen.length&&!K.au.length&&!K.fav.length){P.querySelector(".ktchips").classList.add("shake");setTimeout(()=>P.querySelector(".ktchips")&&P.querySelector(".ktchips").classList.remove("shake"),500);return;}K.setup=true;save();kttab="oneri";kitapRender();window.scrollTo({top:0,behavior:"smooth"});};
   }
   if(kttab==="oneri"){const R=ktRecs();const feat=R[0];const nw=R.filter(r=>r[0][4]&&r[1]>=2&&r!==feat);const disc=R.filter(r=>r!==feat&&!nw.slice(0,6).includes(r)&&!ktFollow(r[0][1])&&r[0][2].some(g=>K.gen.includes(g))).slice(0,6);const rest=R.slice(1).filter(r=>!nw.slice(0,6).includes(r)&&!disc.includes(r)).slice(0,8);const nm=(st.name||"").trim();
     const evB=myE.length?`<button type="button" class="ktalert" id="kt-toev"><span class="no-mi">✍️</span><span><strong>${esc(myE[0][1].filter(ktFollow)[0]||myE[0][1][0])} ${myE[0][2]?"ile imza günü":"imza gününe geliyor"}</strong><small>${myE[0][2]?ktWhen(myE[0][2])+" · "+myE[0][3]+" · ":"Kasım · tarih netleşince haber veririm · "}${esc(myE[0][4])}${myE[0][2]?", "+esc(myE[0][5]):""}</small></span><b>›</b></button>`:"";
@@ -13055,6 +13068,18 @@ window.addEventListener("hashchange",admCheck);admCheck();
 (function(){const h=document.querySelector(".kitap h2")||[...document.querySelectorAll("h2")].find(x=>/Kitap\s*köşem/.test(x.textContent));if(!h)return;let n=0,t=0;
  h.addEventListener("click",()=>{const now=Date.now();n=now-t<700?n+1:1;t=now;if(n>=7){n=0;try{navigator.vibrate&&navigator.vibrate(30);}catch(e){}admOpen();}});})();
 window.addEventListener("pageshow",()=>{try{admCheck();}catch(e){}});
+
+/* İlk kurulum: karşılama, adım göstergesi, yapışkan devam düğmesi */
+function ktOnbSteps(){const K=kt();return [K.gen.length>0,K.au.length>0,K.fav.length>0];}
+function ktOnb(){const P=document.getElementById("ktpanel");if(!P||kttab!=="zevk")return;const K=kt();if(K.setup){P.classList.remove("kt-onb");return;}
+ P.classList.add("kt-onb");const sr=P.querySelector(".ktsr");if(sr)sr.style.display="none";const tr=document.getElementById("kt-trh");if(tr)tr.style.display="none";
+ if(!P.querySelector(".kto")){const nm=(st.name||"").trim();const S=ktOnbSteps();
+  P.insertAdjacentHTML("afterbegin",`<div class="kto"><span class="kto-e no-mi">📚</span><h3>${nm?esc(nm)+", h":"H"}oş geldin kitap köşene!</h3><p>Üç küçük soruyla okur ruhunu tanıyayım, sonra raflarını sana göre dizeyim. İstediğini atlayabilirsin.</p>
+   <ol class="kto-s">${["Sevdiğin türler","Yazarların","Unutamadıkların"].map((l,i)=>`<li class="${S[i]?"on":""}"><b>${S[i]?"✓":i+1}</b>${l}</li>`).join("")}</ol></div>`);}
+ const d=document.getElementById("kt-done");if(d){d.classList.add("kto-go");const n=ktOnbSteps().filter(Boolean).length;d.innerHTML=n?`Hadi, raflara dalalım! 🍂 <small>${n}/3 hazır</small>`:"Şimdilik atla, önerilere geç 🍂";
+}
+ if(!P._onbW){P._onbW=1;const up=()=>setTimeout(()=>{if(kt().setup||kttab!=="zevk")return;const S=ktOnbSteps();P.querySelectorAll(".kto-s li").forEach((li,i)=>{li.classList.toggle("on",S[i]);li.querySelector("b").textContent=S[i]?"✓":i+1;});const d2=document.getElementById("kt-done");if(d2){const n=S.filter(Boolean).length;d2.innerHTML=n?`Hadi, raflara dalalım! 🍂 <small>${n}/3 hazır</small>`:"Şimdilik atla, önerilere geç 🍂";}},30);P.addEventListener("click",up);P.addEventListener("keydown",up);}}
+(function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{ktOnb();}catch(e){console.warn(e);}};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
