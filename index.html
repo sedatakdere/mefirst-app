@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#FBF6FA"><link rel="icon" type="image/png" href="/icons/favicon-48.png"><link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Allura&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap">
 <title>Me First · Önce sen</title>
-<meta name="description" content="Kadınlar ve anneler için kişisel yardımcın: ritüeller, kitaplar, döngü takibi, çocuklar ve ikiniz için her şey. Verilerin sadece senin telefonunda.">
-<meta property="og:title" content="Me First · Önce sen"><meta property="og:description" content="Kadınlar ve anneler için kişisel yardımcın. Verilerin sadece senin telefonunda."><meta property="og:image" content="https://mefirst.app/icons/og.png"><meta property="og:url" content="https://mefirst.app/"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Kadınlar ve anneler için kişisel yardımcın: ritüeller, kitaplar, döngü takibi, çocuklar ve ikiniz için her şey. Kişisel kayıtların sadece senin telefonunda.">
+<meta property="og:title" content="Me First · Önce sen"><meta property="og:description" content="Kadınlar ve anneler için kişisel yardımcın: Kitap köşem, Macera köşem, ritüeller ve daha fazlası."><meta property="og:image" content="https://mefirst.app/icons/og.png"><meta property="og:url" content="https://mefirst.app/"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image">
 <style>:root{--bg:#FBF6FA;--surface:#fff;--ink:#3A3550;--muted:#7D7592;--line:#EDE4F0;--pink:#F7B3D2;--pink-d:#E2689A;--lilac:#D9CBFA;--peach:#FFDCCB;--gold:#C9963A;--f-display:"DM Serif Display",Georgia,serif;--f-body:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -97,9 +97,88 @@ section{padding:56px 0 0}
 .vplay{position:absolute;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#C2578A;font-size:32px;cursor:pointer;box-shadow:0 14px 30px -10px rgba(0,0,0,.5)}
 .vplay[hidden]{display:none}
 @media (max-width:860px){.vwrap{grid-template-columns:1fr;text-align:center}.vtx p{margin-left:auto;margin-right:auto}.vtx .ctas{justify-content:center}}
+
+/* Macera köşem vitrini */
+#macera,#kitap{scroll-margin-top:80px}
+.mx{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;border-radius:32px;padding:42px;background:radial-gradient(70% 80% at 100% 0%,#FFD9B8,transparent 60%),radial-gradient(60% 70% at 0% 100%,#CDEBDF,transparent 60%),#FFF7EE;border:1px solid #F3E2CF}
+.mx-eb{color:#B2542C;border-color:#F3D3BF}
+.mx h2{font-size:clamp(36px,5vw,54px);margin:14px 0 12px}.mx h2 em{color:#C2542C}
+.mx-tx>p{color:#5A5370;font-size:17px;margin:0 0 22px;max-width:44ch}
+.mx-l{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mx-l div{background:rgba(255,255,255,.75);border:1px solid #F1E2D2;border-radius:18px;padding:13px 14px;display:flex;flex-direction:column;gap:3px}
+.mx-l b{font-size:15px}.mx-l span{font-size:13.5px;color:#5A5370;line-height:1.45}
+.mag{position:relative;justify-self:center;width:min(340px,100%);aspect-ratio:3/4;border-radius:26px;overflow:hidden;padding:20px 20px 0;color:#2E2420;background:linear-gradient(175deg,#FFE0B5 0%,#F9B98E 45%,#F3A27D 62%,#BFE3D6 100%);box-shadow:0 40px 70px -30px rgba(160,70,30,.55),0 0 0 8px #fff;transform:rotate(2deg);animation:magf 7s ease-in-out infinite}
+@keyframes magf{50%{transform:rotate(-1deg) translateY(-8px)}}
+.mag-top{display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:800;letter-spacing:.08em}
+.mag-city{background:#fff;border-radius:99px;padding:5px 10px;letter-spacing:0}
+.mag-t{font-family:var(--f-display);font-size:62px;line-height:.9;color:#fff;text-shadow:0 3px 0 rgba(160,60,20,.25);margin:14px 0 6px}
+.mag-t i{display:block;font-style:italic;font-size:40px;color:#7A2E14;text-align:right;margin-top:-6px;text-shadow:none}
+.mag-tag{display:inline-block;background:#2E2420;color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.12em;padding:4px 8px;margin-top:10px}
+.mag-h{font-family:var(--f-display);font-size:25px;line-height:1.1;margin:8px 0 4px;background:linear-gradient(transparent 62%,#FFE66B 62%);display:inline}
+.mag-s{font-size:12.5px;font-weight:800;margin:6px 0 10px}
+.mag-ch{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.mag-ch span{font-size:11.5px;font-weight:700;color:#fff;background:rgba(46,36,32,.72);border-radius:8px;padding:5px 9px}
+.mag-st{position:absolute;right:16px;top:52%;width:86px;height:86px;border-radius:50%;background:#FFD23F;display:grid;place-items:center;align-content:center;text-align:center;font-family:var(--f-display);font-size:34px;line-height:.9;transform:rotate(-12deg);box-shadow:0 8px 18px -8px rgba(0,0,0,.4);animation:magst 3.2s ease-in-out infinite;z-index:2}
+.mag-st small{font-family:var(--f-body);font-size:8.5px;font-weight:900;letter-spacing:.04em;margin-top:3px}
+@keyframes magst{50%{transform:rotate(-4deg) scale(1.06)}}
+.mag-mt{position:absolute;left:0;right:0;bottom:0;width:100%;height:30%}
+.mag-bc{position:absolute;right:16px;bottom:14px;width:58px;height:26px;background:repeating-linear-gradient(90deg,#2E2420 0 2px,#fff 2px 4px,#2E2420 4px 5px,#fff 5px 8px);border:4px solid #fff;z-index:2}
+
+/* Kitap köşem yenilikleri */
+.kn{border-radius:32px;padding:42px 0 34px;background:radial-gradient(60% 60% at 100% 0%,#FBE3C9,transparent 60%),linear-gradient(170deg,#FFF6EA,#FBEFE6);border:1px solid #F1E0CC;overflow:hidden}
+.kn-h{text-align:center;padding:0 24px;max-width:640px;margin:0 auto}
+.kn-eb{color:#A8492A;border-color:#F0D2BC}
+.kn h2{font-size:clamp(34px,5vw,50px);margin:14px 0 8px}.kn h2 em{color:#C2542C}
+.kn-h p{color:#6B5A50;margin:0 0 20px}
+.kn-moods{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:0 16px}
+.kn-m{font:inherit;font-size:14.5px;font-weight:800;color:#5A3A2C;background:#fff;border:1.5px solid #EED9C6;border-radius:16px;padding:9px 14px;cursor:pointer;transition:transform .15s,background .2s}
+.kn-m:hover{transform:translateY(-2px)}
+.kn-m[aria-selected="true"]{background:linear-gradient(135deg,#F6B183,#E9895A);color:#fff;border-color:transparent;box-shadow:0 10px 20px -12px rgba(200,90,40,.8)}
+.kn-row{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:24px;padding:22px max(24px,calc(50% - 520px)) 26px;scrollbar-width:none}
+.kn-row::-webkit-scrollbar{display:none}
+.kb{flex:0 0 150px;scroll-snap-align:start;display:flex;flex-direction:column;gap:8px;animation:kbin .45s cubic-bezier(.2,1.3,.4,1) both;animation-delay:calc(var(--i)*55ms)}
+@keyframes kbin{from{opacity:0;transform:translateY(14px) rotate(-3deg)}}
+.kc{position:relative;aspect-ratio:2/3;border-radius:4px 10px 10px 4px;padding:14px 12px;display:flex;flex-direction:column;justify-content:space-between;color:#FFF3DE;background:linear-gradient(160deg,var(--c1),var(--c2));box-shadow:inset 6px 0 0 rgba(0,0,0,.14),0 16px 26px -14px rgba(90,40,20,.55);overflow:hidden}
+.kc::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.18),transparent 40%)}
+.kc b{font-family:var(--f-display);font-weight:400;font-size:19px;line-height:1.1;hyphens:auto}
+.kc small{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
+.kb>span{font-size:13px;font-weight:800;line-height:1.25;color:#3A2A22}.kb>em{font-size:12px;font-style:normal;color:#8A6E5E;margin-top:-6px}
+.kn-g{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding:6px 24px 0}
+.kn-c{position:relative;border-radius:24px;padding:22px;background:#fff;border:1px solid #F1E2D2;overflow:hidden;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end}
+.kn-c h3{font-size:26px;margin:0 0 6px}.kn-c p{margin:0;color:#5A5370;font-size:14.5px}
+.kn-pol{background:linear-gradient(170deg,#FDF1E4,#fff 70%)}
+.kn-rope{position:absolute;left:-10px;right:-10px;top:30px;height:40px;border-top:2px solid #B07A4A;border-radius:50%}
+.kn-pol{padding-top:200px}
+.pol{position:absolute;top:30px;width:86px;background:#FBF7EE;padding:6px 6px 8px;box-shadow:0 10px 18px -8px rgba(0,0,0,.35);transform-origin:50% 0;animation:sway 4s ease-in-out infinite}
+.pol i{display:block;aspect-ratio:1;background:linear-gradient(150deg,#F2B48A,#B65B3A)}
+.pol span{display:block;font-size:9.5px;line-height:1.25;margin-top:5px;color:#4A3A30;font-weight:700}
+.pol::before{content:"";position:absolute;top:-10px;left:42px;width:8px;height:16px;background:#C08A55;border-radius:2px}
+.p1{left:8%;transform:rotate(-6deg)}.p2{left:39%;top:36px;animation-delay:-1.3s}.p2 i{background:linear-gradient(150deg,#C7D59A,#5E7A3A)}.p3{left:70%;transform:rotate(5deg);animation-delay:-2.4s}.p3 i{background:linear-gradient(150deg,#C9B4F0,#7A5AB8)}
+@keyframes sway{0%,100%{rotate:-3deg}50%{rotate:3deg}}
+.kn-ozg{background:linear-gradient(160deg,#2B2622,#3A322C);color:#F3E9DD;border-color:transparent}
+.kn-ozg h3{color:#F3E9DD;font-size:30px}.kn-ozg p{color:#E4D6C6}
+.kn-ozg small{font-size:11px;font-weight:800;letter-spacing:.1em;opacity:.75;margin-bottom:4px}
+.kn-rose{position:absolute;top:22px;left:22px;font-size:40px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.4))}
+.kn-st{background:linear-gradient(170deg,#FFE9D2,#FBD9C5)}
+.st-ph{position:absolute;top:18px;right:22px;width:118px;aspect-ratio:9/16;border-radius:16px;background:linear-gradient(180deg,#FFE3C2,#F7D7C4);box-shadow:0 14px 26px -12px rgba(120,50,20,.5);border:4px solid #fff;padding:16px 10px 8px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;transform:rotate(4deg)}
+.st-pol{background:#FBF7EE;width:88px;padding:5px 5px 6px;box-shadow:0 6px 12px -6px rgba(0,0,0,.4);transform:rotate(-3deg)}
+.st-pol i{display:block;aspect-ratio:1;background:linear-gradient(150deg,#E7A07A,#9C4A30)}
+.st-pol b{display:block;font-size:8px;line-height:1.2;margin-top:4px;color:#2E2420}
+.st-pol small{display:block;font-size:6px;color:#D99A2B;font-weight:800}
+.st-br{display:flex;align-items:center;gap:4px;font-family:var(--f-display);font-size:10px;line-height:1}
+.st-br img{width:16px;height:16px;border-radius:4px}.st-br small{font-family:var(--f-body);font-size:5.5px;color:#B0457A;font-weight:800}
+.kn-st{padding-right:160px}
+.kn-ev{background:radial-gradient(80% 70% at 100% 0%,#E9A55A,transparent 60%),linear-gradient(160deg,#C9822B,#A8492A 60%,#7A3322);color:#FFF3E6;border-color:transparent}
+.kn-ev h3{color:#fff}.kn-ev p{color:#FFE9D6}
+.kn-ex{position:absolute;top:20px;right:20px;width:86px;height:86px;border-radius:50%;border:2px dashed rgba(255,243,222,.6);display:grid;place-items:center;font-size:10px;font-weight:900;letter-spacing:.14em;color:#FFE2B0;animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:900px){.mx{grid-template-columns:1fr;padding:30px 22px}.mag{order:-1;width:min(310px,92%);aspect-ratio:auto;height:430px}}
+@media (max-width:420px){.mag{padding:16px 16px 0}.mag-t{font-size:52px}.mag-t i{font-size:34px}.mag-h{font-size:22px}.mag-st{width:76px;height:76px;font-size:30px;top:auto;bottom:70px}}
+@media (max-width:640px){.mx-l{grid-template-columns:1fr}.kn-g{grid-template-columns:1fr;padding:6px 16px 0}.kn{padding-top:32px}.kn-st{padding-right:22px;padding-top:240px}.st-ph{right:auto;left:50%;margin-left:-59px}.kb{flex-basis:132px}}
+@media (prefers-reduced-motion:reduce){.mag,.mag-st,.pol,.kn-ex,.kb{animation:none}}
 </style></head>
 <body>
-<header class="nav"><div class="wrap"><a class="logo" href="/" aria-label="Me First ana sayfa"><img src="/icons/icon-192.png" alt=""><span class="wm"><i>Me</i> First</span></a><nav><a class="hide-s" href="/#ozellikler">Özellikler</a><a class="hide-s" href="/#gizlilik">Gizlilik</a><a class="btn sm" href="/app/">Dene</a></nav></div></header>
+<header class="nav"><div class="wrap"><a class="logo" href="/" aria-label="Me First ana sayfa"><img src="/icons/icon-192.png" alt=""><span class="wm"><i>Me</i> First</span></a><nav><a class="hide-s" href="/#macera">Macera</a><a class="hide-s" href="/#kitap">Kitap</a><a class="hide-s" href="/#ozellikler">Özellikler</a><a class="hide-s" href="/#gizlilik">Gizlilik</a><a class="btn sm" href="/app/">Dene</a></nav></div></header>
 <main>
 <section class="hero"><div class="wrap">
  <div>
@@ -108,17 +187,55 @@ section{padding:56px 0 0}
   <p class="l">Herkese yetişirken kendini unutma. Me First her sabah sana özel bir öneri, bir ritüel ve kendine ayıracağın küçük bir an getirir.</p>
   <div class="ctas"><a class="btn" href="/app/">Ücretsiz dene ✨</a><a class="ghost" href="#video">▶ 1 dakikada izle</a><button type="button" class="ghost" id="vshare">💌 Arkadaşına gönder</button></div>
   <div class="soon"><span>App Store</span><span>Google Play</span><small>Mağazalarda çok yakında. Şimdilik tarayıcından deneyebilir, ana ekranına ekleyebilirsin.</small></div>
-  <div class="trust"><span>🔒 Hesap açmak yok</span><span>📱 Veriler sadece telefonunda</span><span>🇹🇷 Türkçe</span></div>
+  <div class="trust"><span>🔒 Hesap açmak yok</span><span>📱 Kişisel kayıtların telefonunda</span><span>🇹🇷 Türkçe</span></div>
  </div>
  <div class="vbox" id="video"><video id="mfv" src="/video/mefirst-reklam-60.mp4" poster="/video/poster-60.jpg" playsinline muted loop preload="metadata"></video>
   <button type="button" class="vsnd" id="vsnd" aria-label="Sesi aç">🔇 Sesi aç</button><button type="button" class="vplay" id="vplay" aria-label="Oynat">▶</button></div>
 </div></section>
 <section id="ozellikler"><div class="wrap">
- <div class="sh"><h2>Günün her anında yanında</h2><p>Sabah ritüelinden akşam huzuruna, çocukların çantasından ikinizin anılarına, sevdiğin yazarın imza gününe.</p></div>
- <div class="grid"><article class="feat nw"><span class="nwb">Yeni</span><span class="fe">📚</span><h3>Kitap köşem</h3><p>Zevkine göre yeni çıkan kitaplar; takip ettiğin yazarın imza günü ekranına düşer. İstek rafın, kütüphanen, emanet defterin ve barkodla kitap ekleme.</p></article><article class="feat"><span class="fe">💞</span><h3>Biz ikimiz</h3><p>Şifreli, sadece sana ait bir köşe: döngü takvimi, akşam planları, ona hazır mesajlar, anı kavanozu ve ikiniz için oyunlar.</p></article><article class="feat"><span class="fe">🏡</span><h3>Ev & düzen</h3><p>Görsel market sepetin, “bu akşam ne pişsin?” çarkı, fatura hatırlatıcıları ve ailece paylaşılan ev işleri.</p></article><article class="feat"><span class="fe">🌿</span><h3>Kendime iyi bak</h3><p>Su perisi Damla, sağlıklı tabağın, birlikte yapalım egzersizleri ve 30 dakikada çiçek açan haftalık enerji bahçen.</p></article><article class="feat"><span class="fe">🎒</span><h3>Çocuklarım</h3><p>Sınıfına göre ders programı, gülen okul çantası, ödev yıldız tablosu ve takvim. Okul sabahları artık daha sakin.</p></article><article class="feat"><span class="fe">🧘</span><h3>Manifest Me</h3><p>3·6·9 niyet yolculuğu, şükran, rehberli nefes, ay ritüelleri ve gelecekteki kendine mühürlü mektuplar.</p></article><article class="feat"><span class="fe">🐾</span><h3>Patili dostum</h3><p>Acıkınca seni çağıran minik dostun: mama saatleri, aşı karnesi ve her gün dolan mutluluk kalbi.</p></article><article class="feat"><span class="fe">☕</span><h3>Keyif köşem</h3><p>Kahve falı, günlük burç notların, ailenin burçları, Kelime yolculuğu ve küçük oyunlar.</p></article></div>
+ <div class="sh"><h2>Günün her anında yanında</h2><p>Sabah ritüelinden akşam huzuruna, çocukların çantasından ikinizin anılarına, sevdiğin yazarın imza gününden şehrindeki ilk koşuna.</p></div>
+ <div class="grid"><article class="feat nw"><span class="nwb">Yeni</span><span class="fe">🪂</span><h3>Macera köşem</h3><p>Şehrindeki koşular, bisiklet turları, doğa yürüyüşleri ve patili buluşmalar. Hazırlık rehberi, çanta listesi ve hatıra polaroidin.</p></article><article class="feat nw"><span class="nwb">Yenilendi</span><span class="fe">📚</span><h3>Kitap köşem</h3><p>Ruh haline göre kitaplar, okurların polaroid ipi, şehrindeki imza günleri ve story kartları. Rafların, emanet defterin ve barkodla kitap ekleme.</p></article><article class="feat"><span class="fe">💞</span><h3>Biz ikimiz</h3><p>Şifreli, sadece sana ait bir köşe: döngü takvimi, akşam planları, ona hazır mesajlar, anı kavanozu ve ikiniz için oyunlar.</p></article><article class="feat"><span class="fe">🏡</span><h3>Ev & düzen</h3><p>Görsel market sepetin, “bu akşam ne pişsin?” çarkı, fatura hatırlatıcıları ve ailece paylaşılan ev işleri.</p></article><article class="feat"><span class="fe">🌿</span><h3>Kendime iyi bak</h3><p>Su perisi Damla, sağlıklı tabağın, birlikte yapalım egzersizleri ve 30 dakikada çiçek açan haftalık enerji bahçen.</p></article><article class="feat"><span class="fe">🎒</span><h3>Çocuklarım</h3><p>Sınıfına göre ders programı, gülen okul çantası, ödev yıldız tablosu ve takvim. Okul sabahları artık daha sakin.</p></article><article class="feat"><span class="fe">🧘</span><h3>Manifest Me</h3><p>3·6·9 niyet yolculuğu, şükran, rehberli nefes, ay ritüelleri ve gelecekteki kendine mühürlü mektuplar.</p></article><article class="feat"><span class="fe">🐾</span><h3>Patili dostum</h3><p>Acıkınca seni çağıran minik dostun: mama saatleri, aşı karnesi ve her gün dolan mutluluk kalbi.</p></article><article class="feat"><span class="fe">☕</span><h3>Keyif köşem</h3><p>Kahve falı, günlük burç notların, ailenin burçları, Kelime yolculuğu ve küçük oyunlar.</p></article></div>
 </div></section>
 
-<section><div class="wrap"><div class="sp kt"><span class="kleaves" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="t">🍂 Yeni · Kitap köşem</span><h3>Kitap okuyan kadının<br><em>en güzel köşesi</em></h3><p>Bir kitap uygulaması değil; kitap seven bir kadının hayatının içinde, evinin, çocuklarının ve ritüellerinin yanında. Bunların hepsi tek yerde, sadece Me First'te:</p>
+<section id="macera"><div class="wrap"><div class="mx">
+ <div class="mx-tx">
+  <span class="eyebrow mx-eb">🪂 Yeni · Macera köşem</span>
+  <h2>Kendine bir <em>macera</em> borçlusun</h2>
+  <p>Me First şehrindeki etkinlikleri senin için takip eder: ilk 5K'n, bir bisiklet turu, hafta sonu doğa yürüyüşü ya da patili dostunla bir buluşma. Bir dergi gibi açılır, her sayıda sana en yakın macera kapakta.</p>
+  <div class="mx-l">
+   <div><b>📍 Şehrine göre radar</b><span>Konumuna en yakın etkinlik kapakta, kaç km uzakta olduğu yanında.</span></div>
+   <div><b>🎒 Çantanda ne olmalı?</b><span>Koşu, yürüyüş, bisiklet için hazır kontrol listeleri ve hazırlık rehberleri.</span></div>
+   <div><b>🏃‍♀️ Her branş ayrı</b><span>Koşu, bisiklet, doğa yürüyüşü, yoga, yüzme, patili etkinlikler.</span></div>
+   <div><b>📸 Hatıra polaroidi</b><span>"Bir macera daha tamam!" Story'ne hazır, dağ manzaralı kartın.</span></div>
+  </div>
+ </div>
+ <div class="mag" aria-hidden="true">
+  <div class="mag-top"><span class="mag-city">📍 Ankara ▾</span><span>SAYI 11 · KASIM 2026</span></div>
+  <div class="mag-t">MACERA<i>köşem</i></div>
+  <span class="mag-tag">ŞEHRİNDE</span>
+  <div class="mag-h">Sabah koşusu,<br>şehrin kalbinde</div>
+  <div class="mag-s">3 gün kaldı · 2,4 km uzakta</div>
+  <div class="mag-ch"><span>İlk 5K'na 4 haftada hazırlan →</span><span>Çantanda ne olmalı? →</span></div>
+  <span class="mag-st">3<small>ETKİNLİK<br>ŞEHRİNDE!</small></span>
+  <svg class="mag-mt" viewBox="0 0 400 160" preserveAspectRatio="none"><path d="M0 120 L70 50 L120 95 L190 25 L260 100 L320 55 L400 110 V160 H0Z" fill="#7FB8A4"/><path d="M0 140 L90 80 L150 125 L230 70 L300 130 L360 95 L400 120 V160 H0Z" fill="#3E8C7A"/></svg>
+  <span class="mag-bc"></span>
+ </div>
+</div></div></section>
+
+<section id="kitap"><div class="wrap"><div class="kn">
+ <div class="kn-h"><span class="eyebrow kn-eb">📚 Kitap köşem · yepyeni</span><h2>Bugün kitap <em>ne yapsın</em> sana?</h2><p>Bir his seç, kitaplar yan yana dizilsin. Uygulamadaki gibi; dene bakalım 👇</p></div>
+ <div class="kn-moods" role="tablist" aria-label="Ruh hali"></div>
+ <div class="kn-row" id="kn-row" aria-live="polite"></div>
+ <div class="kn-g">
+  <div class="kn-c kn-pol"><div class="kn-rope"></div><div class="pol p1"><i></i><span>“Her okuyuşta aynı yerde ağlıyorum.”</span></div><div class="pol p2"><i></i><span>“Bir oturuşta bitti 🔥”</span></div><div class="pol p3"><i></i><span>“Altını çizmekten kalem bitti”</span></div>
+   <h3>Okurlar bunu konuşuyor</h3><p>Okuduğun kitabı polaroide dönüştür, istersen Me First okurlarıyla aynı ipe as. Beğen, yanıtla, altını çizdiğin cümleleri paylaş.</p></div>
+  <div class="kn-c kn-ozg"><span class="kn-rose">🌹</span><small>BUGÜN · 10 KASIM</small><h3>Saygı ve özlemle</h3><p>Özel günlerde o güne özel kitap rafı: 10 Kasım, 29 Ekim, 8 Mart, Anneler Günü, 23 Nisan, Öğretmenler Günü…</p></div>
+  <div class="kn-c kn-st"><div class="st-ph"><div class="st-pol"><i></i><b>“Kalbim bu kitapta kaldı.”</b><small>Kürk Mantolu Madonna ★★★★★</small></div><div class="st-br"><img src="/icons/icon-192.png" alt=""><span>Me First<br><small>Kitap köşem · mefirst.app</small></span></div></div>
+   <h3>Story'ne hazır</h3><p>Polaroidini ya da altını çizdiğin bir cümleyi tek dokunuşla Instagram story boyutunda paylaş.</p></div>
+  <div class="kn-c kn-ev"><span class="kn-ex">EX LIBRIS</span><h3>Şehrinde imza günü</h3><p>Bu haftanın imza günleri ve kitap fuarları. Şehrindekiler rozetle öne çıkar, sevdiğin yazar gelince ekranına düşer.</p></div>
+ </div>
+</div></div></section>
+<section><div class="wrap"><div class="sp kt"><span class="kleaves" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="t">🍂 Kitap köşem · sadece Me First'te</span><h3>Kitap okuyan kadının<br><em>en güzel köşesi</em></h3><p>Bir kitap uygulaması değil; kitap seven bir kadının hayatının içinde, evinin, çocuklarının ve ritüellerinin yanında. Bunların hepsi tek yerde, sadece Me First'te:</p>
 <div class="kx">
  <div class="kxi"><b>📒 Emanet defteri</b><span>Kime hangi kitabı verdin, kimden ne aldın, kaç gündür orada. Tek dokunuşla tatlı bir WhatsApp hatırlatması: “Bitirince geri alabilir miyim?” 😊</span></div>
  <div class="kxi"><b>💌 Ruh Eşime Gönder</b><span>“Keşke benim olsa” dediğin kitaplar istek rafında. Doğum günü yaklaşınca eşine tek dokunuşla ipucu gider; hediye derdi biter.</span></div>
@@ -136,8 +253,9 @@ section{padding:56px 0 0}
 <section id="gizlilik"><div class="wrap"><div class="priv">
  <div class="lock">🔐</div>
  <div><h2>Gizliliğin önce gelir</h2>
- <ul><li><b>Hesap yok, üyelik yok.</b> Adın, döngün, notların ve fotoğrafların sadece senin telefonunda saklanır.</li>
- <li><b>Hiçbir sunucuya gönderilmez</b>, satılmaz, reklam için kullanılmaz.</li>
+ <ul><li><b>Hesap yok, üyelik yok.</b> Adın, döngün, notların, ailen ve fotoğrafların sadece senin telefonunda saklanır.</li>
+ <li><b>Paylaşmak senin seçimin.</b> Kitap polaroidini okurlarla paylaşmayı seçersen yalnızca o paylaşım gider; takma adla, e-posta ya da telefon istemeden.</li>
+ <li><b>Satılmaz</b>, reklam için kullanılmaz, takip aracı yok.</li>
  <li><b>Biz ikimiz</b> bölümü ayrıca şifreyle korunur.</li></ul>
  <p style="margin:12px 0 0"><a href="/gizlilik/">Gizlilik politikasının tamamı →</a></p></div>
 </div></div></section>
@@ -156,4 +274,21 @@ v.addEventListener("play",function(){p.hidden=true;});p.onclick=function(){play(
 v.addEventListener("click",function(){if(v.paused)play();else v.pause();});
 s.onclick=function(e){e.stopPropagation();v.muted=!v.muted;if(!v.muted){v.currentTime=0;play();}s.textContent=v.muted?"🔇 Sesi aç":"🔊 Sesi kapat";};
 sh.onclick=function(){var u="https://mefirst.app/#video",t="Bak ne buldum 😍 Me First: kadınlar ve anneler için kişisel yardımcı. 1 dakikalık videoyu izle:";if(navigator.share){navigator.share({title:"Me First",text:t,url:u}).catch(function(){});}else{window.open("https://wa.me/?text="+encodeURIComponent(t+" "+u),"_blank","noopener");}};})();</script>
+<script>(function(){var M=[["agla","😭","Ağlatsın",[["Kürk Mantolu Madonna","Sabahattin Ali"],["Şeker Portakalı","J. M. de Vasconcelos"],["Uçurtma Avcısı","Khaled Hosseini"],["Bin Muhteşem Güneş","Khaled Hosseini"],["Yaprak Dökümü","Reşat Nuri Güntekin"],["Senden Önce Ben","Jojo Moyes"],["Masumiyet Müzesi","Orhan Pamuk"],["Fareler ve İnsanlar","John Steinbeck"]]],
+["gul","😂","Güldürsün",[["Saatleri Ayarlama Enstitüsü","A. Hamdi Tanpınar"],["Ove Adında Bir Adam","Fredrik Backman"],["Tutunamayanlar","Oğuz Atay"],["Tante Rosa","Sevgi Soysal"],["Hayvan Çiftliği","George Orwell"],["Matilda","Roald Dahl"],["Bir Gün","David Nicholls"]]],
+["ger","😱","Gersin",[["Sessiz Hasta","Alex Michaelides"],["Gizli Tarih","Donna Tartt"],["Ve Sonra Hiç Kalmadı","Agatha Christie"],["Sultanı Öldürmek","Ahmet Ümit"],["Benim Adım Kırmızı","Orhan Pamuk"],["Ejderha Dövmeli Kız","Stieg Larsson"],["Anayurt Oteli","Yusuf Atılgan"]]],
+["ask","💘","Aşık etsin",[["Kolera Günlerinde Aşk","G. García Márquez"],["Beyaz Geceler","Fyodor Dostoyevski"],["Çalıkuşu","Reşat Nuri Güntekin"],["Gurur ve Önyargı","Jane Austen"],["Jane Eyre","Charlotte Brontë"],["Aşk-ı Memnu","Halit Ziya Uşaklıgil"],["Normal İnsanlar","Sally Rooney"],["Üvercinka","Cemal Süreya"]]],
+["iyi","🫖","İyi gelsin",[["Gece Yarısı Kütüphanesi","Matt Haig"],["Dört Bin Hafta","Oliver Burkeman"],["İnsanın Anlam Arayışı","Viktor E. Frankl"],["Kurtlarla Koşan Kadınlar","C. Pinkola Estés"],["Küçük Prens","A. de Saint-Exupéry"],["Kendine Ait Bir Oda","Virginia Woolf"],["Simyacı","Paulo Coelho"]]],
+["kac","✈️","Alıp götürsün",[["Yüzyıllık Yalnızlık","G. García Márquez"],["Ben, Kirke","Madeline Miller"],["Puslu Kıtalar Atlası","İhsan Oktay Anar"],["Ruhlar Evi","Isabel Allende"],["Momo","Michael Ende"],["Rüzgar Adımı Biliyor","Isabel Allende"],["Martin Eden","Jack London"]]]];
+var C=[["#B5532D","#E9A55A"],["#6B7A3A","#C8B45A"],["#8C3B2E","#D9824A"],["#4F5D3A","#B98A3C"],["#9A4A2C","#F0C27A"],["#5C3A2E","#C47A4C"],["#3E4E6B","#8FA7CF"],["#7A2E4A","#E58AA6"]];
+var mb=document.querySelector(".kn-moods"),row=document.getElementById("kn-row");if(!mb||!row)return;
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+function hh(t){var h=0;for(var i=0;i<t.length;i++)h=(h*31+t.charCodeAt(i))>>>0;return h;}
+function show(id){M.forEach(function(m){var b=mb.querySelector('[data-m="'+m[0]+'"]');b.setAttribute("aria-selected",m[0]===id?"true":"false");});
+ var m=M.filter(function(x){return x[0]===id;})[0];row.innerHTML=m[3].map(function(b,i){var c=C[hh(b[0])%C.length];return '<div class="kb" style="--i:'+i+'"><div class="kc" style="--c1:'+c[0]+';--c2:'+c[1]+'"><b lang="tr">'+esc(b[0])+'</b><small>'+esc(b[1])+'</small></div><span>'+esc(b[0])+'</span><em>'+esc(b[1])+'</em></div>';}).join("");row.scrollLeft=0;}
+mb.innerHTML=M.map(function(m){return '<button type="button" class="kn-m" role="tab" data-m="'+m[0]+'">'+m[1]+' '+m[2]+'</button>';}).join("");
+mb.addEventListener("click",function(e){var b=e.target.closest("[data-m]");if(b){show(b.dataset.m);auto=false;}});
+var k=0,auto=true;show(M[0][0]);
+if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver" in window){var t=null;new IntersectionObserver(function(es){es.forEach(function(x){clearInterval(t);if(x.isIntersecting)t=setInterval(function(){if(!auto)return clearInterval(t);k=(k+1)%M.length;show(M[k][0]);},3600);});},{threshold:.5}).observe(row);}
+})();</script>
 </body></html>
