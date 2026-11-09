@@ -6000,6 +6000,10 @@ html[data-mf="dusk"] .ktsr-i input{color:#F5E6D8}
 html[data-mf="dusk"] .ktsr-i input::placeholder{color:rgba(245,230,216,.5)}
 html[data-mf="dusk"] .ktsr-i button{background:rgba(233,165,90,.15);color:#E9A55A}
 html[data-mf="dusk"] .ktsr-r{background:#2A211F;box-shadow:0 10px 26px rgba(0,0,0,.4)}
+
+.ktsh-tr>.ktshelf{min-width:0;max-width:100%;overflow:hidden}
+.wsh .ktwood{flex-wrap:nowrap;overflow:hidden}
+.wsh-more{align-self:flex-end;font-size:13px;font-weight:900;color:#B0457A;background:#fff;border:1.5px dashed #E8A9BE;border-radius:10px;padding:6px 8px;margin-left:4px}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -9398,7 +9402,7 @@ function kitapRender(){const K=kt();const P=document.getElementById("ktpanel");i
       ${nw.length?`<div class="kthead"><span>Fırından yeni çıktı 🥐</span><small>Ekim 2026</small></div><div class="ktrow">${nw.slice(0,6).map(r=>ktCard(r)).join("")}</div>`:""}
       <div id="kt-live"></div>
       ${disc.length?`<div class="kthead"><span>Yeni bir yazarla tanış 🌱</span></div><p class="ktfine ktsub">Henüz takip etmiyorsun ama tam senin tarzın</p><div class="ktrow">${disc.map(r=>ktCard([r[0],r[1],"Tarzın: "+(KT_GEN.find(g=>r[0][2].includes(g[0])&&K.gen.includes(g[0]))||[0,"sana göre"])[1]+" 🌱"])).join("")}</div>`:""}
-      <div class="kthead"><span>Battaniyeye sarılıp okunacaklar 🧣</span></div><div class="ktlist">${rest.map(r=>ktCard(r)).join("")}</div>
+      <div class="kthead"><span>Battaniyeye sarılıp okunacaklar 🧣</span></div><div class="ktrow">${rest.slice().sort((a,b)=>(ktFollow(a[0][1])?1:0)-(ktFollow(b[0][1])?1:0)).slice(0,6).map(r=>ktCard(r)).join("")}</div>
       <p class="ktfine c">Yeni çıkanları ve imza günlerini ben takip ediyorum, sen sadece oku 😉 Zevkin değişti mi? <a href="#" id="kt-tz">Okur ruhum ✨</a></p>`;
     const te=document.getElementById("kt-toev");if(te)te.onclick=()=>{kttab="etk";kitapRender();};
     document.getElementById("kt-tz").onclick=e=>{e.preventDefault();kttab="zevk";kitapRender();};
@@ -10101,7 +10105,7 @@ let ktShelfI=0;
 function ktShelves(){const P=document.getElementById("ktpanel");if(!P||kttab!=="raf")return;const sh=P.querySelector(".ktshelf");if(!sh||sh.closest(".ktshv"))return;const K=kt();const W2=K.shelf.filter(x=>x.s==="istek");
   const wish=document.createElement("div");wish.className="ktshelf wsh";
   wish.innerHTML=`<div class="ktshelf-t"><strong>${W2.length?`İstek rafımda ${W2.length} kitap 💝`:"İstek rafım 💝"}</strong><span class="wsh-hint">${W2.length?"Kitaba dokun, fiyatını gör":""}</span></div>
-    <div class="ktwood">${W2.length?W2.map(x=>ktSpine(x,1)).join(""):'<span class="ktempty">Keşke dediğin kitaplar burada sıralanacak 💝</span>'}<span class="ktplant no-mi">🎀</span></div><div class="ktplank wpl"></div>
+    ${W2.length?(()=>{const R=[];for(let i=0;i<W2.length&&R.length<3;i+=8)R.push(W2.slice(i,i+8));const more=W2.length-R.flat().length;return R.map((r,k)=>`<div class="ktwood">${r.map(x=>ktSpine(x,1)).join("")}${k===R.length-1?(more>0?`<span class="wsh-more">+${more}</span>`:r.length<8?'<span class="ktplant no-mi">🎀</span>':""):""}</div><div class="ktplank wpl"></div>`).join("");})():'<div class="ktwood"><span class="ktempty">Keşke dediğin kitaplar burada sıralanacak 💝</span><span class="ktplant no-mi">🎀</span></div><div class="ktplank wpl"></div>'}
     ${W2.length?`<button type="button" class="pl-add wsh-go" id="kt-hint2">💌 Ruh Eşime Gönder</button>`:`<small class="ktfine">Kitap kartlarındaki 🤍 Keşke ile ekle</small>`}`;
   const wrap=document.createElement("div");wrap.className="ktshv";const tr=document.createElement("div");tr.className="ktsh-tr";sh.replaceWith(wrap);tr.append(sh,wish);wrap.append(tr);
   const dots=document.createElement("div");dots.className="ktsh-dots";dots.innerHTML='<button type="button" aria-label="Rafım"><i></i>Rafım</button><button type="button" aria-label="İstek rafım"><i></i>İstek rafım</button>';wrap.append(dots);
