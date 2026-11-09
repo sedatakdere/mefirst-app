@@ -6176,6 +6176,8 @@ html[data-mf="dusk"] .adm-id code{background:rgba(255,255,255,.08)}
 .kto-go small{font-size:11px;font-weight:800;opacity:.85;margin-left:6px;background:rgba(255,255,255,.2);padding:2px 7px;border-radius:99px}
 html[data-mf="dusk"] .kto{background:linear-gradient(170deg,rgba(255,236,214,.08),rgba(201,130,43,.1));border-color:rgba(233,165,90,.25)}
 html[data-mf="dusk"] .kto h3{color:#F5E1CC}html[data-mf="dusk"] .kto p{color:#E0C8B4}html[data-mf="dusk"] .kto-s li{background:rgba(255,255,255,.06);border-color:rgba(233,165,90,.25);color:#E8CDB4}
+
+.bi-en{font-style:italic;opacity:.85}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -12051,7 +12053,7 @@ const libBookOpen0=libBookOpen;libBookOpen=function(i){bookOpen(i);};
 
 /* v0.17.1 kitap bilgisi: Google Books (önbellekli) + yerel katalog */
 function bkInfoAll(){try{return JSON.parse(localStorage.getItem("mf-bkinfo")||"{}");}catch(e){return {};}}
-function bkInfoGet(x){const A=bkInfoAll(),r=A[bkKey(x)];if(!r)return null;if(r.v!==3)return null;if(r.part&&!_bkPend[bkKey(x)])return null;if((r.none||r.thin)&&Date.now()-r.at>(r.st&&r.st.gb!==200?18e5:864e5))return null;return r;}
+function bkInfoGet(x){const A=bkInfoAll(),r=A[bkKey(x)];if(!r)return null;if(r.v!==4)return null;if(r.part&&!_bkPend[bkKey(x)])return null;if((r.none||r.thin)&&Date.now()-r.at>(r.st&&r.st.gb!==200?18e5:864e5))return null;return r;}
 const _bkPend={};
 function bkInfoFetch(x,onStep){const k=bkKey(x);if(_bkPend[k]){if(onStep)(_bkPend[k].steps=_bkPend[k].steps||[]).push(onStep);return _bkPend[k];}if(!navigator.onLine)return Promise.resolve(null);
  const tn=ktN(x.t),an=ktN(x.a||""),sur=an.split(" ").pop()||"";const mt=v=>{const q=ktN(v.title||"");return q===tn||(q.includes(tn)&&tn.length>3)||(tn.includes(q)&&q.length>3);};
@@ -12061,13 +12063,14 @@ function bkInfoFetch(x,onStep){const k=bkKey(x);if(_bkPend[k]){if(onStep)(_bkPen
  const gb=q=>tmoR(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=20&printType=books${window.GB_KEY?"&key="+GB_KEY:""}`,"gb").then(j=>(j&&j.items||[]).map(i=>i.volumeInfo||{}));
  const wiki=async(q,check)=>{const sr=await tmo(`https://tr.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(q)}&srlimit=3&format=json&origin=*`);const hits=(sr&&sr.query&&sr.query.search)||[];
   const S=await Promise.all(hits.map(h=>tmo(`https://tr.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(h.title.replace(/ /g,"_"))}`)));return S.find(sm=>sm&&sm.extract&&sm.type!=="disambiguation"&&check(sm))||null;};
- _bkPend[k]=(async()=>{const R={v:3,d:"",d2:"",pg:0,pub:"",yr:"",cat:[],img:"",isbn:"",lang:"",gr:0,gn:0,au:"",auImg:"",src:[]};
+ _bkPend[k]=(async()=>{const R={v:4,dEn:"",d:"",d2:"",pg:0,pub:"",yr:"",cat:[],img:"",isbn:"",lang:"",gr:0,gn:0,au:"",auImg:"",src:[]};
   const steps=[];if(onStep)steps.push(onStep);
   const put=()=>{if(!(R.d||R.d2||R.pg||R.yr||R.img))return;const A=bkInfoAll();A[k]=Object.assign({},R,{part:1,st:ST,thin:false,at:Date.now()});try{localStorage.setItem("mf-bkinfo",JSON.stringify(A));}catch(e){}
    const P=_bkPend[k];[...steps,...((P&&P.steps)||[])].forEach(f=>{try{f();}catch(e){}});};
   const pG=(async()=>{try{let it=(await gb(`intitle:${x.t}${x.a?" inauthor:"+x.a:""}`)).filter(mt);if(it.length<3)it=it.concat((await gb(`${x.t} ${x.a||""}`)).filter(mt));
    const byA=it.filter(v=>!sur||(v.authors||[]).some(a=>ktN(a).includes(sur)));const P=byA.length?byA:it;
-   if(P.length){R.src.push("Google Books");const ds=P.map(v=>clean(v.description)).filter(Boolean).sort((a,b)=>b.length-a.length);R.d=ds[0]||"";
+   if(P.length){R.src.push("Google Books");const ds=P.map(v=>clean(v.description)).filter(Boolean).sort((a,b)=>b.length-a.length);const dTr=ds.filter(trIs);R.d=dTr[0]||"";R.dEn=ds.find(d=>!trIs(d))||"";
+    if(!R.d){try{const T=(await tmoR(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(x.t+" "+(x.a||""))}&langRestrict=tr&maxResults=20&printType=books`,"gbtr")||{}).items||[];const tv=T.map(i=>i.volumeInfo||{}).filter(mt).map(v=>clean(v.description)).filter(d=>d&&trIs(d)).sort((a,b)=>b.length-a.length);if(tv[0])R.d=tv[0];}catch(e){}}
     R.pg=Math.max(0,...P.map(w=>w.pageCount||0));const pubs={};P.forEach(v=>{if(v.publisher)pubs[v.publisher]=(pubs[v.publisher]||0)+1;});R.pub=Object.keys(pubs).sort((a,b)=>pubs[b]-pubs[a])[0]||"";
     const ys=P.map(v=>parseInt((v.publishedDate||"").slice(0,4))).filter(y=>y>1000).sort();R.yr=ys.length?String(ys[0]):"";
     R.cat=[...new Set(P.flatMap(v=>v.categories||[]))].slice(0,3);const iv=P.find(w=>w.imageLinks)||{};R.img=iv.imageLinks?(iv.imageLinks.thumbnail||iv.imageLinks.smallThumbnail||"").replace("http://","https://").replace("&edge=curl",""):"";
@@ -12075,12 +12078,12 @@ function bkInfoFetch(x,onStep){const k=bkKey(x);if(_bkPend[k]){if(onStep)(_bkPen
     R.lang=(P[0].language||"");const rt=P.find(v=>v.ratingsCount);if(rt){R.gr=rt.averageRating||0;R.gn=rt.ratingsCount||0;}}}catch(e){}put();
   try{if(!R.pg||!R.yr||!R.img||R.d.length<200){const j=await tmo(`https://openlibrary.org/search.json?title=${encodeURIComponent(x.t)}${x.a?"&author="+encodeURIComponent(x.a):""}&limit=5&fields=title,number_of_pages_median,first_publish_year,publisher,cover_i,key`);const d=(j&&j.docs||[]).find(v=>mt(v));
     if(d){R.src.push("Open Library");R.pg=R.pg||d.number_of_pages_median||0;if(d.first_publish_year&&(!R.yr||d.first_publish_year<+R.yr))R.yr=String(d.first_publish_year);R.pub=R.pub||(d.publisher||[])[0]||"";if(!R.img&&d.cover_i)R.img=`https://covers.openlibrary.org/b/id/${d.cover_i}-M.jpg`;
-     if(d.key&&R.d.length<200){const w=await tmo(`https://openlibrary.org${d.key}.json`);const wd=w&&w.description&&clean(typeof w.description==="string"?w.description:w.description.value);if(wd&&wd.length>R.d.length)R.d=wd;}}}}catch(e){}put();})();
+     if(d.key&&R.d.length<200){const w=await tmo(`https://openlibrary.org${d.key}.json`);const wd=w&&w.description&&clean(typeof w.description==="string"?w.description:w.description.value);if(wd&&trIs(wd)&&wd.length>R.d.length)R.d=wd;else if(wd&&!R.dEn)R.dEn=wd;}}}}catch(e){}put();})();
   const pW=(async()=>{try{const w=await wiki(`${x.t} ${x.a||""}`,sm=>{const e=ktN(sm.extract);return ktN(sm.title).includes(tn.split(" ")[0])&&(!sur||e.includes(sur))&&/roman|kitap|öykü|eser|yapıt|şiir|anı|deneme|novel/.test(e);});
    if(w){R.src.push("Vikipedi");R.d2=clean(w.extract);if(!R.img&&w.thumbnail)R.img=w.thumbnail.source;}}catch(e){}put();})();
   const pAu=(async()=>{try{if(x.a){const wa=await wiki(x.a,sm=>ktN(sm.title).includes(sur)&&/yazar|şair|romancı|gazeteci|edebiyat/.test(ktN(sm.extract)));if(wa){R.au=clean(wa.extract);if(wa.thumbnail)R.auImg=wa.thumbnail.source;}}}catch(e){}put();})();
   await Promise.all([pG,pW,pAu]);
-  if(R.img)try{covSet(x.t,x.a,R.img);}catch(e){}R.st=ST;R.thin=!(R.d.length>120||R.d2.length>120);const ok=R.d||R.d2||R.pg||R.yr;const A=bkInfoAll();A[k]=ok?Object.assign(R,{at:Date.now()}):{none:1,v:3,st:ST,at:Date.now()};try{localStorage.setItem("mf-bkinfo",JSON.stringify(A));}catch(e){}return A[k];})().finally(()=>{delete _bkPend[k];});
+  if(R.img)try{covSet(x.t,x.a,R.img);}catch(e){}R.st=ST;R.thin=!(R.d.length>120||R.d2.length>120);const ok=R.d||R.d2||R.pg||R.yr;const A=bkInfoAll();A[k]=ok?Object.assign(R,{at:Date.now()}):{none:1,v:4,st:ST,at:Date.now()};try{localStorage.setItem("mf-bkinfo",JSON.stringify(A));}catch(e){}return A[k];})().finally(()=>{delete _bkPend[k];});
  return _bkPend[k];}
 function bkInfoHTML(x){let I=bkInfoGet(x);const kb=KT_BOOKS.find(b=>ktN(b[0])===ktN(x.t));
  if((!I||I.none)&&!kb)return `<h4>Kitap hakkında</h4><p class="bi-ld">${I&&I.none?"📚 Bu kitabın bilgilerini bulamadım. İlk polaroidi sen as, okurlar senden duysun 🧷":navigator.onLine?"<i></i> Kitabın bilgilerini topluyorum…":"📶 Kitap bilgisi için internet bağlantısı gerekiyor."}</p>`;
@@ -12091,8 +12094,8 @@ function bkInfoHTML(x){let I=bkInfoGet(x);const kb=KT_BOOKS.find(b=>ktN(b[0])===
  const main=d2&&d2.length>d.length*1.2?d2:d,alt=main===d2?d:d2;
  return `<h4>Kitap hakkında</h4>${LD}
   ${(()=>{const B=[pg?`<div><small>Sayfa</small><b>${pg}</b></div>`:"",yr?`<div><small>İlk baskı</small><b>${esc(yr)}</b></div>`:"",pub?`<div><small>Yayınevi</small><b style="font-size:${pub.length>14?11.5:pub.length>9?13:15}px">${esc(pub)}</b></div>`:""].filter(Boolean);return B.length?`<div class="bi-row" style="grid-template-columns:repeat(${B.length},1fr)">${B.join("")}</div>`:"";})()}
-  ${(cats.length||I.lang||I.gn)?`<div class="bi-cat">${cats.map(c=>`<span>${esc(c)}</span>`).join("")}${I.lang&&LG[I.lang]?`<span>${LG[I.lang]}</span>`:""}${I.gn?`<span>⭐ ${I.gr} · ${I.gn} oy</span>`:""}</div>`:""}
-  ${main?`<p class="bi-lab">Konusu</p><p class="bi-d" id="bk-desc">${esc(main)}</p>${main.length>320?`<button type="button" class="bi-m" id="bk-more-d">Devamını oku</button>`:""}`:`<p class="bi-d" style="max-height:none">Bu kitabın tanıtım yazısını bulamadım; ilk polaroidi sen as, okurlar senden duysun 🧷</p>`}
+  ${(cats.length||I.gn)?`<div class="bi-cat">${cats.map(c=>`<span>${esc(c)}</span>`).join("")}${I.gn?`<span>⭐ ${I.gr} · ${I.gn} oy</span>`:""}</div>`:""}
+  ${!main&&I.dEn?`<p class="bi-lab">Konusu</p><p class="bi-d">Bu kitabın Türkçe tanıtımını henüz bulamadım.</p><button type="button" class="bi-m" id="bk-en" onclick="this.nextElementSibling.hidden=false;this.remove()">İngilizce tanıtımı göster</button><p class="bi-d bi-en" hidden lang="en">${esc(I.dEn)}</p>`:main?`<p class="bi-lab">Konusu</p><p class="bi-d" id="bk-desc">${esc(main)}</p>${main.length>320?`<button type="button" class="bi-m" id="bk-more-d">Devamını oku</button>`:""}`:`<p class="bi-d" style="max-height:none">Bu kitabın tanıtım yazısını bulamadım; ilk polaroidi sen as, okurlar senden duysun 🧷</p>`}
   ${alt&&alt.length>60&&alt!==main?`<details class="bi-x"><summary>📖 Bir de şöyle anlatılıyor</summary><p>${esc(alt)}</p></details>`:""}
   ${I.au?`<details class="bi-x bi-au"><summary>${I.auImg?`<img src="${I.auImg}" alt="">`:"✍️"} Yazar hakkında: ${esc(x.a||"")}</summary><p>${esc(I.au)}</p></details>`:""}
   
@@ -13126,6 +13129,12 @@ window.addEventListener("online",()=>{document.querySelectorAll("[data-cvd]").fo
 
 /* Tek seferlik: eski "kapak bulunamadı" kayıtlarını sil, yeni düzenle yeniden denensin */
 try{if(!localStorage.getItem("mf-cov-v2")){Object.keys(COV).forEach(k=>{if(typeof COV[k]!=="string"||k.startsWith("bad|"))delete COV[k];});covSave();localStorage.setItem("mf-cov-v2","1");}}catch(e){}
+
+/* Metin Türkçe mi? (Türkçe harfler + sık kelimeler, İngilizce sık kelimelere karşı) */
+function trIs(t){t=" "+String(t||"").toLocaleLowerCase("tr-TR")+" ";if(t.length<20)return false;const tc=(t.match(/[çğıöşü]/g)||[]).length;
+ const tw=(t.match(/ (ve|bir|bu|ile|için|olarak|da|de|gibi|daha|çok|ama|onun|kadar|sonra|her|olan|ise|mı|mi) /g)||[]).length;
+ const ew=(t.match(/ (the|and|of|to|is|in|that|with|his|was|for|as|this|by|an|from|who|which) /g)||[]).length;
+ return tc/t.length>0.012||tw>ew*1.5;}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
