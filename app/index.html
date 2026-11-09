@@ -12173,7 +12173,7 @@ let ktLeft=null,ktWasIn=false;
 /* ===== v0.20.2: imza günleri ve fuarlar /app/events.json'dan (haftada iki kez otomatik güncellenir) ===== */
 (function(){const ok=e=>Array.isArray(e)&&e.length>=6&&typeof e[0]==="string"&&Array.isArray(e[1])&&e[1].length&&typeof e[2]==="string";
  const okF=f=>Array.isArray(f)&&f.length>=5&&typeof f[0]==="string"&&/^\d{4}-\d\d-\d\d$/.test(f[1]||"")&&/^\d{4}-\d\d-\d\d$/.test(f[2]||"");
- const ap=o=>{if(!o||!Array.isArray(o.ev))return false;const E=o.ev.filter(ok);if(!E.length)return false;KT_EV.splice(0,KT_EV.length,...E);if(Array.isArray(o.fair)){const F=o.fair.filter(okF);if(F.length)KT_FAIR.splice(0,KT_FAIR.length,...F);}return true;};
+ const ap=o=>{if(!o||!Array.isArray(o.ev))return false;const E=evFlat(o.ev.filter(ok));if(!E.length)return false;KT_EV.splice(0,KT_EV.length,...E);if(Array.isArray(o.fair)){const F=o.fair.filter(okF);if(F.length)KT_FAIR.splice(0,KT_FAIR.length,...F);}return true;};
  try{const c=JSON.parse(localStorage.getItem("mf-events")||"null");if(c)ap(c);}catch(e){}
  if(!/^https?:$/.test(location.protocol)||!window.fetch)return;
  fetch("events.json?d="+dkey(),{cache:"no-store"}).then(r=>r.ok?r.json():null).then(j=>{if(j&&ap(j)){try{localStorage.setItem("mf-events",JSON.stringify(j));}catch(e){}try{if(step===90)kitapRender();}catch(e){}}}).catch(()=>{});})();
@@ -12618,6 +12618,10 @@ function auShort(L,c){const A=auSort(L);if(A.length<=2)return A.join(" & ");retu
 function auPlace(e){const p=String(e[4]||"").split("·");return e[1].length>2&&p.length>1?p.slice(1).join("·").trim():String(e[4]||"");}
 function auKick(e){if(e[1].length<3)return "";const p=String(e[4]||"").split("·");const k=p.length>1?p[0].trim():(e[1].length+" yazarlı buluşma");return `<span class="au-k">${esc(k)}</span>`;}
 document.addEventListener("click",ev=>{const b=ev.target.closest("[data-aum]");if(!b)return;ev.stopPropagation();ev.preventDefault();const w=b.parentElement;const a=w.querySelector(".au-all");if(a){a.hidden=false;w.classList.add("au-open");}},true);
+
+/* her yazar kendi kartında: çok yazarlı buluşmayı yazar başına ayır */
+function evFlat(L){return L.flatMap(e=>Array.isArray(e[1])&&e[1].length>1?e[1].map((a,i)=>[e[0]+"~"+i,[a],...e.slice(2)]):[e]);}
+try{KT_EV.splice(0,KT_EV.length,...evFlat(KT_EV.slice()));}catch(e){}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
