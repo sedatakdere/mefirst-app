@@ -13123,6 +13123,9 @@ covScan=function(){if(navigator.onLine===false)return;document.querySelectorAll(
   const u=covGet(t,a);if(u&&!COV_BAD[u]){covApply(el,u);return;}if(u===null)return;const k=covKey(t,a);if(covIn[k]||covAsked[k])return;covAsked[k]=1;covShQ.push([t,a,k]);});if(covShQ.length)covSharedAsk();};
 /* Kapak yüklemesi başarısız kalanlara bağlantı gelince yeniden dene */
 window.addEventListener("online",()=>{document.querySelectorAll("[data-cvd]").forEach(el=>{if(!el.classList.contains("hascv"))delete el.dataset.cvd;});Object.keys(covAsked).forEach(k=>delete covAsked[k]);covScan();});
+
+/* Tek seferlik: eski "kapak bulunamadı" kayıtlarını sil, yeni düzenle yeniden denensin */
+try{if(!localStorage.getItem("mf-cov-v2")){Object.keys(COV).forEach(k=>{if(typeof COV[k]!=="string"||k.startsWith("bad|"))delete COV[k];});covSave();localStorage.setItem("mf-cov-v2","1");}}catch(e){}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
