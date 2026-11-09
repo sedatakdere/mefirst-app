@@ -6157,6 +6157,12 @@ html[data-mf="dusk"] .adm-x{background:rgba(255,255,255,.1)}
 .cab-cnt{font-size:12.5px;font-weight:800;color:#E9C77B;letter-spacing:.08em}
 .cab-sp.lent::after{content:"";position:absolute;top:-2px;right:3px;width:7px;height:16px;background:#E2689A;clip-path:polygon(0 0,100% 0,100% 100%,50% 75%,0 100%)}
 .cab-ov{gap:10px}
+
+.adm-id{margin-top:26px;display:flex;flex-direction:column;align-items:center;gap:6px;max-width:320px}
+.adm-id small{font-size:11.5px;font-weight:800;opacity:.6}
+.adm-id code{font-size:12px;word-break:break-all;background:rgba(0,0,0,.06);padding:8px 10px;border-radius:10px;user-select:all}
+.adm-id button{font:inherit;font-size:12.5px;font-weight:800;border:1.5px solid rgba(0,0,0,.15);background:transparent;border-radius:99px;padding:6px 14px;cursor:pointer;color:inherit}
+html[data-mf="dusk"] .adm-id code{background:rgba(255,255,255,.08)}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -13022,7 +13028,9 @@ async function admOpen(){if(document.getElementById("adm"))return;const O=docume
  const ok=await sbReq("POST","rpc/admin_queue",{});if(ok===null)admLogin(O);else{ADM.data.q=ok;admDraw(O);}}
 function admClose(){const O=document.getElementById("adm");if(O)O.remove();document.documentElement.style.overflow="";if(location.hash==="#yonetim")history.replaceState(null,"",location.pathname+location.search);}
 function admLogin(O){O.innerHTML=`<div class="adm-w adm-lg"><button type="button" class="adm-x" aria-label="Kapat">✕</button><span class="adm-ic no-mi">🛡️</span><h2>Yönetim paneli</h2><p>Bu cihazı yönetici olarak tanımlamak için gizli kodunu gir. Bir kez girmen yeterli.</p>
- <input type="password" id="adm-c" autocomplete="off" placeholder="Gizli kod"><button type="button" class="adm-go" id="adm-go">Giriş</button><p class="adm-e" id="adm-e" hidden></p></div>`;
+ <input type="password" id="adm-c" autocomplete="off" placeholder="Gizli kod"><button type="button" class="adm-go" id="adm-go">Giriş</button><p class="adm-e" id="adm-e" hidden></p><div class="adm-id"><small>Bu cihazın kimliği</small><code id="adm-uid">alınıyor…</code><button type="button" id="adm-cp">Kopyala</button></div></div>`;
+ sbAuth().then(S=>{const u=O.querySelector("#adm-uid");if(u)u.textContent=S&&S.uid?S.uid:"alınamadı (internet?)";});
+ setTimeout(()=>{const b=O.querySelector("#adm-cp");if(b)b.onclick=()=>{const t=O.querySelector("#adm-uid").textContent;try{navigator.clipboard.writeText(t).then(()=>{b.textContent="Kopyalandı ✓";});}catch(e){}};},0);
  O.querySelector(".adm-x").onclick=admClose;const go=async()=>{const c=O.querySelector("#adm-c").value.trim();if(!c)return;const b=O.querySelector("#adm-go");b.disabled=true;b.textContent="Bakıyorum…";
   const r=await sbReq("POST","rpc/admin_claim",{code:c});if(r===true){const q=await sbReq("POST","rpc/admin_queue",{});ADM.data.q=q||[];admDraw(O);}else{const e=O.querySelector("#adm-e");e.hidden=false;e.textContent=r===false?"Kod tutmadı. 5 yanlış denemede bu cihaz kilitlenir.":"Bağlanamadım; internetini ya da SQL kurulumunu kontrol et.";b.disabled=false;b.textContent="Giriş";}};
  O.querySelector("#adm-go").onclick=go;O.querySelector("#adm-c").onkeydown=e=>{if(e.key==="Enter")go();};}
