@@ -5954,6 +5954,21 @@ html[data-mf="dusk"] .bk-pick2{background:rgba(255,255,255,.06)}html[data-mf="du
 .ktmrow-h{display:flex;justify-content:space-between;font-size:11.5px;font-weight:800;opacity:.6;margin:-4px 4px 0;letter-spacing:.02em}
 .ktcnt{font-size:11px;font-weight:800;letter-spacing:.5px;opacity:.85}
 .ktfolb{font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:10px;background:rgba(255,226,176,.22);color:#FFE2B0}
+
+.ozg{margin:4px 0 18px;border-radius:22px;padding:16px 0 6px;background:linear-gradient(160deg,#FFF3DF,#F9E1CF);border:1px solid rgba(201,130,43,.25)}
+.ozg-h{display:flex;gap:12px;align-items:flex-start;padding:0 16px 10px}
+.ozg-e{font-size:30px;line-height:1}
+.ozg-h small{display:block;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
+.ozg-h strong{display:block;font-family:var(--f-display);font-weight:400;font-size:22px;line-height:1.15;margin:2px 0}
+.ozg-h p{margin:0;font-size:13px;opacity:.8}
+.ozg-row{padding:0 4px}
+.ozg-anma{background:linear-gradient(160deg,#2B2622,#3A322C);color:#F3E9DD;border-color:rgba(255,255,255,.08)}
+.ozg-anma .ozg-h strong,.ozg-anma .ozg-h small,.ozg-anma .ozg-h p{color:#F3E9DD}
+.ozg-anma .ktb{background:rgba(255,255,255,.94);color:#2B2622}
+.ozg-bayram{background:linear-gradient(160deg,#FCE3DD,#F6C9BF);border-color:rgba(200,40,40,.2)}
+.ozg-kadin{background:linear-gradient(160deg,#F1E6FA,#E3D0F3)}
+.ozg-ask{background:linear-gradient(160deg,#FDE6EE,#F8CCDA)}
+html[data-mf="dusk"] .ozg:not(.ozg-anma){background:rgba(255,236,214,.06)}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -9346,7 +9361,7 @@ function kitapRender(){const K=kt();const P=document.getElementById("ktpanel");i
   }
   if(kttab==="oneri"){const R=ktRecs();const feat=R[0];const nw=R.filter(r=>r[0][4]&&r[1]>=2&&r!==feat);const disc=R.filter(r=>r!==feat&&!nw.slice(0,6).includes(r)&&!ktFollow(r[0][1])&&r[0][2].some(g=>K.gen.includes(g))).slice(0,6);const rest=R.slice(1).filter(r=>!nw.slice(0,6).includes(r)&&!disc.includes(r)).slice(0,8);const nm=(st.name||"").trim();
     const evB=myE.length?`<button type="button" class="ktalert" id="kt-toev"><span class="no-mi">✍️</span><span><strong>${esc(myE[0][1].filter(ktFollow)[0]||myE[0][1][0])} ${myE[0][2]?"ile imza günü":"imza gününe geliyor"}</strong><small>${myE[0][2]?ktWhen(myE[0][2])+" · "+myE[0][3]+" · ":"Kasım · tarih netleşince haber veririm · "}${esc(myE[0][4])}${myE[0][2]?", "+esc(myE[0][5]):""}</small></span><b>›</b></button>`:"";
-    P.innerHTML=evB+`<div class="ktmood"><p>${nm?esc(nm)+", b":"B"}ugün kitap ne yapsın sana?</p><div class="ktmoods">${KT_MOOD.map(([id,e,l])=>`<button type="button" class="ktm" data-km="${id}" aria-pressed="${ktMood===id}">${typeof MOODI!=="undefined"&&MOODI[id]?`<i class="fei kmi">${MOODI[id]}</i>`:`<span class="no-mi">${e}</span>`}${l}</button>`).join("")}</div></div>
+    P.innerHTML=evB+ozgHTML()+`<div class="ktmood"><p>${nm?esc(nm)+", b":"B"}ugün kitap ne yapsın sana?</p><div class="ktmoods">${KT_MOOD.map(([id,e,l])=>`<button type="button" class="ktm" data-km="${id}" aria-pressed="${ktMood===id}">${typeof MOODI!=="undefined"&&MOODI[id]?`<i class="fei kmi">${MOODI[id]}</i>`:`<span class="no-mi">${e}</span>`}${l}</button>`).join("")}</div></div>
       <div class="kthead"><span>${ktMood?KT_MOODW[ktMood]:"Çayını demle, bu tam sana göre ☕"}</span></div>${ktMood?ktMoodRow(R):feat?ktCard(feat,true):""}
       <button type="button" class="ktdraw" id="kt-draw"><span class="no-mi">🎴</span><span><strong>Kitap falı çek</strong><small>Kartı çevir, kaderindeki kitabı gör</small></span><b class="no-mi">✨</b></button><div id="kt-fal"></div>
       ${nw.length?`<div class="kthead"><span>Fırından yeni çıktı 🥐</span><small>Ekim 2026</small></div><div class="ktrow">${nw.slice(0,6).map(r=>ktCard(r)).join("")}</div>`:""}
@@ -12637,6 +12652,28 @@ function ktMoodRow(R){const m=KT_MOOD.find(x=>x[0]===ktMood);if(!m)return "";con
 /* çeşitlilik: okur ruhundan rafları her gün başka yazarlar; öneri listesinde aynı yazar üst üste yığılmasın */
 function auToday(L,n){if(L.length<=n)return L.slice();const d=Math.floor(new Date(dkey()+"T00:00")/864e5);const o=(d*n)%L.length;return L.slice(o).concat(L.slice(0,o)).slice(0,n);}
 (function(){const _kr=ktRecs;ktRecs=function(){const K=kt();const star=K.au.length>1?ktN(auToday(K.au.slice().reverse(),1)[0]):"";const R=_kr().map(r=>ktN(r[0][1])===star?[r[0],r[1]+4,r[2]]:r).sort((a,b)=>b[1]-a[1]);const c={};return R.map(r=>{const a=ktN(r[0][1]);const k=c[a]=(c[a]||0)+1;return [r[0],r[1]-(k-1)*3.5,r[2]];}).sort((a,b)=>b[1]-a[1]);};})();
+
+/* Özel günler: o güne özel kitap rafı (2 gün önceden görünür) */
+const OZG_ATA=[["Nutuk","Mustafa Kemal Atatürk"],["Tek Adam","Şevket Süreyya Aydemir"],["Çankaya","Falih Rıfkı Atay"],["Ateşten Gömlek","Halide Edib Adıvar"],["Şu Çılgın Türkler","Turgut Özakman"],["Kuvâyi Milliye","Nazım Hikmet"],["Atatürk","Andrew Mango"],["Yaban","Yakup Kadri Karaosmanoğlu"]];
+const OZG=[
+ {d:"11-10",k:"anma",t:"10 Kasım",h:"Saygı ve özlemle",s:"Ata'mızı anlatan, onu anlamamızı sağlayan kitaplar",b:OZG_ATA,e:"🌹"},
+ {d:"10-29",k:"bayram",t:"29 Ekim Cumhuriyet Bayramı",h:"Cumhuriyet okuması",s:"Bir milletin yeniden doğuşunu anlatan kitaplar",b:[["Nutuk","Mustafa Kemal Atatürk"],["Sinekli Bakkal","Halide Edib Adıvar"],["Kiralık Konak","Yakup Kadri Karaosmanoğlu"],["Çankaya","Falih Rıfkı Atay"],["Tek Adam","Şevket Süreyya Aydemir"],["Şu Çılgın Türkler","Turgut Özakman"]],e:"🇹🇷"},
+ {d:"08-30",k:"bayram",t:"30 Ağustos Zafer Bayramı",h:"Zaferin hikâyesi",s:"Kurtuluş Savaşı'nı anlatan romanlar ve anılar",b:[["Ateşten Gömlek","Halide Edib Adıvar"],["Şu Çılgın Türkler","Turgut Özakman"],["Kuvâyi Milliye","Nazım Hikmet"],["Vurun Kahpeye","Halide Edib Adıvar"],["Nutuk","Mustafa Kemal Atatürk"],["Tek Adam","Şevket Süreyya Aydemir"]],e:"🇹🇷"},
+ {d:"05-19",k:"bayram",t:"19 Mayıs",h:"Gençliğe hitabe",s:"Samsun'dan başlayan yolculuğun kitapları",b:OZG_ATA,e:"🇹🇷"},
+ {d:"03-18",k:"anma",t:"18 Mart Çanakkale Zaferi",h:"Çanakkale'yi okumak",s:"Şehitlerimizi saygıyla anıyoruz",b:[["Diriliş: Çanakkale 1915","Turgut Özakman"],["Tek Adam","Şevket Süreyya Aydemir"],["Nutuk","Mustafa Kemal Atatürk"],["Kuvâyi Milliye","Nazım Hikmet"]],e:"🌹"},
+ {d:"04-23",k:"bayram",t:"23 Nisan",h:"Çocuklarla birlikte okuyun",s:"Ulusal Egemenlik ve Çocuk Bayramı · Dünya Kitap Günü",b:[["Küçük Prens","Antoine de Saint-Exupéry"],["Momo","Michael Ende"],["Matilda","Roald Dahl"],["Pal Sokağı Çocukları","Ferenc Molnár"],["Şeker Portakalı","José Mauro de Vasconcelos"],["Charlie'nin Çikolata Fabrikası","Roald Dahl"]],e:"🎈"},
+ {d:"03-08",k:"kadin",t:"8 Mart Dünya Kadınlar Günü",h:"Kadınların kalemiyle, kadınların hikâyesi",s:"Bugün kendine bir kitap hediye et 💜",b:[["Kendine Ait Bir Oda","Virginia Woolf"],["Kurtlarla Koşan Kadınlar","Clarissa Pinkola Estés"],["Ateşten Gömlek","Halide Edib Adıvar"],["Jane Eyre","Charlotte Brontë"],["Bin Muhteşem Güneş","Khaled Hosseini"],["Çalıkuşu","Reşat Nuri Güntekin"],["Ben, Kirke","Madeline Miller"]],e:"💜"},
+ {d:"anne",k:"anne",t:"Anneler Günü",h:"Annelere, anneliğe",s:"Kendin için de, annen için de",b:[["Ana","Maksim Gorki"],["Keşke Ailemin Okuduğu Bir Kitap Olsaydı","Philippa Perry"],["Bin Muhteşem Güneş","Khaled Hosseini"],["Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli","Adele Faber & Elaine Mazlish"],["Şeker Portakalı","José Mauro de Vasconcelos"],["Bütün Beyinli Çocuk","Daniel J. Siegel"]],e:"💐"},
+ {d:"02-14",k:"ask",t:"14 Şubat",h:"Aşkı en güzel kitaplar anlatır",s:"Sevgililer Günü'ne kalbini hazırla",b:[["Kürk Mantolu Madonna","Sabahattin Ali"],["Kolera Günlerinde Aşk","Gabriel García Márquez"],["Beyaz Geceler","Fyodor Dostoyevski"],["Bir Gün","David Nicholls"],["Gurur ve Önyargı","Jane Austen"],["Çalıkuşu","Reşat Nuri Güntekin"]],e:"💘"},
+ {d:"03-21",k:"siir",t:"21 Mart Dünya Şiir Günü",h:"Bugün bir şiir oku",s:"Altını çizmelik dizeler",b:[["Üvercinka","Cemal Süreya"],["Sevda Sözleri","Cemal Süreya"],["Memleketimden İnsan Manzaraları","Nazım Hikmet"],["Kedi Kitabı","Ursula K. Le Guin"],["Okudum da Ne Oldu?","Yekta Kopan"]],e:"🪶"},
+ {d:"11-24",k:"ogretmen",t:"24 Kasım Öğretmenler Günü",h:"Öğretmenlerimize",s:"Unutulmaz öğretmenlerin hikâyeleri",b:[["Çalıkuşu","Reşat Nuri Güntekin"],["Matilda","Roald Dahl"],["Ölü Ozanlar Derneği","N. H. Kleinbaum"],["Momo","Michael Ende"],["Küçük Prens","Antoine de Saint-Exupéry"]],e:"🍎"},
+ {d:"12-31",k:"yil",t:"Yeni yıl",h:"Yeni yıla bir kitapla gir",s:"Yeni başlangıçlar için",b:[["Noel Şarkısı","Charles Dickens"],["Gece Yarısı Kütüphanesi","Matt Haig"],["Dört Bin Hafta","Oliver Burkeman"],["Atomik Alışkanlıklar","James Clear"],["Küçük Prens","Antoine de Saint-Exupéry"]],e:"✨"}];
+function ozgDate(o,y){if(o.d==="anne"){const d=new Date(y,4,1);const f=(7-d.getDay())%7;return new Date(y,4,1+f+7);}const [m,dd]=o.d.split("-").map(Number);return new Date(y,m-1,dd);}
+function ozgNow(){const t=new Date(dkey()+"T00:00");const y=t.getFullYear();let best=null;OZG.forEach(o=>[y,y+1].forEach(yy=>{const x=Math.round((ozgDate(o,yy)-t)/864e5);if(x>=0&&x<=2&&(!best||x<best.x))best={o,x};}));return best;}
+function ozgHTML(){const z=ozgNow();if(!z)return "";const {o,x}=z;
+  const when=x===0?(o.k==="anma"?"Bugün":"Bugün kutlu olsun"):x===1?"Yarın":"2 gün sonra";
+  const cards=o.b.map(([t,a])=>{const m=KT_BOOKS.find(b=>ktN(b[0])===ktN(t));const b=m||[t,a,[],"","",""];return ktCard([b,0,o.h+" "+o.e]);}).join("");
+  return `<section class="ozg ozg-${o.k}"><div class="ozg-h"><span class="ozg-e no-mi">${o.e}</span><div><small>${when} · ${esc(o.t)}</small><strong>${esc(o.h)}</strong><p>${esc(o.s)}</p></div></div><div class="ktrow ozg-row">${cards}</div></section>`;}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
