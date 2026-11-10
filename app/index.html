@@ -6779,6 +6779,21 @@ html[data-mf="dusk"] .su-kl button{background:rgba(255,255,255,.07);color:#F6E9D
 html[data-mf="dusk"] .su-ask{background:linear-gradient(140deg,#2E2756,#3A2440);border-color:rgba(140,123,255,.25)}html[data-mf="dusk"] .su-ask b{color:#F4EAF2}html[data-mf="dusk"] .su-ask small{color:#C9B8D8}
 html[data-mf="dusk"] .su-gdn em{color:#97DEC2}
 @media (prefers-reduced-motion:reduce){.su-plant .su-bloom,.su-gdn i,.su-plant.grow svg{animation:none}}
+
+.ob-rol{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 12px}
+.ob-rol button{font:inherit;color:var(--ink);position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px;min-height:158px;padding:16px 10px;border-radius:24px;border:2px solid var(--line);background:var(--surface);cursor:pointer;transition:transform .18s,border-color .2s,box-shadow .2s;animation:suIn .45s cubic-bezier(.2,1.3,.4,1) both;animation-delay:calc(var(--i)*70ms)}
+.ob-rol button .no-mi{font-size:44px;line-height:1.1;margin-bottom:6px;filter:drop-shadow(0 6px 8px rgba(0,0,0,.12))}
+.ob-rol button b{font-size:17px}.ob-rol button small{font-size:12px;color:var(--muted);font-weight:600;line-height:1.3}
+.ob-rol .r-ogr{background:linear-gradient(160deg,#F1EEFF,var(--surface) 70%)}.ob-rol .r-veli{background:linear-gradient(160deg,#E6F1FF,var(--surface) 70%)}.ob-rol .r-ikisi{background:linear-gradient(160deg,#FFEFF5,var(--surface) 70%)}.ob-rol .r-yok{background:linear-gradient(160deg,#FFF6DA,var(--surface) 70%)}
+.ob-rol button i{position:absolute;top:10px;right:10px;width:22px;height:22px;border-radius:50%;border:2px solid var(--line);background:var(--surface)}
+.ob-rol button[aria-pressed="true"]{border-color:#6C63FF;box-shadow:0 10px 22px -12px rgba(108,99,255,.8),0 0 0 3px color-mix(in srgb,#6C63FF 20%,transparent)}
+.ob-rol button[aria-pressed="true"] i{background:#6C63FF;border-color:#6C63FF}.ob-rol button[aria-pressed="true"] i::after{content:"";position:absolute;left:5.5px;top:2px;width:5px;height:10px;border:solid #fff;border-width:0 2.4px 2.4px 0;transform:rotate(45deg)}
+.ob-rol button:active{transform:scale(.97)}.ob-rol button.pick{animation:abPop .35s ease}
+.su-ask.rol{flex-direction:column;align-items:stretch;gap:10px}
+.su-askh{display:flex;flex-direction:column}.su-askg{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.su-askg button{font:inherit;font-size:13px;font-weight:800;display:flex;align-items:center;gap:6px;justify-content:center;border:0;border-radius:14px;padding:10px 8px;cursor:pointer;background:#fff;color:#2E2340;box-shadow:0 2px 8px -4px rgba(76,63,196,.4)}
+html[data-mf="dusk"] .su-askg button{background:rgba(255,255,255,.08);color:#F4EAF2}
+html[data-mf="dusk"] .ob-rol .r-ogr,html[data-mf="dusk"] .ob-rol .r-veli,html[data-mf="dusk"] .ob-rol .r-ikisi,html[data-mf="dusk"] .ob-rol .r-yok{background:var(--surface)}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -14512,7 +14527,7 @@ function kxToday(P,c){const K=kids(),t=dkey();P.insertAdjacentHTML("afterbegin",
 
 
 /* ===== v0.31: 🎓 Derslerim — üniversiteli kızlar için ===== */
-function stuOn(){try{return prof().uni==="evet";}catch(e){return false;}}
+function stuOn(){try{const P=prof();return P.rol?(P.rol==="ogr"||P.rol==="ikisi"):P.uni==="evet";}catch(e){return false;}}
 function stu(){const S=st.stu=st.stu||{};S.prog=S.prog||{};S.ex=S.ex||[];S.abs=S.abs||{};S.lim=S.lim||{};S.foc=S.foc||{};S.foc.log=S.foc.log||{};S.bud=S.bud||{};S.bud.items=S.bud.items||[];return S;}
 let suTab="today",suDay=0,suEdit=null,suExOpen=false,suBset=false,suCat="yemek",suCalc={};
 const SU_DN=["Paz","Pzt","Sal","Çar","Per","Cum","Cmt"],SU_DL=["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"];
@@ -14807,30 +14822,37 @@ document.addEventListener("visibilitychange",()=>{try{const R=st.stu&&st.stu.foc
 
 /* ---------- ana sayfa kutucuğu ---------- */
 BN_ART.stu=`<svg viewBox="0 0 100 100"><path d="M10 40L50 22l40 18-40 18z" fill="#fff"/><path d="M26 48v18c12 10 36 10 48 0V48L50 58z" fill="#E7E1FF"/><path d="M84 43v24" stroke="#FFD36E" stroke-width="3.4" stroke-linecap="round"/><circle cx="84" cy="70" r="4.6" fill="#FFD36E"/><g class="bn-spark"><path d="M20 18l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#FFD36E"/></g></svg>`;
-(function(){const _b=bentoRender;bentoRender=function(){_b.apply(this,arguments);try{const el=document.getElementById("bento");if(!el||!stuOn())return;const kb=el.querySelector(".bn-kids"),hasK=!!(st.kids&&st.kids.list&&st.kids.list.length)||(prof().kim||[]).includes("cocuk");
-  const b=document.createElement("button");b.type="button";b.className="bn bn-stu"+(hasK?" wide":"");b.dataset.bgo="go-stu";b.style.setProperty("--i",kb?kb.style.getPropertyValue("--i"):"5");
-  const R=st.stu&&st.stu.foc&&st.stu.foc.run;b.innerHTML=`<span class="bn-art" aria-hidden="true">${BN_ART.stu}</span><span class="bn-tx"><b>Derslerim</b><small>${esc(R?(R.m==="mola"?"Moladasın 🌿":"⏳ Odak turu sürüyor"):suBnSub())}</small></span>`;
-  b.onclick=()=>{suMount();document.getElementById("go-stu").click();};if(kb){if(hasK)kb.before(b);else kb.replaceWith(b);}else el.appendChild(b);}catch(e){console.error(e);}};
+const SU_ROL=[["ogr","🎓","Öğrenciyim","Ders, sınav, odak, harçlık"],["veli","🎒","Veliyim","Çanta, ödev, aşı, okul"],["ikisi","🎓🎒","İkisi de","Hem okuyorum hem çocuklarım var"],["yok","🌷","İkisi de değil","Bu alan tamamen benim"]];
+const SU_ROL_T="Okul hayatında hangisi sensin?",SU_ROL_N="İstediğin zaman “Beni tanı”dan değiştirebilirsin; hiçbir bilgin silinmez.";
+function kidsOn(){const r=prof().rol;return !r||r==="veli"||r==="ikisi";}
+function suRolSet(v){const P=st.prof=st.prof||{kacin:[]};P.rol=v;P.uni=(v==="ogr"||v==="ikisi")?"evet":"hayir";let K=(P.kim||[]).filter(x=>x!=="cocuk");if(v==="veli"||v==="ikisi"){K=K.filter(x=>x!=="ben");K.push("cocuk");}P.kim=K;if((v==="ogr"||v==="ikisi")&&!P.gun)P.gun="okul";save();}
+function suRolCheer(v){try{if(v==="ogr"||v==="ikisi")mfConfetti(v==="ikisi"?"Derslerim ve Çocuklarım hazır 🎓🎒":"“Derslerim” köşen açıldı 🎓",["#6C63FF","#F5C04A","#FF6F91"],"#2B2160");else if(v==="veli")mfConfetti("Çocuklarım köşen hazır 🎒",["#8EC3F5","#FFD36E","#F7A8B8"],"#2C4A7A");else mfConfetti("Bu alan tamamen senin 🌷",["#F7A8B8","#C9B3F2","#FFD36E"],"#5A2E4A");}catch(_){}}
+(function(){const _b=bentoRender;bentoRender=function(){_b.apply(this,arguments);try{const el=document.getElementById("bento");if(!el)return;const kb=el.querySelector(".bn-kids"),S=stuOn(),K=kidsOn(),ref=kb?kb.nextElementSibling:null,iv=kb?kb.style.getPropertyValue("--i"):"5";
+  if(kb&&!K)kb.remove();
+  if(S){const b=document.createElement("button");b.type="button";b.className="bn bn-stu"+(K?" wide":"");b.dataset.bgo="go-stu";b.style.setProperty("--i",iv);
+   const R=st.stu&&st.stu.foc&&st.stu.foc.run;b.innerHTML=`<span class="bn-art" aria-hidden="true">${BN_ART.stu}</span><span class="bn-tx"><b>Derslerim</b><small>${esc(R?(R.m==="mola"?"Moladasın 🌿":"⏳ Odak turu sürüyor"):suBnSub())}</small></span>`;
+   b.onclick=()=>{suMount();document.getElementById("go-stu").click();};if(K&&kb)kb.before(b);else if(ref)ref.before(b);else el.appendChild(b);}
+  if(!K&&!S){const lv=el.querySelector(".bn-love");if(lv)lv.classList.add("wide");}}catch(e){console.error(e);}};
   const _b2=bentoRender;bentoRender=function(){_b2.apply(this,arguments);try{const el=document.getElementById("bento");let a=document.getElementById("su-ask");const P=prof();
-   if(!el||P.uni||!(st.name||"").trim()){if(a)a.remove();return;}
-   if(!a){a=document.createElement("div");a.id="su-ask";a.className="su-ask";el.after(a);}
-   a.innerHTML=`<span class="no-mi">🎓</span><div><b>Üniversitede misin?</b><small>Ders programın, sınavların ve harçlığın için sana bir köşe açayım.</small></div><div class="su-askb"><button type="button" data-sask="evet">Evet</button><button type="button" data-sask="hayir">Hayır</button></div>`;
-   a.querySelectorAll("[data-sask]").forEach(x=>x.onclick=()=>{const P2=st.prof=st.prof||{kacin:[]};P2.uni=x.dataset.sask;save();a.classList.add("bye");setTimeout(()=>{bentoRender();if(P2.uni==="evet"){try{mfConfetti("“Derslerim” köşen açıldı 🎓",["#6C63FF","#F5C04A","#FF6F91"],"#2B2160");}catch(_){}const t=document.querySelector(".bn-stu");if(t)t.scrollIntoView({behavior:"smooth",block:"center"});}},300);});}catch(e){console.error(e);}};try{if(step===0)bentoRender();}catch(e){}})();
+   if(!el||P.rol||!(st.name||"").trim()){if(a)a.remove();return;}
+   if(!a){a=document.createElement("div");a.id="su-ask";a.className="su-ask rol";el.after(a);}
+   a.innerHTML=`<div class="su-askh"><b>${SU_ROL_T}</b><small>Ana sayfanı buna göre kurayım.</small></div><div class="su-askg">${SU_ROL.map(([v,e,l])=>`<button type="button" data-sask="${v}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div>`;
+   a.querySelectorAll("[data-sask]").forEach(x=>x.onclick=()=>{const v=x.dataset.sask;suRolSet(v);a.classList.add("bye");setTimeout(()=>{bentoRender();suRolCheer(v);const t=document.querySelector(v==="veli"?".bn-kids":".bn-stu");if(t)t.scrollIntoView({behavior:"smooth",block:"center"});},300);});}catch(e){console.error(e);}};try{if(step===0)bentoRender();}catch(e){}})();
 
-/* ---------- kurulum: üniversitede misin? ---------- */
-const SU_UNI_S="Evet dersen sana bir de “Derslerim” köşesi açılır: ders programın, sınav geri sayımın, odak molaların ve harçlık takibin. İstediğin an “Beni tanı”dan değiştirebilirsin; hiçbir bilgin silinmez.";
-(function(){const gi=TN_Q.findIndex(q=>q.k==="gun");TN_Q.splice(gi+1,0,{k:"uni",t:"Üniversitede okuyor musun?",s:SU_UNI_S,ty:"one",o:[["evet","🎓","Evet, öğrenciyim"],["hayir","🌷","Hayır"]]});TN_LAB.uni="Öğrenciyim";
+/* ---------- kurulum: okul hayatında hangisi sensin? ---------- */
+(function(){const gi=TN_Q.findIndex(q=>q.k==="gun");TN_Q.splice(gi+1,0,{k:"rol",t:SU_ROL_T,s:"Ana sayfan buna göre şekillenir. "+SU_ROL_N,ty:"one",o:SU_ROL.map(([v,e,l])=>[v,e,l])});TN_LAB.rol="Okul hayatım";
   const g=TN_Q.find(q=>q.k==="gun");if(g){const o=g.o.find(x=>x[0]==="okul");if(o){o[1]="🎓";o[2]="Üniversitedeyim";}}
-  ONB.splice(ONB.indexOf("likes"),0,"uni");})();
-(function(){const _o=onbRender;onbRender=function(){_o.apply(this,arguments);try{if(ONB[onbI]!=="uni")return;const O=document.getElementById("onb"),In=O.querySelector(".ob-in");if(!In)return;const P=st.prof=st.prof||{kacin:[]};
+  ONB.splice(ONB.indexOf("likes"),0,"rol");})();
+(function(){const _o=onbRender;onbRender=function(){_o.apply(this,arguments);try{const O=document.getElementById("onb"),In=O.querySelector(".ob-in");if(!In)return;const P=st.prof=st.prof||{kacin:[]},k=ONB[onbI];
+  if(k==="family"&&(P.rol==="ogr"||P.rol==="yok")){const c=[...In.querySelectorAll(".lcard.t-sky")].find(x=>/Çocukların/.test(x.textContent));if(c)c.remove();}
+  if(k!=="rol")return;
   const dots=ONB.slice(1,-1).map((x,i)=>`<i class="${i<onbI?"on":""}${i===onbI-1?" cur":""}"></i>`).join("");
-  const w=document.createElement("div");w.innerHTML=`<div class="ob-head"><div class="ob-dots">${dots}</div><button type="button" class="ob-skip" id="ob-skip2">Atla</button></div><h2 class="ob-t">Şu sıralar okuyor musun?</h2><p class="ob-sub">Üniversitedeysen uygulamayı biraz da kampüs hayatına göre ayarlayayım.</p>
-   <div class="ob-uni">${[["evet","🎓","Evet, üniversitedeyim","Ders programı, sınavlar, odak, harçlık"],["hayir","🌷","Hayır","Böyle devam"]].map(([v,e,l,s])=>`<button type="button" data-obu="${v}" aria-pressed="${P.uni===v}"><span class="no-mi">${e}</span><b>${l}</b><small>${s}</small></button>`).join("")}</div>
-   <p class="ob-uni-n">💡 ${SU_UNI_S}</p>`;
+  const w=document.createElement("div");w.innerHTML=`<div class="ob-head"><div class="ob-dots">${dots}</div><button type="button" class="ob-skip" id="ob-skip2">Atla</button></div><h2 class="ob-t">${SU_ROL_T}</h2><p class="ob-sub">Ana sayfanı buna göre kuracağım.</p>
+   <div class="ob-rol">${SU_ROL.map(([v,e,l,sb],i)=>`<button type="button" data-obr="${v}" class="r-${v}" aria-pressed="${P.rol===v}" style="--i:${i}"><span class="no-mi">${e}</span><b>${l}</b><small>${sb}</small><i></i></button>`).join("")}</div>
+   <p class="ob-uni-n">💡 ${SU_ROL_N}</p>`;
   In.prepend(...w.childNodes);document.getElementById("ob-skip2").onclick=()=>{onbI=Math.min(ONB.length-1,onbI+1);onbRender();};
-  In.querySelectorAll("[data-obu]").forEach(b=>b.onclick=()=>{P.uni=b.dataset.obu;if(P.uni==="evet"&&!P.gun)P.gun="okul";save();In.querySelectorAll("[data-obu]").forEach(x=>x.setAttribute("aria-pressed",x===b));setTimeout(()=>{const n=document.getElementById("ob-next");if(n)n.click();},380);});}catch(e){console.error(e);}};})();
-document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest(".tn-o");if(!b)return;const q=TN_Q[tnI];setTimeout(()=>{try{const P=prof();if(b.dataset.v==="okul"&&!P.uni){P.uni="evet";save();}
-  if(q&&q.k==="uni"&&b.dataset.v==="evet")mfConfetti("“Derslerim” köşen açıldı 🎓 Ana sayfanda seni bekliyor",["#6C63FF","#F5C04A","#FF6F91"],"#2B2160");}catch(_){}},0);},true);
+  In.querySelectorAll("[data-obr]").forEach(b=>b.onclick=()=>{suRolSet(b.dataset.obr);In.querySelectorAll("[data-obr]").forEach(x=>x.setAttribute("aria-pressed",x===b));b.classList.add("pick");setTimeout(()=>{const n=document.getElementById("ob-next");if(n)n.click();},420);});}catch(e){console.error(e);}};})();
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest(".tn-o");if(!b)return;const q=TN_Q[tnI];setTimeout(()=>{try{if(q&&q.k==="rol"){suRolSet(b.dataset.v);suRolCheer(b.dataset.v);}}catch(_){}},0);},true);
 
 /* ---------- hatırlatma: yarın sınav ---------- */
 (function(){const _c=mfPopCands;mfPopCands=function(){const L=_c.apply(this,arguments);try{if(!stuOn())return L;const S=mfPopSeen(),h=new Date().getHours();if(h<10||h>=22)return L;
