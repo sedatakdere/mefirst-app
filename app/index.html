@@ -6181,82 +6181,87 @@ html[data-mf="dusk"] .kto h3{color:#F5E1CC}html[data-mf="dusk"] .kto p{color:#E0
 #ktpanel .ktsh .ktc,#ktpanel .ktsh .kti,#ktpanel .rdsh .ktsp{cursor:pointer}
 .bkp-chips .bkp-pr{all:unset;cursor:pointer;font-size:12px;font-weight:800;padding:5px 12px;border-radius:99px;background:linear-gradient(135deg,#E58AA6,#B5486E);color:#fff;box-shadow:0 3px 10px rgba(181,72,110,.25)}
 
-/* Bal bahçesi */
+/* Bal bahçesi 3D */
 .kb-ari{--a:#FFC24A;--b:#E0762A;min-height:118px}
 .kb-ari .kb-tx b{font-size:24px}
 .kb-new{position:absolute;left:14px;top:12px;z-index:2;font-size:10px;font-weight:900;letter-spacing:.12em;padding:4px 9px;border-radius:99px;background:#fff;color:#D2622A;box-shadow:0 4px 10px -4px rgba(0,0,0,.3);animation:abNew 2.4s ease-in-out infinite}
 @keyframes abNew{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
-.kb-ari .kb-art{width:140px!important;height:84px!important}
+.kb-ari .kb-art{width:150px!important;height:90px!important}
 .kb-bee1{animation:abHov 2.2s ease-in-out infinite}.kb-bee2{animation:abHov 1.8s ease-in-out .4s infinite}
 @keyframes abHov{0%,100%{translate:0 0}50%{translate:4px -5px}}
-#zsh.pzmode .ab{margin-top:44px;flex:1;min-height:0;display:flex;flex-direction:column;gap:8px}
-.ab-hd{flex:none;display:flex;justify-content:space-between;align-items:center;border-radius:22px;padding:10px 14px;color:#fff;background:radial-gradient(70% 70% at 100% 0%,rgba(255,255,255,.35),transparent 60%),linear-gradient(140deg,#FFC24A,#E0762A);box-shadow:0 14px 26px -18px #E0762A}
+#zsh.pzmode .ab{margin-top:44px;flex:1;min-height:0;display:flex;flex-direction:column;gap:8px;position:relative}
+.ab-hd{flex:none;display:flex;justify-content:space-between;align-items:center;border-radius:22px;padding:9px 14px;color:#fff;background:radial-gradient(70% 70% at 100% 0%,rgba(255,255,255,.35),transparent 60%),linear-gradient(140deg,#FFC24A,#E0762A);box-shadow:0 14px 26px -18px #E0762A}
 .ab-hd small{display:block;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.92}
 .ab-hd>div>b{font-family:var(--f-display);font-weight:400;font-size:22px}
 .ab-hd .mg-st b{font-size:12px}
 .ab-help{flex:none;margin:0;font-size:12.5px;line-height:1.35;padding:8px 12px;border-radius:14px;background:color-mix(in srgb,#FFC24A 18%,var(--surface));color:var(--ink);text-align:center}
-.ab-top{flex:none;display:flex;flex-direction:column;gap:8px}
-.ab-hv{display:flex;align-items:stretch;gap:10px}
-.ab-cur{flex:none;display:flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:20px;background:var(--surface);border:2px solid var(--h);box-shadow:0 8px 18px -12px var(--h)}
-.ab-cur.pop{animation:abPop .5s cubic-bezier(.2,1.6,.4,1)}
-@keyframes abPop{0%{transform:scale(.85)}100%{transform:scale(1)}}
-.ab-hive{width:54px;height:56px}.ab-hive svg{width:100%;height:100%}
-.ab-hs{display:flex;gap:4px}
-.ab-hs i{width:18px;height:20px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:color-mix(in srgb,var(--fc) 18%,#EDE4D6);transition:background .3s}
-.ab-hs i.on{background:var(--fc);animation:abPop .35s ease}
-.ab-cur small{display:none}
-.ab-q{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:2px;padding:4px 10px;border-radius:20px;background:color-mix(in srgb,var(--surface) 70%,transparent);border:1px solid var(--line)}
-.ab-q small{font-size:11px;font-weight:800;opacity:.65}
-.ab-q>div{display:flex;gap:4px;align-items:center}
-.ab-mh{width:34px;height:36px;opacity:calc(1 - var(--k)*.18)}.ab-mh svg{width:100%;height:100%}
-.ab-fin{font-size:26px}
-.ab-wt{display:grid;grid-template-columns:repeat(var(--s),1fr);gap:6px;max-width:calc(var(--s)*54px);margin:0 auto;width:100%}
-.ab-sl{aspect-ratio:1.1;max-height:46px;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);background:color-mix(in srgb,#FFC24A 22%,var(--surface));display:grid;place-items:center;position:relative}
-.ab-sl::after{content:"";position:absolute;inset:3px;clip-path:inherit;background:color-mix(in srgb,#FFC24A 8%,var(--surface))}
-.ab-sl.warn{animation:abWarn 1s ease-in-out infinite}
-@keyframes abWarn{50%{background:#F5A0A0}}
-.ab-sl i{position:relative;z-index:1;width:72%;height:72%;animation:abPop .35s ease}.ab-sl i svg{width:100%;height:100%}
-.ab-area{flex:1;min-height:0;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.ab-gate{flex:none;height:18px;font-size:10.5px;font-weight:800;letter-spacing:.06em;color:#B9772A;opacity:.85;text-align:center}
-.ab-bd{display:grid;grid-template-columns:repeat(var(--C),var(--cs,40px));grid-auto-rows:var(--cs,40px);background-size:cover;background-position:center;border-radius:18px;overflow:hidden;box-shadow:0 18px 30px -20px rgba(60,40,10,.6),0 0 0 4px #fff;position:relative}
-.ab-c{position:relative;border:0;padding:0;margin:0;background:none;font:inherit;display:grid;place-items:center;-webkit-tap-highlight-color:transparent}
-.ab-c::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,#C9EBA8,#A6D88A);transition:opacity .6s ease}
-.ab-c.g2::before{background:linear-gradient(160deg,#BEE39C,#98CF7E)}
-.ab-c.clr::before{opacity:0}
-.ab-c svg{position:relative;width:84%;height:84%;transition:transform .2s,filter .3s}
-.ab-c.it{cursor:pointer}
-.ab-c.it:not(.free) svg{filter:saturate(.75) brightness(.9);opacity:.8;transform:scale(.78)}
-.ab-c.it.free svg{animation:abBob 2.6s ease-in-out var(--d) infinite;filter:drop-shadow(0 3px 4px rgba(0,0,0,.18))}
-@keyframes abBob{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.06) rotate(8deg)}}
-.ab-c.it.free:active svg{transform:scale(.9)}
-.ab-c.pick svg{animation:abPick .26s ease forwards!important}
-@keyframes abPick{to{transform:scale(0) rotate(90deg);opacity:0}}
-.ab-c.no svg{animation:abNo .35s ease!important}
-@keyframes abNo{20%,60%{transform:translateX(-4px) scale(.78)}40%,80%{transform:translateX(4px) scale(.78)}}
-.ab-c.hint::after{content:"";position:absolute;inset:2px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 3px #FFC24A;animation:abHint .8s ease-in-out 3}
-@keyframes abHint{50%{transform:scale(1.15);opacity:.4}}
-.ab-c.rk svg{width:92%;height:92%}
-.ab-bd.won .ab-c.rk::before,.ab-bd.won .ab-c.rk svg{opacity:0;transition:opacity .8s}
-.ab-bd.won{animation:abGlow 1.2s ease}
-@keyframes abGlow{50%{box-shadow:0 0 0 4px #fff,0 0 40px 8px #FFC24A}}
-.ab-bee{position:fixed;left:0;top:0;width:40px;height:32px;z-index:9999;pointer-events:none}
+.ab-holes{flex:none;display:flex;align-items:center;gap:10px;padding:4px 2px}
+.ab-act{flex:1;display:flex;justify-content:space-around;align-items:center;gap:6px;perspective:500px}
+.ab-hl{position:relative;width:70px;height:70px;display:grid;place-items:center;animation:abIn .45s cubic-bezier(.2,1.5,.4,1)}
+.ab-hring{position:absolute;inset:0;border-radius:50%;transform:rotateX(52deg);background:radial-gradient(circle at 50% 46%,#24160C 0 40%,#3A2414 41% 45%,var(--c) 46% 63%,var(--cf) 64% 72%,transparent 73%);box-shadow:0 10px 12px -8px rgba(0,0,0,.4)}
+.ab-hl b{position:relative;z-index:1;margin-top:-4px;color:#fff;font:900 17px var(--f-body),system-ui;text-shadow:0 2px 3px rgba(0,0,0,.6)}
+.ab-hl.hit .ab-hring{animation:abHit .3s ease}
+@keyframes abHit{50%{transform:rotateX(52deg) scale(1.12)}}
+.ab-hl.pull{animation:abIn .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes abIn{0%{transform:scale(.2);opacity:0}100%{transform:scale(1);opacity:1}}
+.ab-fin{font-size:36px}
+.ab-qn{flex:none;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 10px;border-radius:16px;background:color-mix(in srgb,var(--surface) 75%,transparent);border:1px solid var(--line)}
+.ab-qn small{font-size:10px;font-weight:800;opacity:.6;text-transform:uppercase;letter-spacing:.08em}
+.ab-qn div{display:flex;gap:3px}.ab-qn i{width:10px;height:10px;border-radius:50%;box-shadow:inset 0 -2px 0 rgba(0,0,0,.2)}
+.ab-qn b{font-size:11px;font-weight:800;opacity:.75}
+.ab-tray-w{flex:none;display:flex;align-items:center;justify-content:center;gap:8px}
+.ab-tray{display:grid;grid-template-columns:repeat(var(--n),1fr);gap:4px;padding:6px;border-radius:14px;background:linear-gradient(180deg,#C99A62,#A87A48);box-shadow:inset 0 2px 4px rgba(0,0,0,.25),0 6px 12px -8px rgba(80,50,20,.6);width:min(100%,calc(var(--n)*34px + 12px))}
+.ab-ts{aspect-ratio:1;border-radius:6px;background:rgba(60,35,15,.28);box-shadow:inset 0 2px 3px rgba(0,0,0,.25)}
+.ab-ts.on{background:linear-gradient(180deg,var(--ct) 0 38%,var(--c) 38% 72%,var(--cf) 72%);box-shadow:0 2px 3px rgba(0,0,0,.25),inset 0 0 0 1px rgba(255,255,255,.25);animation:abIn .3s ease}
+.ab-tray-w small{font-size:11.5px;font-weight:800;opacity:.6;min-width:28px}
+.ab-tray-w small.warn{color:#D9455F;opacity:1}
+.ab-stage{flex:1;min-height:0;width:100%;display:grid;place-items:center;perspective:1000px;perspective-origin:50% 0%;position:relative}
+.ab-bd{--cs:44px;position:relative;transform-style:preserve-3d;transform:rotateX(36deg);display:grid;grid-template-columns:repeat(var(--C),var(--cs));grid-auto-rows:var(--cs);padding:8px;border-radius:18px;background:#7DB862;box-shadow:0 0 0 5px #64A04B,0 30px 34px -14px rgba(60,40,10,.55);margin-top:-6%}
+.ab-bd::before{content:"";position:absolute;inset:8px;background:var(--pic,linear-gradient(#FFE7C2,#F7C9D9)) center/100% 100% no-repeat;image-rendering:pixelated;border-radius:3px}
+.ab-cell{position:relative;transform-style:preserve-3d;-webkit-tap-highlight-color:transparent}
+.ab-cell::before{content:"";position:absolute;inset:0;background:#B8E096;transition:opacity .7s ease}
+.ab-cell.g2::before{background:#A9D686}
+.ab-cell.o::before{opacity:0}
+.ab-cell.st{cursor:pointer}
+.ab-stk{position:absolute;inset:0;transform-style:preserve-3d;--h:calc(var(--cs)*.3)}
+.ab-cube{position:absolute;inset:calc(var(--cs)*.07);transform-style:preserve-3d;transform:translateZ(calc(var(--k)*var(--h)));transition:transform .28s ease,opacity .28s ease}
+.ab-cube i{position:absolute;display:block}
+.ab-cube .t{inset:0;border-radius:calc(var(--cs)*.12);background:linear-gradient(135deg,var(--ct),var(--c));transform:translateZ(var(--h));box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35)}
+.ab-cube .f{left:0;right:0;bottom:0;height:var(--h);transform-origin:bottom;transform:rotateX(-90deg);background:var(--cf);border-radius:0 0 4px 4px}
+.ab-cube .l{top:0;bottom:0;left:0;width:var(--h);transform-origin:left;transform:rotateY(-90deg);background:var(--cside)}
+.ab-cube .r{top:0;bottom:0;right:0;width:var(--h);transform-origin:right;transform:rotateY(90deg);background:var(--cside)}
+.ab-cube .t b{position:absolute;inset:18%;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.55),transparent 60%)}
+.ab-cell.blk .ab-cube .t,.ab-cell.blk .ab-cube .f{filter:brightness(.84) saturate(.9)}
+.ab-cell.st:not(.blk) .ab-cube:last-child .t::after{content:"";position:absolute;inset:-1px;border-radius:inherit;box-shadow:0 0 0 2px #fff;opacity:.85;animation:abGlowR 2s ease-in-out infinite}
+@keyframes abGlowR{50%{opacity:.25}}
+.ab-cube.go{opacity:0;transform:translateZ(calc(var(--k)*var(--h) + var(--cs)*.9)) scale(.5)}
+.ab-cell.no .ab-stk{animation:abNo .35s ease}
+@keyframes abNo{20%,60%{transform:translateX(-4px)}40%,80%{transform:translateX(4px)}}
+.ab-cell.hint .ab-stk{animation:abHintJ .6s ease-in-out 4}
+@keyframes abHintJ{50%{transform:translateZ(calc(var(--cs)*.35))}}
+.ab-bush{position:absolute;left:-6%;right:-6%;bottom:8%;height:112%;transform-origin:bottom;transform:rotateX(-58deg)}
+.ab-bush svg{width:100%;height:100%;display:block}
+.ab-bd.won .ab-cell.rk::before,.ab-bd.won .ab-bush{opacity:0;transition:opacity .9s}
+.ab-bd.won{animation:abGlow 1.4s ease}
+@keyframes abGlow{50%{box-shadow:0 0 0 5px #fff,0 0 50px 10px #FFC24A}}
+.ab-bee{position:fixed;left:0;top:0;width:36px;height:30px;z-index:9999;pointer-events:none;filter:drop-shadow(0 8px 4px rgba(0,0,0,.22))}
 .ab-bee svg{width:100%;height:100%;overflow:visible}
-.ab-bee .w1,.ab-bee .w2{animation:abWing .08s linear infinite alternate;transform-origin:center bottom}
-@keyframes abWing{to{transform:scaleY(.4)}}
-.ab-bee i{position:absolute;left:12px;bottom:-4px;width:12px;height:12px;border-radius:50%;box-shadow:inset -2px -2px 0 rgba(0,0,0,.15),0 0 0 2px #fff}
-.ab-toast{position:absolute;left:50%;bottom:8px;transform:translate(-50%,10px);max-width:90%;padding:8px 14px;border-radius:99px;background:rgba(45,30,20,.88);color:#fff;font-size:12.5px;font-weight:700;opacity:0;pointer-events:none;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.ab-toast.on{animation:abT 2.2s ease}
+.ab-bee .w1,.ab-bee .w2{animation:abWing .07s linear infinite alternate;transform-box:fill-box;transform-origin:center bottom}
+@keyframes abWing{to{transform:scaleY(.35)}}
+.ab-bee i{position:absolute;left:10px;bottom:-7px;width:13px;height:13px;border-radius:3px;background:linear-gradient(180deg,var(--ct) 0 40%,var(--c) 40% 75%,var(--cf) 75%);box-shadow:0 0 0 1.5px rgba(255,255,255,.9)}
+.ab-toast{position:absolute;left:50%;bottom:52px;transform:translate(-50%,10px);max-width:92%;padding:8px 14px;border-radius:99px;background:rgba(45,30,20,.88);color:#fff;font-size:12.5px;font-weight:700;opacity:0;pointer-events:none;text-align:center;z-index:6}
+.ab-toast.on{animation:abT 2.4s ease}
 @keyframes abT{10%,80%{opacity:1;transform:translate(-50%,0)}100%{opacity:0}}
-.ab-ov{position:absolute;inset:0;display:grid;place-items:end center;padding-bottom:12px;background:linear-gradient(180deg,transparent 35%,rgba(40,25,10,.35));border-radius:18px;z-index:5}
+.ab-ov{position:absolute;inset:0;display:grid;place-items:end center;padding-bottom:58px;background:linear-gradient(180deg,transparent 40%,rgba(40,25,10,.35));z-index:7;border-radius:18px}
 .ab-ov[hidden]{display:none}
-.ab-card{width:min(300px,90%);display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:20px 18px;border-radius:24px;background:var(--surface);box-shadow:0 24px 40px -20px rgba(0,0,0,.5);animation:abPop .5s cubic-bezier(.2,1.6,.4,1)}
+.ab-card{width:min(310px,92%);display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:20px 18px;border-radius:24px;background:var(--surface);box-shadow:0 24px 40px -20px rgba(0,0,0,.5);animation:abIn .5s cubic-bezier(.2,1.6,.4,1)}
 .ab-card>b{font-family:var(--f-display);font-weight:400;font-size:26px;color:var(--ink)}
 .ab-card small{font-size:13px;line-height:1.4;color:var(--muted)}
 .ab-st{font-size:28px;letter-spacing:4px}
 .ab-next{width:100%;margin-top:6px;background:linear-gradient(140deg,#FFC24A,#E0762A)!important;color:#fff!important;border:0!important}
 .ab-look{all:unset;cursor:pointer;font-size:13px;font-weight:700;color:var(--muted);padding:6px}
-.ab-cf{position:absolute;top:-10px;width:8px;height:12px;border-radius:2px;background:var(--c);z-index:6;pointer-events:none;animation:abCf 2.2s ease-in var(--d) forwards}
-@keyframes abCf{to{transform:translate(var(--x),110vh) rotate(540deg)}}
+.ab-cf{position:absolute;top:0;width:8px;height:12px;border-radius:2px;background:var(--c);z-index:6;pointer-events:none;animation:abCf 2.4s ease-in var(--d) forwards}
+@keyframes abCf{to{transform:translate(var(--x),90vh) rotate(540deg)}}
 .ab-tools{flex:none;display:flex;gap:6px;justify-content:center}
 .ab-tools .pill{padding:8px 12px;font-size:13px}
 .ab-tools .pill:disabled{opacity:.45}
@@ -13269,97 +13274,120 @@ window.addEventListener("click",e=>{const T=e.target;if(!T||!T.closest)return;if
  else{const r=T.closest("#ktpanel .ktsh");if(r&&(T.closest(".ktc,.kti")||T===r)){const st=r.querySelector(".kti strong"),sm=r.querySelector(".kti small");t=st?st.textContent:"";a=sm?sm.textContent:"";}}
  if(!t)return;e.preventDefault();e.stopImmediatePropagation();try{bookOpenAny(t,a);}catch(err){console.error(err);}},true);
 
-/* ===== Bal bahçesi: arılar çiçekleri kendi renkteki kovana taşır, altından resim çıkar ===== */
+/* ===== Bal bahçesi 3D: arılar küpleri kendi renkteki kovan deliklerine taşır, altından piksel resim çıkar ===== */
 const AB_COL=["#F06A9B","#9B7BE0","#F5B83D","#3DBE98","#4F9FE6","#F2804A"];
 const AB_CN=["pembe","lila","sarı","yeşil","mavi","turuncu"];
-let AB=null,ABT=[];
+let AB=null;
+function abMix(h,t,a){const p=x=>parseInt(x,16);const A=[p(h.slice(1,3)),p(h.slice(3,5)),p(h.slice(5,7))],B=[p(t.slice(1,3)),p(t.slice(3,5)),p(t.slice(5,7))];return "#"+A.map((v,i)=>Math.round(v+(B[i]-v)*a).toString(16).padStart(2,"0")).join("");}
+const AB_V=AB_COL.map(c=>`--c:${c};--ct:${abMix(c,"#ffffff",.28)};--cf:${abMix(c,"#000000",.28)};--cside:${abMix(c,"#000000",.16)}`);
 function abRng(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return ((t^t>>>14)>>>0)/4294967296;};}
-function abCfg(lv){if(lv<=1)return {c:5,r:6,k:3,sw:0,rk:0,op:3};if(lv<=2)return {c:6,r:7,k:3,sw:1,rk:0,op:3};if(lv<=5)return {c:6,r:8,k:4,sw:2,rk:lv>=4?2:0,op:0};
- if(lv<=10)return {c:7,r:8,k:5,sw:3,rk:3,op:2};return {c:7,r:9,k:6,sw:4+Math.min(3,Math.floor((lv-11)/5)),rk:4,op:2};}
+function abCfg(lv){if(lv<=1)return {c:5,r:6,k:3,mx:2,sw:0,rk:0,op:3,tr:8};if(lv<=2)return {c:6,r:7,k:3,mx:3,sw:1,rk:0,op:2,tr:8};if(lv<=5)return {c:6,r:8,k:4,mx:3,sw:2,rk:lv>=4?2:0,op:1,tr:7};
+ if(lv<=10)return {c:7,r:8,k:5,mx:3,sw:3,rk:3,op:1,tr:7};return {c:7,r:9,k:6,mx:3,sw:4+Math.min(4,Math.floor((lv-11)/4)),rk:4,op:1,tr:lv>=20?6:7};}
 function abReach(G,C,R){const re=new Uint8Array(C*R),q=[];for(let x=0;x<C;x++)if(G[x]===-1){re[x]=1;q.push(x);}
  while(q.length){const i=q.pop(),x=i%C,y=(i-x)/C;const N=[x>0?i-1:-1,x<C-1?i+1:-1,y>0?i-C:-1,y<R-1?i+C:-1];for(const j of N)if(j>=0&&!re[j]&&G[j]===-1){re[j]=1;q.push(j);}}return re;}
-function abIsFree(G,C,R,re,i){const x=i%C,y=(i-x)/C;if(y===0)return true;return (x>0&&re[i-1])||(x<C-1&&re[i+1])||re[i-C]||(y<R-1&&re[i+C]);}
+function abIsFree(G,C,R,re,i){const x=i%C,y=(i-x)/C;if(y===0)return true;return !!((x>0&&re[i-1])||(x<C-1&&re[i+1])||re[i-C]||(y<R-1&&re[i+C]));}
 function abFreeAll(G,C,R){const re=abReach(G,C,R),F=new Uint8Array(C*R);for(let i=0;i<G.length;i++)if(G[i]>=0&&abIsFree(G,C,R,re,i))F[i]=1;return F;}
-function abSolve(L,S){const {C,R}=L,G=L.G.slice();let hi=0,fill=0,left=G.filter(v=>v>=0).length;const sl=[];
- while(left>0){const F=abFreeAll(G,C,R),fr=[];for(let i=0;i<G.length;i++)if(F[i])fr.push(i);const cur=L.H[hi];let pk=fr.find(i=>G[i]===cur);
-  if(pk===undefined){if(sl.length>=S)return false;const nx=L.H.slice(hi+1,hi+5);pk=fr.sort((a,b)=>{const x=nx.indexOf(G[a]),y=nx.indexOf(G[b]);return (x<0?9:x)-(y<0?9:y);})[0];if(pk===undefined)return false;sl.push(G[pk]);}else fill++;
-  G[pk]=-1;left--;while(fill===3){hi++;fill=0;if(hi>=L.H.length)break;const col=L.H[hi];for(let k=0;k<sl.length&&fill<3;){if(sl[k]===col){sl.splice(k,1);fill++;}else k++;}}}return true;}
+/* oyun durumu üzerinde tek hamle: yığının küpleri önce açık kovana, artanı bekleme alanına */
+function abCan(S,i){const c=S.G[i],n=S.N[i],h=S.act.find(a=>a.c===c),ab=h?Math.min(n,h.rem):0;return {ab,sp:n-ab,ok:n-ab<=S.cap-S.tray.length,h};}
+function abApply(S,i){const c=S.G[i],n=S.N[i],m=abCan(S,i);const ev={c,n,ab:m.ab,sp:m.sp,hid:m.h?m.h.id:-1,closed:[],pulled:[]};
+ if(m.h)m.h.rem-=m.ab;for(let k=0;k<m.sp;k++)S.tray.push(c);S.G[i]=-1;S.N[i]=0;
+ let ch=true;while(ch){ch=false;for(let a=0;a<S.act.length;a++){const h=S.act[a];if(h.rem===0){ev.closed.push(h.id);ch=true;
+   if(S.qi<S.H.length){const nh={id:S.qi,c:S.H[S.qi].c,rem:S.H[S.qi].need};S.qi++;let pl=0;for(let k=0;k<S.tray.length&&nh.rem>0;){if(S.tray[k]===nh.c){S.tray.splice(k,1);nh.rem--;pl++;}else k++;}if(pl)ev.pulled.push([nh.id,pl]);S.act[a]=nh;}else{S.act.splice(a,1);a--;}}}}
+ return ev;}
+function abState(L,cap){const S={C:L.C,R:L.R,G:L.G.slice(),N:L.N.slice(),H:L.H,qi:0,act:[],tray:[],cap};while(S.act.length<3&&S.qi<S.H.length){S.act.push({id:S.qi,c:S.H[S.qi].c,rem:S.H[S.qi].need});S.qi++;}return S;}
+function abBest(S){const F=abFreeAll(S.G,S.C,S.R);let b=-1,bs=1e9;for(let i=0;i<S.G.length;i++){if(!F[i])continue;const m=abCan(S,i);if(!m.ok)continue;const sc=m.sp*10-m.ab*3+(m.h&&m.ab===m.h.rem?-4:0);if(sc<bs){bs=sc;b=i;}}return b;}
+function abSolve(L,cap){const S=abState(L,cap);let g=0;while(S.G.some(v=>v>=0)){if(g++>400)return false;const i=abBest(S);if(i<0)return false;abApply(S,i);}return true;}
 function abGen(lv){const f=abCfg(lv),C=f.c,R=f.r;
- for(let att=0;att<300;att++){const rnd=abRng(lv*7919+att*104729+13);const T=new Array(C*R).fill(-1);let rk=0,g=0;
-  const cnt=()=>{const re=abReach(T,C,R);let a=0,b=0;for(let j=0;j<T.length;j++)if(T[j]===-1){a++;if(re[j])b++;}return a===b;};
-  while(rk<f.rk&&g++<500){const i=C*2+Math.floor(rnd()*(C*(R-2)));if(T[i]===-1){T[i]=-2;if(cnt())rk++;else T[i]=-1;}}
-  let N=C*R-rk-f.op;N-=N%3;const P=[];let ok=true;
-  for(let k=0;k<N;k++){const cand=[];for(let i=0;i<T.length;i++){if(T[i]!==-1)continue;T[i]=0;const re=abReach(T,C,R);let con=true;for(let j=0;j<T.length;j++)if(T[j]===-1&&!re[j]){con=false;break;}if(con&&abIsFree(T,C,R,re,i))cand.push(i);T[i]=-1;}
-   if(!cand.length){ok=false;break;}let tw=0;const W=cand.map(i=>{const w=Math.pow(Math.floor(i/C)+1,2.2)*(0.4+rnd());tw+=w;return w;});let r=rnd()*tw,pi=0;while(r>W[pi]&&pi<W.length-1){r-=W[pi];pi++;}
-   P.push(cand[pi]);T[cand[pi]]=0;}
-  if(!ok)continue;const Fo=P.slice().reverse(),H=[],pal=[0,1,2,3,4,5].sort(()=>rnd()-.5).slice(0,f.k);
-  for(let h=0;h<N/3;h++){let c;let t=0;do{c=h<f.k?pal[h]:pal[Math.floor(rnd()*f.k)];}while(H.length&&c===H[H.length-1]&&t++<20);H.push(c);}
-  const G=T.slice();Fo.forEach((i,t)=>G[i]=H[Math.floor(t/3)]);
-  const L={lv,C,R,G,H,N};const S=5;
-  for(let sw=f.sw;sw>=0;sw--){const G2=G.slice();let done=0,tries=0;while(done<sw&&tries++<60){const h=Math.floor(rnd()*(H.length-1));const a=Fo[h*3+Math.floor(rnd()*3)],b=Fo[(h+1)*3+Math.floor(rnd()*3)];if(G2[a]!==G2[b]){const x=G2[a];G2[a]=G2[b];G2[b]=x;done++;}}
-   const L2={...L,G:G2};if(abSolve(L2,lv<=2?2:lv<=5?3:S-1))return L2;}
+ for(let att=0;att<200;att++){const rnd=abRng(lv*7919+att*104729+29);const T=new Array(C*R).fill(-1);let rk=0,g=0;
+  const con=()=>{const re=abReach(T,C,R);for(let j=0;j<T.length;j++)if(T[j]===-1&&!re[j])return false;return true;};
+  while(rk<f.rk&&g++<500){const i=C*2+Math.floor(rnd()*(C*(R-2)));if(T[i]===-1){T[i]=-2;if(con())rk++;else T[i]=-1;}}
+  const M=C*R-rk-f.op,P=[];let ok=true;
+  for(let k=0;k<M;k++){const cand=[];for(let i=0;i<T.length;i++){if(T[i]!==-1)continue;T[i]=0;const re=abReach(T,C,R);let cc=true;for(let j=0;j<T.length;j++)if(T[j]===-1&&!re[j]){cc=false;break;}if(cc&&abIsFree(T,C,R,re,i))cand.push(i);T[i]=-1;}
+   if(!cand.length){ok=false;break;}let tw=0;const W=cand.map(i=>{const w=Math.pow(Math.floor(i/C)+1,2.2)*(0.4+rnd());tw+=w;return w;});let r=rnd()*tw,pi=0;while(r>W[pi]&&pi<W.length-1){r-=W[pi];pi++;}P.push(cand[pi]);T[cand[pi]]=0;}
+  if(!ok)continue;
+  const Fo=P.slice().reverse(),pal=[0,1,2,3,4,5].sort(()=>rnd()-.5).slice(0,f.k);
+  const col=[],num=[];for(let t=0;t<M;t++){col.push(t&&rnd()<.4?col[t-1]:pal[Math.floor(rnd()*f.k)]);num.push(1+Math.floor(rnd()*f.mx));}
+  const H=[];let act=[];const open=t=>{const ac=new Set(act.map(h=>H[h].c));let c=null;for(let u=t;u<M;u++)if(!ac.has(col[u])){c=col[u];break;}if(c===null){const o=pal.filter(x=>!ac.has(x));c=o.length?o[Math.floor(rnd()*o.length)]:pal[0];}H.push({c,need:0,cap:5+Math.floor(rnd()*6)});act.push(H.length-1);};
+  for(let k=0;k<3;k++)open(0);
+  for(let t=0;t<M;t++){const c=col[t];let h=act.find(x=>H[x].c===c);
+   if(h===undefined){const z=act.find(x=>H[x].need===0);if(z!==undefined){H[z].c=c;h=z;}else{const big=act.reduce((a,b)=>H[a].need>=H[b].need?a:b);act=act.filter(x=>x!==big);open(t);h=act[act.length-1];H[h].c=c;}}
+   H[h].need+=num[t];if(H[h].need>=H[h].cap&&t<M-1){act=act.filter(x=>x!==h);open(t+1);}}
+  const Hs=H.filter(h=>h.need>0).map(h=>({c:h.c,need:h.need}));
+  const G=T.slice(),N=new Array(C*R).fill(0);Fo.forEach((i,t)=>{G[i]=col[t];N[i]=num[t];});
+  const L={lv,C,R,G,N,H:Hs,cap:f.tr};if(!abSolve(L,f.tr))continue;
+  for(let sw=f.sw;sw>=0;sw--){const G2=G.slice();let d=0,tr=0;while(d<sw&&tr++<80){const t=Math.floor(rnd()*(M-4)),u=t+1+Math.floor(rnd()*4);const a=Fo[t],b=Fo[u];if(G2[a]!==G2[b]&&N[a]===N[b]){const x=G2[a];G2[a]=G2[b];G2[b]=x;d++;}}
+   const L2={...L,G:G2};if(abSolve(L2,Math.max(3,f.tr-(lv<=2?4:2))))return L2;}
  }
- const n=C*R-(C*R)%3,G=new Array(C*R).fill(-1);for(let i=0;i<n;i++)G[i]=0;return {lv,C,R,G,H:new Array(n/3).fill(0),N:n};}
-function abPic(lv){const a=JART[(lv-1)%JART.length],dc=DCOL[(lv*3)%DCOL.length][1];return [a[0],"data:image/svg+xml;charset=utf-8,"+encodeURIComponent(a[1].split("{dc}").join(dc))];}
+ const G=new Array(C*R).fill(0),N=new Array(C*R).fill(1);return {lv,C,R,G,N,H:[{c:0,need:C*R}],cap:f.tr};}
+function abPicSrc(lv){const a=JART[(lv-1)%JART.length],dc=DCOL[(lv*3)%DCOL.length][1];return [a[0],"data:image/svg+xml;charset=utf-8,"+encodeURIComponent(a[1].split("{dc}").join(dc))];}
+function abPixel(A){try{const im=new Image();im.onload=()=>{try{const w=A.C*4,h=A.R*4,cv=document.createElement("canvas");cv.width=w;cv.height=h;const g=cv.getContext("2d");const s=Math.max(w/im.width,h/im.height),dw=im.width*s,dh=im.height*s;g.drawImage(im,(w-dw)/2,(h-dh)/2,dw,dh);
+ const d=g.getImageData(0,0,w,h),q=d.data;for(let k=0;k<q.length;k+=4){for(let c=0;c<3;c++)q[k+c]=Math.min(255,Math.round(q[k+c]/24)*24+6);}g.putImageData(d,0,0);A.px=cv.toDataURL();const b=document.getElementById("ab-bd");if(b&&AB===A)b.style.setProperty("--pic",`url(${A.px})`);}catch(e){}};im.src=A.pic[1];}catch(e){}}
 function abLvSaved(){return Math.max(1,((st.games2||{}).ariLv)|0||1);}
-function abNew(lv){const L=abGen(lv);AB={...L,G:L.G.slice(),G0:L.G.slice(),hi:0,fill:0,slots:[],S:5,hint:3,plus:1,mv:0,end:0,pic:abPic(lv)};}
-const AB_FL='<svg viewBox="0 0 40 40" aria-hidden="true"><g fill="var(--fc)"><circle cx="20" cy="9.5" r="8"/><circle cx="30" cy="16.8" r="8"/><circle cx="26.2" cy="28.6" r="8"/><circle cx="13.8" cy="28.6" r="8"/><circle cx="10" cy="16.8" r="8"/></g><g fill="#fff" opacity=".28"><circle cx="18" cy="7" r="3"/><circle cx="8" cy="15" r="2.6"/></g><circle cx="20" cy="20" r="6.6" fill="var(--fm,#FFE27A)"/><circle cx="18.2" cy="18.2" r="2" fill="#fff" opacity=".75"/></svg>';
-const AB_RK='<svg viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="20" cy="33" rx="15" ry="4" fill="rgba(0,0,0,.15)"/><circle cx="13" cy="22" r="10" fill="#5E9E4E"/><circle cx="27" cy="21" r="10" fill="#4E8C42"/><circle cx="20" cy="14" r="10" fill="#6BB05A"/><circle cx="16" cy="11" r="3" fill="#fff" opacity=".2"/><circle cx="24" cy="20" r="2" fill="#F06A9B"/><circle cx="14" cy="24" r="2" fill="#F5B83D"/></svg>';
+function abNew(lv){const L=abGen(lv),S=abState(L,L.cap);AB={...S,lv,L,cap0:L.cap,mv:0,end:0,hint:3,plus:1,pic:abPicSrc(lv),px:"",G0:L.G.slice(),busy:0};abPixel(AB);}
+function abCube(k,top){return `<div class="ab-cube" style="--k:${k}"><i class="f"></i><i class="l"></i><i class="r"></i><i class="t">${top?"<b></b>":""}</i></div>`;}
+const AB_BUSH='<svg viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="20" cy="35" rx="15" ry="4" fill="rgba(0,0,0,.18)"/><circle cx="12" cy="24" r="10" fill="#4E8C42"/><circle cx="28" cy="23" r="10" fill="#437D38"/><circle cx="20" cy="15" r="11" fill="#5FA34F"/><circle cx="16" cy="11" r="3.5" fill="#fff" opacity=".22"/><circle cx="25" cy="21" r="2.2" fill="#F06A9B"/><circle cx="13" cy="25" r="2.2" fill="#F5B83D"/><circle cx="20" cy="27" r="2" fill="#fff"/></svg>';
 const AB_BEE='<svg viewBox="0 0 44 36" aria-hidden="true"><ellipse class="w1" cx="16" cy="9" rx="8" ry="6" fill="#fff" opacity=".9"/><ellipse class="w2" cx="25" cy="8" rx="7" ry="5.5" fill="#E8F4FF" opacity=".85"/><ellipse cx="20" cy="20" rx="13" ry="9.5" fill="#FFC93C"/><path d="M14.5 11.5v17M21.5 10.8v18.4" stroke="#3A2A1A" stroke-width="3.6"/><circle cx="31" cy="18" r="6" fill="#3A2A1A"/><circle cx="32.6" cy="16.4" r="1.5" fill="#fff"/><path d="M7.5 20.5l-5 1.2" stroke="#3A2A1A" stroke-width="2.2" stroke-linecap="round"/><path d="M33 12.5c1-3 3-4.5 5-4.5" stroke="#3A2A1A" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>';
-function abHive(c,big){return `<svg viewBox="0 0 80 84" aria-hidden="true"><ellipse cx="40" cy="80" rx="26" ry="3.5" fill="rgba(0,0,0,.12)"/><path d="M40 3v6" stroke="#8A5A1E" stroke-width="3" stroke-linecap="round"/><rect x="24" y="8" width="32" height="12" rx="6" fill="#F7C04A"/><rect x="16" y="19" width="48" height="14" rx="7" fill="#EFAE38"/><rect x="11" y="32" width="58" height="16" rx="8" fill="#F7C04A"/><rect x="14" y="47" width="52" height="15" rx="7.5" fill="#EFAE38"/><rect x="21" y="61" width="38" height="13" rx="6.5" fill="#E39E2E"/><path d="M33 74a7 6 0 0 1 14 0z" fill="#6B3E10"/><g opacity=".35" fill="#fff"><rect x="28" y="10" width="10" height="3" rx="1.5"/><rect x="19" y="35" width="12" height="3" rx="1.5"/></g><circle cx="40" cy="40" r="${big?10:11}" fill="${AB_COL[c]}" stroke="#fff" stroke-width="3"/></svg>`;}
-function abTopHTML(){const A=AB,done=A.hi>=A.H.length,c=done?A.H[A.H.length-1]:A.H[A.hi];
- const nx=A.H.slice(A.hi+1,A.hi+5);
- return `<div class="ab-hv"><div class="ab-cur${done?" done":""}" style="--h:${AB_COL[c]}"><div class="ab-hive">${abHive(c,1)}</div><div class="ab-hs">${[0,1,2].map(k=>`<i class="${done||k<A.fill?"on":""}" style="--fc:${AB_COL[c]}"></i>`).join("")}</div><small>${done?"Hepsi tamam!":`${AB_CN[c]} çiçek`}</small></div>
-  <div class="ab-q"><small>Sırada <b>${Math.max(0,A.H.length-A.hi-1)}</b></small><div>${nx.map((h,k)=>`<span class="ab-mh" style="--k:${k}">${abHive(h)}</span>`).join("")||'<span class="ab-fin no-mi">🍯</span>'}</div></div></div>
-  <div class="ab-wt" style="--s:${A.S}">${Array.from({length:A.S},(_,k)=>{const v=A.slots[k];return `<span class="ab-sl${v!==undefined?" on":""}${A.slots.length>=A.S-1&&v===undefined?" warn":""}">${v!==undefined?`<i style="--fc:${AB_COL[v]};--fm:${v===2?"#E0782B":"#FFE27A"}">${AB_FL}</i>`:""}</span>`;}).join("")}</div>`;}
-function abCells(){const A=AB,F=abFreeAll(A.G,A.C,A.R);return A.G0.map((v0,i)=>{const v=A.G[i],x=i%A.C,y=(i-x)/A.C,g=(x+y)%2?" g2":"";
- if(v0===-2)return `<span class="ab-c rk${g}" data-i="${i}">${AB_RK}</span>`;
- if(v<0)return `<span class="ab-c clr${g}" data-i="${i}"></span>`;
- return `<button type="button" class="ab-c it${g}${F[i]?" free":""}" data-i="${i}" style="--fc:${AB_COL[v]};--fm:${v===2?"#E0782B":"#FFE27A"};--d:${(i*37%20)/10}s" aria-label="${AB_CN[v]} çiçek">${AB_FL}</button>`;}).join("");}
-function abHTML(){if(!AB)abNew(abLvSaved());const A=AB,best=(st.games2||{}).ariLv||1;
+function abCellHTML(i,F){const A=AB,v=A.G[i],x=i%A.C,y=(i-x)/A.C,g=(x+y)%2?" g2":"";
+ if(A.G0[i]===-2)return `<div class="ab-cell rk${g}" data-i="${i}"><div class="ab-bush">${AB_BUSH}</div></div>`;
+ if(v<0)return `<div class="ab-cell o${g}" data-i="${i}"></div>`;
+ let h="";for(let k=0;k<A.N[i];k++)h+=abCube(k,k===A.N[i]-1);
+ return `<div class="ab-cell st${g}${F[i]?"":" blk"}" data-i="${i}" style="${AB_V[v]}" role="button" aria-label="${A.N[i]} ${AB_CN[v]} küp"><div class="ab-stk">${h}</div></div>`;}
+function abHoles(){const A=AB;const q=A.H.length-A.qi;
+ return `<div class="ab-act">${A.act.map(h=>`<div class="ab-hl" data-h="${h.id}" style="${AB_V[h.c]}"><span class="ab-hring"></span><b>${h.rem}</b></div>`).join("")}${!A.act.length?'<div class="ab-fin no-mi">🍯</div>':""}</div>
+  <div class="ab-qn"><small>Sırada</small><div>${A.H.slice(A.qi,A.qi+4).map(h=>`<i style="background:${AB_COL[h.c]}"></i>`).join("")}</div><b>${q?q+" kovan":"son kovanlar"}</b></div>`;}
+function abTray(){const A=AB;return Array.from({length:A.cap},(_,k)=>{const v=A.tray[k];return `<span class="ab-ts${v!==undefined?" on":""}"${v!==undefined?` style="${AB_V[v]}"`:""}></span>`;}).join("");}
+function abHTML(){if(!AB)abNew(abLvSaved());const A=AB,F=abFreeAll(A.G,A.C,A.R);
  return `<div class="ab"><div class="ab-hd"><div><small>Bal bahçesi</small><b>Bölüm ${A.lv}</b></div><div class="mg-st"><span>🖼 <b>${esc(A.pic[0])}</b></span><span>🐝 <b id="ab-mv">${A.mv}</b></span></div></div>
-  ${A.lv<=2?`<p class="ab-help">Yolu açık 🌼 çiçeğe dokun, arı onu <b>aynı renkteki kovana</b> taşısın. Renk tutmazsa petekte bekler; petekler dolmasın!</p>`:""}
-  <div class="ab-top" id="ab-top">${abTopHTML()}</div>
-  <div class="ab-area" id="ab-area"><div class="ab-gate"><span>🐝 · · · arılar yukarıdan uçar · · · 🐝</span></div><div class="ab-bd" id="ab-bd" style="--C:${A.C};--R:${A.R};background-image:url('${A.pic[1]}')">${abCells()}</div><div class="ab-toast" id="ab-toast"></div><div class="ab-ov" id="ab-ov" hidden></div></div>
-  <div class="ab-tools"><button type="button" class="pill" id="ab-re">↺ Baştan</button><button type="button" class="pill" id="ab-hint"${A.hint?"":" disabled"}>💡 İpucu <b>${A.hint}</b></button><button type="button" class="pill" id="ab-plus"${A.plus&&A.S<7?"":" disabled"}>🍯 Petek <b>+${A.plus}</b></button></div></div>`;}
-function abFit(){const a=document.getElementById("ab-area"),b=document.getElementById("ab-bd");if(!a||!b||!AB)return;const gh=22;const cs=Math.max(26,Math.floor(Math.min((a.clientWidth-4)/AB.C,(a.clientHeight-gh-4)/AB.R)));b.style.setProperty("--cs",cs+"px");}
+  ${A.lv<=2&&!A.mv?`<p class="ab-help" id="ab-help">Yolu açık bir küp yığınına dokun 🐝 arılar küpleri <b>aynı renkteki kovana</b> taşısın. Kovanı olmayan küpler alttaki rafta bekler; raf dolmasın!</p>`:""}
+  <div class="ab-holes" id="ab-holes">${abHoles()}</div>
+  <div class="ab-tray-w"><div class="ab-tray" id="ab-tray" style="--n:${A.cap}">${abTray()}</div><small id="ab-tc">${A.tray.length}/${A.cap}</small></div>
+  <div class="ab-stage" id="ab-stage"><div class="ab-bd" id="ab-bd" style="--C:${A.C};--R:${A.R}${A.px?`;--pic:url(${A.px})`:""}">${A.G0.map((_,i)=>abCellHTML(i,F)).join("")}</div></div>
+  <div class="ab-toast" id="ab-toast"></div><div class="ab-ov" id="ab-ov" hidden></div>
+  <div class="ab-tools"><button type="button" class="pill" id="ab-re">↺ Baştan</button><button type="button" class="pill" id="ab-hint"${A.hint?"":" disabled"}>💡 İpucu <b>${A.hint}</b></button><button type="button" class="pill" id="ab-plus"${A.plus?"":" disabled"}>🍯 Raf <b>+2</b></button></div></div>`;}
+function abFit(){const a=document.getElementById("ab-stage"),b=document.getElementById("ab-bd");if(!a||!b||!AB)return;const W=a.clientWidth,H=a.clientHeight;
+ const cs=Math.max(24,Math.min(64,Math.floor(Math.min((W-34)/AB.C,(H-26)/(AB.R*.8+.5)))));b.style.setProperty("--cs",cs+"px");}
 function abToast(t){const e=document.getElementById("ab-toast");if(!e)return;e.textContent=t;e.classList.remove("on");void e.offsetWidth;e.classList.add("on");}
-function abFly(from,to,col,cb){try{const r1=from.getBoundingClientRect(),r2=to.getBoundingClientRect();const b=document.createElement("div");b.className="ab-bee";b.innerHTML=AB_BEE+`<i style="background:${AB_COL[col]}"></i>`;document.body.appendChild(b);
- const x1=r1.left+r1.width/2-20,y1=r1.top+r1.height/2-16,x2=r2.left+r2.width/2-20,y2=r2.top+r2.height/2-16,mx=(x1+x2)/2+(x2>x1?-30:30),my=Math.min(y1,y2)-40;const flip=x2<x1?" scaleX(-1)":"";
- const an=b.animate([{transform:`translate(${x1}px,${y1}px) scale(.5)${flip}`,opacity:0},{transform:`translate(${x1}px,${y1-14}px) scale(1)${flip}`,opacity:1,offset:.15},{transform:`translate(${mx}px,${my}px) scale(1.1)${flip}`,offset:.55},{transform:`translate(${x2}px,${y2}px) scale(.7)${flip}`,opacity:1}],{duration:560,easing:"ease-in-out"});
- an.onfinish=()=>{b.remove();cb&&cb();};}catch(e){cb&&cb();}}
-function abRefresh(){const t=document.getElementById("ab-top");if(t)t.innerHTML=abTopHTML();const F=abFreeAll(AB.G,AB.C,AB.R);document.querySelectorAll("#ab-bd .ab-c.it").forEach(el=>el.classList.toggle("free",!!F[+el.dataset.i]));
- const mv=document.getElementById("ab-mv");if(mv)mv.textContent=AB.mv;const h=document.getElementById("ab-hint");if(h){h.innerHTML=`💡 İpucu <b>${AB.hint}</b>`;h.disabled=!AB.hint;}const p=document.getElementById("ab-plus");if(p){p.innerHTML=`🍯 Petek <b>+${AB.plus}</b>`;p.disabled=!AB.plus||AB.S>=7;}}
-function abStuck(){const A=AB;if(A.hi>=A.H.length)return false;if(A.slots.length<A.S)return false;const F=abFreeAll(A.G,A.C,A.R),cur=A.H[A.hi];for(let i=0;i<A.G.length;i++)if(F[i]&&A.G[i]===cur)return false;return true;}
-function abTap(el){const A=AB;if(!A||A.end)return;const i=+el.dataset.i,v=A.G[i];if(v<0)return;const F=abFreeAll(A.G,A.C,A.R);
- if(!F[i]){el.classList.remove("no");void el.offsetWidth;el.classList.add("no");abToast("Bu çiçeğin yolu kapalı 🌿 önce üsttekileri al");try{navigator.vibrate&&navigator.vibrate(30);}catch(e){}return;}
- const cur=A.H[A.hi],toHive=v===cur&&A.fill<3;
- if(!toHive&&A.slots.length>=A.S){abToast(`Petekler dolu! Önce ${AB_CN[cur]} çiçekleri topla 🐝`);el.classList.remove("no");void el.offsetWidth;el.classList.add("no");return;}
- let target;if(toHive){A.fill++;target=document.querySelector(".ab-cur .ab-hive");}else{A.slots.push(v);target=document.querySelectorAll(".ab-sl")[A.slots.length-1];}
- A.G[i]=-1;A.mv++;let made=0;while(A.fill===3){A.hi++;A.fill=0;made++;if(A.hi>=A.H.length)break;const col=A.H[A.hi];for(let k=0;k<A.slots.length&&A.fill<3;){if(A.slots[k]===col){A.slots.splice(k,1);A.fill++;}else k++;}}
- el.classList.add("pick");el.disabled=true;setTimeout(()=>{el.outerHTML=`<span class="ab-c clr${el.classList.contains("g2")?" g2":""}" data-i="${i}"></span>`;},260);
- const F2=abFreeAll(A.G,A.C,A.R);document.querySelectorAll("#ab-bd .ab-c.it").forEach(e=>{if(e!==el)e.classList.toggle("free",!!F2[+e.dataset.i]);});
- try{navigator.vibrate&&navigator.vibrate(12);}catch(e){}
- const win=A.hi>=A.H.length&&!A.G.some(x=>x>=0),stuck=!win&&abStuck();if(win||stuck)A.end=win?2:1;
- abFly(el,target||el,v,()=>{if(AB!==A)return;abRefresh();if(made){const c=document.querySelector(".ab-cur");if(c){c.classList.add("pop");}abToast(made>1?`🍯 ${made} kovan birden doldu!`:"🍯 Kovan doldu!");}
-  if(win)setTimeout(abWin,350);else if(stuck)setTimeout(abLose,400);});}
-function abWin(){const A=AB,G2=st.games2=st.games2||{};if(!A.saved){A.saved=1;G2.ariLv=Math.max(G2.ariLv||1,A.lv+1);G2.ariWins=(G2.ariWins||0)+1;try{save();}catch(e){}}const ts=document.getElementById("ab-toast");if(ts)ts.classList.remove("on");
- const bd=document.getElementById("ab-bd");if(bd)bd.classList.add("won");const ov=document.getElementById("ab-ov");if(!ov)return;
- const stars=A.mv<=A.N?3:A.mv<=A.N+3?2:1;
+function abFly(r1,to,c,delay,cb){setTimeout(()=>{try{const r2=to.getBoundingClientRect();const b=document.createElement("div");b.className="ab-bee";b.innerHTML=AB_BEE+`<i style="${AB_V[c]}"></i>`;document.body.appendChild(b);
+ const x1=r1.left+r1.width/2-18,y1=r1.top+r1.height/2-20,x2=r2.left+r2.width/2-18,y2=r2.top+r2.height/2-20,mx=(x1+x2)/2+(x2>x1?-26:26),my=Math.min(y1,y2)-50-Math.random()*30;const fl=x2<x1?" scaleX(-1)":"";
+ const an=b.animate([{transform:`translate(${x1}px,${y1+8}px) scale(.4)${fl}`,opacity:0},{transform:`translate(${x1}px,${y1-10}px) scale(1)${fl}`,opacity:1,offset:.18},{transform:`translate(${mx}px,${my}px) scale(1.12)${fl}`,offset:.58},{transform:`translate(${x2}px,${y2}px) scale(.62)${fl}`,opacity:1}],{duration:620,easing:"ease-in-out"});
+ an.onfinish=()=>{b.remove();cb&&cb();};}catch(e){cb&&cb();}},delay);}
+function abRefreshTop(){const A=AB;const h=document.getElementById("ab-holes");if(h)h.innerHTML=abHoles();const t=document.getElementById("ab-tray");if(t){t.innerHTML=abTray();t.style.setProperty("--n",A.cap);}const tc=document.getElementById("ab-tc");if(tc){tc.textContent=A.tray.length+"/"+A.cap;tc.classList.toggle("warn",A.cap-A.tray.length<=2);}
+ const mv=document.getElementById("ab-mv");if(mv)mv.textContent=A.mv;const hb=document.getElementById("ab-hint");if(hb){hb.innerHTML=`💡 İpucu <b>${A.hint}</b>`;hb.disabled=!A.hint;}const pb=document.getElementById("ab-plus");if(pb)pb.disabled=!A.plus;}
+function abMarkFree(){const A=AB,F=abFreeAll(A.G,A.C,A.R);document.querySelectorAll("#ab-bd .ab-cell.st").forEach(el=>el.classList.toggle("blk",!F[+el.dataset.i]));}
+function abStuck(){const A=AB;if(!A.G.some(v=>v>=0))return false;const F=abFreeAll(A.G,A.C,A.R);for(let i=0;i<A.G.length;i++)if(F[i]&&abCan(A,i).ok)return false;return true;}
+function abShake(el,msg){el.classList.remove("no");void el.offsetWidth;el.classList.add("no");if(msg)abToast(msg);try{navigator.vibrate&&navigator.vibrate(30);}catch(e){}}
+function abTap(el){const A=AB;if(!A||A.end)return;const i=+el.dataset.i;if(A.G[i]<0)return;const F=abFreeAll(A.G,A.C,A.R);
+ if(!F[i]){abShake(el,"Bu yığının yolu kapalı 🌿 önce önündekileri al");return;}
+ const m=abCan(A,i);if(!m.ok){abShake(el,`Rafta yer yok! ${m.sp} küp için ${A.cap-A.tray.length} boşluk var 🐝`);return;}
+ const cubes=[...el.querySelectorAll(".ab-cube")].reverse();const rects=cubes.map(c=>c.querySelector(".t").getBoundingClientRect());
+ const hEl=m.h?document.querySelector(`.ab-hl[data-h="${m.h.id}"]`):null,trayStart=A.tray.length,c=A.G[i];
+ const ev=abApply(A,i);A.mv++;const hp=document.getElementById("ab-help");if(hp)hp.remove();
+ const slots=[...document.querySelectorAll("#ab-tray .ab-ts")];let land=0;const total=ev.n;
+ const done=()=>{if(++land<total)return;if(AB!==A)return;abRefreshTop();
+  if(ev.closed.length){abToast(ev.closed.length>1?`🍯 ${ev.closed.length} kovan birden doldu!`:"🍯 Kovan doldu!");try{navigator.vibrate&&navigator.vibrate([20,30,20]);}catch(e){}}
+  ev.pulled.forEach(([id])=>{const e=document.querySelector(`.ab-hl[data-h="${id}"]`);if(e)e.classList.add("pull");});
+  const win=!A.G.some(v=>v>=0)&&!A.act.length;if(win){A.end=2;setTimeout(abWin,300);}else if(abStuck()){A.end=1;setTimeout(abLose,350);}};
+ cubes.forEach((cu,k)=>{setTimeout(()=>{cu.classList.add("go");},k*110);const toHive=k<ev.ab;const tgt=toHive?(hEl||el):(slots[trayStart+(k-ev.ab)]||document.getElementById("ab-tray")||el);
+  abFly(rects[k],tgt,c,k*110,()=>{if(toHive&&hEl){const b=hEl.querySelector("b");if(b)b.textContent=Math.max(0,(+b.textContent||0)-1);hEl.classList.remove("hit");void hEl.offsetWidth;hEl.classList.add("hit");}else if(!toHive&&tgt.classList&&tgt.classList.contains("ab-ts")){tgt.setAttribute("style",AB_V[c]);tgt.classList.add("on");}done();});});
+ setTimeout(()=>{if(AB!==A)return;el.className=`ab-cell o${el.classList.contains("g2")?" g2":""}`;el.innerHTML="";el.removeAttribute("style");abMarkFree();},cubes.length*110+120);
+ try{navigator.vibrate&&navigator.vibrate(12);}catch(e){}}
+function abWin(){const A=AB,G2=st.games2=st.games2||{};if(!A.saved){A.saved=1;G2.ariLv=Math.max(G2.ariLv||1,A.lv+1);G2.ariWins=(G2.ariWins||0)+1;try{save();}catch(e){}}
+ const ts=document.getElementById("ab-toast");if(ts)ts.classList.remove("on");const bd=document.getElementById("ab-bd");if(bd)bd.classList.add("won");const ov=document.getElementById("ab-ov");if(!ov)return;
+ const stars=A.tray.length===0&&A.plus&&A.cap===A.cap0?(A.hint===3?3:2):1;
  ov.innerHTML=`<div class="ab-card"><div class="ab-st no-mi">${"⭐".repeat(stars)}${"☆".repeat(3-stars)}</div><b>Bölüm ${A.lv} tamam!</b><small>“${esc(A.pic[0])}” ortaya çıktı · ${A.H.length} kovan bal 🍯</small><button type="button" class="btn ab-next" id="ab-next">Sonraki bölüm →</button><button type="button" class="ab-look" id="ab-look">Resme bakayım</button></div>`;
- setTimeout(()=>{ov.hidden=false;},900);for(let k=0;k<26;k++){const c=document.createElement("i");c.className="ab-cf";c.style.cssText=`left:${Math.random()*100}%;--c:${AB_COL[k%6]};--d:${(Math.random()*.6).toFixed(2)}s;--x:${Math.round(Math.random()*80-40)}px`;document.getElementById("ab-area").appendChild(c);setTimeout(()=>c.remove(),2600);}
- setTimeout(()=>{const n=document.getElementById("ab-next");if(n)n.onclick=()=>{abNew(A.lv+1);keyRender();};const l=document.getElementById("ab-look");if(l)l.onclick=()=>{ov.hidden=true;setTimeout(()=>{if(AB===A&&document.getElementById("ab-ov"))ov.hidden=false;},2600);};},950);}
+ setTimeout(()=>{if(AB===A)ov.hidden=false;},1300);const st0=document.getElementById("ab-stage");if(st0)for(let k=0;k<30;k++){const c=document.createElement("i");c.className="ab-cf";c.style.cssText=`left:${Math.random()*100}%;--c:${AB_COL[k%6]};--d:${(Math.random()*.7).toFixed(2)}s;--x:${Math.round(Math.random()*90-45)}px`;st0.appendChild(c);setTimeout(()=>c.remove(),2800);}
+ setTimeout(()=>{const n=document.getElementById("ab-next");if(n)n.onclick=()=>{abNew(A.lv+1);keyRender();};const l=document.getElementById("ab-look");if(l)l.onclick=()=>{ov.hidden=true;setTimeout(()=>{if(AB===A&&document.getElementById("ab-ov"))ov.hidden=false;},2800);};},1350);}
 function abLose(){const A=AB,ov=document.getElementById("ab-ov");if(!ov)return;
- ov.innerHTML=`<div class="ab-card"><div class="ab-st no-mi">🐝💤</div><b>Petekler doldu</b><small>Sıradaki kovan <b style="color:${AB_COL[A.H[A.hi]]}">${AB_CN[A.H[A.hi]]}</b> çiçek istiyor ama yolu açık ${AB_CN[A.H[A.hi]]} çiçek kalmadı.</small>${A.plus&&A.S<7?`<button type="button" class="btn ab-next" id="ab-more">🍯 Bir petek daha aç</button>`:""}<button type="button" class="${A.plus&&A.S<7?"ab-look":"btn ab-next"}" id="ab-again">↺ Baştan dene</button></div>`;ov.hidden=false;
- const m=document.getElementById("ab-more");if(m)m.onclick=()=>{A.plus--;A.S++;A.end=0;ov.hidden=true;abRefresh();};document.getElementById("ab-again").onclick=()=>{abNew(A.lv);keyRender();};}
-function abBind(){abFit();const bd=document.getElementById("ab-bd");bd.addEventListener("click",e=>{const el=e.target.closest(".ab-c.it");if(el&&!el.disabled)abTap(el);});
+ ov.innerHTML=`<div class="ab-card"><div class="ab-st no-mi">🐝💤</div><b>Raf doldu</b><small>Yolu açık küplerin hiçbiri ne kovanlara ne de rafa sığıyor.</small>${A.plus?`<button type="button" class="btn ab-next" id="ab-more">🍯 Rafı 2 büyüt</button>`:""}<button type="button" class="${A.plus?"ab-look":"btn ab-next"}" id="ab-again">↺ Baştan dene</button></div>`;ov.hidden=false;
+ const m=document.getElementById("ab-more");if(m)m.onclick=()=>{A.plus--;A.cap+=2;A.end=0;ov.hidden=true;abRefreshTop();if(abStuck()){A.end=1;setTimeout(abLose,300);}};document.getElementById("ab-again").onclick=()=>{abNew(A.lv);keyRender();};}
+function abBind(){abFit();const bd=document.getElementById("ab-bd");bd.addEventListener("click",e=>{const el=e.target.closest(".ab-cell.st");if(el)abTap(el);});
  document.getElementById("ab-re").onclick=()=>{abNew(AB.lv);keyRender();};
- document.getElementById("ab-hint").onclick=()=>{const A=AB;if(!A.hint||A.end)return;const F=abFreeAll(A.G,A.C,A.R),cur=A.H[A.hi],nx=A.H.slice(A.hi+1);let best=-1,bs=99;for(let i=0;i<A.G.length;i++){if(!F[i])continue;const sc=A.G[i]===cur?0:(nx.indexOf(A.G[i])+1||50);if(sc<bs){bs=sc;best=i;}}
-  if(best<0)return;A.hint--;abRefresh();const el=document.querySelector(`#ab-bd .ab-c[data-i="${best}"]`);if(el){el.classList.remove("hint");void el.offsetWidth;el.classList.add("hint");setTimeout(()=>el.classList.remove("hint"),2400);}};
- document.getElementById("ab-plus").onclick=()=>{const A=AB;if(!A.plus||A.S>=7)return;A.plus--;A.S++;if(A.end===1){A.end=0;const ov=document.getElementById("ab-ov");if(ov)ov.hidden=true;}abRefresh();abToast("🍯 Yeni bir petek açıldı");};
+ document.getElementById("ab-hint").onclick=()=>{const A=AB;if(!A.hint||A.end)return;const b=abBest(A);if(b<0)return;A.hint--;abRefreshTop();const el=document.querySelector(`#ab-bd .ab-cell[data-i="${b}"]`);if(el){el.classList.remove("hint");void el.offsetWidth;el.classList.add("hint");setTimeout(()=>el.classList.remove("hint"),2600);}};
+ document.getElementById("ab-plus").onclick=()=>{const A=AB;if(!A.plus)return;A.plus--;A.cap+=2;if(A.end===1){A.end=0;const ov=document.getElementById("ab-ov");if(ov)ov.hidden=true;}abRefreshTop();abToast("🍯 Rafa 2 yer daha açıldı");};
  if(AB.end===2)abWin();}
 window.addEventListener("resize",()=>{if(kv==="ari")abFit();});
-function abCard(){const lv=abLvSaved();return `<button type="button" class="kb kb-ari wide" data-kv="ari" style="--i:0"><span class="kb-new">YENİ</span><span class="kb-art no-mi"><svg viewBox="0 0 120 70"><g transform="translate(66 2) scale(.78)">${abHive(0,1).replace(/^<svg[^>]*>/,"").replace(/<\/svg>$/,"")}</g><g class="kb-bee1" transform="translate(8 6) scale(.62)">${AB_BEE.replace(/^<svg[^>]*>/,"").replace(/<\/svg>$/,"")}</g><g class="kb-bee2" transform="translate(36 34) scale(.5)">${AB_BEE.replace(/^<svg[^>]*>/,"").replace(/<\/svg>$/,"")}</g></svg></span><span class="kb-tx"><b>Bal bahçesi</b><small>${lv>1?`Bölüm ${lv} · arılar seni bekliyor`:"Arılara çiçek taşıt, resmi ortaya çıkar"}</small></span></button>`;}
+function abCard(){const lv=abLvSaved();const cube=(x,y,c,s)=>`<g transform="translate(${x} ${y}) scale(${s})"><path d="M0 6l10-6 10 6-10 6z" fill="${abMix(c,"#ffffff",.3)}"/><path d="M0 6v10l10 6V12z" fill="${abMix(c,"#000000",.25)}"/><path d="M20 6v10l-10 6V12z" fill="${abMix(c,"#000000",.12)}"/></g>`;
+ return `<button type="button" class="kb kb-ari wide" data-kv="ari" style="--i:0"><span class="kb-new">YENİ</span><span class="kb-art no-mi"><svg viewBox="0 0 140 84">${cube(70,46,AB_COL[0],1.3)}${cube(96,40,AB_COL[3],1.3)}${cube(83,30,AB_COL[2],1.3)}${cube(96,24,AB_COL[3],1.3)}${cube(110,52,AB_COL[1],1.3)}<g class="kb-bee1" transform="translate(16 6) scale(.62)">${AB_BEE.replace(/^<svg[^>]*>/,"").replace(/<\/svg>$/,"")}</g><g class="kb-bee2" transform="translate(42 40) scale(.5)">${AB_BEE.replace(/^<svg[^>]*>/,"").replace(/<\/svg>$/,"")}</g></svg></span><span class="kb-tx"><b>Bal bahçesi</b><small>${lv>1?`Bölüm ${lv} · arılar seni bekliyor`:"Arılar küpleri kovana taşısın, resim ortaya çıksın"}</small></span></button>`;}
 (function(){const _k=keyRender;keyRender=function(){if(kv==="ari"){try{clearInterval(kTm);}catch(e){}const O=document.getElementById("zsh");O.classList.add("pzmode");
   O.innerHTML=`<div class="ob-in zs-in kf-in"><button class="zs-x" type="button" id="zs-x" aria-label="Kapat">✕</button><button class="kf-back" type="button" data-kv="hub" aria-label="Keyif köşeme geri dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Geri</span></button>${abHTML()}</div>`;
   document.getElementById("zs-x").onclick=zodClose;O.scrollTop=0;requestAnimationFrame(abBind);return;}
