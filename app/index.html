@@ -14004,7 +14004,7 @@ document.addEventListener("visibilitychange",()=>{if(document.hidden&&BZ&&BZ.C&&
  const pick=c=>g.querySelector(".kb-"+c);const fal=pick("fal"),burc=pick("burc"),ari=pick("ari"),kk=pick("kk"),wow=pick("wow"),mem=pick("mem"),jig=pick("jig");
  const H=(t,sub)=>{const h=document.createElement("div");h.className="kf-sec";h.innerHTML=`<b>${t}</b>${sub?`<small>${sub}</small>`:""}`;return h;};
  const known=new Set([fal,burc,ari,kk,wow,mem,jig].filter(Boolean));const rest=[...g.children].filter(e=>!known.has(e));
- const order=[H("☕ Günün ritüeli","Kahveni al, yıldızına bak"),fal,burc,H("🎮 Oyunlar","Beş dakikalık keyif molaları"),ari,kk,wow,mem,jig,...rest].filter(Boolean);
+ const order=[H("🔮 Fal &amp; burç","Kahveni al, yıldızına bak"),fal,burc,H("🎮 Oyunlar","Beş dakikalık keyif molaları"),ari,kk,wow,mem,jig,...rest].filter(Boolean);
  if(fal)fal.classList.remove("tall");if(burc)burc.classList.remove("wide","tall");if(wow)wow.classList.add("wide");if(mem)mem.classList.remove("wide","tall");if(jig){jig.classList.remove("wide","tall");const sm=jig.querySelector("small");if(sm)sm.textContent="Kendi fotoğrafınla yap";}
  g.innerHTML="";order.forEach((e,i)=>{if(e.classList.contains("kb"))e.style.setProperty("--i",i);g.appendChild(e);});g.classList.add("tidy");}catch(e){}};})();
 </script>
