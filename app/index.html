@@ -13728,7 +13728,7 @@ async function kkNetPush(){const G=KK;const S=Object.assign({},G);["id","code","
  if(r.err)return {err:r.err};const d=Array.isArray(r.data)?r.data[0]:r.data;G.ver=(d&&d.ver!=null)?d.ver:(G.ver+1);return {ok:1};}
 async function kkNetList(){const r=await kkRpc("kk_list",{k:kkKey()});return r.err?null:(r.data||[]);}
 function kkPollStart(){clearInterval(KKPOLL);KKPOLL=setInterval(async()=>{if(kv!=="kk"||KKV!=="game"||!KK||KK.mode!=="net"){clearInterval(KKPOLL);return;}if(KK.turn===KK.me&&!KK.over&&KK.status!=="wait")return;if(document.hidden)return;
- const d=await kkNetGet(KK.id);if(!d||!KK||d.id!==KK.id)return;if(d.ver!==KK.ver||d.n2!==KK.names[1]||d.status!==KK.status){const was=KK.turn;KK=kkNetFrom(d);KKPEND=[];kkRender();if(KK.turn===KK.me&&was!==KK.me){kkSnd("opp");kkToast(KK.last&&KK.last.words?`${esc(KK.names[1-KK.me])}: ${kkUpW(KK.last.words[0][0])} +${KK.last.sc}`:"Sıra sende!");}}},5000);}
+ const d=await kkNetGet(KK.id);if(!d||!KK||d.id!==KK.id)return;if(d.ver!==KK.ver||d.n2!==KK.names[1]||d.status!==KK.status){const was=KK.turn;KK=kkNetFrom(d);KKPEND=[];kkRender();if(KK.last&&KK.last.cells&&KK.last.p!==KK.me){kkFlash(KK.last.cells);kkFocus(KK.last.cells);}if(KK.turn===KK.me&&was!==KK.me){kkSnd("opp");kkToast(KK.last&&KK.last.words?`${esc(KK.names[1-KK.me])}: ${kkUpW(KK.last.words[0][0])} +${KK.last.sc}`:"Sıra sende!");}}},5000);}
 /* ---- arayüz ---- */
 function kkTile(t,small){const j=t[0]==="*",l=kkLt(t)||"";const v=j?0:(KK_PT[l]||0);return `<span class="kk-t${j?" j":""}${small?" s":""}"><b>${l?kkUp(l):""}</b>${l&&v?`<i>${v}</i>`:""}</span>`;}
 function kkRackTile(t,k){const j=t==="*";const used=KKPEND.some(p=>p.k===k);return `<button type="button" class="kk-rt${j?" j":""}${KKSEL===k?" sel":""}${used?" used":""}" data-rk="${k}"${used?" disabled":""}><b>${j?"★":kkUp(t)}</b>${!j?`<i>${KK_PT[t]}</i>`:""}</button>`;}
@@ -13773,7 +13773,7 @@ async function kkFillMine(){const box=document.getElementById("kk-my");if(!box)r
 async function kkEnsure(){try{await kkDict();return true;}catch(e){return false;}}
 async function kkStartBot(lvl){const ok=await kkEnsure();if(!ok){alert("Sözlük yüklenemedi; bağlantını kontrol edip tekrar dene.");return;}KK=kkNewGame("bot",lvl,["Sen","Arı"]);KK.me0=0;KKV="game";KKPEND=[];KKSEL=-1;kkSaveLocal();kkRender();}
 function kkMaybeBot(){const G=KK;if(!G||G.mode!=="bot"||G.over||G.turn!==1)return;if(KKBUSY)return;KKBUSY=1;setTimeout(()=>{try{if(!KK_W){KKBUSY=0;kkEnsure().then(()=>{kkMaybeBot();});return;}const r=kkBotPlay(G);kkSaveLocal();KKBUSY=0;if(KK!==G)return;kkRender();
-  if(r&&r.ok){kkSnd(r.bingo?"bingo":"opp");kkFlash(G.last.cells);}else kkToast(r&&r.swap?"🐝 Arı harflerini değiştirdi":"🐝 Arı pas geçti");}catch(e){KKBUSY=0;console.error(e);}},900+Math.random()*700);}
+  if(r&&r.ok){kkSnd(r.bingo?"bingo":"opp");kkFlash(G.last.cells);kkFocus(G.last.cells);}else kkToast(r&&r.swap?"🐝 Arı harflerini değiştirdi":"🐝 Arı pas geçti");}catch(e){KKBUSY=0;console.error(e);}},900+Math.random()*700);}
 function kkFlash(cells){(cells||[]).forEach((i,k)=>{const el=document.querySelector(`#kk-bd .kk-c[data-c="${i}"]`);if(el){el.style.setProperty("--d",k*70+"ms");el.classList.add("drop");}});}
 function kkBindGame(){const G=KK,me=kkMeIdx();const myTurn=()=>G.turn===me&&!G.over&&!(G.mode==="net"&&G.status==="wait"&&me===1);
  const bd=document.getElementById("kk-bd"),rk=document.getElementById("kk-rk");
@@ -13970,6 +13970,11 @@ document.addEventListener("visibilitychange",()=>{if(document.hidden)clearInterv
 (function(){const _k=keyRender;keyRender=function(){if(kv==="ari"){try{clearInterval(kTm);}catch(e){}if(!BZ||(!BZ.C&&!BZ.loading))bzNew(abLvSaved());bzRender();return;}clearInterval(BZT);_k.apply(this,arguments);
  if(kv==="hub"){const sm=document.querySelector("#zsh .kb-ari small");if(sm){const lv=abLvSaved();sm.textContent=lv>1?`Bölüm ${lv} · 📔 ${abAlb().length}/${JART.length} resim`:"Kutuya dokun, arılar resmi küp küp taşısın";}}};})();
 
+
+/* yakınlaştırılmışken rakibin koyduğu harflere kaydır */
+function kkFocus(cells){if(!KKZ||!cells||!cells.length)return;setTimeout(()=>{const w=document.getElementById("kk-bw"),b=document.getElementById("kk-bd");if(!w||!b)return;let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;
+ cells.forEach(i=>{const el=b.querySelector(`.kk-c[data-c="${i}"]`);if(!el)return;x0=Math.min(x0,el.offsetLeft);y0=Math.min(y0,el.offsetTop);x1=Math.max(x1,el.offsetLeft+el.offsetWidth);y1=Math.max(y1,el.offsetTop+el.offsetHeight);});if(x1<0)return;
+ const cx=(x0+x1)/2+b.offsetLeft,cy=(y0+y1)/2+b.offsetTop;w.dataset.zs=1;try{w.scrollTo({left:cx-w.clientWidth/2,top:cy-w.clientHeight/2,behavior:"smooth"});}catch(e){w.scrollLeft=cx-w.clientWidth/2;w.scrollTop=cy-w.clientHeight/2;}},80);}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
