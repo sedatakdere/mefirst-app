@@ -6231,13 +6231,19 @@ html[data-mf="dusk"] .kto h3{color:#F5E1CC}html[data-mf="dusk"] .kto p{color:#E0
 .ab-cube .l{top:0;bottom:0;left:0;width:var(--h);transform-origin:left;transform:rotateY(-90deg);background:var(--cside)}
 .ab-cube .r{top:0;bottom:0;right:0;width:var(--h);transform-origin:right;transform:rotateY(90deg);background:var(--cside)}
 .ab-cube .t b{position:absolute;inset:18%;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.55),transparent 60%)}
-.ab-cell.blk .ab-cube .t,.ab-cell.blk .ab-cube .f{filter:brightness(.84) saturate(.9)}
-.ab-cell.st:not(.blk) .ab-cube:last-child .t::after{content:"";position:absolute;inset:-1px;border-radius:inherit;box-shadow:0 0 0 2px #fff;opacity:.85;animation:abGlowR 2s ease-in-out infinite}
-@keyframes abGlowR{50%{opacity:.25}}
+.ab-cell.blk .ab-cube .t,.ab-cell.blk .ab-cube .f,.ab-cell.blk .ab-cube .l,.ab-cell.blk .ab-cube .r{filter:brightness(.68) saturate(.5)}
+.ab-cell.blk .ab-cube .t b{display:none}
+.ab-cell.st:not(.blk) .ab-stk{animation:abBob 1.5s ease-in-out infinite;animation-delay:calc(var(--bd,0)*1s)}
+@keyframes abBob{0%,100%{transform:translateZ(0)}50%{transform:translateZ(calc(var(--cs)*.16))}}
+.ab-cell.nf .ab-stk{animation:abNf .6s cubic-bezier(.2,1.8,.4,1)!important}
+@keyframes abNf{0%{transform:translateZ(0)}40%{transform:translateZ(calc(var(--cs)*.45))}100%{transform:translateZ(0)}}
+.ab-snd{all:unset;cursor:pointer;background:rgba(255,255,255,.22);border-radius:99px;width:30px;height:28px;display:grid;place-items:center;font-size:14px}
+.ab-cell.st:not(.blk) .ab-cube:last-child .t::after{content:"";position:absolute;inset:-2px;border-radius:inherit;box-shadow:0 0 0 3px #fff,0 0 14px 2px rgba(255,255,255,.9);opacity:.95;animation:abGlowR 1.5s ease-in-out infinite}
+@keyframes abGlowR{50%{opacity:.45}}
 .ab-cube.go{opacity:0;transform:translateZ(calc(var(--k)*var(--h) + var(--cs)*.9)) scale(.5)}
-.ab-cell.no .ab-stk{animation:abNo .35s ease}
+.ab-cell.no .ab-stk{animation:abNo .35s ease!important}
 @keyframes abNo{20%,60%{transform:translateX(-4px)}40%,80%{transform:translateX(4px)}}
-.ab-cell.hint .ab-stk{animation:abHintJ .6s ease-in-out 4}
+.ab-cell.hint .ab-stk{animation:abHintJ .6s ease-in-out 4!important}
 @keyframes abHintJ{50%{transform:translateZ(calc(var(--cs)*.35))}}
 .ab-bush{position:absolute;left:-6%;right:-6%;bottom:8%;height:112%;transform-origin:bottom;transform:rotateX(-58deg)}
 .ab-bush svg{width:100%;height:100%;display:block}
@@ -6249,10 +6255,10 @@ html[data-mf="dusk"] .kto h3{color:#F5E1CC}html[data-mf="dusk"] .kto p{color:#E0
 .ab-bee .w1,.ab-bee .w2{animation:abWing .07s linear infinite alternate;transform-box:fill-box;transform-origin:center bottom}
 @keyframes abWing{to{transform:scaleY(.35)}}
 .ab-bee i{position:absolute;left:10px;bottom:-7px;width:13px;height:13px;border-radius:3px;background:linear-gradient(180deg,var(--ct) 0 40%,var(--c) 40% 75%,var(--cf) 75%);box-shadow:0 0 0 1.5px rgba(255,255,255,.9)}
-.ab-toast{position:absolute;left:50%;bottom:52px;transform:translate(-50%,10px);max-width:92%;padding:8px 14px;border-radius:99px;background:rgba(45,30,20,.88);color:#fff;font-size:12.5px;font-weight:700;opacity:0;pointer-events:none;text-align:center;z-index:6}
+.ab-toast{position:absolute;left:50%;bottom:52px;transform:translate3d(-50%,10px,400px);max-width:92%;padding:8px 14px;border-radius:99px;background:rgba(45,30,20,.88);color:#fff;font-size:12.5px;font-weight:700;opacity:0;pointer-events:none;text-align:center;z-index:6}
 .ab-toast.on{animation:abT 2.4s ease}
-@keyframes abT{10%,80%{opacity:1;transform:translate(-50%,0)}100%{opacity:0}}
-.ab-ov{position:absolute;inset:0;display:grid;place-items:end center;padding-bottom:58px;background:linear-gradient(180deg,transparent 40%,rgba(40,25,10,.35));z-index:7;border-radius:18px}
+@keyframes abT{10%,80%{opacity:1;transform:translate3d(-50%,0,400px)}100%{opacity:0;transform:translate3d(-50%,0,400px)}}
+.ab-ov{position:absolute;inset:0;transform:translate3d(0,0,400px);display:grid;place-items:end center;padding-bottom:58px;background:linear-gradient(180deg,transparent 40%,rgba(40,25,10,.35));z-index:7;border-radius:18px}
 .ab-ov[hidden]{display:none}
 .ab-card{width:min(310px,92%);display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:20px 18px;border-radius:24px;background:var(--surface);box-shadow:0 24px 40px -20px rgba(0,0,0,.5);animation:abIn .5s cubic-bezier(.2,1.6,.4,1)}
 .ab-card>b{font-family:var(--f-display);font-weight:400;font-size:26px;color:var(--ink)}
@@ -13288,12 +13294,14 @@ function abReach(G,C,R){const re=new Uint8Array(C*R),q=[];for(let x=0;x<C;x++)if
 function abIsFree(G,C,R,re,i){const x=i%C,y=(i-x)/C;if(y===0)return true;return !!((x>0&&re[i-1])||(x<C-1&&re[i+1])||re[i-C]||(y<R-1&&re[i+C]));}
 function abFreeAll(G,C,R){const re=abReach(G,C,R),F=new Uint8Array(C*R);for(let i=0;i<G.length;i++)if(G[i]>=0&&abIsFree(G,C,R,re,i))F[i]=1;return F;}
 /* oyun durumu üzerinde tek hamle: yığının küpleri önce açık kovana, artanı bekleme alanına */
-function abCan(S,i){const c=S.G[i],n=S.N[i],h=S.act.find(a=>a.c===c),ab=h?Math.min(n,h.rem):0;return {ab,sp:n-ab,ok:n-ab<=S.cap-S.tray.length,h};}
-function abApply(S,i){const c=S.G[i],n=S.N[i],m=abCan(S,i);const ev={c,n,ab:m.ab,sp:m.sp,hid:m.h?m.h.id:-1,closed:[],pulled:[]};
- if(m.h)m.h.rem-=m.ab;for(let k=0;k<m.sp;k++)S.tray.push(c);S.G[i]=-1;S.N[i]=0;
- let ch=true;while(ch){ch=false;for(let a=0;a<S.act.length;a++){const h=S.act[a];if(h.rem===0){ev.closed.push(h.id);ch=true;
-   if(S.qi<S.H.length){const nh={id:S.qi,c:S.H[S.qi].c,rem:S.H[S.qi].need};S.qi++;let pl=0;for(let k=0;k<S.tray.length&&nh.rem>0;){if(S.tray[k]===nh.c){S.tray.splice(k,1);nh.rem--;pl++;}else k++;}if(pl)ev.pulled.push([nh.id,pl]);S.act[a]=nh;}else{S.act.splice(a,1);a--;}}}}
- return ev;}
+function abCan(S,i){const c=S.G[i],n=S.N[i],hs=S.act.filter(a=>a.c===c),room=hs.reduce((x,h)=>x+h.rem,0),ab=Math.min(n,room);return {ab,sp:n-ab,ok:n-ab<=S.cap-S.tray.length,h:hs[0]};}
+function abSettle(S,ev){let ch=true;while(ch){ch=false;
+  for(const h of S.act){if(h.rem<=0)continue;let pl=0;for(let k=0;k<S.tray.length&&h.rem>0;){if(S.tray[k]===h.c){S.tray.splice(k,1);h.rem--;pl++;}else k++;}if(pl){ch=true;if(ev)ev.pulled.push([h.id,pl]);}}
+  for(let a=0;a<S.act.length;a++){if(S.act[a].rem>0)continue;if(ev)ev.closed.push(S.act[a].id);ch=true;
+   if(S.qi<S.H.length){S.act[a]={id:S.qi,c:S.H[S.qi].c,rem:S.H[S.qi].need};S.qi++;}else{S.act.splice(a,1);a--;}}}}
+function abApply(S,i){const c=S.G[i],n=S.N[i],m=abCan(S,i);const ev={c,n,ab:m.ab,sp:m.sp,tg:[],closed:[],pulled:[]};
+ let left=n;for(const h of S.act){if(h.c!==c)continue;while(left>0&&h.rem>0){h.rem--;left--;ev.tg.push(h.id);}}
+ while(left>0){S.tray.push(c);ev.tg.push(-1);left--;}S.G[i]=-1;S.N[i]=0;abSettle(S,ev);return ev;}
 function abState(L,cap){const S={C:L.C,R:L.R,G:L.G.slice(),N:L.N.slice(),H:L.H,qi:0,act:[],tray:[],cap};while(S.act.length<3&&S.qi<S.H.length){S.act.push({id:S.qi,c:S.H[S.qi].c,rem:S.H[S.qi].need});S.qi++;}return S;}
 function abBest(S){const F=abFreeAll(S.G,S.C,S.R);let b=-1,bs=1e9;for(let i=0;i<S.G.length;i++){if(!F[i])continue;const m=abCan(S,i);if(!m.ok)continue;const sc=m.sp*10-m.ab*3+(m.h&&m.ab===m.h.rem?-4:0);if(sc<bs){bs=sc;b=i;}}return b;}
 function abSolve(L,cap){const S=abState(L,cap);let g=0;while(S.G.some(v=>v>=0)){if(g++>400)return false;const i=abBest(S);if(i<0)return false;abApply(S,i);}return true;}
@@ -13331,14 +13339,14 @@ function abCellHTML(i,F){const A=AB,v=A.G[i],x=i%A.C,y=(i-x)/A.C,g=(x+y)%2?" g2"
  if(A.G0[i]===-2)return `<div class="ab-cell rk${g}" data-i="${i}"><div class="ab-bush">${AB_BUSH}</div></div>`;
  if(v<0)return `<div class="ab-cell o${g}" data-i="${i}"></div>`;
  let h="";for(let k=0;k<A.N[i];k++)h+=abCube(k,k===A.N[i]-1);
- return `<div class="ab-cell st${g}${F[i]?"":" blk"}" data-i="${i}" style="${AB_V[v]}" role="button" aria-label="${A.N[i]} ${AB_CN[v]} küp"><div class="ab-stk">${h}</div></div>`;}
+ return `<div class="ab-cell st${g}${F[i]?"":" blk"}" data-i="${i}" style="${AB_V[v]};--bd:${((i*7)%10)/10}" role="button" aria-label="${A.N[i]} ${AB_CN[v]} küp"><div class="ab-stk">${h}</div></div>`;}
 function abHoles(){const A=AB;const q=A.H.length-A.qi;
  return `<div class="ab-act">${A.act.map(h=>`<div class="ab-hl" data-h="${h.id}" style="${AB_V[h.c]}"><span class="ab-hring"></span><b>${h.rem}</b></div>`).join("")}${!A.act.length?'<div class="ab-fin no-mi">🍯</div>':""}</div>
   <div class="ab-qn"><small>Sırada</small><div>${A.H.slice(A.qi,A.qi+4).map(h=>`<i style="background:${AB_COL[h.c]}"></i>`).join("")}</div><b>${q?q+" kovan":"son kovanlar"}</b></div>`;}
 function abTray(){const A=AB;return Array.from({length:A.cap},(_,k)=>{const v=A.tray[k];return `<span class="ab-ts${v!==undefined?" on":""}"${v!==undefined?` style="${AB_V[v]}"`:""}></span>`;}).join("");}
 function abHTML(){if(!AB)abNew(abLvSaved());const A=AB,F=abFreeAll(A.G,A.C,A.R);
- return `<div class="ab"><div class="ab-hd"><div><small>Bal bahçesi</small><b>Bölüm ${A.lv}</b></div><div class="mg-st"><span>🖼 <b>${esc(A.pic[0])}</b></span><span>🐝 <b id="ab-mv">${A.mv}</b></span></div></div>
-  ${A.lv<=2&&!A.mv?`<p class="ab-help" id="ab-help">Yolu açık bir küp yığınına dokun 🐝 arılar küpleri <b>aynı renkteki kovana</b> taşısın. Kovanı olmayan küpler alttaki rafta bekler; raf dolmasın!</p>`:""}
+ return `<div class="ab"><div class="ab-hd"><div><small>Bal bahçesi</small><b>Bölüm ${A.lv}</b></div><div class="mg-st"><span>🐝 <b id="ab-mv">${A.mv}</b></span><button type="button" class="ab-snd" id="ab-snd" aria-label="Oyun sesleri">${abSndOn()?"🔊":"🔇"}</button></div></div>
+  ${A.lv<=2&&!A.mv?`<p class="ab-help" id="ab-help"><b>Parlayıp zıplayan</b> yığınlara dokun 🐝 arılar küpleri <b>aynı renkteki kovana</b> taşısın. Kovanı olmayan küpler alttaki rafta bekler; raf dolmasın!</p>`:""}
   <div class="ab-holes" id="ab-holes">${abHoles()}</div>
   <div class="ab-tray-w"><div class="ab-tray" id="ab-tray" style="--n:${A.cap}">${abTray()}</div><small id="ab-tc">${A.tray.length}/${A.cap}</small></div>
   <div class="ab-stage" id="ab-stage"><div class="ab-bd" id="ab-bd" style="--C:${A.C};--R:${A.R}${A.px?`;--pic:url(${A.px})`:""}">${A.G0.map((_,i)=>abCellHTML(i,F)).join("")}</div></div>
@@ -13353,25 +13361,25 @@ function abFly(r1,to,c,delay,cb){setTimeout(()=>{try{const r2=to.getBoundingClie
  an.onfinish=()=>{b.remove();cb&&cb();};}catch(e){cb&&cb();}},delay);}
 function abRefreshTop(){const A=AB;const h=document.getElementById("ab-holes");if(h)h.innerHTML=abHoles();const t=document.getElementById("ab-tray");if(t){t.innerHTML=abTray();t.style.setProperty("--n",A.cap);}const tc=document.getElementById("ab-tc");if(tc){tc.textContent=A.tray.length+"/"+A.cap;tc.classList.toggle("warn",A.cap-A.tray.length<=2);}
  const mv=document.getElementById("ab-mv");if(mv)mv.textContent=A.mv;const hb=document.getElementById("ab-hint");if(hb){hb.innerHTML=`💡 İpucu <b>${A.hint}</b>`;hb.disabled=!A.hint;}const pb=document.getElementById("ab-plus");if(pb)pb.disabled=!A.plus;}
-function abMarkFree(){const A=AB,F=abFreeAll(A.G,A.C,A.R);document.querySelectorAll("#ab-bd .ab-cell.st").forEach(el=>el.classList.toggle("blk",!F[+el.dataset.i]));}
+function abMarkFree(an){const A=AB,F=abFreeAll(A.G,A.C,A.R);document.querySelectorAll("#ab-bd .ab-cell.st").forEach(el=>{const was=el.classList.contains("blk"),now=!F[+el.dataset.i];el.classList.toggle("blk",now);if(an&&was&&!now){el.classList.add("nf");setTimeout(()=>el.classList.remove("nf"),700);}});}
 function abStuck(){const A=AB;if(!A.G.some(v=>v>=0))return false;const F=abFreeAll(A.G,A.C,A.R);for(let i=0;i<A.G.length;i++)if(F[i]&&abCan(A,i).ok)return false;return true;}
 function abShake(el,msg){el.classList.remove("no");void el.offsetWidth;el.classList.add("no");if(msg)abToast(msg);try{navigator.vibrate&&navigator.vibrate(30);}catch(e){}}
-function abTap(el){const A=AB;if(!A||A.end)return;const i=+el.dataset.i;if(A.G[i]<0)return;const F=abFreeAll(A.G,A.C,A.R);
- if(!F[i]){abShake(el,"Bu yığının yolu kapalı 🌿 önce önündekileri al");return;}
- const m=abCan(A,i);if(!m.ok){abShake(el,`Rafta yer yok! ${m.sp} küp için ${A.cap-A.tray.length} boşluk var 🐝`);return;}
+function abTap(el){const A=AB;if(!A||A.end)return;try{sndCtx();}catch(e){}const i=+el.dataset.i;if(A.G[i]<0)return;const F=abFreeAll(A.G,A.C,A.R);
+ if(!F[i]){abSnd("no");abShake(el,"Bu yığının yolu kapalı 🌿 parlayan yığınlara dokun");return;}
+ const m=abCan(A,i);if(!m.ok){abSnd("no");abShake(el,`Rafta yer yok! ${m.sp} küp için ${A.cap-A.tray.length} boşluk var 🐝`);return;}
  const cubes=[...el.querySelectorAll(".ab-cube")].reverse();const rects=cubes.map(c=>c.querySelector(".t").getBoundingClientRect());
- const hEl=m.h?document.querySelector(`.ab-hl[data-h="${m.h.id}"]`):null,trayStart=A.tray.length,c=A.G[i];
- const ev=abApply(A,i);A.mv++;const hp=document.getElementById("ab-help");if(hp)hp.remove();
- const slots=[...document.querySelectorAll("#ab-tray .ab-ts")];let land=0;const total=ev.n;
+ const hEls={};document.querySelectorAll(".ab-hl[data-h]").forEach(e=>hEls[e.dataset.h]=e);const trayStart=A.tray.length,c=A.G[i];
+ const ev=abApply(A,i);A.mv++;const hp=document.getElementById("ab-help");if(hp)hp.remove();abSnd("tap");abSnd("buzz");
+ const slots=[...document.querySelectorAll("#ab-tray .ab-ts")];let land=0,ti=0,hi=0;const total=ev.n;
  const done=()=>{if(++land<total)return;if(AB!==A)return;abRefreshTop();
-  if(ev.closed.length){abToast(ev.closed.length>1?`🍯 ${ev.closed.length} kovan birden doldu!`:"🍯 Kovan doldu!");try{navigator.vibrate&&navigator.vibrate([20,30,20]);}catch(e){}}
-  ev.pulled.forEach(([id])=>{const e=document.querySelector(`.ab-hl[data-h="${id}"]`);if(e)e.classList.add("pull");});
-  const win=!A.G.some(v=>v>=0)&&!A.act.length;if(win){A.end=2;setTimeout(abWin,300);}else if(abStuck()){A.end=1;setTimeout(abLose,350);}};
- cubes.forEach((cu,k)=>{setTimeout(()=>{cu.classList.add("go");},k*110);const toHive=k<ev.ab;const tgt=toHive?(hEl||el):(slots[trayStart+(k-ev.ab)]||document.getElementById("ab-tray")||el);
-  abFly(rects[k],tgt,c,k*110,()=>{if(toHive&&hEl){const b=hEl.querySelector("b");if(b)b.textContent=Math.max(0,(+b.textContent||0)-1);hEl.classList.remove("hit");void hEl.offsetWidth;hEl.classList.add("hit");}else if(!toHive&&tgt.classList&&tgt.classList.contains("ab-ts")){tgt.setAttribute("style",AB_V[c]);tgt.classList.add("on");}done();});});
- setTimeout(()=>{if(AB!==A)return;el.className=`ab-cell o${el.classList.contains("g2")?" g2":""}`;el.innerHTML="";el.removeAttribute("style");abMarkFree();},cubes.length*110+120);
+  if(ev.closed.length){abSnd("full");abToast(ev.closed.length>1?`🍯 ${ev.closed.length} kovan birden doldu!`:"🍯 Kovan doldu!");try{navigator.vibrate&&navigator.vibrate([20,30,20]);}catch(e){}}
+  ev.pulled.forEach(([id])=>{const e=document.querySelector(`.ab-hl[data-h="${id}"]`);if(e)e.classList.add("pull");});abCheckEnd();};
+ cubes.forEach((cu,k)=>{setTimeout(()=>{cu.classList.add("go");},k*110);const hid=ev.tg[k];const toHive=hid>=0;const hEl=toHive?hEls[hid]:null;const tgt=toHive?(hEl||el):(slots[trayStart+(ti++)]||document.getElementById("ab-tray")||el);const ord=toHive?hi++:0;
+  abFly(rects[k],tgt,c,k*110,()=>{if(toHive){abSnd("drop",ord);if(hEl){const b=hEl.querySelector("b");if(b)b.textContent=Math.max(0,(+b.textContent||0)-1);hEl.classList.remove("hit");void hEl.offsetWidth;hEl.classList.add("hit");}}else{abSnd("tray");if(tgt.classList&&tgt.classList.contains("ab-ts")){tgt.setAttribute("style",AB_V[c]);tgt.classList.add("on");}}done();});});
+ setTimeout(()=>{if(AB!==A)return;el.className=`ab-cell o${el.classList.contains("g2")?" g2":""}`;el.innerHTML="";el.removeAttribute("style");abMarkFree(true);},cubes.length*110+120);
  try{navigator.vibrate&&navigator.vibrate(12);}catch(e){}}
-function abWin(){const A=AB,G2=st.games2=st.games2||{};if(!A.saved){A.saved=1;G2.ariLv=Math.max(G2.ariLv||1,A.lv+1);G2.ariWins=(G2.ariWins||0)+1;try{save();}catch(e){}}
+function abCheckEnd(){const A=AB;if(!A||A.end)return;if(!A.G.some(v=>v>=0)){abSettle(A,null);A.end=2;abRefreshTop();setTimeout(abWin,350);return;}if(abStuck()){A.end=1;abSnd("lose");setTimeout(abLose,350);}}
+function abWin(){const A=AB,G2=st.games2=st.games2||{};if(!A.saved){abSnd("win");A.saved=1;G2.ariLv=Math.max(G2.ariLv||1,A.lv+1);G2.ariWins=(G2.ariWins||0)+1;try{save();}catch(e){}}
  const ts=document.getElementById("ab-toast");if(ts)ts.classList.remove("on");const bd=document.getElementById("ab-bd");if(bd)bd.classList.add("won");const ov=document.getElementById("ab-ov");if(!ov)return;
  const stars=A.tray.length===0&&A.plus&&A.cap===A.cap0?(A.hint===3?3:2):1;
  ov.innerHTML=`<div class="ab-card"><div class="ab-st no-mi">${"⭐".repeat(stars)}${"☆".repeat(3-stars)}</div><b>Bölüm ${A.lv} tamam!</b><small>“${esc(A.pic[0])}” ortaya çıktı · ${A.H.length} kovan bal 🍯</small><button type="button" class="btn ab-next" id="ab-next">Sonraki bölüm →</button><button type="button" class="ab-look" id="ab-look">Resme bakayım</button></div>`;
@@ -13382,6 +13390,7 @@ function abLose(){const A=AB,ov=document.getElementById("ab-ov");if(!ov)return;
  const m=document.getElementById("ab-more");if(m)m.onclick=()=>{A.plus--;A.cap+=2;A.end=0;ov.hidden=true;abRefreshTop();if(abStuck()){A.end=1;setTimeout(abLose,300);}};document.getElementById("ab-again").onclick=()=>{abNew(A.lv);keyRender();};}
 function abBind(){abFit();const bd=document.getElementById("ab-bd");bd.addEventListener("click",e=>{const el=e.target.closest(".ab-cell.st");if(el)abTap(el);});
  document.getElementById("ab-re").onclick=()=>{abNew(AB.lv);keyRender();};
+ document.getElementById("ab-snd").onclick=e=>{const G2=st.games2=st.games2||{};G2.ariSnd=abSndOn()?0:1;try{save();}catch(x){}e.currentTarget.textContent=abSndOn()?"🔊":"🔇";if(abSndOn()){try{sndCtx();}catch(x){}abSnd("full");}};
  document.getElementById("ab-hint").onclick=()=>{const A=AB;if(!A.hint||A.end)return;const b=abBest(A);if(b<0)return;A.hint--;abRefreshTop();const el=document.querySelector(`#ab-bd .ab-cell[data-i="${b}"]`);if(el){el.classList.remove("hint");void el.offsetWidth;el.classList.add("hint");setTimeout(()=>el.classList.remove("hint"),2600);}};
  document.getElementById("ab-plus").onclick=()=>{const A=AB;if(!A.plus)return;A.plus--;A.cap+=2;if(A.end===1){A.end=0;const ov=document.getElementById("ab-ov");if(ov)ov.hidden=true;}abRefreshTop();abToast("🍯 Rafa 2 yer daha açıldı");};
  if(AB.end===2)abWin();}
@@ -13392,6 +13401,19 @@ function abCard(){const lv=abLvSaved();const cube=(x,y,c,s)=>`<g transform="tran
   O.innerHTML=`<div class="ob-in zs-in kf-in"><button class="zs-x" type="button" id="zs-x" aria-label="Kapat">✕</button><button class="kf-back" type="button" data-kv="hub" aria-label="Keyif köşeme geri dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Geri</span></button>${abHTML()}</div>`;
   document.getElementById("zs-x").onclick=zodClose;O.scrollTop=0;requestAnimationFrame(abBind);return;}
  _k.apply(this,arguments);if(kv==="hub"){const g=document.querySelector("#zsh .kfb");if(g&&!g.querySelector(".kb-ari"))g.insertAdjacentHTML("afterbegin",abCard());}};})();
+
+/* Bal bahçesi sesleri (kendi açma/kapama ayarı) */
+function abSndOn(){const G2=(st&&st.games2)||{};return G2.ariSnd!==0;}
+function abSnd(k,x){if(!abSndOn())return;try{const C=sndCtx();if(!C||C.state!=="running")return;const m=C.createGain();m.gain.value=.7;m.connect(C.destination);const t=C.currentTime+.01;
+ if(k==="tap"){sndTone(C,m,t,520,.09,"sine",.32,.003,900);}
+ else if(k==="buzz"){const o=C.createOscillator(),lf=C.createOscillator(),lg=C.createGain(),f=C.createBiquadFilter(),g=C.createGain();o.type="sawtooth";o.frequency.value=205;lf.frequency.value=28;lg.gain.value=14;lf.connect(lg);lg.connect(o.frequency);f.type="lowpass";f.frequency.value=900;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.05,t+.05);g.gain.exponentialRampToValueAtTime(.0001,t+.42);o.connect(f);f.connect(g);g.connect(m);o.start(t);lf.start(t);o.stop(t+.45);lf.stop(t+.45);}
+ else if(k==="drop"){const f=620*Math.pow(1.0595,Math.min(14,(x||0)*2));sndTone(C,m,t,f,.13,"sine",.3,.004,f*1.6);sndTone(C,m,t+.02,f*2,.06,"triangle",.06,.003);}
+ else if(k==="tray"){sndTone(C,m,t,330,.08,"triangle",.28,.002,230);}
+ else if(k==="full"){[1046,1318,1568].forEach((f,j)=>sndBell(C,m,t+j*.07,f,.5,.16));}
+ else if(k==="no"){sndTone(C,m,t,170,.16,"square",.06,.004,110);}
+ else if(k==="win"){[523,659,784,1046,1318].forEach((f,j)=>sndBell(C,m,t+j*.11,f,.7,.17));sndSwish(C,m,t+.5,.6,.05,2000,7000);}
+ else if(k==="lose"){sndTone(C,m,t,420,.55,"triangle",.18,.01,190);}
+ }catch(e){}}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
