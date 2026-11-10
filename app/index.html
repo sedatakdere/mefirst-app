@@ -13892,7 +13892,7 @@ function bzMake(lv,cb){const f=bzCfg(lv),a=JART[(lv-1)%JART.length],dc=DCOL[(lv*
   const px=g.getImageData(0,0,f.c,f.r).data;const q=bzQuant(px,f.k,abRng(lv*31+7));done(q.A,bzPal(q.hex));}catch(e){const hex=AB_COL.slice(0,f.k);done(new Array(f.c*f.r).fill(0).map((_,i)=>(Math.floor(i/f.c)+i)%f.k),hex);}};
  im.onerror=()=>{const hex=AB_COL.slice(0,f.k);done(new Array(f.c*f.r).fill(0).map((_,i)=>(Math.floor(i/f.c)+i)%f.k),hex);};im.src=src;}
 /* ---- oyun durumu ---- */
-function bzNew(lv){BZ={lv,loading:1};bzMake(lv,(L,hex,name,src)=>{if(!BZ||BZ.lv!==lv)return;if(!L){BZ.fail=1;bzRender();return;}
+function bzNew(lv){try{const G2=st.games2||{};if(G2.bz){delete G2.bz;save();}}catch(e){}BZ={lv,loading:1};bzMake(lv,(L,hex,name,src)=>{if(!BZ||BZ.lv!==lv)return;if(!L){BZ.fail=1;bzRender();return;}
  BZ={lv,C:L.C,R:L.R,T:L.T.slice(),T0:L.T.slice(),hex,name,src,nests:L.nests,cols:L.cols.map(c=>c.map(b=>({...b}))),slots:[],S:L.sl,ants:new Map(),res:new Set(),aid:0,mv:0,end:0,boost:{plus:1,mix:1,back:1},used:0,fast:0,t0:Date.now(),tiles:L.T.filter(v=>v>=0).length,got:0};bzRender();});}
 function bzAntsIn(s){let n=0;for(const a of BZ.ants.values())if(a.s===s)n++;return n;}
 /* ---- arayüz ---- */
@@ -13917,18 +13917,18 @@ function bzRefresh(){const s=document.getElementById("bz-slots");if(s){s.innerHT
 function bzMarkFree(){const A=BZ;if(!A||!A.C)return;const B=bzBFS(A.T,A.C,A.R,A.nests);document.querySelectorAll("#bz-bd .bz-cell").forEach(el=>{const i=+el.dataset.i;if(A.T[i]<0){el.classList.remove("fr");return;}const x=i%A.C,y=(i-x)/A.C;let f=false;for(const j of [x>0?i-1:-1,x<A.C-1?i+1:-1,y>0?i-A.C:-1,i+A.C])if(j>=0&&B.dist[j]>=0){f=true;break;}el.classList.toggle("fr",f);});}
 function bzPos(i){const A=BZ,cs=A.cs||30,x=i%A.C,y=Math.floor(i/A.C);return [8+x*cs+cs/2,8+y*cs+cs/2];}
 /* ---- işçi arılar ---- */
-function bzTick(){const A=BZ;if(!A||!A.C||A.end||kv!=="ari"){return;}let any=false;
+function bzTick(){const A=BZ;if(!A||!A.C||A.end||kv!=="ari"){return;}let any=false;A.slots.forEach((s,k)=>{if(s&&s.rem<=0&&!bzAntsIn(s)){A.slots[k]=null;any=true;}});
  const B=bzBFS(A.T,A.C,A.R,A.nests);
  for(const s of A.slots){if(!s)continue;if(s.rem<=0)continue;if(bzAntsIn(s)>=4)continue;const rc=bzReach(A.T,A.C,A.R,B,s.c,A.res);if(!rc.length){s.stuck=1;continue;}s.stuck=0;
   const [tile,nb]=rc[0];A.res.add(tile);s.rem--;any=true;
   const path=[];let j=nb;while(j>=0){path.push(j);j=B.par[j];}path.reverse();bzAnt(s,tile,path);}
  if(any)bzRefreshSlots();bzCheck();}
-function bzRefreshSlots(){const s=document.getElementById("bz-slots");if(s)s.innerHTML=bzSlotsHTML();}
+function bzRefreshSlots(){const s=document.getElementById("bz-slots");if(s)s.innerHTML=bzSlotsHTML();bzSaveSoon();}
 function bzAnt(s,tile,path){const A=BZ,bd=document.getElementById("bz-bd");if(!bd)return;const id=++A.aid;const el=document.createElement("div");el.className="bz-ant";el.innerHTML=`<div class="bz-ab">${AB_BEE}<i></i></div>`;el.style.setProperty("--pc",A.hex[s.c]);bd.appendChild(el);
- const ant={s,tile,el};A.ants.set(id,ant);const cs=A.cs||30,step=(A.fast?55:105);
+ const ant={s,tile,el,ph:"go"};A.ants.set(id,ant);const cs=A.cs||30,step=(A.fast?55:105);
  const kf=path.map(p=>{const [x,y]=bzPos(p);return {transform:`translate3d(${x}px,${y}px,0px)`};});const [tx,ty]=bzPos(tile);const [lx,ly]=bzPos(path[path.length-1]);kf.push({transform:`translate3d(${(tx+lx)/2}px,${(ty+ly)/2}px,0px)`});
  const go=el.animate(kf,{duration:Math.max(250,kf.length*step),easing:"linear",fill:"forwards"});
- go.onfinish=()=>{if(BZ!==A){el.remove();return;}A.T[tile]=-1;A.res.delete(tile);A.got++;const c=bd.querySelector(`.bz-cell[data-i="${tile}"]`);if(c){const cu=c.querySelector(".bz-cube");if(cu){cu.classList.add("go");setTimeout(()=>cu.remove(),260);}}el.classList.add("carry");abSnd("drop",Math.min(7,(A.got%8)));
+ go.onfinish=()=>{if(BZ!==A){el.remove();return;}ant.ph="back";A.T[tile]=-1;A.res.delete(tile);A.got++;bzSaveSoon();const c=bd.querySelector(`.bz-cell[data-i="${tile}"]`);if(c){const cu=c.querySelector(".bz-cube");if(cu){cu.classList.add("go");setTimeout(()=>cu.remove(),260);}}el.classList.add("carry");abSnd("drop",Math.min(7,(A.got%8)));
   const l=document.getElementById("bz-left");if(l)l.textContent=A.tiles-A.got;bzMarkFree();
   const back=kf.slice().reverse();const r=el.animate(back,{duration:Math.max(250,back.length*step),easing:"linear",fill:"forwards"});r.onfinish=()=>{el.remove();A.ants.delete(id);bzNestPop(path[0]);if(s.rem<=0&&!bzAntsIn(s)){const k=A.slots.indexOf(s);if(k>=0){A.slots[k]=null;abSnd("full");bzSlotDone(k);}}bzRefreshSlots();bzCheck();};};}
 function bzNestPop(gi){const x=gi%BZ.C;const e=document.querySelector(`#bz-bd .bz-gr[data-x="${x}"] .bz-hole`);if(e){e.classList.remove("pop");void e.offsetWidth;e.classList.add("pop");}}
@@ -13943,7 +13943,7 @@ function bzTap(ci){const A=BZ;if(!A||A.end)return;try{sndCtx();}catch(e){}const 
  if(r1&&to){const r2=to.getBoundingClientRect();const g=document.createElement("div");g.className="bz-fly";g.setAttribute("style",bzVars(A.hex[b.c]));g.innerHTML=`<b>${b.n}</b>`;document.body.appendChild(g);g.animate([{transform:`translate(${r1.left}px,${r1.top}px)`,width:r1.width+"px",height:r1.height+"px"},{transform:`translate(${r2.left}px,${r2.top}px)`,width:r2.width+"px",height:r2.height+"px"}],{duration:260,easing:"cubic-bezier(.3,1.3,.5,1)"}).onfinish=()=>g.remove();}
  bzTick();}
 function bzBindTray(){document.querySelectorAll(".bz-box[data-col]").forEach(b=>b.onclick=()=>bzTap(+b.dataset.col));}
-function bzWin(){const A=BZ,G2=st.games2=st.games2||{};if(!A.saved){A.saved=1;abSnd("win");G2.ariLv=Math.max(G2.ariLv||1,A.lv+1);G2.ariWins=(G2.ariWins||0)+1;const pk=(A.lv-1)%JART.length,al=abAlb().slice();A.albNew=!al.includes(pk);if(A.albNew)al.push(pk);G2.ariAlb=al;try{save();}catch(e){}}
+function bzWin(){const A=BZ,G2=st.games2=st.games2||{};delete G2.bz;if(!A.saved){A.saved=1;abSnd("win");G2.ariLv=Math.max(G2.ariLv||1,A.lv+1);G2.ariWins=(G2.ariWins||0)+1;const pk=(A.lv-1)%JART.length,al=abAlb().slice();A.albNew=!al.includes(pk);if(A.albNew)al.push(pk);G2.ariAlb=al;try{save();}catch(e){}}
  const ov=document.getElementById("ab-ov");if(!ov)return;const stars=A.used?2:3;
  ov.innerHTML=`<div class="ab-card"><div class="ab-st no-mi">${"⭐".repeat(stars)}${"☆".repeat(3-stars)}</div><img class="bz-pic" alt="" src="${A.src}"><b>Bölüm ${A.lv} tamam!</b><small>Arılar “${esc(A.name)}” resmini ${A.tiles} küp küp yuvaya taşıdı 🍯${A.used?"":" · yardımsız!"}</small>${A.albNew?`<button type="button" class="ab-albn" id="ab-albn">📔 Albüme eklendi · ${abAlb().length}/${JART.length}</button>`:""}<button type="button" class="btn ab-next" id="ab-next">Sonraki bölüm →</button></div>`;ov.hidden=false;
  const st0=document.getElementById("ab-stage");if(st0)for(let k=0;k<30;k++){const c=document.createElement("i");c.className="ab-cf";c.style.cssText=`left:${Math.random()*100}%;--c:${A.hex[k%A.hex.length]};--d:${(Math.random()*.7).toFixed(2)}s;--x:${Math.round(Math.random()*90-45)}px`;st0.appendChild(c);setTimeout(()=>c.remove(),2800);}
@@ -13967,7 +13967,7 @@ function bzRender(){if(kv!=="ari")return;const O=document.getElementById("zsh");
  if(BZ.end===2){bzWin();return;}if(BZ.end===1){bzLose();return;}BZT=setInterval(bzTick,BZ.fast?90:170);}
 window.addEventListener("resize",()=>{if(kv==="ari"&&BZ&&BZ.C){bzFit();}});
 document.addEventListener("visibilitychange",()=>{if(document.hidden)clearInterval(BZT);else if(kv==="ari"&&BZ&&BZ.C&&!BZ.end){clearInterval(BZT);BZT=setInterval(bzTick,BZ.fast?90:170);}});
-(function(){const _k=keyRender;keyRender=function(){if(kv==="ari"){try{clearInterval(kTm);}catch(e){}if(!BZ||(!BZ.C&&!BZ.loading))bzNew(abLvSaved());bzRender();return;}clearInterval(BZT);_k.apply(this,arguments);
+(function(){const _k=keyRender;keyRender=function(){if(kv==="ari"){try{clearInterval(kTm);}catch(e){}if(!BZ||(!BZ.C&&!BZ.loading)){if(!bzLoad())bzNew(abLvSaved());}bzRender();return;}clearInterval(BZT);_k.apply(this,arguments);
  if(kv==="hub"){const sm=document.querySelector("#zsh .kb-ari small");if(sm){const lv=abLvSaved();sm.textContent=lv>1?`Bölüm ${lv} · 📔 ${abAlb().length}/${JART.length} resim`:"Kutuya dokun, arılar resmi küp küp taşısın";}}};})();
 
 
@@ -13975,6 +13975,18 @@ document.addEventListener("visibilitychange",()=>{if(document.hidden)clearInterv
 function kkFocus(cells){if(!KKZ||!cells||!cells.length)return;setTimeout(()=>{const w=document.getElementById("kk-bw"),b=document.getElementById("kk-bd");if(!w||!b)return;let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;
  cells.forEach(i=>{const el=b.querySelector(`.kk-c[data-c="${i}"]`);if(!el)return;x0=Math.min(x0,el.offsetLeft);y0=Math.min(y0,el.offsetTop);x1=Math.max(x1,el.offsetLeft+el.offsetWidth);y1=Math.max(y1,el.offsetTop+el.offsetHeight);});if(x1<0)return;
  const cx=(x0+x1)/2+b.offsetLeft,cy=(y0+y1)/2+b.offsetTop;w.dataset.zs=1;try{w.scrollTo({left:cx-w.clientWidth/2,top:cy-w.clientHeight/2,behavior:"smooth"});}catch(e){w.scrollLeft=cx-w.clientWidth/2;w.scrollTop=cy-w.clientHeight/2;}},80);}
+
+/* Bal bahçesi: bölüm içi kayıt — kapatıp açınca kaldığın yerden */
+let BZSV=0;
+function bzSnap(){const A=BZ;if(!A||!A.C||A.end===2)return null;const go=new Map();for(const a of A.ants.values())if(a.ph==="go")go.set(a.s,(go.get(a.s)||0)+1);
+ return {v:1,lv:A.lv,C:A.C,R:A.R,T:A.T.slice(),T0:A.T0,hex:A.hex,name:A.name,src:A.src,nests:A.nests,cols:A.cols,slots:A.slots.map(s=>s?{c:s.c,rem:s.rem+(go.get(s)||0),h:s.h?1:0}:null),S:A.S,boost:A.boost,used:A.used,fast:A.fast,tiles:A.tiles,got:A.got,mv:A.mv,end:A.end===1?1:0};}
+function bzSave(){clearTimeout(BZSV);try{const G2=st.games2=st.games2||{};const sn=bzSnap();if(sn)G2.bz=sn;save();}catch(e){}}
+function bzSaveSoon(){clearTimeout(BZSV);BZSV=setTimeout(bzSave,700);}
+function bzLoad(){try{const G2=(st&&st.games2)||{},sn=G2.bz;if(!sn||sn.v!==1||sn.lv!==abLvSaved()||!Array.isArray(sn.T))return false;
+ BZ={lv:sn.lv,C:sn.C,R:sn.R,T:sn.T.slice(),T0:sn.T0||sn.T.slice(),hex:sn.hex,name:sn.name,src:sn.src,nests:sn.nests,cols:sn.cols.map(c=>c.map(b=>({...b}))),slots:sn.slots.map(s=>s&&s.rem>0?{...s}:null),S:sn.S,ants:new Map(),res:new Set(),aid:0,mv:sn.mv||0,end:0,boost:sn.boost||{plus:0,mix:0,back:0},used:sn.used||0,fast:sn.fast||0,t0:Date.now(),tiles:sn.tiles,got:sn.got||0,resumed:1};
+ setTimeout(()=>{if(BZ&&BZ.resumed){BZ.resumed=0;abToast("🐝 Kaldığın yerden devam ediyorsun");bzCheck();}},700);return true;}catch(e){return false;}}
+window.addEventListener("pagehide",()=>{if(BZ&&BZ.C&&!BZ.end)bzSave();});
+document.addEventListener("visibilitychange",()=>{if(document.hidden&&BZ&&BZ.C&&!BZ.end)bzSave();});
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
