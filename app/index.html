@@ -6443,6 +6443,16 @@ html[data-mf="dusk"] .kto h3{color:#F5E1CC}html[data-mf="dusk"] .kto p{color:#E0
 .bz-fly{position:fixed;left:0;top:0;z-index:9999;border-radius:12px;display:grid;place-items:center;background:var(--c);pointer-events:none}.bz-fly b{color:#fff;font-weight:900}
 .bz-pic{width:96px;height:96px;border-radius:16px;box-shadow:0 8px 16px -8px rgba(0,0,0,.45);animation:abIn .5s cubic-bezier(.2,1.6,.4,1)}
 .bz .ab-tools .pill{padding:7px 10px;font-size:12.5px}
+
+/* Keyif köşem düzeni */
+.kfb.tidy{grid-auto-rows:auto}
+.kfb.tidy .kb{min-height:118px}
+.kfb.tidy .kb-fal,.kfb.tidy .kb-burc{min-height:150px}
+.kf-sec{grid-column:1/-1;display:flex;flex-direction:column;align-items:flex-start;gap:1px;padding:12px 4px 0}
+.kf-sec:first-child{padding-top:2px}
+.kf-sec b{font-family:var(--f-display);font-weight:400;font-size:21px;color:var(--ink)}
+.kf-sec small{font-size:12px;color:var(--muted)}
+.kfb.tidy .kb-fal .kb-art,.kfb.tidy .kb-jig .kb-art,.kfb.tidy .kb-mem .kb-art{transform:scale(.8);transform-origin:top right}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -13987,6 +13997,16 @@ function bzLoad(){try{const G2=(st&&st.games2)||{},sn=G2.bz;if(!sn||sn.v!==1||sn
  setTimeout(()=>{if(BZ&&BZ.resumed){BZ.resumed=0;abToast("🐝 Kaldığın yerden devam ediyorsun");bzCheck();}},700);return true;}catch(e){return false;}}
 window.addEventListener("pagehide",()=>{if(BZ&&BZ.C&&!BZ.end)bzSave();});
 document.addEventListener("visibilitychange",()=>{if(document.hidden&&BZ&&BZ.C&&!BZ.end)bzSave();});
+
+/* ===== Keyif köşem düzeni: günün sorusu kalktı; ritüeller + oyunlar ===== */
+(function(){const _k=keyRender;keyRender=function(){_k.apply(this,arguments);if(kv!=="hub")return;try{
+ const O=document.getElementById("zsh");if(!O)return;const q=O.querySelector(".kfq");if(q)q.remove();const g=O.querySelector(".kfb");if(!g||g.dataset.tidy)return;g.dataset.tidy=1;
+ const pick=c=>g.querySelector(".kb-"+c);const fal=pick("fal"),burc=pick("burc"),ari=pick("ari"),kk=pick("kk"),wow=pick("wow"),mem=pick("mem"),jig=pick("jig");
+ const H=(t,sub)=>{const h=document.createElement("div");h.className="kf-sec";h.innerHTML=`<b>${t}</b>${sub?`<small>${sub}</small>`:""}`;return h;};
+ const known=new Set([fal,burc,ari,kk,wow,mem,jig].filter(Boolean));const rest=[...g.children].filter(e=>!known.has(e));
+ const order=[H("☕ Günün ritüeli","Kahveni al, yıldızına bak"),fal,burc,H("🎮 Oyunlar","Beş dakikalık keyif molaları"),ari,kk,wow,mem,jig,...rest].filter(Boolean);
+ if(fal)fal.classList.remove("tall");if(burc)burc.classList.remove("wide","tall");if(wow)wow.classList.add("wide");if(mem)mem.classList.remove("wide","tall");if(jig){jig.classList.remove("wide","tall");const sm=jig.querySelector("small");if(sm)sm.textContent="Kendi fotoğrafınla yap";}
+ g.innerHTML="";order.forEach((e,i)=>{if(e.classList.contains("kb"))e.style.setProperty("--i",i);g.appendChild(e);});g.classList.add("tidy");}catch(e){}};})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
