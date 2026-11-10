@@ -6391,6 +6391,58 @@ html[data-mf="dusk"] .kto h3{color:#F5E1CC}html[data-mf="dusk"] .kto p{color:#E0
 .kk-t b{font-weight:900;-webkit-font-smoothing:antialiased}
 .kk-c.last .kk-t{background:linear-gradient(180deg,#FFEFA8,#F2C94C);box-shadow:inset 0 -2px 0 #C9962A,0 0 0 1.5px #E0A21B}
 .kk-bw{place-items:start center}
+
+/* Bal bahçesi — Colony mantığı */
+.bz-load{flex:1;display:grid;place-items:center;align-content:center;gap:8px;color:var(--muted)}.bz-load span{font-size:46px;animation:abHov 1.4s ease-in-out infinite}
+.bz .ab-hd .mg-st{align-items:center}
+.bz-prog{font-size:12px!important}
+.bz-stage{perspective:900px!important;perspective-origin:50% 0%!important}
+.bz-bd{--cs:30px;transform:rotateX(30deg)!important;margin-top:0!important;background:#6E4A2C!important;box-shadow:0 0 0 5px #5A3B22,0 26px 30px -14px rgba(60,40,10,.55)!important;grid-auto-rows:var(--cs)}
+.bz-bd::before{display:none}
+.bz-cell{position:relative;transform-style:preserve-3d;background:#8A6A4A}
+.bz-cell.g2{background:#83623F}
+.bz-gr{position:relative;background:linear-gradient(180deg,#7A5634,#5E3F24);transform-style:preserve-3d}
+.bz-gr.nest{background:radial-gradient(circle at 50% 50%,#7A5634 0 60%,#5E3F24 61%)}
+.bz-hole{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle at 50% 45%,#1E120A 0 55%,#3A2414 56% 70%,#F5B83D 71% 84%,transparent 85%)}
+.bz-hole.pop{animation:abPop .35s ease}
+.bz-cube{position:absolute;inset:calc(var(--cs)*.04);transform-style:preserve-3d;--h:calc(var(--cs)*.42);transition:transform .25s ease,opacity .25s ease}
+.bz-cube i{position:absolute;display:block}
+.bz-cube .t{inset:0;border-radius:calc(var(--cs)*.12);background:linear-gradient(135deg,var(--ct),var(--c));transform:translateZ(var(--h));box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+.bz-cube .f{left:0;right:0;bottom:0;height:var(--h);transform-origin:bottom;transform:rotateX(-90deg);background:var(--cf)}
+.bz-cube .l{top:0;bottom:0;left:0;width:var(--h);transform-origin:left;transform:rotateY(-90deg);background:var(--cside)}
+.bz-cube .r{top:0;bottom:0;right:0;width:var(--h);transform-origin:right;transform:rotateY(90deg);background:var(--cside)}
+.bz-cell:not(.fr) .bz-cube .t,.bz-cell:not(.fr) .bz-cube .f{filter:brightness(.82)}
+.bz-cell.fr .bz-cube .t::after{content:"";position:absolute;inset:16%;border-radius:50%;border:2px solid rgba(255,255,255,.75);animation:abGlowR 1.6s ease-in-out infinite}
+.bz-cube.go{opacity:0;transform:translateZ(calc(var(--cs)*.9)) scale(.4)}
+.bz-ant{position:absolute;left:0;top:0;width:0;height:0;transform-style:preserve-3d;pointer-events:none;z-index:4}
+.bz-ab{position:absolute;left:calc(var(--cs)*-.36);top:calc(var(--cs)*-.6);width:calc(var(--cs)*.72);height:calc(var(--cs)*.6);transform-origin:50% 100%;transform:translateZ(calc(var(--cs)*.55)) rotateX(-30deg)}
+.bz-ab svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 3px 2px rgba(0,0,0,.3))}
+.bz-ab .w1,.bz-ab .w2{animation:abWing .07s linear infinite alternate;transform-box:fill-box;transform-origin:center bottom}
+.bz-ab i{position:absolute;left:28%;bottom:-30%;width:44%;height:44%;border-radius:3px;background:var(--pc);box-shadow:0 0 0 1.5px #fff;opacity:0;transform:scale(.3);transition:opacity .15s,transform .2s}
+.bz-ant.carry .bz-ab i{opacity:1;transform:scale(1)}
+.bz-slots{flex:none;display:grid;grid-template-columns:repeat(var(--n),1fr);gap:6px;padding:6px;border-radius:16px;background:color-mix(in srgb,#FFC24A 14%,var(--surface));border:1px solid color-mix(in srgb,#FFC24A 35%,transparent)}
+.bz-sl{position:relative;height:44px;border-radius:12px;background:rgba(160,110,60,.14);box-shadow:inset 0 2px 4px rgba(0,0,0,.12);display:grid;place-items:center}
+.bz-sl.on{background:linear-gradient(180deg,var(--ct) 0 30%,var(--c) 30% 78%,var(--cf) 78%);box-shadow:0 3px 6px -2px rgba(0,0,0,.3),inset 0 0 0 1px rgba(255,255,255,.3)}
+.bz-sl b{color:var(--tx,#fff);font-weight:900;font-size:17px;text-shadow:var(--ts)}
+.bz-sl.stuck{animation:bzStuck 1.2s ease-in-out infinite}
+@keyframes bzStuck{50%{filter:saturate(.4) brightness(.85)}}
+.bz-sl i{position:absolute;right:3px;top:1px;font-size:11px;font-style:normal}
+.bz-sl.done{animation:abPop .3s ease}
+.bz-tray{flex:none;display:grid;grid-template-columns:repeat(var(--n),1fr);gap:10px;padding:8px 6px 2px}
+.bz-col{display:flex;flex-direction:column;align-items:center;gap:3px;position:relative}
+.bz-box{all:unset;box-sizing:border-box;position:relative;width:100%;max-width:92px;height:54px;border-radius:14px;cursor:pointer;display:grid;place-items:center;background:linear-gradient(180deg,var(--ct) 0 26%,var(--c) 26% 80%,var(--cf) 80%);box-shadow:0 6px 0 -1px var(--cf),0 10px 14px -6px rgba(0,0,0,.35),inset 0 0 0 1px rgba(255,255,255,.3);transition:transform .15s}
+.bz-box:active{transform:translateY(3px) scale(.97)}
+.bz-box b{color:var(--tx,#fff);font-weight:900;font-size:22px;text-shadow:var(--ts,0 2px 3px rgba(0,0,0,.45))}
+.bz-box.front{animation:bzRing 2s ease-in-out infinite}
+@keyframes bzRing{50%{box-shadow:0 6px 0 -1px var(--cf),0 0 0 3px rgba(255,255,255,.95),0 10px 16px -6px rgba(0,0,0,.35)}}
+.bz-box.hid b{font-size:24px}
+.bz-box .bz-bee{position:absolute;right:-6px;top:-10px;font-size:16px;animation:abHov 1.6s ease-in-out infinite}
+.bz-box.no{animation:abNo .35s ease}
+.bz-nx{width:80%;opacity:.55;transform:scale(.86);margin-top:-6px;pointer-events:none}.bz-nx .bz-box{height:30px;animation:none}.bz-nx .bz-box b{font-size:13px}
+.bz-col small{font-size:10.5px;font-weight:800;color:var(--muted)}
+.bz-fly{position:fixed;left:0;top:0;z-index:9999;border-radius:12px;display:grid;place-items:center;background:var(--c);pointer-events:none}.bz-fly b{color:#fff;font-weight:900}
+.bz-pic{width:96px;height:96px;border-radius:16px;box-shadow:0 8px 16px -8px rgba(0,0,0,.45);animation:abIn .5s cubic-bezier(.2,1.6,.4,1)}
+.bz .ab-tools .pill{padding:7px 10px;font-size:12.5px}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -13514,10 +13566,10 @@ function abFlyHoney(r1,to,cb){try{const r2=to.getBoundingClientRect();const b=do
  const x1=r1.left+r1.width/2-18,y1=r1.top+r1.height/2-20,x2=r2.left+r2.width/2-18,y2=r2.top+r2.height/2-20;
  const an=b.animate([{transform:`translate(${x1}px,${y1}px) scale(.5)`,opacity:0},{transform:`translate(${x1}px,${y1-20}px) scale(1)`,opacity:1,offset:.2},{transform:`translate(${(x1+x2)/2}px,${Math.min(y1,y2)-60}px) scale(1.1)`,offset:.6},{transform:`translate(${x2}px,${y2}px) scale(.6)`,opacity:1}],{duration:800,easing:"ease-in-out"});an.onfinish=()=>{b.remove();cb&&cb();};}catch(e){cb&&cb();}}
 function abAlb(){const G2=(st&&st.games2)||{};return Array.isArray(G2.ariAlb)?G2.ariAlb:[];}
-function abAlbOpen(){const ov=document.getElementById("ab-ov");if(!ov)return;const have=new Set(abAlb());const n=JART.length;
+function abAlbOpen(){const ov=document.getElementById("ab-ov");if(!ov)return;const have=new Set(abAlb());const n=JART.length;const wasEnd0=0;
  ov.innerHTML=`<div class="ab-card ab-alb"><div class="ab-st no-mi">📔</div><b>Bal bahçesi albümü</b><small>${have.size}/${n} resim · her bölüm yeni bir resim açar</small>
   <div class="ab-alg">${JART.map((a,k)=>have.has(k)?`<figure><img alt="" src="${"data:image/svg+xml;charset=utf-8,"+encodeURIComponent(a[1].split("{dc}").join(DCOL[((k+1)*3)%DCOL.length][1]))}"><figcaption>${esc(a[0])}</figcaption></figure>`:`<figure class="lk"><span class="no-mi">🔒</span><figcaption>Bölüm ${k+1}</figcaption></figure>`).join("")}</div>
-  <button type="button" class="btn ab-next" id="ab-albx">Oyuna dön</button></div>`;ov.hidden=false;const wasEnd=AB&&AB.end;document.getElementById("ab-albx").onclick=()=>{ov.hidden=true;if(wasEnd===2)abWin();else if(wasEnd===1)abLose();};}
+  <button type="button" class="btn ab-next" id="ab-albx">Oyuna dön</button></div>`;ov.hidden=false;const wasEnd=AB&&AB.end;document.getElementById("ab-albx").onclick=()=>{ov.hidden=true;if(kv==="ari"&&typeof BZ!=="undefined"&&BZ&&BZ.C){if(BZ.end===2)bzWin();else if(BZ.end===1)bzLose();return;}if(wasEnd===2)abWin();else if(wasEnd===1)abLose();};}
 const AB_NEW={8:["🌫️","Sisli küpler","Bazı yığınların rengi sisin içinde, üstlerinde “?” var. Önlerindeki yol açılınca sis dağılır ve renkleri ortaya çıkar. Sürprizlere hazır ol!"],
  12:["🍯","Petekli zemin","Bazı yığınların altında bal peteği saklı. Yığını aldığında petek ortaya çıkar, bir arı onu bal kavanozuna götürür. Bölüm sonunda balların sayılır!"],
  16:["❄️","Buzlu yığınlar","Buzlu yığınlara hemen dokunamazsın. Yanındaki bir yığını aldığında buz çatlar, sonra onu da alabilirsin. Sırayı iyi düşün!"]};
@@ -13779,6 +13831,144 @@ window.addEventListener("resize",()=>{if(kv==="kk")kkFit();});
 /* davet linki: /app/#kk=KOD */
 (function(){const m=/^#kk=([A-Za-z0-9]{4,10})$/.exec(location.hash||"");if(!m)return;const code=m[1];try{history.replaceState(null,"",location.pathname+location.search);}catch(e){}
  const go=()=>{if(document.getElementById("mf-splash")){setTimeout(go,400);return;}try{zodOpen();}catch(e){}kv="kk";KKV="home";kkRender();kkEnsure().then(async()=>{const r=await kkNetJoin(code);if(r.err){alert(r.err);return;}KKPEND=[];KKSEL=-1;kkRender();setTimeout(()=>kkToast("Oyuna katıldın! 🐝 Sıra sende olunca harflerini diz"),400);});};setTimeout(go,1200);})();
+
+
+/* ===== Bal bahçesi (Colony mantığı): resim renkli küplerden oluşur; kutulardaki işçi arılar,
+   yuvadan yürüyüp ulaşabildikleri kendi renkteki küpleri tek tek taşır. 5 yuva dolup tıkanırsa oyun biter. ===== */
+let BZ=null,BZT=0,BZW=0;
+function bzCfg(lv){if(lv<=1)return {c:8,r:8,k:3,mn:4,mx:8,cols:2,sl:5,sw:0,nest:1,hid:0};
+ if(lv<=4)return {c:9,r:10,k:lv<=2?3:4,mn:5,mx:10,cols:3,sl:5,sw:lv>=3?1:0,nest:1,hid:0};
+ if(lv<=10)return {c:10,r:12,k:lv<=6?4:5,mn:6,mx:12,cols:3,sl:5,sw:2,nest:1,hid:lv>=8?.2:0};
+ if(lv<=20)return {c:11,r:13,k:lv<=14?5:6,mn:6,mx:14,cols:3,sl:5,sw:3,nest:lv>=18?2:1,hid:.25};
+ return {c:12,r:14,k:lv<=30?6:7,mn:7,mx:16,cols:4,sl:5,sw:4,nest:2,hid:.3};}
+function bzNests(C,n){return n===2?[Math.floor(C/4),Math.floor(3*C/4)-(C%2?0:1)]:[Math.floor((C-1)/2)];}
+/* yol: boş kareler + alttaki toprak satırı (y=R). Çok kaynaklı BFS yuvalardan. */
+function bzBFS(T,C,R,nests){const N=C*(R+1),dist=new Int32Array(N).fill(-1),par=new Int32Array(N).fill(-1),src=new Int32Array(N).fill(-1),q=[];
+ for(const x of nests){const i=R*C+x;dist[i]=0;src[i]=x;q.push(i);}
+ for(let h=0;h<q.length;h++){const i=q[h],x=i%C,y=(i-x)/C;const nb=[x>0?i-1:-1,x<C-1?i+1:-1,y>0?i-C:-1,y<R?i+C:-1];
+  for(const j of nb){if(j<0||dist[j]>=0)continue;const jy=Math.floor(j/C);if(jy<R&&T[j]!==-1)continue;dist[j]=dist[i]+1;par[j]=i;src[j]=src[i];q.push(j);}}
+ return {dist,par,src};}
+/* renk c için ulaşılabilir küpler: [tile, komşu açık kare, mesafe] */
+function bzReach(T,C,R,B,c,skip){const out=[];for(let i=0;i<C*R;i++){if(T[i]!==c||(skip&&skip.has(i)))continue;const x=i%C,y=(i-x)/C;let best=-1,bd=1e9;
+ for(const j of [x>0?i-1:-1,x<C-1?i+1:-1,y>0?i-C:-1,i+C]){if(j<0)continue;const d=B.dist[j];if(d>=0&&d<bd){bd=d;best=j;}}if(best>=0)out.push([i,best,bd]);}
+ out.sort((a,b)=>a[2]-b[2]||a[0]-b[0]);return out;}
+function bzCountReach(T,C,R,B){const m={};for(let i=0;i<C*R;i++){const c=T[i];if(c<0)continue;const x=i%C,y=(i-x)/C;for(const j of [x>0?i-1:-1,x<C-1?i+1:-1,y>0?i-C:-1,i+C]){if(j>=0&&B.dist[j]>=0){m[c]=(m[c]||0)+1;break;}}}return m;}
+/* resmi k renge indir (k-ortalamalar) */
+function bzQuant(px,k,rnd){const P=[];for(let i=0;i<px.length;i+=4)P.push([px[i],px[i+1],px[i+2]]);const d2=(a,b)=>(a[0]-b[0])**2+(a[1]-b[1])**2+(a[2]-b[2])**2;
+ const cen=[P[Math.floor(rnd()*P.length)].slice()];while(cen.length<k){let bi=0,bd=-1;P.forEach((p,i)=>{const d=Math.min(...cen.map(c=>d2(p,c)));if(d>bd){bd=d;bi=i;}});if(bd<300)break;cen.push(P[bi].slice());}
+ let A=new Array(P.length).fill(0);for(let it=0;it<12;it++){A=P.map(p=>{let b=0,bd=1e12;cen.forEach((c,j)=>{const d=d2(p,c);if(d<bd){bd=d;b=j;}});return b;});cen.forEach((c,j)=>{const m=P.filter((_,i)=>A[i]===j);if(m.length)for(let t=0;t<3;t++)c[t]=m.reduce((s,p)=>s+p[t],0)/m.length;});}
+ const hex=cen.map(c=>"#"+c.map(v=>Math.max(0,Math.min(255,Math.round(v))).toString(16).padStart(2,"0")).join(""));return {A,hex};}
+function bzBoost(h){/* küp rengi biraz daha canlı */const p=x=>parseInt(x,16);let r=p(h.slice(1,3)),g=p(h.slice(3,5)),b=p(h.slice(5,7));const m=(r+g+b)/3;const f=1.18;r=m+(r-m)*f;g=m+(g-m)*f;b=m+(b-m)*f;return "#"+[r,g,b].map(v=>Math.max(0,Math.min(255,Math.round(v))).toString(16).padStart(2,"0")).join("");}
+const BZ_PAL=["#F06A9B","#9B7BE0","#F5B83D","#3DBE98","#4F9FE6","#F2804A","#F6EBD6","#8B5A3C","#D9455F","#3F4F8F","#9FD86B","#5BC8D6","#2F2A3A","#FFFFFF"];
+function bzPal(hex){const p=h=>[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];const d2=(a,b)=>(a[0]-b[0])**2+(a[1]-b[1])**2+(a[2]-b[2])**2;const used=new Set();const out=new Array(hex.length);
+ const pairs=[];hex.forEach((h,i)=>BZ_PAL.forEach((q,j)=>pairs.push([d2(p(h),p(q)),i,j])));pairs.sort((a,b)=>a[0]-b[0]);for(const [_,i,j] of pairs){if(out[i]!==undefined||used.has(j))continue;out[i]=BZ_PAL[j];used.add(j);}return out;}
+function bzVars(h){const L=(parseInt(h.slice(1,3),16)*.3+parseInt(h.slice(3,5),16)*.59+parseInt(h.slice(5,7),16)*.11);return `--tx:${L>200?"#5A3B22":"#fff"};--ts:${L>200?"none":"0 2px 3px rgba(0,0,0,.45)"};--c:${h};--ct:${abMix(h,"#ffffff",.3)};--cf:${abMix(h,"#000000",.3)};--cside:${abMix(h,"#000000",.17)}`;}
+/* bölüm üret: kutu sırası resmi alttan yemeyle oluşturulur → sırayla oynanırsa her zaman çözülür */
+function bzBuild(lv,T,k){const f=bzCfg(lv),C=f.c,R=f.r,nests=bzNests(C,f.nest);
+ for(let att=0;att<40;att++){const rnd=abRng(lv*4241+att*7919+3);const W=T.slice();const seq=[];let g=0;
+  while(W.some(v=>v>=0)&&g++<2000){const B=bzBFS(W,C,R,nests);const cnt=bzCountReach(W,C,R,B);const cs=Object.keys(cnt).map(Number);if(!cs.length)break;
+   const tot=cs.reduce((a,c)=>a+cnt[c],0);let r=rnd()*tot,c=cs[0];for(const x of cs){r-=cnt[x];if(r<=0){c=x;break;}}
+   const n=f.mn+Math.floor(rnd()*(f.mx-f.mn+1));let ate=0;
+   while(ate<n){const Bb=bzBFS(W,C,R,nests);const rc=bzReach(W,C,R,Bb,c);if(!rc.length)break;W[rc[0][0]]=-1;ate++;}
+   if(ate)seq.push({c,n:ate});}
+  if(W.some(v=>v>=0))continue;
+  /* aynı renk arka arkaya küçük kutuları birleştir */
+  const S=[];for(const b of seq){const L=S[S.length-1];if(L&&L.c===b.c&&L.n+b.n<=f.mx+4)L.n+=b.n;else S.push({...b});}
+  let best=null;for(let sw=f.sw;sw>=0;sw--){const Q=S.map(b=>({...b}));let d=0,tr=0;while(d<sw&&tr++<50){const i=Math.floor(rnd()*(Q.length-2));if(Q[i].c!==Q[i+1].c){[Q[i],Q[i+1]]=[Q[i+1],Q[i]];d++;}}
+   const cols=Array.from({length:f.cols},()=>[]);Q.forEach((b,i)=>cols[i%f.cols].push(b));
+   cols.forEach(cl=>cl.forEach(b=>{if(f.hid&&rnd()<f.hid)b.h=1;}));
+   const L={lv,C,R,T:T.slice(),nests,cols,sl:f.sl,k};if(bzSolve(L,Math.max(3,f.sl-1))){best=L;break;}}
+  if(best)return best;}
+ return null;}
+/* soyut çözücü: yuvadaki kutular ulaşabildiği her küpü hemen yer */
+function bzSolve(L,S){const {C,R,nests}=L,T=L.T.slice(),cols=L.cols.map(c=>c.map(b=>({...b})));const sl=[];let g=0;
+ const run=()=>{let ch=true;while(ch){ch=false;for(const s of sl){while(s.rem>0){const B=bzBFS(T,C,R,nests);const rc=bzReach(T,C,R,B,s.c);if(!rc.length)break;T[rc[0][0]]=-1;s.rem--;ch=true;}}for(let i=sl.length-1;i>=0;i--)if(sl[i].rem===0)sl.splice(i,1);}};
+ while(g++<500){run();if(!T.some(v=>v>=0))return true;const fr=cols.map((c,i)=>[c[0],i]).filter(x=>x[0]);if(!fr.length)return false;if(sl.length>=S)return false;
+  const B=bzBFS(T,C,R,nests),cnt=bzCountReach(T,C,R,B);fr.sort((a,b)=>(cnt[b[0].c]||0)-(cnt[a[0].c]||0));const [b,ci]=fr[0];cols[ci].shift();sl.push({c:b.c,rem:b.n});}
+ return false;}
+function bzMake(lv,cb){const f=bzCfg(lv),a=JART[(lv-1)%JART.length],dc=DCOL[(lv*3)%DCOL.length][1];const src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(a[1].split("{dc}").join(dc));
+ const done=(T,hex)=>{const L=bzBuild(lv,T,hex.length);if(!L){/* yedek: düz şeritler */const T2=T.map((_,i)=>Math.floor(i/f.c)%hex.length);cb(bzBuild(lv,T2,hex.length),hex,a[0],src);return;}cb(L,hex,a[0],src);};
+ const im=new Image();im.onload=()=>{try{const cv=document.createElement("canvas");cv.width=f.c;cv.height=f.r;const g=cv.getContext("2d");g.imageSmoothingEnabled=true;const s=Math.max(f.c/im.width,f.r/im.height),dw=im.width*s,dh=im.height*s;g.drawImage(im,(f.c-dw)/2,(f.r-dh)/2,dw,dh);
+  const px=g.getImageData(0,0,f.c,f.r).data;const q=bzQuant(px,f.k,abRng(lv*31+7));done(q.A,bzPal(q.hex));}catch(e){const hex=AB_COL.slice(0,f.k);done(new Array(f.c*f.r).fill(0).map((_,i)=>(Math.floor(i/f.c)+i)%f.k),hex);}};
+ im.onerror=()=>{const hex=AB_COL.slice(0,f.k);done(new Array(f.c*f.r).fill(0).map((_,i)=>(Math.floor(i/f.c)+i)%f.k),hex);};im.src=src;}
+/* ---- oyun durumu ---- */
+function bzNew(lv){BZ={lv,loading:1};bzMake(lv,(L,hex,name,src)=>{if(!BZ||BZ.lv!==lv)return;if(!L){BZ.fail=1;bzRender();return;}
+ BZ={lv,C:L.C,R:L.R,T:L.T.slice(),T0:L.T.slice(),hex,name,src,nests:L.nests,cols:L.cols.map(c=>c.map(b=>({...b}))),slots:[],S:L.sl,ants:new Map(),res:new Set(),aid:0,mv:0,end:0,boost:{plus:1,mix:1,back:1},used:0,fast:0,t0:Date.now(),tiles:L.T.filter(v=>v>=0).length,got:0};bzRender();});}
+function bzAntsIn(s){let n=0;for(const a of BZ.ants.values())if(a.s===s)n++;return n;}
+/* ---- arayüz ---- */
+function bzTileHTML(i){const v=BZ.T[i];if(v<0)return "";return `<div class="bz-cube" style="${bzVars(BZ.hex[v])}"><i class="f"></i><i class="l"></i><i class="r"></i><i class="t"></i></div>`;}
+function bzBoardHTML(){const A=BZ,C=A.C,R=A.R;let h="";for(let i=0;i<C*R;i++)h+=`<div class="bz-cell${(i%C+Math.floor(i/C))%2?" g2":""}" data-i="${i}">${bzTileHTML(i)}</div>`;
+ for(let x=0;x<C;x++)h+=`<div class="bz-gr${A.nests.includes(x)?" nest":""}" data-x="${x}">${A.nests.includes(x)?'<span class="bz-hole"></span>':""}</div>`;return h;}
+function bzBox(b,front,ci){if(!b)return `<div class="bz-box empty"></div>`;const hid=b.h;return `<button type="button" class="bz-box${front?" front":""}${hid?" hid":""}" ${front?`data-col="${ci}"`:"disabled"} style="${hid?"--c:#A9A4B8;--ct:#C9C5D6;--cf:#7E7A8C":bzVars(BZ.hex[b.c])}"><b>${hid?"?":b.n}</b>${front&&!hid?'<span class="bz-bee no-mi">🐝</span>':""}</button>`;}
+function bzTrayHTML(){return BZ.cols.map((c,ci)=>`<div class="bz-col">${bzBox(c[0],1,ci)}${c[1]?`<div class="bz-nx">${bzBox(c[1],0)}</div>`:""}${c.length>2?`<small>+${c.length-2}</small>`:""}</div>`).join("");}
+function bzSlotsHTML(){const A=BZ;return Array.from({length:A.S},(_,k)=>{const s=A.slots[k];if(!s)return `<div class="bz-sl"></div>`;const stuck=s.stuck&&!bzAntsIn(s);return `<div class="bz-sl on${stuck?" stuck":""}" data-s="${k}" style="${bzVars(A.hex[s.c])}"><b>${s.rem+bzAntsIn(s)}</b>${stuck?'<i class="no-mi">⏳</i>':""}</div>`;}).join("");}
+function bzHTML(){const A=BZ;if(!A||A.loading)return `<div class="ab"><div class="ab-hd"><div><small>Bal bahçesi</small><b>Bölüm ${A?A.lv:""}</b></div></div><div class="bz-load"><span class="no-mi">🐝</span><small>Bahçe hazırlanıyor…</small></div></div>`;
+ return `<div class="ab bz"><div class="ab-hd"><div><small>Bal bahçesi</small><b>Bölüm ${A.lv}</b></div><div class="mg-st"><span class="bz-prog"><b id="bz-left">${A.tiles-A.got}</b> küp</span><button type="button" class="ab-snd" id="bz-fast" aria-label="Hız">${A.fast?"⏩":"▶︎"}</button><button type="button" class="ab-snd" id="ab-alb" aria-label="Albüm">📔</button><button type="button" class="ab-snd" id="ab-snd" aria-label="Oyun sesleri">${abSndOn()?"🔊":"🔇"}</button></div></div>
+  ${A.lv<=2&&!A.mv?`<p class="ab-help" id="ab-help">Alttaki bir kutuya dokun 🐝 içindeki arılar yuvadan çıkıp <b>yolu açık</b> kendi rengindeki küpleri taşısın. 5 yuva dolup tıkanmasın!</p>`:""}
+  <div class="ab-stage bz-stage" id="ab-stage"><div class="ab-bd bz-bd" id="bz-bd" style="--C:${A.C};--R:${A.R}">${bzBoardHTML()}</div></div>
+  <div class="bz-slots" id="bz-slots" style="--n:${A.S}">${bzSlotsHTML()}</div>
+  <div class="bz-tray" id="bz-tray" style="--n:${A.cols.length}">${bzTrayHTML()}</div>
+  <div class="ab-toast" id="ab-toast"></div><div class="ab-ov" id="ab-ov" hidden></div>
+  <div class="ab-tools"><button type="button" class="pill" id="bz-re">↺</button><button type="button" class="pill" id="bz-plus"${A.boost.plus&&A.S<7?"":" disabled"}>➕ Yuva</button><button type="button" class="pill" id="bz-mix"${A.boost.mix?"":" disabled"}>🔀 Karıştır</button><button type="button" class="pill" id="bz-back"${A.boost.back?"":" disabled"}>↩ Geri al</button></div></div>`;}
+function bzFit(){const a=document.getElementById("ab-stage"),b=document.getElementById("bz-bd");if(!a||!b||!BZ||!BZ.C)return;const W=a.clientWidth,H=a.clientHeight;const cs=Math.max(16,Math.min(44,Math.floor(Math.min((W-30)/BZ.C,(H-24)/((BZ.R+1)*.98+.5)))));b.style.setProperty("--cs",cs+"px");BZ.cs=cs;}
+function bzRefresh(){const s=document.getElementById("bz-slots");if(s){s.innerHTML=bzSlotsHTML();s.style.setProperty("--n",BZ.S);}const t=document.getElementById("bz-tray");if(t)t.innerHTML=bzTrayHTML();bzBindTray();const l=document.getElementById("bz-left");if(l)l.textContent=BZ.tiles-BZ.got;
+ const p=document.getElementById("bz-plus");if(p)p.disabled=!BZ.boost.plus||BZ.S>=7;const m=document.getElementById("bz-mix");if(m)m.disabled=!BZ.boost.mix;const k=document.getElementById("bz-back");if(k)k.disabled=!BZ.boost.back;bzMarkFree();}
+/* yolu açık küpleri parlat */
+function bzMarkFree(){const A=BZ;if(!A||!A.C)return;const B=bzBFS(A.T,A.C,A.R,A.nests);document.querySelectorAll("#bz-bd .bz-cell").forEach(el=>{const i=+el.dataset.i;if(A.T[i]<0){el.classList.remove("fr");return;}const x=i%A.C,y=(i-x)/A.C;let f=false;for(const j of [x>0?i-1:-1,x<A.C-1?i+1:-1,y>0?i-A.C:-1,i+A.C])if(j>=0&&B.dist[j]>=0){f=true;break;}el.classList.toggle("fr",f);});}
+function bzPos(i){const A=BZ,cs=A.cs||30,x=i%A.C,y=Math.floor(i/A.C);return [8+x*cs+cs/2,8+y*cs+cs/2];}
+/* ---- işçi arılar ---- */
+function bzTick(){const A=BZ;if(!A||!A.C||A.end||kv!=="ari"){return;}let any=false;
+ const B=bzBFS(A.T,A.C,A.R,A.nests);
+ for(const s of A.slots){if(!s)continue;if(s.rem<=0)continue;if(bzAntsIn(s)>=4)continue;const rc=bzReach(A.T,A.C,A.R,B,s.c,A.res);if(!rc.length){s.stuck=1;continue;}s.stuck=0;
+  const [tile,nb]=rc[0];A.res.add(tile);s.rem--;any=true;
+  const path=[];let j=nb;while(j>=0){path.push(j);j=B.par[j];}path.reverse();bzAnt(s,tile,path);}
+ if(any)bzRefreshSlots();bzCheck();}
+function bzRefreshSlots(){const s=document.getElementById("bz-slots");if(s)s.innerHTML=bzSlotsHTML();}
+function bzAnt(s,tile,path){const A=BZ,bd=document.getElementById("bz-bd");if(!bd)return;const id=++A.aid;const el=document.createElement("div");el.className="bz-ant";el.innerHTML=`<div class="bz-ab">${AB_BEE}<i></i></div>`;el.style.setProperty("--pc",A.hex[s.c]);bd.appendChild(el);
+ const ant={s,tile,el};A.ants.set(id,ant);const cs=A.cs||30,step=(A.fast?55:105);
+ const kf=path.map(p=>{const [x,y]=bzPos(p);return {transform:`translate3d(${x}px,${y}px,0px)`};});const [tx,ty]=bzPos(tile);const [lx,ly]=bzPos(path[path.length-1]);kf.push({transform:`translate3d(${(tx+lx)/2}px,${(ty+ly)/2}px,0px)`});
+ const go=el.animate(kf,{duration:Math.max(250,kf.length*step),easing:"linear",fill:"forwards"});
+ go.onfinish=()=>{if(BZ!==A){el.remove();return;}A.T[tile]=-1;A.res.delete(tile);A.got++;const c=bd.querySelector(`.bz-cell[data-i="${tile}"]`);if(c){const cu=c.querySelector(".bz-cube");if(cu){cu.classList.add("go");setTimeout(()=>cu.remove(),260);}}el.classList.add("carry");abSnd("drop",Math.min(7,(A.got%8)));
+  const l=document.getElementById("bz-left");if(l)l.textContent=A.tiles-A.got;bzMarkFree();
+  const back=kf.slice().reverse();const r=el.animate(back,{duration:Math.max(250,back.length*step),easing:"linear",fill:"forwards"});r.onfinish=()=>{el.remove();A.ants.delete(id);bzNestPop(path[0]);if(s.rem<=0&&!bzAntsIn(s)){const k=A.slots.indexOf(s);if(k>=0){A.slots[k]=null;abSnd("full");bzSlotDone(k);}}bzRefreshSlots();bzCheck();};};}
+function bzNestPop(gi){const x=gi%BZ.C;const e=document.querySelector(`#bz-bd .bz-gr[data-x="${x}"] .bz-hole`);if(e){e.classList.remove("pop");void e.offsetWidth;e.classList.add("pop");}}
+function bzSlotDone(k){const e=document.querySelector(`#bz-slots .bz-sl[data-s="${k}"]`);if(e)e.classList.add("done");}
+function bzCheck(){const A=BZ;if(!A||!A.C||A.end)return;if(!A.T.some(v=>v>=0)&&!A.ants.size){A.end=2;clearInterval(BZT);setTimeout(bzWin,500);return;}
+ const full=A.slots.filter(Boolean).length>=A.S;if(!full||A.ants.size)return;const B=bzBFS(A.T,A.C,A.R,A.nests);for(const s of A.slots){if(s&&bzReach(A.T,A.C,A.R,B,s.c,A.res).length)return;}
+ A.end=1;clearInterval(BZT);abSnd("lose");setTimeout(bzLose,400);}
+function bzTap(ci){const A=BZ;if(!A||A.end)return;try{sndCtx();}catch(e){}const col=A.cols[ci];if(!col||!col[0])return;const free=A.slots.findIndex((x,k)=>!x&&k<A.S);const n=A.slots.filter(Boolean).length;
+ if(n>=A.S){abSnd("no");abToast("Yuvalar dolu! Bir kutunun bitmesini bekle 🐝");const b=document.querySelector(`.bz-box[data-col="${ci}"]`);if(b){b.classList.remove("no");void b.offsetWidth;b.classList.add("no");}return;}
+ const b=col.shift();const k=free>=0?free:A.slots.length;const s={c:b.c,rem:b.n,h:b.h};A.slots[k]=s;A.mv++;const hp=document.getElementById("ab-help");if(hp)hp.remove();abSnd("tap");abSnd("buzz");if(b.h){setTimeout(()=>{abSnd("reveal");abToast(`❔ Kutudan ${b.n} arı çıktı!`);},200);}
+ const fromEl=document.querySelector(`.bz-box[data-col="${ci}"]`);const r1=fromEl?fromEl.getBoundingClientRect():null;bzRefresh();const to=document.querySelector(`#bz-slots .bz-sl[data-s="${k}"]`);
+ if(r1&&to){const r2=to.getBoundingClientRect();const g=document.createElement("div");g.className="bz-fly";g.setAttribute("style",bzVars(A.hex[b.c]));g.innerHTML=`<b>${b.n}</b>`;document.body.appendChild(g);g.animate([{transform:`translate(${r1.left}px,${r1.top}px)`,width:r1.width+"px",height:r1.height+"px"},{transform:`translate(${r2.left}px,${r2.top}px)`,width:r2.width+"px",height:r2.height+"px"}],{duration:260,easing:"cubic-bezier(.3,1.3,.5,1)"}).onfinish=()=>g.remove();}
+ bzTick();}
+function bzBindTray(){document.querySelectorAll(".bz-box[data-col]").forEach(b=>b.onclick=()=>bzTap(+b.dataset.col));}
+function bzWin(){const A=BZ,G2=st.games2=st.games2||{};if(!A.saved){A.saved=1;abSnd("win");G2.ariLv=Math.max(G2.ariLv||1,A.lv+1);G2.ariWins=(G2.ariWins||0)+1;const pk=(A.lv-1)%JART.length,al=abAlb().slice();A.albNew=!al.includes(pk);if(A.albNew)al.push(pk);G2.ariAlb=al;try{save();}catch(e){}}
+ const ov=document.getElementById("ab-ov");if(!ov)return;const stars=A.used?2:3;
+ ov.innerHTML=`<div class="ab-card"><div class="ab-st no-mi">${"⭐".repeat(stars)}${"☆".repeat(3-stars)}</div><img class="bz-pic" alt="" src="${A.src}"><b>Bölüm ${A.lv} tamam!</b><small>Arılar “${esc(A.name)}” resmini ${A.tiles} küp küp yuvaya taşıdı 🍯${A.used?"":" · yardımsız!"}</small>${A.albNew?`<button type="button" class="ab-albn" id="ab-albn">📔 Albüme eklendi · ${abAlb().length}/${JART.length}</button>`:""}<button type="button" class="btn ab-next" id="ab-next">Sonraki bölüm →</button></div>`;ov.hidden=false;
+ const st0=document.getElementById("ab-stage");if(st0)for(let k=0;k<30;k++){const c=document.createElement("i");c.className="ab-cf";c.style.cssText=`left:${Math.random()*100}%;--c:${A.hex[k%A.hex.length]};--d:${(Math.random()*.7).toFixed(2)}s;--x:${Math.round(Math.random()*90-45)}px`;st0.appendChild(c);setTimeout(()=>c.remove(),2800);}
+ document.getElementById("ab-next").onclick=()=>{bzNew(A.lv+1);bzRender();};const an=document.getElementById("ab-albn");if(an)an.onclick=abAlbOpen;}
+function bzLose(){const A=BZ,ov=document.getElementById("ab-ov");if(!ov)return;
+ ov.innerHTML=`<div class="ab-card"><div class="ab-st no-mi">🐝💤</div><b>Yuvalar tıkandı</b><small>Yuvadaki kutuların renklerine giden yol kapalı ve boş yuva kalmadı.</small>${A.boost.plus&&A.S<7?`<button type="button" class="btn ab-next" id="bz-more">➕ Bir yuva daha aç</button>`:""}${A.boost.back?`<button type="button" class="${A.boost.plus&&A.S<7?"ab-look":"btn ab-next"}" id="bz-undo">↩ Bir kutuyu geri al</button>`:""}<button type="button" class="${(A.boost.plus&&A.S<7)||A.boost.back?"ab-look":"btn ab-next"}" id="bz-again">↺ Baştan dene</button></div>`;ov.hidden=false;
+ const m=document.getElementById("bz-more");if(m)m.onclick=()=>{ov.hidden=true;bzPlus();};const u=document.getElementById("bz-undo");if(u)u.onclick=()=>{ov.hidden=true;bzBack();};document.getElementById("bz-again").onclick=()=>{bzNew(A.lv);bzRender();};}
+function bzResume(){const A=BZ;A.end=0;clearInterval(BZT);BZT=setInterval(bzTick,A.fast?90:170);bzRefresh();}
+function bzPlus(){const A=BZ;if(!A.boost.plus||A.S>=7)return;A.boost.plus=0;A.used=1;A.S++;abToast("➕ Yeni bir yuva açıldı");if(A.end===1)bzResume();else bzRefresh();}
+function bzMix(){const A=BZ;if(!A.boost.mix)return;A.boost.mix=0;A.used=1;const all=A.cols.flat();for(let i=all.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[all[i],all[j]]=[all[j],all[i]];}A.cols=A.cols.map(()=>[]);all.forEach((b,i)=>A.cols[i%A.cols.length].push(b));abSnd("tile");abToast("🔀 Kutular karıştı");bzRefresh();}
+function bzBack(){const A=BZ;if(!A.boost.back)return;let k=-1;A.slots.forEach((s,i)=>{if(s&&!bzAntsIn(s)&&s.rem>0&&(k<0||s.stuck))k=i;});if(k<0){abToast("Geri alınacak bekleyen kutu yok");return;}const s=A.slots[k];A.slots[k]=null;A.boost.back=0;A.used=1;
+ let ci=0;A.cols.forEach((c,i)=>{if(c.length<A.cols[ci].length)ci=i;});A.cols[ci].unshift({c:s.c,n:s.rem});abToast("↩ Kutu geri döndü");if(A.end===1)bzResume();else bzRefresh();}
+function bzRender(){if(kv!=="ari")return;const O=document.getElementById("zsh");if(!O)return;clearInterval(BZT);O.classList.add("pzmode");
+ O.innerHTML=`<div class="ob-in zs-in kf-in"><button class="zs-x" type="button" id="zs-x" aria-label="Kapat">✕</button><button class="kf-back" type="button" data-kv="hub" aria-label="Keyif köşeme geri dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Geri</span></button>${bzHTML()}</div>`;
+ document.getElementById("zs-x").onclick=()=>{clearInterval(BZT);zodClose();};O.scrollTop=0;if(!BZ||BZ.loading||!BZ.C)return;
+ if(BZ.ants&&BZ.ants.size){BZ.ants.forEach(a=>{BZ.res.delete(a.tile);a.s.rem++;try{a.el.remove();}catch(e){}});BZ.ants.clear();}
+ requestAnimationFrame(()=>{bzFit();bzMarkFree();});bzBindTray();
+ document.getElementById("bz-re").onclick=()=>{if(confirm("Bölümü baştan başlatalım mı?")){bzNew(BZ.lv);bzRender();}};document.getElementById("bz-plus").onclick=bzPlus;document.getElementById("bz-mix").onclick=bzMix;document.getElementById("bz-back").onclick=bzBack;
+ document.getElementById("bz-fast").onclick=e=>{BZ.fast=BZ.fast?0:1;e.currentTarget.textContent=BZ.fast?"⏩":"▶︎";clearInterval(BZT);BZT=setInterval(bzTick,BZ.fast?90:170);};
+ document.getElementById("ab-alb").onclick=abAlbOpen;document.getElementById("ab-snd").onclick=e=>{const G2=st.games2=st.games2||{};G2.ariSnd=abSndOn()?0:1;try{save();}catch(x){}e.currentTarget.textContent=abSndOn()?"🔊":"🔇";};
+ if(BZ.end===2){bzWin();return;}if(BZ.end===1){bzLose();return;}BZT=setInterval(bzTick,BZ.fast?90:170);}
+window.addEventListener("resize",()=>{if(kv==="ari"&&BZ&&BZ.C){bzFit();}});
+document.addEventListener("visibilitychange",()=>{if(document.hidden)clearInterval(BZT);else if(kv==="ari"&&BZ&&BZ.C&&!BZ.end){clearInterval(BZT);BZT=setInterval(bzTick,BZ.fast?90:170);}});
+(function(){const _k=keyRender;keyRender=function(){if(kv==="ari"){try{clearInterval(kTm);}catch(e){}if(!BZ||(!BZ.C&&!BZ.loading))bzNew(abLvSaved());bzRender();return;}clearInterval(BZT);_k.apply(this,arguments);
+ if(kv==="hub"){const sm=document.querySelector("#zsh .kb-ari small");if(sm){const lv=abLvSaved();sm.textContent=lv>1?`Bölüm ${lv} · 📔 ${abAlb().length}/${JART.length} resim`:"Kutuya dokun, arılar resmi küp küp taşısın";}}};})();
 
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
