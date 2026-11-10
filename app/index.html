@@ -6741,6 +6741,44 @@ html[data-mf="dusk"] .su-pl.ok{color:#7FE0BE}html[data-mf="dusk"] .su-pl.go{colo
 html[data-mf="dusk"] .su-abr.warn>span{color:#F1C27A}html[data-mf="dusk"] .su-abr.over>span{color:#FF9B9B}
 html[data-mf="dusk"] .su-del{color:#FF9B9B}html[data-mf="dusk"] .su-lim{color:#C9C1FF}
 @media (prefers-reduced-motion:reduce){.suhero .su-cap,.suhero .su-pg,.suhero .su-stars circle,.su-ex.hot .su-cd,.su-live{animation:none}}
+.stu{overflow-anchor:none}
+.su-plant{width:74px;height:74px;margin-bottom:-2px}.su-ring .su-plant svg{width:100%;height:100%;overflow:visible;transform:none}
+.su-plant.grow svg{animation:suGrow .7s cubic-bezier(.2,1.6,.4,1)}@keyframes suGrow{from{transform:scale(.6) translateY(8px)}to{transform:none}}
+.su-plant .su-bloom{transform-origin:30px 17px;animation:suBloom 3s ease-in-out infinite}@keyframes suBloom{50%{transform:rotate(8deg) scale(1.05)}}
+.su-rt b{font-size:46px}
+.su-amb{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:4px}.su-amb>small{font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.su-amb>div{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.su-amb button{font:inherit;font-size:12.5px;font-weight:800;display:flex;align-items:center;gap:5px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:99px;padding:7px 12px 7px 9px;cursor:pointer}
+.su-amb button[aria-pressed="true"]{background:linear-gradient(135deg,#6C63FF,#9B4FC9);border-color:transparent;color:#fff}
+.su-gdn{display:flex;flex-wrap:wrap;gap:2px;align-items:flex-end;min-height:40px;padding:10px 8px 0;margin-top:10px;border-radius:14px;background:linear-gradient(180deg,transparent 60%,color-mix(in srgb,#3FA34D 18%,transparent) 60%)}
+.su-gdn i{width:22px;height:28px;animation:suPop .5s cubic-bezier(.2,1.6,.4,1) both;animation-delay:var(--d)}.su-gdn i svg{width:100%;height:100%}
+@keyframes suPop{from{transform:scale(0) translateY(10px)}to{transform:none}}
+.su-gdn em{font-style:normal;font-size:12px;font-weight:900;color:#2E7A3C;margin:0 0 6px 4px}
+.su-gdn p{margin:0 0 10px;font-size:12.5px;font-weight:700;color:var(--muted)}
+.su-shb{font:inherit;font-size:12px;font-weight:800;border:0;border-radius:99px;padding:6px 11px;cursor:pointer;color:#fff;background:linear-gradient(135deg,#FF6F91,#9B4FC9)}
+.su-kit{border-radius:22px;padding:14px;background:linear-gradient(150deg,#FFF6DA,#FFE9F1);border:1px solid #F7D9A0;color:#3A2A1E}
+.su-kit .su-h small{color:#9A6A20}.su-kit p{margin:-4px 0 10px;font-size:13px;font-weight:600}
+.su-kl{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.su-kl button{font:inherit;font-size:12.5px;font-weight:700;text-align:left;display:grid;grid-template-columns:22px 1fr 18px;align-items:center;gap:6px;padding:9px 9px;border-radius:14px;border:0;background:rgba(255,255,255,.75);color:#3A2A1E;cursor:pointer;line-height:1.25}
+.su-kl button i{width:18px;height:18px;border-radius:50%;border:2px solid #E2B86A}
+.su-kl button[aria-pressed="true"]{background:#fff;box-shadow:0 0 0 1.5px #22A699}.su-kl button[aria-pressed="true"] i{background:#22A699;border-color:#22A699;position:relative}
+.su-kl button[aria-pressed="true"] i::after{content:"";position:absolute;left:4.5px;top:1.5px;width:4px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.su-gh{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}.su-gh>div:first-child{display:flex;flex-direction:column}.su-gh small{font-size:11.5px;color:var(--muted);font-weight:700}
+.su-gr{--p:0;flex:none;width:86px;height:86px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(closest-side,var(--surface) 78%,transparent 79%),conic-gradient(#6C63FF calc(var(--p)*1%),color-mix(in srgb,var(--su) 14%,transparent) 0);transition:background .4s}
+.su-gr b{font-size:22px;font-weight:900;line-height:1}.su-gr small{font-size:10px;color:var(--muted);font-weight:800}
+.su-gl{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
+.su-grw{display:grid;grid-template-columns:1fr 62px 74px 28px;gap:6px;align-items:center;border-left:4px solid var(--c);padding-left:6px}
+.su-grw input,.su-grw select{font:inherit;font-size:14px;min-width:0;width:100%;padding:8px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.su-add.sm{padding:10px;font-size:13px;width:100%}
+.su-ask{display:flex;align-items:center;gap:12px;margin:-6px 0 18px;padding:12px 14px;border-radius:22px;background:linear-gradient(140deg,#EEEBFF,#FFEFF5);border:1px solid color-mix(in srgb,#6C63FF 20%,transparent);animation:suIn .4s ease both;transition:opacity .3s,transform .3s}
+.su-ask.bye{opacity:0;transform:scale(.96)}
+.su-ask>.no-mi{font-size:26px}.su-ask>div:nth-child(2){flex:1;display:flex;flex-direction:column}.su-ask b{font-size:14.5px;color:#2E2340}.su-ask small{font-size:12px;color:#5A5070;font-weight:600;line-height:1.3}
+.su-askb{display:flex;flex-direction:column;gap:5px}.su-askb button{font:inherit;font-size:12.5px;font-weight:800;border:0;border-radius:99px;padding:7px 14px;cursor:pointer;background:#fff;color:#4B3FC4}.su-askb button:first-child{background:linear-gradient(135deg,#6C63FF,#9B4FC9);color:#fff}
+html[data-mf="dusk"] .su-kit{background:linear-gradient(150deg,#3A3022,#3A2430);border-color:#5A4630;color:#F6E9DA}html[data-mf="dusk"] .su-kit .su-h small{color:#F1D38C}
+html[data-mf="dusk"] .su-kl button{background:rgba(255,255,255,.07);color:#F6E9DA}html[data-mf="dusk"] .su-kl button[aria-pressed="true"]{background:rgba(34,166,153,.18)}
+html[data-mf="dusk"] .su-ask{background:linear-gradient(140deg,#2E2756,#3A2440);border-color:rgba(140,123,255,.25)}html[data-mf="dusk"] .su-ask b{color:#F4EAF2}html[data-mf="dusk"] .su-ask small{color:#C9B8D8}
+html[data-mf="dusk"] .su-gdn em{color:#97DEC2}
+@media (prefers-reduced-motion:reduce){.su-plant .su-bloom,.su-gdn i,.su-plant.grow svg{animation:none}}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -8388,7 +8426,7 @@ function surRender(){document.querySelectorAll(".gsur[data-sec]").forEach(el=>{c
 function goTo(el,off){if(!el)return;requestAnimationFrame(()=>{try{surRender();}catch(e){}const y=Math.max(0,el.getBoundingClientRect().top+window.scrollY-(off??12));const need=y+window.innerHeight;document.body.style.minHeight="";document.querySelectorAll(".gsur").forEach(g=>g.style.minHeight="");let gap=need-document.documentElement.scrollHeight;
     if(gap>0){const g=[...document.querySelectorAll(".gsur")].find(x=>x.offsetParent!==null&&!x.hidden);if(g){const add=Math.min(gap,Math.max(0,440-g.offsetHeight));if(add>0){g.style.minHeight=(g.offsetHeight+add)+"px";gap-=add;}}}
     if(gap>0)document.body.style.minHeight=(document.documentElement.scrollHeight+gap)+"px";window.scrollTo({top:y,behavior:"smooth"});});}
-document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest('[role="tab"],[role="tablist"]>button,.g-card');if(!b||b.closest('#pracs,.ktseg,.fseg,.eseg,.kseg,.gnseg,.love .lhero .seg,.bzseg,.subseg,#zsh,.bnav,.onb,.lk2'))return;
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest('[role="tab"],[role="tablist"]>button,.g-card');if(!b||b.closest('#pracs,.ktseg,.fseg,.eseg,.kseg,.gnseg,.love .lhero .seg,.bzseg,.subseg,#zsh,.bnav,.onb,.lk2,.stu'))return;
   const tl=b.closest('[role="tablist"]'),aid=b.classList.contains("g-card")?"gm":(b.closest("[id]")||{}).id;
   setTimeout(()=>{const el=tl&&tl.isConnected?tl:(aid&&document.getElementById(aid));if(el&&el.offsetParent!==null)goTo(el,10);},40);});
 function pracRender(){
@@ -14534,8 +14572,9 @@ function suRender(){const P=document.getElementById("supanel");if(!P)return;cons
   P.innerHTML=suTab==="prog"?suProgHTML():suTab==="ex"?suExHTML():suTab==="odak"?suFocHTML():suTab==="para"?suParaHTML():suTodayHTML();
   P.classList.remove("in");void P.offsetWidth;P.classList.add("in");}
 
+function suSegTop(){try{const h=document.querySelector(".suhero"),bt=h.getBoundingClientRect().bottom+scrollY;if(scrollY>bt-4)window.scrollTo({top:bt+2,behavior:"instant"});}catch(e){}}
 function suRoom(x){return [x.r&&"📍 "+x.r,x.h&&"👩‍🏫 "+x.h].filter(Boolean).map(esc).join(" · ");}
-function suTodayHTML(){const S=stu(),{cur,nx,L,now}=suNow(),U=suExUp(),has=Object.values(S.prog).some(l=>l.length);let H="";
+function suTodayHTML(){const S=stu(),{cur,nx,L,now}=suNow(),U=suExUp(),has=Object.values(S.prog).some(l=>l.length);let H=suKitHTML();
   if(!has)H+=`<div class="su-now su-empty"><span class="no-mi">🗓</span><div><b>Ders programını kuralım</b><small>Bir kere gir, her gün “şimdi hangi ders, hangi sınıf” diye ben söyleyeyim.</small></div><button type="button" class="su-btn" data-sut="prog">Kur →</button></div>`;
   else if(cur){const left=suMin(cur.e)-now,tot=Math.max(1,suMin(cur.e)-suMin(cur.s));H+=`<div class="su-now on" style="--c:${suCol(cur.n)}"><small><i class="su-live"></i>ŞU AN DERSTESİN</small><b>${esc(cur.n)}</b><span>${suRoom(cur)}</span><div class="su-bar"><i style="width:${Math.round((1-left/tot)*100)}%"></i></div><em>Bitişe ${suDur(left)}${nx?` · sonra ${esc(nx.n)} ${nx.s}`:""}</em></div>`;}
   else if(nx){const inm=suMin(nx.s)-now;H+=`<div class="su-now" style="--c:${suCol(nx.n)}"><small>SIRADAKİ DERS · ${nx.s}</small><b>${esc(nx.n)}</b><span>${suRoom(nx)}</span><em>${inm<=15?"⏰ Hadi, ":""}${suDur(inm)} sonra başlıyor</em></div>`;}
@@ -14561,7 +14600,7 @@ function suExRow(e,full){const T=suExT(e),dd=suDays(e.d),Q=suQuota(e),u=+e.u||0,
 function suProgHTML(){const S=stu();if(!suDay){const g=new Date().getDay();suDay=g>=1&&g<=6?g:1;}const L=suList(suDay),all=[];
   for(let d=1;d<=6;d++)suList(d).forEach(x=>all.push([d,x]));const lo=all.length?Math.min(...all.map(([,x])=>Math.floor(suMin(x.s)/60))):8,hi=all.length?Math.max(...all.map(([,x])=>Math.ceil(suMin(x.e)/60))):17,span=Math.max(4,hi-lo);
   const td=new Date().getDay(),nowM=suNowM();
-  let H=`<div class="su-card"><div class="su-h"><b>Haftam</b><small>${all.length?all.length+" ders saati":"Henüz boş"}</small></div><div class="su-wk" style="--h:${span}">
+  let H=`<div class="su-card"><div class="su-h"><b>Haftam</b>${all.length?`<button type="button" class="su-shb" data-sush="1">📸 Paylaş</button>`:`<small>Henüz boş</small>`}</div><div class="su-wk" style="--h:${span}">
    <div class="su-wkh">${Array.from({length:span+1},(_,i)=>`<span style="top:${i/span*100}%">${lo+i}</span>`).join("")}</div>
    ${[1,2,3,4,5,6].map(d=>`<button type="button" class="su-wkc${d===suDay?" sel":""}${d===td?" tdy":""}" data-sud="${d}"><b>${SU_DN[d]}</b><span class="su-wkb">${suList(d).map(x=>`<i style="--c:${suCol(x.n)};top:${(suMin(x.s)/60-lo)/span*100}%;height:${(suMin(x.e)-suMin(x.s))/60/span*100}%"><em>${esc(x.n)}</em></i>`).join("")}${d===td&&nowM/60>lo&&nowM/60<lo+span?`<u style="top:${(nowM/60-lo)/span*100}%"></u>`:""}</span></button>`).join("")}</div></div>`;
   H+=`<div class="su-days">${[1,2,3,4,5,6].map(d=>`<button type="button" data-sud="${d}" aria-pressed="${d===suDay}"><b>${SU_DN[d]}</b><small>${suList(d).length||"–"}</small></button>`).join("")}</div>`;
@@ -14594,6 +14633,7 @@ function suExHTML(){const S=stu(),U=suExUp(),P=suExPast();let H="";
    <div class="su-row"><label>Vizenin etkisi (%)<input type="number" id="su-cw" min="0" max="90" inputmode="numeric" value="${w}"></label><label>Hedef ortalama<input type="number" id="su-ct" min="0" max="100" inputmode="numeric" value="${c.t!=null?c.t:50}"></label></div>
    <div id="su-cr">${suCalcRes(vz,w,c.t!=null?c.t:50)}</div>
    <p class="su-fine">Birçok üniversitede finalden ayrıca en az bir not (ör. 50) alma şartı da vardır; kendi yönetmeliğine göre kontrol et.</p></div>`;
+  H+=suGpaHTML();
   if(P.length)H+=`<div class="su-card"><div class="su-h"><b>Geçmiş sınavlar</b><small>Notunu yaz, hesap makinesi hatırlasın</small></div>${P.slice(0,12).map(e=>{const T=suExT(e);return `<div class="su-pst" style="--c:${suCol(e.n)}"><div><small>${T[2]} ${T[1]} · ${new Date(e.d+"T00:00").toLocaleDateString("tr-TR",{day:"numeric",month:"short"})}</small><b>${esc(e.n)}</b></div><input type="number" min="0" max="100" inputmode="numeric" placeholder="Not" data-sug="${e.id}" value="${e.g!=null?e.g:""}" aria-label="Not"><button type="button" class="su-x" data-suxd="${e.id}" aria-label="Sil">✕</button></div>`;}).join("")}</div>`;
   return H;}
 function suCalcRes(v0,w0,t0){const v=parseFloat(v0),w=(parseFloat(w0)||0)/100,t=parseFloat(t0);
@@ -14606,16 +14646,16 @@ function suCalcRes(v0,w0,t0){const v=parseFloat(v0),w=(parseFloat(w0)||0)/100,t=
 function suRem(){const R=stu().foc.run;if(!R)return 0;return R.pz!=null?R.pz:R.s+R.d-Date.now();}
 function suMMSS(ms){const s=Math.max(0,Math.ceil(ms/1000));return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");}
 let suWL=null;function suWake(on){try{if(on&&navigator.wakeLock&&!suWL)navigator.wakeLock.request("screen").then(w=>{suWL=w;w.addEventListener("release",()=>{suWL=null;});}).catch(()=>{});else if(!on&&suWL){suWL.release();suWL=null;}}catch(e){}}
-function suFocStart(m){const F=stu().foc,M=SU_FM.find(x=>x[0]===(F.mode||"klasik"))||SU_FM[1],min=m==="mola"?M[3]:M[2];F.run={s:Date.now(),d:min*6e4,min,m,n:F.n||"",pz:null};F.brk=0;save();suWake(true);try{sndCtx();}catch(e){}suRender();}
-function suFocPause(){const R=stu().foc.run;if(!R)return;if(R.pz==null)R.pz=Math.max(0,R.s+R.d-Date.now());else{R.s=Date.now();R.d=R.pz;R.pz=null;}save();suRender();}
+function suFocStart(m){const F=stu().foc,M=SU_FM.find(x=>x[0]===(F.mode||"klasik"))||SU_FM[1],min=m==="mola"?M[3]:M[2];F.run={s:Date.now(),d:min*6e4,min,m,n:F.n||"",pz:null};F.brk=0;save();suWake(true);try{sndCtx();}catch(e){}suAmbSync();suRender();}
+function suFocPause(){const R=stu().foc.run;if(!R)return;if(R.pz==null)R.pz=Math.max(0,R.s+R.d-Date.now());else{R.s=Date.now();R.d=R.pz;R.pz=null;}save();suAmbSync();suRender();}
 function suLog(min,n){if(min<1)return;const L=stu().foc.log,k=dkey(),o=L[k]=L[k]||{m:0,c:0,by:{}};o.m+=min;o.c++;if(n)o.by[n]=(o.by[n]||0)+min;const ks=Object.keys(L).sort();while(ks.length>120)delete L[ks.shift()];}
 function suFocEnd(done){const F=stu().foc,R=F.run;if(!R)return;const rem=Math.max(0,suRem());
   if(R.m==="odak"){const m=done?R.min:Math.round((R.min*6e4-rem)/6e4);if(done||m>=5)suLog(m,R.n);}
-  F.run=null;suWake(false);
+  F.run=null;suWake(false);suAmbStop();
   if(done){try{sndPlay("suf");}catch(e){}try{navigator.vibrate&&navigator.vibrate([140,90,140]);}catch(e){}
     if(R.m==="odak"){F.brk=1;try{mfConfetti(`${R.min} dakika odaklandın 🎉 Mola senin`,["#6C63FF","#F5C04A","#FF6F91","#22A699"],"#2B2160");}catch(e){}}else F.brk=0;}
   save();if(step===97)suRender();if(step===0)try{bentoRender();}catch(e){}}
-function suTick(){const R=stu().foc.run,t=document.getElementById("su-ft"),c=document.getElementById("su-fc");if(!t||!R)return;const rem=Math.max(0,suRem());t.textContent=suMMSS(rem);if(c)c.style.strokeDashoffset=(553*(1-rem/(R.min*6e4))).toFixed(1);document.title=(R.pz==null?"⏳ ":"⏸ ")+suMMSS(rem)+" · Me First";}
+function suTick(){const R=stu().foc.run,t=document.getElementById("su-ft"),c=document.getElementById("su-fc");if(!t||!R)return;const rem=Math.max(0,suRem());t.textContent=suMMSS(rem);if(c)c.style.strokeDashoffset=(553*(1-rem/(R.min*6e4))).toFixed(1);const pl=document.getElementById("su-plant");if(pl){const h=suPlant(1-rem/(R.min*6e4),R.m==="mola"),ns=h.match(/data-s="(\d)"/)[1],os=(pl.querySelector("svg")||{dataset:{}}).dataset.s;if(ns!==os){pl.innerHTML=h;pl.classList.remove("grow");void pl.offsetWidth;pl.classList.add("grow");}}document.title=(R.pz==null?"⏳ ":"⏸ ")+suMMSS(rem)+" · Me First";}
 function suFocHTML(){const S=stu(),F=S.foc,R=F.run,M=F.mode||"klasik",D=suDers(),mola=R?R.m==="mola":false;let H="";
   const tot=R?R.min*6e4:((SU_FM.find(x=>x[0]===M)||SU_FM[1])[2]*6e4),rem=R?Math.max(0,suRem()):tot;
   if(!R&&!F.brk)H+=`<div class="su-fopt"><div class="su-dp">${SU_FM.map(([k,l,a,b])=>`<button type="button" data-sufm="${k}" aria-pressed="${k===M}">${l} <small>${a}+${b}</small></button>`).join("")}</div>
@@ -14623,11 +14663,13 @@ function suFocHTML(){const S=stu(),F=S.foc,R=F.run,M=F.mode||"klasik",D=suDers()
   if(F.brk&&!R){H+=`<div class="su-mola"><b>Harika gidiyorsun 💜</b><p>Beynin şimdi öğrendiklerini yerleştiriyor. Mola fikirleri:</p><div class="su-ml">${SU_MOLA.map(([e,t,go])=>go?`<button type="button" data-sugo="${go}"><span class="no-mi">${e}</span>${t} ›</button>`:`<div><span class="no-mi">${e}</span>${t}</div>`).join("")}</div>
     <div class="su-fb"><button type="button" class="su-btn mint" data-sufs="mola">Molayı başlat · ${(SU_FM.find(x=>x[0]===M)||SU_FM[1])[3]} dk</button><button type="button" class="su-lk" data-sufs="odak">Molayı atla, devam</button></div></div>`;}
   else H+=`<div class="su-ring${mola?" mola":""}${R&&R.pz!=null?" pz":""}"><svg viewBox="0 0 200 200"><defs><linearGradient id="suRg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${mola?"#5FD3A8":"#8C7BFF"}"/><stop offset="1" stop-color="${mola?"#22A699":"#FF6F91"}"/></linearGradient></defs><circle cx="100" cy="100" r="88" class="bg"/><circle id="su-fc" cx="100" cy="100" r="88" class="fg" stroke-dasharray="553" style="stroke-dashoffset:${(553*(1-rem/tot)).toFixed(1)}"/></svg>
-    <div class="su-rt"><small>${R?(mola?"Mola 🌿":(R.n?esc(R.n):"Odak")):"Hazır olduğunda"}</small><b id="su-ft">${suMMSS(rem)}</b><span>${R?(R.pz!=null?"Duraklatıldı":mola?"Gözlerini dinlendir":"Telefonu ters çevir 📵"):"Bir tur = "+Math.round(tot/6e4)+" dk"}</span></div></div>
-    <div class="su-fb c">${R?`<button type="button" class="su-btn" data-sufp="1">${R.pz!=null?"▶ Devam":"⏸ Duraklat"}</button><button type="button" class="su-lk" data-sufx="1">${mola?"Molayı bitir":"Bitir"}</button>`:`<button type="button" class="su-btn big" data-sufs="odak">▶ Başla</button>`}</div>`;
+    <div class="su-rt"><div class="su-plant" id="su-plant">${suPlant(R?1-rem/tot:0,mola)}</div><small>${R?(mola?"Mola 🌿":(R.n?esc(R.n):"Odak")):"Hazır olduğunda"}</small><b id="su-ft">${suMMSS(rem)}</b><span>${R?(R.pz!=null?"Duraklatıldı":mola?"Gözlerini dinlendir":"Telefonu ters çevir 📵"):"Bir tur = "+Math.round(tot/6e4)+" dk"}</span></div></div>
+    <div class="su-fb c">${R?`<button type="button" class="su-btn" data-sufp="1">${R.pz!=null?"▶ Devam":"⏸ Duraklat"}</button><button type="button" class="su-lk" data-sufx="1">${mola?"Molayı bitir":"Bitir"}</button>`:`<button type="button" class="su-btn big" data-sufs="odak">▶ Başla</button>`}</div>
+    ${mola?"":`<div class="su-amb"><small>Arka plan sesi</small><div>${SU_AMB.map(([k,e,l])=>`<button type="button" data-suamb="${k}" aria-pressed="${(F.amb||"")===k}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div></div>`}`;
   const L=F.log,mon=new Date(dkey()+"T00:00");mon.setDate(mon.getDate()-((mon.getDay()+6)%7));const wk=Array.from({length:7},(_,i)=>{const d=new Date(mon);d.setDate(d.getDate()+i);const k=dkey(d);return [k,(L[k]||{}).m||0];});
   const mx=Math.max(60,...wk.map(x=>x[1])),wsum=wk.reduce((a,x)=>a+x[1],0),by={};wk.forEach(([k])=>Object.entries((L[k]||{}).by||{}).forEach(([n,m])=>by[n]=(by[n]||0)+m));const top=Object.entries(by).sort((a,b)=>b[1]-a[1])[0];
   H+=`<div class="su-card"><div class="su-h"><b>Bu hafta</b><small>${wsum?suDur(wsum)+" odak":"Henüz tur yok"}</small></div><div class="su-wbar">${wk.map(([k,m],i)=>`<div class="${k===dkey()?"tdy":""}"><i style="height:${Math.max(3,m/mx*100)}%">${m?`<em>${m}</em>`:""}</i><small>${["Pt","Sa","Ça","Pe","Cu","Ct","Pa"][i]}</small></div>`).join("")}</div>
+   <div class="su-gdn">${(()=>{const n=wk.reduce((a,[k])=>a+((L[k]||{}).c||0),0);return n?Array.from({length:Math.min(n,36)},(_,i)=>`<i style="--d:${i*40}ms">${suFlower(i)}</i>`).join("")+(n>36?`<em>+${n-36}</em>`:""):`<p>Biten her odak turu bahçene bir çiçek diker 🌱</p>`;})()}</div>
    <div class="su-fst"><span><span class="no-mi">🔥</span> <b>${suStreak()}</b> gün seri</span><span><span class="no-mi">⏳</span> <b>${(L[dkey()]||{}).c||0}</b> tur bugün</span>${top?`<span><span class="no-mi">📚</span> En çok: <b>${esc(top[0])}</b></span>`:""}</div></div>`;
   return H;}
 
@@ -14649,11 +14691,69 @@ function suParaHTML(){const BB=suBud(),B=BB.B;let H="";
     <div class="su-card"><div class="su-h"><b>Son harcamalar</b><small>${BB.its.length} kayıt</small></div><div class="su-il">${BB.its.slice().sort((a,b)=>b.d.localeCompare(a.d)||b.t-a.t).slice(0,25).map(x=>{const c=SU_BC.find(y=>y[0]===x.c)||SU_BC[6];return `<div><span class="no-mi" style="--c:${c[3]}">${c[1]}</span><b>${esc(x.n||c[2])}<small>${x.d===dkey()?"Bugün":new Date(x.d+"T00:00").toLocaleDateString("tr-TR",{day:"numeric",month:"short"})}</small></b><em>${suTL(x.a)}</em><button type="button" class="su-x" data-subd="${x.t}" aria-label="Sil">✕</button></div>`;}).join("")}</div></div>`;}
   return H;}
 
+/* ---------- kudurt turu: bitki, sesler, ortalama, sınav çantası, paylaş ---------- */
+const SU_HARF=[["AA",4],["BA",3.5],["BB",3],["CB",2.5],["CC",2],["DC",1.5],["DD",1],["FD",.5],["FF",0]];
+const SU_KIT=[["🪪","Öğrenci kartı"],["✏️","2 kalem, silgi"],["💧","Bir şişe su"],["🍫","Atıştırmalık"],["⌚","Kol saati"],["🧘‍♀️","3 derin nefes"]];
+const SU_AMB=[["","🔇","Sessiz"],["yagmur","🌧","Yağmur"],["dalga","🌊","Dalga"],["derin","🤎","Derin uğultu"]];
+function suPlant(p,mola){const s=mola?5:p<.12?0:p<.35?1:p<.6?2:p<.85?3:4;
+  const pot=`<path d="M16 46h28l-3 13H19z" fill="#E07A4F"/><rect x="14" y="42" width="32" height="6" rx="3" fill="#C9653D"/><ellipse cx="30" cy="43" rx="13" ry="2.2" fill="#6B4226"/>`;
+  const stem=h=>`<path d="M30 43C30 ${43-h*.5} 31 ${43-h*.8} 30 ${43-h}" stroke="#3FA34D" stroke-width="2.6" fill="none" stroke-linecap="round"/>`;
+  const leaf=(x,y,r,c)=>`<path d="M${x} ${y}c${r*7} -2 ${r*10} -7 ${r*11} -11c${-r*7} 0 ${-r*11} 4 ${-r*11} 11z" fill="${c||"#5CC46B"}"/>`;
+  let g="";if(s===0)g=`<ellipse cx="30" cy="40" rx="3.4" ry="2.4" fill="#A0703F"/><path d="M30 38q1-3 3-4" stroke="#7BD08A" stroke-width="1.6" fill="none" stroke-linecap="round"/>`;
+  else if(s===1)g=stem(9)+leaf(30,35,1)+leaf(30,36,-1,"#4DB35C");
+  else if(s===2)g=stem(18)+leaf(30,37,1)+leaf(30,33,-1,"#4DB35C")+leaf(30,28,1,"#6BD07A");
+  else if(s===3)g=stem(24)+leaf(30,38,1)+leaf(30,33,-1,"#4DB35C")+leaf(30,28,1,"#6BD07A")+`<ellipse cx="30" cy="17" rx="4.6" ry="6" fill="#FF8FB1"/><path d="M26 19q4 4 8 0" fill="#5CC46B"/>`;
+  else{g=stem(24)+leaf(30,38,1)+leaf(30,33,-1,"#4DB35C")+leaf(30,28,1,"#6BD07A")+`<g class="su-bloom">${[0,72,144,216,288].map(a=>`<ellipse cx="30" cy="9.5" rx="4.6" ry="7" fill="${s===5?"#FFD36E":"#FF8FB1"}" transform="rotate(${a} 30 17)"/>`).join("")}<circle cx="30" cy="17" r="4" fill="${s===5?"#FF9F43":"#FFD36E"}"/></g>`;}
+  return `<svg viewBox="0 0 60 60" aria-hidden="true" data-s="${s}">${g}${pot}</svg>`;}
+function suFlower(i){const c=["#FF8FB1","#FFD36E","#B39CFF","#7FD3F7","#FF9F7A"][i%5];return `<svg viewBox="0 0 24 30" aria-hidden="true"><path d="M12 29V13" stroke="#3FA34D" stroke-width="2"/><path d="M12 22c3-1 5-3 6-6-3 0-5 2-6 6z" fill="#5CC46B"/>${[0,72,144,216,288].map(a=>`<ellipse cx="12" cy="4.6" rx="3" ry="4.4" fill="${c}" transform="rotate(${a} 12 9)"/>`).join("")}<circle cx="12" cy="9" r="2.6" fill="#FFF3C4"/></svg>`;}
+let suAmbN=null;
+function suAmbStop(){if(!suAmbN)return;const {g,C,nodes}=suAmbN;suAmbN=null;try{g.gain.cancelScheduledValues(C.currentTime);g.gain.setValueAtTime(g.gain.value,C.currentTime);g.gain.linearRampToValueAtTime(0,C.currentTime+.6);setTimeout(()=>nodes.forEach(n=>{try{n.stop&&n.stop();}catch(e){}try{n.disconnect();}catch(e){}}),800);}catch(e){}}
+function suAmbStart(k){suAmbStop();if(!k)return;const C=sndCtx();if(!C)return;try{const len=C.sampleRate*3,buf=C.createBuffer(1,len,C.sampleRate),d=buf.getChannelData(0);for(let i=0;i<len;i++)d[i]=Math.random()*2-1;
+  const src=C.createBufferSource();src.buffer=buf;src.loop=true;const g=C.createGain();g.gain.value=0;const f=C.createBiquadFilter(),nodes=[src,f,g];let T=.3;
+  if(k==="yagmur"){f.type="highpass";f.frequency.value=1100;const f2=C.createBiquadFilter();f2.type="lowpass";f2.frequency.value=6500;src.connect(f);f.connect(f2);f2.connect(g);nodes.push(f2);T=.09;}
+  else if(k==="dalga"){f.type="lowpass";f.frequency.value=520;src.connect(f);f.connect(g);const l=C.createOscillator(),lg=C.createGain();l.frequency.value=.085;lg.gain.value=.2;l.connect(lg);lg.connect(g.gain);l.start();nodes.push(l,lg);T=.24;}
+  else{f.type="lowpass";f.frequency.value=260;src.connect(f);f.connect(g);T=.55;}
+  g.connect(C.destination);src.start();g.gain.linearRampToValueAtTime(T,C.currentTime+1.8);suAmbN={g,C,nodes,k};}catch(e){}}
+function suAmbSync(){const F=stu().foc,R=F.run;if(R&&R.m==="odak"&&R.pz==null&&F.amb){if(!suAmbN||suAmbN.k!==F.amb)suAmbStart(F.amb);}else suAmbStop();}
+function suKitHTML(){const S=stu(),U=suExUp(),h=new Date().getHours();let e=U.find(x=>suDays(x.d)===0&&(!x.tm||suMin(x.tm)+90>suNowM())),when="Bugün";
+  if(!e&&h>=17){e=U.find(x=>suDays(x.d)===1);when="Yarın";}if(!e)return "";const K=S.kit&&S.kit.id===e.id?S.kit.ok:[],n=K.length;
+  return `<div class="su-kit"><div class="su-h"><b>🎒 ${when} ${esc(e.n)} ${suExT(e)[1].toLocaleLowerCase("tr-TR")}${e.tm?" · "+e.tm:""}</b><small>${n}/${SU_KIT.length}</small></div><p>${when==="Yarın"?"Sabah telaşı olmasın; şimdiden hazırla, erken uyu 🌙":"Çıkmadan bir göz at, gerisini kafana takma 💜"}</p>
+   <div class="su-kl">${SU_KIT.map(([ic,t],i)=>`<button type="button" data-sukit="${i}" data-suke="${e.id}" aria-pressed="${K.includes(i)}"><span class="no-mi">${ic}</span>${t}<i></i></button>`).join("")}</div></div>`;}
+function suGpa(){const S=stu();S.gpa=S.gpa||[];return S.gpa;}
+function suGpaCalc(){const G=suGpa().filter(r=>(+r.k>0)&&r.h);const k=G.reduce((a,r)=>a+(+r.k),0);if(!k)return null;const v=G.reduce((a,r)=>a+(+r.k)*((SU_HARF.find(x=>x[0]===r.h)||[0,0])[1]),0)/k;return {v,k,n:G.length};}
+function suGpaHTML(){const G=suGpa(),R=suGpaCalc();const ring=R?R.v/4:0;
+  return `<div class="su-card su-gpa"><div class="su-gh"><div><b>🎓 Dönem ortalamam</b><small>Ders, kredi (AKTS) ve harf notunu gir</small></div><div class="su-gr" style="--p:${(ring*100).toFixed(1)}"><b id="su-gpa">${R?R.v.toFixed(2).replace(".",","):"–"}</b><small>/ 4,00</small></div></div>
+   <div class="su-gl">${G.map(r=>`<div class="su-grw" style="--c:${suCol(r.n)}"><input data-sugn="${r.id}" value="${esc(r.n||"")}" maxlength="40" placeholder="Ders"><input data-sugk="${r.id}" type="number" inputmode="numeric" min="0" max="30" value="${r.k||""}" placeholder="Kredi" aria-label="Kredi"><select data-sugh="${r.id}" aria-label="Harf notu"><option value="">Harf</option>${SU_HARF.map(([h])=>`<option${r.h===h?" selected":""}>${h}</option>`).join("")}</select><button type="button" class="su-x" data-sugd="${r.id}" aria-label="Sil">✕</button></div>`).join("")}</div>
+   <button type="button" class="su-add sm" data-suga="1">+ Ders ekle</button><p class="su-fine" id="su-gpan">${R?`${R.n} ders · ${R.k} kredi üzerinden. `:""}AA=4, BA=3,5, BB=3 … FF=0 alındı; katsayılar üniversitene göre biraz farklı olabilir.</p></div>`;}
+function suRR(g,x,y,w,h,r){g.beginPath();if(g.roundRect)g.roundRect(x,y,w,h,r);else g.rect(x,y,w,h);}
+function suWrap(g,t,mw,ml){const W=String(t).split(/\s+/),L=[];let c="";W.forEach(w=>{const n=c?c+" "+w:w;if(g.measureText(n).width>mw&&c){L.push(c);c=w;}else c=n;});if(c)L.push(c);if(L.length>ml){L.length=ml;let l=L[ml-1];while(l.length>1&&g.measureText(l+"…").width>mw)l=l.slice(0,-1);L[ml-1]=l+"…";}
+  return L.map(l=>{if(g.measureText(l).width<=mw)return l;let x=l;while(x.length>1&&g.measureText(x+"…").width>mw)x=x.slice(0,-1);return x+"…";});}
+async function suShareProg(btn){try{await document.fonts.ready;}catch(e){}if(btn){btn.disabled=true;btn.textContent="Hazırlanıyor…";}
+  try{const W=1080,H=1920,cv=document.createElement("canvas");cv.width=W;cv.height=H;const g=cv.getContext("2d");const nm=(st.name||"").trim();
+  const gr=g.createLinearGradient(0,0,W,H);gr.addColorStop(0,"#2A2680");gr.addColorStop(.55,"#4B3FC4");gr.addColorStop(1,"#A04FC9");g.fillStyle=gr;g.fillRect(0,0,W,H);
+  const gl=g.createRadialGradient(900,120,10,900,120,600);gl.addColorStop(0,"rgba(255,224,138,.35)");gl.addColorStop(1,"rgba(255,224,138,0)");g.fillStyle=gl;g.fillRect(0,0,W,H);
+  let sd=7;const rnd=()=>{sd=(sd*9301+49297)%233280;return sd/233280;};for(let i=0;i<70;i++){g.fillStyle=`rgba(255,255,255,${.25+rnd()*.6})`;g.beginPath();g.arc(rnd()*W,rnd()*420,rnd()*2.6+.6,0,7);g.fill();}
+  g.textAlign="center";g.fillStyle="#FFE08A";g.font='900 34px "Nunito Sans",sans-serif';g.fillText("🎓  BU DÖNEM PROGRAMIM",W/2,150);
+  g.fillStyle="#fff";g.font='92px "DM Serif Display",serif';g.fillText(nm?trEk(nm,"gen")+" haftası":"Kampüs haftam",W/2,262);
+  const days=[1,2,3,4,5].concat(suList(6).length?[6]:[]),all=[];days.forEach(d=>suList(d).forEach(x=>all.push(x)));
+  const lo=all.length?Math.min(...all.map(x=>Math.floor(suMin(x.s)/60))):8,hi=all.length?Math.max(...all.map(x=>Math.ceil(suMin(x.e)/60))):17,span=Math.max(4,hi-lo);
+  const X0=120,X1=W-50,Y0=380,Y1=1650,cw=(X1-X0)/days.length,ph=(Y1-Y0)/span;
+  g.fillStyle="rgba(255,255,255,.08)";suRR(g,X0-12,Y0-80,X1-X0+24,Y1-Y0+100,40);g.fill();
+  g.font='800 26px "Nunito Sans",sans-serif';g.textAlign="right";for(let i=0;i<=span;i++){const y=Y0+i*ph;g.fillStyle="rgba(255,255,255,.55)";g.fillText(String(lo+i).padStart(2,"0")+":00",X0-22,y+9);g.fillStyle="rgba(255,255,255,.12)";g.fillRect(X0,y,X1-X0,2);}
+  g.textAlign="center";days.forEach((d,i)=>{g.fillStyle="#fff";g.font='900 30px "Nunito Sans",sans-serif';g.fillText(SU_DN[d].toLocaleUpperCase("tr-TR"),X0+cw*i+cw/2,Y0-30);
+   suList(d).forEach(x=>{const y=Y0+(suMin(x.s)/60-lo)*ph,h=Math.max(40,(suMin(x.e)-suMin(x.s))/60*ph)-8,bx=X0+cw*i+6,bw=cw-12;g.save();g.shadowColor="rgba(0,0,0,.25)";g.shadowBlur=18;g.shadowOffsetY=6;g.fillStyle=suCol(x.n);suRR(g,bx,y+4,bw,h,22);g.fill();g.restore();
+    g.fillStyle="rgba(255,255,255,.22)";suRR(g,bx,y+4,bw,Math.min(h,10),[22,22,0,0]);g.fill();
+    g.fillStyle="#fff";g.textAlign="left";let fs=cw<170?26:30;const lw=String(x.n).split(/\s+/).reduce((a,w)=>w.length>a.length?w:a,"");do{g.font=`900 ${fs}px "Nunito Sans",sans-serif`;if(g.measureText(lw).width<=bw-24)break;fs--;}while(fs>18);const lines=suWrap(g,x.n,bw-24,Math.max(1,Math.floor((h-46)/(fs+4))));lines.forEach((l,j)=>g.fillText(l,bx+12,y+4+12+fs+j*(fs+4)));
+    const ly=y+4+12+fs+lines.length*(fs+4);if(ly+4<y+h){g.font=`700 ${fs-6}px "Nunito Sans",sans-serif`;g.fillStyle="rgba(255,255,255,.88)";g.fillText(x.s+(x.r&&ly+fs<y+h-6?"":""),bx+12,ly+2);if(x.r&&ly+fs+6<y+h-4)g.fillText(suWrap(g,x.r,bw-24,1)[0],bx+12,ly+fs);}g.textAlign="center";});});
+  await mfBrand(g,W/2,1790,"Derslerim",true);
+  bkCanvasShare(cv,"ders-programim.png","Bu dönem programım 🎓 #MeFirst");}catch(e){console.error(e);}
+  if(btn){btn.disabled=false;btn.textContent="📸 Paylaş";}}
+
 /* ---------- olaylar ---------- */
 function suV(id){const e=document.getElementById(id);return e?e.value.trim():"";}
 function suShake(id){const e=document.getElementById(id);if(!e)return;e.classList.remove("mw-shake");void e.offsetWidth;e.classList.add("mw-shake");e.focus();}
 function suClick(ev){const b=ev.target.closest("button");if(!b||!b.closest(".stu"))return;const S=stu(),d=b.dataset;
-  if(d.sut){suTab=d.sut;if(d.suexo==="1")suExOpen=true;suEdit=null;suRender();if(b.closest(".supanel"))window.scrollTo({top:document.querySelector(".suseg").getBoundingClientRect().top+scrollY-8,behavior:"smooth"});return;}
+  if(d.sut){suTab=d.sut;if(d.suexo==="1")suExOpen=true;suEdit=null;suRender();suSegTop();return;}
   if(d.sud){suDay=+d.sud;suEdit=null;suRender();return;}
   if(d.sudp){b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")!=="true");return;}
   if(d.sue){const x=suList(suDay).find(y=>y.id===d.sue);suEdit=x?{...x}:null;suRender();setTimeout(()=>{const f=document.getElementById("su-pf");if(f)f.scrollIntoView({behavior:"smooth",block:"center"});},60);return;}
@@ -14675,6 +14775,12 @@ function suClick(ev){const b=ev.target.closest("button");if(!b||!b.closest(".stu
   if(d.suxd){const e=S.ex.find(x=>x.id===d.suxd);if(e&&confirm(`${e.n} (${suExT(e)[1]}) silinsin mi?`)){S.ex=S.ex.filter(x=>x.id!==d.suxd);save();suRender();}return;}
   if(d.suu||d.sum){const e=S.ex.find(x=>x.id===(d.suu||d.sum));if(!e)return;const k=dkey(),D=e.dn=e.dn||{};if(d.suu){if(suExDone(e)>=(+e.u||0))return;D[k]=(D[k]||0)+1;}else{D[k]=Math.max(0,(D[k]||0)-1);}
     save();const Q=suQuota(e);if(d.suu&&Q.today===Q.q)try{mfConfetti(Q.left?`Bugünlük ${e.n} payın tamam ✓`:`${e.n}: tüm konular bitti 🎉`,["#6C63FF","#F5C04A","#22A699"],"#2B2160");}catch(_){}suRender();return;}
+  if(d.sukit!=null){const K=S.kit&&S.kit.id===d.suke?S.kit:(S.kit={id:d.suke,ok:[]}),i=+d.sukit;K.ok=K.ok.includes(i)?K.ok.filter(x=>x!==i):[...K.ok,i];save();
+    if(K.ok.length===SU_KIT.length)try{mfConfetti("Çantan hazır 🎒 Şimdi sadece sen ve kendine güvenin",["#6C63FF","#F5C04A","#FF6F91"],"#2B2160");}catch(_){}suRender();return;}
+  if(d.sush){suShareProg(b);return;}
+  if(d.suamb!=null){S.foc.amb=d.suamb;save();try{sndCtx();}catch(e){}suAmbSync();if(!S.foc.run&&d.suamb){suAmbStart(d.suamb);clearTimeout(suAmbT);suAmbT=setTimeout(()=>{if(!stu().foc.run)suAmbStop();},4000);}suRender();return;}
+  if(d.suga){const G=suGpa(),have=new Set(G.map(r=>r.n)),n=suDers().find(x=>!have.has(x))||"";G.push({id:"g"+Date.now().toString(36),n,k:"",h:""});save();suRender();return;}
+  if(d.sugd){S.gpa=suGpa().filter(r=>r.id!==d.sugd);save();suRender();return;}
   if(d.sufm){stu().foc.mode=d.sufm;save();suRender();return;}
   if(d.sufn!=null){stu().foc.n=d.sufn;save();suRender();return;}
   if(d.sufs){suFocStart(d.sufs);return;}
@@ -14687,7 +14793,9 @@ function suClick(ev){const b=ev.target.closest("button");if(!b||!b.closest(".stu
   if(d.subc){suCat=d.subc;b.parentElement.querySelectorAll("[data-subc]").forEach(x=>x.setAttribute("aria-pressed",x===b));return;}
   if(d.suba){const a=parseFloat(suV("su-ba").replace(",","."));if(!(a>0)){suShake("su-ba");return;}const B=S.bud;B.items.push({t:Date.now(),d:dkey(),a:Math.round(a*100)/100,c:suCat,n:suV("su-bn")});if(B.items.length>500)B.items.splice(0,B.items.length-500);save();try{sndPlay("tap");}catch(e){}suRender();return;}
   if(d.subd){const t=+d.subd;S.bud.items=S.bud.items.filter(x=>x.t!==t);save();suRender();return;}}
-function suInput(ev){const t=ev.target;if(t.dataset&&t.dataset.sug){const e=stu().ex.find(x=>x.id===t.dataset.sug);if(e){const v=t.value.trim();if(v===""){delete e.g;}else e.g=Math.max(0,Math.min(100,+v));save();}return;}
+let suAmbT=null;
+function suGpaUpd(){const R=suGpaCalc(),e=document.getElementById("su-gpa"),r=document.querySelector(".su-gr");if(e)e.textContent=R?R.v.toFixed(2).replace(".",","):"–";if(r)r.style.setProperty("--p",R?(R.v/4*100).toFixed(1):0);}
+function suInput(ev){const t=ev.target;if(t.dataset&&(t.dataset.sugn||t.dataset.sugk||t.dataset.sugh)){const id=t.dataset.sugn||t.dataset.sugk||t.dataset.sugh,r=suGpa().find(x=>x.id===id);if(r){if(t.dataset.sugn)r.n=t.value.trim();else if(t.dataset.sugk)r.k=t.value;else r.h=t.value;save();suGpaUpd();}return;}if(t.dataset&&t.dataset.sug){const e=stu().ex.find(x=>x.id===t.dataset.sug);if(e){const v=t.value.trim();if(v===""){delete e.g;}else e.g=Math.max(0,Math.min(100,+v));save();}return;}
   if(["su-cv","su-cw","su-ct","su-cn"].includes(t.id)){if(t.id==="su-cn"){if(suCalc.n!==t.value){suCalc={n:t.value};suRender();}return;}suCalc.n=suV("su-cn")||suCalc.n;suCalc.v=suV("su-cv");suCalc.w=suV("su-cw");suCalc.t=suV("su-ct");if(t.id==="su-cw"&&+t.value>0){stu().w=+t.value;save();}
     const r=document.getElementById("su-cr");if(r)r.innerHTML=suCalcRes(suCalc.v,suCalc.w,suCalc.t);}}
 document.addEventListener("change",e=>{if(e.target&&e.target.id==="su-cn"&&suCalc.n!==e.target.value){suCalc={n:e.target.value};suRender();}});
@@ -14702,7 +14810,12 @@ BN_ART.stu=`<svg viewBox="0 0 100 100"><path d="M10 40L50 22l40 18-40 18z" fill=
 (function(){const _b=bentoRender;bentoRender=function(){_b.apply(this,arguments);try{const el=document.getElementById("bento");if(!el||!stuOn())return;const kb=el.querySelector(".bn-kids"),hasK=!!(st.kids&&st.kids.list&&st.kids.list.length)||(prof().kim||[]).includes("cocuk");
   const b=document.createElement("button");b.type="button";b.className="bn bn-stu"+(hasK?" wide":"");b.dataset.bgo="go-stu";b.style.setProperty("--i",kb?kb.style.getPropertyValue("--i"):"5");
   const R=st.stu&&st.stu.foc&&st.stu.foc.run;b.innerHTML=`<span class="bn-art" aria-hidden="true">${BN_ART.stu}</span><span class="bn-tx"><b>Derslerim</b><small>${esc(R?(R.m==="mola"?"Moladasın 🌿":"⏳ Odak turu sürüyor"):suBnSub())}</small></span>`;
-  b.onclick=()=>{suMount();document.getElementById("go-stu").click();};if(kb){if(hasK)kb.before(b);else kb.replaceWith(b);}else el.appendChild(b);}catch(e){console.error(e);}};try{if(step===0)bentoRender();}catch(e){}})();
+  b.onclick=()=>{suMount();document.getElementById("go-stu").click();};if(kb){if(hasK)kb.before(b);else kb.replaceWith(b);}else el.appendChild(b);}catch(e){console.error(e);}};
+  const _b2=bentoRender;bentoRender=function(){_b2.apply(this,arguments);try{const el=document.getElementById("bento");let a=document.getElementById("su-ask");const P=prof();
+   if(!el||P.uni||!(st.name||"").trim()){if(a)a.remove();return;}
+   if(!a){a=document.createElement("div");a.id="su-ask";a.className="su-ask";el.after(a);}
+   a.innerHTML=`<span class="no-mi">🎓</span><div><b>Üniversitede misin?</b><small>Ders programın, sınavların ve harçlığın için sana bir köşe açayım.</small></div><div class="su-askb"><button type="button" data-sask="evet">Evet</button><button type="button" data-sask="hayir">Hayır</button></div>`;
+   a.querySelectorAll("[data-sask]").forEach(x=>x.onclick=()=>{const P2=st.prof=st.prof||{kacin:[]};P2.uni=x.dataset.sask;save();a.classList.add("bye");setTimeout(()=>{bentoRender();if(P2.uni==="evet"){try{mfConfetti("“Derslerim” köşen açıldı 🎓",["#6C63FF","#F5C04A","#FF6F91"],"#2B2160");}catch(_){}const t=document.querySelector(".bn-stu");if(t)t.scrollIntoView({behavior:"smooth",block:"center"});}},300);});}catch(e){console.error(e);}};try{if(step===0)bentoRender();}catch(e){}})();
 
 /* ---------- kurulum: üniversitede misin? ---------- */
 const SU_UNI_S="Evet dersen sana bir de “Derslerim” köşesi açılır: ders programın, sınav geri sayımın, odak molaların ve harçlık takibin. İstediğin an “Beni tanı”dan değiştirebilirsin; hiçbir bilgin silinmez.";
