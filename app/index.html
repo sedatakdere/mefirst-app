@@ -7215,6 +7215,9 @@ html[data-mf="dusk"] .sf-pop-t b{color:#FFE7C9}html[data-mf="dusk"] .sf-pop-t p{
 .ky-b>.no-mi{font-size:28px}.ky-b b{display:block;font-size:15px}.ky-b small{font-size:12.5px;color:#8A5A3A}
 .ky-l{align-self:flex-start;border:0;background:none;padding:6px 4px;font:700 13px/1 var(--f-body,inherit);color:#A8492A;text-decoration:underline;cursor:pointer}
 html[data-mf="dusk"] .ky-card{background:rgba(255,236,214,.07);border-color:rgba(233,165,90,.25)}html[data-mf="dusk"] .ky-b small{color:#E8CBAA}html[data-mf="dusk"] .ky-l{color:#F0C27A}
+
+/* kitap sayfasının üstünde açılan katmanlar */
+#kpz,#klibs{z-index:9600}.ktconf{z-index:9650}.sf-pop,.sf-toast{z-index:9800}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -9527,7 +9530,7 @@ function navSync(){const c=navCur();document.querySelectorAll("#bnav [data-nv]")
   lastStep=step;}
 function renderStep(){try{if(step>=9&&step<=10){openLove();return;}
   const R={20:petRender,30:profRender,40:wardRender,50:fitRender,60:ritRender,70:kidsRender,80:evRender,90:kitapRender};show();if(R[step])R[step]();}catch(e){show();}}
-window.addEventListener("popstate",e=>{if(document.getElementById("bkp")&&window.bkClose){window.bkClose(true);return;}if(window.mfRoomOn&&window.mfRoomClose){window.mfRoomClose(true);return;}if(e.state&&(e.state.kpz||e.state.shs||e.state.zs||e.state.ss||e.state.mfr))return;const t=e.state&&typeof e.state.mf==="number"?e.state.mf:0;if(typeof nfRun!=="undefined"&&nfRun)nfStop();
+window.addEventListener("popstate",e=>{if(document.getElementById("bkp")&&window.bkClose){const ov=["kpz","klibs"].some(id=>{const o=document.getElementById(id);return o&&!o.hidden;});if(ov)return;window.bkClose(true);return;}if(window.mfRoomOn&&window.mfRoomClose){window.mfRoomClose(true);return;}if(e.state&&(e.state.kpz||e.state.shs||e.state.zs||e.state.ss||e.state.mfr))return;const t=e.state&&typeof e.state.mf==="number"?e.state.mf:0;if(typeof nfRun!=="undefined"&&nfRun)nfStop();
   navLock=true;step=(t===9||t===10)?(love.unlocked?10:9):t;renderStep();navLock=false;});
 document.addEventListener("click",e=>{const b=e.target.closest("#bnav [data-nv]");if(!b)return;const v=b.dataset.nv;if(typeof nfRun!=="undefined"&&nfRun)nfStop();
   if(v==="home"){step=0;show();}
