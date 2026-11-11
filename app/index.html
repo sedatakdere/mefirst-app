@@ -7218,6 +7218,25 @@ html[data-mf="dusk"] .ky-card{background:rgba(255,236,214,.07);border-color:rgba
 
 /* kitap sayfasının üstünde açılan katmanlar */
 #kpz,#klibs{z-index:9600}.ktconf{z-index:9650}.sf-pop,.sf-toast{z-index:9800}
+
+/* v0.33.6 durum etiketleri: gerçek bir sahaf etiketi gibi + gerçek foto rozeti */
+.sf-stamp{z-index:7!important;opacity:1!important;-webkit-mask:none!important;mask:none!important;border:0!important;border-radius:3px!important;padding:4px 8px 4px 9px!important;
+ font:800 9px/1.15 var(--f-body,inherit)!important;letter-spacing:.07em;color:var(--sc,#2E5A8A);
+ background:linear-gradient(180deg,#FFFFFB 0%,#FBF6E8 55%,#F1E8D2 100%)!important;
+ box-shadow:inset 0 0 0 1.2px var(--sc,#2E5A8A),inset 0 0 0 2.6px #FFFDF6,inset 0 0 0 3.3px color-mix(in srgb,var(--sc,#2E5A8A) 55%,transparent),0 1px 1px rgba(0,0,0,.18),0 3px 6px -2px rgba(60,30,10,.4)!important;
+ clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%)}
+.sf-stamp::before{content:"";position:absolute;left:3px;right:9px;top:2px;height:35%;border-radius:2px;background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(255,255,255,0));pointer-events:none}
+.sf-stamp::after{content:"";position:absolute;right:0;top:0;width:7px;height:7px;background:linear-gradient(225deg,transparent 50%,#E2D6BA 50%,#CFC09C);box-shadow:-1px 1px 1.5px rgba(0,0,0,.25)}
+.sf-stamp.c-yeni{--sc:#2F7A4A}.sf-stamp.c-iyi{--sc:#2E5A8A}.sf-stamp.c-yipranmis{--sc:#A8492A}
+.sf-ft-r .sf-stamp{position:relative!important}
+.sf-real{position:absolute;left:8px;bottom:9px;z-index:7;display:inline-flex;align-items:center;gap:3px;padding:3px 7px 3px 5px;border-radius:3px;font:800 9px/1.2 var(--f-body,inherit);letter-spacing:.03em;color:#2A2A2A;
+ background:#FFFFFF;box-shadow:0 1px 1px rgba(0,0,0,.2),0 3px 6px -2px rgba(0,0,0,.35);transform:rotate(-6deg)}
+.sf-real .no-mi{font-size:10px}
+.sf-real::before{content:"";position:absolute;left:50%;top:-5px;width:22px;height:9px;margin-left:-11px;background:rgba(255,236,170,.75);transform:rotate(3deg);box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.sf-real.big{position:static;display:flex;transform:rotate(-2deg);margin:10px auto 0;font-size:10.5px;padding:5px 9px 5px 7px;max-width:132px;line-height:1.25;white-space:normal}
+.sf-real.big .no-mi{font-size:13px}
+.sf-ft-l .sf-real{left:6px;bottom:12px}
+.sf-card .sf-real{bottom:auto;top:46px;left:12%;transform:rotate(-7deg)}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -15469,13 +15488,14 @@ function sfHTML(){const city=sfCityGet();const S=SF.stats||{};const n=(SF.badge.
  else{const F=!SF.book&&V.length>=3?(V.slice().sort((a,b)=>(b.req_count||0)-(a.req_count||0))[0].req_count>=2?V.slice().sort((a,b)=>(b.req_count||0)-(a.req_count||0))[0]:V[0]):null;const rest=F?V.filter(a=>a!==F):V;
   grid=`${F?sfFeat(F):""}<div class="sf-grid">${rest.map((a,i)=>sfCard(a,i)).join("")}</div>`;}
  return `<section class="sf" id="sf">${head}${acts}${how}${mineH}${bookF}<div class="sf-fil">${scope}${cab}${townH}${sortH}</div><div id="sf-res">${grid}</div><p class="sf-foot">🛡 Sahafta para yok, herkes kendinden sorumlu. Buluşmaları gündüz, kalabalık yerlerde yap. <a href="#" id="sf-rules">Kurallar</a></p></section>`;}
+function sfReal(big){return `<span class="sf-real${big?" big":""}"><span class="no-mi">📸</span>${big?"Satıcının kendi çektiği fotoğraf":"Gerçek foto"}</span>`;}
 function sfStamp(c){const C={yeni:"YENİ GİBİ",iyi:"İYİ DURUMDA",yipranmis:"YIPRANMIŞ"};return `<span class="sf-stamp c-${c}">${C[c]||""}</span>`;}
 function sfHTag(k){const K=SF_K[k]||SF_K.hediye;return `<span class="sf-htag k-${k}"><span class="no-mi">${K[0]}</span>${K[1]}</span>`;}
 function sfCard(a,i){const my=a.my_req;const tag=a.mine?`<span class="sf-tag me">Senin ilanın</span>`:my==="pending"?`<span class="sf-tag wt">⏳ Talebin gitti</span>`:my==="accepted"?`<span class="sf-tag ok">💬 Kabul edildi</span>`:a.status==="reserved"?`<span class="sf-tag rs">🤝 Ayırtıldı</span>`:a.req_count>=2?`<span class="sf-tag hot">🔥 ${a.req_count} talep</span>`:(Date.now()-new Date(a.created_at)<864e5)?`<span class="sf-tag nw">Yeni geldi</span>`:"";
- return `<button type="button" class="sf-card k-${a.kind}${a.status==="reserved"?" rsv":""}" data-sfa="${esc(a.id)}" style="--i:${i%10}"><span class="sf-cw">${sfCover(a)}${sfHTag(a.kind)}${sfStamp(a.cond)}${tag}</span>
+ return `<button type="button" class="sf-card k-${a.kind}${a.status==="reserved"?" rsv":""}" data-sfa="${esc(a.id)}" style="--i:${i%10}"><span class="sf-cw">${sfCover(a)}${sfHTag(a.kind)}${sfStamp(a.cond)}${tag}${a.thumb?sfReal():""}</span>
   <span class="sf-ci"><b>${esc(a.title)}</b><small class="sf-au">${esc(a.author||"")}</small>${a.kind==="takas"&&a.want?`<span class="sf-wn">🔄 ${esc(a.want)}</span>`:""}
   <span class="sf-who">${sfAv(a.name,a.avatar)}<span>${esc(a.name||"Okur")}<small>📍 ${esc(a.town?a.town+", ":"")}${esc(a.city)} · ${sfAgo(a.created_at)}</small></span></span></span></button>`;}
-function sfFeat(a){const K=SF_K[a.kind]||SF_K.hediye;return `<button type="button" class="sf-feat k-${a.kind}" data-sfa="${esc(a.id)}"><span class="sf-ft-l">${sfCover(a)}${sfHTag(a.kind)}</span><span class="sf-ft-r"><span class="sf-ft-k">${a.req_count>=2?`🔥 ${a.req_count} kişi istiyor`:"✨ Vitrinde"}</span><b>${esc(a.title)}</b><small>${esc(a.author||"")}</small>${sfStamp(a.cond)}
+function sfFeat(a){const K=SF_K[a.kind]||SF_K.hediye;return `<button type="button" class="sf-feat k-${a.kind}" data-sfa="${esc(a.id)}"><span class="sf-ft-l">${sfCover(a)}${sfHTag(a.kind)}${a.thumb?sfReal():""}</span><span class="sf-ft-r"><span class="sf-ft-k">${a.req_count>=2?`🔥 ${a.req_count} kişi istiyor`:"✨ Vitrinde"}</span><b>${esc(a.title)}</b><small>${esc(a.author||"")}</small>${sfStamp(a.cond)}
   <span class="sf-who">${sfAv(a.name,a.avatar)}<span>${esc(a.name||"Okur")}<small>📍 ${esc(a.town?a.town+", ":"")}${esc(a.city)}</small></span></span><span class="sf-ft-go">İncele ›</span></span></button>`;}
 function sfPaint(){const P=document.getElementById("ktpanel");if(!P||kttab!=="sahaf")return;const sy=window.scrollY;P.innerHTML=sfHTML();window.scrollTo({top:sy});sfBind(P);}
 function sfRefilter(){const P=document.getElementById("ktpanel");if(!P)return;const y=window.scrollY;const fil=P.querySelector(".sf-fil");const res=P.querySelector("#sf-res");if(!fil||!res){sfPaint();return;}
@@ -15508,7 +15528,7 @@ function sfAdDraw(a){const K=SF_K[a.kind]||SF_K.hediye;const C=SF_C[a.cond]||[""
  const body=a.mine?sfAdOwner(a):sfAdOther(a);
  const O=libSheet(`<div class="shs-grab"></div><div class="sf-ad">
   <button type="button" class="shs-x sf-adx" aria-label="Kapat">✕</button>
-  <div class="sf-adh"><div class="sf-adc">${sfCover(a,true)}</div><div class="sf-adt">${sfKindPill(a.kind)}<h3>${esc(a.title)}</h3><p>${esc(a.author||"")}</p><span class="sf-cdp"><span class="no-mi">${C[0]}</span>${C[1]}</span>
+  <div class="sf-adh"><div class="sf-adc">${sfCover(a,true)}${a.photo||a.thumb?sfReal(true):""}</div><div class="sf-adt">${sfKindPill(a.kind)}<h3>${esc(a.title)}</h3><p>${esc(a.author||"")}</p><span class="sf-cdp"><span class="no-mi">${C[0]}</span>${C[1]}</span>
    <button type="button" class="sf-bk" id="sf-bk">📖 Kitap sayfası ›</button></div></div>
   ${a.note?`<div class="sf-note"><span class="no-mi">✍️</span><p>${esc(a.note)}</p></div>`:""}
   ${a.kind==="takas"&&a.want?`<div class="sf-want"><span class="no-mi">🔄</span><span>Karşılığında: <b>${esc(a.want)}</b></span></div>`:""}
