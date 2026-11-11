@@ -13102,7 +13102,7 @@ function bookOpen(i,anim,X){const L=klib(),x=X||L[i];if(!x)return;try{bkRsPull(x
  const gx=g("bk-galx");if(gx)gx.onclick=()=>{delete PH[bkKey(x)];phSave();re();};
  const hg=g("bk-hang");if(hg)hg.onclick=()=>{const v=(ta.value||"").trim();if(!v){ta.focus();ta.placeholder="Önce bir cümle yaz, sonra asalım 🧷";return;}x.cm=v;x.cmd=dkey();delete x.cmdraft;if(!x.rs)x.rs="read";save();sbHang(x);try{sndPlay("bag");}catch(e){}if(navigator.vibrate)try{navigator.vibrate([20,40,20]);}catch(e){}re("hang");setTimeout(()=>{const l=g("bk-line");if(l)l.scrollIntoView({behavior:"smooth",block:"center"});},60);};
  const pd=g("bk-pdel");if(pd)pd.onclick=()=>{if(!pd.dataset.sure){pd.dataset.sure=1;pd.textContent="?";setTimeout(()=>{if(pd.isConnected){delete pd.dataset.sure;pd.textContent="✕";}},2500);return;}x.cmdraft=x.cm;delete x.cm;delete x.cmd;save();sbUnhang(x);re();};
- const sh=g("bk-share");if(sh)sh.onclick=()=>bkShare(x,c);
+ const sh=g("bk-share");if(sh)sh.onclick=()=>{pzClip();bkShare(x,c);};
  const qa=g("bk-qadd");if(qa)qa.onclick=()=>{const t=g("bk-qt").value.trim();if(!t){g("bk-qt").focus();return;}x.q=x.q||[];const nq={t,p:g("bk-qp").value.trim()};x.q.push(nq);save();sbQuote(x,nq);re();};
  O.querySelectorAll("[data-qs]").forEach(b=>b.onclick=e=>{e.stopPropagation();bkQuoteShare(x,(x.q||[])[+b.dataset.qs],bkCol(x.t));});
  O.querySelectorAll("[data-qx]").forEach(b=>b.onclick=()=>{const rq=x.q.splice(+b.dataset.qx,1)[0];save();if(rq&&rq.sid)sbReq("DELETE","quotes?id=eq."+rq.sid);re();});
@@ -15827,6 +15827,11 @@ function pzStamp(g,cx,cy){g.save();g.font='italic 58px "DM Serif Display",Georgi
  g.shadowColor="rgba(60,30,10,.28)";g.shadowBlur=22;g.shadowOffsetY=10;g.fillStyle="#FFFBF0";g.beginPath();g.roundRect?g.roundRect(-w/2,-h/2,w,h,22):g.rect(-w/2,-h/2,w,h);g.fill();g.shadowColor="transparent";
  g.strokeStyle="#A8492A";g.lineWidth=3;g.setLineDash([10,7]);g.beginPath();g.roundRect?g.roundRect(-w/2+9,-h/2+9,w-18,h-18,15):g.rect(-w/2+9,-h/2+9,w-18,h-18);g.stroke();g.setLineDash([]);
  pzMini(g,-w/2+62,4,62,-.16);g.fillStyle="#A8492A";g.textAlign="left";g.textBaseline="middle";g.fillText("#polaroidle",-w/2+108,4);g.restore();}
+
+/* #polaroidle'yi panoya kopyala: Instagram story'de yapıştırınca tıklanabilir olur */
+function pzClip(){const tag="#polaroidle";let ok=false;try{if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(tag).catch(()=>{});ok=true;}}catch(e){}
+ if(!ok){try{const t=document.createElement("textarea");t.value=tag;t.setAttribute("readonly","");t.style.cssText="position:fixed;opacity:0;top:0";document.body.appendChild(t);t.select();document.execCommand("copy");t.remove();ok=true;}catch(e){}}
+ try{sfToast("📋 #polaroidle kopyalandı · story'de yapıştır");const T=document.getElementById("sf-toast");if(T){clearTimeout(T._t);T._t=setTimeout(()=>T.classList.remove("on"),5500);}}catch(e){}}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
