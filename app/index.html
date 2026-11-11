@@ -7175,6 +7175,25 @@ html[data-mf="dusk"] .sf-sort button{color:#E8CBAA}html[data-mf="dusk"] .sf-sort
 html[data-mf="dusk"] .sf-wn{color:#9FD0E4}
 html[data-mf="dusk"] .sf-stamp{background:rgba(255,251,242,.9)}
 @media (prefers-reduced-motion:reduce){.sf-tk-in{animation:none}}
+
+/* takas teklifi: kütüphanemden mini raf */
+.sf-wantb{display:flex;gap:8px;align-items:center;font-size:13.5px;padding:9px 12px;border-radius:12px;background:rgba(46,107,138,.1);color:#1E4A5E;margin:0 0 10px}
+.sf-oshelf{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;margin:0 -6px;padding:12px 6px 4px;scroll-snap-type:x proximity}
+.sf-oshelf::-webkit-scrollbar{display:none}
+.sf-ob{position:relative;flex:none;width:84px;display:flex;flex-direction:column;gap:3px;border:0;background:none;padding:0;text-align:left;cursor:pointer;font:inherit;color:var(--ink);scroll-snap-align:start;animation:kshIn .4s cubic-bezier(.2,.9,.3,1.2) both;animation-delay:calc(var(--i,0)*30ms)}
+.sf-ob .sf-cv{width:84px;height:124px;padding:7px 5px 5px 9px;transition:transform .2s}
+.sf-ob .sf-cv b{font-size:10px}.sf-ob .sf-cv small{font-size:7px}
+.sf-ob:active .sf-cv{transform:translateY(-6px) rotate(-2deg)}
+.sf-ob>b{font-size:11.5px;line-height:1.2;margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sf-ob>small{font-size:10px;color:#9A5A2C;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sf-ob.fit .sf-cv{box-shadow:0 0 0 3px #F0C27A,0 10px 16px -8px rgba(60,30,10,.55)}
+.sf-ofit{position:absolute;top:-8px;left:50%;transform:translateX(-50%);z-index:5;font-style:normal;font-size:10px;font-weight:800;white-space:nowrap;padding:3px 8px;border-radius:999px;background:#F0C27A;color:#4A2410;box-shadow:0 4px 8px -4px rgba(0,0,0,.4)}
+.sf-opl{height:9px;margin:-2px -6px 10px;border-radius:3px;background:linear-gradient(180deg,#B9773F,#8C5228);box-shadow:0 6px 8px -6px rgba(80,40,10,.55)}
+.sf-fit{font-style:normal;color:#8C5A10;font-weight:800}
+#sf-ofsel.on{margin-bottom:12px}
+#sf-oman{display:block;width:100%;min-height:42px;margin-bottom:14px;border:1px dashed rgba(201,130,43,.55);border-radius:12px;background:none;font:700 13px/1 var(--f-body,inherit);color:#8C4A1E;cursor:pointer}#sf-oman[hidden]{display:none}
+html[data-mf="dusk"] #sf-oman{color:#F0CFA8}
+html[data-mf="dusk"] .sf-wantb{background:rgba(94,160,200,.15);color:#BFE0F0}html[data-mf="dusk"] .sf-ob>small{color:#E9A55A}html[data-mf="dusk"] .sf-fit{color:#F0C27A}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -15496,18 +15515,40 @@ async function sfReport(ad,req,btn){if(!btn.dataset.sure){btn.dataset.sure=1;btn
  btn.replaceWith(box);box.querySelectorAll("button").forEach(b=>b.onclick=async()=>{box.innerHTML="<p>Gönderiyorum…</p>";const r=await sfRpc("sahaf_report",{p_ad:ad,p_req:req,p_reason:b.textContent});box.innerHTML=r.err?`<p>${sfErr(r.err)}</p>`:`<p>Teşekkürler, inceleyeceğiz 🙏 İstersen kişiyi engelleyebilirsin.</p>`;});}
 
 /* talep yaz */
-function sfAsk(a){const nm=(a.name||"").split(" ")[0];const me=((st.prof&&st.prof.name)||st.name||"").split(" ")[0];
+function sfOfferPool(a){const out=[],seen=new Set();const add=(t,au,src)=>{const k=ktN(t);if(!k||seen.has(k)||bkKey({t,a:au})===a.book_key||ktN(t)===ktN(a.title))return;seen.add(k);out.push({t,a:au||"",src});};
+ klib().filter(x=>x.k==="own"&&!x.who).forEach(x=>add(x.t,x.a,"lib"));try{(kt().shelf||[]).filter(x=>x.s==="okudu").forEach(x=>add(x.t,x.a,"read"));}catch(e){}
+ const w=ktN(a.want||"");let G=[];try{G=KT_GEN.filter(g=>w&&(w.includes(ktN(g[1]).slice(0,5))||w.includes(g[0]))).map(g=>g[0]);}catch(e){}
+ let S=null;try{S=new Map(kshStock().map(x=>[ktN(x.t),x]));}catch(e){}
+ out.forEach(o=>{let m=false;if(w){const words=w.split(/\s+/).filter(x=>x.length>3);m=words.some(x=>ktN(o.t+" "+o.a).includes(x));const s=S&&S.get(ktN(o.t));if(!m&&s&&G.length)m=s.g.some(g=>G.includes(g));}o.fit=m;});
+ return out.sort((x,y)=>(y.fit?1:0)-(x.fit?1:0)||(x.src==="lib"?0:1)-(y.src==="lib"?0:1));}
+function sfAsk(a){const nm=(a.name||"").split(" ")[0];
  const msg={takas:`Merhaba ${nm} 😊 "${a.title}" için takas yapmak isterim.`,hediye:`Merhaba ${nm} 😊 "${a.title}" kitabını çok merak ediyordum, bana olur mu? 💛`,odunc:`Merhaba ${nm} 😊 "${a.title}" kitabını ödünç alabilir miyim? Özenle okuyup söz verdiğim gün geri getiririm 📚`}[a.kind];
- const mine=klib().filter(x=>x.k==="own"&&!x.who&&bkKey(x)!==a.book_key).slice(0,10);
+ const pool=a.kind==="takas"?sfOfferPool(a):[];const pick={t:"",a:""};
  const O=libSheet(`<div class="shs-grab"></div><div class="shs-h"><div><small>${esc(SF_K[a.kind][1])} talebi</small><b>${esc(a.title)}</b><em>${esc(a.name)} · 📍 ${esc(a.city)}</em></div><button type="button" class="shs-x" aria-label="Kapat">✕</button></div>
- <div class="sf-sh sf-form">${a.kind==="takas"?`<label class="sf-l" for="sf-of">Karşılığında ne önerirsin?</label>${a.want?`<p class="sf-hint">${esc(nm)} şunu arıyor: <b>${esc(a.want)}</b></p>`:""}<input id="sf-of" class="sf-in" maxlength="100" placeholder="Kitabın adı">${mine.length?`<div class="sf-pk">${mine.map(x=>`<button type="button" data-sfpk="${esc(x.t)}">${esc(x.t.length>26?x.t.slice(0,24)+"…":x.t)}</button>`).join("")}</div>`:""}`:""}
+ <div class="sf-sh sf-form">${a.kind==="takas"?`<label class="sf-l">Karşılığında hangi kitabını verirsin?</label>${a.want?`<p class="sf-wantb"><span class="no-mi">🔄</span><span>${esc(nm)} şunu arıyor: <b>${esc(a.want)}</b></span></p>`:""}
+  <div class="sf-bsel" id="sf-ofsel"></div>
+  <div id="sf-ofpick">${pool.length?`<input id="sf-oq" class="sf-in" type="search" placeholder="Kütüphanende ara… (${pool.length} kitap)" autocomplete="off"><div class="sf-oshelf" id="sf-osh"></div><div class="sf-opl" aria-hidden="true"></div>`:`<p class="sf-hint">Kütüphanen henüz boş görünüyor 📚 Kitaplığım'a eklediğin kitaplar burada rafa dizilir. Şimdilik adını yazabilirsin:</p>`}
+   <button type="button" class="sf-blm" id="sf-oman"${pool.length?"":" hidden"}>✍️ Listede yok, elle yazayım</button>
+   <div class="sf-man" id="sf-oml"${pool.length?" hidden":""}><input id="sf-of" class="sf-in" maxlength="100" placeholder="Kitabın adı"><input id="sf-ofa" class="sf-in" maxlength="80" placeholder="Yazarı (isteğe bağlı)"><button type="button" class="ktbtn" id="sf-ook">Bunu öneriyorum</button></div></div>`:""}
   <label class="sf-l" for="sf-m">Mesajın</label><textarea id="sf-m" class="sf-in" rows="4" maxlength="600">${esc(msg)}</textarea>
   <p class="sf-safe">🛡 Telefon ve adres paylaşmana gerek yok; kabul edilirse buradan konuşursunuz.</p>
   <button type="button" class="btn ktgo" id="sf-send">Gönder 💌</button><p class="sf-err" id="sf-e" hidden></p></div>`);
- O.querySelectorAll("[data-sfpk]").forEach(b=>b.onclick=()=>{const i=document.getElementById("sf-of");i.value=b.dataset.sfpk;O.querySelectorAll("[data-sfpk]").forEach(x=>x.setAttribute("aria-pressed",x===b));});
- document.getElementById("sf-send").onclick=async e=>{const b=e.currentTarget;const m=document.getElementById("sf-m").value.trim();const of=document.getElementById("sf-of");if(!m){document.getElementById("sf-m").focus();return;}if(of&&!of.value.trim()){of.focus();of.classList.add("shake");setTimeout(()=>of.classList.remove("shake"),500);return;}
-  b.disabled=true;b.textContent="Gönderiyorum…";const r=await sfRpc("sahaf_request",{p_ad:a.id,p_msg:m,p_offer:of?of.value.trim():""});
-  if(r.err){const E=document.getElementById("sf-e");E.hidden=false;E.textContent=sfErr(r.err);b.disabled=false;b.textContent="Gönder 💌";return;}
+ const g=id=>document.getElementById(id);
+ const setMsg=()=>{const m=g("sf-m");const base=msg;if(m.value.trim()===base||m.dataset.auto){m.value=pick.t?`${base} Karşılığında "${pick.t}"${pick.a?` (${pick.a})`:""} kitabımı önerebilirim 📚`:base;m.dataset.auto=pick.t?"1":"";}};
+ const choose=(t,au)=>{pick.t=t;pick.a=au||"";const s=g("sf-ofsel");const c=bkCol(t);const fit=pool.find(x=>ktN(x.t)===ktN(t)&&x.fit);
+  s.innerHTML=`<span class="ktc sf-cv xs" data-cvt="${esc(t)}" data-cva="${esc(pick.a)}" style="--c1:${c[0]};--c2:${c[1]}"><i></i><b>${esc(t.slice(0,20))}</b></span><span class="sf-selt"><b>${esc(t)}</b><small>${esc(pick.a)}${fit?` · <em class="sf-fit">✨ İstediğine uyuyor</em>`:""}</small></span><button type="button" class="sf-chg" id="sf-ochg">Değiştir</button>`;
+  s.classList.add("on");g("sf-ofpick").hidden=true;g("sf-ochg").onclick=()=>{pick.t="";pick.a="";s.classList.remove("on");s.innerHTML="";g("sf-ofpick").hidden=false;setMsg();};setMsg();try{navigator.vibrate&&navigator.vibrate(10);}catch(e){}};
+ const shelf=q=>{const box=g("sf-osh");if(!box)return;const n=ktN(q||"");const R=pool.filter(x=>!n||ktN(x.t+" "+x.a).includes(n));
+  box.innerHTML=R.length?R.slice(0,40).map((x,i)=>{const c=bkCol(x.t);return `<button type="button" class="sf-ob${x.fit?" fit":""}" data-ot="${esc(x.t)}" data-oa="${esc(x.a)}" style="--i:${i%12}"><span class="ktc sf-cv" data-cvt="${esc(x.t)}" data-cva="${esc(x.a)}" style="--c1:${c[0]};--c2:${c[1]}"><i></i><b lang="tr">${esc(trHyph(x.t.slice(0,36)))}</b><small>${esc(x.a)}</small></span>${x.fit?`<em class="sf-ofit">✨ Uyar</em>`:""}<b>${esc(x.t)}</b><small>${x.src==="read"?"📖 Okudum rafından":esc(x.a)}</small></button>`;}).join("")
+   :`<p class="sf-hint">"${esc(q)}" kütüphanende yok. <a href="#" id="sf-oadd">Elle yaz ›</a></p>`;
+  box.querySelectorAll("[data-ot]").forEach(b=>b.onclick=()=>choose(b.dataset.ot,b.dataset.oa));const ad=g("sf-oadd");if(ad)ad.onclick=e=>{e.preventDefault();g("sf-oml").hidden=false;g("sf-of").value=q;g("sf-ofa").focus();};};
+ if(a.kind==="takas"){shelf("");const oq=g("sf-oq");if(oq)oq.oninput=()=>shelf(oq.value.trim());
+  g("sf-oman").onclick=()=>{g("sf-oml").hidden=false;g("sf-of").focus();};
+  g("sf-ook").onclick=()=>{const t=g("sf-of").value.trim();if(!t){g("sf-of").focus();return;}choose(t,g("sf-ofa").value.trim());};}
+ g("sf-send").onclick=async e=>{const b=e.currentTarget;const m=g("sf-m").value.trim();if(!m){g("sf-m").focus();return;}
+  if(a.kind==="takas"&&!pick.t){const mt=g("sf-of");if(mt&&mt.value.trim()&&!g("sf-oml").hidden){pick.t=mt.value.trim();pick.a=(g("sf-ofa").value||"").trim();}else{const t=g("sf-oq")||mt;if(t){t.focus();t.classList.add("shake");setTimeout(()=>t.classList.remove("shake"),500);}const E=g("sf-e");E.hidden=false;E.textContent="Karşılığında vereceğin kitabı seç 📚";return;}}
+  b.disabled=true;b.textContent="Gönderiyorum…";const offer=pick.t?(pick.t+(pick.a?" — "+pick.a:"")).slice(0,100):"";const r=await sfRpc("sahaf_request",{p_ad:a.id,p_msg:m,p_offer:offer});
+  if(r.err){const E=g("sf-e");E.hidden=false;E.textContent=sfErr(r.err);b.disabled=false;b.textContent="Gönder 💌";return;}
   SF.at=0;mfConfetti("Talebin uçtu 💌",["#F4A3A8","#E9B872","#C98A9E","#fff"],"linear-gradient(135deg,#C9822B,#A8492A)");setTimeout(()=>sfChat(r.data),600);};}
 
 /* ilan ver */
