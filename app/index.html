@@ -15383,7 +15383,7 @@ document.addEventListener("click",e=>{const S=e.target.closest&&e.target.closest
  const b=e.target.closest(".ksh-b");if(b&&!e.target.closest("button")){e.preventDefault();e.stopPropagation();bookOpenAny(b.dataset.kbt,b.dataset.kba);}},true);
 document.addEventListener("keydown",e=>{if(e.key!=="Enter"&&e.key!==" ")return;const b=e.target.closest&&e.target.closest(".ksh-b");if(b&&e.target===b){e.preventDefault();bookOpenAny(b.dataset.kbt,b.dataset.kba);}});
 /* derinlere inince "Vitrine dön" */
-function kshTop(){let B=document.getElementById("ksh-top");const S=document.getElementById("kt-shop");const en=document.querySelector("#ksh-foot .ksh-end");const show=S&&step===90&&kttab==="oneri"&&!document.getElementById("bkp")&&S.getBoundingClientRect().top<-260&&!(en&&en.getBoundingClientRect().top<innerHeight-60);
+function kshTop(){let B=document.getElementById("ksh-top");const S=document.getElementById("kt-shop");const en=document.querySelector("#ksh-foot .ksh-end");const show=S&&step===90&&kttab==="oneri"&&!document.getElementById("bkp")&&S.getBoundingClientRect().top<-260&&!(en&&en.getBoundingClientRect().top<innerHeight-60)&&(()=>{const n=document.getElementById("bnav");return !!n&&!n.classList.contains("nav-hide");})();
  if(!B){if(!S)return;B=document.createElement("button");B.type="button";B.id="ksh-top";B.className="ksh-top";B.innerHTML='<span class="no-mi">↑</span> Vitrine dön';
   B.onclick=()=>{const p=document.getElementById("ktpanel");window.scrollTo({top:p?Math.max(0,p.getBoundingClientRect().top+window.scrollY-120):0,behavior:"smooth"});};document.body.appendChild(B);}
  B.classList.toggle("on",!!show);}
