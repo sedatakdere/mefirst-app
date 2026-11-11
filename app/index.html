@@ -13890,14 +13890,20 @@ function cityPick(done){const cur=(mfCity()||{}).name||"";const O=mSheet(`<div c
   O.querySelectorAll("[data-cp]").forEach(b=>b.onclick=()=>{st.prof=st.prof||{};st.prof.city=b.dataset.cp;save();O.classList.remove("on");setTimeout(()=>O.remove(),250);try{mfConfetti(`📍 ${b.dataset.cp} seçildi`,["#6FBFA6","#FF8A5B","#FFD45C","#fff"],"linear-gradient(135deg,#3E8C80,#1E4D5C)");}catch(_){}done&&done();});};
  draw("");document.getElementById("cp-q").oninput=e=>draw(e.target.value);const a=document.getElementById("cp-auto");if(a)a.onclick=()=>{delete st.prof.city;save();O.classList.remove("on");setTimeout(()=>O.remove(),250);done&&done();};}
 
+/* Kapak resmini tuvale çizilebilir hâlde getir: önce doğrudan, olmazsa CORS açık görsel aracısıyla (wsrv.nl) */
+async function mfCorsImg(url){if(!url)return null;url=String(url).replace(/^http:\/\//,"https://");
+ const viaBlob=async u=>{try{const r=await fetch(u,{mode:"cors"});if(!r.ok)return null;const bl=await r.blob();if(!bl||!/^image\//.test(bl.type||"image/"))return null;const u2=URL.createObjectURL(bl);return await new Promise(res=>{const i=new Image();i.onload=()=>res(i);i.onerror=()=>res(null);i.src=u2;});}catch(_){return null;}};
+ if(/^data:|^blob:/.test(url))return await new Promise(res=>{const i=new Image();i.onload=()=>res(i);i.onerror=()=>res(null);i.src=url;});
+ let im=await viaBlob(url);if(im)return im;
+ im=await viaBlob("https://wsrv.nl/?url="+encodeURIComponent(url)+"&w=800&output=jpg&q=88");if(im)return im;
+ im=await new Promise(res=>{const i=new Image();i.crossOrigin="anonymous";i.onload=()=>res(i);i.onerror=()=>res(null);i.src="https://wsrv.nl/?url="+encodeURIComponent(url)+"&w=800&output=jpg";});return im;}
 /* Kapak pozu: kitabın kapağını polaroid fotoğrafı yap */
 async function bkCoverShot(x,noImg){const W=720,cv=document.createElement("canvas");cv.width=W;cv.height=W;const g=cv.getContext("2d");
  const c=trCol(x.t);const bg=g.createLinearGradient(0,0,W,W);bg.addColorStop(0,"#F6E3CC");bg.addColorStop(1,"#E9C9A6");g.fillStyle=bg;g.fillRect(0,0,W,W);
  g.fillStyle="rgba(255,255,255,.35)";for(let i=0;i<9;i++){g.fillRect(0,i*84+40,W,2);}
 
  const url=noImg?"":bkCv(x);
- let im=null;if(url){try{const r=await fetch(url,{mode:"cors"});if(r.ok){const bl=await r.blob();const u2=URL.createObjectURL(bl);im=await new Promise(res=>{const i=new Image();i.onload=()=>res(i);i.onerror=()=>res(null);i.src=u2;});}}catch(_){}
-  if(!im)im=await new Promise(res=>{const i=new Image();i.crossOrigin="anonymous";i.onload=()=>res(i);i.onerror=()=>res(null);i.src=url;});}
+ const im=url?await mfCorsImg(url):null;
  const bh=560,bw=im?Math.round(bh*im.width/im.height):380,bx=(W-bw)/2,by=(W-bh)/2;
  g.save();g.translate(W/2,W/2);g.rotate(-.05);g.translate(-W/2,-W/2);g.shadowColor="rgba(58,30,20,.45)";g.shadowBlur=36;g.shadowOffsetY=18;g.fillStyle="#fff";g.fillRect(bx,by,bw,bh);g.shadowColor="transparent";
  if(im){g.drawImage(im,bx,by,bw,bh);}else{const gg=g.createLinearGradient(bx,by,bx+bw,by+bh);gg.addColorStop(0,c[0]);gg.addColorStop(1,c[1]);g.fillStyle=gg;g.fillRect(bx,by,bw,bh);
