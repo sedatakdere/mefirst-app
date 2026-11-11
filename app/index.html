@@ -7099,6 +7099,82 @@ html[data-mf="dusk"] .sf-bl button{background:rgba(233,165,90,.08);color:#F3E6F0
 html[data-mf="dusk"] .sf-bsel{background:rgba(160,190,110,.12)}html[data-mf="dusk"] .sf-chg{background:rgba(255,255,255,.1);color:#FFE7C9}
 html[data-mf="dusk"] .sf-cl button{color:#F3E6F0}
 html[data-mf="dusk"] .sf-join .sf-rules li{background:rgba(201,130,43,.09);color:#5A3A26}html[data-mf="dusk"] .sf-join .sf-rules b{color:#5A2E14}
+/* ===== v0.33.1 Sahaf: kart fişi dolabı, kraft etiketler, damgalar, vitrin, kayan bant ===== */
+.sf-tick{position:relative;margin:12px -18px 0;padding:7px 0;overflow:hidden;background:rgba(0,0,0,.18);border-top:1px solid rgba(255,241,222,.08);border-bottom:1px solid rgba(255,241,222,.08);-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.sf-tk-in{display:flex;gap:26px;width:max-content;animation:sfTk var(--d,24s) linear infinite;padding-left:16px}
+.sf-tki{white-space:nowrap;font-size:12.5px;color:#F6E2C6}.sf-tki b{color:#F0C27A;margin-left:4px}.sf-tki em{font-style:italic;color:#FFF4E4}
+@keyframes sfTk{to{transform:translateX(-50%)}}
+.sf-hero .sf-books{margin-top:6px}
+/* kart fişi dolabı */
+.sf-cab{position:relative;padding:8px 8px 10px;border-radius:18px;background:linear-gradient(180deg,#7A4520,#5A3018);box-shadow:inset 0 2px 0 rgba(255,255,255,.12),inset 0 -3px 0 rgba(0,0,0,.25),0 14px 24px -16px rgba(60,25,10,.8)}
+.sf-cab::before{content:"";position:absolute;inset:0;border-radius:inherit;background:repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 2px,transparent 2px 9px);pointer-events:none}
+.sf-cab-top{display:flex;justify-content:space-between;align-items:baseline;padding:0 6px 7px;color:#F0C27A;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.sf-cab-top em{font-style:normal;letter-spacing:.02em;text-transform:none;font-weight:600;color:#E8CBAA;font-size:11.5px}
+.sf-drs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.sf-dr{position:relative;display:flex;flex-direction:column;align-items:center;gap:5px;padding:9px 4px 12px;border:0;border-radius:9px;cursor:pointer;font:inherit;color:#3A2010;
+ background:linear-gradient(180deg,#D9A66A,#B97F45 60%,#A86E38);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 -2px 0 rgba(0,0,0,.18),0 2px 0 #3E2210;transition:transform .28s cubic-bezier(.2,1.4,.4,1),box-shadow .28s,filter .2s;-webkit-tap-highlight-color:transparent}
+.sf-dr::after{content:"";position:absolute;inset:3px;border-radius:6px;border:1px solid rgba(90,48,24,.25);pointer-events:none}
+.sf-dr-ic{font-size:21px;line-height:1;filter:drop-shadow(0 1px 0 rgba(255,255,255,.35))}
+.sf-dr-pl{position:relative;display:flex;flex-direction:column;align-items:center;min-width:88%;padding:4px 4px 3px;border-radius:4px;background:linear-gradient(180deg,#F6DE9A,#D7AE52 55%,#B98C35);box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 1px 2px rgba(0,0,0,.35)}
+.sf-dr-pl::before,.sf-dr-pl::after{content:"";position:absolute;top:50%;width:3px;height:3px;margin-top:-1.5px;border-radius:50%;background:#7A5A1E;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.sf-dr-pl::before{left:3px}.sf-dr-pl::after{right:3px}
+.sf-dr-pl b{font-size:12.5px;line-height:1.1;color:#3A2410;font-family:var(--f-display);font-weight:400;letter-spacing:.01em}
+.sf-dr-pl i{font-style:normal;font-size:10.5px;font-weight:800;color:#5A3A12}
+.sf-dr-h{width:26px;height:9px;border:2.5px solid #C9A04A;border-top:0;border-radius:0 0 12px 12px;box-shadow:0 2px 0 rgba(0,0,0,.25);background:none}
+.sf-dr-card{position:absolute;left:14%;right:14%;top:0;height:20px;border-radius:3px 3px 0 0;background:repeating-linear-gradient(180deg,#FFFDF5 0 5px,#F0E6D2 5px 6px);box-shadow:0 -1px 3px rgba(0,0,0,.2);transform:translateY(6px);opacity:0;transition:transform .32s cubic-bezier(.2,1.4,.4,1),opacity .2s;z-index:-1}
+.sf-dr[aria-pressed="true"]{transform:translateY(5px) scale(1.04);background:linear-gradient(180deg,#EDBE82,#CB914F 60%,#B47A40);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 9px 14px -6px rgba(0,0,0,.6),0 0 0 2px #F6DE9A;z-index:2}
+.sf-dr[aria-pressed="true"] .sf-dr-card{opacity:1;transform:translateY(-15px)}
+.sf-dr[aria-pressed="true"] .sf-dr-pl{background:linear-gradient(180deg,#FFF1B8,#F0C860 55%,#C9973A)}
+.sf-dr:active{filter:brightness(1.08)}
+.sf-towns{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:2px -16px 0;padding:2px 16px}
+.sf-towns button{flex:none;display:inline-flex;align-items:center;gap:5px;min-height:32px;padding:0 11px;border-radius:999px;border:1px dashed color-mix(in srgb,#C9822B 45%,transparent);background:none;color:#7A4A26;font:600 12.5px/1 var(--f-body,inherit);cursor:pointer}
+.sf-towns button i{font-style:normal;font-size:10.5px;font-weight:800;padding:2px 6px;border-radius:999px;background:rgba(201,130,43,.15)}
+.sf-towns button[aria-pressed="true"]{border-style:solid;background:#5A3420;color:#FFF1DE;border-color:#5A3420}.sf-towns button[aria-pressed="true"] i{background:rgba(255,255,255,.2)}
+.sf-sort{display:flex;align-items:center;gap:2px;font-size:12px;color:var(--ink-soft,#7a6a80);margin-top:2px}
+.sf-sort span{margin-right:4px}
+.sf-sort button{border:0;background:none;padding:6px 8px;border-radius:8px;font:600 12.5px/1 var(--f-body,inherit);color:#8A5A3A;cursor:pointer}
+.sf-sort button[aria-pressed="true"]{color:#5A2E14;background:rgba(201,130,43,.15)}
+#sf-res.sf-swap .sf-card,#sf-res.sf-swap .sf-feat{animation:sfDeal .42s cubic-bezier(.2,.9,.3,1.15) both;animation-delay:calc(var(--i,0)*45ms)}
+@keyframes sfDeal{from{opacity:0;transform:translateY(18px) rotate(-2deg) scale(.95)}}
+/* kraft kartlar */
+.sf-card{background:linear-gradient(180deg,#FFFBF2,#FBF1DF);position:relative}
+.sf-card .sf-cw{background:repeating-linear-gradient(0deg,rgba(120,80,30,.035) 0 1px,transparent 1px 4px),radial-gradient(120% 90% at 50% 0%,#F1D9B4,#E2C08F);padding:16px 0 14px}
+.sf-htag{position:absolute;right:8px;top:12px;z-index:3;display:inline-flex;align-items:center;gap:3px;padding:5px 9px 5px 13px;font-size:11px;font-weight:800;color:#4A2E14;letter-spacing:.02em;
+ background:linear-gradient(180deg,#E9C893,#D6AE72);border-radius:3px 6px 6px 3px;clip-path:polygon(9px 0,100% 0,100% 100%,9px 100%,0 50%);transform:rotate(7deg);transform-origin:0 50%;box-shadow:0 4px 8px -3px rgba(60,30,10,.4);filter:drop-shadow(0 3px 3px rgba(60,30,10,.25))}
+.sf-htag::before{content:"";position:absolute;left:6px;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:#FBF1DF;box-shadow:inset 0 1px 1px rgba(0,0,0,.35)}
+.sf-htag .no-mi{font-size:12px}
+.sf-htag.k-takas{background:linear-gradient(180deg,#BFDCE8,#93C0D4);color:#163A4A}.sf-htag.k-hediye{background:linear-gradient(180deg,#F6C1AE,#E89A80);color:#5A1E0E}.sf-htag.k-odunc{background:linear-gradient(180deg,#D9C6EC,#B9A0D6);color:#34205A}
+.sf-card .sf-kd.on-cv{display:none}
+.sf-stamp{position:absolute;left:9px;bottom:10px;z-index:3;padding:3px 7px;font:900 9.5px/1.1 var(--f-body,inherit);letter-spacing:.08em;border:2px solid currentColor;border-radius:5px;transform:rotate(-9deg);opacity:.88;background:rgba(255,251,242,.82);
+ -webkit-mask:repeating-linear-gradient(45deg,#000 0 3px,rgba(0,0,0,.75) 3px 4px);mask:repeating-linear-gradient(45deg,#000 0 3px,rgba(0,0,0,.75) 3px 4px)}
+.sf-stamp.c-yeni{color:#2F7A4A}.sf-stamp.c-iyi{color:#2E5A8A}.sf-stamp.c-yipranmis{color:#A8492A}
+.sf-card .sf-meta{display:none}
+.sf-card .sf-tag{position:absolute;left:8px;top:9px;right:auto;bottom:auto;z-index:4}
+.sf-card .sf-cw{padding-top:40px!important}.sf-card .sf-htag{top:9px;right:6px;transform:rotate(4deg)}
+.sf-card .sf-stamp{left:auto;right:8px;bottom:9px;transform:rotate(8deg)}
+.sf-tag.nw{background:#3E5A3A;color:#fff}
+.sf-wn{display:block;font-size:11.5px;font-weight:700;color:#1E4A5E;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sf-ci .sf-who{margin-top:8px;padding-top:8px;border-top:1px dashed rgba(201,130,43,.3)}
+/* vitrin kartı */
+.sf-feat{display:flex;gap:14px;width:100%;text-align:left;padding:14px;margin-bottom:12px;border:0;border-radius:22px;cursor:pointer;font:inherit;color:#FFF1DE;
+ background:radial-gradient(140% 120% at 0% 0%,rgba(240,194,122,.28),transparent 55%),linear-gradient(140deg,#6B3A1E,#3E2416);box-shadow:0 18px 30px -18px rgba(60,25,10,.9);position:relative;overflow:hidden}
+.sf-feat::after{content:"";position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(240,194,122,.25),transparent 70%)}
+.sf-ft-l{position:relative;flex:none;width:112px}.sf-ft-l .sf-cv{width:112px;height:166px;transform:rotate(-3deg);box-shadow:0 16px 22px -10px rgba(0,0,0,.6)}
+.sf-ft-l .sf-htag{right:-16px;top:auto;bottom:18px}
+.sf-ft-r{position:relative;z-index:1;flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.sf-ft-k{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#F0C27A}
+.sf-ft-r>b{font-family:var(--f-display);font-weight:400;font-size:22px;line-height:1.15}
+.sf-ft-r>small{font-size:13px;color:#E9B88A;font-weight:600}
+.sf-ft-r .sf-stamp{position:static;transform:rotate(-5deg);margin:6px 0 4px;background:rgba(255,251,242,.92)}
+.sf-ft-r .sf-who{color:#FFF1DE;margin-top:auto}.sf-ft-r .sf-who small{color:#E8CBAA}
+.sf-ft-go{align-self:flex-end;margin-top:6px;font-size:13px;font-weight:800;padding:7px 14px;border-radius:999px;background:#F0C27A;color:#4A2410}
+html[data-mf="dusk"] .sf-card{background:linear-gradient(180deg,rgba(255,240,215,.08),rgba(255,236,214,.04))}
+html[data-mf="dusk"] .sf-card .sf-cw{background:radial-gradient(120% 90% at 50% 0%,rgba(233,165,90,.3),rgba(140,82,40,.22))}
+html[data-mf="dusk"] .sf-towns button{color:#F0CFA8;border-color:rgba(233,165,90,.4)}html[data-mf="dusk"] .sf-towns button[aria-pressed="true"]{background:#E9A55A;color:#2A1608;border-color:#E9A55A}
+html[data-mf="dusk"] .sf-sort button{color:#E8CBAA}html[data-mf="dusk"] .sf-sort button[aria-pressed="true"]{color:#FFE7C9;background:rgba(233,165,90,.2)}
+html[data-mf="dusk"] .sf-wn{color:#9FD0E4}
+html[data-mf="dusk"] .sf-stamp{background:rgba(255,251,242,.9)}
+@media (prefers-reduced-motion:reduce){.sf-tk-in{animation:none}}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -15291,55 +15367,82 @@ function sfJoin(){if(sfOk())return Promise.resolve(true);return new Promise(res=
   try{localStorage.setItem("mf-sf-ok","1");}catch(e){}cl(true);};});}
 
 /* veri */
-async function sfLoad(force){if(SF.busy)return;if(!force&&SF.list&&Date.now()-SF.at<45000)return;SF.busy=true;SF.err=null;const city=sfCityGet();const c=SF.scope==="city"&&city?city:null;
- const [L,St,Mi,B]=await Promise.all([sfRpc("sahaf_list",{p_city:SF.book?null:c,p_kind:SF.kind||null,p_book:SF.book||null}),sfRpc("sahaf_stats",{p_city:city}),sfOk()?sfRpc("sahaf_mine",{}):Promise.resolve({data:[]}),sfOk()?sfRpc("sahaf_badge",{}):Promise.resolve({data:null})]);
- SF.busy=false;SF.at=Date.now();if(L.err){SF.err=L.err;SF.list=SF.list||null;}else SF.list=L.data||[];
+async function sfLoad(force){if(SF.busy)return;if(!force&&SF.all&&Date.now()-SF.at<45000)return;SF.busy=true;SF.err=null;const city=sfCityGet();const c=SF.scope==="city"&&city?city:null;
+ const [L,St,Mi,B]=await Promise.all([sfRpc("sahaf_list",{p_city:SF.book?null:c,p_kind:null,p_book:SF.book||null}),sfRpc("sahaf_stats",{p_city:city}),sfOk()?sfRpc("sahaf_mine",{}):Promise.resolve({data:[]}),sfOk()?sfRpc("sahaf_badge",{}):Promise.resolve({data:null})]);
+ SF.busy=false;SF.at=Date.now();if(L.err){SF.err=L.err;}else{SF.all=L.data||[];SF.list=SF.all;}
  if(St.data)SF.stats=St.data;if(Array.isArray(Mi.data))SF.mine=Mi.data;if(B.data){SF.badge=B.data;sfBadgeUI();}
  if(step===90&&kttab==="sahaf")sfPaint();}
 async function sfBadgePull(){if(!sfOk()||navigator.onLine===false)return;const B=await sfRpc("sahaf_badge",{});if(B.data){const was=(SF.badge.unread||0)+(SF.badge.pending||0);SF.badge=B.data;sfBadgeUI();const now=SF.badge.unread+SF.badge.pending;if(now>was&&step===90&&kttab==="sahaf"&&!document.getElementById("klibs")?.classList.contains("on"))sfLoad(true);}}
 function sfBadgeUI(){const n=(SF.badge.unread||0)+(SF.badge.pending||0);const c=document.getElementById("kt-scount");if(c){c.textContent=n>9?"9+":n||"";c.hidden=!n;}
  const ib=document.getElementById("sf-ib-n");if(ib){ib.textContent=n>9?"9+":n||"";ib.hidden=!n;}try{sbBadge();}catch(e){}}
 
-/* sekme */
-function sfHTML(){const city=sfCityGet();const S=SF.stats||{};const nm=(st.name||"").trim();const n=(SF.badge.unread||0)+(SF.badge.pending||0);
- const L=SF.list;const loading=!L&&!SF.err;
+SF.town="";SF.sort="new";
+function sfMyTown(){try{return trN(localStorage.getItem("mf-sf-town")||"");}catch(e){return "";}}
+function sfView(){let R=(SF.all||[]).slice();if(SF.town)R=R.filter(a=>trN(a.town||"")===trN(SF.town));if(SF.kind)R=R.filter(a=>a.kind===SF.kind);
+ const t=a=>+new Date(a.created_at);
+ if(SF.sort==="hot")R.sort((a,b)=>(b.req_count||0)-(a.req_count||0)||t(b)-t(a));
+ else if(SF.sort==="near"){const me=sfMyTown();R.sort((a,b)=>((me&&trN(b.town||"")===me)?1:0)-((me&&trN(a.town||"")===me)?1:0)||t(b)-t(a));}
+ else R.sort((a,b)=>(a.status==="open"?0:1)-(b.status==="open"?0:1)||t(b)-t(a));
+ return R;}
+function sfTicker(){const A=(SF.all||[]).slice(0,12);if(!A.length)return "";const v={takas:"takasa açtı",hediye:"hediye ediyor",odunc:"ödünç veriyor"};
+ const it=A.map(a=>`<span class="sf-tki"><span class="no-mi">${SF_K[a.kind]?SF_K[a.kind][0]:"📚"}</span><b>${esc((a.name||"Okur").split(" ")[0])}</b>${a.town?` · ${esc(a.town)}`:""} <em>“${esc(a.title)}”</em> ${v[a.kind]||""}</span>`).join("");
+ return `<div class="sf-tick" aria-hidden="true"><div class="sf-tk-in" style="--d:${Math.max(18,A.length*7)}s">${it}${it}</div></div>`;}
+function sfHTML(){const city=sfCityGet();const S=SF.stats||{};const n=(SF.badge.unread||0)+(SF.badge.pending||0);
+ const L=SF.all;const loading=!L&&!SF.err;
  const head=`<div class="sf-hero"><div class="sf-awn" aria-hidden="true"></div><div class="sf-hb"><small>Okurdan okura</small><h3>Sahaf</h3><p>Okuduğun kitap başka bir rafta yeniden doğsun.</p>
   <div class="sf-st">${S.all!=null?`${city?`<span><span class="no-mi">📍</span> ${esc(trLoc(city))} <b>${S.city||0}</b> ilan</span>`:""}<span><span class="no-mi">🇹🇷</span> Türkiye'de <b>${S.all||0}</b></span>${S.given?`<span><span class="no-mi">🌱</span> <b>${S.given}</b> kitap el değiştirdi</span>`:""}`:`<span>Raflar diziliyor…</span>`}</div></div>
-  <div class="sf-books" aria-hidden="true">${["#B5532D","#6B7A3A","#2E4A6B","#8C3B2E","#C9822B","#5A3A6B","#3E5A3A"].map((c,i)=>`<i style="--c:${c};--h:${[54,66,48,60,70,52,62][i]}px;--r:${i===5?-12:0}deg"></i>`).join("")}</div></div>`;
+  ${sfTicker()}<div class="sf-books" aria-hidden="true">${["#B5532D","#6B7A3A","#2E4A6B","#8C3B2E","#C9822B","#5A3A6B","#3E5A3A"].map((c,i)=>`<i style="--c:${c};--h:${[54,66,48,60,70,52,62][i]}px;--r:${i===5?-12:0}deg"></i>`).join("")}</div></div>`;
  const acts=`<div class="sf-acts"><button type="button" class="sf-new" id="sf-new"><span class="no-mi">＋</span><span><b>Kitabını sahafa koy</b><small>Takas, hediye ya da ödünç</small></span></button><button type="button" class="sf-ib" id="sf-ib" aria-label="Mesajlarım"><span class="no-mi">💬</span><span>Mesajlar</span><i id="sf-ib-n"${n?"":" hidden"}>${n>9?"9+":n||""}</i></button></div>`;
  const how=sfOk()?"":`<div class="sf-how"><div><span class="no-mi">📸</span><b>İlanını ver</b><small>Kitabını seç, takas mı hediye mi söyle</small></div><div><span class="no-mi">💌</span><b>Talep gelsin</b><small>Kime vereceğini sen seçersin</small></div><div><span class="no-mi">☕</span><b>Buluşun</b><small>Gündüz, kalabalık bir yerde</small></div></div>`;
  const mine=SF.mine.filter(a=>a.status!=="closed").slice(0,12);
  const mineH=mine.length?`<div class="sf-sec"><h4>İlanlarım <small>${SF.mine.length}</small></h4><div class="sf-mine">${mine.map(a=>`<button type="button" class="sf-mi" data-sfa="${esc(a.id)}">${sfCover(a)}<span class="sf-ms ${a.status}">${a.hidden?"🚫 İncelemede":a.status==="reserved"?"🤝 Ayırtıldı":a.status==="done"?"✓ Verildi":a.pending?`💌 ${a.pending} talep`:"🕊 Yayında"}</span><b>${esc(a.title)}</b></button>`).join("")}</div></div>`:"";
  const bookF=SF.book?`<div class="sf-bookf"><span>📚 <b>${esc(SF.bookT)}</b> ilanları</span><button type="button" id="sf-bookx" aria-label="Filtreyi kaldır">✕</button></div>`:"";
- const fil=`<div class="sf-fil">${SF.book?"":`<div class="sf-sc"><button type="button" class="sf-c" data-sfs="city" aria-pressed="${SF.scope==="city"&&!!city}"><span class="no-mi">📍</span>${city?esc(city):"Şehrini seç"}<span class="sf-dd">▾</span></button><button type="button" class="sf-c" data-sfs="all" aria-pressed="${SF.scope==="all"||!city}"><span class="no-mi">🇹🇷</span>Tüm Türkiye</button></div>`}
-  <div class="sf-kc">${[["","📚","Hepsi"],["takas","🔄","Takas"],["hediye","🎁","Hediye"],["odunc","🤝","Ödünç"]].map(([v,e,l])=>`<button type="button" class="sf-c sm" data-sfk="${v}" aria-pressed="${SF.kind===v}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div></div>`;
+ const scope=SF.book?"":`<div class="sf-sc"><button type="button" class="sf-c" data-sfs="city" aria-pressed="${SF.scope==="city"&&!!city}"><span class="no-mi">📍</span>${city?esc(city):"Şehrini seç"}<span class="sf-dd">▾</span></button><button type="button" class="sf-c" data-sfs="all" aria-pressed="${SF.scope==="all"||!city}"><span class="no-mi">🇹🇷</span>Tüm Türkiye</button></div>`;
+ /* kart fişi dolabı: tür çekmeceleri */
+ const base=(L||[]).filter(a=>!SF.town||trN(a.town||"")===trN(SF.town));const cnt=k=>k?base.filter(a=>a.kind===k).length:base.length;
+ const cab=`<div class="sf-cab" role="group" aria-label="Paylaşım türü"><div class="sf-cab-top"><span>Sahaf kataloğu</span><em>${L?base.length+" kitap":"…"}</em></div><div class="sf-drs">${[["","📚","Hepsi"],["takas","🔄","Takas"],["hediye","🎁","Hediye"],["odunc","🤝","Ödünç"]].map(([v,e,l])=>`<button type="button" class="sf-dr${v?" k-"+v:""}" data-sfk="${v}" aria-pressed="${SF.kind===v}"><span class="sf-dr-card" aria-hidden="true"></span><span class="sf-dr-ic no-mi">${e}</span><span class="sf-dr-pl"><b>${l}</b><i>${L?cnt(v):"·"}</i></span><span class="sf-dr-h" aria-hidden="true"></span></button>`).join("")}</div></div>`;
+ const towns={};(L||[]).forEach(a=>{if(a.town){const k=a.town.trim();towns[k]=(towns[k]||0)+1;}});const tk=Object.keys(towns).sort((a,b)=>towns[b]-towns[a]);
+ const townH=!SF.book&&SF.scope==="city"&&tk.length?`<div class="sf-towns"><button type="button" data-sft="" aria-pressed="${!SF.town}">Tüm semtler</button>${tk.slice(0,12).map(t=>`<button type="button" data-sft="${esc(t)}" aria-pressed="${trN(SF.town)===trN(t)}">${esc(t)}<i>${towns[t]}</i></button>`).join("")}</div>`:"";
+ const sortH=L&&L.length>1?`<div class="sf-sort"><span>Sırala:</span>${[["new","Yeni gelenler"],["hot","Çok istenenler"],["near","Bana yakın"]].map(([v,l])=>`<button type="button" data-sfo="${v}" aria-pressed="${SF.sort===v}">${l}</button>`).join("")}</div>`:"";
+ const V=L?sfView():[];
  let grid;
  if(SF.missing)grid=`<div class="sf-empty"><span class="no-mi">🔧</span><b>Sahaf hazırlanıyor</b><small>Raflar diziliyor, çok yakında burada! Şimdiden kitaplarını seçebilirsin 📦</small></div>`;
  else if(SF.err&&!L)grid=`<div class="sf-empty"><span class="no-mi">📶</span><b>Sahafa bağlanamadım</b><small>İnternetini kontrol edip tekrar dener misin?</small><button type="button" class="ktbtn" id="sf-retry">Tekrar dene</button></div>`;
  else if(loading)grid=`<div class="sf-grid">${Array.from({length:4},()=>`<div class="sf-card sk"><span class="sf-cv"></span><i></i><i></i></div>`).join("")}</div>`;
- else if(!L.length)grid=`<div class="sf-empty"><span class="no-mi">📦</span><b>${SF.book?"Bu kitap için şu an ilan yok":SF.scope==="city"&&city?`${esc(trLoc(city))} henüz ilan yok`:"Henüz ilan yok"}</b><small>${SF.book?"Rafında varsa ilk ilanı sen ver!":"İlk kitabı sen koy, sahafı sen aç! 🌱"}</small><div class="sf-ea"><button type="button" class="ktbtn" data-sfgo="new">＋ İlan ver</button>${SF.scope==="city"&&!SF.book?`<button type="button" class="ktbtn gh" data-sfs="all">🇹🇷 Tüm Türkiye'ye bak</button>`:""}</div></div>`;
- else grid=`<div class="sf-grid">${L.map((a,i)=>sfCard(a,i)).join("")}</div>`;
- return `<section class="sf" id="sf">${head}${acts}${how}${mineH}${bookF}${fil}${grid}<p class="sf-foot">🛡 Sahafta para yok, herkes kendinden sorumlu. Buluşmaları gündüz, kalabalık yerlerde yap. <a href="#" id="sf-rules">Kurallar</a></p></section>`;}
-function sfCard(a,i){const my=a.my_req;const tag=a.mine?`<span class="sf-tag me">Senin ilanın</span>`:my==="pending"?`<span class="sf-tag wt">⏳ Talebin gitti</span>`:my==="accepted"?`<span class="sf-tag ok">💬 Kabul edildi</span>`:a.status==="reserved"?`<span class="sf-tag rs">🤝 Ayırtıldı</span>`:a.req_count>=2?`<span class="sf-tag hot">🔥 ${a.req_count} talep</span>`:"";
- return `<button type="button" class="sf-card${a.status==="reserved"?" rsv":""}" data-sfa="${esc(a.id)}" style="--i:${i%10}"><span class="sf-cw">${sfCover(a)}${sfKindPill(a.kind,"on-cv")}${tag}</span>
-  <span class="sf-ci"><b>${esc(a.title)}</b><small class="sf-au">${esc(a.author||"")}</small><span class="sf-meta"><span class="sf-cd">${SF_C[a.cond]?SF_C[a.cond][1]:""}</span></span>
+ else if(!V.length){const kn=SF.kind?SF_K[SF.kind][1].toLocaleLowerCase("tr-TR"):"";const where=SF.town?esc(trLoc(SF.town)):SF.scope==="city"&&city&&!SF.book?esc(trLoc(city)):"";
+  grid=`<div class="sf-empty"><span class="no-mi">${SF.kind?SF_K[SF.kind][0]:"📦"}</span><b>${SF.book?"Bu kitap için şu an ilan yok":`${where?where+" ":""}${where?"şu an":"Şu an"} ${kn?kn+" ilanı":"ilan"} yok`}</b><small>${SF.kind||SF.town?"Başka bir çekmeceye bak ya da ilk ilanı sen ver 🌱":SF.book?"Rafında varsa ilk ilanı sen ver!":"İlk kitabı sen koy, sahafı sen aç! 🌱"}</small><div class="sf-ea"><button type="button" class="ktbtn" data-sfgo="new">＋ İlan ver</button>${SF.kind||SF.town?`<button type="button" class="ktbtn gh" data-sfk="" data-sft="">📚 Hepsini göster</button>`:SF.scope==="city"&&!SF.book?`<button type="button" class="ktbtn gh" data-sfs="all">🇹🇷 Tüm Türkiye'ye bak</button>`:""}</div></div>`;}
+ else{const F=!SF.book&&V.length>=3?(V.slice().sort((a,b)=>(b.req_count||0)-(a.req_count||0))[0].req_count>=2?V.slice().sort((a,b)=>(b.req_count||0)-(a.req_count||0))[0]:V[0]):null;const rest=F?V.filter(a=>a!==F):V;
+  grid=`${F?sfFeat(F):""}<div class="sf-grid">${rest.map((a,i)=>sfCard(a,i)).join("")}</div>`;}
+ return `<section class="sf" id="sf">${head}${acts}${how}${mineH}${bookF}<div class="sf-fil">${scope}${cab}${townH}${sortH}</div><div id="sf-res">${grid}</div><p class="sf-foot">🛡 Sahafta para yok, herkes kendinden sorumlu. Buluşmaları gündüz, kalabalık yerlerde yap. <a href="#" id="sf-rules">Kurallar</a></p></section>`;}
+function sfStamp(c){const C={yeni:"YENİ GİBİ",iyi:"İYİ DURUMDA",yipranmis:"YIPRANMIŞ"};return `<span class="sf-stamp c-${c}">${C[c]||""}</span>`;}
+function sfHTag(k){const K=SF_K[k]||SF_K.hediye;return `<span class="sf-htag k-${k}"><span class="no-mi">${K[0]}</span>${K[1]}</span>`;}
+function sfCard(a,i){const my=a.my_req;const tag=a.mine?`<span class="sf-tag me">Senin ilanın</span>`:my==="pending"?`<span class="sf-tag wt">⏳ Talebin gitti</span>`:my==="accepted"?`<span class="sf-tag ok">💬 Kabul edildi</span>`:a.status==="reserved"?`<span class="sf-tag rs">🤝 Ayırtıldı</span>`:a.req_count>=2?`<span class="sf-tag hot">🔥 ${a.req_count} talep</span>`:(Date.now()-new Date(a.created_at)<864e5)?`<span class="sf-tag nw">Yeni geldi</span>`:"";
+ return `<button type="button" class="sf-card k-${a.kind}${a.status==="reserved"?" rsv":""}" data-sfa="${esc(a.id)}" style="--i:${i%10}"><span class="sf-cw">${sfCover(a)}${sfHTag(a.kind)}${sfStamp(a.cond)}${tag}</span>
+  <span class="sf-ci"><b>${esc(a.title)}</b><small class="sf-au">${esc(a.author||"")}</small>${a.kind==="takas"&&a.want?`<span class="sf-wn">🔄 ${esc(a.want)}</span>`:""}
   <span class="sf-who">${sfAv(a.name,a.avatar)}<span>${esc(a.name||"Okur")}<small>📍 ${esc(a.town?a.town+", ":"")}${esc(a.city)} · ${sfAgo(a.created_at)}</small></span></span></span></button>`;}
+function sfFeat(a){const K=SF_K[a.kind]||SF_K.hediye;return `<button type="button" class="sf-feat k-${a.kind}" data-sfa="${esc(a.id)}"><span class="sf-ft-l">${sfCover(a)}${sfHTag(a.kind)}</span><span class="sf-ft-r"><span class="sf-ft-k">${a.req_count>=2?`🔥 ${a.req_count} kişi istiyor`:"✨ Vitrinde"}</span><b>${esc(a.title)}</b><small>${esc(a.author||"")}</small>${sfStamp(a.cond)}
+  <span class="sf-who">${sfAv(a.name,a.avatar)}<span>${esc(a.name||"Okur")}<small>📍 ${esc(a.town?a.town+", ":"")}${esc(a.city)}</small></span></span><span class="sf-ft-go">İncele ›</span></span></button>`;}
 function sfPaint(){const P=document.getElementById("ktpanel");if(!P||kttab!=="sahaf")return;const sy=window.scrollY;P.innerHTML=sfHTML();window.scrollTo({top:sy});sfBind(P);}
+function sfRefilter(){const P=document.getElementById("ktpanel");if(!P)return;const y=window.scrollY;const fil=P.querySelector(".sf-fil");const res=P.querySelector("#sf-res");if(!fil||!res){sfPaint();return;}
+ const tmp=document.createElement("div");tmp.innerHTML=sfHTML();fil.replaceWith(tmp.querySelector(".sf-fil"));res.replaceWith(tmp.querySelector("#sf-res"));window.scrollTo({top:y});sfBind(P);
+ const r=P.querySelector("#sf-res");if(r){r.classList.remove("sf-swap");void r.offsetWidth;r.classList.add("sf-swap");}}
 function sfBind(P){const g=id=>P.querySelector("#"+id);
  if(g("sf-new"))g("sf-new").onclick=()=>sfNew();if(g("sf-ib"))g("sf-ib").onclick=()=>sfInbox();if(g("sf-retry"))g("sf-retry").onclick=()=>{SF.err=null;sfPaint();sfLoad(true);};
- if(g("sf-bookx"))g("sf-bookx").onclick=()=>{SF.book=null;SF.bookT="";SF.list=null;sfPaint();sfLoad(true);};
+ if(g("sf-bookx"))g("sf-bookx").onclick=()=>{SF.book=null;SF.bookT="";SF.all=null;sfPaint();sfLoad(true);};
  if(g("sf-rules"))g("sf-rules").onclick=e=>{e.preventDefault();sfRules();};
  P.querySelectorAll("[data-sfgo=new]").forEach(b=>b.onclick=()=>sfNew());
  P.querySelectorAll("[data-sfa]").forEach(b=>b.onclick=()=>sfAdOpen(b.dataset.sfa));
- P.querySelectorAll("[data-sfs]").forEach(b=>b.onclick=()=>{const v=b.dataset.sfs;if(v==="city"){if(!SF.city||SF.scope==="city"){sfCityPick();return;}SF.scope="city";}else SF.scope="all";SF.list=null;sfPaint();sfLoad(true);});
- P.querySelectorAll("[data-sfk]").forEach(b=>b.onclick=()=>{if(SF.kind===b.dataset.sfk)return;SF.kind=b.dataset.sfk;SF.list=null;sfPaint();sfLoad(true);});}
+ P.querySelectorAll("[data-sfs]").forEach(b=>b.onclick=()=>{const v=b.dataset.sfs;if(v==="city"){if(!SF.city||SF.scope==="city"){sfCityPick();return;}SF.scope="city";}else SF.scope="all";SF.town="";SF.all=null;sfPaint();sfLoad(true);});
+ P.querySelectorAll("[data-sfk]").forEach(b=>b.onclick=()=>{const v=b.dataset.sfk;if(b.hasAttribute("data-sft"))SF.town="";if(SF.kind===v&&!b.hasAttribute("data-sft"))return;SF.kind=v;try{navigator.vibrate&&navigator.vibrate(8);}catch(e){}try{sndPlay&&sndPlay("tap");}catch(e){}sfRefilter();});
+ P.querySelectorAll("[data-sft]:not([data-sfk])").forEach(b=>b.onclick=()=>{SF.town=b.dataset.sft;sfRefilter();});
+ P.querySelectorAll("[data-sfo]").forEach(b=>b.onclick=()=>{if(SF.sort===b.dataset.sfo)return;SF.sort=b.dataset.sfo;if(SF.sort==="near"&&!sfMyTown())sfToast("Semtini ilk ilanında yazınca sana yakın olanlar öne gelir 📍");sfRefilter();});}
 function sfRules(){const O=libSheet(`<div class="shs-grab"></div><div class="shs-h"><div><small>Sahaf</small><b>Güvenli paylaşım kuralları</b></div><button type="button" class="shs-x" aria-label="Kapat">✕</button></div>
  <div class="sf-sh"><ul class="sf-rules"><li><b>🤝 Herkes kendinden sorumlu.</b> Me First aracı değil; para, kargo, ödeme yok.</li><li><b>☕ Gündüz, kalabalık bir yerde buluş.</b> Kafe, kütüphane, AVM… Ev adresini vermek zorunda değilsin. İstersen yanına bir arkadaşını al.</li><li><b>📵 Numaranı paylaşmadan iki kez düşün.</b> Konuşmayı burada sürdürebilirsin.</li><li><b>🚩 Rahatsız olursan</b> konuşmadaki ⋯ menüsünden engelle ya da şikâyet et. 3 şikâyet alan ilan otomatik kalkar.</li><li><b>📖 Dürüst ol.</b> Kitabın durumunu doğru yaz, sözünü tut; gelemeyeceksen haber ver.</li><li><b>🔞 Sahaf 18 yaş ve üstü içindir.</b></li></ul></div>`);}
 function sfCityPick(){const C=(SF.stats&&SF.stats.cities)||{};const keys=Object.keys(MF_IL).sort((a,b)=>a.localeCompare(b,"tr"));
  const O=libSheet(`<div class="shs-grab"></div><div class="shs-h"><div><small>Sahaf</small><b>Hangi şehirdesin?</b></div><button type="button" class="shs-x" aria-label="Kapat">✕</button></div>
  <div class="sf-sh"><input type="search" id="sf-cq" class="sf-in" placeholder="Şehir ara…" autocomplete="off"><div class="sf-cl" id="sf-cl"></div></div>`);
  const draw=q=>{const n=trN(q||"");document.getElementById("sf-cl").innerHTML=keys.filter(k=>!n||trN(k).includes(n)).map(k=>`<button type="button" data-sfc="${esc(k)}" aria-pressed="${k===SF.city}"><span>${esc(k)}</span>${C[k]?`<i>${C[k]} ilan</i>`:""}</button>`).join("");
-  O.querySelectorAll("[data-sfc]").forEach(b=>b.onclick=()=>{sfCitySet(b.dataset.sfc);SF.list=null;libClose();});};draw("");const q=document.getElementById("sf-cq");q.oninput=()=>draw(q.value);}
+  O.querySelectorAll("[data-sfc]").forEach(b=>b.onclick=()=>{sfCitySet(b.dataset.sfc);SF.all=null;libClose();});};draw("");const q=document.getElementById("sf-cq");q.oninput=()=>draw(q.value);}
 
 /* ilan ayrıntısı */
 async function sfAdOpen(id,quiet){if(!quiet)libSheet(`<div class="shs-grab"></div><div class="sf-load"><span class="ksh-dots"><i></i><i></i><i></i></span></div>`);
@@ -15379,7 +15482,7 @@ function sfAdBind(O,a){
  O.querySelectorAll("[data-sfchat]").forEach(b=>b.onclick=()=>sfChat(b.dataset.sfchat));
  const ask=O.querySelector("#sf-ask");if(ask)ask.onclick=async()=>{if(!(await sfJoin()))return;sfAsk(a);};
  const rp=O.querySelector("[data-sfrep]");if(rp)rp.onclick=()=>sfReport(a.id,null,rp);
- const bl=O.querySelector("[data-sfblk]");if(bl)bl.onclick=async()=>{if(!bl.dataset.sure){bl.dataset.sure=1;bl.textContent="Emin misin? Bir daha ilanlarını görmezsin";return;}const r=await sfRpc("sahaf_block",{p_uid:a.user_id,p_on:true});if(r.err){sfToast(sfErr(r.err));return;}SF.list=(SF.list||[]).filter(x=>x.id!==a.id);libClose();sfToast("Engellendi. Bir daha karşına çıkmayacak 🛡");};
+ const bl=O.querySelector("[data-sfblk]");if(bl)bl.onclick=async()=>{if(!bl.dataset.sure){bl.dataset.sure=1;bl.textContent="Emin misin? Bir daha ilanlarını görmezsin";return;}const r=await sfRpc("sahaf_block",{p_uid:a.user_id,p_on:true});if(r.err){sfToast(sfErr(r.err));return;}SF.all=(SF.all||[]).filter(x=>x.id!==a.id);libClose();sfToast("Engellendi. Bir daha karşına çıkmayacak 🛡");};
  O.querySelectorAll("[data-sfans]").forEach(b=>b.onclick=async()=>{b.disabled=true;const r=await sfRpc("sahaf_answer",{p_req:b.dataset.sfr,p_act:b.dataset.sfans});if(r.err){sfToast(sfErr(r.err));b.disabled=false;return;}
   if(b.dataset.sfans==="accept"){mfConfetti("Talep kabul edildi 🤝",KT_C,"linear-gradient(135deg,#6B7A3A,#4F5D3A)");setTimeout(()=>sfChat(b.dataset.sfr),500);}else sfAdOpen(a.id,1);SF.at=0;sfBadgePull();});
  O.querySelectorAll("[data-sfst]").forEach(b=>b.onclick=async()=>{const v=b.dataset.sfst;if(v==="deleted"&&!b.dataset.sure){b.dataset.sure=1;b.textContent="Emin misin? Konuşmalar da silinir";return;}
@@ -15530,7 +15633,7 @@ const SF_CNT={};
 (function(){const _b=bookOpen;bookOpen=function(i,anim,X){const r=_b.apply(this,arguments);try{const x=X||klib()[i];if(!x)return r;const k=bkKey(x);const ch=document.querySelector("#bkp .bkp-chips");if(!ch)return r;
   const put=()=>{const c=document.querySelector("#bkp .bkp-chips");if(!c||c.querySelector(".bkp-sf"))return;const n=SF_CNT[k]&&SF_CNT[k].n;const own=!X&&x.k==="own"&&!x.who;
    if(n)c.insertAdjacentHTML("beforeend",`<button type="button" class="bkp-sf" data-sfbk="1">📦 Sahafta ${n} ilan</button>`);if(own)c.insertAdjacentHTML("beforeend",`<button type="button" class="bkp-sf own" data-sfbk="0">📦 Sahafa koy</button>`);
-   c.querySelectorAll(".bkp-sf").forEach(b=>b.onclick=()=>{bkClose();setTimeout(()=>{if(b.dataset.sfbk==="1"){SF.book=k;SF.bookT=x.t;SF.list=null;if(step!==90)document.getElementById("go-kitap").click();kttab="sahaf";kitapRender();window.scrollTo({top:0});}else sfNew({t:x.t,a:x.a||""});},380);});};
+   c.querySelectorAll(".bkp-sf").forEach(b=>b.onclick=()=>{bkClose();setTimeout(()=>{if(b.dataset.sfbk==="1"){SF.book=k;SF.bookT=x.t;SF.all=null;if(step!==90)document.getElementById("go-kitap").click();kttab="sahaf";kitapRender();window.scrollTo({top:0});}else sfNew({t:x.t,a:x.a||""});},380);});};
   if(SF_CNT[k]&&Date.now()-SF_CNT[k].at<300000)put();else sfRpc("sahaf_counts",{p_keys:[k]}).then(r=>{if(r.data){SF_CNT[k]={n:r.data[k]||0,at:Date.now()};}put();});}catch(e){console.warn(e);}return r;};})();
 (function(){const _l=libBookOpen;libBookOpen=function(i){const r=_l.apply(this,arguments);try{const x=klib()[i];if(x&&x.k==="own"&&!x.who){const del=document.getElementById("lb-del");if(del&&!document.getElementById("lb-sf")){del.insertAdjacentHTML("beforebegin",`<button type="button" class="pl-add lib-sf" id="lb-sf">📦 Sahafa koy <small>takas, hediye ya da ödünç</small></button>`);document.getElementById("lb-sf").onclick=()=>sfNew({t:x.t,a:x.a||""});}}}catch(e){}return r;};})();
 /* rozetler */
