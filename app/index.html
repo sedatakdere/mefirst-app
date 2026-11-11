@@ -6794,6 +6794,79 @@ html[data-mf="dusk"] .su-gdn em{color:#97DEC2}
 .su-askg button{font:inherit;font-size:13px;font-weight:800;display:flex;align-items:center;gap:6px;justify-content:center;border:0;border-radius:14px;padding:10px 8px;cursor:pointer;background:#fff;color:#2E2340;box-shadow:0 2px 8px -4px rgba(76,63,196,.4)}
 html[data-mf="dusk"] .su-askg button{background:rgba(255,255,255,.08);color:#F4EAF2}
 html[data-mf="dusk"] .ob-rol .r-ogr,html[data-mf="dusk"] .ob-rol .r-veli,html[data-mf="dusk"] .ob-rol .r-ikisi,html[data-mf="dusk"] .ob-rol .r-yok{background:var(--surface)}
+/* ===== v0.32 Me First Kitapçısı ===== */
+.ksh{margin:34px -16px 0;padding:0 16px 8px;position:relative;overflow-anchor:none}
+.ksh-sign{position:relative;display:flex;flex-direction:column;align-items:center;padding-top:14px;margin-bottom:16px}
+.ksh-rope{position:absolute;top:0;left:22%;right:22%;height:22px;border:2px solid #8C5228;border-bottom:0;border-radius:40% 40% 0 0/100% 100% 0 0;opacity:.7}
+.ksh-rope::before,.ksh-rope::after{content:"";position:absolute;top:-6px;width:10px;height:10px;border-radius:50%;background:#C9822B;box-shadow:inset 0 -2px 0 rgba(0,0,0,.25)}
+.ksh-rope::before{left:50%;transform:translateX(-50%);top:-8px}.ksh-rope::after{display:none}
+.ksh-board{position:relative;z-index:1;margin-top:8px;text-align:center;padding:14px 22px 13px;border-radius:16px;color:#FFF4E2;
+ background:repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 3px,transparent 3px 11px),linear-gradient(180deg,#B9773F,#8C5228 70%,#7A4520);
+ box-shadow:0 14px 26px -16px rgba(80,40,10,.75),inset 0 1px 0 rgba(255,255,255,.25),inset 0 -3px 0 rgba(0,0,0,.18);transform:rotate(-1deg);animation:kshSw 5s ease-in-out infinite;transform-origin:50% -20px}
+@keyframes kshSw{0%,100%{transform:rotate(-1.2deg)}50%{transform:rotate(1deg)}}
+.ksh-board small{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.ksh-board b{display:block;font-family:var(--f-display);font-weight:400;font-size:26px;line-height:1.15;margin:3px 0 4px;text-shadow:0 2px 0 rgba(0,0,0,.18)}
+.ksh-board span{font-size:12.5px;opacity:.9}
+.ksh-bar{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+.ksh-cs{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:2px 16px 4px;scroll-behavior:smooth}
+.ksh-cs::-webkit-scrollbar,.ksh-os::-webkit-scrollbar{display:none}
+.ksh-c{flex:none;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 13px;border-radius:999px;border:1px solid color-mix(in srgb,#C9822B 30%,transparent);background:color-mix(in srgb,#FFF6E9 80%,var(--surface));color:#6B3A1C;font:600 14px/1 var(--f-body,inherit);white-space:nowrap;cursor:pointer;transition:transform .15s,background .2s}
+.ksh-c i{font-style:normal;font-size:11.5px;font-weight:700;min-width:20px;padding:3px 6px;border-radius:999px;background:rgba(201,130,43,.16);color:#8C4A1E;text-align:center}
+.ksh-c[aria-pressed="true"]{background:linear-gradient(135deg,#C9822B,#A8492A);color:#FFF8EE;border-color:transparent;box-shadow:0 8px 16px -10px rgba(168,73,42,.8)}
+.ksh-c[aria-pressed="true"] i{background:rgba(255,255,255,.25);color:#fff}
+.ksh-c:active{transform:scale(.95)}
+.ksh-ob{display:flex;align-items:center;gap:8px}
+.ksh-os{flex:1;display:flex;gap:2px;padding:3px;border-radius:14px;background:rgba(201,130,43,.1);overflow-x:auto;scrollbar-width:none}
+.ksh-o{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:4px;min-height:36px;padding:0 6px;border:0;border-radius:11px;background:transparent;color:#7A4A26;font:600 12.5px/1 var(--f-body,inherit);white-space:nowrap;cursor:pointer}
+.ksh-o .no-mi{font-size:13px}
+.ksh-o[aria-pressed="true"]{background:var(--surface,#fff);color:#5A2E14;box-shadow:0 3px 10px -5px rgba(110,60,20,.45)}
+.ksh-luck{flex:none;width:44px;height:44px;border-radius:14px;border:0;background:linear-gradient(135deg,#F0C27A,#C9822B);font-size:21px;box-shadow:0 8px 16px -10px rgba(168,73,42,.9);cursor:pointer}
+.ksh-luck.roll{animation:kshRoll .5s cubic-bezier(.3,1.4,.5,1)}
+@keyframes kshRoll{0%{transform:rotate(0) scale(1)}40%{transform:rotate(200deg) scale(1.18)}100%{transform:rotate(360deg) scale(1)}}
+.ksh-wall{display:flex;flex-direction:column}
+.ksh-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:0 6px;align-items:start}
+.ksh-pl{height:11px;margin:-3px -4px 18px;border-radius:4px;background:linear-gradient(180deg,#B9773F,#8C5228);box-shadow:0 7px 10px -6px rgba(80,40,10,.55)}
+.ksh-b{position:relative;display:flex;flex-direction:column;min-width:0;cursor:pointer;-webkit-tap-highlight-color:transparent;animation:kshIn .45s cubic-bezier(.2,.9,.3,1.2) both;animation-delay:calc(var(--i,0)*35ms)}
+@keyframes kshIn{from{opacity:0;transform:translateY(14px) scale(.96)}to{opacity:1;transform:none}}
+.ksh-b .ksh-cv{width:100%;height:auto;aspect-ratio:2/3;padding:10px 8px 8px 13px;border-radius:4px 10px 10px 4px;box-shadow:0 12px 18px -10px rgba(60,30,10,.55),0 2px 3px rgba(60,30,10,.18);transition:transform .25s}
+.ksh-b .ksh-cv b{font-size:13px;-webkit-line-clamp:6}
+.ksh-b .ksh-cv small{font-size:8.5px;padding-right:26px}
+.ksh-b:active .ksh-cv{transform:translateY(-4px) rotate(-1.5deg)}
+.ksh-b>strong{margin-top:14px;font-family:var(--f-display);font-weight:400;font-size:14.5px;line-height:1.2;color:var(--ink);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ksh-b>small{margin:2px 0 8px;font-size:12px;color:#9A5A2C;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ksh-t{position:absolute;z-index:6;top:8px;left:-4px;font-style:normal;font-size:10.5px;font-weight:800;letter-spacing:.02em;padding:4px 7px 4px 8px;border-radius:3px 8px 8px 3px;color:#fff;box-shadow:0 4px 8px -4px rgba(0,0,0,.4)}
+.ksh-b.tg .ksh-cv{padding-top:32px}
+.ksh-t.on{background:#4F7A4A}.ksh-t.nw{background:#C2502E;text-transform:uppercase}.ksh-t.fm{background:#7A4A8A}
+.ksh-wb{position:absolute;z-index:6;left:0;right:0;top:0;aspect-ratio:2/3;pointer-events:none}
+.ksh-w{pointer-events:auto;position:absolute;right:-7px;bottom:-9px;width:36px;height:36px;border-radius:50%;border:0;background:var(--surface,#fff);box-shadow:0 5px 12px -5px rgba(60,30,10,.5);font-size:15px;display:grid;place-items:center;cursor:pointer;padding:0}
+.ksh-w.pop{animation:kshHeart .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes kshHeart{0%{transform:scale(1)}35%{transform:scale(1.45)}100%{transform:scale(1)}}
+.ksh-more{display:flex;flex-direction:column;align-items:center;gap:6px;padding:6px 0 18px;cursor:pointer}
+.ksh-more small{font-size:12px;color:var(--ink-soft,#7a6a80);font-weight:600}
+.ksh-dots{display:flex;gap:6px}.ksh-dots i{width:8px;height:8px;border-radius:50%;background:#C9822B;animation:kshDot 1s infinite ease-in-out}
+.ksh-dots i:nth-child(2){animation-delay:.15s}.ksh-dots i:nth-child(3){animation-delay:.3s}
+@keyframes kshDot{0%,100%{opacity:.3;transform:translateY(0)}50%{opacity:1;transform:translateY(-5px)}}
+.ksh-prog{width:120px;height:4px;border-radius:4px;background:rgba(201,130,43,.18);overflow:hidden}.ksh-prog i{display:block;height:100%;background:linear-gradient(90deg,#E9A55A,#A8492A);border-radius:4px}
+.ksh-end{text-align:center;padding:18px 18px 22px;border-radius:22px;background:linear-gradient(160deg,#FFF3DF,#F9E1CF);border:1px solid color-mix(in srgb,#C9822B 22%,transparent);margin:4px 0 10px}
+.ksh-end>.no-mi{font-size:30px;display:block}.ksh-end b{display:block;font-family:var(--f-display);font-weight:400;font-size:21px;color:#5A2E14;margin:4px 0}
+.ksh-end small{display:block;font-size:13px;color:#8A5A3A;line-height:1.4}
+.ksh-ea{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.ksh-none{text-align:center;color:var(--ink-soft,#7a6a80);padding:24px 0}
+.ksh-top{position:fixed;z-index:60;left:50%;bottom:calc(98px + env(safe-area-inset-bottom));transform:translate(-50%,90px);display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#C9822B,#A8492A);color:#FFF8EE;font:700 14px/1 var(--f-body,inherit);box-shadow:0 12px 24px -10px rgba(120,50,20,.8);transition:transform .35s cubic-bezier(.2,.9,.3,1.2),opacity .25s;opacity:0;pointer-events:none}
+.ksh-top.on{transform:translate(-50%,0);opacity:1;pointer-events:auto}
+@media (prefers-reduced-motion:reduce){.ksh-board,.ksh-b,.ksh-dots i{animation:none}}
+html[data-mf="dusk"] .ksh-c{background:rgba(255,236,214,.07);border-color:rgba(233,165,90,.25);color:#F3D9BC}
+html[data-mf="dusk"] .ksh-c i{background:rgba(233,165,90,.18);color:#F0C27A}
+html[data-mf="dusk"] .ksh-c[aria-pressed="true"]{background:linear-gradient(135deg,#C9822B,#A8492A);color:#fff}
+html[data-mf="dusk"] .ksh-c[aria-pressed="true"] i{background:rgba(255,255,255,.22);color:#fff}
+html[data-mf="dusk"] .ksh-os{background:rgba(255,236,214,.07)}
+html[data-mf="dusk"] .ksh-o{color:#E8CBAA}
+html[data-mf="dusk"] .ksh-o[aria-pressed="true"]{background:rgba(233,165,90,.22);color:#FFF1DE;box-shadow:none}
+html[data-mf="dusk"] .ksh-b>small{color:#E9A55A}
+html[data-mf="dusk"] .ksh-w{background:#3A2E48}
+html[data-mf="dusk"] .ksh-end{background:linear-gradient(160deg,rgba(201,130,43,.2),rgba(168,73,42,.14));border-color:rgba(233,165,90,.22)}
+html[data-mf="dusk"] .ksh-end b{color:#FFE7C9}html[data-mf="dusk"] .ksh-end small{color:#E8CBAA}
+html[data-mf="dusk"] .ksh-pl{background:linear-gradient(180deg,#8C5A30,#5E3A1C)}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -14859,6 +14932,94 @@ document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest
   suExUp().filter(e=>suDays(e.d)===1).slice(0,1).forEach(e=>{const id="suex:"+e.id;if(S[id]||!mfPopOk({p:89}))return;const Q=suQuota(e),T=suExT(e);
    L.push({id,p:89,cls:"pp-fit",k:`${T[2]} Yarın ${T[1].toLocaleLowerCase("tr-TR")}`,h:`Yarın <em>${esc(e.n)}</em>!`,d:`${e.tm?"Saat "+esc(e.tm)+(e.yer?", "+esc(e.yer):"")+". ":""}${+e.u?(Q.left?`${Q.left} konu kaldı; bugün son tekrar günü.`:"Tüm konular bitti, sadece tekrar 💜"):"Bu gece erken yat; hafıza uykuda yerleşir."}`,a:[["Planıma bak",()=>{suMount();suTab="ex";document.getElementById("go-stu").click();}]],x:"Hazırım 💪"});});}catch(_){}return L;};})();
 suMount();
+/* ===== v0.32 Me First Kitapçısı: vitrinden sonra tüm stok, 3'lü raflar, sonsuz kaydırma ===== */
+const KSH={f:"all",o:"you",n:12,io:null,seen:new Set()};
+const KSH_O=[["you","✨","Sana göre"],["pop","👭","Popüler"],["new","🥐","En yeni"],["az","🔤","A-Z"]];
+function kshStock(){const K=kt();const M=new Map();const fv=new Set((K.fav||[]).map(ktN));
+ const add=(t,a,g)=>{t=String(t||"").trim();const k=ktN(t);if(!k)return null;let x=M.get(k);
+  if(!x){x={t,a:String(a||"").trim(),g:[],d:"",pub:"",adds:0,views:0,s:null,why:"",kb:0};M.set(k,x);}
+  if(!x.a&&a)x.a=String(a).trim();(g||[]).forEach(z=>{if(z&&!x.g.includes(z))x.g.push(z);});return x;};
+ KT_BOOKS.forEach(b=>{const x=add(b[0],b[1],b[2]);if(!x)return;x.kb=1;x.d=b[4]||"";x.pub=b[3]||"";try{const r=ktScore(b);x.s=r[0];x.why=r[1];}catch(e){}});
+ try{(TRCAT.list||[]).forEach(b=>{const x=add(b.t,b.a,b.g);if(x&&!x.pub&&b.p)x.pub=b.p;});}catch(e){}
+ try{(POOL.list||[]).forEach(b=>{if(!b||!b.title)return;const x=add(b.title,b.author,[]);if(x){x.adds=Math.max(x.adds,b.adds||0);x.views=Math.max(x.views,b.views||0);}});}catch(e){}
+ const L=[...M.values()].filter(x=>x.a||x.kb);
+ L.forEach(x=>{if(x.s===null){let s=0;if(ktFollow(x.a)){s+=6;x.why=`${x.a} hayranısın 😏`;}const g=x.g.filter(z=>K.gen.includes(z));s+=2*g.length;if(g.length&&!x.why)x.why=KT_WHY[g[0]]||"";
+   s+=Math.min(x.adds,10)*.4+Math.min(x.views,30)*.05;if(x.g.includes("cocuk")&&!K.gen.includes("cocuk"))s-=4;x.s=s;}
+  if(fv.has(ktN(x.t)))x.s-=20;});
+ return L;}
+function kshPop(x){return x.adds*3+x.views;}
+function kshList(){const L=kshStock();let R=L;const f=KSH.f;
+ if(f==="fam")R=L.filter(x=>x.adds>0||x.views>0);else if(f==="new")R=L.filter(x=>x.d);else if(f==="mine")R=L.filter(x=>{const s=ktOnShelf(x.t);return s&&s.s!=="istek";});
+ else if(f==="wish")R=L.filter(x=>ktWished(x.t));else if(f!=="all")R=L.filter(x=>x.g.includes(f));
+ const o=KSH.o,az=(a,b)=>a.t.localeCompare(b.t,"tr");
+ if(o==="az")R.sort(az);else if(o==="new")R.sort((a,b)=>(b.d||"").localeCompare(a.d||"")||kshPop(b)-kshPop(a)||b.s-a.s);
+ else if(o==="pop")R.sort((a,b)=>kshPop(b)-kshPop(a)||b.s-a.s||az(a,b));
+ else R.sort((a,b)=>{const sa=ktOnShelf(a.t),sb=ktOnShelf(b.t);const pa=sa&&sa.s!=="istek"?1:0,pb=sb&&sb.s!=="istek"?1:0;return pa-pb||b.s-a.s||kshPop(b)-kshPop(a)||az(a,b);});
+ return {all:L,R};}
+function kshChips(L){const c={all:L.length,fam:0,new:0};L.forEach(x=>{if(x.adds>0||x.views>0)c.fam++;if(x.d)c.new++;x.g.forEach(g=>c[g]=(c[g]||0)+1);});
+ const mine=L.filter(x=>{const s=ktOnShelf(x.t);return s&&s.s!=="istek";}).length,wish=L.filter(x=>ktWished(x.t)).length;
+ const K=kt();const G=KT_GEN.filter(g=>c[g[0]]).sort((a,b)=>(K.gen.includes(b[0])?1:0)-(K.gen.includes(a[0])?1:0));
+ const items=[["all","📚","Tümü",c.all]];if(c.new)items.push(["new","🥐","Yeni çıkanlar",c.new]);if(c.fam)items.push(["fam","👭","Ailede okunan",c.fam]);
+ G.forEach(g=>items.push([g[0],g[2],g[1],c[g[0]]]));if(wish)items.push(["wish","💝","İsteklerim",wish]);if(mine)items.push(["mine","✓","Rafımdakiler",mine]);
+ if(!items.some(i=>i[0]===KSH.f))KSH.f="all";
+ return items.map(([v,e,l,n])=>`<button type="button" class="ksh-c" data-kshf="${v}" aria-pressed="${KSH.f===v}"><span class="no-mi">${e}</span>${esc(l)}<i>${n}</i></button>`).join("");}
+function kshCard(x,i){const c=bkCol(x.t);const sh=ktOnShelf(x.t);const on=sh&&sh.s!=="istek",w=sh&&sh.s==="istek";
+ const tag=on?`<em class="ksh-t on"><span class="no-mi">✓</span> Rafında</em>`:x.d&&x.d>=kshNewCut()?`<em class="ksh-t nw">Yeni</em>`:x.adds>=2?`<em class="ksh-t fm"><span class="no-mi">👭</span> ${x.adds}</em>`:"";
+ return `<div class="ksh-b${tag?" tg":""}" role="button" tabindex="0" data-kbt="${esc(x.t)}" data-kba="${esc(x.a)}" style="--i:${i%12}">
+  <span class="ktc ksh-cv" data-cvt="${esc(x.t)}" data-cva="${esc(x.a)}" style="--c1:${c[0]};--c2:${c[1]}" aria-hidden="true"><i></i><b lang="tr">${esc(trHyph(x.t.length>40?x.t.slice(0,38)+"…":x.t))}</b><small>${esc(x.a)}</small></span>
+  ${tag}<span class="ksh-wb"><button type="button" class="ksh-w${w?" on":""}" data-kshw="${esc(x.t)}" data-kau="${esc(x.a)}" aria-label="${w?"İstek listemden çıkar":"Keşke benim olsa"}"><span class="no-mi">${w?"💝":"🤍"}</span></button></span>
+  <strong>${esc(x.t)}</strong><small>${esc(x.a)}</small></div>`;}
+function kshNewCut(){const d=new Date();d.setMonth(d.getMonth()-3);return d.toISOString().slice(0,7);}
+function kshRows(A,start){let o="";for(let i=0;i<A.length;i+=3){o+=`<div class="ksh-row">${A.slice(i,i+3).map((x,j)=>kshCard(x,start+i+j)).join("")}</div><div class="ksh-pl" aria-hidden="true"></div>`;}return o;}
+function kshEnd(n,tot){return n>=tot?`<div class="ksh-end"><span class="no-mi">🎉</span><b>${tot>12?"Bütün rafları gezdin!":"Bu rafın sonuna geldin"}</b><small>Aradığın kitap burada yok mu? Yukarıdan ara, ben bulurum.</small><div class="ksh-ea"><button type="button" class="ktbtn" id="ksh-find">🔍 Kitap ara</button>${KSH.f!=="all"?`<button type="button" class="ktbtn gh" data-kshf="all">📚 Tüm kitaplar</button>`:""}</div></div>`
+  :`<div class="ksh-more" id="ksh-more"><span class="ksh-dots"><i></i><i></i><i></i></span><small>${n} / ${tot} kitap</small><div class="ksh-prog"><i style="width:${Math.round(n/tot*100)}%"></i></div></div>`;}
+function kshHTML(){const {all,R}=kshList();KSH.R=R;const n=Math.min(KSH.n,R.length);
+ const au=new Set(all.map(x=>ktN(x.a)).filter(Boolean)).size;
+ return `<section class="ksh" id="kt-shop" aria-label="Me First Kitapçısı">
+  <div class="ksh-sign"><span class="ksh-rope" aria-hidden="true"></span><div class="ksh-board"><small>Vitrin bitti, raflar başlıyor</small><b>Me First Kitapçısı</b><span>${all.length} kitap · ${au} yazar · her hafta yenileri</span></div></div>
+  <div class="ksh-bar"><div class="ksh-cs" id="ksh-cs">${kshChips(all)}</div>
+   <div class="ksh-ob"><div class="ksh-os">${KSH_O.map(([v,e,l])=>`<button type="button" class="ksh-o" data-ksho="${v}" aria-pressed="${KSH.o===v}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div><button type="button" class="ksh-luck" id="ksh-luck" aria-label="Şansıma bir kitap"><span class="no-mi">🎲</span></button></div></div>
+  <div class="ksh-wall" id="ksh-wall">${R.length?kshRows(R.slice(0,n),0):`<p class="ksh-none">Bu rafta henüz kitap yok 🍂</p>`}</div>
+  <div id="ksh-foot">${R.length?kshEnd(n,R.length):""}</div>
+ </section>`;}
+function kshMore(){const R=KSH.R||[];const wall=document.getElementById("ksh-wall"),foot=document.getElementById("ksh-foot");if(!wall||!foot)return;
+ const from=Math.min(KSH.n,R.length);if(from>=R.length)return;const to=Math.min(from+12,R.length);KSH.n=to;
+ wall.insertAdjacentHTML("beforeend",kshRows(R.slice(from,to),from));foot.innerHTML=kshEnd(to,R.length);kshObserve();kshFind();}
+function kshObserve(){if(KSH.io)KSH.io.disconnect();const m=document.getElementById("ksh-more");if(!m||!("IntersectionObserver" in window)){return;}
+ KSH.io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){KSH.io.disconnect();setTimeout(kshMore,180);}},{rootMargin:"0px 0px 700px 0px"});KSH.io.observe(m);
+ m.onclick=kshMore;}
+function kshFind(){const b=document.getElementById("ksh-find");if(b)b.onclick=()=>{const q=document.getElementById("kt-q");if(q){q.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(()=>{try{q.focus({preventScroll:true});}catch(e){q.focus();}},450);}};}
+function kshRedraw(keepTop){const S=document.getElementById("kt-shop");if(!S)return;const y=S.getBoundingClientRect().top;
+ const {all,R}=kshList();KSH.R=R;const n=Math.min(KSH.n,R.length);
+ document.getElementById("ksh-cs").innerHTML=kshChips(all);
+ document.getElementById("ksh-wall").innerHTML=R.length?kshRows(R.slice(0,n),0):`<p class="ksh-none">Bu rafta henüz kitap yok 🍂</p>`;
+ document.getElementById("ksh-foot").innerHTML=R.length?kshEnd(n,R.length):"";
+ S.querySelectorAll("[data-ksho]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.ksho===KSH.o));
+ const ac=S.querySelector('.ksh-c[aria-pressed="true"]');if(ac){const cs=document.getElementById("ksh-cs");cs.scrollTo({left:Math.max(0,ac.offsetLeft-cs.offsetWidth/2+ac.offsetWidth/2),behavior:"smooth"});}
+ kshObserve();kshFind();
+ if(!keepTop){const bar=S.querySelector(".ksh-bar");const r=bar.getBoundingClientRect();if(r.top<70)window.scrollTo({top:window.scrollY+r.top-80,behavior:"smooth"});}}
+function kshInject(){const P=document.getElementById("ktpanel");const old=document.getElementById("kt-shop");if(!P||kttab!=="oneri"||!kt().setup){if(old)old.remove();kshTop();return;}
+ const sy=window.scrollY;if(old)old.remove();P.insertAdjacentHTML("beforeend",kshHTML());kshObserve();kshFind();if(old)window.scrollTo({top:sy});kshTop();}
+/* olaylar: kart → kitap sayfası, kalp, çipler, sıralama, zar */
+document.addEventListener("click",e=>{const S=e.target.closest&&e.target.closest("#kt-shop");if(!S)return;
+ const w=e.target.closest("[data-kshw]");if(w){e.preventDefault();e.stopPropagation();ktWishToggle(w.dataset.kshw,w.dataset.kau);const on=ktWished(w.dataset.kshw);
+  w.classList.toggle("on",on);w.innerHTML=`<span class="no-mi">${on?"💝":"🤍"}</span>`;w.setAttribute("aria-label",on?"İstek listemden çıkar":"Keşke benim olsa");if(on){w.classList.remove("pop");void w.offsetWidth;w.classList.add("pop");}
+  const card=w.closest(".ksh-b");const t=card&&card.querySelector(".ksh-t.on");if(t&&on)t.remove();try{ktWishChip();}catch(_){}try{if(typeof SND!=="undefined"&&on&&SND.pop)SND.pop();}catch(_){}return;}
+ const f=e.target.closest("[data-kshf]");if(f){KSH.f=f.dataset.kshf;KSH.n=12;kshRedraw();return;}
+ const o=e.target.closest("[data-ksho]");if(o){if(KSH.o===o.dataset.ksho)return;KSH.o=o.dataset.ksho;KSH.n=12;kshRedraw();return;}
+ if(e.target.closest("#ksh-luck")){const R=(KSH.R||[]).filter(x=>{const s=ktOnShelf(x.t);return !s||s.s==="istek";});const pool=R.slice(0,Math.max(12,Math.min(40,R.length)));const x=pool[Math.floor(Math.random()*pool.length)];if(!x)return;
+  const btn=e.target.closest("#ksh-luck");btn.classList.remove("roll");void btn.offsetWidth;btn.classList.add("roll");setTimeout(()=>bookOpenAny(x.t,x.a),520);return;}
+ const b=e.target.closest(".ksh-b");if(b&&!e.target.closest("button")){e.preventDefault();e.stopPropagation();bookOpenAny(b.dataset.kbt,b.dataset.kba);}},true);
+document.addEventListener("keydown",e=>{if(e.key!=="Enter"&&e.key!==" ")return;const b=e.target.closest&&e.target.closest(".ksh-b");if(b&&e.target===b){e.preventDefault();bookOpenAny(b.dataset.kbt,b.dataset.kba);}});
+/* derinlere inince "Vitrine dön" */
+function kshTop(){let B=document.getElementById("ksh-top");const S=document.getElementById("kt-shop");const en=document.querySelector("#ksh-foot .ksh-end");const show=S&&step===90&&kttab==="oneri"&&!document.getElementById("bkp")&&S.getBoundingClientRect().top<-260&&!(en&&en.getBoundingClientRect().top<innerHeight-60);
+ if(!B){if(!S)return;B=document.createElement("button");B.type="button";B.id="ksh-top";B.className="ksh-top";B.innerHTML='<span class="no-mi">↑</span> Vitrine dön';
+  B.onclick=()=>{const p=document.getElementById("ktpanel");window.scrollTo({top:p?Math.max(0,p.getBoundingClientRect().top+window.scrollY-120):0,behavior:"smooth"});};document.body.appendChild(B);}
+ B.classList.toggle("on",!!show);}
+window.addEventListener("scroll",()=>{if(!kshTop.r){kshTop.r=1;requestAnimationFrame(()=>{kshTop.r=0;try{kshTop();}catch(e){}});}},{passive:true});
+(function(){const _p=ktPoolInject;ktPoolInject=function(){const r=_p.apply(this,arguments);try{kshInject();}catch(e){console.warn(e);}return r;};
+ const _s=show;show=function(){const r=_s.apply(this,arguments);try{kshTop();}catch(e){}return r;};
+ const _c=bkClose;bkClose=function(){const r=_c.apply(this,arguments);setTimeout(()=>{try{if(document.getElementById("kt-shop"))kshRedraw(true);kshTop();}catch(e){}},400);return r;};window.bkClose=bkClose;})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
