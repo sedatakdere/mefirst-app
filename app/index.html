@@ -12989,7 +12989,7 @@ function mfCity(){const W=wxGet();if(!W||W.lat==null)return null;const me=[W.lat
 function ktNear(e){try{const C=mfCity();if(!C||!e||!e[5])return null;const city=Object.keys(MF_IL).find(k=>trN(k)===trN(e[5]));if(!city)return null;
  const v=trN(e[4]);let pt=MF_IL[city];for(const t in MF_TOWN)if(v.includes(t)){pt=MF_TOWN[t];break;}
  const km=Math.round(mfKm(C.me,pt)),same=trN(C.name)===trN(city);if(same||km<=90)return {same,km};return null;}catch(x){return null;}}
-function ktNearB(e,big){const N=ktNear(e);if(!N)return "";return `<span class="ktnear${N.same?"":" far"}${big?" big":""}">📍 ${N.same?"Şehrinde":"Yakınında"}${N.km>=3?" · ~"+N.km+" km":""}</span>`;}
+function ktNearB(e,big){const N=ktNear(e);if(!N)return "";return `<span class="ktnear${N.same?"":" far"}${big?" big":""}">📍 ${N.same?"Şehrinde":"Yakınında"}${N.km>=3?" · sana ~"+N.km+" km":""}</span>`;}
 /* takip etmediğin yazar ama şehrinde: keşif bildirimi */
 (function(){const _c=mfPopCands;mfPopCands=function(){const L=_c.apply(this,arguments);try{if(st.kitap){const h=new Date().getHours();if(h>=9&&h<21){const S=mfPopSeen();
   const E=KT_EV.filter(e=>e[2]&&!e[1].some(ktFollow)&&ktDays(e[2])>=0&&ktDays(e[2])<=2&&ktNear(e)&&ktNear(e).same);
@@ -13886,7 +13886,7 @@ const MN_S=["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas",
 function mTicket(e,big){const c=MT_C[e[2]]||MT_C.macera,t=SP_T[e[2]]||["",""],a=new Date(e[3]+"T00:00"),go=mac().go[e[0]],dd=evDays(e),N=evNear(e);
  return `<button type="button" class="mtk${big?" big":""}" data-mev="${esc(e[0])}" style="--a:${c[0]};--b:${c[1]}"><span class="tk-l"><b>${a.getDate()}${e[4]&&e[4]!==e[3]?"<i>–"+new Date(e[4]+"T00:00").getDate()+"</i>":""}</b><small>${MN_S[a.getMonth()]}</small><em>${DN_S[a.getDay()]}</em></span>
   <span class="tk-r"><span class="tk-k">${macIco(e[2])}${t[1]}</span><strong>${esc(e[1])}</strong><small>${esc([e[6],e[7]].filter((v,i,x)=>v&&x.indexOf(v)===i).join(", "))}</small>
-  <span class="tk-t">${N?`<i class="tk-n${N.same?"":" far"}">📍 ${N.same?"Şehrinde":"~"+N.km+" km"}</i>`:evKm(e)!=null?`<i class="tk-f">~${evKm(e)} km</i>`:""}${go?`<i class="tk-g">✓ Gidiyorum</i>`:dd>=0&&dd<=7?`<i class="tk-s">${dd<=0?"Bugün":dd===1?"Yarın":dd+" gün"}</i>`:""}</span></span></button>`;}
+  <span class="tk-t">${N?`<i class="tk-n${N.same?"":" far"}">📍 ${N.same?"Şehrinde":"Sana ~"+N.km+" km"}</i>`:evKm(e)!=null?`<i class="tk-f">📍 Sana ~${evKm(e)} km</i>`:""}${go?`<i class="tk-g">✓ Gidiyorum</i>`:dd>=0&&dd<=7?`<i class="tk-s">${dd<=0?"Bugün":dd===1?"Yarın":dd+" gün"}</i>`:""}</span></span></button>`;}
 function mTRow(title,L,more){return L.length?`<div class="kthead"><span>${title}</span>${more?`<small>${more}</small>`:""}</div><div class="ktrow mrow">${L.map(e=>mTicket(e)).join("")}</div>`:"";}
 function mArticleCard(k){const G=MGUIDE[k];if(!G)return "";const c=MT_C[k]||MT_C.macera;return `<button type="button" class="mart" data-mart="${k}" style="--a:${c[0]};--b:${c[1]}"><span class="ma-tape"></span><span class="ma-k">REHBER · ${G[0].toLocaleUpperCase("tr-TR")}</span><strong>${G[1]}</strong><p>${G[2]}</p><span class="ma-ic">${macIco(k)}</span><em>Oku →</em></button>`;}
 function mCover(){const H=document.querySelector(".macera .mhero");if(!H)return;const M=mac(),U=evUp(EV_SP),near=U.filter(e=>{const n=evNear(e);return n&&n.same;}),now=new Date();
@@ -13897,7 +13897,7 @@ function mCover(){const H=document.querySelector(".macera .mhero");if(!H)return;
  H.className="mhero mcover";
  H.innerHTML=artH+`<div class="mc-bar"><button type="button" class="mc-city" id="mc-city">📍 ${esc((mfCity()||{}).name||"Şehrini seç")} ▾</button><span>SAYI ${now.getMonth()+1} · ${["OCAK","ŞUBAT","MART","NİSAN","MAYIS","HAZİRAN","TEMMUZ","AĞUSTOS","EYLÜL","EKİM","KASIM","ARALIK"][now.getMonth()]} ${now.getFullYear()}</span><button class="iconbtn homebtn" id="mac-home" type="button" aria-label="Ana sayfaya dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></button></div>
   <h2 class="mc-mast">MACERA<em>köşem</em></h2>
-  <div class="mc-lines">${lead?`<button type="button" class="mc-l1" data-mev="${esc(lead[0])}"><small>${leadLbl}</small><b>${esc(lead[1])}</b><i>${evDays(lead)<=0?"Bugün!":evDays(lead)+" gün kaldı"} · ${esc(lead[7]||"")}${!near.includes(lead)&&evKm(lead)!=null?" · ~"+evKm(lead)+" km":""}</i></button>`:""}
+  <div class="mc-lines">${lead?`<button type="button" class="mc-l1" data-mev="${esc(lead[0])}"><small>${leadLbl}</small><b>${esc(lead[1])}</b><i>${evDays(lead)<=0?"Bugün!":evDays(lead)+" gün kaldı"} · ${esc(lead[7]||"")}${!near.includes(lead)&&evKm(lead)!=null?" · sana ~"+evKm(lead)+" km":""}</i></button>`:""}
    <button type="button" class="mc-l2" data-mart="${gk}">${MGUIDE[gk][1]} →</button></div>
   ${near.length?`<span class="mc-stk"><b>${near.length}</b>etkinlik<br>şehrinde!</span>`:`<span class="mc-stk alt"><b>${U.length}</b>yeni<br>macera</span>`}
   <button type="button" class="mac-ruh" id="mac-ruh"><span class="no-mi">🧭</span> Macera ruhum</button><span class="mc-bc" aria-hidden="true"></span>`;}
