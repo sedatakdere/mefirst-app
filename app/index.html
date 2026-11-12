@@ -7255,6 +7255,92 @@ html[data-mf="dusk"] .ky-card{background:rgba(255,236,214,.07);border-color:rgba
 
 .bk-share{display:flex!important;align-items:center;justify-content:center;gap:12px;height:54px!important}
 .bk-share .bk-pzw{font-size:21px}.bk-sharr{font-weight:800;font-size:16px;opacity:.85}
+/* v0.34 macera */
+.mm-h{align-items:center}.mm-all{border:0;background:none;font:inherit;font-size:13px;font-weight:800;color:#2F7F72;padding:4px 0;cursor:pointer}
+.mm-sub{margin:-4px 2px 10px;font-size:13px;color:var(--muted,#6b6b6b)}
+.mmrow{gap:10px}
+.mmc{position:relative;flex:0 0 156px;min-height:178px;border:0;border-radius:22px;padding:14px 14px 12px;text-align:left;display:flex;flex-direction:column;gap:5px;cursor:pointer;font:inherit;color:#fff;
+ background:radial-gradient(120% 90% at 100% 0,rgba(255,255,255,.28),transparent 55%),linear-gradient(160deg,var(--c),color-mix(in srgb,var(--c) 62%,#1d1d2b));box-shadow:0 10px 22px color-mix(in srgb,var(--c) 35%,transparent);overflow:hidden;transition:transform .15s}
+.mmc:active{transform:scale(.97)}
+.mmc .mm-e{font-size:34px;line-height:1;margin-bottom:4px;filter:drop-shadow(0 3px 4px rgba(0,0,0,.18))}
+.mmc strong{font-size:15px;line-height:1.2;font-weight:900}.mmc small{font-size:12px;line-height:1.3;opacity:.9;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mmc .mm-t{margin-top:auto;font-size:10.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;opacity:.85}
+.mmc.done{filter:saturate(.75)}.mm-ok{position:absolute;top:10px;right:10px;font-style:normal;font-size:10.5px;font-weight:900;background:rgba(255,255,255,.92);color:#2F7A4A;border-radius:99px;padding:3px 8px;transform:rotate(6deg)}
+.mmc.add{background:repeating-linear-gradient(135deg,transparent 0 10px,rgba(47,127,114,.06) 10px 20px),var(--surface,#fff);color:#2F7F72;border:2px dashed rgba(47,127,114,.45);box-shadow:none}
+.mmc.add .mm-e{font-size:30px;font-weight:300;filter:none}.mmc.add small{opacity:.75}
+.mm-sheet{max-height:92vh}
+.mm-fil{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 10px;scrollbar-width:none}.mm-fil::-webkit-scrollbar{display:none}
+.mm-fil button{flex:0 0 auto;border:1.5px solid rgba(47,127,114,.3);background:transparent;color:inherit;border-radius:99px;padding:7px 13px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.mm-fil button[aria-pressed=true]{background:#2F7F72;border-color:#2F7F72;color:#fff}
+.mm-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-bottom:12px}.mm-grid .mmc{flex:none;min-height:170px}
+.mm-pg{text-align:center;padding:6px 4px 10px}
+.mm-big{font-size:74px;width:128px;height:128px;margin:6px auto 12px;border-radius:40px;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.5),transparent 60%),linear-gradient(150deg,var(--c),color-mix(in srgb,var(--c) 60%,#1d1d2b));box-shadow:0 16px 30px color-mix(in srgb,var(--c) 40%,transparent);transform:rotate(-4deg)}
+.mm-lead{font-size:16px;line-height:1.45;margin:0 8px 12px;font-weight:600}
+.mm-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:14px}.mm-tags span{font-size:12px;font-weight:800;padding:5px 11px;border-radius:99px;background:color-mix(in srgb,var(--c) 14%,transparent);color:color-mix(in srgb,var(--c) 75%,#222)}
+.mm-did{font-weight:800;color:#2F7A4A;margin:0 0 10px}
+.mm-go{width:100%}
+.mm-form{display:flex;flex-direction:column;gap:10px;padding-bottom:10px}
+.mm-ems{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:2px}.mm-ems::-webkit-scrollbar{display:none}
+.mm-ems button{flex:0 0 auto;width:44px;height:44px;border-radius:14px;border:1.5px solid rgba(0,0,0,.08);background:var(--surface,#fff);font-size:22px;cursor:pointer}
+.mm-ems button[aria-pressed=true]{border-color:#2F7F72;background:rgba(47,127,114,.12);transform:scale(1.06)}
+.mm-ph{display:flex;align-items:center;gap:12px;padding:10px;border-radius:18px;border:2px dashed rgba(0,0,0,.14);cursor:pointer}
+.mm-php{width:58px;height:58px;border-radius:14px;background:rgba(47,127,114,.1);display:grid;place-items:center;font-size:26px;overflow:hidden;flex:0 0 auto}.mm-php img{width:100%;height:100%;object-fit:cover}
+.mm-ph b{display:block;font-size:14px}.mm-ph small{display:block;font-size:12px;opacity:.7}
+.mm-row{display:grid;grid-template-columns:1.2fr 1fr;gap:8px}
+/* mühür animasyonu */
+.mstfx{position:fixed;inset:0;z-index:9850;display:grid;place-items:center;background:rgba(20,30,35,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;transition:opacity .25s;padding:20px}
+.mstfx.on{opacity:1}
+.mst-pg{width:min(330px,100%);background:#F5EEDC;background-image:repeating-linear-gradient(0deg,transparent 0 27px,rgba(120,90,50,.08) 27px 28px);border-radius:16px 16px 16px 16px;padding:28px 22px 20px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.35);color:#3a2d1f}
+.mst-pg p{font-weight:900;font-size:18px;margin:16px 0 10px}
+.mstfx.on .mstamp.big{animation:mstSlam .55s cubic-bezier(.2,1.6,.4,1) both .12s}
+@keyframes mstSlam{0%{transform:scale(2.6) rotate(var(--r));opacity:0}60%{opacity:1}100%{transform:scale(1) rotate(var(--r));opacity:1}}
+.mst-nb{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}.mst-nb span{background:#fff;border-radius:12px;padding:8px 10px;font-size:13px;display:flex;align-items:center;gap:8px;justify-content:center}.mst-nb i{font-style:normal;font-size:20px}
+.mst-pg .mcta{width:100%}
+/* pasaport */
+.mpass{border-radius:26px;overflow:hidden;margin:4px 0 12px;box-shadow:0 14px 30px rgba(20,50,60,.22)}
+.mp-cov{position:relative;padding:22px 20px 18px;color:#F1E3B8;background:radial-gradient(120% 80% at 0 0,rgba(255,255,255,.12),transparent 55%),repeating-linear-gradient(45deg,rgba(0,0,0,.05) 0 2px,transparent 2px 5px),linear-gradient(150deg,#1F4E5A,#123540)}
+.mp-cov:after{content:"";position:absolute;inset:8px;border:1.5px solid rgba(241,227,184,.35);border-radius:20px;pointer-events:none}
+.mp-emb{position:absolute;right:18px;top:16px;font-size:44px;opacity:.85;filter:sepia(1) saturate(2) hue-rotate(5deg) drop-shadow(0 2px 0 rgba(0,0,0,.3))}
+.mp-cov small{font-size:10.5px;letter-spacing:.18em;font-weight:800;opacity:.8}
+.mp-cov h3{margin:6px 0 14px;font-family:Georgia,"Times New Roman",serif;font-size:30px;line-height:1.05;font-weight:700;color:#F6E7BD}.mp-cov h3 em{display:block;font-style:italic;font-weight:400;font-size:20px;opacity:.85}
+.mp-st{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.mp-st div{background:rgba(241,227,184,.1);border:1px solid rgba(241,227,184,.22);border-radius:14px;padding:8px 6px;text-align:center}
+.mp-st b{display:block;font-size:24px;font-weight:900;color:#FFD9A0}.mp-st span{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;opacity:.8}
+.mp-map{background:linear-gradient(180deg,#123540,#0E2A33);padding:10px 12px 12px;color:#cfe3e0}
+.mp-mh{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:11px;margin-bottom:2px}.mp-mh b{font-size:13px;color:#F1E3B8}
+.mp-mh span{display:flex;align-items:center;gap:4px;opacity:.85;flex-wrap:wrap;justify-content:flex-end}.lg{display:inline-block;width:8px;height:8px;border-radius:50%;margin-left:6px}.lg.on{background:#FF9A6A;box-shadow:0 0 6px #FF9A6A}.lg.ev{background:#7FD3C3}.lg.hm{border:1.5px solid #FFD45C}
+.mmap{width:100%;height:auto;display:block}
+.mp-tr{fill:rgba(127,211,195,.07);stroke:rgba(241,227,184,.35);stroke-width:1;stroke-linejoin:round}.mp-d{fill:rgba(207,227,224,.28)}.mp-d.ev{fill:#7FD3C3;opacity:.75}
+.mp-glow{fill:url(#mpg);animation:mpPulse 2.4s ease-in-out infinite}.mp-on{fill:#FF9A6A;stroke:#FFE0C8;stroke-width:1.2}
+.mp-home{fill:none;stroke:#FFD45C;stroke-width:1.4;stroke-dasharray:2 2}
+@keyframes mpPulse{50%{opacity:.45}}
+.mp-hint{margin:2px 0 0;text-align:center;font-size:12px;opacity:.8}
+.mp-acts{display:grid;grid-template-columns:1.3fr 1fr;gap:8px;margin-bottom:6px}.mp-acts .mcta,.mp-acts .mbtn{margin:0;width:100%}
+.mstamps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:16px 10px;border-radius:20px;background:#F5EEDC;background-image:repeating-linear-gradient(0deg,transparent 0 27px,rgba(120,90,50,.08) 27px 28px)}
+.mstamp{--ink:#B23A48;position:relative;aspect-ratio:1;border:0;background:transparent;cursor:pointer;font:inherit;color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;transform:rotate(var(--r));padding:10px;mix-blend-mode:multiply}
+.mstamp .ms-ring{position:absolute;inset:4px;border-radius:50%;border:2.5px solid var(--ink);box-shadow:inset 0 0 0 3px #F5EEDC,inset 0 0 0 4.5px var(--ink);opacity:.85;;}
+.mstamp .ms-top{font-size:8px;font-weight:900;letter-spacing:.12em;opacity:.9}
+.mstamp .ms-e{font-size:24px;line-height:1.1;filter:grayscale(1) contrast(1.4);mix-blend-mode:multiply;opacity:.85}
+.mstamp .ms-t{font-size:9px;font-weight:900;line-height:1.1;text-align:center;text-transform:uppercase;max-width:90%;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mstamp .ms-d{font-size:8.5px;font-weight:800;letter-spacing:.06em;opacity:.85;border-top:1px solid currentColor;padding-top:1px;margin-top:1px}
+.mstamp.big{width:170px;margin:0 auto;padding:18px}.mstamp.big .ms-top{font-size:11px}.mstamp.big .ms-e{font-size:42px}.mstamp.big .ms-t{font-size:13px}.mstamp.big .ms-d{font-size:11px}.mstamp.big .ms-ring{border-width:3.5px}
+.mp-empty{text-align:center;padding:22px 16px;border-radius:20px;background:#F5EEDC;color:#5a4630}.mp-empty span{font-size:40px;display:block;opacity:.6}.mp-empty b{display:block;margin:6px 0 2px}.mp-empty small{font-size:13px;opacity:.8}
+.mbadges{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px}
+.mbd{border-radius:18px;padding:12px 6px 10px;text-align:center;background:var(--surface,#fff);box-shadow:0 4px 12px rgba(30,40,50,.06);opacity:.55;filter:grayscale(1)}
+.mbd.on{opacity:1;filter:none;background:linear-gradient(160deg,#FFF6E0,#FFE6C2);box-shadow:0 6px 16px rgba(220,150,60,.25)}
+.mbd span{font-size:28px;display:block}.mbd b{display:block;font-size:12.5px;margin-top:4px;line-height:1.15}.mbd small{display:block;font-size:10.5px;opacity:.7;line-height:1.2;margin-top:2px}
+.mbd.on b{color:#7A4A12}
+.mlog{text-align:center;padding-bottom:10px}.mlog-ph{width:100%;max-height:300px;object-fit:cover;border-radius:18px;margin-bottom:-30px}
+.mlog-st{display:inline-block;background:#F5EEDC;border-radius:50%;padding:4px;position:relative}
+.mlog-cm{font-family:Georgia,serif;font-style:italic;font-size:17px;margin:10px 10px 4px}.mlog-meta{font-size:13px;opacity:.7;margin:0 0 12px}
+.mep-wx{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:center;margin-top:10px;padding:12px 14px;border-radius:18px;background:linear-gradient(135deg,#E6F3FA,#F2F8FC);color:#1f3a4a}
+.mep-wx>span{font-size:34px;grid-row:span 2}.mep-wx b{font-size:17px}.mep-wx small{font-size:12px;opacity:.75;display:block}.mep-wx em{grid-column:2;font-style:normal;font-size:13px;font-weight:700}
+html[data-mf=dusk] .mmc.add{background:rgba(255,255,255,.04);color:#7FD3C3;border-color:rgba(127,211,195,.4)}
+html[data-mf=dusk] .mm-all{color:#7FD3C3}
+html[data-mf=dusk] .mstamps,html[data-mf=dusk] .mp-empty{background-color:#E9DFC6}
+html[data-mf=dusk] .mbd{background:rgba(255,255,255,.06)}html[data-mf=dusk] .mbd.on{background:linear-gradient(160deg,#4A3A22,#3A2C18)}html[data-mf=dusk] .mbd.on b{color:#FFD9A0}
+html[data-mf=dusk] .mep-wx{background:linear-gradient(135deg,#1E3440,#18303A);color:#d6eaf2}
+html[data-mf=dusk] .mm-tags span{color:#fff;background:color-mix(in srgb,var(--c) 35%,transparent)}
+html[data-mf=dusk] .mm-ems button{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
 </style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
@@ -15844,6 +15930,158 @@ function pzStamp(g,cx,cy){g.save();g.font='italic 58px "DM Serif Display",Georgi
 function pzClip(){const tag="#polaroidle";let ok=false;try{if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(tag).catch(()=>{});ok=true;}}catch(e){}
  if(!ok){try{const t=document.createElement("textarea");t.value=tag;t.setAttribute("readonly","");t.style.cssText="position:fixed;opacity:0;top:0";document.body.appendChild(t);t.select();document.execCommand("copy");t.remove();ok=true;}catch(e){}}
  try{sfToast("📋 #polaroidle kopyalandı · story'de yapıştır");const T=document.getElementById("sf-toast");if(T){clearTimeout(T._t);T._t=setTimeout(()=>T.classList.remove("on"),5500);}}catch(e){}}
+/* ===== v0.34 MACERA: km, mikro maceralar, pasaport, hava ===== */
+function kmFix(s){if(!s)return s;return String(s).replace(/\b\d+(?:[.,]\d+)?K(?:\s*\/\s*\d+(?:[.,]\d+)?K)+\b/g,m=>m.replace(/K/g,"").replace(/\s*\/\s*/g,"/")+" km").replace(/\b(\d+(?:[.,]\d+)?)K\b/g,"$1 km");}
+function kmFixAll(){try{EV_SP.forEach(e=>{e[1]=kmFix(e[1]);e[9]=kmFix(e[9]);});}catch(_){}}
+try{if(MGUIDE.kosu)MGUIDE.kosu[1]="İlk 5 km koşuna 4 haftada hazırlan";}catch(_){}
+kmFixAll();
+
+/* --- mikro maceralar: [id, emoji, başlık, tek satır, mevsim(all|kis|bahar|yaz|sonbahar|sicak|soguk), hava(any|acik|yagmur|kar), kim(any|tek|cocuk|arkadas), yer(sehir|doga|ev|su), renk] --- */
+const MM=[
+ ["gundogumu","🌅","Gün doğumunu karşıla","Alarmı kur, termosunu al, güne ilk sen merhaba de","all","acik","any","doga","#F6A65A"],
+ ["gunbatimi","🌇","Gün batımı yürüyüşü","Şehrin en yüksek noktasından güneşi uğurla","all","acik","any","sehir","#E2689A"],
+ ["yenipark","🌳","Hiç gitmediğin bir park","Haritayı aç, en yakın keşfedilmemiş yeşile git","all","any","any","sehir","#6FA287"],
+ ["yildiz","🌌","Yıldız say","Işıklardan uzaklaş, battaniyeni ser, gökyüzüne bak","all","acik","any","doga","#4A4E8A"],
+ ["piknik","🧺","Mini piknik","Bir örtü, bir termos, bir kitap. Yeter","sicak","acik","any","doga","#C9906A"],
+ ["bisiklet","🚲","Bir saatlik bisiklet","Kirala, sahil ya da park yolunda çocukluğuna dön","sicak","acik","any","sehir","#5FA6D6"],
+ ["yagmur","☔","Yağmurda yürü","Kısa bir tur, su birikintisine bas, kokuyu içine çek","all","yagmur","any","sehir","#5B7FA6"],
+ ["pazar","🥕","Semt pazarını keşfet","Bilmediğin bir sebzeyi al, tarifini satıcıya sor","all","any","any","sehir","#E07A3A"],
+ ["hazine","🗺️","Çocuklarla hazine avı","Parkta bul: kozalak, tüy, yuvarlak taş, kalp yaprak","all","acik","cocuk","doga","#D9A03A"],
+ ["kahvalti","☕","Dışarıda tek başına kahvaltı","Sabah erken, sessiz bir köşe, sadece sen","all","any","tek","sehir","#A8743F"],
+ ["tepe","🏰","Şehrin tepesine çık","Kale, kule ya da tepe; şehrine yukarıdan bak","all","acik","any","sehir","#B5532D"],
+ ["muze","🏛️","Müzeye kaçamak","Tek bir esere 10 dakika bak, sonra kahve","all","any","any","sehir","#7A5A8A"],
+ ["kaybol","🧭","Kaybolma yürüyüşü","İlk sağ, ikinci sol… bildiğin yoldan çık","all","any","any","sehir","#2F7F72"],
+ ["su","🌊","Suya dokun","Deniz, göl ya da dere; ayaklarını sok","all","acik","any","su","#3E8CB0"],
+ ["kar","☃️","Kar meleği yap","Sırtüstü yat, kollarını aç, çocuk ol","kis","kar","any","doga","#7FB0D6"],
+ ["yaprak","🍂","Yaprak koleksiyonu","En güzel 5 yaprağı topla, kitabının arasına koy","sonbahar","any","any","doga","#C8702E"],
+ ["cicek","🌸","Çiçek açan bir ağaç bul","Altında 5 dakika otur, sadece bak","bahar","acik","any","doga","#E28AAE"],
+ ["aksam","🌙","Telefonsuz akşam yürüyüşü","Yemekten sonra 20 dakika, sadece sen ve sokaklar","all","any","tek","sehir","#3E4A7A"],
+ ["ilk5","🏃‍♀️","İlk 5 km'n","Yürü-koş karışık, saat tutma, sadece bitir","all","any","any","sehir","#F0607E"],
+ ["yoga","🧘‍♀️","Çimende yoga","Ayakkabıları çıkar, 10 dakika esne ve nefes al","sicak","acik","any","doga","#8A6AB0"],
+ ["foto","📷","Fotoğraf safarisi","Şehrinde 10 kırmızı şey fotoğrafla","all","any","any","sehir","#C2502E"],
+ ["parkkitap","📖","Parkta bir bölüm oku","Kitap köşenden bir kitap, güneşli bir bank","all","acik","tek","doga","#8C5228"],
+ ["tren","🚆","Bir durak öteye","Trene, vapura ya da otobüse bin; ineceğin yer sürpriz","all","any","any","sehir","#4E7A9A"],
+ ["balkonkamp","⛺","Balkonda kamp","Battaniye, fener, sıcak çikolata; gece seslerini dinle","all","any","cocuk","ev","#5A6B3A"],
+ ["koy","🏡","Yakın bir köye kaçamak","Köy kahvaltısı ve kısa bir patika","all","acik","any","doga","#7A9A4A"],
+ ["barinak","🐾","Barınakta bir yürüyüş","Bir köpeği gezdir, bir kediyi sev","all","any","any","sehir","#B07A5A"],
+ ["lezzet","🥙","Yöresel tat avı","Şehrinin hiç denemediğin lezzetini bul","all","any","arkadas","sehir","#D9603A"],
+ ["kus","🐦","Kuş gözlemi","Bir bankta otur, 3 farklı kuş say","all","acik","any","doga","#6A9A7A"],
+ ["bulut","☁️","Bulut avı","Çimene uzan, bir bulutta bir hayvan bul","sicak","acik","cocuk","doga","#7AA6C8"],
+ ["kizkiza","👭","Kız kıza macera","Bir arkadaşını ara, birlikte yeni bir yer keşfedin","all","any","arkadas","sehir","#E2689A"],
+ ["tekgun","🎒","Kendinle bir gün","İstediğin yere, istediğin kadar; kimseye sormadan","all","any","tek","sehir","#A8492A"],
+ ["kayik","🚣‍♀️","Kayık ya da pedalo","Suyun ortasından şehrine bak","sicak","acik","any","su","#2E6B8A"],
+ ["saksi","🌱","Bir saksı ek","Fesleğen ya da nane; büyümesini izle","all","any","cocuk","ev","#4F8A4A"],
+ ["sicakcikolata","🧣","Soğukta sıcak yürüyüş","Atkını sar, termosta sıcak çikolata, kısa bir tur","soguk","any","any","sehir","#9A5A3A"]];
+const MM_W={any:"",tek:"Tek başına",cocuk:"Çocukla",arkadas:"Arkadaşla"},MM_P={sehir:"Şehirde",doga:"Doğada",ev:"Evde",su:"Suda"};
+function mmSeason(d){const m=(d||new Date()).getMonth();return m<2||m===11?"kis":m<5?"bahar":m<8?"yaz":"sonbahar";}
+function mmFits(x){const s=mmSeason(),w=wxGet(),k=w&&w.code!=null?wxKind(w.code):"";const ss=x[4];
+ if(ss!=="all"){if(ss==="sicak"&&!(s==="bahar"||s==="yaz"))return false;if(ss==="soguk"&&!(s==="kis"||s==="sonbahar"))return false;if(["kis","bahar","yaz","sonbahar"].includes(ss)&&ss!==s)return false;}
+ if(x[5]==="kar"&&k!=="snow")return false;if(x[5]==="yagmur"&&!(k==="rain"||k==="drizzle"))return false;if(x[5]==="acik"&&(k==="rain"||k==="storm"||k==="snow"))return false;return true;}
+function mmLogs(){const M=mac();M.logs=M.logs||[];return M.logs;}
+function mmDone(id){return mmLogs().some(l=>l.k==="mm:"+id);}
+function mmWeek(){const L=MM.filter(x=>mmFits(x)&&!mmDone(x[0]));const wk=Math.floor((Date.now()+3*864e5)/(7*864e5));const out=[];const A=L.length?L:MM.filter(mmFits);
+ for(let i=0;i<A.length&&out.length<3;i++){const x=A[(wk*7+i*11)%A.length];if(!out.includes(x))out.push(x);}return out;}
+function mmCard(x,big){const d=mmDone(x[0]);return `<button type="button" class="mmc${big?" big":""}${d?" done":""}" data-mm="${x[0]}" style="--c:${x[8]}"><span class="mm-e no-mi">${x[1]}</span><strong>${esc(x[2])}</strong><small>${esc(x[3])}</small><span class="mm-t">${[MM_P[x[7]],MM_W[x[6]]].filter(Boolean).join(" · ")}</span>${d?`<i class="mm-ok">✓ Yaptın</i>`:""}</button>`;}
+
+/* mikro macera sayfası + "Yaptım" */
+function mmOpen(id){const x=MM.find(y=>y[0]===id);if(!x)return;const L=mmLogs().filter(l=>l.k==="mm:"+id);
+ const O=mSheet(`<div class="shs-h"><div><small>Mikro macera</small><b>${esc(x[2])}</b></div><button type="button" class="shs-x" aria-label="Kapat">✕</button></div>
+  <div class="mm-pg" style="--c:${x[8]}"><div class="mm-big no-mi">${x[1]}</div><p class="mm-lead">${esc(x[3])}</p><div class="mm-tags">${[MM_P[x[7]],MM_W[x[6]]||"Herkesle",x[4]==="all"?"Her mevsim":({kis:"Kışa özel",bahar:"Bahara özel",yaz:"Yaza özel",sonbahar:"Sonbahara özel",sicak:"Sıcak günler",soguk:"Serin günler"})[x[4]]].filter(Boolean).map(t=>`<span>${t}</span>`).join("")}</div>
+  ${L.length?`<p class="mm-did">✓ ${L.length===1?"Bunu "+mmDay(L[0].d)+" yaptın":"Bunu "+L.length+" kez yaptın"} 💛</p>`:""}
+  <button type="button" class="mcta mm-go" id="mm-did">${L.length?"Bir kez daha yaptım ✓":"Bugün yaptım ✓"}</button></div>`);
+ O.querySelector("#mm-did").onclick=()=>mmLogForm({k:"mm:"+id,t:x[2],e:x[1],c:x[8]});}
+function mmDay(d){if(!d)return "";const t=dkey();if(d===t)return "bugün";const a=new Date(d+"T00:00");return a.getDate()+" "+MN_S[a.getMonth()];}
+function mmLogForm(o){const C=mfCity();const id="L"+Date.now().toString(36);let ph=null;const custom=!o.k;
+ const O=mSheet(`<div class="shs-h"><div><small>${custom?"Kendi maceran":"Pasaportuna mühür"}</small><b>${custom?"Ne yaptın? ✨":esc(o.t)}</b></div><button type="button" class="shs-x" aria-label="Kapat">✕</button></div>
+  <div class="mm-form">
+   ${custom?`<input class="sf-in" id="mmf-t" maxlength="60" placeholder="ör. Abant Gölü'nün etrafını yürüdüm">
+   <div class="mm-ems">${["🥾","🏃‍♀️","🚲","🏊‍♀️","⛰️","🌅","🏕️","🧘‍♀️","🛶","🪂","🐎","🎿"].map((e,i)=>`<button type="button" data-mme="${e}" aria-pressed="${i===0}" class="no-mi">${e}</button>`).join("")}</div>`:""}
+   <label class="mm-ph" id="mmf-phl"><input type="file" accept="image/*" id="mmf-ph" hidden><span class="mm-php" id="mmf-php"><span class="no-mi">📸</span></span><span><b>Bir fotoğraf ekle</b><small>Pasaportunda ve hatıra ipinde dursun</small></span></label>
+   <textarea class="sf-in" id="mmf-cm" rows="2" maxlength="140" placeholder="Bir cümleyle nasıldı?"></textarea>
+   <div class="mm-row"><select class="sf-in" id="mmf-ci"><option value="">Şehir</option>${Object.keys(MF_IL).sort((a,b)=>a.localeCompare(b,"tr")).map(k=>`<option${C&&trN(C.name)===trN(k)?" selected":""}>${esc(k)}</option>`).join("")}</select><input class="sf-in" type="date" id="mmf-d" value="${dkey()}" max="${dkey()}"></div>
+   <button type="button" class="mcta" id="mmf-ok">Pasaportuma bas 🛂</button><p class="sf-err" id="mmf-e" hidden></p></div>`);
+ let em=o.e||"🥾";O.querySelectorAll("[data-mme]").forEach(b=>b.onclick=()=>{em=b.dataset.mme;O.querySelectorAll("[data-mme]").forEach(z=>z.setAttribute("aria-pressed",z===b));});
+ O.querySelector("#mmf-ph").onchange=e=>{const f=e.target.files&&e.target.files[0];if(!f)return;phRead(f,d=>{ph=d;O.querySelector("#mmf-php").innerHTML=`<img src="${d}" alt="">`;O.querySelector("#mmf-phl b").textContent="Fotoğrafı değiştir";},{w:900,h:900});};
+ O.querySelector("#mmf-ok").onclick=()=>{const t=custom?(O.querySelector("#mmf-t").value||"").trim():o.t;const E=O.querySelector("#mmf-e");if(!t){E.hidden=false;E.textContent="Ne yaptığını bir cümleyle yaz ✨";O.querySelector("#mmf-t").focus();return;}
+  const city=O.querySelector("#mmf-ci").value,d=O.querySelector("#mmf-d").value||dkey();const log={id,k:o.k||"own",t,e:custom?em:o.e,c:o.c||"#A8492A",d,city,cm:(O.querySelector("#mmf-cm").value||"").trim()};
+  mmLogs().push(log);if(ph){PH["mac:"+id]=ph;try{phSave();}catch(_){}}save();
+  O.classList.remove("on");setTimeout(()=>O.remove(),250);mStampFx(log);};}
+/* mühür basma animasyonu */
+function mStampFx(log){const n=mmLogs().length;const nb=mBadges().filter(b=>b.got&&b.at===n);let O=document.getElementById("mstfx");if(O)O.remove();O=document.createElement("div");O.id="mstfx";O.className="mstfx";
+ O.innerHTML=`<div class="mst-pg">${mStampHTML(log,0,true)}<p>Pasaportuna basıldı!</p>${nb.length?`<div class="mst-nb">${nb.map(b=>`<span><i class="no-mi">${b.e}</i>Yeni rozet: <b>${b.t}</b></span>`).join("")}</div>`:""}<button type="button" class="mcta" id="mst-ok">Pasaportuma bak →</button></div>`;
+ document.body.appendChild(O);requestAnimationFrame(()=>O.classList.add("on"));try{navigator.vibrate&&navigator.vibrate([10,60,30]);}catch(_){}try{sndPlay&&sndPlay("bag");}catch(_){}
+ setTimeout(()=>{try{mfConfetti(nb.length?"Yeni rozet! "+nb[0].e:"Bir macera daha! 🧭",["#6FBFA6","#FF8A5B","#FFD45C","#fff"],"linear-gradient(135deg,#3E8C80,#1E4D5C)");}catch(_){}},520);
+ const go=()=>{O.classList.remove("on");setTimeout(()=>O.remove(),250);if(step!==95){step=95;show();}mactab="benim";macRender();window.scrollTo({top:0});};O.querySelector("#mst-ok").onclick=go;O.onclick=e=>{if(e.target===O)go();};}
+
+/* --- pasaport: kayıtlar = mikro/kendi maceralar + gidilen geçmiş etkinlikler --- */
+function mPass(){const M=mac();const L=mmLogs().map(l=>Object.assign({src:"log"},l));
+ Object.keys(M.go||{}).map(macEv).filter(e=>e&&evEnd(e)<dkey()).forEach(e=>{const t=SP_T[e[2]]||["🧭",""];const c=(MT_C[e[2]]||MT_C.macera)[0];L.push({id:"ev:"+e[0],src:"ev",k:"ev:"+e[0],t:e[1],e:t[0],c,d:e[3],city:e[7]||"",cm:(M.hat[e[0]]||{}).cm||"",ev:e});});
+ return L.sort((a,b)=>(b.d||"").localeCompare(a.d||""));}
+function mCityKey(c){if(!c)return null;return Object.keys(MF_IL).find(k=>trN(k)===trN(c))||null;}
+function mBadges(){const P=mPass();const n=P.length,cities=new Set(P.map(l=>mCityKey(l.city)).filter(Boolean)),has=k=>P.filter(l=>l.k==="mm:"+k).length;
+ const seasons=new Set(P.map(l=>l.d?mmSeason(new Date(l.d+"T00:00")):"").filter(Boolean));const kid=P.filter(l=>{const x=MM.find(y=>"mm:"+y[0]===l.k);return x&&x[6]==="cocuk";}).length;
+ const evs=P.filter(l=>l.src==="ev").length;
+ const B=[["ilk","🧭","İlk adım","İlk maceran",n>=1,1],["kasif","🗺️","Kâşif","5 macera",n>=5,5],["gezgin","🏙️","Gezgin","3 farklı şehir",cities.size>=3,null],["gundogumu","🌅","Erken kuş","Gün doğumunu karşıla",has("gundogumu")>0,null],
+  ["gece","🌌","Gece kuşu","Yıldız say ya da gece yürü",has("yildiz")+has("aksam")>0,null],["takim","👩‍👧","Anne-çocuk takımı","Çocukla 3 macera",kid>=3,null],["yagmur","☔","Yağmur perisi","Yağmurda yürü",has("yagmur")>0,null],
+  ["dort","🍂","Dört mevsim","Her mevsimde bir macera",seasons.size>=4,null],["yaris","🏅","Bitiş çizgisi","Bir etkinliğe katıl",evs>=1,null],["on","⭐","On numara","10 macera",n>=10,10]];
+ return B.map(([id,e,t,d,got,at])=>({id,e,t,d,got,at}));}
+function mStampHTML(l,i,big){const rot=[-9,6,-4,11,-13,3,8,-6][i%8];const a=l.d?new Date(l.d+"T00:00"):null;const ink=["#B23A48","#2E5A8A","#2F7A4A","#7A3A8A","#A8492A","#1E5A6A"][(l.t||"").length%6];
+ return `<button type="button" class="mstamp${big?" big":""}" data-mlog="${esc(l.id)}" style="--r:${rot}deg;--ink:${ink}"><span class="ms-ring"></span><span class="ms-top">${esc((l.city||"MACERA").toLocaleUpperCase("tr-TR").slice(0,14))}</span><span class="ms-e no-mi">${l.e||"🧭"}</span><span class="ms-t">${esc(l.t.length>22?l.t.slice(0,21)+"…":l.t)}</span><span class="ms-d">${a?a.getDate()+" "+MN_S[a.getMonth()].toLocaleUpperCase("tr-TR")+" "+String(a.getFullYear()).slice(2):""}</span></button>`;}
+function mMapSVG(){const P=mPass();const vis=new Set(P.map(l=>mCityKey(l.city)).filter(Boolean));const C=mfCity();const home=C?mCityKey(C.name):null;
+ const evc=new Set(evUp(EV_SP).map(e=>mCityKey(e[7])).filter(Boolean));
+ const X=lo=>((lo-25.6)/(44.9-25.6))*340+10,Y=la=>((42.2-la)/(42.2-35.8))*150+10;
+ const pts="26.3,41.9 27.5,42.0 28.1,41.9 29.1,41.25 30.3,41.2 31.4,41.3 32.4,41.8 33.4,42.0 35.1,42.05 36.1,41.7 37.0,41.2 38.3,40.95 39.6,41.05 40.6,41.0 41.5,41.5 42.6,41.6 43.5,41.1 43.7,40.7 43.6,40.1 44.8,39.7 44.4,39.4 44.2,38.9 44.3,38.4 44.8,37.2 44.1,37.3 43.0,37.35 42.3,37.15 41.2,37.1 40.2,37.1 38.6,36.75 37.6,36.65 36.7,36.85 36.6,36.2 36.15,35.85 35.8,36.3 36.15,36.65 35.55,36.6 34.6,36.8 33.6,36.2 32.6,36.1 31.6,36.6 30.6,36.85 30.5,36.3 29.6,36.2 28.6,36.75 27.4,37.0 27.25,37.9 26.3,38.3 26.8,39.0 26.1,39.5 26.2,40.05 26.7,40.4 26.2,40.6 26.0,40.75 26.6,41.3".split(" ").map(p=>{const [a,b]=p.split(",").map(Number);return X(a).toFixed(1)+","+Y(b).toFixed(1);}).join(" ");
+let dots="";Object.entries(MF_IL).forEach(([k,[la,lo]])=>{const x=X(lo).toFixed(1),y=Y(la).toFixed(1);
+  if(vis.has(k))dots+=`<g class="mp-v"><circle cx="${x}" cy="${y}" r="9" class="mp-glow"/><circle cx="${x}" cy="${y}" r="4.6" class="mp-on"><title>${esc(k)}</title></circle></g>`;
+  else dots+=`<circle cx="${x}" cy="${y}" r="${evc.has(k)?2.6:2}" class="mp-d${evc.has(k)?" ev":""}"><title>${esc(k)}</title></circle>`;
+  if(k===home)dots+=`<circle cx="${x}" cy="${y}" r="7.5" class="mp-home"/>`;});
+ return `<svg class="mmap" viewBox="0 0 360 170" role="img" aria-label="Türkiye macera haritam: ${vis.size} şehir"><defs><radialGradient id="mpg"><stop offset="0" stop-color="#FFB38A" stop-opacity=".9"/><stop offset="1" stop-color="#FFB38A" stop-opacity="0"/></radialGradient></defs><polygon points="${pts}" class="mp-tr"/>${dots}</svg>`;}
+function mPassHTML(){const P=mPass(),B=mBadges();const cities=new Set(P.map(l=>mCityKey(l.city)).filter(Boolean));const nm=(st.name||"").trim();const got=B.filter(b=>b.got).length;
+ const M=mac();const ids=Object.keys(M.go||{});const up=ids.map(macEv).filter(e=>e&&evEnd(e)>=dkey()).sort((a,b)=>a[3].localeCompare(b[3]));
+ let H=`<section class="mpass"><div class="mp-cov"><div class="mp-emb" aria-hidden="true">🧭</div><small>TÜRKİYE · MACERA PASAPORTU</small><h3>${nm?esc(nm):"Macera"}<em>pasaportum</em></h3>
+   <div class="mp-st"><div><b>${P.length}</b><span>macera</span></div><div><b>${cities.size}</b><span>şehir</span></div><div><b>${got}</b><span>rozet</span></div></div></div>
+  <div class="mp-map"><div class="mp-mh"><b>Haritam</b><span><i class="lg on"></i>gittiğim <i class="lg ev"></i>etkinlik var${mfCity()?` <i class="lg hm"></i>şehrim`:""}</span></div>${mMapSVG()}${!cities.size?`<p class="mp-hint">İlk mühründe şehrin burada parlayacak ✨</p>`:""}</div></section>`;
+ H+=`<div class="mp-acts"><button type="button" class="mcta" id="mp-add">＋ Kendi maceranı ekle</button><button type="button" class="mbtn" id="mp-mm">🎲 Mikro macera seç</button></div>`;
+ if(up.length)H+=`<div class="kthead"><span>Sıradaki maceralarım</span><small>${up.length}</small></div><div class="mcal">${up.map(e=>mTicket(e,true)).join("")}</div>`;
+ H+=`<div class="kthead"><span>Mühürlerim 🛂</span><small>${P.length}</small></div>`+(P.length?`<div class="mstamps">${P.map((l,i)=>mStampHTML(l,i)).join("")}</div>`:`<div class="mp-empty"><span class="no-mi">🛂</span><b>Pasaportun bomboş, şimdilik</b><small>Bir mikro macera yap ya da bir etkinliğe katıl; ilk mührün burada.</small></div>`);
+ H+=`<div class="kthead"><span>Rozetlerim</span><small>${got}/${B.length}</small></div><div class="mbadges">${B.map(b=>`<div class="mbd${b.got?" on":""}"><span class="no-mi">${b.got?b.e:"🔒"}</span><b>${b.t}</b><small>${b.d}</small></div>`).join("")}</div>`;
+ const pol=P.filter(l=>PH["mac:"+(l.src==="ev"?l.ev[0]:l.id)]||l.cm);
+ if(pol.length)H+=`<div class="kthead"><span>Hatıra ipim 🧷</span></div><div class="mhat">${pol.map(l=>{const ph=PH["mac:"+(l.src==="ev"?l.ev[0]:l.id)];return `<button type="button" class="mpol" data-mlog="${esc(l.id)}" style="--a:${l.c};--b:${l.c}"><span class="clip"></span><span class="im">${ph?`<img src="${ph}" alt="">`:`<span class="no-mi" style="font-size:44px">${l.e}</span>`}</span><b>${esc(l.cm||l.t)}</b><small>${mmDay(l.d)} · ${esc(l.city||"")}</small></button>`;}).join("")}</div>`;
+ return H;}
+function mLogOpen(id){const l=mPass().find(x=>x.id===id);if(!l)return;if(l.src==="ev"){macOpen(l.ev[0]);return;}const ph=PH["mac:"+l.id];
+ const O=mSheet(`<div class="shs-h"><div><small>Mühür · ${mmDay(l.d)}</small><b>${esc(l.t)}</b></div><button type="button" class="shs-x" aria-label="Kapat">✕</button></div>
+  <div class="mlog">${ph?`<img class="mlog-ph" src="${ph}" alt="">`:""}<div class="mlog-st">${mStampHTML(l,0,true)}</div>${l.cm?`<p class="mlog-cm">“${esc(l.cm)}”</p>`:""}<p class="mlog-meta">${esc(l.city||"")}${l.city?" · ":""}${mmDay(l.d)}</p>
+  <div class="mep-act"><button type="button" class="mbtn pri" id="mlog-sh">📸 Hikâyede paylaş</button><button type="button" class="mbtn" id="mlog-del">Sil</button></div></div>`);
+ O.querySelector("#mlog-del").onclick=e=>{const b=e.currentTarget;if(!b.dataset.sure){b.dataset.sure=1;b.textContent="Emin misin?";return;}const L=mmLogs();const i=L.findIndex(x=>x.id===id);if(i>=0)L.splice(i,1);delete PH["mac:"+id];try{phSave();}catch(_){}save();O.classList.remove("on");setTimeout(()=>O.remove(),250);macRender();};
+ O.querySelector("#mlog-sh").onclick=()=>mLogShare(l);}
+async function mLogShare(l){const fake=["log:"+l.id,l.t,"macera",l.d,"","","",l.city||""];const M=mac();M.hat=M.hat||{};const bak=M.hat[fake[0]];M.hat[fake[0]]={cm:l.cm};const ph=PH["mac:"+l.id];const bph=PH["mac:"+fake[0]];if(ph)PH["mac:"+fake[0]]=ph;
+ try{await macShare(fake);}finally{if(bak)M.hat[fake[0]]=bak;else delete M.hat[fake[0]];if(bph)PH["mac:"+fake[0]]=bph;else delete PH["mac:"+fake[0]];}}
+
+/* --- Sana özel'e mikro maceralar, Pasaportum sekmesi --- */
+(function(){const tb=document.querySelector('.macseg [data-mt="benim"]');if(tb)tb.textContent="Pasaportum";
+ const _r=macRender;macRender=function(){kmFixAll();const r=_r.apply(this,arguments);try{const P=document.getElementById("macpanel");if(!P)return r;
+  if(mactab==="oneri"){const W=mmWeek();const h=`<div class="kthead mm-h"><span>Bu hafta mikro macera 🎲</span><button type="button" class="mm-all" id="mm-all">Tümü (${MM.length}) →</button></div><p class="mm-sub">Küçük bir macera da pasaportuna mühür basar.</p><div class="ktrow mrow mmrow">${W.map(x=>mmCard(x)).join("")}<button type="button" class="mmc add" id="mm-add"><span class="mm-e no-mi">＋</span><strong>Kendi maceranı ekle</strong><small>Listede yoksa sen yaz</small></button></div>`;
+   const anchor=P.querySelector(".mprep")||P.querySelector(".mtk.big");const ruh=P.querySelector(".mruh-card");
+   if(anchor){(anchor.classList.contains("mprep")?anchor:anchor).insertAdjacentHTML("afterend",h);}else if(ruh)ruh.insertAdjacentHTML("afterend",h);else P.insertAdjacentHTML("afterbegin",h);}
+  if(mactab==="benim"){P.innerHTML=mPassHTML();}
+  P.querySelectorAll("[data-mm]").forEach(b=>b.onclick=()=>mmOpen(b.dataset.mm));
+  P.querySelectorAll("[data-mlog]").forEach(b=>b.onclick=()=>mLogOpen(b.dataset.mlog));
+  P.querySelectorAll("[data-mev]").forEach(b=>b.onclick=()=>macOpen(b.dataset.mev));
+  const g=id=>document.getElementById(id);if(g("mm-all"))g("mm-all").onclick=mmAll;if(g("mm-add"))g("mm-add").onclick=()=>mmLogForm({});if(g("mp-add"))g("mp-add").onclick=()=>mmLogForm({});if(g("mp-mm"))g("mp-mm").onclick=mmAll;}catch(err){console.error(err);}return r;};})();
+function mmAll(){let f="";const draw=O=>{const L=MM.filter(x=>!f||(f==="fit"?mmFits(x):x[6]===f||x[7]===f));O.querySelector(".mm-grid").innerHTML=L.map(x=>mmCard(x,true)).join("");O.querySelectorAll("[data-mm]").forEach(b=>b.onclick=()=>mmOpen(b.dataset.mm));O.querySelectorAll("[data-mmf]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.mmf===f));};
+ const O=mSheet(`<div class="shs-h"><div><small>${MM.filter(x=>mmDone(x[0])).length}/${MM.length} yapıldı</small><b>Mikro maceralar 🎲</b></div><button type="button" class="shs-x" aria-label="Kapat">✕</button></div>
+  <div class="mm-fil">${[["","Hepsi"],["fit","Bugüne uygun"],["cocuk","Çocukla"],["tek","Tek başına"],["arkadas","Arkadaşla"],["sehir","Şehirde"],["doga","Doğada"],["ev","Evde"]].map(([v,l])=>`<button type="button" data-mmf="${v}" aria-pressed="${f===v}">${l}</button>`).join("")}</div><div class="mm-grid"></div>`);
+ O.querySelectorAll("[data-mmf]").forEach(b=>b.onclick=()=>{f=b.dataset.mmf;draw(O);});draw(O);
+ const c=O.querySelector(".shs-c");if(c)c.classList.add("mm-sheet");}
+
+/* --- etkinlik sayfasına hava durumu (7 gün içinde) --- */
+(function(){const _o=macOpen;macOpen=function(id){_o.apply(this,arguments);try{const e=macEv(id);const O=document.getElementById("mep");if(!e||!O)return;const dd=evDays(e);if(dd<0||dd>6)return;const ck=mCityKey(e[7]);if(!ck)return;const [la,lo]=MF_IL[ck];
+  const k="mf-mwx-"+ck+"-"+e[3];let c=null;try{c=JSON.parse(sessionStorage.getItem(k)||"null");}catch(_){}
+  const put=w=>{const box=O.querySelector(".mep-info");if(!box||O.querySelector(".mep-wx"))return;const ic=wxIcon(w.c);const kind=wxKind(w.c);const tip=kind==="rain"||kind==="drizzle"?"Yağmurluğunu unutma ☔":kind==="storm"?"Fırtına uyarısı, duyuruları takip et ⚡":w.mx>=28?"Bol su ve şapka ☀️":w.mn<=5?"Katman katman giyin 🧣":"Hava macera için güzel 🙌";
+   box.insertAdjacentHTML("afterend",`<div class="mep-wx"><span class="no-mi">${ic}</span><div><b>${Math.round(w.mx)}° / ${Math.round(w.mn)}°</b><small>${esc(ck)} · ${dd<=0?"bugün":dd===1?"yarın":dd+" gün sonra"}${w.p!=null?" · yağış %"+w.p:""}</small></div><em>${tip}</em></div>`);};
+  if(c){put(c);return;}
+  fetch(`https://api.open-meteo.com/v1/forecast?latitude=${la}&longitude=${lo}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=auto&start_date=${e[3]}&end_date=${e[3]}`).then(r=>r.ok?r.json():null).then(j=>{if(!j||!j.daily||!j.daily.time||!j.daily.time.length)return;const D=j.daily;const w={c:D.weather_code[0],mx:D.temperature_2m_max[0],mn:D.temperature_2m_min[0],p:D.precipitation_probability_max?D.precipitation_probability_max[0]:null};try{sessionStorage.setItem(k,JSON.stringify(w));}catch(_){}if(document.getElementById("mep")===O)put(w);}).catch(()=>{});}catch(err){console.error(err);}};})();
+
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
