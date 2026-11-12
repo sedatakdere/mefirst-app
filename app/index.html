@@ -7348,7 +7348,7 @@ html[data-mf=dusk] .mm-ems button{background:rgba(255,255,255,.06);border-color:
 .mpz-hang .bk-pzw,.mpz-sh .bk-pzw{font-size:18px;white-space:nowrap}.mep-hat .mep-act .mpz-hang{flex:0 1 44%}.mep-hat .mep-act .mpz-sh{flex:1 1 52%}
 .mpzi::before{background:linear-gradient(135deg,#FFB38A,#4E9C8C 60%,#1E4D5C)!important}
 .mep-hat .mep-act{flex-wrap:wrap}.mep-hat .mep-act .mbtn{flex:1 1 140px}
-</style>
+.bp-o.mp4{grid-template-columns:repeat(4,1fr)}.mpick{margin:12px 0 4px}.bp-o>.ld{opacity:.55;pointer-events:none}</style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
 <radialGradient id="spH" cx=".34" cy=".28" r=".85"><stop offset="0" stop-color="#FFEFF4"/><stop offset=".32" stop-color="#F6C4D4"/><stop offset=".7" stop-color="#E79CB7"/><stop offset="1" stop-color="#BF8AAE"/></radialGradient>
@@ -13847,7 +13847,7 @@ function macOpen(id){const e=macEv(id);if(!e)return;let O=document.getElementByI
  const g=O.querySelector("#mep-go");if(g)g.onclick=()=>{if(M.go[id])delete M.go[id];else{M.go[id]={d:dkey()};try{mfConfetti("Maceran takvimde! 🧭",["#6FBFA6","#FF8A5B","#FFD45C","#fff"],"linear-gradient(135deg,#3E8C80,#1E4D5C)");}catch(_){}}save();macOpen(id);};
  const ic=O.querySelector("#mep-ics");if(ic)ic.onclick=()=>macIcs(e);
  const pf=O.querySelector("#mep-ph");if(pf)pf.onchange=()=>{const f=pf.files[0];if(!f)return;phRead(f,d=>{PH["mac:"+id]=d;phSave();macOpen(id);},{w:720,h:720});};
- const sv=O.querySelector("#mep-save");if(sv)sv.onclick=()=>{const first=!(M.hat[id]&&(M.hat[id].cm||PH["mac:"+id]));M.hat[id]={cm:O.querySelector("#mep-cm").value.trim(),d:dkey()};M.go[id]=M.go[id]||{d:dkey()};save();macOpen(id);if(first&&(M.hat[id].cm||PH["mac:"+id]))try{mfConfetti("Polaroidlendi! 🧷",["#FFB38A","#6FBFA6","#FFD45C","#fff"],"linear-gradient(135deg,#F2A27E,#1E4D5C)");}catch(_){}};
+ const sv=O.querySelector("#mep-save");if(sv)sv.onclick=()=>{const first=!(M.hat[id]&&(M.hat[id].cm||PH["mac:"+id]));M.hat[id]=Object.assign({},M.hat[id]||{},{cm:O.querySelector("#mep-cm").value.trim(),d:dkey()});M.go[id]=M.go[id]||{d:dkey()};save();macOpen(id);if(first&&(M.hat[id].cm||PH["mac:"+id]))try{mfConfetti("Polaroidlendi! 🧷",["#FFB38A","#6FBFA6","#FFD45C","#fff"],"linear-gradient(135deg,#F2A27E,#1E4D5C)");}catch(_){}};
  const sh=O.querySelector("#mep-share");if(sh)sh.onclick=()=>macShare(e);}
 window.addEventListener("popstate",()=>{const O=document.getElementById("mep");if(O&&window.macClose)window.macClose(true);});
 async function macShare(e){try{await document.fonts.ready;}catch(_){}const M=mac(),h=M.hat[e[0]]||{},W=1080,HS=1920,cv=document.createElement("canvas");cv.width=W;cv.height=HS;const g=cv.getContext("2d"),c=MT_C[e[2]]||MT_C.macera;
@@ -16003,14 +16003,14 @@ function mmLogForm(o){const C=mfCity();const id="L"+Date.now().toString(36);let 
   <div class="mm-form">
    ${custom?`<input class="sf-in" id="mmf-t" maxlength="60" placeholder="ör. Abant Gölü'nün etrafını yürüdüm">
    <div class="mm-ems">${["🥾","🏃‍♀️","🚲","🏊‍♀️","⛰️","🌅","🏕️","🧘‍♀️","🛶","🪂","🐎","🎿"].map((e,i)=>`<button type="button" data-mme="${e}" aria-pressed="${i===0}" class="no-mi">${e}</button>`).join("")}</div>`:""}
-   <label class="mm-ph" id="mmf-phl"><input type="file" accept="image/*" id="mmf-ph" hidden><span class="mm-php" id="mmf-php"><span class="no-mi">📸</span></span><span><b>Polaroidini ekle</b><small>Pasaportunda dursun</small></span></label>
+   <div id="mmf-pick"></div>
    <textarea class="sf-in" id="mmf-cm" rows="2" maxlength="140" placeholder="Bir cümleyle nasıldı?"></textarea>
    <div class="mm-row"><select class="sf-in" id="mmf-ci"><option value="">Şehir</option>${Object.keys(MF_IL).sort((a,b)=>a.localeCompare(b,"tr")).map(k=>`<option${C&&trN(C.name)===trN(k)?" selected":""}>${esc(k)}</option>`).join("")}</select><input class="sf-in" type="date" id="mmf-d" value="${dkey()}" max="${dkey()}"></div>
    <button type="button" class="mcta" id="mmf-ok">Pasaportuma bas 🛂</button><p class="sf-err" id="mmf-e" hidden></p></div>`);
  let em=o.e||"🥾";O.querySelectorAll("[data-mme]").forEach(b=>b.onclick=()=>{em=b.dataset.mme;O.querySelectorAll("[data-mme]").forEach(z=>z.setAttribute("aria-pressed",z===b));});
- O.querySelector("#mmf-ph").onchange=e=>{const f=e.target.files&&e.target.files[0];if(!f)return;phRead(f,d=>{ph=d;O.querySelector("#mmf-php").innerHTML=`<img src="${d}" alt="">`;O.querySelector("#mmf-phl b").textContent="Fotoğrafı değiştir";},{w:900,h:900});};
+ let pps="me";const mpd=()=>{const B=O.querySelector("#mmf-pick");B.innerHTML=mPickHTML(pps,ph);mPickBind(B,()=>({e:custom?em:o.e,t:custom?((O.querySelector("#mmf-t").value||"").trim()||"Kendi maceram"):o.t,c:o.c||"#A8492A",city:O.querySelector("#mmf-ci").value}),(d,ps)=>{ph=d;pps=ps;mpd();});};mpd();
  O.querySelector("#mmf-ok").onclick=()=>{const t=custom?(O.querySelector("#mmf-t").value||"").trim():o.t;const E=O.querySelector("#mmf-e");if(!t){E.hidden=false;E.textContent="Ne yaptığını bir cümleyle yaz ✨";O.querySelector("#mmf-t").focus();return;}
-  const city=O.querySelector("#mmf-ci").value,d=O.querySelector("#mmf-d").value||dkey();const log={id,k:o.k||"own",t,e:custom?em:o.e,c:o.c||"#A8492A",d,city,cm:(O.querySelector("#mmf-cm").value||"").trim()};
+  const city=O.querySelector("#mmf-ci").value,d=O.querySelector("#mmf-d").value||dkey();const log={id,k:o.k||"own",t,e:custom?em:o.e,c:o.c||"#A8492A",d,city,cm:(O.querySelector("#mmf-cm").value||"").trim(),ps:pps};
   mmLogs().push(log);if(ph){PH["mac:"+id]=ph;try{phSave();}catch(_){}}save();
   O.classList.remove("on");setTimeout(()=>O.remove(),250);mStampFx(log);};}
 /* mühür basma animasyonu */
@@ -16107,6 +16107,92 @@ function poolDedup(L){if(!Array.isArray(L))return L;const TK=t=>mfFold(t).replac
   if(e.cover&&!t.cover){merge(e,t);t._dead=1;}else{merge(t,e);e._dead=1;}});
  const R=out.filter(b=>!b._dead);R.forEach(b=>{(b._al||[]).forEach(([t,a])=>{try{if(b.cover&&!covGet(t,a))covSet(t,a,b.cover);}catch(_){}});delete b._al;});return R;}
 (function(){let _L=POOL.list;try{_L=Array.isArray(_L)?poolDedup(_L):_L;Object.defineProperty(POOL,"list",{configurable:true,enumerable:true,get(){return _L;},set(v){try{_L=Array.isArray(v)?poolDedup(v):v;}catch(e){_L=v;}}});}catch(e){}})();
+/* ===== v0.36 Macera Polaroidle: poz seçenekleri + bütünlüklü story (görev + açıklama + mühür) ===== */
+function mHex(h){h=String(h||"#2F7F72").replace("#","");if(h.length===3)h=h.split("").map(c=>c+c).join("");const n=parseInt(h,16);return [n>>16&255,n>>8&255,n&255];}
+function mMix(a,b,t){const A=mHex(a),B=mHex(b);return "rgb("+A.map((v,i)=>Math.round(v+(B[i]-v)*t)).join(",")+")";}
+function mInk(t){return ["#B23A48","#2E5A8A","#2F7A4A","#7A3A8A","#A8492A","#1E5A6A"][(t||"").length%6];}
+function mWrap(g,T,maxW,maxL){const L=[];let cur="";String(T||"").split(/\s+/).forEach(w=>{const tt=cur?cur+" "+w:w;if(g.measureText(tt).width>maxW&&cur){L.push(cur);cur=w;}else cur=tt;});if(cur)L.push(cur);
+ if(L.length>maxL){const k=L.slice(0,maxL);let last=k[maxL-1];while(g.measureText(last+"…").width>maxW&&last.length>1)last=last.slice(0,-1);k[maxL-1]=last.replace(/[\s,.;:]+$/,"")+"…";return k;}return L;}
+function mDateTxt(d){if(!d)return "";const a=new Date(d+"T00:00");return a.getDate()+" "+MN_S[a.getMonth()]+" "+a.getFullYear();}
+
+/* macera pozu: maceranın kendi kartpostalı */
+async function mPose(o){try{await document.fonts.ready;}catch(_){}const W=720,cv=document.createElement("canvas");cv.width=W;cv.height=W;const g=cv.getContext("2d"),c=o.c||"#2F7F72";
+ const bg=g.createLinearGradient(0,0,0,W);bg.addColorStop(0,mMix(c,"#FFFFFF",.62));bg.addColorStop(.62,mMix(c,"#FFE9D2",.35));bg.addColorStop(1,mMix(c,"#000000",.12));g.fillStyle=bg;g.fillRect(0,0,W,W);
+ g.fillStyle="rgba(255,236,190,.75)";g.beginPath();g.arc(560,190,78,0,Math.PI*2);g.fill();
+ const hill=(pts,col)=>{g.fillStyle=col;g.beginPath();g.moveTo(0,W);pts.forEach(([x,y])=>g.lineTo(x,y));g.lineTo(W,W);g.closePath();g.fill();};
+ hill([[0,470],[140,360],[260,430],[400,320],[540,420],[720,350]],mMix(c,"#FFFFFF",.35));
+ hill([[0,560],[180,470],[350,540],[520,450],[720,530]],mMix(c,"#000000",.08));
+ g.fillStyle="rgba(255,255,255,.16)";for(let i=0;i<5;i++){g.beginPath();g.ellipse(120+i*130,110+(i%2)*40,70,20,0,0,Math.PI*2);g.fill();}
+ g.textAlign="center";g.textBaseline="middle";g.font='230px "Apple Color Emoji","Noto Color Emoji",sans-serif';g.shadowColor="rgba(0,0,0,.22)";g.shadowBlur=24;g.shadowOffsetY=12;g.fillText(o.e||"🧭",W/2,330);g.shadowColor="transparent";
+ g.fillStyle="#fff";g.font='58px "DM Serif Display",serif';const L=mWrap(g,o.t||"",620,2);L.forEach((l,i)=>{g.shadowColor="rgba(0,0,0,.28)";g.shadowBlur=10;g.fillText(l,W/2,560+i*62-(L.length-1)*31);});g.shadowColor="transparent";
+ if(o.city){g.font='800 24px "Nunito Sans",sans-serif';g.fillStyle="rgba(255,255,255,.9)";g.fillText("📍 "+o.city.toLocaleUpperCase("tr-TR"),W/2,672);}
+ try{return cv.toDataURL("image/jpeg",.88);}catch(_){return null;}}
+
+/* "Polaroidinde ne görünsün?" — kitap köşemdeki gibi */
+function mPickHTML(cur,img){const me=PH.me;return `<div class="bk-pick2 mpick"><span class="bp-l">Polaroidinde ne görünsün?</span><div class="bp-o mp4">
+ <button type="button" data-mps="me" aria-pressed="${cur==="me"}"><span class="bp-i">${me?`<img src="${me}" alt="">`:`<span class="no-mi">🙂</span>`}</span>Ben</button>
+ <button type="button" data-mps="pose" aria-pressed="${cur==="pose"}"><span class="bp-i">${cur==="pose"&&img?`<img src="${img}" alt="">`:`<span class="no-mi">🏞️</span>`}</span>Macera pozu</button>
+ <label data-mps="cam" aria-pressed="${cur==="cam"}" role="button"><input type="file" accept="image/*" capture="environment" hidden><span class="bp-i">${cur==="cam"&&img?`<img src="${img}" alt="">`:`<span class="no-mi">📸</span>`}</span>Çek</label>
+ <label data-mps="gal" aria-pressed="${cur==="gal"}" role="button"><input type="file" accept="image/*" hidden><span class="bp-i">${cur==="gal"&&img?`<img src="${img}" alt="">`:`<span class="no-mi">🖼</span>`}</span>Galeriden</label></div></div>`;}
+function mPickBind(box,poseO,done){box.querySelectorAll("[data-mps]").forEach(b=>{const v=b.dataset.mps;const inp=b.querySelector("input");
+ if(inp){inp.onchange=()=>{const f=inp.files&&inp.files[0];if(!f)return;phRead(f,d=>done(d,v),{w:900,h:900});};return;}
+ b.onclick=async()=>{if(v==="me"){done(null,"me");return;}b.classList.add("ld");const d=await mPose(poseO());b.classList.remove("ld");if(d)done(d,"pose");};});}
+
+/* mühür: kanvasa mürekkep damgası */
+function mStampCanvas(o,R){const S=R*2+24,cv=document.createElement("canvas");cv.width=S;cv.height=S;const g=cv.getContext("2d"),ink=o.ink||mInk(o.t),c=S/2;g.strokeStyle=ink;g.fillStyle=ink;
+ g.lineWidth=R*.055;g.beginPath();g.arc(c,c,R-R*.05,0,Math.PI*2);g.stroke();g.lineWidth=R*.022;g.beginPath();g.arc(c,c,R-R*.17,0,Math.PI*2);g.stroke();
+ const top=(o.city||"MACERA").toLocaleUpperCase("tr-TR").slice(0,16);g.font=`900 ${Math.round(R*.12)}px "Nunito Sans",sans-serif`;g.textAlign="center";g.textBaseline="middle";
+ const rr=R-R*.11,span=Math.min(Math.PI*.95,top.length*R*.105/rr);let a=-Math.PI/2-span/2;[...top].forEach((ch,i,arr)=>{const aa=a+span*(i+.5)/arr.length;g.save();g.translate(c+Math.cos(aa)*rr,c+Math.sin(aa)*rr);g.rotate(aa+Math.PI/2);g.fillText(ch,0,0);g.restore();});
+ g.save();g.globalAlpha=.9;g.font=`${Math.round(R*.4)}px "Apple Color Emoji","Noto Color Emoji",sans-serif`;g.fillText(o.e||"🧭",c,c-R*.2);g.restore();
+ g.font=`900 ${Math.round(R*.135)}px "Nunito Sans",sans-serif`;const L=mWrap(g,(o.t||"").toLocaleUpperCase("tr-TR"),R*1.35,2);L.forEach((l,i)=>g.fillText(l,c,c+R*.2+i*R*.15-(L.length-1)*R*.02));
+ if(o.d){const a2=new Date(o.d+"T00:00");const dt=a2.getDate()+" "+MN_S[a2.getMonth()].toLocaleUpperCase("tr-TR")+" "+String(a2.getFullYear()).slice(2);g.font=`800 ${Math.round(R*.11)}px "Nunito Sans",sans-serif`;const y=c+R*.56;g.lineWidth=R*.015;g.beginPath();g.moveTo(c-R*.42,y-R*.1);g.lineTo(c+R*.42,y-R*.1);g.stroke();g.fillText(dt,c,y);}
+ /* mürekkep dokusu */
+ g.globalCompositeOperation="destination-out";let sd=(o.t||"x").length*97+13;const rnd=()=>{sd=(sd*9301+49297)%233280;return sd/233280;};for(let i=0;i<260;i++){g.globalAlpha=.25+rnd()*.6;g.beginPath();g.arc(rnd()*S,rnd()*S,rnd()*R*.035+.6,0,Math.PI*2);g.fill();}
+ g.globalCompositeOperation="source-over";g.globalAlpha=1;return cv;}
+
+/* bütünlüklü story: polaroid + görev başlığı + açıklama + mühür + marka */
+async function mStory(o){try{await document.fonts.ready;}catch(_){}const W=1080,HS=1920,cv=document.createElement("canvas");cv.width=W;cv.height=HS;const g=cv.getContext("2d"),c=o.c||"#2F7F72";
+ const bg=g.createLinearGradient(0,0,0,HS);bg.addColorStop(0,mMix(c,"#FFF4E6",.8));bg.addColorStop(.5,mMix(c,"#FFF1E2",.88));bg.addColorStop(1,mMix(c,"#FFFFFF",.7));g.fillStyle=bg;g.fillRect(0,0,W,HS);
+ g.fillStyle="rgba(255,214,140,.55)";g.beginPath();g.arc(860,620,100,0,Math.PI*2);g.fill();
+ const hill=(pts,c1,c2,y0,y1)=>{const gr=g.createLinearGradient(0,y0,0,y1);gr.addColorStop(0,c1);gr.addColorStop(1,c2);g.fillStyle=gr;g.beginPath();g.moveTo(0,y1);pts.forEach(([x,y])=>g.lineTo(x,y));g.lineTo(W,y1);g.closePath();g.fill();};
+ hill([[0,820],[140,700],[260,780],[420,620],[580,760],[720,650],[880,780],[1080,700]],mMix(c,"#FFFFFF",.55),mMix(c,"#FFFFFF",.82),620,1120);
+ hill([[0,960],[190,830],[350,920],[540,800],[710,910],[880,820],[1080,940]],mMix(c,"#FFFFFF",.25),mMix(c,"#FFFFFF",.6),800,1120);
+ const fog=g.createLinearGradient(0,980,0,1120);fog.addColorStop(0,"rgba(255,246,236,0)");fog.addColorStop(1,"rgba(255,246,236,1)");g.fillStyle=fog;g.fillRect(0,980,W,141);g.fillStyle="#FFF6EC";g.fillRect(0,1120,W,HS-1120);
+ const gb=g.createLinearGradient(0,1120,0,HS);gb.addColorStop(0,"#FFF6EC");gb.addColorStop(1,mMix(c,"#FFF6EC",.82));g.fillStyle=gb;g.fillRect(0,1120,W,HS-1120);
+ /* ip + polaroid */
+ g.strokeStyle="#A8743F";g.lineWidth=5;g.beginPath();g.moveTo(0,210);g.quadraticCurveTo(W/2,262,W,210);g.stroke();
+ const pw=600,ip=32,iw=pw-ip*2,ph=ip+iw+128;g.save();g.translate(W/2,240);g.rotate(-.035);g.shadowColor="rgba(40,30,20,.4)";g.shadowBlur=44;g.shadowOffsetY=22;g.fillStyle="#FBF7EE";g.fillRect(-pw/2,0,pw,ph);g.shadowColor="transparent";
+ const ix=-pw/2+ip,iy=ip;let ok=false;if(o.img){const im=await new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src=o.img;});if(im){const m=Math.min(im.width,im.height);g.drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,ix,iy,iw,iw);ok=true;}}
+ if(!ok){const pz=await mPose({e:o.stamp.e,t:o.title,c,city:o.stamp.city});const im=pz&&await new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src=pz;});if(im)g.drawImage(im,ix,iy,iw,iw);}
+ g.fillStyle="#2E2420";g.textAlign="left";g.textBaseline="alphabetic";g.font='600 48px "Caveat",cursive';mWrap(g,o.cm||"",iw-60,2).forEach((l,k)=>g.fillText(l,ix,iy+iw+60+k*48));
+ g.fillStyle="#C08A55";g.fillRect(-14,-44,28,60);g.restore();
+ /* mühür: polaroidin köşesine basılmış */
+ const st=mStampCanvas(o.stamp,138);g.save();g.translate(W/2+318,240+ph+8);g.rotate(o.stamp.r||-.2);g.globalAlpha=.9;g.globalCompositeOperation="multiply";g.drawImage(st,-st.width/2,-st.height/2);g.restore();
+ /* görev kartı */
+ let y=240+ph+120;g.textAlign="center";
+ g.font='900 26px "Nunito Sans",sans-serif';const kt=o.kind.toLocaleUpperCase("tr-TR");const kw=g.measureText(kt).width+56;g.fillStyle=mMix(c,"#000000",.1);g.beginPath();g.roundRect?g.roundRect(W/2-kw/2,y-36,kw,52,26):g.rect(W/2-kw/2,y-36,kw,52);g.fill();g.fillStyle="#fff";g.fillText(kt,W/2,y-1);y+=92;
+ g.fillStyle="#2E2420";g.font='76px "DM Serif Display",serif';mWrap(g,o.title,940,2).forEach(l=>{g.fillText(l,W/2,y);y+=80;});
+ if(o.desc){g.fillStyle=mMix(c,"#2E2420",.55);g.font='600 38px "Nunito Sans",sans-serif';y+=4;mWrap(g,o.desc,900,2).forEach(l=>{g.fillText(l,W/2,y);y+=50;});}
+ if(o.meta){g.fillStyle="#8A5A3A";g.font='800 30px "Nunito Sans",sans-serif';y+=8;g.fillText(o.meta,W/2,y);y+=30;}
+ y=Math.max(y+70,1560);await mfBrand(g,W/2,y,"Macera köşem");pzStamp(g,W/2,y+140,MPZ);
+ return cv;}
+
+/* etkinlik story'si */
+macShare=async function(e){const M=mac(),h=(M.hat||{})[e[0]]||{},t=SP_T[e[2]]||["🧭","Macera"],c=(MT_C[e[2]]||MT_C.macera)[0];
+ const cv=await mStory({img:PH["mac:"+e[0]]||PH.me,cm:h.cm||"",kind:(t[1]||"Macera")+" · etkinlik",title:e[1],desc:e[9]&&!/kayıt|kit|ücret|VK/i.test(e[9])?e[9]:(e[6]||""),meta:"🏅 "+mDateTxt(e[3])+(e[7]?" · "+e[7]:""),c,stamp:{city:e[7]||"",e:t[0],t:e[1],d:e[3]}});
+ bkCanvasShare(cv,"macera.png","#polaroidle #MeFirst");};
+/* mikro / kendi macera story'si */
+mLogShare=async function(l){const x=MM.find(y=>"mm:"+y[0]===l.k);
+ const cv=await mStory({img:PH["mac:"+l.id]||PH.me,cm:l.cm||"",kind:x?"Mikro macera 🎲":"Kendi maceram",title:l.t,desc:x?x[3]:"",meta:"🧭 "+mDateTxt(l.d)+(l.city?" · "+l.city:""),c:l.c||"#A8492A",stamp:{city:l.city||"",e:l.e,t:l.t,d:l.d}});
+ bkCanvasShare(cv,"macera.png","#polaroidle #MeFirst");};
+
+/* etkinlik sayfasına poz seçici */
+(function(){const _o=macOpen;macOpen=function(id){const prev=document.getElementById("mep-cm");const draft=prev?prev.value:null;_o.apply(this,arguments);try{const O=document.getElementById("mep"),e=macEv(id);if(!O||!e)return;const pol=O.querySelector(".mep-pol");if(!pol)return;
+  const ta=O.querySelector("#mep-cm");if(ta&&draft!=null&&!ta.value)ta.value=draft;const M=mac(),h=M.hat[id]||{},img=PH["mac:"+id];const cur=img?(h.ps||"gal"):"me";
+  pol.insertAdjacentHTML("afterend",`<div id="mep-pick">${mPickHTML(cur,img)}</div>`);const t=SP_T[e[2]]||["🧭",""];
+  mPickBind(O.querySelector("#mep-pick"),()=>({e:t[0],t:e[1],c:(MT_C[e[2]]||MT_C.macera)[0],city:e[7]||""}),(d,ps)=>{const keep=(O.querySelector("#mep-cm")||{}).value||"";if(d){PH["mac:"+id]=d;if(!phSave()){delete PH["mac:"+id];alertSoft("Fotoğraf için yer kalmadı; daha küçük bir fotoğraf dener misin?");}}else{delete PH["mac:"+id];phSave();}
+   M.hat[id]=Object.assign({},M.hat[id]||{},{ps});save();macOpen(id);const t2=document.getElementById("mep-cm");if(t2&&keep)t2.value=keep;});}catch(err){console.error(err);}};})();
+
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
