@@ -13435,7 +13435,7 @@ function ksrRow(r){const c=trCol(r.t);const tag=r.hot?`<em class="hot">🔥 ${es
  return `<button type="button" class="ksr" data-kq="${esc(r.t)}" data-kqa="${esc(r.a)}"><span class="cv"${r.img?"":` data-cvt="${esc(r.t)}" data-cva="${esc(r.a)}"`} style="--c1:${c[0]};--c2:${c[1]}">${r.img?`<img src="${esc(r.img)}" alt="" loading="lazy" onerror="this.remove()">`:`<b>${esc(r.t.slice(0,30))}</b>`}</span><span class="tx"><strong>${esc(r.t)}</strong><small>${esc([r.a,r.y].filter(Boolean).join(" · "))}</small>${tag}</span></button>`;}
 function ktSearch(q){ktQ=q;const box=document.getElementById("kt-qr"),X=document.getElementById("kt-qx");if(X)X.hidden=!q;if(!box)return;q=q.trim();const my=++ktQS;clearTimeout(ktQT);
  if(q.length<2){box.innerHTML="";return;}const n=ktN(q),M=new Map();
- const key=(t,a)=>ktN(t)+"|"+(ktN(a||"").split(" ").pop()||"");
+ const key=(t,a)=>mfFold(t).replace(/\s+/g,"")+"|"+(mfFold(a||"").split(" ").pop()||"");
  const add=(o)=>{const k=key(o.t,o.a);const ex=M.get(k);if(ex){if(!ex.img&&o.img)ex.img=o.img;if(!ex.y&&o.y)ex.y=o.y;if(o.hot)ex.hot=o.hot;return;}M.set(k,o);};
  const hit=(t,a)=>ktN(t).includes(n)||ktN(a||"").includes(n);
  (SB_TR.books||[]).forEach(b=>{if(hit(b.t,b.a))add({t:b.t,a:b.a,src:"tr",hot:trBookBits(b)});});
@@ -13534,9 +13534,9 @@ setTimeout(()=>{try{poolMine().slice(0,80).forEach(([t,a])=>poolTouch(t,a,"add")
 (function(){const _b=bookOpenAny;bookOpenAny=function(t,a){try{poolTouch(t,a||"","view");}catch(e){}return _b.apply(this,arguments);};
  const _l=libBookOpen;libBookOpen=function(i){try{const x=klib()[i];if(x)poolTouch(x.t,x.a||"","view");}catch(e){}return _l.apply(this,arguments);};})();
 function ktPoolInject(){const P=document.getElementById("ktpanel");if(!P||kttab!=="oneri")return;const o=document.getElementById("kt-pool");if(o)o.remove();
- const mine=new Set(poolMine().map(([t])=>ktN(t)));const A=(POOL.list||[]).filter(b=>b.adds>0||b.views>0);const L=A.filter(b=>!mine.has(ktN(b.title))).concat(A.filter(b=>mine.has(ktN(b.title)))).slice(0,20);if(!L.length)return;
+ const F0=t=>(typeof mfFold==="function"?mfFold(t):ktN(t)).replace(/\s+/g,"");const mine=new Set(poolMine().map(([t])=>F0(t)));const A=(POOL.list||[]).filter(b=>b.adds>0||b.views>0);const L=A.filter(b=>!mine.has(F0(b.title))).concat(A.filter(b=>mine.has(F0(b.title)))).slice(0,20);if(!L.length)return;
  const anchor=document.getElementById("kt-live");if(!anchor)return;
- anchor.insertAdjacentHTML("beforebegin",`<div id="kt-pool"><div class="kthead"><span>Me First ailesinin rafından 👭</span><small>${A.length} kitap</small></div><div class="ktrow">${L.map(b=>ktCard([[b.title,b.author||"",[],"","",""],0,mine.has(ktN(b.title))?(b.adds>1?`✓ Sende ve ${b.adds-1} okurda daha`:"✓ Senin rafından"):b.adds?`👭 ${b.adds} okurun rafında`:`👀 ${b.views} okur baktı`])).join("")}</div></div>`);
+ anchor.insertAdjacentHTML("beforebegin",`<div id="kt-pool"><div class="kthead"><span>Me First ailesinin rafından 👭</span><small>${A.length} kitap</small></div><div class="ktrow">${L.map(b=>ktCard([[b.title,b.author||"",[],"","",""],0,mine.has(F0(b.title))?(b.adds>1?`✓ Sende ve ${b.adds-1} okurda daha`:"✓ Senin rafından"):b.adds?`👭 ${b.adds} okurun rafında`:`👀 ${b.views} okur baktı`])).join("")}</div></div>`);
  ktBindBar(document.getElementById("kt-pool"));}
 (function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{ktPoolInject();}catch(e){}};})();
 setTimeout(()=>poolLoad(false).then(()=>{if(step===90)try{ktPoolInject();}catch(e){}}),1800);
@@ -16081,6 +16081,24 @@ function mmAll(){let f="";const draw=O=>{const L=MM.filter(x=>!f||(f==="fit"?mmF
   if(c){put(c);return;}
   fetch(`https://api.open-meteo.com/v1/forecast?latitude=${la}&longitude=${lo}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=auto&start_date=${e[3]}&end_date=${e[3]}`).then(r=>r.ok?r.json():null).then(j=>{if(!j||!j.daily||!j.daily.time||!j.daily.time.length)return;const D=j.daily;const w={c:D.weather_code[0],mx:D.temperature_2m_max[0],mn:D.temperature_2m_min[0],p:D.precipitation_probability_max?D.precipitation_probability_max[0]:null};try{sessionStorage.setItem(k,JSON.stringify(w));}catch(_){}if(document.getElementById("mep")===O)put(w);}).catch(()=>{});}catch(err){console.error(err);}};})();
 
+
+/* v0.34.2 havuz tekrarlarını birleştir (Türkçe harf, büyük harf, alt başlık) */
+function mfFold(x){return ktN(x).replace(/[çğıöşüâîû]/g,c=>({ç:"c",ğ:"g",ı:"i",ö:"o",ş:"s",ü:"u",â:"a",î:"i",û:"u"})[c]);}
+function poolDedup(L){if(!Array.isArray(L))return L;const TK=t=>mfFold(t).replace(/\s+/g,"");const AW=a=>mfFold(a).split(" ").filter(w=>w.length>2);
+ const sameAu=(a,b)=>{const A=AW(a),B=AW(b);return !A.length||!B.length||A.some(w=>B.includes(w));};
+ const nice=t=>{t=String(t||"");const up=t.length>3&&t===t.toLocaleUpperCase("tr-TR");return (up?-50:0)+(t.match(/[çğıöşüÇĞİÖŞÜ]/g)||[]).length;};
+ const out=[],by=new Map();
+ const merge=(w,e)=>{w.adds=(w.adds||0)+(e.adds||0);w.views=(w.views||0)+(e.views||0);
+  if(!w.cover&&e.cover){w.cover=e.cover;if(nice(e.title)>=nice(w.title))w.title=e.title;if(e.author)w.author=e.author;}else if(!(e.cover&&!w.cover)&&nice(e.title)>nice(w.title)&&TK(e.title)===TK(w.title))w.title=e.title;
+  if(!w.author&&e.author)w.author=e.author;(w._al=w._al||[]).push([e.title,e.author]);};
+ L.forEach(b0=>{if(!b0||!b0.title)return;const b=Object.assign({},b0);const k=TK(b.title);const arr=by.get(k)||[];const x=arr.find(y=>sameAu(y.author,b.author));
+  if(x)merge(x,b);else{arr.push(b);by.set(k,arr);out.push(b);}});
+ /* "Verity" + "Verity: Gerçeğin Diğer Kıyısı": biri kapaksızsa birleşir (seriler kapaklı olduğundan ayrı kalır) */
+ out.forEach(e=>{if(e._dead)return;const m=String(e.title).match(/^(.{2,}?)\s*(?::|\s[-–—]\s)\s*\S/);if(!m)return;const base=TK(m[1]);if(!base||base===TK(e.title))return;
+  const t=(by.get(base)||[]).find(b=>b!==e&&!b._dead&&sameAu(b.author,e.author)&&(!b.cover||!e.cover));if(!t)return;
+  if(e.cover&&!t.cover){merge(e,t);t._dead=1;}else{merge(t,e);e._dead=1;}});
+ const R=out.filter(b=>!b._dead);R.forEach(b=>{(b._al||[]).forEach(([t,a])=>{try{if(b.cover&&!covGet(t,a))covSet(t,a,b.cover);}catch(_){}});delete b._al;});return R;}
+(function(){let _L=POOL.list;try{_L=Array.isArray(_L)?poolDedup(_L):_L;Object.defineProperty(POOL,"list",{configurable:true,enumerable:true,get(){return _L;},set(v){try{_L=Array.isArray(v)?poolDedup(v):v;}catch(e){_L=v;}}});}catch(e){}})();
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
