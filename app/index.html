@@ -16191,7 +16191,7 @@ mLogShare=async function(l){const x=MM.find(y=>"mm:"+y[0]===l.k);
 
 /* etkinlik sayfasına poz seçici */
 (function(){const _o=macOpen;macOpen=function(id){const prev=document.getElementById("mep-cm");const draft=prev?prev.value:null;_o.apply(this,arguments);try{const O=document.getElementById("mep"),e=macEv(id);if(!O||!e)return;const pol=O.querySelector(".mep-pol");if(!pol)return;
-  const ta=O.querySelector("#mep-cm");if(ta&&draft!=null&&!ta.value)ta.value=draft;const M=mac(),h=M.hat[id]||{},img=PH["mac:"+id];const cur=img?(h.ps||"gal"):"me";
+  const ta=O.querySelector("#mep-cm");if(ta&&draft!=null&&!ta.value)ta.value=draft;const sv0=O.querySelector("#mep-save"),h0=mac().hat[id]||{};if(sv0&&ta&&(h0.cm||PH["mac:"+id])&&O.querySelector("#mep-share")){const orig=ta.value;sv0.hidden=true;ta.addEventListener("input",()=>{sv0.hidden=ta.value===orig;});}const M=mac(),h=M.hat[id]||{},img=PH["mac:"+id];const cur=img?(h.ps||"gal"):"me";
   pol.insertAdjacentHTML("afterend",`<div id="mep-pick">${mPickHTML(cur,img)}</div>`);const t=SP_T[e[2]]||["🧭",""];
   mPickBind(O.querySelector("#mep-pick"),()=>({e:t[0],t:e[1],c:(MT_C[e[2]]||MT_C.macera)[0],city:e[7]||""}),(d,ps)=>{const keep=(O.querySelector("#mep-cm")||{}).value||"";if(d){PH["mac:"+id]=d;if(!phSave()){delete PH["mac:"+id];alertSoft("Fotoğraf için yer kalmadı; daha küçük bir fotoğraf dener misin?");}}else{delete PH["mac:"+id];phSave();}
    M.hat[id]=Object.assign({},M.hat[id]||{},{ps});save();macOpen(id);const t2=document.getElementById("mep-cm");if(t2&&keep)t2.value=keep;});}catch(err){console.error(err);}};})();
