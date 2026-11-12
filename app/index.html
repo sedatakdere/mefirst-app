@@ -15345,7 +15345,12 @@ function kshStock(){const K=kt();const M=new Map();const fv=new Set((K.fav||[]).
  KT_BOOKS.forEach(b=>{const x=add(b[0],b[1],b[2],"kb");if(!x)return;x.kb=1;x.d=b[4]||"";x.pub=b[3]||"";try{const r=ktScore(b);x.s=r[0];x.why=r[1];}catch(e){}});
  try{(TRCAT.list||[]).forEach(b=>{const x=add(b.t,b.a,b.g,"cat");if(x&&!x.pub&&b.p)x.pub=b.p;});}catch(e){}
  try{(POOL.list||[]).forEach(b=>{if(!b||!b.title)return;const x=add(b.title,b.author,[],"pool");if(x){x.adds+=b.adds||0;x.views+=b.views||0;if(b.cover&&!x.cov){x.cov=b.cover;if(x.rank===2){x.t=String(b.title).trim();if(b.author)x.a=String(b.author).trim();}}}});}catch(e){}
- const L=[...M.values()].flat().filter(x=>x.a||x.kb);L.forEach(x=>{x.t=TC(x.t);x.a=TC(x.a);});L.forEach(x=>{if(x.cov){try{const c=covGet(x.t,x.a);if(!c)covSet(x.t,x.a,x.cov);}catch(e){}}});
+ /* alt başlık birleştirme: "Verity" + "Verity: Gerçeğin Diğer Kıyısı" (aynı yazar) */
+ {const all=[...M.values()].flat();const byK=new Map();all.forEach(e=>{const k=TK(e.t);(byK.get(k)||byK.set(k,[]).get(k)).push(e);});
+  all.forEach(e=>{if(e.dead)return;const m=e.t.match(/^(.{2,}?)\s*(?::|\s[-–—]\s)\s*\S/);if(!m)return;const base=TK(m[1]);if(!base||base===TK(e.t))return;
+   const tgt=(byK.get(base)||[]).find(b=>b!==e&&!b.dead&&b.rank!==e.rank&&sameAu(b.a,e.a)&&!/[:–—]|\s-\s/.test(b.t));if(!tgt)return;
+   if(e.rank<=1||!tgt.cov){tgt.t=e.t;if(e.a)tgt.a=e.a;}e.g.forEach(z=>{if(!tgt.g.includes(z))tgt.g.push(z);});tgt.adds+=e.adds;tgt.views+=e.views;if(!tgt.d)tgt.d=e.d;if(!tgt.pub)tgt.pub=e.pub;if(!tgt.cov&&e.cov)tgt.cov=e.cov;tgt.kb=tgt.kb||e.kb;if(tgt.s===null)tgt.s=e.s;e.dead=1;});}
+ const L=[...M.values()].flat().filter(x=>!x.dead&&(x.a||x.kb));L.forEach(x=>{x.t=TC(x.t);x.a=TC(x.a);});L.forEach(x=>{if(x.cov){try{const c=covGet(x.t,x.a);if(!c)covSet(x.t,x.a,x.cov);}catch(e){}}});
  L.forEach(x=>{if(x.s===null){let s=0;if(ktFollow(x.a)){s+=6;x.why=`${x.a} hayranısın 😏`;}const g=x.g.filter(z=>K.gen.includes(z));s+=2*g.length;if(g.length&&!x.why)x.why=KT_WHY[g[0]]||"";
    s+=Math.min(x.adds,10)*.4+Math.min(x.views,30)*.05;if(x.g.includes("cocuk")&&!K.gen.includes("cocuk"))s-=4;x.s=s;}
   if(fv.has(ktN(x.t)))x.s-=20;});
