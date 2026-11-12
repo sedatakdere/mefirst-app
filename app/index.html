@@ -13102,7 +13102,7 @@ function bookOpen(i,anim,X){const L=klib(),x=X||L[i];if(!x)return;try{bkRsPull(x
  const gx=g("bk-galx");if(gx)gx.onclick=()=>{delete PH[bkKey(x)];phSave();re();};
  const hg=g("bk-hang");if(hg)hg.onclick=()=>{const v=(ta.value||"").trim();if(!v){ta.focus();ta.placeholder="Önce bir cümle yaz, sonra asalım 🧷";return;}x.cm=v;x.cmd=dkey();delete x.cmdraft;if(!x.rs)x.rs="read";save();sbHang(x);try{sndPlay("bag");}catch(e){}if(navigator.vibrate)try{navigator.vibrate([20,40,20]);}catch(e){}re("hang");setTimeout(()=>{const l=g("bk-line");if(l)l.scrollIntoView({behavior:"smooth",block:"center"});},60);};
  const pd=g("bk-pdel");if(pd)pd.onclick=()=>{if(!pd.dataset.sure){pd.dataset.sure=1;pd.textContent="?";setTimeout(()=>{if(pd.isConnected){delete pd.dataset.sure;pd.textContent="✕";}},2500);return;}x.cmdraft=x.cm;delete x.cm;delete x.cmd;save();sbUnhang(x);re();};
- const sh=g("bk-share");if(sh)sh.onclick=()=>{pzClip();bkShare(x,c);};
+ const sh=g("bk-share");if(sh)sh.onclick=()=>bkShare(x,c);
  const qa=g("bk-qadd");if(qa)qa.onclick=()=>{const t=g("bk-qt").value.trim();if(!t){g("bk-qt").focus();return;}x.q=x.q||[];const nq={t,p:g("bk-qp").value.trim()};x.q.push(nq);save();sbQuote(x,nq);re();};
  O.querySelectorAll("[data-qs]").forEach(b=>b.onclick=e=>{e.stopPropagation();bkQuoteShare(x,(x.q||[])[+b.dataset.qs],bkCol(x.t));});
  O.querySelectorAll("[data-qx]").forEach(b=>b.onclick=()=>{const rq=x.q.splice(+b.dataset.qx,1)[0];save();if(rq&&rq.sid)sbReq("DELETE","quotes?id=eq."+rq.sid);re();});
