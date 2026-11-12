@@ -16438,13 +16438,13 @@ function yolNew(pre){pre=pre||{};const free=!pre.title;const city=pre.city||yolC
  O.querySelectorAll("[data-yidea]").forEach(b=>b.onclick=()=>{O._close();setTimeout(()=>yIdeaNew(b.dataset.yidea),260);});
  O.querySelectorAll("[data-ys]").forEach(b=>b.onclick=()=>{seats=+b.dataset.ys;O.querySelectorAll("[data-ys]").forEach(z=>z.setAttribute("aria-pressed",z===b));});
  O.querySelectorAll("[data-yw]").forEach(b=>b.onclick=()=>{who=b.dataset.yw;O.querySelectorAll("[data-yw]").forEach(z=>z.setAttribute("aria-pressed",z===b));});
- q("#yf-ok").onclick=async()=>{const E=q("#yf-e");const err=(m,f)=>{E.hidden=false;E.textContent=m;if(f)q(f).focus();};E.hidden=true;
+ q("#yf-ok").onclick=async()=>{const E=q("#yf-e");const err=(m,f)=>{E.hidden=false;E.textContent=m;if(f)q(f).focus();else{E.scrollIntoView({block:"center",behavior:"smooth"});yToast(m);}};E.hidden=true;
   const title=free?(q("#yf-t").value||"").trim():pre.title;if(!title||title.length<2)return err("Nereye gideceğinizi bir cümleyle yaz ✨","#yf-t");
   const ci=q("#yf-ci").value;if(!ci)return err("Şehri seç 📍","#yf-ci");const m=(q("#yf-m").value||"").trim();if(m.length<3)return err("Buluşma noktasını yaz; herkes nerede buluşacağını bilsin 📍","#yf-m");
   const d=q("#yf-d").value;if(!d||d<dkey())return err("Bugün ya da ileri bir gün seç 📅","#yf-d");
   if(!await yolGate())return;const b=q("#yf-ok");b.disabled=true;b.textContent="Yayınlanıyor…";
   const p={kind:pre.kind||"own",ref:pre.ref||"",title,emoji:free?em:(pre.emoji||"🧭"),color:/^#[0-9a-f]{6}$/i.test(col)?col:"#2F7F72",city:ci,town:(q("#yf-tw").value||"").trim(),meet:m,day:d,tm:q("#yf-tm").value||"",seats,who,note:(q("#yf-n").value||"").trim()};
-  const r=await yRpc("yol_post",{p_id:null,p});if(r.err){b.disabled=false;b.innerHTML=Y_ICO+"Daveti yayınla";return err(SF.missing?"Yol arkadaşı çok yakında açılıyor 🧭":yolErr(r.err));}
+  const r=await yRpc("yol_post",{p_id:null,p});if(r.err){b.disabled=false;b.innerHTML=Y_ICO+"Daveti yayınla";console.warn("yol_post",r);return err(SF.missing||r.code===404?"Davet şu an yayınlanamadı: Yol arkadaşı sunucuda henüz açılmamış 🧭":yolErr(r.err)+(r.code?" ("+r.code+")":""));}
   yolCitySet(ci);O._close();try{mfConfetti("Davetin yolda! ✨",["#FFB38A","#6FBFA6","#FFD45C","#fff"],"linear-gradient(135deg,#F2A27E,#1E4D5C)");}catch(e){}
   YOL.at=0;yolLoad(true);const id=r.data;setTimeout(()=>yolOpen(id),500);try{const ev=document.getElementById("mep");if(ev&&pre.kind==="ev")yolEvSec(pre.ref);}catch(e){}};}
 
