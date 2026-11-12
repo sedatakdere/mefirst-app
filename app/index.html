@@ -16159,22 +16159,22 @@ async function mStory(o){try{await document.fonts.ready;}catch(_){}const W=1080,
  hill([[0,960],[190,830],[350,920],[540,800],[710,910],[880,820],[1080,940]],mMix(c,"#FFFFFF",.25),mMix(c,"#FFFFFF",.6),800,1120);
  const fog=g.createLinearGradient(0,980,0,1120);fog.addColorStop(0,"rgba(255,246,236,0)");fog.addColorStop(1,"rgba(255,246,236,1)");g.fillStyle=fog;g.fillRect(0,980,W,141);g.fillStyle="#FFF6EC";g.fillRect(0,1120,W,HS-1120);
  const gb=g.createLinearGradient(0,1120,0,HS);gb.addColorStop(0,"#FFF6EC");gb.addColorStop(1,mMix(c,"#FFF6EC",.82));g.fillStyle=gb;g.fillRect(0,1120,W,HS-1120);
- /* ip + polaroid */
- g.strokeStyle="#A8743F";g.lineWidth=5;g.beginPath();g.moveTo(0,210);g.quadraticCurveTo(W/2,262,W,210);g.stroke();
- const pw=600,ip=32,iw=pw-ip*2,ph=ip+iw+128;g.save();g.translate(W/2,240);g.rotate(-.035);g.shadowColor="rgba(40,30,20,.4)";g.shadowBlur=44;g.shadowOffsetY=22;g.fillStyle="#FBF7EE";g.fillRect(-pw/2,0,pw,ph);g.shadowColor="transparent";
- const ix=-pw/2+ip,iy=ip;let ok=false;if(o.img){const im=await new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src=o.img;});if(im){const m=Math.min(im.width,im.height);g.drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,ix,iy,iw,iw);ok=true;}}
- if(!ok){const pz=await mPose({e:o.stamp.e,t:o.title,c,city:o.stamp.city});const im=pz&&await new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src=pz;});if(im)g.drawImage(im,ix,iy,iw,iw);}
- g.fillStyle="#2E2420";g.textAlign="left";g.textBaseline="alphabetic";g.font='600 48px "Caveat",cursive';mWrap(g,o.cm||"",iw-60,2).forEach((l,k)=>g.fillText(l,ix,iy+iw+60+k*48));
- g.fillStyle="#C08A55";g.fillRect(-14,-44,28,60);g.restore();
+ /* ip + polaroid: kitap köşemdeki polaroidle birebir aynı ölçü */
+ const PT=190;g.strokeStyle="#A8743F";g.lineWidth=5;g.beginPath();g.moveTo(0,PT-60);g.quadraticCurveTo(W/2,PT-10,W,PT-60);g.stroke();
+ const pw=660,ph=900,ix=-pw/2+36,iy=36,iw=pw-72;g.save();g.translate(W/2,PT);g.rotate(-.045);g.shadowColor="rgba(0,0,0,.45)";g.shadowBlur=50;g.shadowOffsetY=30;g.fillStyle="#FBF7EE";g.fillRect(-pw/2,0,pw,ph);g.shadowColor="transparent";
+ let src=o.img;if(!src)src=await mPose({e:o.stamp.e,t:o.title,c,city:o.stamp.city});
+ if(src){const im=await new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src=src;});if(im){const m=Math.min(im.width,im.height);g.drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,ix,iy,iw,iw);}}
+ if(o.cm){g.fillStyle="#2E2420";g.textAlign="left";g.textBaseline="alphabetic";g.font='600 50px "Caveat",cursive';let l2=mWrap(g,"“"+o.cm+"”",iw,3);if(l2.length===3&&/…$/.test(l2[2]))l2[2]+="”";l2.forEach((l,k)=>g.fillText(l,ix,iy+iw+64+k*52));}
+ g.textAlign="left";g.font='800 24px "Nunito Sans",sans-serif';g.fillStyle="#8A6E5E";g.fillText(o.meta||"",ix,ph-40);
+ g.fillStyle="#C08A55";g.fillRect(-14,-50,28,68);g.restore();
  /* mühür: polaroidin köşesine basılmış */
- const st=mStampCanvas(o.stamp,138);g.save();g.translate(W/2+318,240+ph+8);g.rotate(o.stamp.r||-.2);g.globalAlpha=.9;g.globalCompositeOperation="multiply";g.drawImage(st,-st.width/2,-st.height/2);g.restore();
+ const st=mStampCanvas(o.stamp,132);g.save();g.translate(W/2+320,PT+ph-70);g.rotate(o.stamp.r||-.2);g.globalAlpha=.9;g.globalCompositeOperation="multiply";g.drawImage(st,-st.width/2,-st.height/2);g.restore();
  /* görev kartı */
- let y=240+ph+120;g.textAlign="center";
- g.font='900 26px "Nunito Sans",sans-serif';const kt=o.kind.toLocaleUpperCase("tr-TR");const kw=g.measureText(kt).width+56;g.fillStyle=mMix(c,"#000000",.1);g.beginPath();g.roundRect?g.roundRect(W/2-kw/2,y-36,kw,52,26):g.rect(W/2-kw/2,y-36,kw,52);g.fill();g.fillStyle="#fff";g.fillText(kt,W/2,y-1);y+=92;
- g.fillStyle="#2E2420";g.font='76px "DM Serif Display",serif';mWrap(g,o.title,940,2).forEach(l=>{g.fillText(l,W/2,y);y+=80;});
- if(o.desc){g.fillStyle=mMix(c,"#2E2420",.55);g.font='600 38px "Nunito Sans",sans-serif';y+=4;mWrap(g,o.desc,900,2).forEach(l=>{g.fillText(l,W/2,y);y+=50;});}
- if(o.meta){g.fillStyle="#8A5A3A";g.font='800 30px "Nunito Sans",sans-serif';y+=8;g.fillText(o.meta,W/2,y);y+=30;}
- y=Math.max(y+70,1560);await mfBrand(g,W/2,y,"Macera köşem");pzStamp(g,W/2,y+140,MPZ);
+ let y=PT+ph+110;g.textAlign="center";g.textBaseline="alphabetic";
+ g.font='900 26px "Nunito Sans",sans-serif';const kt=o.kind.toLocaleUpperCase("tr-TR");const kw=g.measureText(kt).width+56;g.fillStyle=mMix(c,"#000000",.1);g.beginPath();g.roundRect?g.roundRect(W/2-kw/2,y-36,kw,52,26):g.rect(W/2-kw/2,y-36,kw,52);g.fill();g.fillStyle="#fff";g.fillText(kt,W/2,y-1);y+=84;
+ g.fillStyle="#2E2420";g.font='68px "DM Serif Display",serif';mWrap(g,o.title,940,2).forEach(l=>{g.fillText(l,W/2,y);y+=72;});
+ if(o.desc){g.fillStyle=mMix(c,"#2E2420",.55);g.font='600 34px "Nunito Sans",sans-serif';mWrap(g,o.desc,920,2).forEach(l=>{g.fillText(l,W/2,y);y+=44;});}
+ y+=50;await mfBrand(g,W/2,y,"Macera köşem");pzStamp(g,W/2,y+132,MPZ);
  return cv;}
 
 /* etkinlik story'si */
