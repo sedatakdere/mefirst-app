@@ -7341,7 +7341,14 @@ html[data-mf=dusk] .mbd{background:rgba(255,255,255,.06)}html[data-mf=dusk] .mbd
 html[data-mf=dusk] .mep-wx{background:linear-gradient(135deg,#1E3440,#18303A);color:#d6eaf2}
 html[data-mf=dusk] .mm-tags span{color:#fff;background:color-mix(in srgb,var(--c) 35%,transparent)}
 html[data-mf=dusk] .mm-ems button{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
-.mcover .mc-mast{font-size:52px!important;margin:2px 0 12px!important}.mcover .mc-l1 b{font-size:20px}.mcover .mc-lines{padding-bottom:52px}.mcover .mc-stk{width:74px;height:74px;bottom:58px}</style>
+.mcover .mc-mast{font-size:52px!important;margin:2px 0 12px!important}.mcover .mc-l1 b{font-size:20px}.mcover .mc-lines{padding-bottom:52px}.mcover .mc-stk{width:74px;height:74px;bottom:58px}
+.mpz-hang,.mpz-sh{display:flex!important;align-items:center;justify-content:center;gap:10px;border:0!important;color:#fff!important}
+.mpz-hang{background:linear-gradient(135deg,#FFB38A,#F2A27E 35%,#4E9C8C)!important;box-shadow:0 12px 24px -12px #4E9C8C}
+.mpz-sh{background:linear-gradient(135deg,#2F7F72,#1E4D5C)!important;box-shadow:0 12px 24px -12px #1E4D5C}
+.mpz-hang .bk-pzw,.mpz-sh .bk-pzw{font-size:18px;white-space:nowrap}.mep-hat .mep-act .mpz-hang{flex:0 1 44%}.mep-hat .mep-act .mpz-sh{flex:1 1 52%}
+.mpzi::before{background:linear-gradient(135deg,#FFB38A,#4E9C8C 60%,#1E4D5C)!important}
+.mep-hat .mep-act{flex-wrap:wrap}.mep-hat .mep-act .mbtn{flex:1 1 140px}
+</style>
 
 <div id="mf-splash" aria-hidden="true"><div class="sp-bokeh"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sp-glow"></div><div class="sp-dust" id="sp-dust"></div><div class="sp-flash"></div><div class="sp-ring r1"></div><div class="sp-ring r2"></div><div class="sp-ring r3"></div><i class="sp-s" style="--x:-118px;--y:-96px;--d:1.1s">✦</i><i class="sp-s" style="--x:112px;--y:-70px;--d:1.3s">✧</i><i class="sp-s" style="--x:-96px;--y:66px;--d:1.5s">✧</i><i class="sp-s" style="--x:120px;--y:92px;--d:1.2s">✦</i><i class="sp-s" style="--x:4px;--y:-142px;--d:1.6s">✦</i><i class="sp-s" style="--x:-140px;--y:-10px;--d:1.75s">·</i><i class="sp-s" style="--x:146px;--y:12px;--d:1.4s">·</i><svg class="sp-ekg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="ek-b" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-l" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/><path class="ek-h" d="M0 100 H200 L215 90 L228 100 L238 100 L250 30 L263 160 L276 100 L292 100 L308 80 L326 100 H700 L715 90 L728 100 L738 100 L750 30 L763 160 L776 100 L792 100 L808 80 L826 100 H1000" pathLength="1000"/></svg><div class="sp-heart" id="sp-heart"><div class="sp-hin"><svg viewBox="0 0 512 512" aria-hidden="true"><defs>
 <radialGradient id="spH" cx=".34" cy=".28" r=".85"><stop offset="0" stop-color="#FFEFF4"/><stop offset=".32" stop-color="#F6C4D4"/><stop offset=".7" stop-color="#E79CB7"/><stop offset="1" stop-color="#BF8AAE"/></radialGradient>
@@ -13831,8 +13838,8 @@ function macOpen(id){const e=macEv(id);if(!e)return;let O=document.getElementByI
   <div class="mep-b"><div class="mep-info"><div><small>Nerede</small><b>${esc([e[6],e[7]].filter((v,i,a)=>v&&a.indexOf(v)===i).join(", ")||"—")}</b>${evNearB(e)}</div><div><small>Ne zaman</small><b>${past?"Geçti":dd<=0?"Bugün":dd===1?"Yarın":dd+" gün sonra"}</b></div></div>
   ${e[9]?`<p class="mep-note">${esc(e[9])}</p>`:""}
   <div class="mep-act">${past?"":`<button type="button" class="mgo${go?" on":""}" id="mep-go">${go?"✓ Gidiyorum":"Ben de gidiyorum 🙋‍♀️"}</button>`}<a class="mbtn" href="${esc(link)}" target="_blank" rel="noopener">${e[8]&&/^https:/.test(e[8])?"Etkinlik sayfası ↗":"Google'da ara ↗"}</a>${past?"":`<button type="button" class="mbtn" id="mep-ics">📅 Takvimime ekle</button>`}</div>
-  ${(go||past)?`<section class="mep-hat"><h4>${past?"Hatıranı as 🧷":"Hatıra ipin"}</h4>${past||go?`<div class="mep-pol"><span class="clip"></span><label class="im" for="mep-ph">${ph?`<img src="${ph}" alt="">`:`<span>📷<br>Fotoğraf ekle</span>`}</label><input type="file" id="mep-ph" accept="image/*" hidden><textarea id="mep-cm" maxlength="160" placeholder="${past?"Nasıldı? Bir cümleyle anlat…":"Etkinlikten sonra buraya hislerini yazarsın"}">${esc(h.cm||"")}</textarea></div>
-   <div class="mep-act"><button type="button" class="mbtn" id="mep-save">Kaydet</button>${(ph||h.cm)?`<button type="button" class="mbtn pri" id="mep-share">📸 Hikâyede paylaş</button>`:""}</div>`:""}</section>`:""}
+  ${(go||past)?`<section class="mep-hat"><h4>${past?"Maceranı polaroidle 🧷":"Macera polaroidin 🧷"}</h4>${past||go?`<div class="mep-pol"><span class="clip"></span><label class="im" for="mep-ph">${ph?`<img src="${ph}" alt="">`:`<span>📷<br>Fotoğraf ekle</span>`}</label><input type="file" id="mep-ph" accept="image/*" hidden><textarea id="mep-cm" maxlength="160" placeholder="${past?"Nasıldı? Bir cümleyle anlat…":"Etkinlikten sonra buraya hislerini yazarsın"}">${esc(h.cm||"")}</textarea></div>
+   <div class="mep-act"><button type="button" class="mbtn mpz-hang" id="mep-save"><span class="bk-pzi mpzi"></span><b class="bk-pzw">Polaroidle</b></button>${(ph||h.cm)?`<button type="button" class="mbtn mpz-sh" id="mep-share"><b class="bk-pzw">Story'de Polaroidle ↗</b></button>`:""}</div>`:""}</section>`:""}
   </div>`;
  const close=back=>{O.classList.remove("on");setTimeout(()=>O.remove(),220);if(!back){try{history.back();}catch(_){}}if(step===95)macRender();};window.macClose=close;
  if(fresh)requestAnimationFrame(()=>O.classList.add("on"));else O.classList.add("on");
@@ -13840,7 +13847,7 @@ function macOpen(id){const e=macEv(id);if(!e)return;let O=document.getElementByI
  const g=O.querySelector("#mep-go");if(g)g.onclick=()=>{if(M.go[id])delete M.go[id];else{M.go[id]={d:dkey()};try{mfConfetti("Maceran takvimde! 🧭",["#6FBFA6","#FF8A5B","#FFD45C","#fff"],"linear-gradient(135deg,#3E8C80,#1E4D5C)");}catch(_){}}save();macOpen(id);};
  const ic=O.querySelector("#mep-ics");if(ic)ic.onclick=()=>macIcs(e);
  const pf=O.querySelector("#mep-ph");if(pf)pf.onchange=()=>{const f=pf.files[0];if(!f)return;phRead(f,d=>{PH["mac:"+id]=d;phSave();macOpen(id);},{w:720,h:720});};
- const sv=O.querySelector("#mep-save");if(sv)sv.onclick=()=>{M.hat[id]={cm:O.querySelector("#mep-cm").value.trim(),d:dkey()};M.go[id]=M.go[id]||{d:dkey()};save();macOpen(id);};
+ const sv=O.querySelector("#mep-save");if(sv)sv.onclick=()=>{const first=!(M.hat[id]&&(M.hat[id].cm||PH["mac:"+id]));M.hat[id]={cm:O.querySelector("#mep-cm").value.trim(),d:dkey()};M.go[id]=M.go[id]||{d:dkey()};save();macOpen(id);if(first&&(M.hat[id].cm||PH["mac:"+id]))try{mfConfetti("Polaroidlendi! 🧷",["#FFB38A","#6FBFA6","#FFD45C","#fff"],"linear-gradient(135deg,#F2A27E,#1E4D5C)");}catch(_){}};
  const sh=O.querySelector("#mep-share");if(sh)sh.onclick=()=>macShare(e);}
 window.addEventListener("popstate",()=>{const O=document.getElementById("mep");if(O&&window.macClose)window.macClose(true);});
 async function macShare(e){try{await document.fonts.ready;}catch(_){}const M=mac(),h=M.hat[e[0]]||{},W=1080,HS=1920,cv=document.createElement("canvas");cv.width=W;cv.height=HS;const g=cv.getContext("2d"),c=MT_C[e[2]]||MT_C.macera;
@@ -13861,8 +13868,9 @@ async function macShare(e){try{await document.fonts.ready;}catch(_){}const M=mac
  g.fillStyle="#C08A55";g.fillRect(-14,-46,28,62);g.restore();
  g.textAlign="center";g.fillStyle="#2E2420";g.font='64px "DM Serif Display",serif';g.fillText(e[1].length>26?e[1].slice(0,25)+"…":e[1],W/2,1250);
  g.font='800 34px "Nunito Sans",sans-serif';g.fillStyle="#8A5A3A";g.fillText(`🏅 ${evDate(e).d} ${evDate(e).m} ${e[3].slice(0,4)} · ${e[7]||""}`,W/2,1312);
- await mfBrand(g,W/2,1420,"Macera köşem");
- bkCanvasShare(cv,"macera.png",`${e[1]} 🏅 ${h.cm||""} #MeFirst`);}
+ await mfBrand(g,W/2,1420,"Macera köşem");pzStamp(g,W/2,1560,MPZ);
+ bkCanvasShare(cv,"macera.png","#polaroidle #MeFirst");}
+const MPZ={ink:"#2F7F72",grad:["#FFB38A","#4E9C8C","#1E4D5C"],bg:"#FFF8EE"};
 /* gezinme: alt menü "Macera" → Macera köşem */
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest('#bnav [data-nv="fit"]');if(!b)return;e.stopPropagation();e.preventDefault();step=95;show();macRender();window.scrollTo({top:0});},true);
 (function(){const _n=navCur;navCur=function(){return step===95?"fit":step===50?"":_n();};const _r=renderStep;renderStep=function(){if(step===95){show();macRender();return;}return _r.apply(this,arguments);};})();
@@ -13934,7 +13942,7 @@ macRender=function(){const P=document.getElementById("macpanel");if(!P)return;mC
   const cities=new Set(past.map(e=>e[7]).filter(Boolean));
   H+=`<div class="mstats"><div><b>${past.length}</b><small>macera</small></div><div><b>${cities.size}</b><small>şehir</small></div><div><b>${up.length}</b><small>sırada</small></div></div>`;
   H+=up.length?`<div class="kthead"><span>Gideceklerim</span></div><div class="mcal">${up.map(e=>mTicket(e,true)).join("")}</div>`:"";
-  H+=`<div class="kthead"><span>Hatıra ipim 🧷</span></div>`+(past.length?`<div class="mhat">${past.map(e=>{const h=M.hat[e[0]]||{},ph=PH["mac:"+e[0]],c=MT_C[e[2]]||MT_C.macera;return `<button type="button" class="mpol" data-mev="${esc(e[0])}" style="--a:${c[0]};--b:${c[1]}"><span class="clip"></span><span class="im">${ph?`<img src="${ph}" alt="">`:macIco(e[2])}</span><b>${esc(h.cm||e[1])}</b><small>${evDate(e).d} ${evDate(e).m} · ${esc(e[7]||"")}</small></button>`;}).join("")}</div>`:`<p class="evr-e">Bir etkinliğe "Gidiyorum" dediğinde burada görünür. Etkinlik bitince fotoğrafını ve hislerini asarsın, hatıra ipin dolar 🧷</p>`);
+  H+=`<div class="kthead"><span>Polaroidlerim 🧷</span></div>`+(past.length?`<div class="mhat">${past.map(e=>{const h=M.hat[e[0]]||{},ph=PH["mac:"+e[0]],c=MT_C[e[2]]||MT_C.macera;return `<button type="button" class="mpol" data-mev="${esc(e[0])}" style="--a:${c[0]};--b:${c[1]}"><span class="clip"></span><span class="im">${ph?`<img src="${ph}" alt="">`:macIco(e[2])}</span><b>${esc(h.cm||e[1])}</b><small>${evDate(e).d} ${evDate(e).m} · ${esc(e[7]||"")}</small></button>`;}).join("")}</div>`:`<p class="evr-e">Bir etkinliğe "Gidiyorum" dediğinde burada görünür. Etkinlik bitince fotoğrafını ve hislerini asarsın, hatıra ipin dolar 🧷</p>`);
   if(!ids.length)H+=`<button type="button" class="mcta" id="mac-cta">Maceraları keşfet →</button>`;}
  P.innerHTML=H;
  const root=document.querySelector(".macera");
@@ -15911,8 +15919,8 @@ function bkzEdit(Z){const x=bkzCurX();if(!x||!x.cm)return;const P=Z.querySelecto
   Z.remove();const A=window.__bkArgs||[];try{bookOpen(A[0],null,A[1]);}catch(_){}try{sfToast("Polaroidin güncellendi ✨");}catch(_){}};}
 
 /* v0.33.11 #polaroidle: story üst cümlesi ve damga */
-function pzMini(g,x,y,s,rot){g.save();g.translate(x,y);g.rotate(rot||-.14);g.shadowColor="rgba(60,30,10,.35)";g.shadowBlur=s*.25;g.shadowOffsetY=s*.08;g.fillStyle="#FFFDF6";g.fillRect(-s*.42,-s*.5,s*.84,s);g.shadowColor="transparent";
- const gr=g.createLinearGradient(-s*.32,-s*.4,s*.32,s*.2);gr.addColorStop(0,"#F6C47A");gr.addColorStop(.6,"#E2689A");gr.addColorStop(1,"#7A4A8A");g.fillStyle=gr;g.fillRect(-s*.32,-s*.4,s*.64,s*.6);
+function pzMini(g,x,y,s,rot,G){g.save();g.translate(x,y);g.rotate(rot||-.14);g.shadowColor="rgba(60,30,10,.35)";g.shadowBlur=s*.25;g.shadowOffsetY=s*.08;g.fillStyle="#FFFDF6";g.fillRect(-s*.42,-s*.5,s*.84,s);g.shadowColor="transparent";
+ const gr=g.createLinearGradient(-s*.32,-s*.4,s*.32,s*.2);G=G||["#F6C47A","#E2689A","#7A4A8A"];gr.addColorStop(0,G[0]);gr.addColorStop(.6,G[1]);gr.addColorStop(1,G[2]);g.fillStyle=gr;g.fillRect(-s*.32,-s*.4,s*.64,s*.6);
  g.fillStyle="rgba(255,236,170,.85)";g.save();g.rotate(.08);g.fillRect(-s*.2,-s*.62,s*.4,s*.2);g.restore();g.restore();}
 function pzStoryTop(g,W,x){const t=x.t||"";const ek=(()=>{try{return trEk(t,"acc");}catch(e){return t+"'yı";}})();g.save();g.textAlign="center";g.textBaseline="alphabetic";
  let fs=62;g.font=`italic ${fs}px "DM Serif Display",Georgia,serif`;while(g.measureText(ek).width>W-140&&fs>34){fs-=2;g.font=`italic ${fs}px "DM Serif Display",Georgia,serif`;}
@@ -15920,10 +15928,10 @@ function pzStoryTop(g,W,x){const t=x.t||"";const ek=(()=>{try{return trEk(t,"acc
  g.font='700 92px "Caveat","Segoe Print",cursive';const pw=g.measureText("polaroidledim").width;g.fillStyle="#A8492A";g.fillText("polaroidledim",W/2-30,352);
  g.strokeStyle="#E9A55A";g.lineWidth=7;g.lineCap="round";g.beginPath();g.moveTo(W/2-30-pw/2+10,372);g.bezierCurveTo(W/2-60,388,W/2+40,360,W/2-30+pw/2,374);g.stroke();
  pzMini(g,W/2-30+pw/2+62,318,74,.16);g.restore();}
-function pzStamp(g,cx,cy){g.save();g.font='italic 58px "DM Serif Display",Georgia,serif';const tw=g.measureText("#polaroidle").width;const w=tw+150,h=104;g.translate(cx,cy);g.rotate(-.045);
- g.shadowColor="rgba(60,30,10,.28)";g.shadowBlur=22;g.shadowOffsetY=10;g.fillStyle="#FFFBF0";g.beginPath();g.roundRect?g.roundRect(-w/2,-h/2,w,h,22):g.rect(-w/2,-h/2,w,h);g.fill();g.shadowColor="transparent";
- g.strokeStyle="#A8492A";g.lineWidth=3;g.setLineDash([10,7]);g.beginPath();g.roundRect?g.roundRect(-w/2+9,-h/2+9,w-18,h-18,15):g.rect(-w/2+9,-h/2+9,w-18,h-18);g.stroke();g.setLineDash([]);
- pzMini(g,-w/2+62,4,62,-.16);g.fillStyle="#A8492A";g.textAlign="left";g.textBaseline="middle";g.fillText("#polaroidle",-w/2+108,4);g.restore();}
+function pzStamp(g,cx,cy,o){o=o||{};const INK=o.ink||"#A8492A";g.save();g.font='italic 58px "DM Serif Display",Georgia,serif';const tw=g.measureText("#polaroidle").width;const w=tw+150,h=104;g.translate(cx,cy);g.rotate(-.045);
+ g.shadowColor="rgba(60,30,10,.28)";g.shadowBlur=22;g.shadowOffsetY=10;g.fillStyle=o.bg||"#FFFBF0";g.beginPath();g.roundRect?g.roundRect(-w/2,-h/2,w,h,22):g.rect(-w/2,-h/2,w,h);g.fill();g.shadowColor="transparent";
+ g.strokeStyle=INK;g.lineWidth=3;g.setLineDash([10,7]);g.beginPath();g.roundRect?g.roundRect(-w/2+9,-h/2+9,w-18,h-18,15):g.rect(-w/2+9,-h/2+9,w-18,h-18);g.stroke();g.setLineDash([]);
+ pzMini(g,-w/2+62,4,62,-.16,o.grad);g.fillStyle=INK;g.textAlign="left";g.textBaseline="middle";g.fillText("#polaroidle",-w/2+108,4);g.restore();}
 
 /* #polaroidle'yi panoya kopyala: Instagram story'de yapıştırınca tıklanabilir olur */
 function pzClip(){const tag="#polaroidle";let ok=false;try{if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(tag).catch(()=>{});ok=true;}}catch(e){}
@@ -15995,7 +16003,7 @@ function mmLogForm(o){const C=mfCity();const id="L"+Date.now().toString(36);let 
   <div class="mm-form">
    ${custom?`<input class="sf-in" id="mmf-t" maxlength="60" placeholder="ör. Abant Gölü'nün etrafını yürüdüm">
    <div class="mm-ems">${["🥾","🏃‍♀️","🚲","🏊‍♀️","⛰️","🌅","🏕️","🧘‍♀️","🛶","🪂","🐎","🎿"].map((e,i)=>`<button type="button" data-mme="${e}" aria-pressed="${i===0}" class="no-mi">${e}</button>`).join("")}</div>`:""}
-   <label class="mm-ph" id="mmf-phl"><input type="file" accept="image/*" id="mmf-ph" hidden><span class="mm-php" id="mmf-php"><span class="no-mi">📸</span></span><span><b>Bir fotoğraf ekle</b><small>Pasaportunda ve hatıra ipinde dursun</small></span></label>
+   <label class="mm-ph" id="mmf-phl"><input type="file" accept="image/*" id="mmf-ph" hidden><span class="mm-php" id="mmf-php"><span class="no-mi">📸</span></span><span><b>Polaroidini ekle</b><small>Pasaportunda dursun</small></span></label>
    <textarea class="sf-in" id="mmf-cm" rows="2" maxlength="140" placeholder="Bir cümleyle nasıldı?"></textarea>
    <div class="mm-row"><select class="sf-in" id="mmf-ci"><option value="">Şehir</option>${Object.keys(MF_IL).sort((a,b)=>a.localeCompare(b,"tr")).map(k=>`<option${C&&trN(C.name)===trN(k)?" selected":""}>${esc(k)}</option>`).join("")}</select><input class="sf-in" type="date" id="mmf-d" value="${dkey()}" max="${dkey()}"></div>
    <button type="button" class="mcta" id="mmf-ok">Pasaportuma bas 🛂</button><p class="sf-err" id="mmf-e" hidden></p></div>`);
@@ -16045,12 +16053,12 @@ function mPassHTML(){const P=mPass(),B=mBadges();const cities=new Set(P.map(l=>m
  H+=`<div class="kthead"><span>Mühürlerim 🛂</span><small>${P.length}</small></div>`+(P.length?`<div class="mstamps">${P.map((l,i)=>mStampHTML(l,i)).join("")}</div>`:`<div class="mp-empty"><span class="no-mi">🛂</span><b>Pasaportun bomboş, şimdilik</b><small>Bir mikro macera yap ya da bir etkinliğe katıl; ilk mührün burada.</small></div>`);
  H+=`<div class="kthead"><span>Rozetlerim</span><small>${got}/${B.length}</small></div><div class="mbadges">${B.map(b=>`<div class="mbd${b.got?" on":""}"><span class="no-mi">${b.got?b.e:"🔒"}</span><b>${b.t}</b><small>${b.d}</small></div>`).join("")}</div>`;
  const pol=P.filter(l=>PH["mac:"+(l.src==="ev"?l.ev[0]:l.id)]||l.cm);
- if(pol.length)H+=`<div class="kthead"><span>Hatıra ipim 🧷</span></div><div class="mhat">${pol.map(l=>{const ph=PH["mac:"+(l.src==="ev"?l.ev[0]:l.id)];return `<button type="button" class="mpol" data-mlog="${esc(l.id)}" style="--a:${l.c};--b:${l.c}"><span class="clip"></span><span class="im">${ph?`<img src="${ph}" alt="">`:`<span class="no-mi" style="font-size:44px">${l.e}</span>`}</span><b>${esc(l.cm||l.t)}</b><small>${mmDay(l.d)} · ${esc(l.city||"")}</small></button>`;}).join("")}</div>`;
+ if(pol.length)H+=`<div class="kthead"><span>Polaroidlerim 🧷</span></div><div class="mhat">${pol.map(l=>{const ph=PH["mac:"+(l.src==="ev"?l.ev[0]:l.id)];return `<button type="button" class="mpol" data-mlog="${esc(l.id)}" style="--a:${l.c};--b:${l.c}"><span class="clip"></span><span class="im">${ph?`<img src="${ph}" alt="">`:`<span class="no-mi" style="font-size:44px">${l.e}</span>`}</span><b>${esc(l.cm||l.t)}</b><small>${mmDay(l.d)} · ${esc(l.city||"")}</small></button>`;}).join("")}</div>`;
  return H;}
 function mLogOpen(id){const l=mPass().find(x=>x.id===id);if(!l)return;if(l.src==="ev"){macOpen(l.ev[0]);return;}const ph=PH["mac:"+l.id];
  const O=mSheet(`<div class="shs-h"><div><small>Mühür · ${mmDay(l.d)}</small><b>${esc(l.t)}</b></div><button type="button" class="shs-x" aria-label="Kapat">✕</button></div>
   <div class="mlog">${ph?`<img class="mlog-ph" src="${ph}" alt="">`:""}<div class="mlog-st">${mStampHTML(l,0,true)}</div>${l.cm?`<p class="mlog-cm">“${esc(l.cm)}”</p>`:""}<p class="mlog-meta">${esc(l.city||"")}${l.city?" · ":""}${mmDay(l.d)}</p>
-  <div class="mep-act"><button type="button" class="mbtn pri" id="mlog-sh">📸 Hikâyede paylaş</button><button type="button" class="mbtn" id="mlog-del">Sil</button></div></div>`);
+  <div class="mep-act"><button type="button" class="mbtn mpz-sh" id="mlog-sh"><b class="bk-pzw">Story'de Polaroidle ↗</b></button><button type="button" class="mbtn" id="mlog-del">Sil</button></div></div>`);
  O.querySelector("#mlog-del").onclick=e=>{const b=e.currentTarget;if(!b.dataset.sure){b.dataset.sure=1;b.textContent="Emin misin?";return;}const L=mmLogs();const i=L.findIndex(x=>x.id===id);if(i>=0)L.splice(i,1);delete PH["mac:"+id];try{phSave();}catch(_){}save();O.classList.remove("on");setTimeout(()=>O.remove(),250);macRender();};
  O.querySelector("#mlog-sh").onclick=()=>mLogShare(l);}
 async function mLogShare(l){const fake=["log:"+l.id,l.t,"macera",l.d,"","","",l.city||""];const M=mac();M.hat=M.hat||{};const bak=M.hat[fake[0]];M.hat[fake[0]]={cm:l.cm};const ph=PH["mac:"+l.id];const bph=PH["mac:"+fake[0]];if(ph)PH["mac:"+fake[0]]=ph;
