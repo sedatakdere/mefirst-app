@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-13",
+"updated": "2026-11-14",
 "wants": [
 {
 "q": "füruzan",
@@ -18,6 +18,60 @@
 "kind": "ara",
 "n": 2,
 "last": "2026-11-10"
+},
+{
+"q": "oliver burkeman",
+"kind": "yazar",
+"n": 1,
+"last": "2026-11-14"
+},
+{
+"q": "donna tartt",
+"kind": "yazar",
+"n": 1,
+"last": "2026-11-14"
+},
+{
+"q": "gabor maté",
+"kind": "yazar",
+"n": 1,
+"last": "2026-11-14"
+},
+{
+"q": "yekta kopan",
+"kind": "yazar",
+"n": 1,
+"last": "2026-11-14"
+},
+{
+"q": "şükrü erbaş",
+"kind": "yazar",
+"n": 1,
+"last": "2026-11-14"
+},
+{
+"q": "şermin yaşar",
+"kind": "yazar",
+"n": 1,
+"last": "2026-11-14"
+},
+{
+"q": "kahraman tazeoğlu",
+"kind": "yazar",
+"n": 1,
+"last": "2026-11-14"
+},
+{
+"q": "kemal sayar",
+"kind": "yazar",
+"n": 1,
+"last": "2026-11-14"
+},
+{
+"q": "hatice kübra tongar",
+"kind": "yazar",
+"n": 1,
+"last": "2026-11-14"
 }
 ]
 }
