@@ -1,0 +1,827 @@
+{
+"abouttime": {
+"imdb": "tt2194499",
+"oyuncu": [
+"Domhnall Gleeson",
+"Ben Benson",
+"Bill Nighy",
+"Lindsay Duncan",
+"Lisa Eichhorn",
+"Lydia Wilson"
+],
+"sure": 123,
+"tur": [
+"bilimkurgu",
+"romantik",
+"drama"
+],
+"ulke": [
+"İngiltere"
+]
+},
+"amelie": {
+"imdb": "tt0211915",
+"oyuncu": [
+"Audrey Tautou",
+"Mathieu Kassovitz",
+"Jamel Debbouze",
+"Dominique Pinon",
+"Yolande Moreau",
+"André Dussollier"
+],
+"sure": 122,
+"tur": [
+"romantik komedi",
+"komedi",
+"drama"
+],
+"ulke": [
+"Fransa",
+"Almanya"
+]
+},
+"autumnny": {
+"imdb": "tt0174480",
+"oyuncu": [
+"Winona Ryder",
+"Richard Gere",
+"Anthony LaPaglia",
+"Elaine Strich",
+"Vera Farmiga",
+"Sherry Stringfield"
+],
+"sure": 101,
+"tur": [
+"romantik",
+"drama"
+],
+"ulke": [
+"ABD"
+]
+},
+"ayla": {
+"imdb": "tt6316138",
+"oyuncu": [
+"İsmail Hacıoğlu",
+"Çetin Tekindor",
+"Ali Atay",
+"Altan Erkekli",
+"Murat Yıldırım",
+"Kim Seolhyun"
+],
+"sure": 125,
+"tur": [
+"savaş",
+"drama",
+"historical"
+],
+"ulke": [
+"Türkiye"
+]
+},
+"babamoglum": {
+"imdb": "tt0476735",
+"oyuncu": [
+"Çetin Tekindor",
+"Fikret Kuşkan",
+"Hümeyra Akbay",
+"Tuba Büyüküstün",
+"Şerif Sezer",
+"Binnur Kaya"
+],
+"sure": 108,
+"tur": [
+"drama"
+],
+"ulke": [
+"Türkiye"
+]
+},
+"beforesunrise": {
+"imdb": "tt0112471",
+"oyuncu": [
+"Ethan Hawke",
+"Julie Delpy",
+"Hanno Pöschl",
+"Tex Rubinowitz",
+"Andrea Eckert",
+"Erni Mangold"
+],
+"sure": 97,
+"tur": [
+"romantik",
+"drama"
+],
+"ulke": [
+"Avusturya",
+"ABD"
+]
+},
+"birudum": {
+"imdb": "tt0200490",
+"oyuncu": [
+"Kadir İnanır",
+"Hale Soygazi",
+"Meral Çetinkaya"
+],
+"tur": [
+"drama"
+],
+"ulke": [
+"Türkiye"
+]
+},
+"casablanca": {
+"imdb": "tt0034583",
+"oyuncu": [
+"Humphrey Bogart",
+"Ingrid Bergman",
+"Paul Henreid",
+"Claude Rains",
+"Conrad Veidt",
+"Sydney Greenstreet"
+],
+"sure": 102,
+"tur": [
+"romantik",
+"savaş",
+"drama"
+],
+"ulke": [
+"ABD"
+]
+},
+"chocolat": {
+"imdb": "tt0241303",
+"oyuncu": [
+"Juliette Binoche",
+"Carrie-Anne Moss",
+"Judi Dench",
+"Johnny Depp",
+"Alfred Molina",
+"Lena Olin"
+],
+"sure": 121,
+"tur": [
+"romantik",
+"drama",
+"acıklı güldürü"
+],
+"ulke": [
+"İngiltere",
+"ABD"
+]
+},
+"crazystupid": {
+"imdb": "tt1570728",
+"oyuncu": [
+"Steve Carell",
+"Ryan Gosling",
+"Julianne Moore",
+"John Carroll Lynch",
+"Marisa Tomei"
+],
+"sure": 118,
+"tur": [
+"Komedi-drama",
+"romantik komedi",
+"gençlik"
+],
+"ulke": [
+"ABD"
+]
+},
+"dirtydancing": {
+"imdb": "tt0092890",
+"oyuncu": [
+"Patrick Swayze",
+"Jennifer Grey",
+"Jerry Orbach",
+"Cynthia Rhodes",
+"Kelly Bishop",
+"Jane Brucker"
+],
+"sure": 96,
+"tur": [
+"romantik",
+"müzikal",
+"drama"
+],
+"ulke": [
+"ABD"
+]
+},
+"eatpraylove": {
+"imdb": "tt0879870",
+"oyuncu": [
+"Javier Bardem",
+"Billy Crudup",
+"Richard Jenkins",
+"Viola Davis",
+"James Franco",
+"Julia Roberts"
+],
+"sure": 140,
+"tur": [
+"romantik komedi",
+"Komedi-drama",
+"drama"
+],
+"ulke": [
+"ABD"
+]
+},
+"erin": {
+"imdb": "tt0195685",
+"oyuncu": [
+"Julia Roberts",
+"Albert Finney",
+"Aaron Eckhart",
+"Marg Helgenberger",
+"Peter Coyote",
+"Cherry Jones"
+],
+"sure": 130,
+"tur": [
+"biyografik",
+"drama"
+],
+"ulke": [
+"ABD"
+]
+},
+"ghost": {
+"imdb": "tt0113568",
+"sure": 79,
+"tur": [
+"bilimkurgu",
+"aksiyon",
+"fantasy"
+],
+"ulke": [
+"Japonya",
+"İngiltere"
+]
+},
+"hababam": {
+"imdb": "tt0252487",
+"oyuncu": [
+"Kemal Sunal",
+"Şener Şen",
+"Münir Özkul",
+"Tarık Akan",
+"Adile Naşit",
+"Halit Akçatepe"
+],
+"sure": 87,
+"tur": [
+"komedi"
+],
+"ulke": [
+"Türkiye"
+]
+},
+"harrysally": {
+"imdb": "tt0098635",
+"oyuncu": [
+"Billy Crystal",
+"Meg Ryan",
+"Carrie Fisher",
+"Bruno Kirby",
+"Franc Luz",
+"Harley Jane Kozak"
+],
+"sure": 90,
+"tur": [
+"romantik komedi",
+"Christmas",
+"komedi"
+],
+"ulke": [
+"ABD"
+]
+},
+"hiddenfigures": {
+"imdb": "tt4846340",
+"oyuncu": [
+"Taraji P. Henson",
+"Octavia Spencer",
+"Janelle Monáe",
+"Kevin Costner",
+"Kirsten Dunst",
+"Jim Parsons"
+],
+"sure": 127,
+"tur": [
+"biyografik",
+"drama"
+],
+"ulke": [
+"ABD"
+]
+},
+"holiday": {
+"imdb": "tt0457939",
+"oyuncu": [
+"Cameron Diaz",
+"Kate Winslet",
+"Jude Law",
+"Jack Black",
+"Shannyn Sossamon",
+"Eli Wallach"
+],
+"sure": 135,
+"tur": [
+"romantik komedi",
+"Christmas",
+"komedi"
+],
+"ulke": [
+"İngiltere",
+"ABD"
+]
+},
+"intern": {
+"imdb": "tt2361509",
+"oyuncu": [
+"Robert De Niro",
+"Anne Hathaway",
+"Rene Russo",
+"Anders Holm",
+"Andrew Rannells",
+"Adam DeVine"
+],
+"sure": 121,
+"tur": [
+"komedi",
+"melodrama"
+],
+"ulke": [
+"ABD"
+]
+},
+"juliejulia": {
+"imdb": "tt1135503",
+"oyuncu": [
+"Meryl Streep",
+"Amy Adams",
+"Stanley Tucci",
+"Chris Messina",
+"Mary Lynn Rajskub",
+"Jane Lynch"
+],
+"sure": 123,
+"tur": [
+"biyografik",
+"Komedi-drama",
+"romantik komedi"
+],
+"ulke": [
+"ABD"
+]
+},
+"kelebek": {
+"imdb": "tt2608224",
+"oyuncu": [
+"Kıvanç Tatlıtuğ",
+"Mert Fırat",
+"Farah Zeynep Abdullah",
+"Belçim Bilgin",
+"Ahmet Mümtaz Taylan",
+"Taner Birsel"
+],
+"sure": 178,
+"tur": [
+"drama",
+"romantik"
+],
+"ulke": [
+"Türkiye"
+]
+},
+"lalaland": {
+"imdb": "tt3783958",
+"oyuncu": [
+"J. K. Simmons",
+"Finn Wittrock",
+"Rosemarie DeWitt",
+"Meagen Fay",
+"John Legend"
+],
+"sure": 128,
+"tur": [
+"romantik",
+"Komedi-drama",
+"komedi"
+],
+"ulke": [
+"ABD"
+]
+},
+"littlewomen": {
+"imdb": "tt3281548",
+"oyuncu": [
+"Meryl Streep",
+"Saoirse Ronan",
+"Timothée Chalamet",
+"Florence Pugh",
+"Eliza Scanlen",
+"James Norton"
+],
+"sure": 134,
+"tur": [
+"drama"
+],
+"ulke": [
+"ABD"
+]
+},
+"loveactually": {
+"imdb": "tt0314331",
+"oyuncu": [
+"Hugh Grant",
+"Liam Neeson",
+"Colin Firth",
+"Laura Linney",
+"Emma Thompson",
+"Alan Rickman"
+],
+"sure": 135,
+"tur": [
+"romantik komedi",
+"Christmas",
+"acıklı güldürü"
+],
+"ulke": [
+"İngiltere",
+"ABD"
+]
+},
+"mammamia": {
+"imdb": "tt0795421",
+"oyuncu": [
+"Meryl Streep",
+"Amanda Seyfried",
+"Pierce Brosnan",
+"Colin Firth",
+"Stellan Skarsgård",
+"Julie Walters"
+],
+"sure": 108,
+"tur": [
+"romantik komedi",
+"müzikal",
+"musical comedy"
+],
+"ulke": [
+"İngiltere",
+"Almanya"
+]
+},
+"mavi": {
+"imdb": "tt0252695",
+"oyuncu": [
+"Emel Sayın",
+"Tarık Akan",
+"Zeki Alasya",
+"Metin Akpınar",
+"Münir Özkul",
+"Halit Akçatepe"
+],
+"tur": [
+"komedi"
+],
+"ulke": [
+"Türkiye"
+]
+},
+"notebook": {
+"imdb": "tt0332280",
+"oyuncu": [
+"Ryan Gosling",
+"Rachel McAdams",
+"Gena Rowlands",
+"James Garner",
+"James Marsden",
+"Sam Shepard"
+],
+"sure": 123,
+"tur": [
+"romantik",
+"drama",
+"coming-of-age"
+],
+"ulke": [
+"ABD"
+]
+},
+"nottinghill": {
+"imdb": "tt0125439",
+"oyuncu": [
+"Julia Roberts",
+"Hugh Grant",
+"Rhys Ifans",
+"Emma Chambers",
+"Tim McInnerny",
+"Gina McKee"
+],
+"sure": 119,
+"tur": [
+"romantik komedi",
+"Komedi-drama"
+],
+"ulke": [
+"İngiltere",
+"ABD"
+]
+},
+"prada": {
+"imdb": "tt33612209",
+"oyuncu": [
+"Meryl Streep",
+"Anne Hathaway",
+"Emily Blunt",
+"Stanley Tucci",
+"Tracie Thoms",
+"Tibor Feldman"
+],
+"sure": 119,
+"tur": [
+"komedi",
+"drama",
+"Komedi-drama"
+],
+"ulke": [
+"ABD"
+]
+},
+"prettywoman": {
+"imdb": "tt0100405",
+"oyuncu": [
+"Richard Gere",
+"Julia Roberts",
+"Ralph Bellamy",
+"Jason Alexander",
+"Laura San Giacomo",
+"Héctor Elizondo"
+],
+"sure": 119,
+"tur": [
+"romantik komedi",
+"romantik"
+],
+"ulke": [
+"ABD"
+]
+},
+"prideprejudice": {
+"imdb": "tt0414387",
+"oyuncu": [
+"Keira Knightley",
+"Matthew Macfadyen",
+"Brenda Blethyn",
+"Donald Sutherland",
+"Tom Hollander",
+"Rosamund Pike"
+],
+"sure": 127,
+"tur": [
+"drama",
+"romantik"
+],
+"ulke": [
+"İngiltere",
+"Fransa"
+]
+},
+"proposal": {
+"imdb": "tt1041829",
+"oyuncu": [
+"Sandra Bullock",
+"Ryan Reynolds",
+"Betty White",
+"Mary Steenburgen",
+"Craig T. Nelson",
+"Aasif Mandvi"
+],
+"sure": 107,
+"tur": [
+"romantik komedi",
+"komedi"
+],
+"ulke": [
+"ABD"
+]
+},
+"romanholiday": {
+"imdb": "tt0046250",
+"oyuncu": [
+"Gregory Peck",
+"Audrey Hepburn",
+"Eddie Albert",
+"Tullio Carminati",
+"Paolo Carlini",
+"Claudio Ermelli"
+],
+"sure": 118,
+"tur": [
+"romantik komedi",
+"komedi",
+"drama"
+],
+"ulke": [
+"ABD"
+]
+},
+"selvi": {
+"imdb": "tt0263975",
+"oyuncu": [
+"Türkân Şoray",
+"Kadir İnanır",
+"İhsan Yüce",
+"Ahmet Mekin"
+],
+"sure": 90,
+"tur": [
+"drama"
+],
+"ulke": [
+"Türkiye"
+]
+},
+"steelmagnolias": {
+"imdb": "tt0098384",
+"oyuncu": [
+"Sally Field",
+"Dolly Parton",
+"Shirley MacLaine",
+"Daryl Hannah",
+"Olympia Dukakis",
+"Julia Roberts"
+],
+"sure": 114,
+"tur": [
+"female buddy",
+"Komedi-drama",
+"drama"
+],
+"ulke": [
+"ABD"
+]
+},
+"thelmalouise": {
+"imdb": "tt0103074",
+"oyuncu": [
+"Susan Sarandon",
+"Geena Davis",
+"Harvey Keitel",
+"Michael Madsen",
+"Christopher McDonald",
+"Stephen Tobolowsky"
+],
+"sure": 129,
+"tur": [
+"female buddy",
+"silahlı kızlar",
+"Komedi-drama"
+],
+"ulke": [
+"ABD",
+"İngiltere"
+]
+},
+"tiffany": {
+"imdb": "tt0054698",
+"oyuncu": [
+"George Peppard",
+"Audrey Hepburn",
+"Patricia Neal",
+"Buddy Ebsen",
+"Martin Balsam",
+"Mickey Rooney"
+],
+"sure": 110,
+"tur": [
+"romantik komedi",
+"drama"
+],
+"ulke": [
+"ABD"
+]
+},
+"tuscan": {
+"imdb": "tt0328589",
+"oyuncu": [
+"Diane Lane",
+"Sandra Oh",
+"Lindsay Duncan",
+"Raoul Bova",
+"Vincent Riotta",
+"Mario Monicelli"
+],
+"sure": 113,
+"tur": [
+"romantik komedi",
+"LGBTQ-related",
+"Komedi-drama"
+],
+"ulke": [
+"ABD",
+"İtalya"
+]
+},
+"v-ebenezer": {
+"imdb": "tt38773219",
+"oyuncu": [
+"Johnny Depp",
+"Andrea Riseborough",
+"Tramell Tillman",
+"Ian McKellen",
+"Rupert Grint",
+"Daisy Ridley"
+],
+"sure": 116,
+"tur": [
+"fantasy",
+"Christmas"
+],
+"ulke": [
+"ABD",
+"İngiltere"
+]
+},
+"v-georgemichael-faith": {
+"imdb": "tt40564737",
+"tur": [
+"belgesel",
+"concert"
+]
+},
+"v-hungergames-sunrise": {
+"imdb": "tt32558705",
+"oyuncu": [
+"Joseph Zada",
+"Whitney Peak",
+"Mckenna Grace",
+"Ben Wang"
+],
+"sure": 158,
+"tur": [
+"drama",
+"aksiyon",
+"macera"
+],
+"ulke": [
+"ABD"
+]
+},
+"v-sapkalikedi": {
+"imdb": "tt2321555",
+"sure": 107,
+"tur": [
+"fantasy",
+"çocuk",
+"fantasy comedy"
+],
+"ulke": [
+"ABD"
+]
+},
+"vizontele": {
+"imdb": "tt0270053",
+"oyuncu": [
+"Demet Akbağ",
+"Altan Erkekli",
+"Cem Yılmaz",
+"Yılmaz Erdoğan",
+"Zeynep Tokuş",
+"Tolga Çevik"
+],
+"sure": 110,
+"tur": [
+"Komedi-drama"
+],
+"ulke": [
+"Türkiye"
+]
+},
+"youvegotmail": {
+"imdb": "tt0128853",
+"oyuncu": [
+"Tom Hanks",
+"Meg Ryan",
+"Greg Kinnear",
+"Parker Posey",
+"Jean Stapleton",
+"Steve Zahn"
+],
+"sure": 114,
+"tur": [
+"romantik komedi",
+"Christmas"
+],
+"ulke": [
+"ABD"
+]
+}
+}
