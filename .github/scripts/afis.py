@@ -137,6 +137,86 @@ for fid, (tr, orig, y) in films.items():
     except Exception as e:
         print("indirme hata", fid, e)
     time.sleep(0.3)
+
+# ---- Sahne etkinlikleri: mekân fotoğrafı, oyun afişi (og:image), sanatçı/mekân tek satır bilgi ----
+def wsum(lang, q, strict=True):
+    p = {"action": "query", "format": "json", "generator": "search", "gsrsearch": q, "gsrlimit": "4", "prop": "pageimages|extracts",
+         "exintro": "1", "explaintext": "1", "exsentences": "1", "exlimit": "4", "piprop": "thumbnail", "pithumbsize": "640", "pilicense": "any"}
+    j = get(f"https://{lang}.wikipedia.org/w/api.php?" + urllib.parse.urlencode(p))
+    want = fold(q)
+    for pg in sorted((j.get("query") or {}).get("pages", {}).values(), key=lambda x: x.get("index", 0)):
+        t = fold(re.sub(r"\(.*?\)", "", pg.get("title", "")))
+        if t == want or (not strict and match(pg.get("title", ""), want)):
+            src = (pg.get("thumbnail") or {}).get("source", "")
+            if ".svg" in src.lower() or re.search(r"logo|emblem|amblem", src, re.I): src = ""
+            ex = re.sub(r"\s*\(.*?\)", "", pg.get("extract", "")).strip()
+            return {"src": src, "ex": ex[:220], "wp": f"{lang}:{pg.get('title','')}"}
+    return None
+def og(url):
+    req = urllib.request.Request(url, headers=UA)
+    with urllib.request.urlopen(req, timeout=20) as r:
+        h = r.read(300000).decode("utf-8", "ignore")
+    m = re.search(r'<meta[^>]+(?:property|name)=["\'](?:og:image(?::secure_url)?|twitter:image)["\'][^>]*content=["\']([^"\']+)', h, re.I) or \
+        re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]*(?:property|name)=["\'](?:og:image|twitter:image)["\']', h, re.I)
+    if not m: return ""
+    u = urllib.parse.urljoin(url, m.group(1).replace("&amp;", "&").strip())
+    return "" if re.search(r"logo|favicon|default|placeholder|no-?image|share-?image|site-?image|apple-touch", u, re.I) else u
+def artist(t):
+    t = re.sub(r"\(.*?\)", "", t)
+    t = re.split(r"\s+[-–—:|·]\s+|\s+ile\s+|\s+&\s+|,", t)[0]
+    t = re.sub(r"\s*(konseri|konser|stand-?up|gösterisi|show|tour|turnesi|world tour).*$", "", t, flags=re.I).strip()
+    return t if 3 <= len(t) <= 40 else ""
+def venue(v):
+    return re.split(r",|\(", v)[0].strip()
+def save_img(key, url):
+    b = get(url, raw=True)
+    if len(b) < 3000: raise ValueError("çok küçük")
+    ext = "png" if b[:4] == b"\x89PNG" else "jpg"
+    name = f"afis/{key}.{ext}"
+    open("app/" + name, "wb").write(b)
+    return name
+try: events = json.load(open("app/sahne.json", encoding="utf-8")).get("sahne", [])
+except Exception: events = []
+links = {}
+for e in events:
+    if len(e) > 8 and e[8]: links[e[8]] = links.get(e[8], 0) + 1
+VCACHE = {}
+SANAT = re.compile(r"şarkıcı|müzisyen|sanatçı|besteci|komedyen|oyuncu|piyanist|grup|orkestra|keman|kanun|gitarist|rapçi|söz yazarı|singer|musician|band|comedian|composer", re.I)
+for e in events:
+    eid = e[0]
+    if eid in out and eid in info: continue
+    kind, title, ven, link = e[2], e[1], venue(e[6] or ""), (e[8] if len(e) > 8 else "")
+    B = info.get(eid) or {}
+    try:
+        if kind in ("konser", "standup") and "sanatci" not in B:
+            a = artist(title)
+            r = wsum("tr", a) if a else None
+            if r and r["ex"] and SANAT.search(r["ex"]): B["sanatci"] = r["ex"]; B["wp"] = r["wp"]
+        if ven and "mekan" not in B:
+            if ven not in VCACHE:
+                try: VCACHE[ven] = wsum("tr", ven)
+                except Exception as x: print("mekan hata", ven, x); VCACHE[ven] = None
+            r = VCACHE[ven]
+            if r and r["ex"]: B["mekan"] = r["ex"]
+        if eid not in out:
+            u = ""
+            if kind not in ("konser", "standup") and link.startswith("https://") and links.get(link, 0) == 1:
+                try: u = og(link)
+                except Exception as x: print("og hata", eid, x)
+            if not u and VCACHE.get(ven) and VCACHE[ven]["src"]:
+                vk = "m-" + re.sub(r"[^a-z0-9]+", "-", fold(ven)).strip("-")[:40]
+                if vk not in out:
+                    try: out[vk] = save_img(vk, VCACHE[ven]["src"])
+                    except Exception as x: print("mekan foto hata", ven, x)
+                if vk in out: out[eid] = out[vk]
+            elif u:
+                try: out[eid] = save_img("e-" + eid[:60], u)
+                except Exception as x: print("afiş hata", eid, x)
+        info[eid] = B
+        if B or eid in out: print("SAHNE", eid, out.get(eid, "-"), list(B))
+    except Exception as x:
+        print("sahne hata", eid, x)
+    time.sleep(0.2)
 json.dump(info, open(infop, "w", encoding="utf-8"), ensure_ascii=False, indent=0, sort_keys=True)
 json.dump(out, open(outp, "w", encoding="utf-8"), ensure_ascii=False, indent=0, sort_keys=True)
 print(len(out), "/", len(films), "afiş hazır")
