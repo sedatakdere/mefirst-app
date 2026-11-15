@@ -7892,6 +7892,8 @@ html[data-mf=dusk] .spsr-li{background:rgba(255,255,255,.06)}
 .spst-ph{display:flex;align-items:center;gap:8px;height:54px;padding:0 16px;border-radius:16px;background:rgba(255,255,255,.08);color:#FFE7B0;font:700 13.5px var(--f-body);cursor:pointer}.spst-ph svg{width:22px;height:22px}
 .spst-go{height:54px;border:0;border-radius:16px;background:linear-gradient(135deg,#F6D27A,#C98A24);color:#3A0F1E;font:900 16px var(--f-body);box-shadow:0 14px 26px -14px rgba(233,185,73,.9)}
 .spst-btn{margin-bottom:10px}
+/* v0.60.1 stüdyo her katmanın üstünde (kitap sayfası 9500, macera sayfası 3000) */
+#spstudio{z-index:9920!important}
 /* v0.60 stüdyo temaları */
 .spst-kt .shs-c{background:linear-gradient(180deg,#2E1A0E,#1C0F08)!important}
 .spst-kt .spst-h small,.spst-kt .spst-ph{color:#F3D27A}
@@ -14504,7 +14506,7 @@ function macOpen(id){const e=macEv(id);if(!e)return;let O=document.getElementByI
   ${e[9]?`<p class="mep-note">${esc(e[9])}</p>`:""}
   <div class="mep-act">${past?"":`<button type="button" class="mgo${go?" on":""}" id="mep-go">${go?"✓ Gidiyorum":"Ben de gidiyorum 🙋‍♀️"}</button>`}<a class="mbtn" href="${esc(link)}" target="_blank" rel="noopener">${e[8]&&/^https:/.test(e[8])?"Etkinlik sayfası ↗":"Google'da ara ↗"}</a>${past?"":`<button type="button" class="mbtn" id="mep-ics">📅 Takvimime ekle</button>`}</div>
   ${(go||past)?`<section class="mep-hat"><h4>${past?"Maceranı polaroidle 🧷":"Macera polaroidin 🧷"}</h4>${past||go?`<div class="mep-pol"><span class="clip"></span><label class="im" for="mep-ph">${ph?`<img src="${ph}" alt="">`:`<span>📷<br>Fotoğraf ekle</span>`}</label><input type="file" id="mep-ph" accept="image/*" hidden><textarea id="mep-cm" maxlength="160" placeholder="${past?"Nasıldı? Bir cümleyle anlat…":"Etkinlikten sonra buraya hislerini yazarsın"}">${esc(h.cm||"")}</textarea></div>
-   <div class="mep-act"><button type="button" class="mbtn mpz-hang" id="mep-save"><span class="bk-pzi mpzi"></span><b class="bk-pzw">Polaroidle</b></button>${(ph||h.cm)?`<button type="button" class="mbtn mpz-sh" id="mep-share"><span class="bk-pzi mpzi" aria-hidden="true"></span><b class="bk-pzw">Story'de Polaroidle</b><span class="bk-sharr" aria-hidden="true">↗</span></button>`:""}</div>`:""}</section>`:""}
+   <div class="mep-act"><button type="button" class="mbtn mpz-hang" id="mep-save"><span class="bk-pzi mpzi"></span><b class="bk-pzw">Polaroidle</b></button>${true?`<button type="button" class="mbtn mpz-sh" id="mep-share"><span class="bk-pzi mpzi" aria-hidden="true"></span><b class="bk-pzw">Story'de Polaroidle</b><span class="bk-sharr" aria-hidden="true">↗</span></button>`:""}</div>`:""}</section>`:""}
   </div>`;
  const close=back=>{O.classList.remove("on");setTimeout(()=>O.remove(),220);if(!back){try{history.back();}catch(_){}}if(step===95)macRender();};window.macClose=close;
  if(fresh)requestAnimationFrame(()=>O.classList.add("on"));else O.classList.add("on");
@@ -18072,10 +18074,10 @@ bkShare=async function(x,c){c=c||["#8E5A3A","#3A1E14"];const L={okudu:"Bitirdim"
 const SPS_M=[["mpol","Polaroid"],["bib","Göğüs no"],["madalya","Madalya"]];
 function spsMac(o){studioOpen(Object.assign({theme:"mc",set:SPS_M,brand:"Macera köşem",embSvg:BN_ART.mac,cmLabel:"Bu maceradan bir not",cmPh:"ör. Son kilometrede uçtum",file:"macera-",rated:false},o));}
 macShare=async function(e){const M=mac(),h=(M.hat||{})[e[0]]||{},t=SP_T[e[2]]||["","Macera"],cc=MT_C[e[2]]||MT_C.macera,past=(e[4]||e[3])<dkey(),go=!!(M.go||{})[e[0]];const d=new Date(e[3]+"T00:00");
- spsMac({title:e[1],sub:[mDateTxt(e[3]),e[7]].filter(Boolean).join("  ·  "),img:PH["mac:"+e[0]]||"",c1:cc[0],c2:cc[1],cm:h.cm||"",label:past&&go?"Başardım":go?"Hazırlanıyorum":"Bu macera benim",eyebrow:"Me First  ·  "+t[1],stamp:(e[7]||"MACERA").toLocaleUpperCase("tr-TR").slice(0,12),dateS:d.toLocaleDateString("tr-TR",{day:"2-digit",month:"2-digit",year:"numeric"}),
-  save:function(){const H=M.hat=M.hat||{};H[e[0]]=Object.assign(H[e[0]]||{},{cm:this.cm});if(this.photo)PH["mac:"+e[0]]=this.photo;try{save();phSave();}catch(_){}}});};
+ spsMac({title:e[1],sub:[mDateTxt(e[3]),e[7]].filter(Boolean).join("  ·  "),img:PH["mac:"+e[0]]||PH.me||"",c1:cc[0],c2:cc[1],cm:h.cm||"",label:past&&go?"Başardım":go?"Hazırlanıyorum":"Bu macera benim",eyebrow:"Me First  ·  "+t[1],stamp:(e[7]||"MACERA").toLocaleUpperCase("tr-TR").slice(0,12),dateS:d.toLocaleDateString("tr-TR",{day:"2-digit",month:"2-digit",year:"numeric"}),
+  save:function(){const H=M.hat=M.hat||{};H[e[0]]=Object.assign(H[e[0]]||{},{cm:this.cm},this.photo?{ps:"gal"}:{});if(this.photo)PH["mac:"+e[0]]=this.photo;try{save();phSave();}catch(_){}}});};
 mLogShare=async function(l){const d=new Date((l.d||dkey())+"T00:00");
- spsMac({title:l.t,sub:[mDateTxt(l.d),l.city].filter(Boolean).join("  ·  "),img:PH["mac:"+l.id]||"",c1:l.c||"#FF8A5B",c2:"#C9502A",cm:l.cm||"",label:"Kendi maceram",eyebrow:"Me First  ·  Macera köşem",stamp:(l.city||"MACERA").toLocaleUpperCase("tr-TR").slice(0,12),dateS:d.toLocaleDateString("tr-TR",{day:"2-digit",month:"2-digit",year:"numeric"}),
+ spsMac({title:l.t,sub:[mDateTxt(l.d),l.city].filter(Boolean).join("  ·  "),img:PH["mac:"+l.id]||PH.me||"",c1:l.c||"#FF8A5B",c2:"#C9502A",cm:l.cm||"",label:"Kendi maceram",eyebrow:"Me First  ·  Macera köşem",stamp:(l.city||"MACERA").toLocaleUpperCase("tr-TR").slice(0,12),dateS:d.toLocaleDateString("tr-TR",{day:"2-digit",month:"2-digit",year:"numeric"}),
   save:function(){l.cm=this.cm;if(this.photo)PH["mac:"+l.id]=this.photo;try{save();phSave();}catch(_){}}});};
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
