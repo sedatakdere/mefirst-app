@@ -17113,7 +17113,7 @@ function spTilt(el){if(!el||el.dataset.tilt)return;el.dataset.tilt=1;const gl=do
 
 /* ===== v0.42 Sahne & Perde: gerçek afişler, etkinlik görselleri, "Eşimle" ===== */
 YI.rings='<circle cx="9" cy="14" r="5.5"/><circle cx="15" cy="14" r="5.5"/><path d="M10.5 4.5 12 3l1.5 1.5L12 6z"/>';
-PF_MOOD.esim=["rings","Eşimle"];
+PF_MOOD.esim=["rings","Ruh eşimle"];
 [["lalaland","Aşıklar Şehri","La La Land",2016,"Damien Chazelle",["ask","esim"],"","Los Angeles'ta bir caz piyanisti, bir oyuncu adayı ve hayallerle aşk arasında bir dans.","#3E4A9A","#1E1433","music"],
  ["abouttime","Aşk Zamanı","About Time",2013,"Richard Curtis",["ask","esim","iyi"],"","Zamanda yolculuk yapabilen bir adam ve sıradan günlerin aslında ne kadar değerli olduğu.","#C8803A","#3A2A1E","clock"],
  ["crazystupid","Çılgın Aptal Aşk","Crazy, Stupid, Love.",2011,"Glenn Ficarra, John Requa",["gul","esim","ask"],"","Evliliği sarsılan bir adam, yeni öğretmeni ve herkesin birbirine karıştığı bir aşk komedisi.","#2E7A6A","#14332E","heart"],
@@ -17138,7 +17138,7 @@ function spFilmImg(f){const v=SP.vizyon.find(x=>x[0]===f[0]);const u=(v&&v[7])||
  const _sh=spShare;spShare=async function(id){const f=spFilm(id);if(!PH["sp:"+id]){const real=await spPosterReal(f);if(real){const keep=spPosterCanvas;spPosterCanvas=()=>real;try{return await _sh.apply(this,arguments);}finally{spPosterCanvas=keep;}}}return _sh.apply(this,arguments);};
  /* Perde'ye "Eşimle film gecesi" sırası */
  const _ph=spPerdeHTML;spPerdeHTML=function(){let H=_ph.apply(this,arguments);if(SP.mood)return H;const S=spSt();const L=PF.filter(x=>x[5].includes("esim"));
-  const row=`<div class="kthead"><span>Eşimle film gecesi</span><small>ikiniz için</small></div><div class="ktrow sprow">${L.map(x=>`<button type="button" class="spcard" data-spf="${x[0]}">${spPoster(x)}${S.seen[x[0]]?`<i class="spc-ok">${ySvg("check")}</i>`:S.want[x[0]]?`<i class="spc-ok w">${ySvg("bookmark")}</i>`:""}</button>`).join("")}</div>`;
+  const row=`<div class="kthead"><span>Ruh Eşimle Film Gecesi</span><small>ikiniz için</small></div><div class="ktrow sprow">${L.map(x=>`<button type="button" class="spcard" data-spf="${x[0]}">${spPoster(x)}${S.seen[x[0]]?`<i class="spc-ok">${ySvg("check")}</i>`:S.want[x[0]]?`<i class="spc-ok w">${ySvg("bookmark")}</i>`:""}</button>`).join("")}</div>`;
   const i=H.indexOf('<div class="kthead"><span>Kız kıza film gecesi');return i>=0?H.slice(0,i)+row+H.slice(i):H+row;};})();
 
 </script>
