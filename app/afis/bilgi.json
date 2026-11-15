@@ -1,5 +1,5 @@
 {
-"_v": 3,
+"_v": 4,
 "abouttime": {
 "imdb": "tt2194499",
 "oyuncu": [
@@ -12,9 +12,9 @@
 ],
 "sure": 123,
 "tur": [
-"bilimkurgu",
+"romantik komedi",
 "romantik",
-"drama"
+"komedi"
 ],
 "ulke": [
 "İngiltere"
@@ -72,8 +72,8 @@
 ],
 "sure": 125,
 "tur": [
-"savaş",
 "drama",
+"savaş",
 "historical"
 ],
 "ulke": [
@@ -145,8 +145,8 @@
 "sure": 102,
 "tur": [
 "romantik",
-"savaş",
-"drama"
+"drama",
+"savaş"
 ],
 "ulke": [
 "ABD"
@@ -164,8 +164,8 @@
 ],
 "sure": 121,
 "tur": [
-"acıklı güldürü",
 "romantik",
+"acıklı güldürü",
 "drama"
 ],
 "ulke": [
@@ -185,8 +185,8 @@
 ],
 "sure": 118,
 "tur": [
-"Komedi-drama",
 "romantik komedi",
+"Komedi-drama",
 "gençlik"
 ],
 "ulke": [
@@ -205,8 +205,8 @@
 ],
 "sure": 96,
 "tur": [
-"romantik",
 "müzikal",
+"romantik",
 "drama"
 ],
 "ulke": [
@@ -227,7 +227,7 @@
 "tur": [
 "romantik komedi",
 "Komedi-drama",
-"drama"
+"biyografik"
 ],
 "ulke": [
 "ABD"
@@ -401,8 +401,8 @@
 ],
 "sure": 178,
 "tur": [
-"drama",
-"romantik"
+"romantik",
+"drama"
 ],
 "ulke": [
 "Türkiye"
@@ -421,8 +421,8 @@
 "sure": 128,
 "tur": [
 "Komedi-drama",
-"romantik",
-"komedi"
+"müzikal",
+"romantik"
 ],
 "ulke": [
 "ABD"
@@ -458,8 +458,8 @@
 ],
 "sure": 135,
 "tur": [
-"acıklı güldürü",
 "romantik komedi",
+"acıklı güldürü",
 "Christmas"
 ],
 "ulke": [
@@ -553,8 +553,8 @@
 ],
 "sure": 119,
 "tur": [
-"Komedi-drama",
-"romantik komedi"
+"romantik komedi",
+"Komedi-drama"
 ],
 "ulke": [
 "İngiltere",
@@ -611,8 +611,8 @@
 ],
 "sure": 127,
 "tur": [
-"drama",
-"romantik"
+"romantik",
+"drama"
 ],
 "ulke": [
 "İngiltere",
@@ -707,8 +707,8 @@
 "sure": 129,
 "tur": [
 "Komedi-drama",
-"silahlı kızlar",
-"polisiye"
+"macera",
+"silahlı kızlar"
 ],
 "ulke": [
 "ABD",
@@ -746,8 +746,8 @@
 ],
 "sure": 113,
 "tur": [
-"Komedi-drama",
 "romantik komedi",
+"Komedi-drama",
 "LGBTQ-related"
 ],
 "ulke": [
@@ -786,8 +786,8 @@
 "sure": 158,
 "tur": [
 "drama",
-"aksiyon",
-"macera"
+"macera",
+"aksiyon"
 ],
 "ulke": [
 "ABD"
