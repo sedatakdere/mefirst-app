@@ -53,8 +53,9 @@ def labels(ids):
 FAME, TRL = {}, {}
 TUR_SIRA = ["romantik komedi", "komedi-drama", "müzikal", "biyografik", "romantik", "acıklı güldürü", "komedi", "drama", "savaş", "macera", "aksiyon", "bilimkurgu", "fantastik"]
 def bilgi(qid, y=0):
-    j = get("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({"action": "wbgetentities", "format": "json", "ids": qid, "props": "claims"}))
-    C = ((j.get("entities") or {}).get(qid) or {}).get("claims") or {}
+    j = get("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({"action": "wbgetentities", "format": "json", "ids": qid, "props": "claims|sitelinks"}))
+    E = (j.get("entities") or {}).get(qid) or {}
+    C = E.get("claims") or {}
     def vals(p, n):
         r = []
         for c in C.get(p, [])[:n]:
@@ -80,7 +81,34 @@ def bilgi(qid, y=0):
     for g in gen:
         t = re.sub(r"\s*(filmi|film)$", "", L.get(g, "")).strip()
         if t and t not in tur: tur.append(t)
-    o = {"imdb": imdb, "sure": sure, "tur": tur[:3], "ulke": [ULKE.get(L.get(c, ""), L.get(c, "")) for c in cty if L.get(c)],
+    # eleştirmen/izleyici puanları (Wikidata P444, kaynak P447)
+    KAYNAK = {"Q37312": "IMDb", "Q105584": "Rotten Tomatoes", "Q150248": "Metacritic"}
+    puan = {}
+    for c in C.get("P444", []):
+        v = ((c.get("mainsnak") or {}).get("datavalue") or {}).get("value")
+        q = ((c.get("qualifiers") or {}).get("P447") or [{}])[0]
+        src = (((q.get("datavalue") or {}).get("value")) or {}).get("id", "")
+        if isinstance(v, str) and src in KAYNAK: puan[KAYNAK[src]] = v.strip()
+    # Oscar ödülleri (P166 = kazandığı ödüller)
+    aw = [v.get("id") for v in vals("P166", 40) if isinstance(v, dict)]
+    oscar = 0
+    if aw:
+        try:
+            jj = get("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({"action": "wbgetentities", "format": "json", "ids": "|".join(aw[:50]), "props": "labels", "languages": "en"}))
+            oscar = sum(1 for e in (jj.get("entities") or {}).values() if ((e.get("labels") or {}).get("en") or {}).get("value", "").startswith("Academy Award for"))
+        except Exception: pass
+    yon = [v.get("id") for v in vals("P57", 2) if isinstance(v, dict)]
+    LY = labels(yon) if yon else {}
+    # konusu: Türkçe Vikipedi'nin giriş paragrafı
+    konu = ""
+    tt = ((E.get("sitelinks") or {}).get("trwiki") or {}).get("title", "")
+    if tt:
+        try:
+            jj = get("https://tr.wikipedia.org/w/api.php?" + urllib.parse.urlencode({"action": "query", "format": "json", "prop": "extracts", "exintro": "1", "explaintext": "1", "exsentences": "4", "titles": tt}))
+            pg = next(iter((jj.get("query") or {}).get("pages", {}).values()), {})
+            konu = re.sub(r"\s*\([^()]*\)", "", pg.get("extract", "")).strip()[:600]
+        except Exception: pass
+    o = {"imdb": imdb, "sure": sure, "puan": puan, "oscar": oscar, "yonetmen": [LY[x] for x in yon if LY.get(x)], "konu": konu, "tur": tur[:3], "ulke": [ULKE.get(L.get(c, ""), L.get(c, "")) for c in cty if L.get(c)],
          "oyuncu": [L[c] for c in cast if L.get(c)][:6]}
     return {k: v for k, v in o.items() if v}
 html = open("app/index.html", encoding="utf-8").read()
@@ -100,7 +128,7 @@ except Exception: out = {}
 infop = "app/afis/bilgi.json"
 try: info = json.load(open(infop, encoding="utf-8"))
 except Exception: info = {}
-if info.get("_v") != 4: info = {"_v": 4}
+if info.get("_v") != 5: info = {"_v": 5}
 for fid, (tr, orig, y) in films.items():
     if fid == "_v": continue
     has_img = fid in out and os.path.exists("app/" + out[fid])
