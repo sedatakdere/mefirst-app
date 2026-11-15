@@ -74,7 +74,8 @@ def bilgi(qid, y=0):
         try: sure = int(round(float(v.get("amount", "0"))))
         except Exception: pass
     cast.sort(key=lambda c: -FAME.get(c, 0))
-    gen.sort(key=lambda g: (not TRL.get(g), TUR_SIRA.index(L.get(g, "").lower()) if L.get(g, "").lower() in TUR_SIRA else 99))
+    gk = lambda g: re.sub(r"\s*(filmi|film)$", "", L.get(g, "")).strip().lower()
+    gen.sort(key=lambda g: (not TRL.get(g), TUR_SIRA.index(gk(g)) if gk(g) in TUR_SIRA else 99))
     tur = []
     for g in gen:
         t = re.sub(r"\s*(filmi|film)$", "", L.get(g, "")).strip()
@@ -99,7 +100,7 @@ except Exception: out = {}
 infop = "app/afis/bilgi.json"
 try: info = json.load(open(infop, encoding="utf-8"))
 except Exception: info = {}
-if info.get("_v") != 3: info = {"_v": 3}
+if info.get("_v") != 4: info = {"_v": 4}
 for fid, (tr, orig, y) in films.items():
     if fid == "_v": continue
     has_img = fid in out and os.path.exists("app/" + out[fid])
