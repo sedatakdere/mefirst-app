@@ -20,13 +20,15 @@ def wiki(lang, q, y):
     j = get(f"https://{lang}.wikipedia.org/w/api.php?" + urllib.parse.urlencode(p))
     pages = sorted((j.get("query") or {}).get("pages", {}).values(), key=lambda x: x.get("index", 0))
     want = fold(q)
+    exact, loose = [], []
     for pg in pages:
         src = (pg.get("thumbnail") or {}).get("source", "")
         if ".svg" in src.lower(): src = ""
         qid = (pg.get("pageprops") or {}).get("wikibase_item", "")
-        if (src or qid) and match(pg.get("title", ""), want):
-            return src, qid
-    return "", ""
+        t = fold(re.sub(r"\(.*?\)", "", pg.get("title", "")))
+        if not (src or qid) or not match(pg.get("title", ""), want): continue
+        (exact if t == want else loose).append((src, qid))
+    return exact + loose
 def itunes(q, y):
     for c in ("tr", "us"):
         j = get("https://itunes.apple.com/search?" + urllib.parse.urlencode({"term": q, "media": "movie", "entity": "movie", "limit": 8, "country": c}))
@@ -46,7 +48,7 @@ def labels(ids):
         L = e.get("labels") or {}
         o[k] = (L.get("tr") or L.get("en") or {}).get("value", "")
     return o
-def bilgi(qid):
+def bilgi(qid, y=0):
     j = get("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({"action": "wbgetentities", "format": "json", "ids": qid, "props": "claims"}))
     C = ((j.get("entities") or {}).get(qid) or {}).get("claims") or {}
     def vals(p, n):
@@ -55,6 +57,9 @@ def bilgi(qid):
             v = ((c.get("mainsnak") or {}).get("datavalue") or {}).get("value")
             if v is not None: r.append(v)
         return r
+    yy = [int(str(v.get("time", "+0"))[1:5]) for v in vals("P577", 5) if isinstance(v, dict) and str(v.get("time", ""))[1:5].isdigit()]
+    if y and yy and min(abs(a - y) for a in yy) > 1: return None
+    if y and not yy: return None
     cast = [v.get("id") for v in vals("P161", 6) if isinstance(v, dict)]
     gen = [v.get("id") for v in vals("P136", 3) if isinstance(v, dict)]
     cty = [v.get("id") for v in vals("P495", 2) if isinstance(v, dict)]
@@ -88,24 +93,26 @@ except Exception: out = {}
 infop = "app/afis/bilgi.json"
 try: info = json.load(open(infop, encoding="utf-8"))
 except Exception: info = {}
+if info.get("_v") != 2: info = {"_v": 2}
 for fid, (tr, orig, y) in films.items():
+    if fid == "_v": continue
     has_img = fid in out and os.path.exists("app/" + out[fid])
     if has_img and fid in info: continue
     yerli = tr == orig
     tries = [("tr", orig), ("en", orig)] if yerli else [("en", orig), ("tr", tr), ("en", tr)]
-    url, qid = "", ""
+    url, got = "", fid in info
     for lang, q in tries:
-        try:
-            u, qd = wiki(lang, q, y)
-            url = url or u; qid = qid or qd
-        except Exception as e: print("wiki hata", fid, e)
-        if url and qid: break
+        try: cands = wiki(lang, q, y)
+        except Exception as e: print("wiki hata", fid, e); cands = []
+        for u, qd in cands:
+            if not got and qd:
+                try:
+                    b = bilgi(qd, y)
+                    if b: info[fid] = b; got = True; url = url or u; print("BİLGİ", fid, qd, b)
+                except Exception as e: print("bilgi hata", fid, e)
+        if not url and cands and cands[0][0] and got: url = cands[0][0]
+        if got and (url or has_img): break
         time.sleep(0.3)
-    if qid and fid not in info:
-        try:
-            b = bilgi(qid)
-            if b: info[fid] = b; print("BİLGİ", fid, b)
-        except Exception as e: print("bilgi hata", fid, e)
     if has_img: continue
     if not url:
         try: url = itunes(orig, y)
