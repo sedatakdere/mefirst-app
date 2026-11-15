@@ -1,14 +1,14 @@
 {
-"_v": 2,
+"_v": 3,
 "abouttime": {
 "imdb": "tt2194499",
 "oyuncu": [
-"Domhnall Gleeson",
-"Ben Benson",
+"Rachel McAdams",
+"Margot Robbie",
+"Richard Griffiths",
+"Vanessa Kirby",
 "Bill Nighy",
-"Lindsay Duncan",
-"Lisa Eichhorn",
-"Lydia Wilson"
+"Domhnall Gleeson"
 ],
 "sure": 123,
 "tur": [
@@ -26,9 +26,9 @@
 "Audrey Tautou",
 "Mathieu Kassovitz",
 "Jamel Debbouze",
-"Dominique Pinon",
 "Yolande Moreau",
-"André Dussollier"
+"André Dussollier",
+"Dominique Pinon"
 ],
 "sure": 122,
 "tur": [
@@ -46,10 +46,10 @@
 "oyuncu": [
 "Winona Ryder",
 "Richard Gere",
-"Anthony LaPaglia",
-"Elaine Strich",
 "Vera Farmiga",
-"Sherry Stringfield"
+"J. K. Simmons",
+"Rachel Nichols",
+"Anthony LaPaglia"
 ],
 "sure": 101,
 "tur": [
@@ -63,12 +63,12 @@
 "ayla": {
 "imdb": "tt6316138",
 "oyuncu": [
-"İsmail Hacıoğlu",
-"Çetin Tekindor",
-"Ali Atay",
-"Altan Erkekli",
+"Eric Roberts",
+"Kim Seolhyun",
 "Murat Yıldırım",
-"Kim Seolhyun"
+"Damla Sönmez",
+"Çetin Tekindor",
+"İsmail Hacıoğlu"
 ],
 "sure": 125,
 "tur": [
@@ -83,12 +83,12 @@
 "babamoglum": {
 "imdb": "tt0476735",
 "oyuncu": [
-"Çetin Tekindor",
-"Fikret Kuşkan",
-"Hümeyra Akbay",
 "Tuba Büyüküstün",
-"Şerif Sezer",
-"Binnur Kaya"
+"Halit Ergenç",
+"Çetin Tekindor",
+"Erdal Tosun",
+"Binnur Kaya",
+"Fikret Kuşkan"
 ],
 "sure": 108,
 "tur": [
@@ -103,10 +103,10 @@
 "oyuncu": [
 "Ethan Hawke",
 "Julie Delpy",
+"Adam Goldberg",
+"Erni Mangold",
 "Hanno Pöschl",
-"Tex Rubinowitz",
-"Andrea Eckert",
-"Erni Mangold"
+"Andrea Eckert"
 ],
 "sure": 97,
 "tur": [
@@ -135,12 +135,12 @@
 "casablanca": {
 "imdb": "tt0034583",
 "oyuncu": [
-"Humphrey Bogart",
 "Ingrid Bergman",
-"Paul Henreid",
+"Humphrey Bogart",
+"Peter Lorre",
 "Claude Rains",
 "Conrad Veidt",
-"Sydney Greenstreet"
+"Paul Henreid"
 ],
 "sure": 102,
 "tur": [
@@ -155,18 +155,18 @@
 "chocolat": {
 "imdb": "tt0241303",
 "oyuncu": [
+"Johnny Depp",
+"Judi Dench",
 "Juliette Binoche",
 "Carrie-Anne Moss",
-"Judi Dench",
-"Johnny Depp",
 "Alfred Molina",
-"Lena Olin"
+"Leslie Caron"
 ],
 "sure": 121,
 "tur": [
+"acıklı güldürü",
 "romantik",
-"drama",
-"acıklı güldürü"
+"drama"
 ],
 "ulke": [
 "İngiltere",
@@ -176,10 +176,11 @@
 "crazystupid": {
 "imdb": "tt1570728",
 "oyuncu": [
-"Steve Carell",
-"Ryan Gosling",
 "Julianne Moore",
-"John Carroll Lynch",
+"Ryan Gosling",
+"Joey King",
+"Steve Carell",
+"Kevin Bacon",
 "Marisa Tomei"
 ],
 "sure": 118,
@@ -196,11 +197,11 @@
 "imdb": "tt0092890",
 "oyuncu": [
 "Patrick Swayze",
+"Wayne Knight",
 "Jennifer Grey",
 "Jerry Orbach",
-"Cynthia Rhodes",
 "Kelly Bishop",
-"Jane Brucker"
+"Cynthia Rhodes"
 ],
 "sure": 96,
 "tur": [
@@ -215,12 +216,12 @@
 "eatpraylove": {
 "imdb": "tt0879870",
 "oyuncu": [
+"Julia Roberts",
 "Javier Bardem",
-"Billy Crudup",
-"Richard Jenkins",
-"Viola Davis",
 "James Franco",
-"Julia Roberts"
+"Viola Davis",
+"Richard Jenkins",
+"Billy Crudup"
 ],
 "sure": 140,
 "tur": [
@@ -238,9 +239,9 @@
 "Julia Roberts",
 "Albert Finney",
 "Aaron Eckhart",
+"Erin Brockovich",
 "Marg Helgenberger",
-"Peter Coyote",
-"Cherry Jones"
+"Peter Coyote"
 ],
 "sure": 130,
 "tur": [
@@ -254,18 +255,18 @@
 "ghost": {
 "imdb": "tt0099653",
 "oyuncu": [
-"Patrick Swayze",
 "Demi Moore",
 "Whoopi Goldberg",
+"Patrick Swayze",
 "Tony Goldwyn",
-"Rick Aviles",
+"Stephen Root",
 "Vincent Schiavelli"
 ],
 "sure": 122,
 "tur": [
 "romantik",
-"fantasy",
-"drama"
+"drama",
+"fantasy"
 ],
 "ulke": [
 "ABD"
@@ -275,11 +276,11 @@
 "imdb": "tt0252487",
 "oyuncu": [
 "Kemal Sunal",
-"Şener Şen",
-"Münir Özkul",
 "Tarık Akan",
 "Adile Naşit",
-"Halit Akçatepe"
+"Halit Akçatepe",
+"Şener Şen",
+"Münir Özkul"
 ],
 "sure": 87,
 "tur": [
@@ -292,18 +293,18 @@
 "harrysally": {
 "imdb": "tt0098635",
 "oyuncu": [
-"Billy Crystal",
-"Meg Ryan",
 "Carrie Fisher",
+"Meg Ryan",
+"Billy Crystal",
 "Bruno Kirby",
-"Franc Luz",
+"Connie Sawyer",
 "Harley Jane Kozak"
 ],
 "sure": 90,
 "tur": [
 "romantik komedi",
-"Christmas",
-"komedi"
+"komedi",
+"Christmas"
 ],
 "ulke": [
 "ABD"
@@ -312,12 +313,12 @@
 "hiddenfigures": {
 "imdb": "tt4846340",
 "oyuncu": [
-"Taraji P. Henson",
-"Octavia Spencer",
-"Janelle Monáe",
 "Kevin Costner",
 "Kirsten Dunst",
-"Jim Parsons"
+"Jim Parsons",
+"Mahershala Ali",
+"Octavia Spencer",
+"Taraji P. Henson"
 ],
 "sure": 127,
 "tur": [
@@ -331,18 +332,18 @@
 "holiday": {
 "imdb": "tt0457939",
 "oyuncu": [
-"Cameron Diaz",
 "Kate Winslet",
+"Cameron Diaz",
+"Lindsay Lohan",
 "Jude Law",
-"Jack Black",
-"Shannyn Sossamon",
-"Eli Wallach"
+"James Franco",
+"Jack Black"
 ],
 "sure": 135,
 "tur": [
 "romantik komedi",
-"Christmas",
-"komedi"
+"komedi",
+"Christmas"
 ],
 "ulke": [
 "İngiltere",
@@ -355,9 +356,9 @@
 "Robert De Niro",
 "Anne Hathaway",
 "Rene Russo",
-"Anders Holm",
-"Andrew Rannells",
-"Adam DeVine"
+"Adam DeVine",
+"Mary Kay Place",
+"Nat Wolff"
 ],
 "sure": 121,
 "tur": [
@@ -374,15 +375,15 @@
 "Meryl Streep",
 "Amy Adams",
 "Stanley Tucci",
-"Chris Messina",
+"Jane Lynch",
 "Mary Lynn Rajskub",
-"Jane Lynch"
+"Vanessa Ferlito"
 ],
 "sure": 123,
 "tur": [
-"biyografik",
+"romantik komedi",
 "Komedi-drama",
-"romantik komedi"
+"biyografik"
 ],
 "ulke": [
 "ABD"
@@ -392,11 +393,11 @@
 "imdb": "tt2608224",
 "oyuncu": [
 "Kıvanç Tatlıtuğ",
-"Mert Fırat",
 "Farah Zeynep Abdullah",
-"Belçim Bilgin",
+"Yılmaz Erdoğan",
 "Ahmet Mümtaz Taylan",
-"Taner Birsel"
+"Mert Fırat",
+"Belçim Bilgin"
 ],
 "sure": 178,
 "tur": [
@@ -410,16 +411,17 @@
 "lalaland": {
 "imdb": "tt3783958",
 "oyuncu": [
+"Ryan Gosling",
 "J. K. Simmons",
-"Finn Wittrock",
+"John Legend",
 "Rosemarie DeWitt",
-"Meagen Fay",
-"John Legend"
+"Finn Wittrock",
+"Sonoya Mizuno"
 ],
 "sure": 128,
 "tur": [
-"romantik",
 "Komedi-drama",
+"romantik",
 "komedi"
 ],
 "ulke": [
@@ -429,12 +431,12 @@
 "littlewomen": {
 "imdb": "tt3281548",
 "oyuncu": [
+"Emma Watson",
 "Meryl Streep",
-"Saoirse Ronan",
 "Timothée Chalamet",
-"Florence Pugh",
-"Eliza Scanlen",
-"James Norton"
+"Saoirse Ronan",
+"Laura Dern",
+"Florence Pugh"
 ],
 "sure": 134,
 "tur": [
@@ -447,18 +449,18 @@
 "loveactually": {
 "imdb": "tt0314331",
 "oyuncu": [
-"Hugh Grant",
+"Rowan Atkinson",
+"Keira Knightley",
 "Liam Neeson",
-"Colin Firth",
-"Laura Linney",
+"Alan Rickman",
 "Emma Thompson",
-"Alan Rickman"
+"Hugh Grant"
 ],
 "sure": 135,
 "tur": [
+"acıklı güldürü",
 "romantik komedi",
-"Christmas",
-"acıklı güldürü"
+"Christmas"
 ],
 "ulke": [
 "İngiltere",
@@ -469,11 +471,11 @@
 "imdb": "tt0795421",
 "oyuncu": [
 "Meryl Streep",
-"Amanda Seyfried",
 "Pierce Brosnan",
+"Amanda Seyfried",
 "Colin Firth",
 "Stellan Skarsgård",
-"Julie Walters"
+"Benny Andersson"
 ],
 "sure": 108,
 "tur": [
@@ -489,12 +491,12 @@
 "mavi": {
 "imdb": "tt0252695",
 "oyuncu": [
-"Emel Sayın",
 "Tarık Akan",
+"Kemal Sunal",
+"Adile Naşit",
+"Halit Akçatepe",
 "Zeki Alasya",
-"Metin Akpınar",
-"Münir Özkul",
-"Halit Akçatepe"
+"Münir Özkul"
 ],
 "tur": [
 "komedi"
@@ -506,10 +508,10 @@
 "neseli": {
 "imdb": "tt0765833",
 "oyuncu": [
-"Münir Özkul",
 "Adile Naşit",
-"Şener Şen",
 "Ayşen Gruda",
+"Münir Özkul",
+"Şener Şen",
 "Oya Aydoğan"
 ],
 "tur": [
@@ -522,8 +524,8 @@
 "notebook": {
 "imdb": "tt0332280",
 "oyuncu": [
-"Ryan Gosling",
 "Rachel McAdams",
+"Ryan Gosling",
 "Gena Rowlands",
 "James Garner",
 "James Marsden",
@@ -543,16 +545,16 @@
 "imdb": "tt0125439",
 "oyuncu": [
 "Julia Roberts",
+"Alec Baldwin",
 "Hugh Grant",
+"Mischa Barton",
 "Rhys Ifans",
-"Emma Chambers",
-"Tim McInnerny",
-"Gina McKee"
+"Hugh Bonneville"
 ],
 "sure": 119,
 "tur": [
-"romantik komedi",
-"Komedi-drama"
+"Komedi-drama",
+"romantik komedi"
 ],
 "ulke": [
 "İngiltere",
@@ -565,9 +567,9 @@
 "Meryl Streep",
 "Anne Hathaway",
 "Emily Blunt",
-"Stanley Tucci",
-"Simon Baker",
-"Adrian Grenier"
+"Gisele Bündchen",
+"Heidi Klum",
+"Stanley Tucci"
 ],
 "sure": 109,
 "tur": [
@@ -581,12 +583,12 @@
 "prettywoman": {
 "imdb": "tt0100405",
 "oyuncu": [
-"Richard Gere",
 "Julia Roberts",
-"Ralph Bellamy",
+"Richard Gere",
+"Garry Marshall",
 "Jason Alexander",
-"Laura San Giacomo",
-"Héctor Elizondo"
+"Hank Azaria",
+"Ralph Bellamy"
 ],
 "sure": 119,
 "tur": [
@@ -601,11 +603,11 @@
 "imdb": "tt0414387",
 "oyuncu": [
 "Keira Knightley",
-"Matthew Macfadyen",
-"Brenda Blethyn",
+"Judi Dench",
 "Donald Sutherland",
-"Tom Hollander",
-"Rosamund Pike"
+"Rosamund Pike",
+"Carey Mulligan",
+"Jena Malone"
 ],
 "sure": 127,
 "tur": [
@@ -621,11 +623,11 @@
 "imdb": "tt1041829",
 "oyuncu": [
 "Sandra Bullock",
+"Sandra Bullock",
+"Ryan Reynolds",
 "Ryan Reynolds",
 "Betty White",
-"Mary Steenburgen",
-"Craig T. Nelson",
-"Aasif Mandvi"
+"Mary Steenburgen"
 ],
 "sure": 107,
 "tur": [
@@ -639,12 +641,12 @@
 "romanholiday": {
 "imdb": "tt0046250",
 "oyuncu": [
-"Gregory Peck",
 "Audrey Hepburn",
+"Gregory Peck",
 "Eddie Albert",
-"Tullio Carminati",
+"Paola Borboni",
 "Paolo Carlini",
-"Claudio Ermelli"
+"Tullio Carminati"
 ],
 "sure": 118,
 "tur": [
@@ -661,8 +663,8 @@
 "oyuncu": [
 "Türkân Şoray",
 "Kadir İnanır",
-"İhsan Yüce",
-"Ahmet Mekin"
+"Ahmet Mekin",
+"İhsan Yüce"
 ],
 "sure": 90,
 "tur": [
@@ -675,18 +677,18 @@
 "steelmagnolias": {
 "imdb": "tt0098384",
 "oyuncu": [
-"Sally Field",
+"Julia Roberts",
 "Dolly Parton",
 "Shirley MacLaine",
+"Sally Field",
 "Daryl Hannah",
-"Olympia Dukakis",
-"Julia Roberts"
+"Sam Shepard"
 ],
 "sure": 114,
 "tur": [
-"female buddy",
 "Komedi-drama",
-"drama"
+"drama",
+"female buddy"
 ],
 "ulke": [
 "ABD"
@@ -695,18 +697,18 @@
 "thelmalouise": {
 "imdb": "tt0103074",
 "oyuncu": [
+"Brad Pitt",
 "Susan Sarandon",
 "Geena Davis",
 "Harvey Keitel",
 "Michael Madsen",
-"Christopher McDonald",
-"Stephen Tobolowsky"
+"Christopher McDonald"
 ],
 "sure": 129,
 "tur": [
-"female buddy",
+"Komedi-drama",
 "silahlı kızlar",
-"Komedi-drama"
+"polisiye"
 ],
 "ulke": [
 "ABD",
@@ -716,12 +718,12 @@
 "tiffany": {
 "imdb": "tt0054698",
 "oyuncu": [
-"George Peppard",
 "Audrey Hepburn",
 "Patricia Neal",
-"Buddy Ebsen",
+"Mickey Rooney",
 "Martin Balsam",
-"Mickey Rooney"
+"George Peppard",
+"Buddy Ebsen"
 ],
 "sure": 110,
 "tur": [
@@ -737,16 +739,16 @@
 "oyuncu": [
 "Diane Lane",
 "Sandra Oh",
-"Lindsay Duncan",
+"Mario Monicelli",
+"Kate Walsh",
 "Raoul Bova",
-"Vincent Riotta",
-"Mario Monicelli"
+"Lindsay Duncan"
 ],
 "sure": 113,
 "tur": [
+"Komedi-drama",
 "romantik komedi",
-"LGBTQ-related",
-"Komedi-drama"
+"LGBTQ-related"
 ],
 "ulke": [
 "ABD",
@@ -757,11 +759,11 @@
 "imdb": "tt38773219",
 "oyuncu": [
 "Johnny Depp",
-"Andrea Riseborough",
-"Tramell Tillman",
 "Ian McKellen",
 "Rupert Grint",
-"Daisy Ridley"
+"Daisy Ridley",
+"Sam Claflin",
+"Andrea Riseborough"
 ],
 "sure": 116,
 "tur": [
@@ -776,10 +778,10 @@
 "v-hungergames-sunrise": {
 "imdb": "tt32558705",
 "oyuncu": [
-"Joseph Zada",
-"Whitney Peak",
 "Mckenna Grace",
-"Ben Wang"
+"Whitney Peak",
+"Ben Wang",
+"Joseph Zada"
 ],
 "sure": 158,
 "tur": [
@@ -795,8 +797,8 @@
 "imdb": "tt2321555",
 "sure": 107,
 "tur": [
-"fantasy",
 "çocuk",
+"fantasy",
 "fantasy comedy"
 ],
 "ulke": [
@@ -806,12 +808,12 @@
 "vizontele": {
 "imdb": "tt0270053",
 "oyuncu": [
-"Demet Akbağ",
-"Altan Erkekli",
 "Cem Yılmaz",
 "Yılmaz Erdoğan",
-"Zeynep Tokuş",
-"Tolga Çevik"
+"Demet Akbağ",
+"Tolga Çevik",
+"Altan Erkekli",
+"Zeynep Tokuş"
 ],
 "sure": 110,
 "tur": [
@@ -826,10 +828,10 @@
 "oyuncu": [
 "Tom Hanks",
 "Meg Ryan",
+"Steve Zahn",
 "Greg Kinnear",
-"Parker Posey",
-"Jean Stapleton",
-"Steve Zahn"
+"Dave Chappelle",
+"Parker Posey"
 ],
 "sure": 114,
 "tur": [
