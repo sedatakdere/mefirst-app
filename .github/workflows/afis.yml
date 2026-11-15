@@ -1,0 +1,24 @@
+name: Perde afişleri
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/afis.yml", ".github/scripts/afis.py", "app/sahne.json"]
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 * * 1"
+permissions:
+  contents: write
+concurrency: afis
+jobs:
+  afis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Afişleri indir
+        run: python3 .github/scripts/afis.py
+      - name: Kaydet
+        run: |
+          git config user.name "Me First Bot"
+          git config user.email "me-first-bot@users.noreply.github.com"
+          git add app/afis
+          git diff --cached --quiet || (git commit -m "Perde afişleri güncellendi" && git pull --rebase && git push)

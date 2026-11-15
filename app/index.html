@@ -17259,6 +17259,12 @@ spaFetch=async function(j){let url="",net=false;const ok=v=>{if(v===null){net=tr
  SPXC[j.k]=url;spaSave();if(url){clearTimeout(SPX.t);SPX.t=setTimeout(spaPatch,350);}};
 (function(){const _im=spImg;spImg=function(u,w){if(/^https:\/\/upload\.wikimedia\.org\//.test(u||""))return u;return _im.apply(this,arguments);};})();
 
+/* v0.46: afişler kendi sunucumuzdan (bot indirir: afis/afis.json) — dış servise bağlı değil */
+SP.afisLocal={};
+(function(){const _im=spImg;spImg=function(u,w){if(/^afis\//.test(u||""))return u;return _im.apply(this,arguments);};
+ const _fi=spFilmImg;spFilmImg=function(f){const l=SP.afisLocal[f[0]];if(l&&!SP_BAD[l])return l;return _fi.apply(this,arguments);};
+ if(!window.fetch)return;fetch("afis/afis.json?d="+dkey(),{cache:"no-store"}).then(r=>r.ok?r.json():null).then(j=>{if(j&&typeof j==="object"){SP.afisLocal=j;if(step===96){spRender();}}}).catch(()=>{});})();
+
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
