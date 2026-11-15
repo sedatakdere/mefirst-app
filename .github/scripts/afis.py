@@ -88,7 +88,12 @@ def bilgi(qid, y=0):
         v = ((c.get("mainsnak") or {}).get("datavalue") or {}).get("value")
         q = ((c.get("qualifiers") or {}).get("P447") or [{}])[0]
         src = (((q.get("datavalue") or {}).get("value")) or {}).get("id", "")
-        if isinstance(v, str) and src in KAYNAK: puan[KAYNAK[src]] = v.strip()
+        if not (isinstance(v, str) and src in KAYNAK): continue
+        k, v = KAYNAK[src], v.strip()
+        if k == "Rotten Tomatoes":
+            if not v.endswith("%"): continue
+            v = "%" + v[:-1].strip()
+        puan[k] = v
     # Oscar ödülleri (P166 = kazandığı ödüller)
     aw = [v.get("id") for v in vals("P166", 40) if isinstance(v, dict)]
     oscar = 0
@@ -128,7 +133,7 @@ except Exception: out = {}
 infop = "app/afis/bilgi.json"
 try: info = json.load(open(infop, encoding="utf-8"))
 except Exception: info = {}
-if info.get("_v") != 5: info = {"_v": 5}
+if info.get("_v") != 6: info = {"_v": 6}
 for fid, (tr, orig, y) in films.items():
     if fid == "_v": continue
     has_img = fid in out and os.path.exists("app/" + out[fid])
