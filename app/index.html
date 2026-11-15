@@ -17838,6 +17838,7 @@ function spsStar(g,x,y,s,col){g.fillStyle=col;g.beginPath();g.moveTo(x,y-s);g.qu
 async function spsEmbImg(){const svg=SP_EMBLEM.replace('class="sp-emb"','xmlns="http://www.w3.org/2000/svg" width="480" height="360"');return await new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svg);});}
 async function spsLoad(u){if(!u)return null;try{if(/^(data:|blob:)/.test(u)||/^afis\//.test(u)||/^\//.test(u)){return await new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src=u;});}return await mfCorsImg(u);}catch(e){return null;}}
 function spsImgArea(g,im,emb,x,y,w,h,c1,c2){if(im){spsCover(g,im,x,y,w,h);return;}const gr=g.createLinearGradient(x,y,x+w,y+h);gr.addColorStop(0,c1||"#C2304A");gr.addColorStop(1,c2||"#3A0F1E");g.fillStyle=gr;g.fillRect(x,y,w,h);if(emb){const ew=w*.72,eh=ew*.75;g.drawImage(emb,x+(w-ew)/2,y+(h-eh)/2,ew,eh);}}
+async function spsBrand(g,W,y,light){await mfBrand(g,W/2,y,"Sahne & Perde",light);pzStamp(g,W/2,y+128,{ink:"#8E1E36",grad:["#E9C46A","#C2304A","#5A0F22"],bg:"#FFF8EE"});}
 function spsFoot(g,W,y,ink,sub){g.textAlign="center";g.fillStyle=ink;g.font='italic 400 46px "DM Serif Display",serif';g.fillText("Me First",W/2,y);g.font='800 22px "Nunito Sans",sans-serif';g.globalAlpha=.75;g.fillText(("SAHNE & PERDE"+(sub?"  ·  "+sub:"")).toLocaleUpperCase("tr-TR"),W/2,y+40);g.globalAlpha=1;g.font='700 24px "Nunito Sans",sans-serif';g.globalAlpha=.6;g.fillText("#polaroidle  #MeFirst",W/2,y+80);g.globalAlpha=1;}
 /* 1) Polaroid: kadife perde, spot ışığı, ipte polaroid */
 async function spsPol(o,g,W,H,im,emb){
@@ -17851,56 +17852,56 @@ async function spsPol(o,g,W,H,im,emb){
  g.fillStyle="#8E1534";g.beginPath();g.moveTo(0,0);g.lineTo(W,0);g.lineTo(W,120);for(let x=W;x>=0;x-=120){g.quadraticCurveTo(x-60,190,x-120,120);}g.closePath();g.fill();
  g.strokeStyle="#E9B949";g.lineWidth=6;g.beginPath();g.moveTo(W,120);for(let x=W;x>=0;x-=120){g.quadraticCurveTo(x-60,190,x-120,120);}g.stroke();g.fillStyle="#E9B949";g.fillRect(0,0,W,18);
  spsSparks(g,W,H,90,"#FFE3A0",11);
- g.textAlign="center";g.fillStyle="#F3D27A";g.font='800 24px "Nunito Sans",sans-serif';g.fillText(o.eyebrow.toLocaleUpperCase("tr-TR"),W/2,262);
- g.font='400 104px "Allura",cursive';g.fillStyle="#FFE7B0";g.shadowColor="rgba(255,190,90,.6)";g.shadowBlur=30;g.fillText(o.label,W/2,370);g.shadowBlur=0;
- const PT=470;g.strokeStyle="#E9B949";g.lineWidth=4;g.beginPath();g.moveTo(80,PT-30);g.quadraticCurveTo(W/2,PT+20,W-80,PT-30);g.stroke();
- const pw=740,ph=900,iw=pw-70;g.save();g.translate(W/2,PT);g.rotate(-.04);g.shadowColor="rgba(0,0,0,.55)";g.shadowBlur=60;g.shadowOffsetY=34;g.fillStyle="#FBF7EE";g.fillRect(-pw/2,0,pw,ph);g.shadowColor="transparent";
- spsImgArea(g,im,emb,-pw/2+35,35,iw,iw,o.c1,o.c2);
- g.fillStyle="#2E2420";g.textAlign="left";g.font='600 54px "Caveat",cursive';const cm=o.cm?"“"+o.cm+"”":o.title;spsWrap(g,cm,iw-20,2).forEach((l,k)=>g.fillText(l,-pw/2+40,35+iw+66+k*52));
+ g.textAlign="center";g.fillStyle="#F3D27A";g.font='800 24px "Nunito Sans",sans-serif';g.fillText(o.eyebrow.toLocaleUpperCase("tr-TR"),W/2,214);
+ g.font='400 104px "Allura",cursive';g.fillStyle="#FFE7B0";g.shadowColor="rgba(255,190,90,.6)";g.shadowBlur=30;g.fillText(o.label,W/2,312);g.shadowBlur=0;
+ const PT=392;g.strokeStyle="#E9B949";g.lineWidth=4;g.beginPath();g.moveTo(80,PT-30);g.quadraticCurveTo(W/2,PT+20,W-80,PT-30);g.stroke();
+ const pw=680,ph=820,iw=pw-64;g.save();g.translate(W/2,PT);g.rotate(-.04);g.shadowColor="rgba(0,0,0,.55)";g.shadowBlur=60;g.shadowOffsetY=34;g.fillStyle="#FBF7EE";g.fillRect(-pw/2,0,pw,ph);g.shadowColor="transparent";
+ spsImgArea(g,im,emb,-pw/2+32,32,iw,iw,o.c1,o.c2);
+ g.fillStyle="#2E2420";g.textAlign="left";g.font='600 54px "Caveat",cursive';const cm=o.cm?"“"+o.cm+"”":o.title;spsWrap(g,cm,iw-20,2).forEach((l,k)=>g.fillText(l,-pw/2+38,32+iw+62+k*50));
  if(o.rt)spsHearts(g,o.rt,pw/2-205,ph-50,26,"#C2304A","rgba(194,48,74,.18)");
  g.fillStyle="#C9A06A";g.fillRect(-18,-46,36,74);g.fillStyle="#A87A3F";g.fillRect(-18,-6,36,6);g.restore();
  g.save();g.translate(W/2+pw/2-96,PT+150);g.rotate(-.22);g.globalAlpha=.92;g.strokeStyle="rgba(233,185,73,.95)";g.fillStyle="rgba(233,185,73,.95)";g.lineWidth=5;g.beginPath();g.arc(0,0,92,0,Math.PI*2);g.stroke();g.lineWidth=2;g.beginPath();g.arc(0,0,78,0,Math.PI*2);g.stroke();
  g.textAlign="center";g.font='900 26px "Nunito Sans",sans-serif';g.fillText(o.stamp,0,-12);g.font='700 22px "Nunito Sans",sans-serif';g.fillText(o.dateS,0,22);g.restore();
- g.textAlign="center";g.fillStyle="#FFF4E6";const ts=spsFit(g,o.title,W-200,84,48,'400 {s}px "DM Serif Display",serif');g.font=`400 ${ts}px "DM Serif Display",serif`;g.fillText(o.title,W/2,PT+ph+150);
- g.font='700 30px "Nunito Sans",sans-serif';g.fillStyle="rgba(255,228,190,.8)";g.fillText(o.sub,W/2,PT+ph+205);
- spsFoot(g,W,H-150,"#F3D27A");}
+ g.textAlign="center";g.fillStyle="#FFF4E6";const ts=spsFit(g,o.title,W-200,84,48,'400 {s}px "DM Serif Display",serif');g.font=`400 ${ts}px "DM Serif Display",serif`;g.fillText(o.title,W/2,PT+ph+108);
+ g.font='700 30px "Nunito Sans",sans-serif';g.fillStyle="rgba(255,228,190,.8)";g.fillText(o.sub,W/2,PT+ph+158);
+ await spsBrand(g,W,1462,true);}
 /* 2) Bilet: büyük afiş + kırmızı sinema bileti */
 async function spsBilet(o,g,W,H,im,emb){
  const bg=g.createLinearGradient(0,0,0,H);bg.addColorStop(0,"#FFF3E6");bg.addColorStop(1,"#F6DCCB");g.fillStyle=bg;g.fillRect(0,0,W,H);
  g.save();g.globalAlpha=.08;g.strokeStyle="#8E1E36";g.lineWidth=3;for(let r=120;r<1400;r+=70){g.beginPath();g.arc(W/2,-40,r,0,Math.PI);g.stroke();}g.restore();
- g.textAlign="center";g.fillStyle="#8E1E36";g.font='800 24px "Nunito Sans",sans-serif';g.fillText(o.eyebrow.toLocaleUpperCase("tr-TR"),W/2,150);g.font='400 96px "Allura",cursive';g.fillText(o.label,W/2,250);
- const px=150,py=300,pw=W-300,ph=1000;g.save();g.shadowColor="rgba(90,15,34,.45)";g.shadowBlur=60;g.shadowOffsetY=30;spsRR(g,px,py,pw,ph,40);g.fillStyle="#000";g.fill();g.restore();
+ g.textAlign="center";g.fillStyle="#8E1E36";g.font='800 24px "Nunito Sans",sans-serif';g.fillText(o.eyebrow.toLocaleUpperCase("tr-TR"),W/2,190);g.font='400 92px "Allura",cursive';g.fillText(o.label,W/2,284);
+ const px=170,py=320,pw=W-340,ph=760;g.save();g.shadowColor="rgba(90,15,34,.45)";g.shadowBlur=60;g.shadowOffsetY=30;spsRR(g,px,py,pw,ph,40);g.fillStyle="#000";g.fill();g.restore();
  g.save();spsRR(g,px,py,pw,ph,40);g.clip();spsImgArea(g,im,emb,px,py,pw,ph,o.c1,o.c2);const fd=g.createLinearGradient(0,py+ph-260,0,py+ph);fd.addColorStop(0,"rgba(0,0,0,0)");fd.addColorStop(1,"rgba(0,0,0,.55)");g.fillStyle=fd;g.fillRect(px,py,pw,ph);g.restore();
- const tx=80,ty=1210,tw=W-160,th=470,cut=34,stubX=tx+tw-230;
+ const tx=80,ty=1000,tw=W-160,th=430,cut=32,stubX=tx+tw-230;
  g.save();g.shadowColor="rgba(90,15,34,.45)";g.shadowBlur=40;g.shadowOffsetY=20;g.beginPath();g.moveTo(tx+28,ty);g.lineTo(stubX-cut,ty);g.arc(stubX,ty,cut,Math.PI,0,true);g.lineTo(tx+tw-28,ty);g.quadraticCurveTo(tx+tw,ty,tx+tw,ty+28);g.lineTo(tx+tw,ty+th/2-cut);g.arc(tx+tw,ty+th/2,cut,-Math.PI/2,Math.PI/2,true);g.lineTo(tx+tw,ty+th-28);g.quadraticCurveTo(tx+tw,ty+th,tx+tw-28,ty+th);g.lineTo(stubX+cut,ty+th);g.arc(stubX,ty+th,cut,0,Math.PI,true);g.lineTo(tx+28,ty+th);g.quadraticCurveTo(tx,ty+th,tx,ty+th-28);g.lineTo(tx,ty+th/2+cut);g.arc(tx,ty+th/2,cut,Math.PI/2,-Math.PI/2,true);g.lineTo(tx,ty+28);g.quadraticCurveTo(tx,ty,tx+28,ty);g.closePath();
  const tg=g.createLinearGradient(tx,ty,tx+tw,ty+th);tg.addColorStop(0,"#C2304A");tg.addColorStop(1,"#6A0F28");g.fillStyle=tg;g.fill();g.restore();
  g.strokeStyle="rgba(255,231,168,.85)";g.setLineDash([10,12]);g.lineWidth=4;g.beginPath();g.moveTo(stubX,ty+cut+10);g.lineTo(stubX,ty+th-cut-10);g.stroke();g.setLineDash([]);
  g.strokeStyle="rgba(255,231,168,.5)";g.lineWidth=2;spsRR(g,tx+24,ty+24,stubX-tx-60,th-48,16);g.stroke();
- g.textAlign="left";g.fillStyle="#FFE7A8";g.font='900 22px "Nunito Sans",sans-serif';g.fillText(o.kindS.toLocaleUpperCase("tr-TR")+"  ·  GİRİŞ BİLETİ",tx+60,ty+80);
- g.fillStyle="#FFF8EE";const ts=spsFit(g,o.title,stubX-tx-110,70,40,'400 {s}px "DM Serif Display",serif');g.font=`400 ${ts}px "DM Serif Display",serif`;spsWrap(g,o.title,stubX-tx-110,2).forEach((l,k)=>g.fillText(l,tx+60,ty+170+k*(ts+6)));
- g.font='700 28px "Nunito Sans",sans-serif';g.fillStyle="rgba(255,240,225,.85)";g.fillText(o.sub,tx+60,ty+320);
- if(o.cm){const cs=spsFit(g,"“"+o.cm+"”",stubX-tx-110,42,26,'600 {s}px "Caveat",cursive');g.font=`600 ${cs}px "Caveat",cursive`;g.fillStyle="#FFE7A8";g.fillText(spsWrap(g,"“"+o.cm+"”",stubX-tx-110,1)[0],tx+60,ty+392);}else if(o.rt)spsHearts(g,o.rt,tx+82,ty+360,30,"#FFE7A8","rgba(255,231,168,.25)");
+ g.textAlign="left";g.fillStyle="#FFE7A8";g.font='900 22px "Nunito Sans",sans-serif';g.fillText(o.kindS.toLocaleUpperCase("tr-TR")+"  ·  GİRİŞ BİLETİ",tx+60,ty+76);
+ g.fillStyle="#FFF8EE";const ts=spsFit(g,o.title,stubX-tx-110,70,40,'400 {s}px "DM Serif Display",serif');g.font=`400 ${ts}px "DM Serif Display",serif`;spsWrap(g,o.title,stubX-tx-110,2).forEach((l,k)=>g.fillText(l,tx+60,ty+156+k*(ts+6)));
+ g.font='700 28px "Nunito Sans",sans-serif';g.fillStyle="rgba(255,240,225,.85)";g.fillText(spsWrap(g,o.sub,stubX-tx-110,1)[0],tx+60,ty+296);
+ if(o.cm){const cs=spsFit(g,"“"+o.cm+"”",stubX-tx-110,42,26,'600 {s}px "Caveat",cursive');g.font=`600 ${cs}px "Caveat",cursive`;g.fillStyle="#FFE7A8";g.fillText(spsWrap(g,"“"+o.cm+"”",stubX-tx-110,1)[0],tx+60,ty+362);}else if(o.rt)spsHearts(g,o.rt,tx+82,ty+330,30,"#FFE7A8","rgba(255,231,168,.25)");
  g.save();g.translate(stubX+115,ty+th/2);g.rotate(-Math.PI/2);g.textAlign="center";g.fillStyle="#FFE7A8";g.font='900 24px "Nunito Sans",sans-serif';g.fillText("SIRA ♥  ·  KOLTUK 7",0,-46);g.font='400 46px "DM Serif Display",serif';g.fillText(o.dateS,0,10);g.restore();
- g.fillStyle="#FFE7A8";for(let i=0,x=stubX+40;x<tx+tw-40;i++){const w=[3,6,2,4,8,3,5][i%7];g.fillRect(x,ty+th-90,w,50);x+=w+5;}
- spsFoot(g,W,H-110,"#8E1E36",o.city);}
+ g.fillStyle="#FFE7A8";for(let i=0,x=stubX+40;x<tx+tw-40;i++){const w=[3,6,2,4,8,3,5][i%7];g.fillRect(x,ty+th-86,w,46);x+=w+5;}
+ await spsBrand(g,W,1530,false);}
 /* 3) Işıklı tabela: gece, ampullü tabela, altın çerçeveli afiş */
 async function spsTabela(o,g,W,H,im,emb){
  const bg=g.createLinearGradient(0,0,0,H);bg.addColorStop(0,"#120B24");bg.addColorStop(.6,"#2A1640");bg.addColorStop(1,"#3A1230");g.fillStyle=bg;g.fillRect(0,0,W,H);
  spsSparks(g,W,900,140,"#FFFFFF",3);
  const fl=g.createRadialGradient(W/2,H,50,W/2,H,900);fl.addColorStop(0,"rgba(255,120,150,.35)");fl.addColorStop(1,"rgba(255,120,150,0)");g.fillStyle=fl;g.fillRect(0,0,W,H);
- const mx=70,my=160,mw=W-140,mh=520;g.save();g.shadowColor="rgba(255,190,90,.6)";g.shadowBlur=60;spsRR(g,mx,my,mw,mh,40);const fr=g.createLinearGradient(0,my,0,my+mh);fr.addColorStop(0,"#F6D27A");fr.addColorStop(1,"#B8862E");g.fillStyle=fr;g.fill();g.restore();
+ const mx=70,my=210,mw=W-140,mh=440;g.save();g.shadowColor="rgba(255,190,90,.6)";g.shadowBlur=60;spsRR(g,mx,my,mw,mh,40);const fr=g.createLinearGradient(0,my,0,my+mh);fr.addColorStop(0,"#F6D27A");fr.addColorStop(1,"#B8862E");g.fillStyle=fr;g.fill();g.restore();
  spsRR(g,mx+46,my+46,mw-92,mh-92,22);g.fillStyle="#FFF8EC";g.fill();
  const bulbs=[];for(let x=mx+28;x<=mx+mw-28;x+=46){bulbs.push([x,my+24],[x,my+mh-24]);}for(let y=my+70;y<=my+mh-70;y+=46){bulbs.push([mx+24,y],[mx+mw-24,y]);}
  bulbs.forEach(([x,y],i)=>{const gl=g.createRadialGradient(x,y,1,x,y,20);gl.addColorStop(0,"rgba(255,250,220,1)");gl.addColorStop(.4,"rgba(255,220,140,.9)");gl.addColorStop(1,"rgba(255,200,100,0)");g.fillStyle=gl;g.beginPath();g.arc(x,y,20,0,Math.PI*2);g.fill();g.fillStyle=i%5===0?"#FFF6D8":"#FFE7A0";g.beginPath();g.arc(x,y,8,0,Math.PI*2);g.fill();});
- g.textAlign="center";g.fillStyle="#C2304A";g.font='900 28px "Nunito Sans",sans-serif';g.fillText(o.label.toLocaleUpperCase("tr-TR"),W/2,my+120);
- g.fillStyle="#1E1426";const T=o.title.toLocaleUpperCase("tr-TR");let ts=spsFit(g,T,mw-180,92,44,'800 {s}px "Playfair Display",serif');g.font=`800 ${ts}px "Playfair Display",serif`;const tl=spsWrap(g,T,mw-180,2);tl.forEach((l,k)=>g.fillText(l,W/2,my+(tl.length>1?230:270)+k*(ts+8)));
- g.font='800 26px "Nunito Sans",sans-serif';g.fillStyle="#7A5A3A";g.fillText(o.sub.toLocaleUpperCase("tr-TR"),W/2,my+mh-90);
- const fw=540,fh=690,fx=(W-fw)/2,fy=770;g.save();g.shadowColor="rgba(0,0,0,.6)";g.shadowBlur=60;g.shadowOffsetY=30;spsRR(g,fx-22,fy-22,fw+44,fh+44,18);g.fillStyle=fr;g.fill();g.restore();
+ g.textAlign="center";g.fillStyle="#C2304A";g.font='900 28px "Nunito Sans",sans-serif';g.fillText(o.label.toLocaleUpperCase("tr-TR"),W/2,my+108);
+ g.fillStyle="#1E1426";const T=o.title.toLocaleUpperCase("tr-TR");let ts=spsFit(g,T,mw-180,92,44,'800 {s}px "Playfair Display",serif');g.font=`800 ${ts}px "Playfair Display",serif`;const tl=spsWrap(g,T,mw-180,2);tl.forEach((l,k)=>g.fillText(l,W/2,my+(tl.length>1?200:236)+k*(ts+8)));
+ g.font='800 26px "Nunito Sans",sans-serif';g.fillStyle="#7A5A3A";g.fillText(spsWrap(g,o.sub.toLocaleUpperCase("tr-TR"),mw-160,1)[0],W/2,my+mh-82);
+ const fw=460,fh=590,fx=(W-fw)/2,fy=730;g.save();g.shadowColor="rgba(0,0,0,.6)";g.shadowBlur=60;g.shadowOffsetY=30;spsRR(g,fx-22,fy-22,fw+44,fh+44,18);g.fillStyle=fr;g.fill();g.restore();
  g.save();spsRR(g,fx,fy,fw,fh,8);g.clip();spsImgArea(g,im,emb,fx,fy,fw,fh,o.c1,o.c2);g.restore();
  spsStar(g,fx-60,fy+60,26,"#FFE7A0");spsStar(g,fx+fw+60,fy+fh-120,20,"#FFE7A0");spsStar(g,fx+fw+40,fy+40,12,"#fff");
- g.textAlign="center";if(o.cm){g.fillStyle="#FFE3EC";g.font='600 56px "Caveat",cursive';spsWrap(g,"“"+o.cm+"”",W-180,2).forEach((l,k)=>g.fillText(l,W/2,fy+fh+120+k*58));}
- if(o.rt)spsHearts(g,o.rt,W/2-128,fy+fh+(o.cm?190:80),40,"#FF7EA6","rgba(255,126,166,.22)");
- spsFoot(g,W,H-120,"#F6D27A",o.city);}
+ g.textAlign="center";if(o.cm){g.fillStyle="#FFE3EC";g.font='600 56px "Caveat",cursive';spsWrap(g,"“"+o.cm+"”",W-180,1).forEach((l,k)=>g.fillText(l,W/2,fy+fh+84));}
+ if(o.rt)spsHearts(g,o.rt,W/2-92,fy+fh+(o.cm?104:56),30,"#FF7EA6","rgba(255,126,166,.22)");
+ await spsBrand(g,W,1548,true);}
 async function spsRender(o,tpl,scale){try{await Promise.all(['400 104px "Allura"','600 54px "Caveat"','400 80px "DM Serif Display"','800 80px "Playfair Display"','800 24px "Nunito Sans"'].map(f=>document.fonts.load(f)));}catch(e){}
  const W=1080,H=1920,cv=document.createElement("canvas");const k=scale||1;cv.width=W*k;cv.height=H*k;const g=cv.getContext("2d");g.scale(k,k);
  const im=o.photo?await spsLoad(o.photo):o._im!==undefined?o._im:(o._im=await spsLoad(o.img));const emb=o._emb||(o._emb=await spsEmbImg());
