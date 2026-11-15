@@ -185,6 +185,7 @@ SKIP_OG = {"t20261210-kaspar-bursa"}  # logo/boş görsel dönenler
 SANAT = re.compile(r"şarkıcı|müzisyen|sanatçı|besteci|komedyen|oyuncu|piyanist|grup|orkestra|keman|kanun|gitarist|rapçi|söz yazarı|singer|musician|band|comedian|composer", re.I)
 for e in events:
     eid = e[0]
+    if out.get(eid, "").startswith("afis/m-"): out.pop(eid)
     if eid in out and eid in info: continue
     kind, title, ven, link = e[2], e[1], venue(e[6] or ""), (e[8] if len(e) > 8 else "")
     B = info.get(eid) or {}
@@ -204,7 +205,7 @@ for e in events:
             if kind not in ("konser", "standup") and link.startswith("https://") and links.get(link, 0) == 1 and eid not in SKIP_OG:
                 try: u = og(link)
                 except Exception as x: print("og hata", eid, x)
-            if not u and VCACHE.get(ven) and VCACHE[ven]["src"]:
+            if False and not u and VCACHE.get(ven) and VCACHE[ven]["src"]:
                 vk = "m-" + re.sub(r"[^a-z0-9]+", "-", fold(ven)).strip("-")[:40]
                 if vk not in out:
                     try: out[vk] = save_img(vk, VCACHE[ven]["src"])
