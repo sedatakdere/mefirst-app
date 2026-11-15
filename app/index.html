@@ -16116,7 +16116,7 @@ onbRender=function(){const O=document.getElementById("onb"),k=ONB[onbI],P=st.pro
  const ka=$("ob-kadd");if(ka)ka.onclick=()=>{if(addKid()){save();collect();onbRender();}else $("ob-kn").focus();};
  const kn=$("ob-kn");if(kn)kn.addEventListener("keydown",e=>{if(e.key==="Enter"&&ka)ka.click();});};
 /* ana sayfa: seçilen köşeler öne */
-(function(){const _b=bentoRender;bentoRender=function(){_b.apply(this,arguments);try{const P=prof(),S=P.kosem||[];if(!S.length)return;const el=document.getElementById("bento");if(!el)return;
+(function(){const _b=bentoRender;bentoRender=function(){_b.apply(this,arguments);try{const P=prof(),S=P.kosem||[];if(true)return;const el=document.getElementById("bento");if(!el)return;
   const M={mac:"go-mac",sahne:"go-sahne",kitap:"go-kitap",keyif:"go-zod",rit:"go-rit",fit:"go-fit",ev:"go-ev",pet:"go-pet",love:"go-love"};const want=S.map(x=>M[x]);
   const items=[...el.children];const pick=items.filter(b=>want.includes(b.dataset.bgo)&&!b.classList.contains("wide")).sort((a,b)=>want.indexOf(a.dataset.bgo)-want.indexOf(b.dataset.bgo));
   const rest=items.filter(b=>!pick.includes(b));let ix=0;const out=[];rest.forEach(b=>out.push(b));pick.reverse().forEach(b=>out.unshift(b));out.forEach((b,i)=>{b.style.setProperty("--i",i);el.appendChild(b);});}catch(e){console.error(e);}};
@@ -17697,6 +17697,26 @@ function spcBind(id,W){const D=SPC[id]||{list:[],liked:new Set()};const q=s=>W.q
    const mf=O.querySelector(".spf-mf");if(mf)mf.onclick=()=>{const c=O.querySelector("#spc");if(c)c.scrollIntoView({behavior:"smooth",block:"start"});};
    O._spid=id;(SPC[id]&&Date.now()-SPC[id].at<30000?Promise.resolve(SPC[id]):spcLoad(id)).then(()=>spcRender(id));}
  }catch(e){console.error(e);}return r;};})();
+
+/* ===== v0.56: Ana sayfa yerleşimi — boşluksuz, sabit üst dörtlü ===== */
+function bnLayout(){const el=document.getElementById("bento");if(!el||el._lay)return;el._lay=1;try{
+ const by=id=>el.querySelector(`:scope>[data-bgo="${id}"]`);const P=prof(),pref=P.kosem||[];
+ const kitap=by("go-kitap"),top=["go-mac","go-sahne","go-zod"].map(by).filter(Boolean),love=by("go-love");
+ const M={rit:"go-rit",fit:"go-fit",ev:"go-ev",pet:"go-pet"};const prefIds=pref.map(k=>M[k]).filter(Boolean);
+ const order=["go-kids","go-stu",...prefIds,...["go-rit","go-pet","go-ev","go-fit"].filter(x=>!prefIds.includes(x))];
+ const rest=order.map(by).filter(Boolean);
+ const known=new Set([kitap,...top,...rest,love].filter(Boolean));
+ const other=[...el.children].filter(b=>b.dataset&&b.dataset.bgo&&!known.has(b));
+ const smalls=[...top,...rest,...other];
+ const seq=[kitap,...smalls,love].filter(Boolean);
+ const wide=new Set([kitap]);
+ const nSmall=smalls.length+(love?1:0);
+ if(nSmall%2===1){if(love)wide.add(love);else if(smalls.length)wide.add(smalls[smalls.length-1]);}
+ seq.forEach((b,i)=>{const w=wide.has(b);b.classList.toggle("wide",w);b.style.gridColumn=w?"1 / -1":"auto";b.style.setProperty("--i",i);if(el.children[i]!==b)el.insertBefore(b,el.children[i]||null);});
+}catch(e){console.error(e);}finally{el._lay=0;}}
+(function(){const _b=bentoRender;bentoRender=function(){const r=_b.apply(this,arguments);bnLayout();return r;};
+ const hook=()=>{const el=document.getElementById("bento");if(!el||el._layObs)return;el._layObs=1;try{new MutationObserver(()=>{if(!el._lay)requestAnimationFrame(bnLayout);}).observe(el,{childList:true});}catch(e){}};hook();
+ try{if(step===0)bentoRender();}catch(e){}setTimeout(()=>{hook();bnLayout();},0);})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
