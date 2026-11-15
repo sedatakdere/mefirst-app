@@ -1,7 +1,8 @@
 {
-"_v": 4,
+"_v": 5,
 "abouttime": {
 "imdb": "tt2194499",
+"konu": "About Time ya da Türkiye'de gösterime giren adıyla Zamanda Aşk 2013 yapımı romantik komedi-drama filmi. Film kendi hayatında geriye gidebilen zaman yolcusu bir adamın hikâyesini anlatmaktadır. Filmin senaristi ve yapımcısı Richard Curtis'tir. Başrolleri ise Domhnall Gleeson, Rachel McAdams ve Bill Nighy paylaşmaktadır.",
 "oyuncu": [
 "Rachel McAdams",
 "Margot Robbie",
@@ -10,6 +11,10 @@
 "Bill Nighy",
 "Domhnall Gleeson"
 ],
+"puan": {
+"Metacritic": "55/100",
+"Rotten Tomatoes": "71%"
+},
 "sure": 123,
 "tur": [
 "romantik komedi",
@@ -18,10 +23,14 @@
 ],
 "ulke": [
 "İngiltere"
+],
+"yonetmen": [
+"Richard Curtis"
 ]
 },
 "amelie": {
 "imdb": "tt0211915",
+"konu": "Amélie, Audrey Tautou'nun başrolünde olduğu, Jean-Pierre Jeunet filmidir. Fransız yapımı bu romantik komedi, Jeunet ve Guillaume Laurant tarafından yazılmıştır. Montmartre'de geçen film, modern Paris hayatının idealize edilmiş, alaycı bir yorumudur.\nFilm, Nisan 2001'de Fransa, Belçika ve Fransızca konuşulan batı İsviçre'de gösterime girmiş, pek çok film festivalinde yer almış, ardından tüm dünyada sinema salonlarında izleyicilerin beğenisine sunulmuştur.",
 "oyuncu": [
 "Audrey Tautou",
 "Mathieu Kassovitz",
@@ -30,6 +39,10 @@
 "André Dussollier",
 "Dominique Pinon"
 ],
+"puan": {
+"Metacritic": "70/100",
+"Rotten Tomatoes": "90%"
+},
 "sure": 122,
 "tur": [
 "romantik komedi",
@@ -39,10 +52,14 @@
 "ulke": [
 "Fransa",
 "Almanya"
+],
+"yonetmen": [
+"Jean-Pierre Jeunet"
 ]
 },
 "autumnny": {
 "imdb": "tt0230838",
+"konu": "Kasımda Aşk Başkadır, Charlize Theron ve Keanu Reeves'in başrollerini paylaştığı bir romantik-drama filmidir. Film, 1968 yılında Herman Raucher tarafından kaleme alınan bir hikâyenin üzerine kuruludur. Sinema eleştirmenlerinden aldığı düşük notlar nedeni ile her yıl en kötülere verilen Altın Ahududu Ödüllerine, 2001'in ödülleri için En Kötü Uyarlama, En Kötü Aktör ve En Kötü Aktris dallarında aday gösterilmiştir.",
 "oyuncu": [
 "Keanu Reeves",
 "Charlize Theron",
@@ -51,6 +68,10 @@
 "Michael Rosenbaum",
 "Liam Aiken"
 ],
+"puan": {
+"Metacritic": "27/100",
+"Rotten Tomatoes": "15%"
+},
 "sure": 93,
 "tur": [
 "romantik",
@@ -59,10 +80,14 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Pat O'Connor"
 ]
 },
 "ayla": {
 "imdb": "tt6316138",
+"konu": "Ayla, yönetmenliğini Can Ulkay'ın, senaristliğini ise Yiğit Güralp'in gerçekleştirdiği, 2017 yılı çıkışlı Türkiye ve Güney Kore ortak yapımı dram ve savaş türündeki bir sinema filmidir. 1950 yılında başlayan Kore Savaşı sırasında yaşanan gerçek bir hikâyeden uyarlanan filmin çekimlerine 2016 yılında başlandı. Çekimler Türkiye'de ve Güney Kore'de gerçekleştirildi. Yapımcılığını Mustafa Uslu'nun üstlendiği filmin müzikleri ise Fahir Atakoğlu tarafından bestelenmiştir.",
 "oyuncu": [
 "Eric Roberts",
 "Kim Seolhyun",
@@ -79,10 +104,14 @@
 ],
 "ulke": [
 "Türkiye"
+],
+"yonetmen": [
+"Can Ülkay"
 ]
 },
 "babamoglum": {
 "imdb": "tt0476735",
+"konu": "Babam ve Oğlum, 2005 yapımı bir Çağan Irmak filmi. Ege'deki çiftlikten gazetecilik okumak için ayrılan Sadık'ın, yıllar sonra oğluyla beraber yeniden çiftliğe dönüşünün, 12 Eylül Darbesi arka planında aktarıldığı filmin senaryosunu da yine Çağan Irmak yazdı. Film, Türkiye'de 3.500.000 izleyici sınırını aştı. Filmin çekimleri İzmir, Balıkesir ve İstanbul'da gerçekleştirildi.",
 "oyuncu": [
 "Tuba Büyüküstün",
 "Halit Ergenç",
@@ -97,10 +126,14 @@
 ],
 "ulke": [
 "Türkiye"
+],
+"yonetmen": [
+"Çağan Irmak"
 ]
 },
 "beforesunrise": {
 "imdb": "tt0112471",
+"konu": "Gün Doğmadan, Richard Linklater'ın yönettiği, Linklater'ın Kim Krizan'ın birlikte kaleme aldığı 1995 yapımı romantik dram filmdir. Before üçlemesinin ilk yapımıdır. Bir trende yolları kesişen iki gencin bir gecelik tutkulu aşkını konu almaktadır.",
 "oyuncu": [
 "Ethan Hawke",
 "Julie Delpy",
@@ -109,6 +142,10 @@
 "Hanno Pöschl",
 "Andrea Eckert"
 ],
+"puan": {
+"Metacritic": "79/100",
+"Rotten Tomatoes": "100%"
+},
 "sure": 97,
 "tur": [
 "romantik",
@@ -117,10 +154,14 @@
 "ulke": [
 "Avusturya",
 "ABD"
+],
+"yonetmen": [
+"Richard Linklater"
 ]
 },
 "birudum": {
 "imdb": "tt0200490",
+"konu": "Bir Yudum Sevgi, yönetmenliğini Atıf Yılmaz'ın yaptığı 1984 yapımı Türk filmi.",
 "oyuncu": [
 "Kadir İnanır",
 "Hale Soygazi",
@@ -131,10 +172,15 @@
 ],
 "ulke": [
 "Türkiye"
+],
+"yonetmen": [
+"Atıf Yılmaz"
 ]
 },
 "casablanca": {
 "imdb": "tt0034583",
+"konu": "Kazablanka, Michael Curtiz'in yönettiği ve Humphrey Bogart, Ingrid Bergman ve Paul Henreid'in başrollerini paylaştığı 1942 yapımı bir Amerikan romantik drama filmidir. II. Dünya Savaşı sırasında çekilen ve geçen film, bir kadına duyduğu aşk ile kadının kocası, Çekoslovak direniş lideri, Vichy yönetimindeki Kazablanka şehrinden kaçarak Nazilere karşı mücadelesine devam etmesine yardım etme arasında seçim yapmak zorunda kalan Amerikalı bir göçmeni konu alır. Senaryo, Murray Burnett ve Joan Alison'ın sahnelenmemiş bir tiyatro oyunu olan \"Everybody Comes to Rick's\"e dayanmaktadır. Yardımcı oyuncu ",
+"oscar": 3,
 "oyuncu": [
 "Ingrid Bergman",
 "Humphrey Bogart",
@@ -143,6 +189,11 @@
 "Conrad Veidt",
 "Paul Henreid"
 ],
+"puan": {
+"IMDb": "8.5/10",
+"Metacritic": "100/100",
+"Rotten Tomatoes": "99%"
+},
 "sure": 102,
 "tur": [
 "romantik",
@@ -151,10 +202,14 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Michael Curtiz"
 ]
 },
 "chocolat": {
 "imdb": "tt0241303",
+"konu": "Çikolata, Joanne Harris'in aynı isimli romanından sinemaya uyarlanan 2000 İngiliz/Amerikan ortak yapımı yapımı film. Tutucu bir Fransız kasabasına gelen genç bir anne ile altı yaşındaki kızından ve onların çikolata dükkânından bahsetmektedir. Vianne'nin çikolataları kısa zamanda kasaba halkının hayatını değiştirir.\nFilm Fransa'da Flavigny-sur-Ozerain kasabasında çekilmiştir.",
 "oyuncu": [
 "Johnny Depp",
 "Judi Dench",
@@ -163,6 +218,10 @@
 "Alfred Molina",
 "Leslie Caron"
 ],
+"puan": {
+"Metacritic": "64/100",
+"Rotten Tomatoes": "63%"
+},
 "sure": 121,
 "tur": [
 "romantik",
@@ -172,10 +231,14 @@
 "ulke": [
 "İngiltere",
 "ABD"
+],
+"yonetmen": [
+"Lasse Halström"
 ]
 },
 "crazystupid": {
 "imdb": "tt1570728",
+"konu": "Çılgın Aptal Aşk, yönetmenliğini Glenn Ficarra ve John Requa'nın, senaristliğini ise Dan Fogelman'ın üstlendiği, romantik komedi türündeki 2011 çıkışlı Amerikan filmi. Başlıca rollerinde Steve Carell, Ryan Gosling, Julianne Moore, Emma Stone, Marisa Tomei ve Kevin Bacon'ın yer aldığı film; orta yaşlardaki evli bir adamın, karısının kendisinden boşanmak istemesi sonrasında değişen hayatını konu almaktadır.\nYaklaşık $50 milyon bütçeli film, Amerika Birleşik Devletleri'nde 29 Temmuz 2011'de vizyona girdi ve dünya genelinde yaklaşık $142,9 milyonluk gelir elde etti.",
 "oyuncu": [
 "Julianne Moore",
 "Ryan Gosling",
@@ -184,6 +247,10 @@
 "Kevin Bacon",
 "Marisa Tomei"
 ],
+"puan": {
+"Metacritic": "68/100",
+"Rotten Tomatoes": "79%"
+},
 "sure": 118,
 "tur": [
 "romantik komedi",
@@ -192,10 +259,16 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Glenn Ficarra",
+"John Requa"
 ]
 },
 "dirtydancing": {
 "imdb": "tt0092890",
+"konu": "İlk Aşk, İlk Dans. Yönetmenliğini Emile Ardolino'nun yaptığı başrollerini Jennifer Grey ve Patrick Swayze'nin paylaştığı 100 dakilalık 1987 ABD yapımı film. Türü romantik dramdır. Bağımsız bir yapımdır.",
+"oscar": 1,
 "oyuncu": [
 "Patrick Swayze",
 "Wayne Knight",
@@ -204,6 +277,10 @@
 "Kelly Bishop",
 "Cynthia Rhodes"
 ],
+"puan": {
+"Metacritic": "65/100",
+"Rotten Tomatoes": "72%"
+},
 "sure": 96,
 "tur": [
 "müzikal",
@@ -212,10 +289,14 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Emile Ardolino"
 ]
 },
 "eatpraylove": {
 "imdb": "tt0879870",
+"konu": "Ye Dua et Sev 2010 yapımı ABD filmidir.",
 "oyuncu": [
 "Julia Roberts",
 "Javier Bardem",
@@ -224,6 +305,10 @@
 "Richard Jenkins",
 "Billy Crudup"
 ],
+"puan": {
+"Metacritic": "50/100",
+"Rotten Tomatoes": "35%"
+},
 "sure": 140,
 "tur": [
 "romantik komedi",
@@ -232,10 +317,15 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Ryan Murphy"
 ]
 },
 "erin": {
 "imdb": "tt0195685",
+"konu": "Erin Brockovich, Steven Soderbergh tarafından yönetilen ve Susannah Grant tarafından yazılan 2000 Amerikan biyografik hukuk drama filmidir. Film, enerji şirketi Pacific Gas and Electric Company'ye karşı Hinkley yeraltı suyu kirliliği olayındaki suçluluğuyla ilgili olarak savaşan Julia Roberts tarafından canlandırılan Erin Brockovich'in gerçek hikâyesinin dramatize edilmesidir. Film gişede başarılı oldu ve olumlu eleştiriler aldı.\nFilm 73.",
+"oscar": 1,
 "oyuncu": [
 "Julia Roberts",
 "Albert Finney",
@@ -244,6 +334,11 @@
 "Marg Helgenberger",
 "Peter Coyote"
 ],
+"puan": {
+"IMDb": "7.5/10",
+"Metacritic": "73/100",
+"Rotten Tomatoes": "85%"
+},
 "sure": 130,
 "tur": [
 "biyografik",
@@ -251,10 +346,15 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Steven Soderbergh"
 ]
 },
 "ghost": {
 "imdb": "tt0099653",
+"konu": "Hayalet, 1990 Amerika Birleşik Devletleri yapımı film. Başrollerinde Patrick Swayze, Demi Moore, Tony Goldwyn ve Whoopi Goldberg bulunur. Senaryosunu Bruce Joel Rubin, yönetmenliğini Jerry Zucker yaptığı film, 21.000.000 $ bir bütçe ile hazırlanarak 505.702.588 $ hasılat elde ederek bir gişe başarısı göstermiştir. 1990'ın en yüksek hasılat yapan filmi oldu.",
+"oscar": 2,
 "oyuncu": [
 "Demi Moore",
 "Whoopi Goldberg",
@@ -263,6 +363,10 @@
 "Stephen Root",
 "Vincent Schiavelli"
 ],
+"puan": {
+"Metacritic": "52/100",
+"Rotten Tomatoes": "6.9/10"
+},
 "sure": 122,
 "tur": [
 "romantik",
@@ -271,10 +375,14 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Jerry Zucker"
 ]
 },
 "hababam": {
 "imdb": "tt0252487",
+"konu": "Hababam Sınıfı, Ertem Eğilmez tarafından yönetilen ve senaryosu Umur Bugay tarafından yazılan, Rıfat Ilgaz'un 1957 tarihli romanı Hababam Sınıfı'dan uyarlanan 1974 yapımı bir Türk  Komedi filmi'dir. Filmin başrollerinde Kemal Sunal, Münir Özkul, Tarık Akan, Halit Akçatepe ve Adile Naşit, yardımcı rollerde ise Feridun Şavlı, Cem Gürdap, Ahmet Arıman ve Bülent İğdiroğlu yer alıyor. Hababam Sınıfı, İstanbul'da özel bir lisede okuyan ve derslerden çok haylazlıkla meşgul olan bir sınıf dolusu öğrencinin hikâyesini anlatır.\nSenarist Umur Bugay, Hababam Sınıfı'nın sinemaya uyarlanmasında kritik rol o",
 "oyuncu": [
 "Kemal Sunal",
 "Tarık Akan",
@@ -289,10 +397,14 @@
 ],
 "ulke": [
 "Türkiye"
+],
+"yonetmen": [
+"Ertem Eğilmez"
 ]
 },
 "harrysally": {
 "imdb": "tt0098635",
+"konu": "When Harry Met Sally... Nora Ephron tarafından yazılan ve Rob Reiner tarafından yönetilen 1989 Amerikan romantik komedi filmidir. Billy Crystal, Harry ve Meg Ryan ise Sally karakterini canlandırıyor. Film, \"Kadın ve erkek sadece arkadaş olabilir mi?\" sorusunu gündeme getiriyor.",
 "oyuncu": [
 "Carrie Fisher",
 "Meg Ryan",
@@ -301,6 +413,10 @@
 "Connie Sawyer",
 "Harley Jane Kozak"
 ],
+"puan": {
+"Metacritic": "76/100",
+"Rotten Tomatoes": "89%"
+},
 "sure": 90,
 "tur": [
 "romantik komedi",
@@ -309,10 +425,14 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Rob Reiner"
 ]
 },
 "hiddenfigures": {
 "imdb": "tt4846340",
+"konu": "Gizli Sayılar, Theodore Melfi tarafından yönetilen ve Melfi ile Allison Schroeder tarafından Margot Lee Shetterly'nin kurgusal olmayan aynı adlı kitabından uyarlanan 2016 yapımı Amerikan biyografik drama filmi. Film Uzay Yarışı'nı kazanmak için NASA'ya yardım eden Afro-Amerikan matematikçi kadınların hikâyesini anlatmaktadır.\nFilmin temel çekimleri Mart 2016'da Atlanta'da başladı ve Mayıs 2016'da son buldu. 20th Century Fox tarafından 25 Aralık 2016'da gösterime sokuldu.",
 "oyuncu": [
 "Kevin Costner",
 "Kirsten Dunst",
@@ -321,6 +441,10 @@
 "Octavia Spencer",
 "Taraji P. Henson"
 ],
+"puan": {
+"Metacritic": "74/100",
+"Rotten Tomatoes": "93%"
+},
 "sure": 127,
 "tur": [
 "biyografik",
@@ -328,10 +452,14 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Theodore Melfi"
 ]
 },
 "holiday": {
 "imdb": "tt0457939",
+"konu": "The Holiday, başrollerini Kate Winslet ve Cameron Diaz'ın paylaştığı 2006 yapımı romantik komedi türünde bir Nancy Meyers filmi.",
 "oyuncu": [
 "Kate Winslet",
 "Cameron Diaz",
@@ -340,6 +468,10 @@
 "James Franco",
 "Jack Black"
 ],
+"puan": {
+"Metacritic": "52/100",
+"Rotten Tomatoes": "50%"
+},
 "sure": 135,
 "tur": [
 "romantik komedi",
@@ -349,10 +481,14 @@
 "ulke": [
 "İngiltere",
 "ABD"
+],
+"yonetmen": [
+"Nancy Meyers"
 ]
 },
 "intern": {
 "imdb": "tt2361509",
+"konu": "Stajyer, Nancy Meyers'in yönettiği 2015 yapımı Amerikan komedi-drama filmi. Filmde Robert De Niro ve Anne Hathaway başrolleri oynarken, Rene Russo, Anders Holm, Andrew Rannells, Adam DeVine yardımcı rolleri paylaşıyorlar. Film 25 Eylül 2015'te gösterimdeki yerini aldı.",
 "oyuncu": [
 "Robert De Niro",
 "Anne Hathaway",
@@ -361,6 +497,10 @@
 "Mary Kay Place",
 "Nat Wolff"
 ],
+"puan": {
+"Metacritic": "51/100",
+"Rotten Tomatoes": "59%"
+},
 "sure": 121,
 "tur": [
 "komedi",
@@ -368,10 +508,14 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Nancy Meyers"
 ]
 },
 "juliejulia": {
 "imdb": "tt1135503",
+"konu": "Julie & Julia Meryl Streep, Amy Adams, Stanley Tucci ve Chris Messina'nın başrollerini paylaştığı, Nora Ephron tarafından senaryosu yazılan ve yönetilen 2009 Amerikan biyografik komedi-drama filmidir. Film, aşçı Julia Child'ın aşçılık kariyerinin ilk yıllarındaki hayatını, Child's yemek kitabındaki 524 tarifin tamamını 365 günde pişirmeyi hedefleyen genç New York'lu Julie Powell'ın hayatıyla karşılaştırıyor. Bu da onu yayınlanmış bir yazar yaptı.\nStreep'in performansını öven eleştirmenlerden olumlu eleştiriler aldı.",
 "oyuncu": [
 "Meryl Streep",
 "Amy Adams",
@@ -380,6 +524,10 @@
 "Mary Lynn Rajskub",
 "Vanessa Ferlito"
 ],
+"puan": {
+"Metacritic": "66/100",
+"Rotten Tomatoes": "77%"
+},
 "sure": 123,
 "tur": [
 "romantik komedi",
@@ -388,10 +536,14 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Nora Ephron"
 ]
 },
 "kelebek": {
 "imdb": "tt2608224",
+"konu": "Kelebeğin Rüyası, Yılmaz Erdoğan'ın yazıp yönettiği 2013 yapımı dram filmidir. Başrollerini Kıvanç Tatlıtuğ ve Mert Fırat'ın paylaştığı film, II. Dünya Savaşı döneminde Zonguldak'ta yaşayan genç şairler Rüştü Onur ve Muzaffer Tayyip Uslu'nun hayat hikâyesini anlatıyor. O dönemde şairlerin Mehmet Çelikel Lisesinde edebiyat öğretmeni olan Behçet Necatigil'i de Yılmaz Erdoğan canlandırmaktadır.\nFilm, Eylül 2013 tarihinde, 86.",
 "oyuncu": [
 "Kıvanç Tatlıtuğ",
 "Farah Zeynep Abdullah",
@@ -407,10 +559,15 @@
 ],
 "ulke": [
 "Türkiye"
+],
+"yonetmen": [
+"Yılmaz Erdoğan"
 ]
 },
 "lalaland": {
 "imdb": "tt3783958",
+"konu": "Aşıklar Şehri, Damien Chazelle tarafından yazılan ve yönetilen Amerikan romantik müzikal komedi-drama filmi. Filmin başrollerinde Ryan Gosling ve Emma Stone yer almaktadır. Film oyunculuğa hevesli Mia ile caz piyanisti Sebastian'ın ilişkisini konu edinmektedir. Los Angeles'ta çekilen filmin özgün ismi aynı zamanda şehri ifade etmektedir.",
+"oscar": 6,
 "oyuncu": [
 "Ryan Gosling",
 "J. K. Simmons",
@@ -419,6 +576,11 @@
 "Finn Wittrock",
 "Sonoya Mizuno"
 ],
+"puan": {
+"IMDb": "8.0/10",
+"Metacritic": "94/100",
+"Rotten Tomatoes": "91%"
+},
 "sure": 128,
 "tur": [
 "Komedi-drama",
@@ -427,10 +589,15 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Damien Chazelle"
 ]
 },
 "littlewomen": {
 "imdb": "tt3281548",
+"konu": "Küçük Kadınlar, Louisa May Alcott'ın aynı isimdeki romanına dayanan, Greta Gerwig'in yönetmenliğini ve senaristliğini üstlendiği, başrollerini Saoirse Ronan, Emma Watson, Florence Pugh, Eliza Scanlen ve Laura Dern'in paylaştığı Amerikan dönem-dram filmidir. Romanın da yedinci uyarlama filmidir. Film 92. Akademi Ödülleri'nde en iyi film, en iyi kadın oyuncu, en iyi yardımcı kadın oyuncu, en iyi film müziği, en iyi uyarlama senaryo ve en iyi kostüm tasarımı dallarında aday gösterilmiştir .",
+"oscar": 1,
 "oyuncu": [
 "Emma Watson",
 "Meryl Streep",
@@ -439,16 +606,25 @@
 "Laura Dern",
 "Florence Pugh"
 ],
+"puan": {
+"IMDb": "7.8/10",
+"Metacritic": "91/100",
+"Rotten Tomatoes": "8.5/10"
+},
 "sure": 134,
 "tur": [
 "drama"
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Greta Gerwig"
 ]
 },
 "loveactually": {
 "imdb": "tt0314331",
+"konu": "Aşk Her Yerde, 2003 İngiltere yapımı romantik komedi filmdir.\nSenaryosunu Richard Curtis'in yazıp yönettiği filmin başlıca rollerinde Alan Rickman, Bill Nighy, Colin Firth, Emma Thompson, Hugh Grant, Liam Neeson ve Keira Knightley oynamışlardır. Film Richard Curtis'in sinemadaki ilk yönetmenlik deneyimidir, Curtis daha çok televizyon film ve dizilerini yazıyordu. Filmde Rowan Atkinson'un da küçük bir rolü vardır.",
 "oyuncu": [
 "Rowan Atkinson",
 "Keira Knightley",
@@ -457,6 +633,10 @@
 "Emma Thompson",
 "Hugh Grant"
 ],
+"puan": {
+"Metacritic": "55/100",
+"Rotten Tomatoes": "64%"
+},
 "sure": 135,
 "tur": [
 "romantik komedi",
@@ -466,10 +646,14 @@
 "ulke": [
 "İngiltere",
 "ABD"
+],
+"yonetmen": [
+"Richard Curtis"
 ]
 },
 "mammamia": {
 "imdb": "tt0795421",
+"konu": "Mamma Mia!, Phyllida Lloyd'un yönettiği ve Meryl Streep, Amanda Seyfried, Pierce Brosnan, Colin Firth, Stellan Skarsgård, Dominic Cooper, Julie Walters ve Christine Baranski'nin oynadığı 2008 yapımı müzikal filmdir. Filmin en büyük özelliği ise tüm şarkıların ABBA şarkısı olmasıdır.",
 "oyuncu": [
 "Meryl Streep",
 "Pierce Brosnan",
@@ -478,6 +662,10 @@
 "Stellan Skarsgård",
 "Benny Andersson"
 ],
+"puan": {
+"Metacritic": "51/100",
+"Rotten Tomatoes": "55%"
+},
 "sure": 108,
 "tur": [
 "romantik komedi",
@@ -487,10 +675,14 @@
 "ulke": [
 "İngiltere",
 "Almanya"
+],
+"yonetmen": [
+"Phyllida Lloyd"
 ]
 },
 "mavi": {
 "imdb": "tt0252695",
+"konu": "Mavi Boncuk, 1 Ocak 1975 tarihinde vizyona giren, yönetmenliğini Ertem Eğilmez'in üstlendiği ve senaryosunu Sadık Şendil'in yazdığı 1974 yapımı Türk komedi ve romantik filmidir. Başrollerinde Emel Sayın, Tarık Akan, Zeki Alasya, Münir Özkul, Metin Akpınar, Kemal Sunal, Halit Akçatepe, Adile Naşit ve Perran Kutman yer almaktadır.",
 "oyuncu": [
 "Tarık Akan",
 "Kemal Sunal",
@@ -504,10 +696,14 @@
 ],
 "ulke": [
 "Türkiye"
+],
+"yonetmen": [
+"Ertem Eğilmez"
 ]
 },
 "neseli": {
 "imdb": "tt0765833",
+"konu": "Neşeli Günler, yönetmenlik koltuğunda Orhan Aksoy'un oturduğu, yapımcılığını Nahit Ataman'ın üstlendiği, senaryosunu ise Sadık Şendil'in yazdığı 1978 yapımı komedi türündeki sinema filmi. Başrollerini Münir Özkul ve Adile Naşit'in turşucu rolünde oynadığı film, geçimsiz bir çiftin ayrılmasını ve sonrasında gelişen olayları komik bir dille anlatmaktadır. Filmin oyuncu kadrosunda aynı zamanda Şener Şen, Ayşen Gruda, Oya Aydoğan, Ahmet Sezerel, Mürüvvet Sim ve İhsan Yüce gibi isimler yer aldı.",
 "oyuncu": [
 "Adile Naşit",
 "Ayşen Gruda",
@@ -520,10 +716,14 @@
 ],
 "ulke": [
 "Türkiye"
+],
+"yonetmen": [
+"Orhan Aksoy"
 ]
 },
 "notebook": {
 "imdb": "tt0332280",
+"konu": "Not Defteri ya da özgün adıyla The Notebook, Nick Cassavetes'in yönettiği, Nicholas Sparks'ın aynı isimli romanından uyarlanan, 2004 yılında çekilen romantik filmdir. Filmin başrol oyuncuları Ryan Gosling ve Rachel McAdams, 1940'ların başlarında yaşayan, birbirine çok aşık bir çifti canlandırıyor.",
 "oyuncu": [
 "Rachel McAdams",
 "Ryan Gosling",
@@ -532,6 +732,10 @@
 "James Marsden",
 "Sam Shepard"
 ],
+"puan": {
+"Metacritic": "53/100",
+"Rotten Tomatoes": "54%"
+},
 "sure": 123,
 "tur": [
 "romantik",
@@ -540,10 +744,14 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Nick Cassavetes"
 ]
 },
 "nottinghill": {
 "imdb": "tt0125439",
+"konu": "Notting Hill, 1999 Birleşik Krallık yapımı romantik komedi-dram filmidir.",
 "oyuncu": [
 "Julia Roberts",
 "Alec Baldwin",
@@ -552,6 +760,10 @@
 "Rhys Ifans",
 "Hugh Bonneville"
 ],
+"puan": {
+"Metacritic": "68/100",
+"Rotten Tomatoes": "84%"
+},
 "sure": 119,
 "tur": [
 "romantik komedi",
@@ -560,10 +772,14 @@
 "ulke": [
 "İngiltere",
 "ABD"
+],
+"yonetmen": [
+"Roger Michell"
 ]
 },
 "prada": {
 "imdb": "tt0458352",
+"konu": "The Devil Wears Prada, Lauren Weisberger'in aynı adlı romanından sinemaya uyarlanmış olan 2006 yapımı Oscar adayı film. Meryl Streep, Anne Hathaway, Emily Blunt, Stanley Tucci, Adrian Grenier ve Tracie Thoms filmde rol alırken filmin yönetmenliğini David Frankel, yapımcılığını ise Wendy Finerman yapmıştır. Filmin kitaptan uyarlanan senaryosunu Aline Brosh McKenna yazmıştır.\nMeryl Streep bu film ile En İyi Aktris dalında, Patricia Field ise En İyi Kostüm dalında Oscar'a aday gösterilmiştir.",
 "oyuncu": [
 "Meryl Streep",
 "Anne Hathaway",
@@ -572,6 +788,10 @@
 "Heidi Klum",
 "Stanley Tucci"
 ],
+"puan": {
+"Metacritic": "62/100",
+"Rotten Tomatoes": "75%"
+},
 "sure": 109,
 "tur": [
 "Komedi-drama",
@@ -579,10 +799,14 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"David Frankel"
 ]
 },
 "prettywoman": {
 "imdb": "tt0100405",
+"konu": "Pretty Woman, JF Lawton'ın senaryosunu yazdığı, Garry Marshall'ın yönettiği 1990 Amerika yapımı romantik komedi filmidir. Başrollerini Richard Gere ve Julia Roberts'ın paylaştığı filmde Héctor Elizondo, Ralph Bellamy, Laura San Giacomo ve Jason Alexander yardımcı rollerde yer alıyor. Filmin hikâyesi, zengin bir iş insanı olan Edward Lewis tarafından çeşitli iş ve sosyal işlevler için eskort olarak işe alınan Hollywood fahişesi Vivian Ward'a ve onların hafta boyunca gelişen ilişkilerine odaklanıyor. Filmin adı Pretty Woman, Roy Orbison tarafından yazılan ve söylenen \"Oh, Pretty Woman\" şarkısına",
 "oyuncu": [
 "Julia Roberts",
 "Richard Gere",
@@ -591,6 +815,10 @@
 "Hank Azaria",
 "Ralph Bellamy"
 ],
+"puan": {
+"Metacritic": "51/100",
+"Rotten Tomatoes": "66%"
+},
 "sure": 119,
 "tur": [
 "romantik komedi",
@@ -598,10 +826,14 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Garry Marshall"
 ]
 },
 "prideprejudice": {
 "imdb": "tt0414387",
+"konu": "Aşk ve Gurur, Joe Wright tarafından yönetilen, Jane Austen'ın 1813'te yayımlanan Gurur ve Önyargı kitabından uyarlanan, 2005 yapımı romantik dram filmi. Film toprak sahibi seçkinlerinden olan bir İngiliz ailesindeki beş kız kardeşin evlilik, ahlak ve kavram yanılgılarının sorunları ile uğraşmasını konu alıyor. Keira Knightley başrolde yer alarak Elizabeth Bennet karakterini canlandırırken ona Bennet'in romantik ilişkisi Fitzwilliam Darcy rolünde Matthew Macfadyen eşlik ediyor. StudioCanal ile birlikte Working Title Films tarafından üretilen film, Birleşik Krallık ve İrlanda'da 16 Eylül 2005 ta",
 "oyuncu": [
 "Keira Knightley",
 "Judi Dench",
@@ -610,6 +842,10 @@
 "Carey Mulligan",
 "Jena Malone"
 ],
+"puan": {
+"Metacritic": "82/100",
+"Rotten Tomatoes": "87%"
+},
 "sure": 127,
 "tur": [
 "romantik",
@@ -618,10 +854,14 @@
 "ulke": [
 "İngiltere",
 "Fransa"
+],
+"yonetmen": [
+"Joe Wright"
 ]
 },
 "proposal": {
 "imdb": "tt1041829",
+"konu": "Teklif veya gerçek adıyla The Proposal, 2009 yapımı Amerikan romantik komedi filmidir. Filmin çekimleri Alaska eyaletinin Sitka şehrinde yapılmıştır. Anna Fletcher tarafından yönetilen filmde Sandra Bullock ve Ryan Reynolds başrol oynamıştır. Film, 19 Haziran 2009 tarihinde Amerika Birleşik Devletleri'nde, 20 Haziran 2009 tarihinde de Türkiye'de vizyona girmiştir.",
 "oyuncu": [
 "Sandra Bullock",
 "Sandra Bullock",
@@ -630,6 +870,10 @@
 "Betty White",
 "Mary Steenburgen"
 ],
+"puan": {
+"Metacritic": "48/100",
+"Rotten Tomatoes": "45%"
+},
 "sure": 107,
 "tur": [
 "romantik komedi",
@@ -637,10 +881,15 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Anne Fletcher"
 ]
 },
 "romanholiday": {
 "imdb": "tt0046250",
+"konu": "Roma Tatili 1953 ABD yapımı romantik komedi filmidir. Özgün adı  Roman  Holiday olan film Kasım 1954 tarihinde İstanbul'da Lale, Ar ve Elhamra sinemalarında aynı anda gösterilmiş ve haftalarca vizyonda kalmıştır.\nSenaryosunu Dalton Trumbo'nun Ian McLellan Hunter ve John Dighton'la  birlikte yazdıkları filmin yapımcısı ve yönetmeni William Wyler'dır. Başlıca rollerinde Gregory Peck, Audrey Hepburn ve Eddie Albert oynamışlardır.",
+"oscar": 3,
 "oyuncu": [
 "Audrey Hepburn",
 "Gregory Peck",
@@ -649,6 +898,10 @@
 "Paolo Carlini",
 "Tullio Carminati"
 ],
+"puan": {
+"Metacritic": "78/100",
+"Rotten Tomatoes": "97%"
+},
 "sure": 118,
 "tur": [
 "romantik komedi",
@@ -657,10 +910,14 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"William Wyler"
 ]
 },
 "selvi": {
 "imdb": "tt0263975",
+"konu": "Selvi Boylum Al Yazmalım, yönetmenlik koltuğunda Atıf Yılmaz'ın oturduğu, başrollerinde Türkan Şoray, Kadir İnanır ve Ahmet Mekin'in yer aldığı, 1977 yapımı dram türündeki sinema filmi. Türk sinemasının başyapıtlarından birisi olarak kabul edilen filmin hikâyesi, Kırgız yazar Cengiz Aytmatov'un 1961 yılında yayımlanan ''Kırmızı Eşarp'' adlı romanından uyarlandı. Filmin özgün müziğini Cahit Berkay besteledi. Filmde köylü kızı Asya ile kamyon şoförü İlyas'ın dağlarda başlayıp, daha sonrasında kısa bir sürede mutlu bir evliliğe dönüşen aşkı anlatılmaktadır.",
 "oyuncu": [
 "Türkân Şoray",
 "Kadir İnanır",
@@ -673,10 +930,14 @@
 ],
 "ulke": [
 "Türkiye"
+],
+"yonetmen": [
+"Atıf Yılmaz"
 ]
 },
 "steelmagnolias": {
 "imdb": "tt0098384",
+"konu": "Steel Magnolias , Herbert Ross tarafından yönetilen ve başrollerini Sally Field, Dolly Parton, Shirley MacLaine, Daryl Hannah, Olympia Dukakis ve Julia Roberts'ın oynadığı 1989 Amerikan komedi-drama filmidir. Film, Robert Harling'in 1987 yılındaki aynı adlı oyunundan uyarlanmıştır. Güney eyaletleri’ndeki küçük bir kasabada yaşayan bir grup kadının arasındaki bağı ve kendilerinden birinin ölümüyle nasıl başa çıktıklarını anlatır. Yardımcı oyuncular arasında Tom Skerritt, Dylan McDermott, Sam Shepard ve Kevin J. O'Connor yer alıyor.",
 "oyuncu": [
 "Julia Roberts",
 "Dolly Parton",
@@ -685,6 +946,10 @@
 "Daryl Hannah",
 "Sam Shepard"
 ],
+"puan": {
+"Metacritic": "56/100",
+"Rotten Tomatoes": "73%"
+},
 "sure": 114,
 "tur": [
 "Komedi-drama",
@@ -693,6 +958,9 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Herbert Ross"
 ]
 },
 "t20261115-altingun-ankara": {},
@@ -1055,6 +1323,8 @@
 "t20261220-kalhorerzincan-diyarbakir": {},
 "thelmalouise": {
 "imdb": "tt0103074",
+"konu": "Thelma ve Louise, 1991 yapımı bir yol filmidir. Senaryosunu  Callie Khouri'nin yazdığı filmin yönetmenliğini Ridley Scott üstlenmiştir. Başrol oyuncularından Geena Davis, \"Thelma\" karakterini, Susan Sarandon \"Louise\" karakterini, Harvey Keitel, filmin iki kadın karakterinin işlediği suçları aydınlatma çabasında olan bir dedektifi; Hal kerekterini, Michael Madsen Louise'in erkek arkadaşını, Christopher McDonald Thelma'nın eşini, Brad Pitt ise Thelma ve Louise'in yanlarına aldıkları otostopçuyu canlandırmıştır.\nDiğer bazı yol filmleriyle ve özellikle Alain Tanner'in yönettiği 1979 yapımı Messido",
+"oscar": 1,
 "oyuncu": [
 "Brad Pitt",
 "Susan Sarandon",
@@ -1063,6 +1333,11 @@
 "Michael Madsen",
 "Christopher McDonald"
 ],
+"puan": {
+"IMDb": "7.6/10",
+"Metacritic": "89/100",
+"Rotten Tomatoes": "87%"
+},
 "sure": 129,
 "tur": [
 "Komedi-drama",
@@ -1072,10 +1347,15 @@
 "ulke": [
 "ABD",
 "İngiltere"
+],
+"yonetmen": [
+"Ridley Scott"
 ]
 },
 "tiffany": {
 "imdb": "tt0054698",
+"konu": "Çılgınlar Kraliçesi  1961 ABD yapımı romantik filmdir. Özgün adı Breakfast at Tiffany's  olan film Türkiye'de bazı TV kanallarında özgün adının tam çevirisi olan Tiffany'de Kahvaltı adı ile de gösterilmiştir.. Film Türkiye'de ilk kez 10 Şubat 1963 tarihinde gösterime girmiştir.",
+"oscar": 1,
 "oyuncu": [
 "Audrey Hepburn",
 "Patricia Neal",
@@ -1084,6 +1364,10 @@
 "George Peppard",
 "Buddy Ebsen"
 ],
+"puan": {
+"Metacritic": "77/100",
+"Rotten Tomatoes": "88%"
+},
 "sure": 110,
 "tur": [
 "romantik komedi",
@@ -1091,6 +1375,9 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Blake Edwards"
 ]
 },
 "tuscan": {
@@ -1103,6 +1390,10 @@
 "Raoul Bova",
 "Lindsay Duncan"
 ],
+"puan": {
+"Metacritic": "52/100",
+"Rotten Tomatoes": "62%"
+},
 "sure": 113,
 "tur": [
 "romantik komedi",
@@ -1112,6 +1403,9 @@
 "ulke": [
 "ABD",
 "İtalya"
+],
+"yonetmen": [
+"Audrey Wells"
 ]
 },
 "v-ebenezer": {
@@ -1132,6 +1426,9 @@
 "ulke": [
 "ABD",
 "İngiltere"
+],
+"yonetmen": [
+"Ti West"
 ]
 },
 "v-hungergames-sunrise": {
@@ -1150,10 +1447,16 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Francis Lawrence"
 ]
 },
 "v-sapkalikedi": {
 "imdb": "tt2321555",
+"puan": {
+"Metacritic": "46/100"
+},
 "sure": 107,
 "tur": [
 "çocuk",
@@ -1162,10 +1465,15 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Erica Rivinoja",
+"Alessandro Carloni"
 ]
 },
 "vizontele": {
 "imdb": "tt0270053",
+"konu": "Vizontele, 2000 yapımı, yönetmenliğini Yılmaz Erdoğan ve Ömer Faruk Sorak'ın birlikte yaptığı, senaryosunu da Yılmaz Erdoğan'ın yazdığı bir Türk komedi sinema filmidir. Filmin hikâyesi Hakkâri'de geçmekteyse de burada çekim yapmanın zorluğu nedeniyle çekimler Van'ın Gevaş ilçesinde yapıldı. Çoğunlukla Beşiktaş Kültür Merkezi oyuncularının rol aldığı filmin 2003 yılında Vizontele Tuuba adlı bir devam filmi de çekildi.",
 "oyuncu": [
 "Cem Yılmaz",
 "Yılmaz Erdoğan",
@@ -1180,10 +1488,14 @@
 ],
 "ulke": [
 "Türkiye"
+],
+"yonetmen": [
+"Yılmaz Erdoğan"
 ]
 },
 "youvegotmail": {
 "imdb": "tt0128853",
+"konu": "Mesajınız Var, 1998 yapımı Amerikan romantik komedi filmidir. 1940 yılında gösterime giren Köşedeki Dükkân adlı filmin yeniden çevrimi olan filmin dağıtımı Warner Brothers tarafından yapılmıştır. Joe vs. Volcano ve Sevginin Bağladıkları filmlerinde bir arada oynayan Tom Hanks ve Meg Ryan bu filmde de başrolü paylaşmışlardır.",
 "oyuncu": [
 "Tom Hanks",
 "Meg Ryan",
@@ -1192,6 +1504,10 @@
 "Dave Chappelle",
 "Parker Posey"
 ],
+"puan": {
+"Metacritic": "58/100",
+"Rotten Tomatoes": "70%"
+},
 "sure": 114,
 "tur": [
 "romantik komedi",
@@ -1199,6 +1515,9 @@
 ],
 "ulke": [
 "ABD"
+],
+"yonetmen": [
+"Nora Ephron"
 ]
 }
 }
