@@ -17141,6 +17141,38 @@ function spFilmImg(f){const v=SP.vizyon.find(x=>x[0]===f[0]);const u=(v&&v[7])||
   const row=`<div class="kthead"><span>Ruh Eşimle Film Gecesi</span><small>ikiniz için</small></div><div class="ktrow sprow">${L.map(x=>`<button type="button" class="spcard" data-spf="${x[0]}">${spPoster(x)}${S.seen[x[0]]?`<i class="spc-ok">${ySvg("check")}</i>`:S.want[x[0]]?`<i class="spc-ok w">${ySvg("bookmark")}</i>`:""}</button>`).join("")}</div>`;
   const i=H.indexOf('<div class="kthead"><span>Kız kıza film gecesi');return i>=0?H.slice(0,i)+row+H.slice(i):H+row;};})();
 
+/* ===== v0.43 Sahne & Perde: afiş ve sanatçı görsellerini canlı bul (anahtarsız, iTunes kataloğu) ===== */
+const SPX={q:[],busy:0,seen:{},t:null};let SPXC={};try{SPXC=JSON.parse(localStorage.getItem("mf-spimg")||"{}");}catch(e){SPXC={};}
+function spaSave(){try{const k=Object.keys(SPXC);if(k.length>900)k.slice(0,200).forEach(x=>delete SPXC[x]);localStorage.setItem("mf-spimg",JSON.stringify(SPXC));}catch(e){}}
+function spaFold(s){return mfFold(String(s||"")).replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();}
+function spaBig(u,film){return String(u||"").replace(/\/\d+x\d+bb\.(jpg|png|webp)$/,film?"/600x900bb.jpg":"/600x600bb.jpg");}
+/* sanatçı adı: "Ebru Gündeş - Beraber Söylüyoruz" → "Ebru Gündeş" */
+function spaArtist(t){t=String(t||"").replace(/\(.*?\)/g,"").replace(/^(.*?)(\s+[-–—:|·]\s+|\s+ile\s+|\s+&\s+|,).*/,"$1").replace(/\s*(konseri|konser|stand-?up|gösterisi|show|tour|turnesi|world tour).*$/i,"").trim();return t.length>=3&&t.length<=40?t:"";}
+function spaKey(kind,a,b){return kind+"|"+spaFold(a)+"|"+(b||"");}
+function spaGet(kind,a,b){const k=spaKey(kind,a,b);return Object.prototype.hasOwnProperty.call(SPXC,k)?SPXC[k]:undefined;}
+function spaNeed(kind,a,b){if(!a||navigator.onLine===false)return;const k=spaKey(kind,a,b);if(SPXC[k]!==undefined||SPX.seen[k])return;SPX.seen[k]=1;SPX.q.push({k,kind,a,b});spaPump();}
+function spaPump(){while(SPX.busy<2&&SPX.q.length){const j=SPX.q.shift();SPX.busy++;spaFetch(j).finally(()=>{SPX.busy--;setTimeout(spaPump,260);});}}
+async function spaFetch(j){const it=async(p)=>{try{const r=await fetch("https://itunes.apple.com/search?"+p,{mode:"cors"});if(!r.ok)return null;const x=await r.json();return x&&x.results||null;}catch(e){return null;}};let url="";
+ if(j.kind==="film"){const y=+j.b||0;const tryC=async c=>{const R=await it(`term=${encodeURIComponent(j.a)}&media=movie&entity=movie&limit=8&country=${c}`);if(!R)return "";const want=spaFold(j.a);
+   const ok=R.filter(x=>x.artworkUrl100&&(!y||Math.abs((+String(x.releaseDate||"").slice(0,4))-y)<=1));const best=ok.find(x=>spaFold(x.trackName)===want)||ok.find(x=>spaFold(x.trackName).startsWith(want)||want.startsWith(spaFold(x.trackName)))||null;return best?spaBig(best.artworkUrl100,1):"";};
+  url=await tryC("tr")||await tryC("us");}
+ else if(j.kind==="og"){try{const r=await fetch("https://api.allorigins.win/raw?url="+encodeURIComponent(j.a));if(r.ok){const h=(await r.text()).slice(0,200000);const m=h.match(/<meta[^>]+(?:property|name)=["'](?:og:image(?::secure_url)?|twitter:image(?::src)?)["'][^>]*content=["']([^"']+)["']/i)||h.match(/<meta[^>]+content=["']([^"']+)["'][^>]*(?:property|name)=["'](?:og:image|twitter:image)["']/i);
+   if(m){let u=m[1].replace(/&amp;/g,"&").trim();try{u=new URL(u,j.a).href;}catch(_){u="";}if(/^http:\/\//.test(u))u=u.replace(/^http:/,"https:");if(!/^https:\/\//.test(u)||/logo|favicon|default|placeholder|no-?image|share-?image|site-?image|apple-touch/i.test(u))u="";url=u;}}}catch(e){}}
+ else{const R=await it(`term=${encodeURIComponent(j.a)}&entity=album&attribute=artistTerm&limit=6&country=tr`);const want=spaFold(j.a);const w0=want.split(" ")[0];
+  const best=(R||[]).find(x=>x.artworkUrl100&&spaFold(x.artistName)===want)||(R||[]).find(x=>x.artworkUrl100&&spaFold(x.artistName).startsWith(w0)&&want.length>=4);url=best?spaBig(best.artworkUrl100,0):"";}
+ SPXC[j.k]=url;spaSave();if(url){clearTimeout(SPX.t);SPX.t=setTimeout(spaPatch,350);}}
+function spaPatch(){try{document.querySelectorAll(".spcard[data-spf] .spp:not(.has-img),.sp-feat[data-spf] .spp:not(.has-img),#ysheet .spf-hd .spp:not(.has-img)").forEach(el=>{const host=el.closest("[data-spf]")||document.getElementById("ysheet");const id=host&&host.dataset&&host.dataset.spf||(document.getElementById("ysheet")||{})._spid;const f=id&&spFilm(id);if(!f||!spFilmImg(f))return;
+  const cls=[...el.classList].filter(c=>c!=="spp"&&c!=="spr-flip").join(" ");const t=document.createElement("div");t.innerHTML=spPoster(f,cls);const n=t.firstElementChild;if(n){if(el.classList.contains("spr-flip"))n.classList.add("spr-flip");el.replaceWith(n);}});
+ document.querySelectorAll(".sptk[data-spe]:not(.has-img)").forEach(el=>{const e=spEv(el.dataset.spe);if(!e||!spEvImg(e))return;const t=document.createElement("div");t.innerHTML=spTicket(e);const n=t.firstElementChild;if(!n)return;n.onclick=()=>spOpen(e[0]);if(el.style.transform)n.style.transform=el.style.transform;el.replaceWith(n);});}catch(e){console.error(e);}}
+/* kaynakları bağla: önce elle/bot bulduğu görsel, yoksa canlı arama */
+(function(){const _fi=spFilmImg;spFilmImg=function(f){const u=_fi.apply(this,arguments);if(u)return u;const q=f[2]||f[1];const c=spaGet("film",q,f[3]);if(c===undefined){spaNeed("film",q,f[3]);return "";}return c&&!SP_BAD[c]?c:"";};
+ window.spEvImg=function(e){if(e[10]&&!SP_BAD[e[10]])return e[10];if(e[2]==="konser"||e[2]==="standup"){const a=spaArtist(e[1]);if(a){const c=spaGet("art",a);if(c===undefined){spaNeed("art",a);return "";}if(c&&!SP_BAD[c])return c;}}
+  const L=/^https:\/\//.test(e[8]||"")?e[8]:"";if(!L)return "";if(SP.sahne.filter(x=>x[8]===L&&x[1]!==e[1]).length>=2)return "";const o=spaGet("og",L);if(o===undefined){spaNeed("og",L);return "";}return o&&!SP_BAD[o]?o:"";};
+ const _im=spImg;spImg=function(u,w){if(/^https:\/\/[a-z0-9-]+\.mzstatic\.com\//.test(u||""))return u;return _im.apply(this,arguments);};
+ const _t=spTicket;spTicket=function(e){const u=spEvImg(e);if(!u||e[10])return _t.apply(this,arguments);const c=e.slice();c[10]=u;return _t.call(this,c);};
+ const _o=spOpen;spOpen=function(id){const e=spEv(id);const u=e&&spEvImg(e);if(e&&u&&!e[10]){const keep=e[10];e[10]=u;try{return _o.apply(this,arguments);}finally{e[10]=keep;}}return _o.apply(this,arguments);};
+ const _fo=spFilmOpen;spFilmOpen=function(id){const r=_fo.apply(this,arguments);try{const s=document.getElementById("ysheet");if(s){s._spid=id;s._spk="f";}}catch(e){}return r;};})();
+
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
