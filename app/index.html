@@ -7675,7 +7675,20 @@ body.sp-on .sptk-b>small .ysv{color:#fff}
 .sp-hdimg>*:not(.sp-hdbg){position:relative}.sp-hdimg .shs-x{position:absolute!important}
 .sp-hdpic{display:block;width:150px;margin:0 auto 10px;border-radius:6px;overflow:hidden;box-shadow:0 0 0 4px #F8F1E2,0 16px 30px -10px rgba(0,0,0,.7);transform:rotate(-2deg);animation:sprFlipIn .8s cubic-bezier(.2,1.3,.4,1) both}
 .sp-hdpic img{display:block;width:100%;max-height:220px;object-fit:cover}
-.ysh .shs-c>*{flex-shrink:0}/* v0.44 Perde: aydınlık Yeşilçam, Zaman Makinesi */
+.ysh .shs-c>*{flex-shrink:0}/* v0.47 film künyesi + kaydırma kilidi */
+html.mf-lock body{position:fixed;left:0;right:0;width:100%;overflow:hidden}
+.shs{overscroll-behavior:contain}.shs-c{overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.spf-hd.sp-hdimg{padding-bottom:18px}
+.spf-facts{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:16px}
+.spf-facts span{padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:13px;font-weight:600;letter-spacing:.01em}
+.spf-cast{margin:16px 0 6px;text-align:center}
+.spf-cast small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.55;margin-bottom:8px}
+.spf-cast>div{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.spf-cast span{padding:6px 12px;border-radius:999px;background:rgba(142,30,54,.08);color:#5A1E2A;font-size:13.5px}
+html[data-mf=dusk] .spf-cast span{background:rgba(255,255,255,.08);color:#F3DCCB}
+.spf-links{display:grid;grid-template-columns:1fr 1fr;gap:10px}.spf-links .mbtn{margin:0;min-width:0}
+.imdb-b{display:inline-block;margin-right:7px;padding:2px 5px;border-radius:4px;background:#F5C518;color:#000;font:900 12px/1.1 Arial,sans-serif}
+/* v0.44 Perde: aydınlık Yeşilçam, Zaman Makinesi */
 body.sp-on.sp-perde{background:#F6E6CF!important}
 body.sp-on.sp-perde::before{opacity:.32;background-image:radial-gradient(circle at 25% 25%,rgba(196,87,46,.10) 0 9px,transparent 10px),radial-gradient(circle at 75% 75%,rgba(47,111,106,.10) 0 9px,transparent 10px),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60'><path d='M30 6c6 8 6 16 0 24-6-8-6-16 0-24zM30 30c6 8 6 16 0 24-6-8-6-16 0-24zM6 30c8-6 16-6 24 0-8 6-16 6-24 0zM30 30c8-6 16-6 24 0-8 6-16 6-24 0z' fill='none' stroke='%23B5642A' stroke-opacity='.35' stroke-width='1.2'/></svg>");background-size:40px 40px,40px 40px,60px 60px}
 html[data-mf=dusk] body.sp-on.sp-perde{background:#2A1E18!important}
@@ -17264,6 +17277,26 @@ SP.afisLocal={};
 (function(){const _im=spImg;spImg=function(u,w){if(/^afis\//.test(u||""))return u;return _im.apply(this,arguments);};
  const _fi=spFilmImg;spFilmImg=function(f){const l=SP.afisLocal[f[0]];if(l&&!SP_BAD[l])return l;return _fi.apply(this,arguments);};
  if(!window.fetch)return;fetch("afis/afis.json?d="+dkey(),{cache:"no-store"}).then(r=>r.ok?r.json():null).then(j=>{if(j&&typeof j==="object"){SP.afisLocal=j;if(step===96){spRender();}}}).catch(()=>{});})();
+
+/* v0.47: film kartı künyesi (oyuncular, süre, tür, IMDb) + bulanık afiş arka planı */
+SP.bilgi={};
+(function(){if(window.fetch)fetch("afis/bilgi.json?d="+dkey(),{cache:"no-store"}).then(r=>r.ok?r.json():null).then(j=>{if(j&&typeof j==="object")SP.bilgi=j;}).catch(()=>{});
+ const sure=n=>n>=60?Math.floor(n/60)+" sa"+(n%60?" "+n%60+" dk":""):n+" dk";
+ const _fo=spFilmOpen;spFilmOpen=function(id){const r=_fo.apply(this,arguments);try{const O=document.getElementById("ysheet"),f=spFilm(id);if(!O||!f)return r;const B=SP.bilgi[id]||{};
+  const H=O.querySelector(".spf-hd"),u=spFilmImg(f);
+  if(H&&u){H.classList.add("sp-hdimg");H.insertAdjacentHTML("afterbegin",`<span class="sp-hdbg" style="background-image:url('${spImg(u,520).replace(/'/g,"%27")}')"></span>`);}
+  const facts=[f[3],B.sure&&sure(B.sure),(B.tur||[])[0],(B.ulke||[])[0]].filter(Boolean);
+  if(H&&facts.length)H.insertAdjacentHTML("beforeend",`<div class="spf-facts">${facts.map(x=>`<span>${esc(String(x))}</span>`).join("")}</div>`);
+  const ln=O.querySelector(".spf-line");
+  if(ln&&B.oyuncu&&B.oyuncu.length)ln.insertAdjacentHTML("afterend",`<div class="spf-cast"><small>Oyuncular</small><div>${B.oyuncu.slice(0,6).map(x=>`<span>${esc(x)}</span>`).join("")}</div></div>`);
+  const yt=O.querySelector(".spf-yt");
+  if(yt&&B.imdb&&/^tt\d+$/.test(B.imdb)){const w=document.createElement("div");w.className="spf-links";yt.replaceWith(w);w.appendChild(yt);w.insertAdjacentHTML("beforeend",`<a class="mbtn spf-yt spf-imdb" href="https://www.imdb.com/title/${B.imdb}/" target="_blank" rel="noopener"><b class="imdb-b">IMDb</b>Puan &amp; yorumlar ↗</a>`);yt.innerHTML=yt.innerHTML.replace("Fragmanı ara","Fragman");}
+ }catch(e){console.error(e);}return r;};})();
+/* açık pencere varken arka sayfa kaymasın */
+(function(){let y=0,on=false;const H=document.documentElement;
+ const chk=()=>{const o=!!document.querySelector(".shs.on");if(o&&!on){on=true;y=window.scrollY||0;document.body.style.top=(-y)+"px";H.classList.add("mf-lock");}
+  else if(!o&&on){on=false;H.classList.remove("mf-lock");document.body.style.top="";window.scrollTo(0,y);}};
+ try{new MutationObserver(chk).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:["class"]});}catch(e){}})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
