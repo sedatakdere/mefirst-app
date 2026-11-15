@@ -181,6 +181,7 @@ links = {}
 for e in events:
     if len(e) > 8 and e[8]: links[e[8]] = links.get(e[8], 0) + 1
 VCACHE = {}
+SKIP_OG = {"t20261210-kaspar-bursa"}  # logo/boş görsel dönenler
 SANAT = re.compile(r"şarkıcı|müzisyen|sanatçı|besteci|komedyen|oyuncu|piyanist|grup|orkestra|keman|kanun|gitarist|rapçi|söz yazarı|singer|musician|band|comedian|composer", re.I)
 for e in events:
     eid = e[0]
@@ -200,7 +201,7 @@ for e in events:
             if r and r["ex"]: B["mekan"] = r["ex"]
         if eid not in out:
             u = ""
-            if kind not in ("konser", "standup") and link.startswith("https://") and links.get(link, 0) == 1:
+            if kind not in ("konser", "standup") and link.startswith("https://") and links.get(link, 0) == 1 and eid not in SKIP_OG:
                 try: u = og(link)
                 except Exception as x: print("og hata", eid, x)
             if not u and VCACHE.get(ven) and VCACHE[ven]["src"]:
