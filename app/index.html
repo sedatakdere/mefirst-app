@@ -17229,6 +17229,36 @@ function spaPatch(){try{document.querySelectorAll(".spcard[data-spf] .spp:not(.h
  const _o=spOpen;spOpen=function(id){const e=spEv(id);const u=e&&spEvImg(e);if(e&&u&&!e[10]){const keep=e[10];e[10]=u;try{return _o.apply(this,arguments);}finally{e[10]=keep;}}return _o.apply(this,arguments);};
  const _fo=spFilmOpen;spFilmOpen=function(id){const r=_fo.apply(this,arguments);try{const s=document.getElementById("ysheet");if(s){s._spid=id;s._spk="f";}}catch(e){}return r;};})();
 
+/* ===== v0.45 Perde: afişler gerçekten gelsin (Wikipedia + iTunes JSONP, hatayı kalıcı saklama) ===== */
+(function(){try{localStorage.removeItem("mf-spimg");}catch(e){}
+ try{SPXC=JSON.parse(localStorage.getItem("mf-spimg2")||"{}");}catch(e){SPXC={};}})();
+spaSave=function(){try{const k=Object.keys(SPXC);if(k.length>900)k.slice(0,200).forEach(x=>delete SPXC[x]);localStorage.setItem("mf-spimg2",JSON.stringify(SPXC));}catch(e){}};
+function spaF2(s){return spaFold(String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,""));}
+/* JSONP: iTunes CORS başlığı göndermeyebiliyor; script etiketiyle her tarayıcıda çalışır */
+function spJsonp(url){return new Promise(res=>{const cb="spj"+Date.now().toString(36)+Math.random().toString(36).slice(2,7);const s=document.createElement("script");let done=0;
+ const end=v=>{if(done)return;done=1;try{delete window[cb];}catch(_){window[cb]=undefined;}s.remove();res(v);};window[cb]=d=>end(d||null);s.onerror=()=>end(null);setTimeout(()=>end(null),9000);s.src=url+"&callback="+cb;document.head.appendChild(s);});}
+async function spItunes(p){const u="https://itunes.apple.com/search?"+p;let x=await spJsonp(u);if(!x){try{const r=await fetch(u,{mode:"cors"});if(r.ok)x=await r.json();}catch(e){}}return x?(x.results||[]):null;}
+/* Wikipedia: film sayfasının afişi (null = ağ hatası, "" = bulunamadı) */
+async function spWiki(lang,q,y){try{const u=`https://${lang}.wikipedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=${encodeURIComponent(q+(y?" "+y:"")+" film")}&gsrlimit=5&prop=pageimages&piprop=thumbnail&pithumbsize=500&pilicense=any`;
+ const r=await fetch(u);if(!r.ok)return null;const j=await r.json();const P=Object.values(j&&j.query&&j.query.pages||{}).sort((a,b)=>(a.index||0)-(b.index||0));const want=spaF2(q);
+ const best=P.filter(p=>p.thumbnail&&p.thumbnail.source&&!/\.svg/i.test(p.thumbnail.source)).find(p=>{const t=spaF2(String(p.title).replace(/\(.*?\)/g,""));return t&&(t===want||t.startsWith(want)||(want.startsWith(t)&&t.length>=4));});
+ return best?best.thumbnail.source:"";}catch(e){return null;}}
+spaFetch=async function(j){let url="",net=false;const ok=v=>{if(v===null){net=true;return "";}return v||"";};
+ if(j.kind==="film"){const y=+j.b||0;const f=PF.find(x=>(x[2]||x[1])===j.a)||(SP.vizyon||[]).map(v=>spFilm(v[0])).find(x=>x&&(x[2]||x[1])===j.a);const tr=f?f[1]:"";const yerli=f&&f[1]===f[2];
+  const tries=yerli?[["tr",j.a],["en",j.a]]:[["en",j.a],["tr",tr||j.a]];if(!yerli&&tr&&tr!==j.a)tries.push(["en",tr]);
+  for(const [l,q] of tries){url=ok(await spWiki(l,q,y));if(url)break;}
+  if(!url){const it=async c=>{const R=await spItunes(`term=${encodeURIComponent(j.a)}&media=movie&entity=movie&limit=8&country=${c}`);if(R===null){net=true;return "";}const want=spaF2(j.a);
+    const L=R.filter(x=>x.artworkUrl100&&(!y||Math.abs((+String(x.releaseDate||"").slice(0,4))-y)<=1));const b=L.find(x=>spaF2(x.trackName)===want)||L.find(x=>spaF2(x.trackName).startsWith(want)||want.startsWith(spaF2(x.trackName)))||null;return b?spaBig(b.artworkUrl100,1):"";};
+   url=await it("tr")||await it("us");}}
+ else if(j.kind==="og"){try{const r=await fetch("https://api.allorigins.win/raw?url="+encodeURIComponent(j.a));if(r.ok){const h=(await r.text()).slice(0,200000);const m=h.match(/<meta[^>]+(?:property|name)=["'](?:og:image(?::secure_url)?|twitter:image(?::src)?)["'][^>]*content=["']([^"']+)["']/i)||h.match(/<meta[^>]+content=["']([^"']+)["'][^>]*(?:property|name)=["'](?:og:image|twitter:image)["']/i);
+   if(m){let u=m[1].replace(/&amp;/g,"&").trim();try{u=new URL(u,j.a).href;}catch(_){u="";}if(/^http:\/\//.test(u))u=u.replace(/^http:/,"https:");if(!/^https:\/\//.test(u)||/logo|favicon|default|placeholder|no-?image|share-?image|site-?image|apple-touch/i.test(u))u="";url=u;}}else net=true;}catch(e){net=true;}}
+ else{const R=await spItunes(`term=${encodeURIComponent(j.a)}&entity=album&attribute=artistTerm&limit=6&country=tr`);if(R===null)net=true;const want=spaF2(j.a);const w0=want.split(" ")[0];
+  const b=(R||[]).find(x=>x.artworkUrl100&&spaF2(x.artistName)===want)||(R||[]).find(x=>x.artworkUrl100&&spaF2(x.artistName).startsWith(w0)&&want.length>=4);url=b?spaBig(b.artworkUrl100,0):"";}
+ /* bağlantı sorunu varsa boş sonucu kalıcı yazma; bir dakika sonra yeniden dene */
+ if(!url&&net){setTimeout(()=>{delete SPX.seen[j.k];},60000);return;}
+ SPXC[j.k]=url;spaSave();if(url){clearTimeout(SPX.t);SPX.t=setTimeout(spaPatch,350);}};
+(function(){const _im=spImg;spImg=function(u,w){if(/^https:\/\/upload\.wikimedia\.org\//.test(u||""))return u;return _im.apply(this,arguments);};})();
+
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
