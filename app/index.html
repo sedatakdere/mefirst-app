@@ -17285,7 +17285,7 @@ SP.bilgi={};
  const _fo=spFilmOpen;spFilmOpen=function(id){const r=_fo.apply(this,arguments);try{const O=document.getElementById("ysheet"),f=spFilm(id);if(!O||!f)return r;const B=SP.bilgi[id]||{};
   const H=O.querySelector(".spf-hd"),u=spFilmImg(f);
   if(H&&u){H.classList.add("sp-hdimg");H.insertAdjacentHTML("afterbegin",`<span class="sp-hdbg" style="background-image:url('${spImg(u,520).replace(/'/g,"%27")}')"></span>`);}
-  const facts=[f[3],B.sure&&sure(B.sure),(B.tur||[])[0],(B.ulke||[])[0]].filter(Boolean);
+  const cap=t=>t?t.charAt(0).toLocaleUpperCase("tr-TR")+t.slice(1):"";const facts=[f[3],B.sure&&sure(B.sure),cap((B.tur||[])[0]),(B.ulke||[])[0]].filter(Boolean);
   if(H&&facts.length)H.insertAdjacentHTML("beforeend",`<div class="spf-facts">${facts.map(x=>`<span>${esc(String(x))}</span>`).join("")}</div>`);
   const ln=O.querySelector(".spf-line");
   if(ln&&B.oyuncu&&B.oyuncu.length)ln.insertAdjacentHTML("afterend",`<div class="spf-cast"><small>Oyuncular</small><div>${B.oyuncu.slice(0,6).map(x=>`<span>${esc(x)}</span>`).join("")}</div></div>`);

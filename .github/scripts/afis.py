@@ -42,12 +42,16 @@ ULKE = {"Amerika Birleşik Devletleri": "ABD", "Birleşik Krallık": "İngiltere
 def labels(ids):
     ids = [i for i in ids if i][:50]
     if not ids: return {}
-    j = get("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({"action": "wbgetentities", "format": "json", "ids": "|".join(ids), "props": "labels", "languages": "tr|en"}))
+    j = get("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({"action": "wbgetentities", "format": "json", "ids": "|".join(ids), "props": "labels|sitelinks", "languages": "tr|en"}))
     o = {}
     for k, e in (j.get("entities") or {}).items():
         L = e.get("labels") or {}
         o[k] = (L.get("tr") or L.get("en") or {}).get("value", "")
+        FAME[k] = len(e.get("sitelinks") or {}) + (1000 if "tr" in L else 0) * 0
+        TRL[k] = "tr" in L
     return o
+FAME, TRL = {}, {}
+TUR_SIRA = ["romantik komedi", "komedi-drama", "müzikal", "biyografik", "romantik", "acıklı güldürü", "komedi", "drama", "savaş", "macera", "aksiyon", "bilimkurgu", "fantastik"]
 def bilgi(qid, y=0):
     j = get("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({"action": "wbgetentities", "format": "json", "ids": qid, "props": "claims"}))
     C = ((j.get("entities") or {}).get(qid) or {}).get("claims") or {}
@@ -60,8 +64,8 @@ def bilgi(qid, y=0):
     yy = [int(str(v.get("time", "+0"))[1:5]) for v in vals("P577", 5) if isinstance(v, dict) and str(v.get("time", ""))[1:5].isdigit()]
     if y and yy and min(abs(a - y) for a in yy) > 1: return None
     if y and not yy: return None
-    cast = [v.get("id") for v in vals("P161", 6) if isinstance(v, dict)]
-    gen = [v.get("id") for v in vals("P136", 3) if isinstance(v, dict)]
+    cast = [v.get("id") for v in vals("P161", 15) if isinstance(v, dict)]
+    gen = [v.get("id") for v in vals("P136", 6) if isinstance(v, dict)]
     cty = [v.get("id") for v in vals("P495", 2) if isinstance(v, dict)]
     L = labels(cast + gen + cty)
     imdb = next((v for v in vals("P345", 1) if isinstance(v, str) and v.startswith("tt")), "")
@@ -69,12 +73,14 @@ def bilgi(qid, y=0):
     for v in vals("P2047", 1):
         try: sure = int(round(float(v.get("amount", "0"))))
         except Exception: pass
+    cast.sort(key=lambda c: -FAME.get(c, 0))
+    gen.sort(key=lambda g: (not TRL.get(g), TUR_SIRA.index(L.get(g, "").lower()) if L.get(g, "").lower() in TUR_SIRA else 99))
     tur = []
     for g in gen:
         t = re.sub(r"\s*(filmi|film)$", "", L.get(g, "")).strip()
         if t and t not in tur: tur.append(t)
     o = {"imdb": imdb, "sure": sure, "tur": tur[:3], "ulke": [ULKE.get(L.get(c, ""), L.get(c, "")) for c in cty if L.get(c)],
-         "oyuncu": [L[c] for c in cast if L.get(c)]}
+         "oyuncu": [L[c] for c in cast if L.get(c)][:6]}
     return {k: v for k, v in o.items() if v}
 html = open("app/index.html", encoding="utf-8").read()
 films = {}
@@ -93,7 +99,7 @@ except Exception: out = {}
 infop = "app/afis/bilgi.json"
 try: info = json.load(open(infop, encoding="utf-8"))
 except Exception: info = {}
-if info.get("_v") != 2: info = {"_v": 2}
+if info.get("_v") != 3: info = {"_v": 3}
 for fid, (tr, orig, y) in films.items():
     if fid == "_v": continue
     has_img = fid in out and os.path.exists("app/" + out[fid])
