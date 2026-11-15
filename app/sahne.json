@@ -1,0 +1,156 @@
+{
+"v": 1,
+"updated": "2026-11-15",
+"note": "Me First Sahne & Perde. sahne: [id,ad,tur(tiyatro|konser|cocuk|standup|dans|opera),baslangic,bitis|'',saat|'',mekan,il,link,kisa not]. vizyon: [id,Türkçe ad,özgün ad,vizyon tarihi,tür,tek satır (kendi cümlesi),link]",
+"sahne": [
+[
+"t20261118-dorantes",
+"Aytaç Doğan, İsmail Tunçbilek & Dorantes",
+"konser",
+"2026-11-18",
+"",
+"20:30",
+"Muammer Karaca Tiyatrosu",
+"İstanbul",
+"https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
+"Kanun, bağlama ve flamenko piyanosu bir arada"
+],
+[
+"t20261119-saksakcilar",
+"Şakşakçılar",
+"tiyatro",
+"2026-11-19",
+"",
+"20:30",
+"Muammer Karaca Tiyatrosu",
+"İstanbul",
+"https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
+""
+],
+[
+"t20261120-celile",
+"Celile",
+"tiyatro",
+"2026-11-20",
+"",
+"20:30",
+"Muammer Karaca Tiyatrosu",
+"İstanbul",
+"https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
+""
+],
+[
+"t20261121-karmakarisik",
+"Karmakarışık",
+"tiyatro",
+"2026-11-21",
+"",
+"20:00",
+"Muammer Karaca Tiyatrosu",
+"İstanbul",
+"https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
+""
+],
+[
+"t20261122-denizkizi",
+"Deniz Kızı Mia",
+"cocuk",
+"2026-11-22",
+"",
+"13:00",
+"Muammer Karaca Tiyatrosu",
+"İstanbul",
+"https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
+"Çocuk oyunu"
+],
+[
+"t20261124-hayal",
+"Hayal Satıcısı",
+"tiyatro",
+"2026-11-24",
+"",
+"20:30",
+"Muammer Karaca Tiyatrosu",
+"İstanbul",
+"https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
+""
+],
+[
+"t20261126-catastrophe",
+"Catastrophe / Kıyamet",
+"tiyatro",
+"2026-11-26",
+"",
+"20:00",
+"Muammer Karaca Tiyatrosu",
+"İstanbul",
+"https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
+"Yunan tiyatro ekibi; 29 Kasım'da tekrar sahnede"
+],
+[
+"t20261127-arche",
+"Arche",
+"dans",
+"2026-11-27",
+"",
+"20:30",
+"Muammer Karaca Tiyatrosu",
+"İstanbul",
+"https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
+"Dans tiyatrosu"
+],
+[
+"t20261128-ucurtma",
+"Uçurtmanın Kuyruğu",
+"tiyatro",
+"2026-11-28",
+"",
+"20:30",
+"Muammer Karaca Tiyatrosu",
+"İstanbul",
+"https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
+""
+],
+[
+"t20261129-spencer",
+"Kevin Spencer Sihirbazlık Gösterisi",
+"cocuk",
+"2026-11-29",
+"",
+"13:00",
+"Muammer Karaca Tiyatrosu",
+"İstanbul",
+"https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
+"Çocuklar için sihirbazlık"
+]
+],
+"vizyon": [
+[
+"v-hungergames-sunrise",
+"Açlık Oyunları: Hasatta Gündoğumu",
+"The Hunger Games: Sunrise on the Reaping",
+"2026-11-20",
+"Bilim kurgu",
+"Suzanne Collins'in romanından; Haymitch'in gençliğine uzanan yeni Açlık Oyunları.",
+"https://www.webtekno.com/kasim-2026-vizyona-girecek-filmler-h228094.html"
+],
+[
+"v-georgemichael-faith",
+"George Michael: The Faith Tour",
+"George Michael: The Faith Tour",
+"2026-11-06",
+"Konser filmi",
+"1988'in efsanevi Faith turnesi beyaz perdede.",
+"https://www.webtekno.com/kasim-2026-vizyona-girecek-filmler-h228094.html"
+],
+[
+"v-asktesadufleri3",
+"Aşk Tesadüfleri Sever 3",
+"Aşk Tesadüfleri Sever 3",
+"2026-11-20",
+"Romantik",
+"Sevilen serinin üçüncü filmi; tesadüfler bu kez de aşkın peşinde.",
+"https://www.webtekno.com/kasim-2026-vizyona-girecek-filmler-h228094.html"
+]
+]
+}
