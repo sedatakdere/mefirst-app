@@ -1,4 +1,5 @@
 {
+"_v": 2,
 "abouttime": {
 "imdb": "tt2194499",
 "oyuncu": [
@@ -251,16 +252,23 @@
 ]
 },
 "ghost": {
-"imdb": "tt0113568",
-"sure": 79,
+"imdb": "tt0099653",
+"oyuncu": [
+"Patrick Swayze",
+"Demi Moore",
+"Whoopi Goldberg",
+"Tony Goldwyn",
+"Rick Aviles",
+"Vincent Schiavelli"
+],
+"sure": 122,
 "tur": [
-"bilimkurgu",
-"aksiyon",
-"fantasy"
+"romantik",
+"fantasy",
+"drama"
 ],
 "ulke": [
-"Japonya",
-"İngiltere"
+"ABD"
 ]
 },
 "hababam": {
@@ -495,6 +503,22 @@
 "Türkiye"
 ]
 },
+"neseli": {
+"imdb": "tt0765833",
+"oyuncu": [
+"Münir Özkul",
+"Adile Naşit",
+"Şener Şen",
+"Ayşen Gruda",
+"Oya Aydoğan"
+],
+"tur": [
+"komedi"
+],
+"ulke": [
+"Türkiye"
+]
+},
 "notebook": {
 "imdb": "tt0332280",
 "oyuncu": [
@@ -536,20 +560,19 @@
 ]
 },
 "prada": {
-"imdb": "tt33612209",
+"imdb": "tt0458352",
 "oyuncu": [
 "Meryl Streep",
 "Anne Hathaway",
 "Emily Blunt",
 "Stanley Tucci",
-"Tracie Thoms",
-"Tibor Feldman"
+"Simon Baker",
+"Adrian Grenier"
 ],
-"sure": 119,
+"sure": 109,
 "tur": [
-"komedi",
-"drama",
-"Komedi-drama"
+"Komedi-drama",
+"drama"
 ],
 "ulke": [
 "ABD"
@@ -748,13 +771,6 @@
 "ulke": [
 "ABD",
 "İngiltere"
-]
-},
-"v-georgemichael-faith": {
-"imdb": "tt40564737",
-"tur": [
-"belgesel",
-"concert"
 ]
 },
 "v-hungergames-sunrise": {
