@@ -1,5 +1,5 @@
 {
-"_v": 5,
+"_v": 6,
 "abouttime": {
 "imdb": "tt2194499",
 "konu": "About Time ya da Türkiye'de gösterime giren adıyla Zamanda Aşk 2013 yapımı romantik komedi-drama filmi. Film kendi hayatında geriye gidebilen zaman yolcusu bir adamın hikâyesini anlatmaktadır. Filmin senaristi ve yapımcısı Richard Curtis'tir. Başrolleri ise Domhnall Gleeson, Rachel McAdams ve Bill Nighy paylaşmaktadır.",
@@ -13,7 +13,7 @@
 ],
 "puan": {
 "Metacritic": "55/100",
-"Rotten Tomatoes": "71%"
+"Rotten Tomatoes": "%71"
 },
 "sure": 123,
 "tur": [
@@ -41,7 +41,7 @@
 ],
 "puan": {
 "Metacritic": "70/100",
-"Rotten Tomatoes": "90%"
+"Rotten Tomatoes": "%90"
 },
 "sure": 122,
 "tur": [
@@ -70,7 +70,7 @@
 ],
 "puan": {
 "Metacritic": "27/100",
-"Rotten Tomatoes": "15%"
+"Rotten Tomatoes": "%15"
 },
 "sure": 93,
 "tur": [
@@ -144,7 +144,7 @@
 ],
 "puan": {
 "Metacritic": "79/100",
-"Rotten Tomatoes": "100%"
+"Rotten Tomatoes": "%100"
 },
 "sure": 97,
 "tur": [
@@ -192,7 +192,7 @@
 "puan": {
 "IMDb": "8.5/10",
 "Metacritic": "100/100",
-"Rotten Tomatoes": "99%"
+"Rotten Tomatoes": "%99"
 },
 "sure": 102,
 "tur": [
@@ -220,7 +220,7 @@
 ],
 "puan": {
 "Metacritic": "64/100",
-"Rotten Tomatoes": "63%"
+"Rotten Tomatoes": "%63"
 },
 "sure": 121,
 "tur": [
@@ -249,7 +249,7 @@
 ],
 "puan": {
 "Metacritic": "68/100",
-"Rotten Tomatoes": "79%"
+"Rotten Tomatoes": "%79"
 },
 "sure": 118,
 "tur": [
@@ -279,7 +279,7 @@
 ],
 "puan": {
 "Metacritic": "65/100",
-"Rotten Tomatoes": "72%"
+"Rotten Tomatoes": "%72"
 },
 "sure": 96,
 "tur": [
@@ -307,7 +307,7 @@
 ],
 "puan": {
 "Metacritic": "50/100",
-"Rotten Tomatoes": "35%"
+"Rotten Tomatoes": "%35"
 },
 "sure": 140,
 "tur": [
@@ -337,7 +337,7 @@
 "puan": {
 "IMDb": "7.5/10",
 "Metacritic": "73/100",
-"Rotten Tomatoes": "85%"
+"Rotten Tomatoes": "%85"
 },
 "sure": 130,
 "tur": [
@@ -365,7 +365,7 @@
 ],
 "puan": {
 "Metacritic": "52/100",
-"Rotten Tomatoes": "6.9/10"
+"Rotten Tomatoes": "%76"
 },
 "sure": 122,
 "tur": [
@@ -415,7 +415,7 @@
 ],
 "puan": {
 "Metacritic": "76/100",
-"Rotten Tomatoes": "89%"
+"Rotten Tomatoes": "%89"
 },
 "sure": 90,
 "tur": [
@@ -443,7 +443,7 @@
 ],
 "puan": {
 "Metacritic": "74/100",
-"Rotten Tomatoes": "93%"
+"Rotten Tomatoes": "%93"
 },
 "sure": 127,
 "tur": [
@@ -470,7 +470,7 @@
 ],
 "puan": {
 "Metacritic": "52/100",
-"Rotten Tomatoes": "50%"
+"Rotten Tomatoes": "%50"
 },
 "sure": 135,
 "tur": [
@@ -499,7 +499,7 @@
 ],
 "puan": {
 "Metacritic": "51/100",
-"Rotten Tomatoes": "59%"
+"Rotten Tomatoes": "%59"
 },
 "sure": 121,
 "tur": [
@@ -526,7 +526,7 @@
 ],
 "puan": {
 "Metacritic": "66/100",
-"Rotten Tomatoes": "77%"
+"Rotten Tomatoes": "%77"
 },
 "sure": 123,
 "tur": [
@@ -579,7 +579,7 @@
 "puan": {
 "IMDb": "8.0/10",
 "Metacritic": "94/100",
-"Rotten Tomatoes": "91%"
+"Rotten Tomatoes": "%91"
 },
 "sure": 128,
 "tur": [
@@ -609,7 +609,7 @@
 "puan": {
 "IMDb": "7.8/10",
 "Metacritic": "91/100",
-"Rotten Tomatoes": "8.5/10"
+"Rotten Tomatoes": "%95"
 },
 "sure": 134,
 "tur": [
@@ -635,7 +635,7 @@
 ],
 "puan": {
 "Metacritic": "55/100",
-"Rotten Tomatoes": "64%"
+"Rotten Tomatoes": "%64"
 },
 "sure": 135,
 "tur": [
@@ -664,7 +664,7 @@
 ],
 "puan": {
 "Metacritic": "51/100",
-"Rotten Tomatoes": "55%"
+"Rotten Tomatoes": "%55"
 },
 "sure": 108,
 "tur": [
@@ -734,7 +734,7 @@
 ],
 "puan": {
 "Metacritic": "53/100",
-"Rotten Tomatoes": "54%"
+"Rotten Tomatoes": "%54"
 },
 "sure": 123,
 "tur": [
@@ -762,7 +762,7 @@
 ],
 "puan": {
 "Metacritic": "68/100",
-"Rotten Tomatoes": "84%"
+"Rotten Tomatoes": "%84"
 },
 "sure": 119,
 "tur": [
@@ -790,7 +790,7 @@
 ],
 "puan": {
 "Metacritic": "62/100",
-"Rotten Tomatoes": "75%"
+"Rotten Tomatoes": "%75"
 },
 "sure": 109,
 "tur": [
@@ -817,7 +817,7 @@
 ],
 "puan": {
 "Metacritic": "51/100",
-"Rotten Tomatoes": "66%"
+"Rotten Tomatoes": "%66"
 },
 "sure": 119,
 "tur": [
@@ -844,7 +844,7 @@
 ],
 "puan": {
 "Metacritic": "82/100",
-"Rotten Tomatoes": "87%"
+"Rotten Tomatoes": "%87"
 },
 "sure": 127,
 "tur": [
@@ -872,7 +872,7 @@
 ],
 "puan": {
 "Metacritic": "48/100",
-"Rotten Tomatoes": "45%"
+"Rotten Tomatoes": "%45"
 },
 "sure": 107,
 "tur": [
@@ -900,7 +900,7 @@
 ],
 "puan": {
 "Metacritic": "78/100",
-"Rotten Tomatoes": "97%"
+"Rotten Tomatoes": "%97"
 },
 "sure": 118,
 "tur": [
@@ -948,7 +948,7 @@
 ],
 "puan": {
 "Metacritic": "56/100",
-"Rotten Tomatoes": "73%"
+"Rotten Tomatoes": "%73"
 },
 "sure": 114,
 "tur": [
@@ -1336,7 +1336,7 @@
 "puan": {
 "IMDb": "7.6/10",
 "Metacritic": "89/100",
-"Rotten Tomatoes": "87%"
+"Rotten Tomatoes": "%87"
 },
 "sure": 129,
 "tur": [
@@ -1366,7 +1366,7 @@
 ],
 "puan": {
 "Metacritic": "77/100",
-"Rotten Tomatoes": "88%"
+"Rotten Tomatoes": "%88"
 },
 "sure": 110,
 "tur": [
@@ -1392,7 +1392,7 @@
 ],
 "puan": {
 "Metacritic": "52/100",
-"Rotten Tomatoes": "62%"
+"Rotten Tomatoes": "%62"
 },
 "sure": 113,
 "tur": [
@@ -1506,7 +1506,7 @@
 ],
 "puan": {
 "Metacritic": "58/100",
-"Rotten Tomatoes": "70%"
+"Rotten Tomatoes": "%70"
 },
 "sure": 114,
 "tur": [
