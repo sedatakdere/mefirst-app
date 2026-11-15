@@ -15,7 +15,7 @@ def match(t, want):
     t = fold(re.sub(r"\(.*?\)", "", t))
     return t and (t == want or t.startswith(want) or (want.startswith(t) and len(t) >= 4))
 def wiki(lang, q, y):
-    p = {"action": "query", "format": "json", "generator": "search", "gsrsearch": f"{q} {y} film", "gsrlimit": "5",
+    p = {"action": "query", "format": "json", "generator": "search", "gsrsearch": f"{q} {y} film".replace("  ", " "), "gsrlimit": "5",
          "prop": "pageimages|pageprops", "ppprop": "wikibase_item", "piprop": "thumbnail", "pithumbsize": "500", "pilicense": "any"}
     j = get(f"https://{lang}.wikipedia.org/w/api.php?" + urllib.parse.urlencode(p))
     pages = sorted((j.get("query") or {}).get("pages", {}).values(), key=lambda x: x.get("index", 0))
@@ -126,6 +126,60 @@ try:
         films.setdefault(v[0], (v[1], v[2] or v[1], int(str(v[3])[:4] or 0)))
 except Exception as e:
     print("sahne.json okunamadı", e)
+
+# ---- Arama ile büyüyen film kataloğu: wants.json (kind=film "wd:Q.. Ad", kind=sahne serbest arama) -> app/afis/katalog.json ----
+def wd_entity(qid):
+    j = get("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({"action": "wbgetentities", "format": "json", "ids": qid, "props": "labels|descriptions|claims|sitelinks", "languages": "tr|en"}))
+    return (j.get("entities") or {}).get(qid) or {}
+def wd_film(qid):
+    E = wd_entity(qid)
+    C = E.get("claims") or {}
+    inst = [((c.get("mainsnak") or {}).get("datavalue") or {}).get("value", {}).get("id") for c in C.get("P31", [])]
+    FILM = {"Q11424", "Q24862", "Q506240", "Q202866", "Q93204", "Q24869", "Q229390", "Q130232", "Q157394", "Q188473", "Q1054574", "Q1257444"}
+    if not any(i in FILM for i in inst): return None
+    L = E.get("labels") or {}
+    tr = (L.get("tr") or L.get("en") or {}).get("value", "")
+    en = (L.get("en") or L.get("tr") or {}).get("value", "")
+    y = 0
+    for c in C.get("P577", [])[:3]:
+        t = str((((c.get("mainsnak") or {}).get("datavalue") or {}).get("value") or {}).get("time", ""))
+        if t[1:5].isdigit(): y = int(t[1:5]); break
+    yon = [((c.get("mainsnak") or {}).get("datavalue") or {}).get("value", {}).get("id") for c in C.get("P57", [])[:2]]
+    LY = labels([x for x in yon if x]) if any(yon) else {}
+    D = E.get("descriptions") or {}
+    line = (D.get("tr") or D.get("en") or {}).get("value", "")
+    if not tr or not y: return None
+    return {"id": "wd-" + qid, "q": qid, "t": tr, "o": en, "y": y, "d": ", ".join(LY[x] for x in yon if LY.get(x)), "line": line[:1].upper() + line[1:]}
+katp = "app/afis/katalog.json"
+try: kat = json.load(open(katp, encoding="utf-8"))
+except Exception: kat = {"films": []}
+have = {f["id"] for f in kat.get("films", [])} | set(films.keys())
+have_names = {fold(v[1]) for v in films.values()} | {fold(f["o"]) for f in kat.get("films", [])}
+try: W = json.load(open("app/wants.json", encoding="utf-8")).get("wants", [])
+except Exception: W = []
+for w in W[:80]:
+    q, kind = str(w.get("q", "")), w.get("kind", "")
+    try:
+        qid = ""
+        m = re.match(r"wd:(Q\d+)", q)
+        if kind == "film" and m: qid = m.group(1)
+        elif kind == "sahne" and len(q) >= 3:
+            for lang in ("tr", "en"):
+                for src, qd in wiki(lang, q, ""):
+                    if qd: qid = qd; break
+                if qid: break
+        if not qid or "wd-" + qid in have: continue
+        f = wd_film(qid)
+        if not f or fold(f["o"]) in have_names: continue
+        kat["films"].append(f); have.add(f["id"]); have_names.add(fold(f["o"]))
+        films[f["id"]] = (f["t"], f["o"], f["y"])
+        print("KATALOG +", f["id"], f["t"], f["y"])
+    except Exception as x:
+        print("katalog hata", q, x)
+    time.sleep(0.3)
+for f in kat.get("films", []): films.setdefault(f["id"], (f["t"], f["o"], f["y"]))
+kat["updated"] = time.strftime("%Y-%m-%d")
+json.dump(kat, open(katp, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
 os.makedirs("app/afis", exist_ok=True)
 outp = "app/afis/afis.json"
 try: out = json.load(open(outp, encoding="utf-8"))

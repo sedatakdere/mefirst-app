@@ -7844,6 +7844,30 @@ html[data-mf=dusk] .ob2-tags span{background:rgba(255,255,255,.1);color:#FFD9E6}
 .bnav button span.nv2{width:30px!important;height:30px!important}
 .bnav button span.nv2 svg{filter:drop-shadow(0 2px 3px rgba(60,20,50,.22))!important}
 .bnav button[aria-current="page"] span.nv2 svg{filter:drop-shadow(0 2px 3px rgba(60,20,50,.35)) drop-shadow(0 0 6px rgba(255,255,255,.6))!important}
+/* v0.58 Sahne & Perde arama */
+.sps{margin:12px 0 4px}
+.sps-in{display:flex;align-items:center;gap:10px;height:50px;padding:0 8px 0 16px;border-radius:18px;background:#fff;box-shadow:0 10px 24px -18px rgba(90,15,34,.55),inset 0 0 0 1.5px rgba(142,30,54,.12);color:#8E1E36}
+.sps-in:focus-within{box-shadow:0 10px 24px -16px rgba(90,15,34,.6),inset 0 0 0 2px #C2304A}
+.sps-in svg{width:20px;height:20px;flex:0 0 auto;opacity:.75}
+.sps-in input{flex:1;min-width:0;height:100%;border:0;background:none;outline:0;font:600 15.5px var(--f-body);color:var(--ink)}
+.sps-in input::-webkit-search-cancel-button{display:none}
+#sps-x{width:34px;height:34px;border:0;border-radius:50%;background:rgba(142,30,54,.08);color:#8E1E36;font-size:13px}
+html[data-mf=dusk] .sps-in{background:rgba(255,255,255,.08);color:#FFD9E2}
+.spsr{padding-bottom:20px}
+.spsr-f{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:8px}
+.spsr-e{display:grid;gap:10px;margin-bottom:8px}
+.spsr-l{display:grid;gap:10px}
+.spsr-li{display:flex;align-items:center;gap:12px;padding:10px;border:0;border-radius:18px;background:#fff;text-align:left;box-shadow:0 10px 22px -18px rgba(90,15,34,.5);color:var(--ink)}
+html[data-mf=dusk] .spsr-li{background:rgba(255,255,255,.06)}
+.spsr-im{position:relative;flex:0 0 56px;width:56px;height:80px;border-radius:10px;overflow:hidden;display:grid;place-items:center;background:linear-gradient(160deg,#C2304A,#3A0F1E);color:#FFE7A0;font:400 26px var(--f-display)}
+.spsr-im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.spsr-tx{flex:1;min-width:0}.spsr-tx strong{display:block;font-size:15.5px;line-height:1.25}.spsr-tx small{display:block;font-size:12.5px;opacity:.65;margin-top:3px;line-height:1.35}
+.spsr-li>i{flex:0 0 34px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#C2304A,#5A0F22);color:#fff;font:800 18px/1 var(--f-body);font-style:normal}
+.spsr-busy{display:flex;align-items:center;gap:10px;justify-content:center;margin:14px 0;font-size:13.5px;opacity:.7}
+.spsr-busy i{width:16px;height:16px;border-radius:50%;border:2px solid currentColor;border-right-color:transparent;animation:spsSp .8s linear infinite}
+@keyframes spsSp{to{transform:rotate(360deg)}}
+.spsr-none{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;padding:28px 10px}
+.spsr-none span{width:120px;height:90px}.spsr-none span svg{width:100%;height:100%}.spsr-none b{font-size:16px;margin-top:6px}.spsr-none small{font-size:13px;opacity:.65;max-width:260px}
 /* v0.50 puanlar + yorumlar */
 .spf-scores{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px 0 4px}
 .spf-mf{display:flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:linear-gradient(135deg,#8E1E36,#5A0F22);color:#FFF1DA;cursor:pointer}
@@ -17731,6 +17755,52 @@ const NV2={"home": "<svg viewBox=\"0 0 32 32\"><defs><linearGradient id=\"nhR\" 
   try{if(typeof nfRun!=="undefined"&&nfRun)nfStop();}catch(_){}const t=document.getElementById(G);if(t)t.click();window.scrollTo({top:0});if(v==="keyif"){N.querySelectorAll("[data-nv]").forEach(x=>x.setAttribute("aria-current",x===b?"page":"false"));}});
  const _n=navCur;navCur=function(){if(step===96)return "sahne";if(step===95)return "mac";if(step===90)return "kitap";const r=_n();return ["home","kitap"].includes(r)?r:"";};
  try{navSync();}catch(e){}})();
+
+/* ===== v0.58: Sahne & Perde arama — yerel + canlı film bulma, aradıkça katalog büyür ===== */
+const SPQ={q:"",live:[],busy:false,t:null,last:""};
+const SP_PAL=[["#C2507A","#3A1E3A"],["#2E6A8A","#14243A"],["#C8702E","#4A1E14"],["#4F7A4A","#1E2A1E"],["#6A4AA8","#221636"],["#B8475F","#3A0F1E"]];
+/* katalog: botun eklediği filmler (app/afis/katalog.json) + kullanıcının açtığı canlı filmler */
+function spAddFilm(f){if(!f||PF.find(x=>x[0]===f[0]))return;PF.push(f);}
+function spMkFilm(o){const pal=SP_PAL[(o.id||"").length%SP_PAL.length];return [o.id,o.t||o.o,o.o||o.t,+o.y||0,o.d||"",[],"",o.line||"",pal[0],pal[1],"popcorn"];}
+(function(){try{const L=JSON.parse(localStorage.getItem("mf-filmx")||"[]");L.forEach(o=>{spAddFilm(spMkFilm(o));if(o.img)SP.afis[o.id]=SP.afis[o.id]||o.img;if(o.b)SP.bilgi[o.id]=SP.bilgi[o.id]||o.b;});}catch(e){}
+ if(window.fetch)fetch("afis/katalog.json?d="+dkey(),{cache:"no-store"}).then(r=>r.ok?r.json():null).then(j=>{if(j&&Array.isArray(j.films)){j.films.forEach(o=>spAddFilm(spMkFilm(o)));if(step===96)spRender();}}).catch(()=>{});})();
+function spxSave(o){try{const L=JSON.parse(localStorage.getItem("mf-filmx")||"[]").filter(x=>x.id!==o.id);L.unshift(o);localStorage.setItem("mf-filmx",JSON.stringify(L.slice(0,80)));}catch(e){}}
+function spFold(x){return mfFold(String(x||"").normalize("NFD").replace(/[̀-ͯ]/g,""));}
+function spLocal(q){const n=spFold(q);if(n.length<2)return {f:[],e:[]};const hit=s=>spFold(s).includes(n);
+ const F=[];PF.forEach(f=>{if(hit(f[1])||hit(f[2])||hit(f[4])||((SP.bilgi[f[0]]||{}).oyuncu||[]).some(hit))F.push(f);});
+ (SP.vizyon||[]).forEach(v=>{const f=spFilm(v[0]);if(f&&!F.includes(f)&&(hit(f[1])||hit(f[2])))F.push(f);});
+ const E=spUp().filter(e=>hit(e[1])||hit(e[6])||hit(e[7])||hit((SPT[e[2]]||[])[1]||""));return {f:F.slice(0,24),e:E.slice(0,30)};}
+async function spLive(q){const out=[],seen=new Set();for(const lang of ["tr","en"]){try{
+  const u=`https://${lang}.wikipedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=${encodeURIComponent(q+" film")}&gsrlimit=10&prop=pageimages|pageprops|description|extracts&piprop=thumbnail&pithumbsize=400&pilicense=any&ppprop=wikibase_item&exintro=1&explaintext=1&exsentences=3&exlimit=10`;
+  const r=await fetch(u);if(!r.ok)continue;const j=await r.json();const P=Object.values(j&&j.query&&j.query.pages||{}).sort((a,b)=>(a.index||0)-(b.index||0));
+  P.forEach(p=>{const d=p.description||"";if(!/film|movie/i.test(d)||/dizi|series|oyuncu|actor|actress|yönetmen\b|director\b/i.test(d))return;const qid=(p.pageprops||{}).wikibase_item;if(!qid||seen.has(qid))return;seen.add(qid);
+   const y=(d.match(/(18|19|20)\d\d/)||[""])[0];const tt=String(p.title).replace(/\s*\((\d{4}\s*)?(film|filmi)\)$/i,"").replace(/\s*\(\d{4}\)$/,"");
+   const src=(p.thumbnail||{}).source||"";out.push({id:"wd-"+qid,qid,lang,t:tt,o:tt,y,line:d.charAt(0).toLocaleUpperCase("tr-TR")+d.slice(1),img:/\.svg/i.test(src)?"":src,konu:(p.extract||"").replace(/\s*\([^()]*\)/g,"").slice(0,600)});});
+ }catch(e){}if(out.length>=4)break;}return out.slice(0,8);}
+function spOpenLive(o){const f=spMkFilm(o);spAddFilm(f);if(o.img)SP.afis[o.id]=o.img;SP.bilgi[o.id]=Object.assign({},SP.bilgi[o.id]||{},o.konu?{konu:o.konu}:{});
+ spxSave({id:o.id,t:o.t,o:o.o,y:o.y,line:o.line,img:o.img,b:SP.bilgi[o.id]});try{wantTouch("wd:"+o.qid+" "+o.t,"film");}catch(e){}spFilmOpen(o.id);}
+function spSearchBox(){const n=SPQ.q;return `<div class="sps" id="sps"><label class="sps-in"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><input id="sps-q" type="search" enterkeyhint="search" autocomplete="off" placeholder="Film, oyun, konser, sanatçı, şehir ara" value="${esc(n)}">${n?`<button type="button" id="sps-x" aria-label="Temizle">✕</button>`:""}</label></div>`;}
+function spSearchHTML(){const q=SPQ.q.trim();const L=spLocal(q);const have=new Set(L.f.map(f=>f[0]));const live=SPQ.live.filter(o=>!have.has(o.id));
+ let H=`<div class="spsr">`;
+ if(L.f.length)H+=`<div class="kthead"><span>Filmler</span><small>${L.f.length}</small></div><div class="spsr-f">${L.f.map(f=>`<button type="button" class="spcard" data-spf="${f[0]}">${spPoster(f)}</button>`).join("")}</div>`;
+ if(L.e.length)H+=`<div class="kthead"><span>Sahnede</span><small>${L.e.length}</small></div><div class="spsr-e">${L.e.map(spTicket).join("")}</div>`;
+ if(SPQ.busy)H+=`<p class="spsr-busy"><i></i>Arşivde arıyorum…</p>`;
+ if(live.length)H+=`<div class="kthead"><span>${L.f.length?"Bunları da buldum":"Arşivden buldum"}</span><small>dokun, Perde'ne eklensin</small></div><div class="spsr-l">${live.map((o,i)=>`<button type="button" class="spsr-li" data-spl="${i}"><span class="spsr-im">${o.img?`<img src="${esc(o.img)}" alt="" loading="lazy" onerror="this.remove()">`:""}<b>${esc(o.t.charAt(0))}</b></span><span class="spsr-tx"><strong>${esc(o.t)}</strong><small>${esc(o.line)}</small></span><i>+</i></button>`).join("")}</div>`;
+ if(!L.f.length&&!L.e.length&&!live.length&&!SPQ.busy)H+=`<div class="spsr-none"><span>${SP_EMBLEM}</span><b>“${esc(q)}” için henüz bir şey yok</b><small>Aramanı not aldım; bulunca Sahne &amp; Perde'ye eklenecek.</small></div>`;
+ return H+`</div>`;}
+function spSearchRun(){const q=SPQ.q.trim();clearTimeout(SPQ.t);const P=document.getElementById("sppanel");if(!P)return;
+ if(!q){spRender();return;}P.innerHTML=spSearchHTML();spSearchBind(P);
+ if(q.length<3){SPQ.live=[];return;}
+ SPQ.t=setTimeout(async()=>{if(SPQ.last===q)return;SPQ.last=q;const L=spLocal(q);try{if(!L.f.length&&!L.e.length)wantTouch(q,L.f.length?"film":"sahne");}catch(e){}
+  SPQ.busy=true;const P2=document.getElementById("sppanel");if(P2&&SPQ.q.trim()===q){P2.innerHTML=spSearchHTML();spSearchBind(P2);}
+  const R=navigator.onLine===false?[]:await spLive(q);if(SPQ.q.trim()!==q)return;SPQ.live=R;SPQ.busy=false;const P3=document.getElementById("sppanel");if(P3){P3.innerHTML=spSearchHTML();spSearchBind(P3);}},450);}
+function spSearchBind(P){try{spBind(P);}catch(e){}P.querySelectorAll("[data-spl]").forEach(b=>b.onclick=()=>{const o=SPQ.live[+b.dataset.spl];if(o)spOpenLive(o);});}
+(function(){const _r=spRender;spRender=function(){const q=SPQ.q.trim();const r=_r.apply(this,arguments);try{const P=document.getElementById("sppanel");if(!P)return r;
+  let box=document.getElementById("sps");if(!box){const seg=document.querySelector(".spseg");if(seg){seg.insertAdjacentHTML("afterend",spSearchBox());box=document.getElementById("sps");}}
+  if(box){const inp=box.querySelector("#sps-q");if(inp&&!inp._b){inp._b=1;inp.addEventListener("input",()=>{SPQ.q=inp.value;SPQ.last="";SPQ.live=[];const x=box.querySelector("#sps-x");if(!SPQ.q&&x)x.remove();if(SPQ.q&&!box.querySelector("#sps-x")){inp.insertAdjacentHTML("afterend",`<button type="button" id="sps-x" aria-label="Temizle">✕</button>`);}spSearchRun();});
+    inp.addEventListener("keydown",e=>{if(e.key==="Enter"){inp.blur();}});}
+   box.onclick=e=>{if(e.target.closest("#sps-x")){SPQ.q="";SPQ.live=[];SPQ.last="";inp.value="";e.target.closest("#sps-x").remove();spRender();}};}
+  if(q){P.innerHTML=spSearchHTML();spSearchBind(P);}}catch(e){console.error(e);}return r;};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
