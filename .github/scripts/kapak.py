@@ -42,7 +42,9 @@ def dr(t, a):
         p = fetch("https://www.dr.com.tr/search?q=" + urllib.parse.quote_plus(qq))
         L = imgs(p, "dr.com.tr")
         for alt, src in L:
-            if same(alt, t) and re.search(r"\.(jpe?g|png|webp)", src, re.I): return src
+            fa = fold(html.unescape(alt)); sur = fold(a).split()[-1] if fold(a) else ""
+            ok = same(alt, t) or (sur and sur in fa and fa.endswith(" " + tkey(t)))
+            if ok and re.search(r"\.(jpe?g|png|webp)", src, re.I): return re.sub(r"/cache/\d+x\d+-\d+/", "/cache/500x400-0/", src)
         DBG.setdefault(t, []).append({"q": qq, "n": len(p), "alts": [a for a, _ in L if fold(t).split()[0] in fold(html.unescape(a))][:6], "imgs": len(L), "raw": [m.group(0)[:300] for m in re.finditer(r"<img\b[^>]*>", p) if fold(t).split()[-1] in fold(html.unescape(m.group(0)))][:3]})
         time.sleep(0.6)
     return ""
@@ -102,14 +104,17 @@ def main():
     L = books(); R["toplam"] = len(L)
     for t, a in L:
         k = tkey(t)
-        if k in M and os.path.exists("app/" + M[k]): continue
+        if k in M and os.path.exists("app/" + M[k]) and os.path.getsize("app/" + M[k]) > 22000: continue
         errs = []
         for name, fn in SRC:
             try:
                 u = fn(ALIAS.get(t, t), a)
                 if not u: errs.append(name + ":yok"); continue
                 fid = hashlib.sha1(k.encode()).hexdigest()[:12]
-                save_img(u, f"{ROOT}/{fid}.jpg")
+                try: save_img(u, f"{ROOT}/{fid}.jpg")
+                except Exception:
+                    if "/cache/500x400-0/" not in u: raise
+                    save_img(u.replace("/cache/500x400-0/", "/cache/180x245-0/"), f"{ROOT}/{fid}.jpg")
                 M[k] = f"kapak/{fid}.jpg"; R["bulunan"][t] = name; R["kaynak"][name] = R["kaynak"].get(name, 0) + 1
                 break
             except Exception as e:
