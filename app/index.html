@@ -7945,6 +7945,37 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+.love.cp-gate .seg,.love.cp-gate [data-panel]{display:none!important}
+.love.cp-gate.cp-solo [data-panel="cycle"]{display:block!important}
+.rs-solo{display:flex;align-items:center;gap:8px;width:100%;margin:0 0 14px;padding:13px 16px;border:0;border-radius:16px;background:rgba(255,255,255,.08);color:#FFE3EE;font:700 14px var(--f-body);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.1)}
+.rs-solo small{margin-left:auto;font-weight:600;opacity:.6;font-size:11.5px}
+.love:not(.cp-gate) .rs-solo{display:none}
+.rs-ul{margin:12px 0 4px;padding:0;list-style:none;display:grid;gap:7px}
+.rs-ul li{position:relative;padding-left:22px;font-size:13px;color:#FFE3EE}
+.rs-ul li::before{content:"";position:absolute;left:4px;top:6px;width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,#FF9EC4,#E0457F)}
+.rs-btn{display:flex;align-items:center;gap:12px;width:100%;margin:0 0 14px;padding:11px 14px;border:0;border-radius:18px;background:linear-gradient(135deg,#FF9EC4,#E0457F 60%,#B8336A);color:#fff;text-align:left;box-shadow:0 8px 22px -10px rgba(224,69,127,.8);font-family:var(--f-body);transition:transform .15s}
+.rs-btn:active{transform:scale(.98)}.rs-btn.busy{opacity:.7}
+.rs-btn.sent{background:linear-gradient(135deg,#7FD8B5,#2E9C78)}
+.rs-i{flex:0 0 38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.22)}.rs-i svg{width:20px;height:20px}
+.rs-t b{display:block;font-size:15px;font-weight:800}.rs-t small{display:block;font-size:11.5px;opacity:.85}
+.rs-btn.bk{width:auto;margin:14px 18px}
+.rs-btn.kf{position:sticky;bottom:14px;width:calc(100% - 32px);margin:18px 16px 16px;z-index:5}
+.rs-box{margin:14px 0 4px}
+.rs-it{display:flex;align-items:center;gap:11px;width:100%;margin:0 0 8px;padding:10px 12px;border:0;border-radius:16px;background:rgba(255,255,255,.09);color:#FFF4F8;text-align:left;font-family:var(--f-body)}
+.rs-ii{flex:0 0 36px;height:36px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(255,158,196,.35),rgba(224,69,127,.3))}.rs-ii svg{width:19px;height:19px}
+.rs-tx{flex:1;min-width:0}.rs-tx small{display:block;font-size:11px;opacity:.7}.rs-tx b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.rs-tx em{display:block;font-style:normal;font-size:11.5px;opacity:.7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rs-cta{flex:0 0 auto;font-size:11.5px;font-weight:800;padding:6px 10px;border-radius:99px;background:rgba(255,255,255,.14)}
+.rs-an{display:flex;align-items:center;gap:8px;margin:12px 0 0;padding:10px 12px;border-radius:16px;background:rgba(255,255,255,.08)}
+.rs-an small{flex:1;font-size:12.5px}.rs-an input{height:36px;border:0;border-radius:10px;padding:0 8px;background:rgba(255,255,255,.12);color:#fff}.rs-an button{height:36px;border:0;border-radius:10px;padding:0 12px;background:#E0457F;color:#fff;font-weight:800}
+.rs-sh .shs-c{background:linear-gradient(160deg,#3A1430,#1E0B1C)}
+.rs-sell{position:relative;padding:22px 20px 26px;text-align:center;color:#FFF4F8}
+.rs-sell h3{font-family:var(--f-display);font-weight:400;font-size:26px;margin:14px 0 6px}.rs-sell p{font-size:14px;opacity:.8;margin:0 0 18px;line-height:1.45}
+.rs-pair{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:8px}
+.rs-av{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#FF9EC4,#E0457F);font:800 22px var(--f-body);color:#fff}.rs-av.q{background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 2px rgba(255,158,196,.5);border:0}
+.rs-h{color:#FF9EC4;animation:rsb 1.6s ease-in-out infinite}.rs-h svg{width:28px;height:28px}
+@keyframes rsb{50%{transform:scale(1.18)}}
+.rs-go{width:100%;height:52px;border:0;border-radius:16px;background:linear-gradient(135deg,#FF9EC4,#E0457F);color:#fff;font:800 16px var(--f-body);margin-bottom:8px}
+
 .cp-locked{opacity:.85;background-image:none}
 .cp-lockn{display:block;margin:4px 2px 0;font-size:11.5px;opacity:.65}
 
@@ -16265,7 +16296,7 @@ onbRender=function(){const O=document.getElementById("onb"),k=ONB[onbI],P=st.pro
  try{if(step===0)bentoRender();}catch(e){}})();
 setTimeout(()=>{try{const O=document.getElementById("onb");if(O&&!O.hidden)onbRender();}catch(e){console.error(e);}},0);
 /* Biz ikimiz: özel sorular burada, ilk girişte bir kez */
-(function(){const ask=()=>{try{if(step!==10||st.bizIntro||((st.pname||"").trim()&&st.last)||(typeof CP!=="undefined"&&CP.c))return;const L=document.querySelector(".love");const sub=document.getElementById("love-sub");if(!L||!sub||document.getElementById("bz-intro"))return;
+(function(){const ask=()=>{try{return;const L=document.querySelector(".love");const sub=document.getElementById("love-sub");if(!L||!sub||document.getElementById("bz-intro"))return;
   const c=document.createElement("div");c.id="bz-intro";c.className="bz-intro";
   c.innerHTML=`<div class="bz-h"><b>İkinize özel birkaç bilgi</b><small>Sadece burada durur, sadece sen görürsün.</small></div>
    <div class="bz-g"><label><span>Onun adı</span><input id="bz-pn" type="text" maxlength="20" value="${esc(st.pname||"")}" placeholder="ör. Murat"></label>
@@ -18331,6 +18362,70 @@ cpDaysPush=function(){if(!CP.c)return;const C=cpSt(),B=biz();B.days.filter(d=>d.
  const _load=cpLoad;cpLoad=async function(){const had=!!cpSt().linked;await _load.apply(this,arguments);try{if(CP.c){await cpPushBen();cpApplyLink();if(step===10){try{loveRender();}catch(e){}cpPaint();}}else if(had&&CP.ok){cpRestore();if(step===10){try{loveRender();}catch(e){}}}}catch(e){console.error(e);}};
  const _lr=loveRender;loveRender=function(){const r=_lr.apply(this,arguments);try{cpLockFields();}catch(e){}return r;};
  const _s=show;show=function(){const r=_s.apply(this,arguments);setTimeout(()=>{try{cpLockFields();}catch(e){}},120);return r;};})();
+
+/* ===== v0.65 Ruh eşim: Biz ikimiz yalnızca davetle açılır; her köşeden ruh eşine gönder ===== */
+const RS_K={film:["camera","sana bir film önerdi","İzleyelim mi?"],etk:["ticket","seni bir etkinliğe çağırıyor","Gidelim mi?"],kitap:["book","sana bir kitap önerdi","Birlikte okuyalım mı?"],mac:["compass","seni bir maceraya çağırıyor","Gidelim mi?"],keyif:["stars","seninle bir şey paylaştı","Bir bak"]};
+const RS_V={fal:"Fincanım",burc:"Burç notum",wow:"Kelime yolculuğu",puz:"Günün bulmacası",mem:"Hafıza oyunu",jig:"Yapboz",ari:"Arı kelimesi",kk:"Keyif oyunu"};
+const RS_HEART='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5S3.5 15.3 3.5 9.4A4.4 4.4 0 0 1 12 7.6a4.4 4.4 0 0 1 8.5 1.8c0 5.9-8.5 11.1-8.5 11.1z" fill="currentColor"/></svg>';
+/* elle girilmiş eski eş bilgileri artık hiçbir yerde görünmez; arşive alınır */
+(function(){try{const C=cpSt(),B=biz();if(!C.linked&&!st.bizOld&&((st.pname||"").trim()||(B.days||[]).some(d=>d.ty==="dogum"||d.ty==="yil"))){st.bizOld={pname:st.pname||"",days:(B.days||[]).filter(d=>d.ty==="dogum"||d.ty==="yil"),at:dkey()};st.pname="";B.days=(B.days||[]).filter(d=>d.ty!=="dogum"&&d.ty!=="yil");save();}}catch(e){console.error(e);}})();
+cpRestore=function(){const C=cpSt(),B=biz();B.days=(B.days||[]).filter(d=>d.src!=="p"&&d.ty!=="dogum"&&d.ty!=="yil");delete B.daysMan;st.pname="";delete C.pnameMan;C.linked=null;C.syncedDays={};save();cpLockFields();};
+function rsLabel(d){return d.k==="keyif"?(RS_V[d.v]||"Keyif köşesi"):({film:"Film",etk:"Etkinlik",kitap:"Kitap",mac:"Macera"}[d.k]||"Öneri");}
+function rsCloseAll(){["ysheet","rsell"].forEach(k=>{try{const y=document.getElementById(k);if(y&&y._close)y._close();}catch(e){}});try{if(document.getElementById("bkp"))bkClose();}catch(e){}try{const m=document.getElementById("mep-x");if(m)m.click();}catch(e){}try{const z=document.getElementById("zsh");if(z&&!z.hidden)zodClose();}catch(e){}}
+function rsGoBiz(){rsCloseAll();setTimeout(()=>{const g=document.getElementById("go-love");if(g)g.click();else{step=10;show();}},300);}
+function rsSell(){const O=ySheet("rsell",`<div class="rs-sell"><button type="button" class="shs-x" aria-label="Kapat">✕</button><div class="rs-pair"><span class="rs-av">${esc(((st.name||"S")[0]||"S").toUpperCase())}</span><span class="rs-h">${RS_HEART}</span><span class="rs-av q">?</span></div>
+ <h3>Ruh eşin burada mı?</h3><p>Onu davet et; bulduğun her filmi, kitabı, etkinliği ve macerayı tek dokunuşla ona gönder. O da sana göndersin.</p>
+ <button type="button" class="rs-go" id="rs-go">Ruh eşimi davet et</button><button type="button" class="sf-lnk" id="rs-have">Bende davet kodu var</button></div>`,"rs-sh");
+ O.querySelector("#rs-go").onclick=()=>{O._close();rsGoBiz();};O.querySelector("#rs-have").onclick=()=>{O._close();rsCloseAll();setTimeout(()=>cpAccept(""),320);};}
+async function rsSend(d,btn){if(!CP.c){rsSell();return;}if(btn){btn.disabled=true;btn.classList.add("busy");}
+ const ok=await cpSend("oneri",d);const pn=CP.c.partner_name||"Ruh eşin";
+ if(btn){btn.disabled=false;btn.classList.remove("busy");if(ok){btn.classList.add("sent");btn.querySelector("b").textContent=`${pn}'a gönderildi`;}}
+ try{yToast(ok?`${pn}'a gönderildi 💞`:"Gönderemedim, tekrar dene");}catch(e){}}
+function rsBtn(d,cls){const b=document.createElement("button");b.type="button";b.className="rs-btn "+(cls||"");const pn=CP.c&&CP.c.partner_name;
+ b.innerHTML=`<span class="rs-i">${RS_HEART}</span><span class="rs-t"><b>${pn?esc(pn)+"'a gönder":"Ruh eşime gönder"}</b><small>${pn?"Ruh eşinle paylaş":"Biz ikimiz'e davet et"}</small></span>`;
+ b.onclick=e=>{e.stopPropagation();rsSend(d,b);};return b;}
+function rsOpen(x){const d=x.data||{};rsCloseAll();setTimeout(()=>{try{
+ if(d.k==="film"){if(!spFilm(d.id)&&Array.isArray(d.f))spAddFilm(d.f);if(spFilm(d.id))spFilmOpen(d.id);else yToast(d.t||"Film");}
+ else if(d.k==="etk"){if(spEv(d.id))spOpen(d.id);else yToast((d.t||"Etkinlik")+" artık listede değil");}
+ else if(d.k==="mac"){if(macEv(d.id))macOpen(d.id);else yToast((d.t||"Macera")+" artık listede değil");}
+ else if(d.k==="kitap"){const L=klib();const i=L.findIndex(b=>ktN(b.t)===ktN(d.t||""));if(i>=0)bookOpen(i,true);else bookOpen(null,true,{t:d.t||"",a:d.a||"",c:d.c||"",d:dkey()});}
+ else if(d.k==="keyif"){zodOpen();if(d.v){kv=d.v;keyRender();}}}catch(e){console.error(e);yToast(d.t||"Öneri");}},320);}
+function rsItemHTML(x,mine,pn){const d=x.data||{},K=RS_K[d.k]||RS_K.keyif;
+ return `<button type="button" class="rs-it" data-rso="${esc(x.id)}"><span class="rs-ii">${ySvg(K[0])}</span><span class="rs-tx"><small>${mine?"Sen gönderdin":esc(pn)+" "+K[1]}</small><b>${esc(d.t||rsLabel(d))}</b>${d.x?`<em>${esc(String(d.x).slice(0,120))}</em>`:d.s?`<em>${esc(d.s)}</em>`:""}</span><span class="rs-cta">${mine?"Aç":K[2]}</span></button>`;}
+/* Aranızda: önerileri de göster */
+(function(){const _c=cpCardHTML;cpCardHTML=function(){let h=_c.apply(this,arguments);if(!CP.c&&!CP.pend){const myN=(st.name||(sbPublic()||{}).name||"Sen").split(" ")[0];
+   h=h.replace(/<div class="cp-h"><b>Onu da Biz ikimiz'e davet et<\/b><small>[\s\S]*?<\/small><\/div>/,`<div class="cp-h"><b>Biz ikimiz, ruh eşinle açılır</b><small>Davet kodunu gönder, o kodu girsin; ikiniz bağlanın. Film, kitap, etkinlik, macera, fal ve burç… artık her şey ikiniz için.</small></div><ul class="rs-ul"><li>Bulduğun her şeyi tek dokunuşla ona gönder</li><li>Mesajlar, plan davetleri, özel günler ikinizin telefonunda</li><li>O da uygulamanın tamamını kullanır</li></ul>`);}
+  return h;};
+ const _p=cpPaint;cpPaint=function(){_p.apply(this,arguments);try{const W=document.getElementById("cp-w");if(!W||!CP.c)return;const me=(sbSess()||{}).uid,pn=CP.c.partner_name||"Ruh eşin";
+   const box=W.querySelector(".cp-in");const rs=CP.items.filter(x=>x.kind==="oneri").slice(0,8);let R=W.querySelector(".rs-box");if(R)R.remove();
+   R=document.createElement("div");R.className="rs-box";R.innerHTML=`<div class="kthead"><span>Birbirinize önerdikleriniz</span><small>${rs.length||""}</small></div>`+(rs.length?rs.map(x=>rsItemHTML(x,x.author===me,pn)).join(""):`<p class="cp-empty">Film, kitap, etkinlik ya da maceranın içindeki kalpli "${esc(pn)}'a gönder" düğmesine dokun; burada ikinizin de önünde durur.</p>`);
+   if(box)box.before(R);else W.querySelector(".cp-card").appendChild(R);R.querySelectorAll("[data-rso]").forEach(b=>b.onclick=()=>{const x=CP.items.find(i=>i.id===b.dataset.rso);if(x)rsOpen(x);});
+   if(!biz().days.some(d=>d.ty==="yil")&&CP.c.i_invited&&!W.querySelector(".rs-an")){const a=document.createElement("div");a.className="rs-an";a.innerHTML=`<small>Yıldönümünüz ne zaman?</small><input type="date" id="rs-an"><button type="button" id="rs-ans">Ekle</button>`;R.before(a);
+    a.querySelector("#rs-ans").onclick=()=>{const v=a.querySelector("#rs-an").value;if(!v)return;biz().days.push({ty:"yil",d:v,n:""});save();cpDaysPush();a.remove();try{loveRender();}catch(e){}};}}catch(e){console.error(e);}};
+ /* gelen öneri bildirimi */
+ const _t=cpToast;cpToast=function(x){if(!x||x.kind!=="oneri")return _t.apply(this,arguments);try{const nm=(CP.c&&CP.c.partner_name)||"Ruh eşin",d=x.data||{},K=RS_K[d.k]||RS_K.keyif;const t=document.createElement("button");t.type="button";t.className="cp-toast";
+  t.innerHTML=`<span class="cp-ti">${ySvg("heart")}</span><span><b>${esc(nm)}</b><small>${K[1]}: ${esc(d.t||rsLabel(d))}</small></span>`;t.onclick=()=>{t.remove();rsOpen(x);};document.body.appendChild(t);setTimeout(()=>t.classList.add("on"),30);setTimeout(()=>{t.classList.remove("on");setTimeout(()=>t.remove(),400);},7000);}catch(e){}};
+ const _pull=cpPull;cpPull=async function(){const before=new Set(CP.items.map(x=>x.id));await _pull.apply(this,arguments);try{const me=(sbSess()||{}).uid,C=cpSt();const nw=CP.items.filter(x=>x.kind==="oneri"&&x.author!==me&&!before.has(x.id)&&x.created_at>(C.rsSeen||""));if(nw.length&&before.size){cpToast(nw[0]);}const top=CP.items.find(x=>x.kind==="oneri"&&x.author!==me);if(top&&!C.rsSeen){C.rsSeen=top.created_at;save();}if(step===10)cpPaint();}catch(e){}};
+ const _tile=cpTile;cpTile=function(){_tile.apply(this,arguments);try{const b=document.querySelector('#bento [data-bgo="go-love"]');if(!b)return;const el=[...b.querySelectorAll("span,small,p,em")].find(x=>!x.children.length&&/Sadece sana özel|yeni mesaj|bağlısınız|Ruh eşini davet et/.test(x.textContent));if(el&&!CP.c)el.textContent="Ruh eşini davet et";}catch(e){}};
+})();
+/* Biz ikimiz kapısı: bağlı değilken sekmeler kapalı, sadece davet + kendi döngün */
+function rsGate(){const L=document.querySelector('.love[data-step="10"]');if(!L)return;const on=!CP.c;L.classList.toggle("cp-gate",on);if(!on){L.classList.remove("cp-solo");return;}
+ let s=document.getElementById("rs-solo");if(!s){s=document.createElement("button");s.type="button";s.id="rs-solo";s.className="rs-solo";const W=document.getElementById("cp-w");(W||document.getElementById("love-sub")).after(s);
+  s.onclick=()=>{const so=!L.classList.contains("cp-solo");L.classList.toggle("cp-solo",so);if(so){tab="cycle";try{loveRender();}catch(e){}goTo(document.querySelector('[data-panel="cycle"]'));}else rsGate();};}
+ s.innerHTML=L.classList.contains("cp-solo")?"Döngü takibimi kapat":`<span>🌙</span> Döngü takibim <small>sadece sana özel</small>`;
+ const W=document.getElementById("cp-w");if(W&&s.previousElementSibling!==W)W.after(s);}
+(function(){const _lr=loveRender;loveRender=function(){const r=_lr.apply(this,arguments);try{rsGate();}catch(e){}return r;};
+ const _p=cpPaint;cpPaint=function(){_p.apply(this,arguments);try{rsGate();}catch(e){}};
+ const _l=cpLoad;cpLoad=async function(){await _l.apply(this,arguments);try{cpTile();if(step===10)rsGate();}catch(e){}};})();
+/* her köşeye "Ruh eşime gönder" */
+(function(){
+ const _f=spFilmOpen;spFilmOpen=function(id){const r=_f.apply(this,arguments);try{const f=spFilm(id),O=document.getElementById("ysheet");const bd=O&&O.querySelector(".y-bd");if(f&&bd)bd.prepend(rsBtn({k:"film",id,t:f[1],s:[f[3],f[4]].filter(Boolean).join(" · "),f:PF.find(x=>x[0]===id)?null:f}));}catch(e){console.error(e);}return r;};
+ const _e=spOpen;spOpen=function(id){const r=_e.apply(this,arguments);try{const e=spEv(id),O=document.getElementById("ysheet");const bd=O&&(O.querySelector(".y-bd")||O.querySelector(".shs-c"));if(e&&bd&&!bd.querySelector(".rs-btn")){const D=spDay(e[3]);bd.prepend(rsBtn({k:"etk",id,t:e[1],s:`${D.d} ${D.m}${e[5]?" · "+e[5]:""}`}));}}catch(x){console.error(x);}return r;};
+ const _m=macOpen;macOpen=function(id){const r=_m.apply(this,arguments);try{const e=macEv(id),O=document.getElementById("mep");const bd=O&&O.querySelector(".mep-b");if(e&&bd&&!bd.querySelector(".rs-btn")){const D=evDate(e);bd.prepend(rsBtn({k:"mac",id,t:e[1],s:`${D.d} ${D.m}${e[5]?" · "+e[5]:""}`}));}}catch(x){console.error(x);}return r;};
+ const _b=bookOpen;bookOpen=function(i,anim,X){const r=_b.apply(this,arguments);try{const x=X||klib()[i],O=document.getElementById("bkp");const w=O&&O.querySelector(".bk3-wrap");if(x&&w&&!O.querySelector(".rs-btn"))w.after(rsBtn({k:"kitap",t:x.t,a:x.a||"",c:x.c||"",s:x.a||""},"bk"));}catch(e){console.error(e);}return r;};
+ const _k=keyRender;keyRender=function(){const r=_k.apply(this,arguments);try{const O=document.getElementById("zsh");const old=O.querySelector(".rs-btn");if(old)old.remove();if(RS_V[kv]&&!(kv==="burc"&&!(st.prof||{}).dob)){const p=[...O.querySelectorAll("p,.zr-t,.kf-txt")].map(e=>e.textContent.trim()).find(t=>t.length>50)||"";
+   const d={k:"keyif",v:kv,t:RS_V[kv],x:kv==="burc"||kv==="fal"?p.slice(0,200):"Ben oynadım, sıra sende 🙂"};O.appendChild(rsBtn(d,"kf"));}}catch(e){console.error(e);}return r;};
+})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
