@@ -1,31 +1,10 @@
 {
- "tarih": "2026-11-16 12:45",
+ "tarih": "2026-11-16 12:49",
  "bulunan": {
-  "Okudum da Ne Oldu?": "dr",
-  "Merhaba Acımasız Dünya": "dr",
-  "Hizmetçi ve Profesör": "dr",
-  "Son Demlerinde Hayat": "dr",
-  "Ressam": "dr",
-  "Kedi Kitabı": "dr",
-  "Çocukluğun Soğuk Geceleri": "dr",
   "Tante Rosa": "dr",
-  "Piraye": "dr",
   "Ruhlar Evi": "dr",
-  "Türklerin Tarihi": "dr",
-  "İnce Memed": "dr",
-  "Kuyucaklı Yusuf": "dr",
-  "Kiralık Konak": "dr",
   "Memleketimden İnsan Manzaraları": "dr",
-  "Suç ve Ceza": "dr",
-  "Jane Eyre": "dr",
-  "Madame Bovary": "dr",
-  "Dönüşüm": "dr",
-  "Fareler ve İnsanlar": "dr",
-  "Martin Eden": "dr",
-  "Senden Önce Ben": "dr",
-  "Beden Kayıt Tutar": "dr",
-  "Bütün Beyinli Çocuk": "dr",
-  "Matilda": "dr"
+  "Martin Eden": "dr"
  },
  "bulunamayan": {
   "Bekar ve Mutlu Nasıl Yaşanır?": [
@@ -102,17 +81,17 @@
   ]
  },
  "kaynak": {
-  "dr": 25
+  "dr": 4
  },
  "toplam": 91,
  "boyut": {
-  "orijinal": 25
+  "orijinal": 4
  },
  "dbg": {
   "Bekar ve Mutlu Nasıl Yaşanır?": [
    {
     "q": "Bekar ve Mutlu Nasıl Yaşanır? Jennifer Taitz",
-    "n": 647268,
+    "n": 647272,
     "alts": [
      "Bekar ve Mutlu Nasıl Yaşanır-Doğru Kişiyi Ararken Kendini Kaybetmenin Yolları"
     ],
@@ -125,7 +104,7 @@
    },
    {
     "q": "Bekar ve Mutlu Nasıl Yaşanır?",
-    "n": 646635,
+    "n": 646639,
     "alts": [
      "Bekar ve Mutlu Nasıl Yaşanır-Doğru Kişiyi Ararken Kendini Kaybetmenin Yolları"
     ],
@@ -140,7 +119,7 @@
   "Kurt Seyit ve Şura": [
    {
     "q": "Kurt Seyit ve Şura Nermin Bezmen",
-    "n": 631881,
+    "n": 631885,
     "alts": [
      "Kurt Seyt ve Shura",
      "Peynir ve Kurtlar",
@@ -154,13 +133,13 @@
    },
    {
     "q": "Kurt Seyit ve Şura",
-    "n": 613840,
+    "n": 613844,
     "alts": [
      "Peynir ve Kurtlar",
      "Ayı ve Kurt",
      "Kurt ve Ormancı",
-     "G&#252;zelim Portakal-B&#252;y&#252;k Kurt ve K&#252;&#231;&#252;k Kurt",
      "Kurt ve Kız",
+     "G&#252;zelim Portakal-B&#252;y&#252;k Kurt ve K&#252;&#231;&#252;k Kurt",
      "Beklenmeyen Misafir-B&#252;y&#252;k Kurt ve K&#252;&#231;&#252;k Kurt"
     ],
     "imgs": 95,
@@ -170,14 +149,14 @@
   "Hayata Röveşata Çeken Adam": [
    {
     "q": "Hayata Röveşata Çeken Adam Fredrik Backman",
-    "n": 411620,
+    "n": 411628,
     "alts": [],
     "imgs": 62,
     "raw": []
    },
    {
     "q": "Hayata Röveşata Çeken Adam",
-    "n": 624658,
+    "n": 624663,
     "alts": [
      "Kızlar &#199;etesi - Adım Adım Hayata"
     ],
@@ -192,7 +171,7 @@
   "Dört Bin Hafta": [
    {
     "q": "Dört Bin Hafta Oliver Burkeman",
-    "n": 352061,
+    "n": 352065,
     "alts": [
      "Anadolu&#39;da D&#246;rt Bin Yılı Yaşayanlar",
      "Bilim: D&#246;rt Bin Yıllık Bir Tarih"
@@ -202,7 +181,7 @@
    },
    {
     "q": "Dört Bin Hafta",
-    "n": 549308,
+    "n": 549312,
     "alts": [
      "Bilim: D&#246;rt Bin Yıllık Bir Tarih",
      "Anadolu&#39;da D&#246;rt Bin Yılı Yaşayanlar",
@@ -218,7 +197,7 @@
   "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli": [
    {
     "q": "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli Adele Faber & Elaine Mazlish",
-    "n": 701340,
+    "n": 700905,
     "alts": [
      "&#199;ocuklarımızla Cinsellik Hakkında Nasıl Konuşmalı?",
      "Gizemli Mağara - &#199;ocuklar i&#231;in Felsefe",
@@ -232,7 +211,7 @@
    },
    {
     "q": "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli",
-    "n": 696140,
+    "n": 696144,
     "alts": [
      "&#199;ocuklarımızla Cinsellik Hakkında Nasıl Konuşmalı?",
      "Gizemli Mağara - &#199;ocuklar i&#231;in Felsefe",
@@ -248,7 +227,7 @@
   "Fi": [
    {
     "q": "Fi Azra Kohen",
-    "n": 346685,
+    "n": 346689,
     "alts": [
      "OFİS,&lt;br&gt;KIRTASİYE",
      "SAP FI",
@@ -263,7 +242,7 @@
    },
    {
     "q": "Fi",
-    "n": 642337,
+    "n": 642341,
     "alts": [
      "OFİS,&lt;br&gt;KIRTASİYE",
      "Fince S&#246;zl&#252;k: T&#252;rk&#231;e Fince - Fince T&#252;rk&#231;e",
@@ -283,7 +262,7 @@
   "Kayıp Gül": [
    {
     "q": "Kayıp Gül Serdar Özkan",
-    "n": 465177,
+    "n": 465181,
     "alts": [
      "Kayıp G&#252;l 2 - &#214;l&#252;ms&#252;z Kalp"
     ],
@@ -295,7 +274,7 @@
    },
    {
     "q": "Kayıp Gül",
-    "n": 673302,
+    "n": 668939,
     "alts": [
      "Kayıp G&#252;l 2 - &#214;l&#252;ms&#252;z Kalp",
      "Kayıp Kiracı",
@@ -315,7 +294,7 @@
   "Evelyn Hugo'nun Yedi Kocası": [
    {
     "q": "Evelyn Hugo'nun Yedi Kocası Taylor Jenkins Reid",
-    "n": 427354,
+    "n": 427362,
     "alts": [
      "Evelyn Hardcastle&#39;ın Yedi &#214;l&#252;m&#252;"
     ],
@@ -324,7 +303,7 @@
    },
    {
     "q": "Evelyn Hugo'nun Yedi Kocası",
-    "n": 330286,
+    "n": 330290,
     "alts": [
      "Evelyn Hardcastle&#39;ın Yedi &#214;l&#252;m&#252;"
     ],
@@ -335,21 +314,21 @@
   "Ve Sonra Hiç Kalmadı": [
    {
     "q": "Ve Sonra Hiç Kalmadı Agatha Christie",
-    "n": 755769,
+    "n": 756311,
     "alts": [
      "EV VE &lt;br&gt;YAŞAM",
      "N veya M ?",
      "G&#252;vercinler Arasında Bir Kedi",
      "Beklenmeyen Şahit ve Diğer &#214;yk&#252;ler",
      "Ve Ayna Kırıldı",
-     "Acı Kahve"
+     "Ve Perde İndi"
     ],
     "imgs": 95,
     "raw": []
    },
    {
     "q": "Ve Sonra Hiç Kalmadı",
-    "n": 633000,
+    "n": 633008,
     "alts": [
      "EV VE &lt;br&gt;YAŞAM",
      "Kopuk ve Hi&#231;",
@@ -365,7 +344,7 @@
   "Şimdinin Gücü": [
    {
     "q": "Şimdinin Gücü Eckhart Tolle",
-    "n": 497549,
+    "n": 497557,
     "alts": [],
     "imgs": 67,
     "raw": [
@@ -376,7 +355,7 @@
    },
    {
     "q": "Şimdinin Gücü",
-    "n": 697159,
+    "n": 691254,
     "alts": [
      "Şimdinin Bilgeliği"
     ],
@@ -391,7 +370,7 @@
   "Keşke Ailemin Okuduğu Bir Kitap Olsaydı": [
    {
     "q": "Keşke Ailemin Okuduğu Bir Kitap Olsaydı Philippa Perry",
-    "n": 660993,
+    "n": 661001,
     "alts": [
      "Keşke T&#252;m Sevdiklerim De Okusa Dediğiniz Kitap",
      "Keşke Zamanım Olsaydı",
@@ -408,7 +387,7 @@
    },
    {
     "q": "Keşke Ailemin Okuduğu Bir Kitap Olsaydı",
-    "n": 659506,
+    "n": 659514,
     "alts": [
      "Keşke Zamanım Olsaydı",
      "Keşke - Sessiz Kitap",
