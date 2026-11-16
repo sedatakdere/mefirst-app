@@ -14055,7 +14055,7 @@ async function sbBookLoad(x,re){const k=bkKey(x);if(SB_BK[k]&&Date.now()-SB_BK[k
  SB_BK[k]={list,mine,at:Date.now()};if(document.getElementById("bkp")&&(list.length||mineRow))re();}
 function sbToggleLike(x,k,re){const L=SB_BK[bkKey(x)];if(!L)return;const p=L.list[k];if(!p)return;const me=(sbSess()||{}).uid;if(!me){sbJoin().then(P=>{if(P)sbToggleLike(x,k,re);});return;}
  if(L.mine.has(p.id)){L.mine.delete(p.id);p.like_count=Math.max(0,(p.like_count||1)-1);sbReq("DELETE",`likes?polaroid_id=eq.${p.id}&user_id=eq.${me}`);}
- else{L.mine.add(p.id);p.like_count=(p.like_count||0)+1;sbReq("POST","likes",{polaroid_id:p.id},"return=minimal");try{sndPlay("bag");}catch(e){}if(navigator.vibrate)try{navigator.vibrate(15);}catch(e){}}
+ else{L.mine.add(p.id);p.like_count=(p.like_count||0)+1;sbReq("POST","likes",{polaroid_id:p.id},"return=minimal");try{}catch(e){}if(navigator.vibrate)try{navigator.vibrate(15);}catch(e){}}
  re();}
 function sbBindLine(O,x,re){O.querySelectorAll("[data-lk]").forEach(b=>b.onclick=e=>{e.stopPropagation();sbToggleLike(x,+b.dataset.lk,re);});
  O.querySelectorAll(".pol.oth").forEach(pl=>pl.addEventListener("click",e=>{if(e.target.closest(".lk"))return;const k=+pl.dataset.sbp;setTimeout(()=>{const Z=document.querySelector(".bkz");if(!Z)return;const L=SB_BK[bkKey(x)],p=L&&L.list[k];if(!p)return;
@@ -17778,7 +17778,7 @@ function spcBind(id,W){const D=SPC[id]||{list:[],liked:new Set()};const q=s=>W.q
  if(q("#spc-del"))q("#spc-del").onclick=async e=>{if(!e.target.dataset.sure){e.target.dataset.sure=1;e.target.textContent="Emin misin? Sil";return;}const me=(sbSess()||{}).uid;await sbReq("DELETE",`film_reviews?film_id=eq.${encodeURIComponent(id)}&user_id=eq.${me}`);W._edit=false;W._rt=null;await spcLoad(id);spcRender(id);};
  W.querySelectorAll("[data-lk]").forEach(b=>b.onclick=async()=>{const me=(await sbAuth()||{}).uid;if(!me)return;const x=D.list.find(r=>r.id===b.dataset.lk);if(!x)return;
   if(D.liked.has(x.id)){D.liked.delete(x.id);x.like_count=Math.max(0,(x.like_count||1)-1);sbReq("DELETE",`film_review_likes?review_id=eq.${x.id}&user_id=eq.${me}`);}
-  else{D.liked.add(x.id);x.like_count=(x.like_count||0)+1;sbReq("POST","film_review_likes",{review_id:x.id},"return=minimal");try{sndPlay("bag");}catch(e){}try{navigator.vibrate&&navigator.vibrate(15);}catch(e){}}spcRender(id);});
+  else{D.liked.add(x.id);x.like_count=(x.like_count||0)+1;sbReq("POST","film_review_likes",{review_id:x.id},"return=minimal");try{}catch(e){}try{navigator.vibrate&&navigator.vibrate(15);}catch(e){}}spcRender(id);});
  W.querySelectorAll("[data-rp]").forEach(b=>b.onclick=async()=>{if(!b.dataset.sure){b.dataset.sure=1;b.textContent="Şikâyet etmek istediğine emin misin?";return;}await sbReq("POST","film_review_reports",{review_id:b.dataset.rp},"return=minimal");D.list=D.list.filter(r=>r.id!==b.dataset.rp);spcRender(id);yToast("Teşekkürler, inceleyeceğiz");});
  const go=q("#spc-go");if(go)go.onclick=async()=>{const msg=q("#spc-msg");const rt=W._rt!=null?W._rt:0;const tx=(q("#spc-t").value||"").trim();
   if(!rt&&!tx){msg.textContent="Bir puan seç ya da birkaç kelime yaz.";return;}
@@ -18178,6 +18178,12 @@ const SPN_SEEN=new Set();function spNotiShow(force){if(!SB_FNOTI.length||documen
  O.querySelectorAll("[data-spn]").forEach(b=>b.onclick=()=>{const id=b.dataset.spn;const g=G.find(x=>x.key==="film:"+id);spNotiRead(g?g.ids:[]);O._close&&O._close();setTimeout(()=>{if(spFilm(id)){spFilmOpen(id);setTimeout(()=>{const c=document.querySelector("#ysheet #spc");if(c)c.scrollIntoView({behavior:"smooth",block:"start"});},700);}},260);});
  O.querySelector(".spn-ok").onclick=()=>{spNotiRead(SB_FNOTI.map(n=>n.id));O._close&&O._close();};}
 (function(){const _r=spRender;spRender=function(){const r=_r.apply(this,arguments);try{spBadge();if(SB_FNOTI.length)setTimeout(spNotiShow,500);else sbNotiPull();}catch(e){}return r;};})();
+
+/* v0.63.1: bir bölümden çıkınca o bölümün araması temizlensin */
+(function(){let prev=typeof step!=="undefined"?step:null;const _s=show;show=function(){const r=_s.apply(this,arguments);try{if(prev!==step){
+  if(step!==90){try{ktQ="";}catch(e){}try{libQ="";}catch(e){}}
+  if(step!==96&&typeof SPQ!=="undefined"&&(SPQ.q||SPQ.live.length)){SPQ.q="";SPQ.live=[];SPQ.last="";SPQ.busy=false;const i=document.getElementById("sps-q");if(i)i.value="";const x=document.getElementById("sps-x");if(x)x.remove();}
+  try{pgQ="";}catch(e){}prev=step;}}catch(e){}return r;};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
