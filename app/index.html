@@ -7945,6 +7945,40 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+.rs-sell .shs-x{position:absolute;top:12px;right:14px}
+.rs-lib.from .rl-tx em{white-space:normal;font-size:17px}
+
+.rl-tx em,.rl-tx small,.rl-x{text-transform:none!important}.rl-tx em{letter-spacing:0!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.rl-tx small{text-transform:uppercase!important}
+.rs-fab{position:absolute;top:calc(14px + env(safe-area-inset-top));right:62px;z-index:30;width:40px;height:40px;border:0;border-radius:50%;display:grid;place-items:center;padding:0;color:#fff;
+ background:radial-gradient(circle at 34% 30%,#FF9EC4,#E0457F 60%,#A8325C);box-shadow:0 6px 16px -6px rgba(224,69,127,.8),inset 0 1px 2px rgba(255,255,255,.4)}
+.rs-fab span svg{width:19px;height:19px}.rs-fab em{position:absolute;right:-4px;bottom:-4px;width:19px;height:19px;border-radius:50%;display:grid;place-items:center;background:#FFF4E4;color:#7A1F4A;font-style:normal;font-size:11px;box-shadow:0 2px 5px rgba(0,0,0,.2)}
+.rs-fab i{position:absolute;top:-2px;right:-2px;width:11px;height:11px;border-radius:50%;background:#FFC24B;box-shadow:0 0 0 2px #fff;animation:rsb 1.4s infinite}
+.rs-vs .rs-k{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#FF9EC4;margin-top:6px}
+.vs-row{display:flex;align-items:center;justify-content:center;gap:14px;margin:4px 0 6px}
+.vs-p{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:96px}.vs-p b{font:400 30px var(--f-display);color:#fff}.vs-p small{font-size:12px;opacity:.7}
+.vs-x{font:900 15px var(--f-body);color:#FFC24B;letter-spacing:.06em}
+.vs-u{display:block;font-size:11.5px;opacity:.55;margin-bottom:14px}
+.rs-vs .rs-btn{margin:6px 0 0}
+
+.rs-x{flex:0 0 auto;font-size:11px;font-weight:800;padding:6px 10px;border-radius:99px;background:rgba(255,255,255,.22)}
+.rs-lib{all:unset;box-sizing:border-box;cursor:pointer;position:relative;display:flex;align-items:center;gap:13px;width:min(320px,calc(100% - 40px));margin:16px auto 4px;padding:12px 16px 12px 12px;border-radius:16px;
+ background:linear-gradient(135deg,#FFFBF3,#FFF1DE);box-shadow:0 10px 26px -14px rgba(122,58,30,.55),inset 0 0 0 1px rgba(201,130,43,.35);color:#7A3A1E;transition:transform .15s}
+.rs-lib::before{content:"";position:absolute;inset:5px;border-radius:12px;border:1px dashed rgba(201,130,43,.45);pointer-events:none}
+.rs-lib:active{transform:scale(.98)}
+.rl-seal{position:relative;flex:0 0 46px;height:46px;border-radius:50%;display:grid;place-items:center;color:#FFE9D6;
+ background:radial-gradient(circle at 34% 30%,#D9607F,#9E2F4F 55%,#6E1B36);box-shadow:0 4px 10px -3px rgba(110,27,54,.7),inset 0 -3px 6px rgba(0,0,0,.25),inset 0 2px 3px rgba(255,255,255,.25)}
+.rl-seal::after{content:"";position:absolute;inset:4px;border-radius:50%;border:1.5px solid rgba(255,220,200,.35)}
+.rl-seal svg{width:20px;height:20px;filter:drop-shadow(0 1px 1px rgba(0,0,0,.3))}
+.rl-tx{flex:1;min-width:0;text-align:left}
+.rl-tx em{display:block;font-family:var(--f-display);font-style:italic;font-size:19px;line-height:1.15;color:#6E2A16}
+.rl-tx small{display:block;margin-top:2px;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#C9822B}
+.rl-x{flex:0 0 auto;font-size:11px;font-weight:800;padding:6px 10px;border-radius:99px;background:rgba(201,130,43,.14);color:#7A3A1E}
+.rs-lib.busy{opacity:.6}
+.rs-lib.wait .rl-seal{background:radial-gradient(circle at 34% 30%,#C9A88F,#9C7A62 60%,#6F5442)}
+.rs-lib.sent .rl-seal{background:radial-gradient(circle at 34% 30%,#7FC9A4,#2E8B67 60%,#1E5E45)}
+.rs-lib.from{background:linear-gradient(135deg,#FFF4E4,#FFE3D0)}
+.rs-lib.from .rl-seal{animation:rsb 1.6s ease-in-out infinite}
+
 .rs-btn.wait{background:linear-gradient(135deg,#B9879D,#8A5A72);box-shadow:none}
 .rs-btn.from{background:linear-gradient(135deg,#FFB86B,#E0457F)}
 .bkp-rs.wait{background:#F6EEF2;border-color:rgba(138,90,114,.3);color:#8A5A72}.bkp-rs.wait i{color:#B9879D}
@@ -18451,6 +18485,81 @@ function rsDecorate(b,d,compact){const x=rsFind(d);if(!x)return b;const me=(sbSe
 (function(){const _b=rsBtn;rsBtn=function(d,cls){return rsDecorate(_b.apply(this,arguments),d,false);};
  const _s=rsSend;rsSend=async function(d,btn){if(rsFind(d)){if(btn)rsDecorate(btn,d,btn.classList.contains("bkp-rs"));return;}await _s.apply(this,arguments);if(btn&&CP.c)rsDecorate(btn,d,btn.classList.contains("bkp-rs"));};
  const _i=rsItemHTML;rsItemHTML=function(x,mine,pn){let h=_i.apply(this,arguments);const a=(x.data||{}).ans;if(a)h=h.replace(/<span class="rs-cta">[^<]*<\/span>/,`<span class="rs-cta ok">${a==="evet"?(mine?esc(pn)+": Varım 💚":"Varım dedin 💚"):"Başka zaman"}</span>`);return h;};})();
+
+/* ===== v0.66 Ruh eşim: gönder = davet; oyunlarda = meydan okuma ===== */
+const RS_CX={film:["Birlikte izleyelim daveti","Birlikte izleyelim mi?","İzleme listenize eklendi"],etk:["Birlikte gidelim daveti","Birlikte gidelim mi?","İkinizin takvimine eklendi"],mac:["Birlikte gidelim daveti","Birlikte gidelim mi?","İkinizin takvimine eklendi"],kitap:["Birlikte okuyalım daveti","Birlikte okuyalım mı?","Aynı kitaptasınız"],keyif:["Ruh eşinle paylaş","Bir bak","Paylaşıldı"]};
+RS_K.oyun=["stars","sana meydan okudu","Kabul et"];
+const RS_G={puz:["Günün bulmacası düellosu","Aynı bulmaca, kim daha hızlı?"],kk:["Kelime Keyfi kapışması","Karşılıklı oynayın, puanlar konuşsun"],wow:["Kelime yolculuğu yarışı","Kim daha ileride?"],ari:["Arı yarışı","Kim daha yüksek seviyede?"]};
+function rsMe(){return (sbSess()||{}).uid||"me";}
+function rsSec(s){if(s==null)return "—";s=Math.round(s);return Math.floor(s/60)+":"+String(s%60).padStart(2,"0");}
+function rsLv(v){try{if(v==="wow")return (wowS().i||0)+1;if(v==="ari")return ((st.games2||{}).ariLv)||1;}catch(e){}return null;}
+rsFind=function(d){if(!CP.c)return null;const tn=s=>(s||"").toLocaleLowerCase("tr").trim(),td=dkey();return CP.items.find(x=>{if(x.kind!=="oneri")return false;const y=x.data||{};if(y.k!==d.k)return false;
+  if(d.k==="keyif")return y.v===d.v&&(x.created_at||"").slice(0,10)===td;
+  if(d.k==="oyun"){if(y.v!==d.v)return false;if(d.v==="puz")return y.d===td;return (x.created_at||"").slice(0,10)===td;}
+  return d.id?y.id===d.id:tn(y.t)===tn(d.t);})||null;};
+function rsApply(x){const y=x.data||{};if(y.ans!=="evet")return;try{if(y.k==="etk"&&y.id){spSt().go[y.id]=1;}else if(y.k==="mac"&&y.id){mac().go[y.id]=1;}else if(y.k==="film"&&y.id){spSt().want[y.id]=1;}save();}catch(e){}}
+async function rsPatch(x,fn){let cur=x.data||{};try{const r=await sbReq("GET",`couple_items?select=data&id=eq.${x.id}`);if(Array.isArray(r)&&r[0])cur=r[0].data||cur;}catch(e){}x.data=fn(Object.assign({},cur));await sbReq("PATCH",`couple_items?id=eq.${x.id}`,{data:x.data,updated_at:new Date().toISOString()},"return=minimal");return x;}
+function rsMarkup(d,style){const C=RS_CX[d.k]||RS_CX.keyif,G=d.k==="oyun"?RS_G[d.v]:null;const big=G?"Ruh eşine meydan oku":"Ruh eşime gönder",sub=G?G[1]:C[0];
+ if(style==="lib")return `<span class="rl-seal">${RS_HEART}</span><span class="rl-tx"><em class="rs-b">${big}</em><small class="rs-s">${sub}</small></span><span class="rl-x" hidden>Başka zaman</span>`;
+ return `<span class="rs-i">${RS_HEART}</span><span class="rs-t"><b class="rs-b">${big}</b><small class="rs-s">${sub}</small></span><span class="rs-x" hidden>Başka zaman</span>`;}
+rsBtn=function(d,cls){const b=document.createElement("button");b.type="button";const lib=cls==="lib";b.className=(lib?"rs-lib":"rs-btn ")+(lib?"":cls||"");b.innerHTML=rsMarkup(d,lib?"lib":"");b._d=d;b.onclick=e=>{e.stopPropagation();rsSend(d,b);};return rsDecorate(b,d);};
+rsDecorate=function(b,d){const set=(B,S,cls,x)=>{b.querySelector(".rs-b").textContent=B;b.querySelector(".rs-s").textContent=S;b.classList.remove("sent","wait","from");if(cls)b.classList.add(cls);const n=b.querySelector(".rs-x,.rl-x");if(n)n.hidden=!x;};
+ if(!CP.c){b.innerHTML=rsMarkup(d,b.classList.contains("rs-lib")?"lib":"");b.onclick=e=>{e.stopPropagation();rsSell();};return b;}
+ const x=rsFind(d);const C=RS_CX[d.k]||RS_CX.keyif;
+ if(!x){b.innerHTML=rsMarkup(d,b.classList.contains("rs-lib")?"lib":"");b.onclick=e=>{e.stopPropagation();rsSend(d,b);};return b;}
+ const me=rsMe(),mine=x.author===me,y=x.data||{};
+ if(d.k==="oyun"){const G=RS_G[d.v]||["Düello",""];
+  if(d.v==="puz"){const r=y.r||{},my=r[me],ot=Object.keys(r).find(k=>k!==me),os=ot?r[ot]:null;let B,S,cls;
+   if(my!=null&&os!=null){B=my<os?"Düelloyu kazandın 🏆":my>os?"Ruh eşin kazandı":"Berabere!";S=`Sen ${rsSec(my)} · Ruh eşin ${rsSec(os)}`;cls=my<=os?"sent":"wait";}
+   else if(my!=null){B="Süren kaydedildi: "+rsSec(my);S="Ruh eşinin çözmesini bekliyorsun";cls="wait";}
+   else if(os!=null){B="Ruh eşin "+rsSec(os)+" sürede çözdü";S="Çöz, süren otomatik yazılsın";cls="from";}
+   else{B=mine?"Meydan okudun":"Ruh eşin meydan okudu";S="Çöz, süren otomatik yazılsın";cls=mine?"wait":"from";}
+   set(B,S,cls);b.onclick=e=>{e.stopPropagation();try{yToast(S);}catch(_){}};return b;}
+  if(d.v==="kk"){set(mine?"Kapışma daveti gitti":"Ruh eşin kapışmaya çağırdı",mine?"Oyuna gir, sıranı oyna":"Dokun, oyuna katıl",mine?"wait":"from");b.onclick=e=>{e.stopPropagation();rsOpen(x);};return b;}
+  const L=y.lv||{},my=rsLv(d.v),ot=Object.keys(L).find(k=>k!==me),os=ot?L[ot]:null;
+  set(os==null?(mine?"Meydan okudun":"Ruh eşin meydan okudu"):my>os?"Öndesin 🏆":my<os?"Ruh eşin önde":"Başa baş!",`Sen ${my}. seviye · Ruh eşin ${os==null?"—":os+". seviye"}`,os!=null&&my>=os?"sent":"from");
+  b.onclick=async e=>{e.stopPropagation();await rsPatch(x,z=>{z.lv=Object.assign({},z.lv||{},{[me]:rsLv(d.v)});return z;});rsDecorate(b,d);};return b;}
+ if(mine){if(y.ans==="sonra"){b.onclick=e=>{e.stopPropagation();rsSend(d,b,true);};set("Ruh eşime gönder","Geçen sefer: başka zaman dedi",null);return b;}
+  set("Ruh eşine gönderildi",y.ans==="evet"?"Varım dedi 💚 · "+C[2]:"Cevabı bekleniyor",y.ans==="evet"?"sent":"wait");b.onclick=e=>{e.stopPropagation();};return b;}
+ if(y.ans==="evet"){set("İkiniz de varsınız 💚",C[2],"sent");b.onclick=e=>{e.stopPropagation();};return b;}
+ if(y.ans==="sonra"){set("Başka zamana bıraktın","İstersen sen davet et",null);b.onclick=e=>{e.stopPropagation();rsSend(d,b,true);};return b;}
+ set("Ruh eşin davet etti",C[1],"from",true);
+ b.onclick=async e=>{e.stopPropagation();const no=e.target.closest(".rs-x,.rl-x");b.classList.add("busy");await rsPatch(x,z=>{z.ans=no?"sonra":"evet";return z;});b.classList.remove("busy");rsApply(x);
+  if(!no)try{mfConfetti("İkiniz de varsınız!",["#FF9EC4","#E0457F","#fff","#FFE7A0"],"linear-gradient(135deg,#E0457F,#7A1F4A)");}catch(_){}rsDecorate(b,d);};return b;};
+rsSend=async function(d,btn,force){if(!CP.c){rsSell();return;}if(!force&&rsFind(d)){if(btn)rsDecorate(btn,d);return;}if(btn){btn.disabled=true;btn.classList.add("busy");}
+ const me=rsMe(),dd=Object.assign({},d);if(d.k==="oyun"){if(d.v==="puz"){dd.d=dkey();const P=st.puz||{};dd.r=P.d===dkey()&&P.ok&&P.sec!=null?{[me]:P.sec}:{};}else if(d.v==="kk"){const r=await kkNetNew();if(r.err){if(btn){btn.disabled=false;btn.classList.remove("busy");}yToast("Oyun açılamadı, tekrar dene");return;}dd.code=KK.code;dd.gid=KK.id;try{kkRender();}catch(e){}}else{dd.lv={[me]:rsLv(d.v)};}}
+ const ok=await cpSend("oneri",dd);if(btn){btn.disabled=false;btn.classList.remove("busy");rsDecorate(btn,d);}try{yToast(ok?(d.k==="oyun"?"Meydan okuman gitti ⚔️":"Davetin ruh eşine gitti 💞"):"Gönderemedim, tekrar dene");}catch(e){}};
+(function(){const _o=rsOpen;rsOpen=function(x){const d=x.data||{};if(d.k!=="oyun")return _o.apply(this,arguments);rsCloseAll();setTimeout(async()=>{try{zodOpen();if(d.v==="kk"&&d.code){kv="kk";const r=await kkNetJoin(d.code);if(r.err&&!/iki oyuncu/.test(r.err))yToast(r.err);if(r.err&&KK&&KK.code!==d.code){const g=await kkNetGet(d.gid);if(g){KK=kkNetFrom(g);KKV="game";}}keyRender();}else{kv=d.v;keyRender();}}catch(e){console.error(e);}},320);};
+ const _i=rsItemHTML;rsItemHTML=function(x,mine,pn){const d=x.data||{};if(d.k!=="oyun")return _i.apply(this,arguments);const G=RS_G[d.v]||["Düello",""];
+  return `<button type="button" class="rs-it" data-rso="${esc(x.id)}"><span class="rs-ii">${ySvg("stars")}</span><span class="rs-tx"><small>${mine?"Sen meydan okudun":"Ruh eşin meydan okudu"}</small><b>${esc(G[0])}</b><em>${esc(G[1])}</em></span><span class="rs-cta">Oyna</span></button>`;};
+ /* bulmaca süresi + düelloya otomatik yaz */
+ const _k=keyRender;keyRender=function(){const P0=st.puz&&st.puz.d===dkey()?!!st.puz.ok:null;const r=_k.apply(this,arguments);try{const O=document.getElementById("zsh");
+   if(kv==="puz"){const P=st.puz||{};if(P.d===dkey()&&!P.ok&&!P.t0){P.t0=Date.now();save();}
+    if(P.d===dkey()&&P.ok&&P.sec==null&&P.t0){P.sec=Math.round((Date.now()-P.t0)/1000);save();const x=rsFind({k:"oyun",v:"puz"});if(x)rsPatch(x,z=>{z.r=Object.assign({},z.r||{},{[rsMe()]:P.sec});return z;}).then(()=>{try{keyRender();}catch(e){}});}}
+   O.querySelectorAll(".rs-btn").forEach(b=>b.remove());let d=null;
+   if(kv==="fal"||(kv==="burc"&&(st.prof||{}).dob)){const p=[...O.querySelectorAll("p,.zr-t,.kf-txt")].map(e=>e.textContent.trim()).find(t=>t.length>50)||"";d={k:"keyif",v:kv,t:RS_V[kv],x:p.slice(0,200)};}
+   else if(RS_G[kv]&&kv!=="kk")d={k:"oyun",v:kv,t:RS_G[kv][0]};
+   if(d)O.appendChild(rsBtn(d,"kf"));}catch(e){console.error(e);}return r;};
+ const _kr=kkRender;kkRender=function(){const r=_kr.apply(this,arguments);try{const O=document.getElementById("zsh");O.querySelectorAll(".rs-btn").forEach(b=>b.remove());if(KKV==="home")O.appendChild(rsBtn({k:"oyun",v:"kk",t:RS_G.kk[0]},"kf"));}catch(e){}return r;};
+ /* kitap: ex-libris mühürlü davet */
+ const _b=bookOpen;bookOpen=function(i,anim,X){const r=_b.apply(this,arguments);try{const O=document.getElementById("bkp");if(!O)return r;O.querySelectorAll(".bkp-rs").forEach(b=>b.remove());const x=X||klib()[i];const ch=O.querySelector(".bkp-chips");
+   if(x&&ch&&!O.querySelector(".rs-lib")){const d={k:"kitap",t:x.t,a:x.a||"",c:x.c||"",s:x.a||""};ch.after(rsBtn(d,"lib"));}}catch(e){console.error(e);}return r;};
+ /* gönderen tarafta: kabul edilince kendi listesine de işle */
+ const _p=cpPull;cpPull=async function(){await _p.apply(this,arguments);try{const me=rsMe();CP.items.filter(x=>x.kind==="oneri"&&x.author===me).forEach(rsApply);}catch(e){}};
+})();
+
+/* v0.66: oyunlarda köşede düello düğmesi + VS penceresi */
+function rsDuelVals(d){const me=rsMe(),x=rsFind(d),y=(x&&x.data)||{};if(d.v==="puz"){const P=st.puz||{};const my=P.d===dkey()&&P.ok?P.sec:null;const r=y.r||{},ot=Object.keys(r).find(k=>k!==me);return [my!=null?rsSec(my):P.d===dkey()&&P.ok?"✓":"—",ot?rsSec(r[ot]):"—","süre"];}
+ if(d.v==="kk"){return ["","",""];}const L=y.lv||{},ot=Object.keys(L).find(k=>k!==me);return [rsLv(d.v)+".",ot?L[ot]+".":"—","seviye"];}
+function rsDuel(d){const G=RS_G[d.v]||["Düello",""],V=rsDuelVals(d);const me=(st.name||"S").trim()[0]||"S",pn=CP.c&&CP.c.partner_name||"?";
+ const O=ySheet("rsduel",`<div class="rs-sell rs-vs"><button type="button" class="shs-x" aria-label="Kapat">✕</button><small class="rs-k">⚔️ Düello</small><h3>${esc(G[0])}</h3><p>${esc(G[1])}</p>
+  ${d.v!=="kk"?`<div class="vs-row"><div class="vs-p"><span class="rs-av">${esc(me.toUpperCase())}</span><b>${esc(V[0])}</b><small>Sen</small></div><span class="vs-x">VS</span><div class="vs-p"><span class="rs-av ${CP.c?"":"q"}">${CP.c?esc(pn[0].toUpperCase()):"?"}</span><b>${esc(V[1])}</b><small>Ruh eşin</small></div></div><small class="vs-u">${V[2]==="süre"?"Kısa süre kazanır":"Yüksek seviye kazanır"}</small>`:""}<div class="vs-a"></div></div>`,"rs-sh");
+ O.querySelector(".vs-a").appendChild(rsBtn(d,"vs"));}
+function rsDuelFab(d){const O=document.getElementById("zsh");if(!O)return;O.querySelectorAll(".rs-fab").forEach(b=>b.remove());const b=document.createElement("button");b.type="button";b.className="rs-fab";b.setAttribute("aria-label","Ruh eşinle düello");
+ const x=CP.c&&rsFind(d),y=(x&&x.data)||{},me=rsMe();let dot="";if(x){const pend=x.author!==me&&(d.v==="puz"?!(y.r||{})[me]:d.v==="kk");dot=pend?"<i></i>":"";}
+ b.innerHTML=`<span>${RS_HEART}</span><em>⚔</em>${dot}`;b.onclick=()=>rsDuel(d);O.appendChild(b);}
+(function(){const _k=keyRender;keyRender=function(){const r=_k.apply(this,arguments);try{const O=document.getElementById("zsh");O.querySelectorAll(".rs-fab").forEach(b=>b.remove());if(RS_G[kv]){O.querySelectorAll(".rs-btn.kf").forEach(b=>b.remove());rsDuelFab({k:"oyun",v:kv});}}catch(e){}return r;};
+ const _kr=kkRender;kkRender=function(){const r=_kr.apply(this,arguments);try{const O=document.getElementById("zsh");O.querySelectorAll(".rs-btn.kf,.rs-fab").forEach(b=>b.remove());if(kv==="kk")rsDuelFab({k:"oyun",v:"kk"});}catch(e){}return r;};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
