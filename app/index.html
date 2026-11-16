@@ -7945,6 +7945,12 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+.rs-btn.wait{background:linear-gradient(135deg,#B9879D,#8A5A72);box-shadow:none}
+.rs-btn.from{background:linear-gradient(135deg,#FFB86B,#E0457F)}
+.bkp-rs.wait{background:#F6EEF2;border-color:rgba(138,90,114,.3);color:#8A5A72}.bkp-rs.wait i{color:#B9879D}
+.bkp-rs.from{background:linear-gradient(135deg,#FFB86B,#E0457F);border-color:transparent;color:#fff}.bkp-rs.from i{color:#fff}
+.rs-cta.ok{background:rgba(127,216,181,.22)}
+
 .bkp-rs{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:800;padding:5px 12px 5px 9px;border-radius:99px;background:#FFF0F4;border:1px solid rgba(224,69,127,.35);color:#B5486E}
 .bkp-rs i{display:inline-grid;width:14px;height:14px;color:#E0457F}.bkp-rs i svg{width:14px;height:14px}
 .bkp-rs.sent{background:#E9F8F1;border-color:rgba(46,156,120,.4);color:#2E7A5E}.bkp-rs.sent i{color:#2E9C78}.bkp-rs.busy{opacity:.6}
@@ -18426,10 +18432,25 @@ function rsGate(){const L=document.querySelector('.love[data-step="10"]');if(!L)
  const _f=spFilmOpen;spFilmOpen=function(id){const r=_f.apply(this,arguments);try{const f=spFilm(id),O=document.getElementById("ysheet");const bd=O&&O.querySelector(".y-bd");if(f&&bd)bd.prepend(rsBtn({k:"film",id,t:f[1],s:[f[3],f[4]].filter(Boolean).join(" · "),f:PF.find(x=>x[0]===id)?null:f}));}catch(e){console.error(e);}return r;};
  const _e=spOpen;spOpen=function(id){const r=_e.apply(this,arguments);try{const e=spEv(id),O=document.getElementById("ysheet");const bd=O&&(O.querySelector(".y-bd")||O.querySelector(".shs-c"));if(e&&bd&&!bd.querySelector(".rs-btn")){const D=spDay(e[3]);bd.prepend(rsBtn({k:"etk",id,t:e[1],s:`${D.d} ${D.m}${e[5]?" · "+e[5]:""}`}));}}catch(x){console.error(x);}return r;};
  const _m=macOpen;macOpen=function(id){const r=_m.apply(this,arguments);try{const e=macEv(id),O=document.getElementById("mep");const bd=O&&O.querySelector(".mep-b");if(e&&bd&&!bd.querySelector(".rs-btn")){const D=evDate(e);bd.prepend(rsBtn({k:"mac",id,t:e[1],s:`${D.d} ${D.m}${e[5]?" · "+e[5]:""}`}));}}catch(x){console.error(x);}return r;};
- const _b=bookOpen;bookOpen=function(i,anim,X){const r=_b.apply(this,arguments);try{const x=X||klib()[i],O=document.getElementById("bkp");const w=O&&O.querySelector(".bk3-wrap");const ch=O&&O.querySelector(".bkp-chips");if(x&&ch&&!ch.querySelector(".bkp-rs")){const pn=CP.c&&CP.c.partner_name;const bt=document.createElement("button");bt.type="button";bt.className="bkp-rs";bt.innerHTML=`<i>${RS_HEART}</i><b>${pn?esc(pn)+"'a gönder":"Ruh eşime gönder"}</b>`;bt.onclick=e=>{e.stopPropagation();rsSend({k:"kitap",t:x.t,a:x.a||"",c:x.c||"",s:x.a||""},bt);};ch.appendChild(bt);}}catch(e){console.error(e);}return r;};
+ const _b=bookOpen;bookOpen=function(i,anim,X){const r=_b.apply(this,arguments);try{const x=X||klib()[i],O=document.getElementById("bkp");const w=O&&O.querySelector(".bk3-wrap");const ch=O&&O.querySelector(".bkp-chips");if(x&&ch&&!ch.querySelector(".bkp-rs")){const pn=CP.c&&CP.c.partner_name;const bt=document.createElement("button");bt.type="button";bt.className="bkp-rs";bt.innerHTML=`<i>${RS_HEART}</i><b>${pn?esc(pn)+"'a gönder":"Ruh eşime gönder"}</b>`;bt.onclick=e=>{e.stopPropagation();rsSend({k:"kitap",t:x.t,a:x.a||"",c:x.c||"",s:x.a||""},bt);};if(CP.c)rsDecorate(bt,{k:"kitap",t:x.t},true);ch.appendChild(bt);}}catch(e){console.error(e);}return r;};
  const _k=keyRender;keyRender=function(){const r=_k.apply(this,arguments);try{const O=document.getElementById("zsh");const old=O.querySelector(".rs-btn");if(old)old.remove();if(RS_V[kv]&&!(kv==="burc"&&!(st.prof||{}).dob)){const p=[...O.querySelectorAll("p,.zr-t,.kf-txt")].map(e=>e.textContent.trim()).find(t=>t.length>50)||"";
    const d={k:"keyif",v:kv,t:RS_V[kv],x:kv==="burc"||kv==="fal"?p.slice(0,200):"Ben oynadım, sıra sende 🙂"};O.appendChild(rsBtn(d,"kf"));}}catch(e){console.error(e);}return r;};
 })();
+
+/* v0.65.2: aynı öneri tekrar tekrar gönderilmez — ondan geldiyse "Varım", senden gittiyse durumu görünür */
+function rsFind(d){if(!CP.c)return null;const tn=s=>(s||"").toLocaleLowerCase("tr").trim();return CP.items.find(x=>{if(x.kind!=="oneri")return false;const y=x.data||{};if(y.k!==d.k)return false;if(d.k==="keyif")return y.v===d.v&&(x.created_at||"").slice(0,10)===new Date().toISOString().slice(0,10);return d.id?y.id===d.id:tn(y.t)===tn(d.t);})||null;}
+function rsDecorate(b,d,compact){const x=rsFind(d);if(!x)return b;const me=(sbSess()||{}).uid,mine=x.author===me,pn=CP.c.partner_name||"Ruh eşin",y=x.data||{};
+ let big,small,cls;if(mine){big=`${pn}'a gönderdin`;small=y.ans==="evet"?`${pn}: Varım 💚`:y.ans==="sonra"?`${pn}: Başka zaman`:"Cevabını bekliyorsun";cls=y.ans==="evet"?"sent":"wait";}
+ else{big=y.ans==="evet"?"İkiniz de varsınız":`${pn} önerdi`;small=y.ans==="evet"?"Hadi bakalım 💚":"Dokun, 'Varım' de";cls=y.ans==="evet"?"sent":"from";}
+ b.classList.remove("sent","wait","from");b.classList.add(cls);
+ if(compact)b.innerHTML=`<i>${RS_HEART}</i><b>${esc(big)}</b>`;else{b.querySelector(".rs-t b").textContent=big;b.querySelector(".rs-t small").textContent=small;}
+ b.onclick=async e=>{e.stopPropagation();if(mine||y.ans==="evet"){try{yToast(small);}catch(_){}return;}
+  x.data=Object.assign({},y,{ans:"evet"});b.classList.add("busy");await sbReq("PATCH",`couple_items?id=eq.${x.id}`,{data:x.data,updated_at:new Date().toISOString()},"return=minimal");b.classList.remove("busy");
+  try{mfConfetti("İkiniz de varsınız!",["#FF9EC4","#E0457F","#fff","#FFE7A0"],"linear-gradient(135deg,#E0457F,#7A1F4A)");}catch(_){try{yToast("İkiniz de varsınız 💚");}catch(__){}}rsDecorate(b,d,compact);};
+ return b;}
+(function(){const _b=rsBtn;rsBtn=function(d,cls){return rsDecorate(_b.apply(this,arguments),d,false);};
+ const _s=rsSend;rsSend=async function(d,btn){if(rsFind(d)){if(btn)rsDecorate(btn,d,btn.classList.contains("bkp-rs"));return;}await _s.apply(this,arguments);if(btn&&CP.c)rsDecorate(btn,d,btn.classList.contains("bkp-rs"));};
+ const _i=rsItemHTML;rsItemHTML=function(x,mine,pn){let h=_i.apply(this,arguments);const a=(x.data||{}).ans;if(a)h=h.replace(/<span class="rs-cta">[^<]*<\/span>/,`<span class="rs-cta ok">${a==="evet"?(mine?esc(pn)+": Varım 💚":"Varım dedin 💚"):"Başka zaman"}</span>`);return h;};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
