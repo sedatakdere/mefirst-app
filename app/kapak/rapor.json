@@ -1,89 +1,330 @@
 {
- "tarih": "2026-11-16 12:32",
- "bulunan": {
-  "Kayıp Gül": "openlibrary"
- },
+ "tarih": "2026-11-16 12:35",
+ "bulunan": {},
  "bulunamayan": {
   "Kedi Kitabı": [
    "dr:yok",
    "idefix:yok",
    "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
-   "google:HTTPError:HTTP Error 429: Too Many Requests",
-   "openlibrary:yok"
+   "google:HTTPError:HTTP Error 429: Too Many Requests"
   ],
   "Kurt Seyit ve Şura": [
    "dr:yok",
    "idefix:yok",
    "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
-   "google:HTTPError:HTTP Error 429: Too Many Requests",
-   "openlibrary:yok"
+   "google:HTTPError:HTTP Error 429: Too Many Requests"
   ],
   "Ove Adında Bir Adam": [
    "dr:yok",
    "idefix:yok",
    "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
-   "google:HTTPError:HTTP Error 429: Too Many Requests",
-   "openlibrary:yok"
+   "google:HTTPError:HTTP Error 429: Too Many Requests"
   ],
   "Dört Bin Hafta": [
    "dr:yok",
    "idefix:yok",
    "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
-   "google:HTTPError:HTTP Error 429: Too Many Requests",
-   "openlibrary:yok"
+   "google:HTTPError:HTTP Error 429: Too Many Requests"
   ],
   "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli": [
    "dr:yok",
    "idefix:yok",
    "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
-   "google:HTTPError:HTTP Error 429: Too Many Requests",
-   "openlibrary:yok"
+   "google:HTTPError:HTTP Error 429: Too Many Requests"
+  ],
+  "Kayıp Gül": [
+   "dr:yok",
+   "idefix:yok",
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "google:HTTPError:HTTP Error 429: Too Many Requests"
   ],
   "Evelyn Hugo'nun Yedi Kocası": [
    "dr:yok",
    "idefix:yok",
    "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
-   "google:HTTPError:HTTP Error 429: Too Many Requests",
-   "openlibrary:yok"
+   "google:HTTPError:HTTP Error 429: Too Many Requests"
   ],
   "Ve Sonra Hiç Kalmadı": [
    "dr:yok",
    "idefix:yok",
    "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
-   "google:HTTPError:HTTP Error 429: Too Many Requests",
-   "openlibrary:yok"
+   "google:HTTPError:HTTP Error 429: Too Many Requests"
   ],
   "Şimdinin Gücü": [
    "dr:yok",
    "idefix:yok",
    "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
-   "google:HTTPError:HTTP Error 429: Too Many Requests",
-   "openlibrary:yok"
+   "google:HTTPError:HTTP Error 429: Too Many Requests"
   ],
   "Keşke Ailemin Okuduğu Bir Kitap Olsaydı": [
    "dr:yok",
    "idefix:yok",
    "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
-   "google:HTTPError:HTTP Error 429: Too Many Requests",
-   "openlibrary:yok"
-  ],
-  "istek_x": [
-   "dr:yok",
-   "idefix:yok",
-   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
-   "google:HTTPError:HTTP Error 429: Too Many Requests",
-   "openlibrary:HTTPError:HTTP Error 500: Internal Server Error"
-  ],
-  "🌙": [
-   "dr:yok",
-   "idefix:yok",
-   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
-   "google:HTTPError:HTTP Error 429: Too Many Requests",
-   "openlibrary:yok"
+   "google:HTTPError:HTTP Error 429: Too Many Requests"
   ]
  },
- "kaynak": {
-  "openlibrary": 1
- },
- "toplam": 94
+ "kaynak": {},
+ "toplam": 91,
+ "dbg": {
+  "Kedi Kitabı": [
+   {
+    "q": "Kedi Kitabı Ursula K. Le Guin",
+    "n": 726744,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   },
+   {
+    "q": "Kedi Kitabı",
+    "n": 660255,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   }
+  ],
+  "Kurt Seyit ve Şura": [
+   {
+    "q": "Kurt Seyit ve Şura Nermin Bezmen",
+    "n": 631881,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   },
+   {
+    "q": "Kurt Seyit ve Şura",
+    "n": 613840,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   }
+  ],
+  "Hayata Röveşata Çeken Adam": [
+   {
+    "q": "Hayata Röveşata Çeken Adam Fredrik Backman",
+    "n": 411620,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   },
+   {
+    "q": "Hayata Röveşata Çeken Adam",
+    "n": 624659,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   }
+  ],
+  "Dört Bin Hafta": [
+   {
+    "q": "Dört Bin Hafta Oliver Burkeman",
+    "n": 352061,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   },
+   {
+    "q": "Dört Bin Hafta",
+    "n": 549308,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   }
+  ],
+  "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli": [
+   {
+    "q": "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli Adele Faber & Elaine Mazlish",
+    "n": 700901,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   },
+   {
+    "q": "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli",
+    "n": 696140,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   }
+  ],
+  "Kayıp Gül": [
+   {
+    "q": "Kayıp Gül Serdar Özkan",
+    "n": 465177,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   },
+   {
+    "q": "Kayıp Gül",
+    "n": 668104,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   }
+  ],
+  "Evelyn Hugo'nun Yedi Kocası": [
+   {
+    "q": "Evelyn Hugo'nun Yedi Kocası Taylor Jenkins Reid",
+    "n": 427354,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   },
+   {
+    "q": "Evelyn Hugo'nun Yedi Kocası",
+    "n": 330286,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   }
+  ],
+  "Ve Sonra Hiç Kalmadı": [
+   {
+    "q": "Ve Sonra Hiç Kalmadı Agatha Christie",
+    "n": 756308,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   },
+   {
+    "q": "Ve Sonra Hiç Kalmadı",
+    "n": 633000,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   }
+  ],
+  "Şimdinin Gücü": [
+   {
+    "q": "Şimdinin Gücü Eckhart Tolle",
+    "n": 497549,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   },
+   {
+    "q": "Şimdinin Gücü",
+    "n": 689027,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   }
+  ],
+  "Keşke Ailemin Okuduğu Bir Kitap Olsaydı": [
+   {
+    "q": "Keşke Ailemin Okuduğu Bir Kitap Olsaydı Philippa Perry",
+    "n": 660994,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   },
+   {
+    "q": "Keşke Ailemin Okuduğu Bir Kitap Olsaydı",
+    "n": 659506,
+    "alts": [
+     "KİTAP",
+     "",
+     "",
+     "",
+     "EĞİTİM &lt;br&gt;KİTAPLARI",
+     ""
+    ]
+   }
+  ]
+ }
 }
