@@ -7937,6 +7937,13 @@ html[data-mf=dusk] .spsr-li{background:rgba(255,255,255,.06)}
 .sevp-hang{margin:6px 0 4px}.sevp-n{margin:0 0 12px;text-align:center;font-size:12.5px;opacity:.65}
 .sevp-seen{margin:4px 0 12px}
 .sevp-empty .sevp-emb{display:block;width:110px;height:82px;margin:0 auto 6px}.sevp-empty .sevp-emb svg{width:100%;height:100%}
+/* v0.63 perde bildirimleri */
+.spn-l{display:grid;gap:10px;margin:6px 0 14px}
+.spn-it{display:flex;align-items:center;gap:12px;padding:10px;border:0;border-radius:16px;background:rgba(142,30,54,.06);text-align:left;color:var(--ink)}
+html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
+.spn-pos{flex:0 0 46px;width:46px;height:66px;border-radius:8px;overflow:hidden;display:block}.spn-pos .spp{width:100%!important;height:100%!important}
+.spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
+.spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.50 puanlar + yorumlar */
 .spf-scores{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px 0 4px}
 .spf-mf{display:flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:linear-gradient(135deg,#8E1E36,#5A0F22);color:#FFF1DA;cursor:pointer}
@@ -17779,7 +17786,7 @@ function spcBind(id,W){const D=SPC[id]||{list:[],liked:new Set()};const q=s=>W.q
   const P=sbPublic()||{};if(!P.ok){const n=((q("#spc-n")||{}).value||"").trim()||((st.prof&&st.prof.name)||"").split(" ")[0]||"Me First üyesi";
    const r=await sbReq("POST","profiles?on_conflict=id",{id:S.uid,name:n},"resolution=merge-duplicates,return=minimal");if(r===null){msg.textContent="Bir sorun çıktı, tekrar dener misin?";go.disabled=false;go.textContent="Paylaş";return;}
    try{localStorage.setItem("mf-sbp",JSON.stringify(Object.assign({},P,{ok:1,name:n})));}catch(e){}}
-  const r=await sbReq("POST","film_reviews?on_conflict=film_id,user_id",{film_id:id,rating:rt||null,body:tx,spoiler:!!(q("#spc-sp")||{}).checked,updated_at:new Date().toISOString()},"resolution=merge-duplicates,return=minimal");
+  const r=await sbReq("POST","film_reviews?on_conflict=film_id,user_id",{film_id:id,film_title:((spFilm(id)||[])[1]||"").slice(0,120),rating:rt||null,body:tx,spoiler:!!(q("#spc-sp")||{}).checked,updated_at:new Date().toISOString()},"resolution=merge-duplicates,return=minimal");
   if(r===null){msg.textContent="Yorumlar henüz açılmadı; çok yakında.";go.disabled=false;go.textContent="Paylaş";return;}
   W._edit=false;W._rt=null;try{sndPlay("bag");}catch(e){}await spcLoad(id);spcRender(id);};}
 (function(){const _fo=spFilmOpen;spFilmOpen=function(id){const r=_fo.apply(this,arguments);try{const O=document.getElementById("ysheet"),f=spFilm(id);if(!O||!f)return r;const B=SP.bilgi[id]||{};const pu=B.puan||{};
@@ -18157,6 +18164,20 @@ function spEvPolForm(id){const e=spEv(id);if(!e)return;const P=spEvPolAll(),old=
   const S=spSt();const st=H.match(/<b>(\d+)<\/b><span>sahneye gittim<\/span>/);if(st)H=H.replace(st[0],`<b>${Math.max(+st[1],L.length)}</b><span>sahneye gittim</span>`);
   const wall=`<div class="kthead"><span>Sahne polaroidlerim</span><small>${L.length||""}</small></div>`+(L.length?`<div class="mhat sp-pols">${L.map(({e,p})=>{const T=SPT[e[2]]||SPT.tiyatro;return `<button type="button" class="mpol" data-spe="${esc(e[0])}" style="--a:${T[2]};--b:#3A0F1E"><span class="clip"></span><span class="im">${spEvPolIm(e)}</span><b>${esc(p.cm||e[1])}</b><small>${spHearts(p.rt)} · ${mmDay(p.d)}</small></button>`;}).join("")}</div>`:`<div class="sp-empty sevp-empty"><span class="sevp-emb">${SP_EMBLEM}</span><b>Henüz sahne polaroidin yok</b><small>Bir etkinliğe "Ben de gidiyorum" de; o akşam polaroidini as, story'de paylaş.</small><button type="button" class="mbtn" data-spt2="sahne">Etkinliklere bak →</button></div>`);
   const k=H.indexOf('<div class="kthead"><span>Film polaroidlerim');return k>=0?H.slice(0,k)+wall+H.slice(k):H+wall;}catch(err){console.error(err);return H;}};})();
+
+/* ===== v0.63: Perde bildirimleri (flike, fcom) — Kitap bildirimlerinden ayrı ===== */
+let SB_FNOTI=[];
+(function(){const _p=sbNotiPull;sbNotiPull=async function(){await _p.apply(this,arguments);try{const all=SB_NOTI||[];const F=all.filter(n=>/^f(like|com)$/.test(n.kind));if(F.length||SB_FNOTI.length){const nw=F.length&&(!SB_FNOTI.length||F[0].id!==SB_FNOTI[0].id);SB_FNOTI=F;SB_NOTI=all.filter(n=>!/^f(like|com)$/.test(n.kind));sbBadge();spBadge();if(nw&&step===96)setTimeout(spNotiShow,600);}}catch(e){console.error(e);}};})();
+function spBadge(){const b=document.querySelector('#bnav [data-nv="sahne"]');if(!b)return;let d=b.querySelector(".sbdot");const n=SB_FNOTI.length;if(!n){if(d)d.remove();return;}if(!d){d=document.createElement("span");d.className="sbdot";b.appendChild(d);}d.textContent=n>9?"9+":n;}
+function spNotiRead(ids){if(!ids.length)return;SB_FNOTI=SB_FNOTI.filter(n=>!ids.includes(n.id));spBadge();sbReq("PATCH",`notifications?id=in.(${ids.join(",")})`,{read:true},"return=minimal");}
+const SPN_SEEN=new Set();function spNotiShow(force){if(!SB_FNOTI.length||document.getElementById("spnoti"))return;if(!force&&SB_FNOTI.every(n=>SPN_SEEN.has(n.id)))return;SB_FNOTI.forEach(n=>SPN_SEEN.add(n.id));const by={};SB_FNOTI.forEach(n=>{const k=n.book_key;(by[k]=by[k]||{key:k,title:n.book_title,likes:[],coms:[],ids:[]});by[k][n.kind==="flike"?"likes":"coms"].push(n.actor);by[k].ids.push(n.id);});
+ const G=Object.values(by);const uq=a=>[...new Set(a)];
+ const row=g=>{const id=g.key.replace(/^film:/,""),f=spFilm(id);const L=uq(g.likes),C=uq(g.coms);const parts=[];if(L.length)parts.push(`<b>${esc(L[0])}</b>${L.length>1?` ve ${L.length-1} kişi daha`:""} yorumunu beğendi`);if(C.length)parts.push(`<b>${esc(C[0])}</b>${C.length>1?` ve ${C.length-1} kişi daha`:""} bu filme yorum yazdı`);
+  return `<button type="button" class="spn-it" data-spn="${esc(id)}"><span class="spn-pos">${f?spPoster(f,"xs"):`<span class="sevp-ph mini">${SP_EMBLEM}</span>`}</span><span class="spn-tx"><strong>${esc((f&&f[1])||g.title||"Film")}</strong><small>${parts.join(" · ")}</small></span><i>${L.length&&!C.length?"♥":`<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 5.5h16v10H9l-4 3.5v-3.5H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>`}</i></button>`;};
+ const O=ySheet("spnoti",`<div class="shs-h"><div><small>Me First yorumları</small><b>Perde'de neler oldu?</b></div><button type="button" class="shs-x" aria-label="Kapat">✕</button></div><div class="spn-l">${G.map(row).join("")}</div><button type="button" class="mbtn spn-ok">Tamam</button>`,"spn-sheet");
+ O.querySelectorAll("[data-spn]").forEach(b=>b.onclick=()=>{const id=b.dataset.spn;const g=G.find(x=>x.key==="film:"+id);spNotiRead(g?g.ids:[]);O._close&&O._close();setTimeout(()=>{if(spFilm(id)){spFilmOpen(id);setTimeout(()=>{const c=document.querySelector("#ysheet #spc");if(c)c.scrollIntoView({behavior:"smooth",block:"start"});},700);}},260);});
+ O.querySelector(".spn-ok").onclick=()=>{spNotiRead(SB_FNOTI.map(n=>n.id));O._close&&O._close();};}
+(function(){const _r=spRender;spRender=function(){const r=_r.apply(this,arguments);try{spBadge();if(SB_FNOTI.length)setTimeout(spNotiShow,500);else sbNotiPull();}catch(e){}return r;};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
