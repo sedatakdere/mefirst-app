@@ -2,6 +2,8 @@
 import hashlib, html, io, json, os, re, time, unicodedata, urllib.parse, urllib.request
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36 MeFirstCoverBot/1.0",
       "Accept-Language": "tr-TR,tr;q=0.9"}
+DBG = {}
+ALIAS = {"Ove Adında Bir Adam": "Hayata Röveşata Çeken Adam"}
 ROOT = "app/kapak"; MAP = ROOT + "/kapak.json"; REP = ROOT + "/rapor.json"
 def fetch(url, raw=False, t=15):
     req = urllib.request.Request(url, headers=UA)
@@ -38,8 +40,10 @@ def kitapyurdu(t, a):
 def dr(t, a):
     for qq in (f"{t} {a}".strip(), t):
         p = fetch("https://www.dr.com.tr/search?q=" + urllib.parse.quote_plus(qq))
-        for alt, src in imgs(p, "dr.com.tr"):
+        L = imgs(p, "dr.com.tr")
+        for alt, src in L:
             if same(alt, t) and re.search(r"\.(jpe?g|png|webp)", src, re.I): return src
+        DBG.setdefault(t, []).append({"q": qq, "n": len(p), "alts": [a for a, _ in L][:6]})
         time.sleep(0.6)
     return ""
 def idefix(t, a):
@@ -64,7 +68,7 @@ def openlib(t, a):
     for d in j.get("docs", []):
         if d.get("cover_i") and same(d.get("title", ""), t, True): return f"https://covers.openlibrary.org/b/id/{d['cover_i']}-L.jpg"
     return ""
-SRC = [("dr", dr), ("idefix", idefix), ("kitapyurdu", kitapyurdu), ("google", gbooks), ("openlibrary", openlib)]
+SRC = [("dr", dr), ("idefix", idefix), ("kitapyurdu", kitapyurdu), ("google", gbooks)]
 def save_img(u, path):
     from PIL import Image
     b = fetch(u, raw=True)
@@ -86,7 +90,7 @@ def books():
     except Exception: pass
     seen, out = set(), []
     for t, a in rows:
-        if a.startswith("#"): continue
+        if a.startswith("#") or "_" in t or not re.search(r"[A-Za-zÇĞİÖŞÜçğıöşü]{2}", t): continue
         k = tkey(t)
         if k in seen or k in have: continue
         seen.add(k); out.append((t, a))
@@ -102,7 +106,7 @@ def main():
         errs = []
         for name, fn in SRC:
             try:
-                u = fn(t, a)
+                u = fn(ALIAS.get(t, t), a)
                 if not u: errs.append(name + ":yok"); continue
                 fid = hashlib.sha1(k.encode()).hexdigest()[:12]
                 save_img(u, f"{ROOT}/{fid}.jpg")
@@ -115,6 +119,7 @@ def main():
         else:
             R["bulunamayan"][t] = errs
     json.dump(M, open(MAP, "w", encoding="utf-8"), ensure_ascii=False, indent=0, sort_keys=True)
+    R["dbg"] = DBG
     json.dump(R, open(REP, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(len(R["bulunan"]), "bulundu,", len(R["bulunamayan"]), "bulunamadı", R["kaynak"])
 main()
