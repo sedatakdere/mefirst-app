@@ -1,0 +1,209 @@
+{
+ "tarih": "2026-11-16 12:19",
+ "bulunan": {
+  "Roma'nın Beş Günü": "dr",
+  "Rüzgar Adımı Biliyor": "dr",
+  "Onlar Yaşadı Ben Yazdım": "dr",
+  "Beni Bir Temiz Dövseler": "dr",
+  "Okudum da Ne Oldu?": "dr",
+  "Paris Buluşmaları": "dr",
+  "Merhaba Acımasız Dünya": "dr",
+  "Melek": "dr",
+  "Hizmetçi ve Profesör": "dr",
+  "Olive Kitteridge": "openlibrary",
+  "Karaağaç": "dr",
+  "Ölümlüler İçin Derin Düşünceler": "dr",
+  "Bekar ve Mutlu Nasıl Yaşanır?": "dr",
+  "Son Demlerinde Hayat": "dr",
+  "El Feneri": "dr",
+  "Yüzlerce Gölge": "dr",
+  "Ressam": "dr",
+  "Okulda Öğretilmeyenler Listesi": "dr",
+  "Renkli Duygular Oteli": "dr",
+  "Kayıp Söz": "dr",
+  "Çocukluğun Soğuk Geceleri": "dr",
+  "Tante Rosa": "dr",
+  "Nefes Nefese": "dr",
+  "Piraye": "dr",
+  "Ruhlar Evi": "dr",
+  "Simyacı": "dr",
+  "Gece Yarısı Kütüphanesi": "dr",
+  "Doğu Ekspresinde Cinayet": "dr",
+  "Gurur ve Önyargı": "dr",
+  "Anna Karenina": "dr",
+  "Satranç": "dr",
+  "Atomik Alışkanlıklar": "dr",
+  "Duygusal Zekâ": "dr",
+  "İçimizdeki Çocuk": "dr",
+  "Türklerin Tarihi": "dr",
+  "Üvercinka": "dr",
+  "İnce Memed": "dr",
+  "Kuyucaklı Yusuf": "dr",
+  "Kiralık Konak": "dr",
+  "Puslu Kıtalar Atlası": "dr",
+  "Sultanı Öldürmek": "dr",
+  "Patasana": "dr",
+  "Adı: Aylin": "dr",
+  "Fi": "openlibrary",
+  "Kayıp Gül": "dr",
+  "Memleketimden İnsan Manzaraları": "dr",
+  "Sevda Sözleri": "dr",
+  "Bir Ömür Nasıl Yaşanır?": "dr",
+  "Şeker Portakalı": "dr",
+  "Küçük Prens": "dr",
+  "1984": "dr",
+  "Hayvan Çiftliği": "dr",
+  "Suç ve Ceza": "dr",
+  "Beyaz Geceler": "dr",
+  "Yüzyıllık Yalnızlık": "dr",
+  "Kolera Günlerinde Aşk": "dr",
+  "Bülbülü Öldürmek": "dr",
+  "Jane Eyre": "dr",
+  "Uğultulu Tepeler": "dr",
+  "Sefiller": "dr",
+  "Madame Bovary": "dr",
+  "Dönüşüm": "dr",
+  "Bilinmeyen Bir Kadının Mektubu": "dr",
+  "Fareler ve İnsanlar": "dr",
+  "Martin Eden": "dr",
+  "Kendine Ait Bir Oda": "dr",
+  "Uçurtma Avcısı": "dr",
+  "Bin Muhteşem Güneş": "dr",
+  "Normal İnsanlar": "dr",
+  "Bir Gün": "dr",
+  "Senden Önce Ben": "dr",
+  "Ben, Kirke": "dr",
+  "Sessiz Hasta": "dr",
+  "Ejderha Dövmeli Kız": "dr",
+  "Hayvanlardan Tanrılara: Sapiens": "dr",
+  "Kurtlarla Koşan Kadınlar": "dr",
+  "İnsanın Anlam Arayışı": "dr",
+  "Beden Kayıt Tutar": "dr",
+  "Bütün Beyinli Çocuk": "dr",
+  "Pal Sokağı Çocukları": "dr",
+  "Matilda": "dr",
+  "Charlie'nin Çikolata Fabrikası": "dr",
+  "Momo": "dr",
+  "Zeytin yeşili": "dr",
+  "Mor": "dr"
+ },
+ "bulunamayan": {
+  "Kedi Kitabı": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:yok",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:yok"
+  ],
+  "Kurt Seyit ve Şura": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:yok",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:yok"
+  ],
+  "Ove Adında Bir Adam": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:yok",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:yok"
+  ],
+  "Dört Bin Hafta": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:yok",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:yok"
+  ],
+  "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:yok",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:yok"
+  ],
+  "Evelyn Hugo'nun Yedi Kocası": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:yok",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:yok"
+  ],
+  "Ve Sonra Hiç Kalmadı": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:yok",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:yok"
+  ],
+  "Şimdinin Gücü": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:yok",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:yok"
+  ],
+  "Keşke Ailemin Okuduğu Bir Kitap Olsaydı": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:yok",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:yok"
+  ],
+  "istek_x": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:yok",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:HTTPError:HTTP Error 500: Internal Server Error"
+  ],
+  "Böğürtlen & bordo": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:yok",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:yok"
+  ],
+  "Çikolata": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:ValueError:boyut 180x160",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:URLError:<urlopen error [Errno 104] Connection reset by peer>"
+  ],
+  "Şekerli pembe": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:yok",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:yok"
+  ],
+  "Domates kırmızısı": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:yok",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:yok"
+  ],
+  "Kobalt mavisi": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:yok",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:yok"
+  ],
+  "🌙": [
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "idefix:yok",
+   "dr:yok",
+   "google:HTTPError:HTTP Error 429: Too Many Requests",
+   "openlibrary:yok"
+  ]
+ },
+ "kaynak": {
+  "dr": 83,
+  "openlibrary": 2
+ },
+ "toplam": 101
+}
