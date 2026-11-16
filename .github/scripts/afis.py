@@ -161,8 +161,8 @@ for w in W[:80]:
     q, kind = str(w.get("q", "")), w.get("kind", "")
     try:
         qid = ""
-        m = re.match(r"wd:(Q\d+)", q)
-        if kind == "film" and m: qid = m.group(1)
+        m = re.match(r"wd:(q\d+)", q, re.I)
+        if kind == "film" and m: qid = m.group(1).upper()
         elif kind == "sahne" and len(q) >= 3:
             for lang in ("tr", "en"):
                 for src, qd in wiki(lang, q, ""):
