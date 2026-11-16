@@ -43,7 +43,7 @@ def dr(t, a):
         L = imgs(p, "dr.com.tr")
         for alt, src in L:
             if same(alt, t) and re.search(r"\.(jpe?g|png|webp)", src, re.I): return src
-        DBG.setdefault(t, []).append({"q": qq, "n": len(p), "alts": [a for a, _ in L][:6]})
+        DBG.setdefault(t, []).append({"q": qq, "n": len(p), "alts": [a for a, _ in L if fold(t).split()[0] in fold(html.unescape(a))][:6], "imgs": len(L), "raw": [m.group(0)[:300] for m in re.finditer(r"<img\b[^>]*>", p) if fold(t).split()[-1] in fold(html.unescape(m.group(0)))][:3]})
         time.sleep(0.6)
     return ""
 def idefix(t, a):
