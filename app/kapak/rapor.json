@@ -1,8 +1,87 @@
 {
- "tarih": "2026-11-16 12:38",
- "bulunan": {},
+ "tarih": "2026-11-16 12:40",
+ "bulunan": {
+  "Roma'nın Beş Günü": "dr",
+  "Rüzgar Adımı Biliyor": "dr",
+  "Onlar Yaşadı Ben Yazdım": "dr",
+  "Beni Bir Temiz Dövseler": "dr",
+  "Okudum da Ne Oldu?": "dr",
+  "Paris Buluşmaları": "dr",
+  "Merhaba Acımasız Dünya": "dr",
+  "Melek": "dr",
+  "Hizmetçi ve Profesör": "dr",
+  "Karaağaç": "dr",
+  "Ölümlüler İçin Derin Düşünceler": "dr",
+  "Son Demlerinde Hayat": "dr",
+  "El Feneri": "dr",
+  "Yüzlerce Gölge": "dr",
+  "Ressam": "dr",
+  "Kedi Kitabı": "dr",
+  "Okulda Öğretilmeyenler Listesi": "dr",
+  "Renkli Duygular Oteli": "dr",
+  "Kayıp Söz": "dr",
+  "Çocukluğun Soğuk Geceleri": "dr",
+  "Tante Rosa": "dr",
+  "Nefes Nefese": "dr",
+  "Piraye": "dr",
+  "Ruhlar Evi": "dr",
+  "Simyacı": "dr",
+  "Gece Yarısı Kütüphanesi": "dr",
+  "Doğu Ekspresinde Cinayet": "dr",
+  "Gurur ve Önyargı": "dr",
+  "Anna Karenina": "dr",
+  "Satranç": "dr",
+  "Atomik Alışkanlıklar": "dr",
+  "Duygusal Zekâ": "dr",
+  "İçimizdeki Çocuk": "dr",
+  "Türklerin Tarihi": "dr",
+  "Üvercinka": "dr",
+  "İnce Memed": "dr",
+  "Kuyucaklı Yusuf": "dr",
+  "Kiralık Konak": "dr",
+  "Puslu Kıtalar Atlası": "dr",
+  "Sultanı Öldürmek": "dr",
+  "Patasana": "dr",
+  "Adı: Aylin": "dr",
+  "Memleketimden İnsan Manzaraları": "dr",
+  "Sevda Sözleri": "dr",
+  "Bir Ömür Nasıl Yaşanır?": "dr",
+  "Şeker Portakalı": "dr",
+  "Küçük Prens": "dr",
+  "Hayvan Çiftliği": "dr",
+  "Suç ve Ceza": "dr",
+  "Beyaz Geceler": "dr",
+  "Yüzyıllık Yalnızlık": "dr",
+  "Kolera Günlerinde Aşk": "dr",
+  "Jane Eyre": "dr",
+  "Uğultulu Tepeler": "dr",
+  "Sefiller": "dr",
+  "Madame Bovary": "dr",
+  "Dönüşüm": "dr",
+  "Bilinmeyen Bir Kadının Mektubu": "dr",
+  "Fareler ve İnsanlar": "dr",
+  "Martin Eden": "dr",
+  "Kendine Ait Bir Oda": "dr",
+  "Uçurtma Avcısı": "dr",
+  "Bin Muhteşem Güneş": "dr",
+  "Normal İnsanlar": "dr",
+  "Bir Gün": "dr",
+  "Senden Önce Ben": "dr",
+  "Ben, Kirke": "dr",
+  "Sessiz Hasta": "dr",
+  "Ejderha Dövmeli Kız": "dr",
+  "Hayvanlardan Tanrılara: Sapiens": "dr",
+  "Kurtlarla Koşan Kadınlar": "dr",
+  "İnsanın Anlam Arayışı": "dr",
+  "Beden Kayıt Tutar": "dr",
+  "Bütün Beyinli Çocuk": "dr",
+  "Pal Sokağı Çocukları": "dr",
+  "Matilda": "dr",
+  "Charlie'nin Çikolata Fabrikası": "dr",
+  "Momo": "dr"
+ },
  "bulunamayan": {
-  "Kedi Kitabı": [
+  "Bekar ve Mutlu Nasıl Yaşanır?": [
    "dr:yok",
    "idefix:yok",
    "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
@@ -32,8 +111,20 @@
    "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
    "google:HTTPError:HTTP Error 429: Too Many Requests"
   ],
+  "Fi": [
+   "dr:yok",
+   "idefix:yok",
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "google:HTTPError:HTTP Error 429: Too Many Requests"
+  ],
   "Kayıp Gül": [
    "dr:yok",
+   "idefix:yok",
+   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
+   "google:HTTPError:HTTP Error 429: Too Many Requests"
+  ],
+  "Bülbülü Öldürmek": [
+   "dr:ValueError:boyut 180x180",
    "idefix:yok",
    "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
    "google:HTTPError:HTTP Error 429: Too Many Requests"
@@ -63,41 +154,36 @@
    "google:HTTPError:HTTP Error 429: Too Many Requests"
   ]
  },
- "kaynak": {},
+ "kaynak": {
+  "dr": 78
+ },
  "toplam": 91,
  "dbg": {
-  "Kedi Kitabı": [
+  "Bekar ve Mutlu Nasıl Yaşanır?": [
    {
-    "q": "Kedi Kitabı Ursula K. Le Guin",
-    "n": 726786,
+    "q": "Bekar ve Mutlu Nasıl Yaşanır? Jennifer Taitz",
+    "n": 647268,
     "alts": [
-     "Ursula K.Le Guin&#39;in Kedi Kitabı",
-     "Kanatlı Kediler Masalı 4-Kentte Tek",
-     "Kanatlı Kediler Masalı 2-Yuvaya D&#246;n",
-     "Kanatlı Kediler Masalı 1 - D&#246;rt Yavru",
-     "Kanatlı Kediler Masalı 3 - Yeni Arkadaş"
+     "Bekar ve Mutlu Nasıl Yaşanır-Doğru Kişiyi Ararken Kendini Kaybetmenin Yolları"
     ],
     "imgs": 95,
     "raw": [
-     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002242447001-1.jpg\" height=\"194px\" alt=\"Ursula K.Le Guin&#39;in Kedi Kitabı\" />"
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002245066001-1.jpg\" height=\"194px\" alt=\"Bekar ve Mutlu Nasıl Yaşanır-Doğru Kişiyi Ararken Kendini Kaybetmenin Yolları\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0001909991001-1.jpg\" height=\"194px\" alt=\"Aşk Nedir ve Nasıl Yaşanır?\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002216872001-1.jpg\" height=\"194px\" alt=\"24 Saat Nasıl Yaşanır\" />"
     ]
    },
    {
-    "q": "Kedi Kitabı",
-    "n": 660237,
+    "q": "Bekar ve Mutlu Nasıl Yaşanır?",
+    "n": 646635,
     "alts": [
-     "Ursula K.Le Guin&#39;in Kedi Kitabı",
-     "Kitapları Kurtaran Kedi",
-     "Kedi Pon&#231;ik&#39;le Kedi Olma Kuralları - Zıtlıklar Kitabı",
-     "K&#252;&#231;&#252;k Kediler - Bebek Kitapları",
-     "Kedi - Şekilli Kitap",
-     "İlk Sesli Kitabım - Benim Kedim"
+     "Bekar ve Mutlu Nasıl Yaşanır-Doğru Kişiyi Ararken Kendini Kaybetmenin Yolları"
     ],
     "imgs": 95,
     "raw": [
-     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002242447001-1.jpg\" height=\"194px\" alt=\"Ursula K.Le Guin&#39;in Kedi Kitabı\" />",
-     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002132103001-1.jpg\" height=\"194px\" alt=\"Kedi Pon&#231;ik&#39;le Kedi Olma Kuralları - Zıtlıklar Kitabı\" />",
-     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002219723001-1.jpg\" height=\"194px\" alt=\"İlk Sesli Kitabım - Benim Kedim\" />"
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002245066001-1.jpg\" height=\"194px\" alt=\"Bekar ve Mutlu Nasıl Yaşanır-Doğru Kişiyi Ararken Kendini Kaybetmenin Yolları\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0001909991001-1.jpg\" height=\"194px\" alt=\"Aşk Nedir ve Nasıl Yaşanır?\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002216872001-1.jpg\" height=\"194px\" alt=\"24 Saat Nasıl Yaşanır\" />"
     ]
    }
   ],
@@ -118,7 +204,7 @@
    },
    {
     "q": "Kurt Seyit ve Şura",
-    "n": 613840,
+    "n": 613844,
     "alts": [
      "Peynir ve Kurtlar",
      "Ayı ve Kurt",
@@ -134,14 +220,14 @@
   "Hayata Röveşata Çeken Adam": [
    {
     "q": "Hayata Röveşata Çeken Adam Fredrik Backman",
-    "n": 411620,
+    "n": 411624,
     "alts": [],
     "imgs": 62,
     "raw": []
    },
    {
     "q": "Hayata Röveşata Çeken Adam",
-    "n": 624659,
+    "n": 624663,
     "alts": [
      "Kızlar &#199;etesi - Adım Adım Hayata"
     ],
@@ -156,7 +242,7 @@
   "Dört Bin Hafta": [
    {
     "q": "Dört Bin Hafta Oliver Burkeman",
-    "n": 352061,
+    "n": 352065,
     "alts": [
      "Anadolu&#39;da D&#246;rt Bin Yılı Yaşayanlar",
      "Bilim: D&#246;rt Bin Yıllık Bir Tarih"
@@ -170,8 +256,8 @@
     "alts": [
      "Bilim: D&#246;rt Bin Yıllık Bir Tarih",
      "Anadolu&#39;da D&#246;rt Bin Yılı Yaşayanlar",
-     "Lanark D&#246;rt Kitaplık Bir Hayat",
      "D&#246;rt Kafadarlar Takımı 14-Limandaki Canavar",
+     "Lanark D&#246;rt Kitaplık Bir Hayat",
      "D&#246;rt Kafadarlar Takımı 44 - Han&#231;er Dişli Kaplanlar",
      "D&#246;rt Kafadarlar Takımı 13-Uğursuz Kuşun &#214;t&#252;ş&#252;"
     ],
@@ -182,7 +268,7 @@
   "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli": [
    {
     "q": "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli Adele Faber & Elaine Mazlish",
-    "n": 701340,
+    "n": 701344,
     "alts": [
      "&#199;ocuklarımızla Cinsellik Hakkında Nasıl Konuşmalı?",
      "Gizemli Mağara - &#199;ocuklar i&#231;in Felsefe",
@@ -209,6 +295,41 @@
     "raw": []
    }
   ],
+  "Fi": [
+   {
+    "q": "Fi Azra Kohen",
+    "n": 346685,
+    "alts": [
+     "OFİS,&lt;br&gt;KIRTASİYE",
+     "SAP FI",
+     "G&uuml;venlik Sertifikası"
+    ],
+    "imgs": 59,
+    "raw": [
+     "<img width='1140px' height='60px' src='//i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/OGRTMENLER-GUNU-HELLO-BAR-OLCULERI_2280-x-120.webp' alt=''>",
+     "<img width='1140px' height='60px' src='//i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/hello-bar-2280-x-120.webp' alt=''>",
+     "<img width='1140px' height='60px' src='//i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/MAGAZA-TESLIMAT-HELLO-BAR-KIR_2280-x-120.webp' alt=''>"
+    ]
+   },
+   {
+    "q": "Fi",
+    "n": 642341,
+    "alts": [
+     "OFİS,&lt;br&gt;KIRTASİYE",
+     "Fince S&#246;zl&#252;k: T&#252;rk&#231;e Fince - Fince T&#252;rk&#231;e",
+     "SAP FI",
+     "Fi Emanillah",
+     "Fince/T&#252;rk&#231;e-T&#252;rk&#231;e/Fince Cep S&#246;zl&#252;ğ&#252;",
+     "Fi Tarihinden Hikayeler"
+    ],
+    "imgs": 95,
+    "raw": [
+     "<img width='1140px' height='60px' src='//i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/OGRTMENLER-GUNU-HELLO-BAR-OLCULERI_2280-x-120.webp' alt=''>",
+     "<img width='1140px' height='60px' src='//i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/hello-bar-2280-x-120.webp' alt=''>",
+     "<img width='1140px' height='60px' src='//i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/MAGAZA-TESLIMAT-HELLO-BAR-KIR_2280-x-120.webp' alt=''>"
+    ]
+   }
+  ],
   "Kayıp Gül": [
    {
     "q": "Kayıp Gül Serdar Özkan",
@@ -224,7 +345,7 @@
    },
    {
     "q": "Kayıp Gül",
-    "n": 668104,
+    "n": 668971,
     "alts": [
      "Kayıp G&#252;l 2 - &#214;l&#252;ms&#252;z Kalp",
      "Kayıp Kiracı",
@@ -244,7 +365,7 @@
   "Evelyn Hugo'nun Yedi Kocası": [
    {
     "q": "Evelyn Hugo'nun Yedi Kocası Taylor Jenkins Reid",
-    "n": 427354,
+    "n": 427358,
     "alts": [
      "Evelyn Hardcastle&#39;ın Yedi &#214;l&#252;m&#252;"
     ],
@@ -278,7 +399,7 @@
    },
    {
     "q": "Ve Sonra Hiç Kalmadı",
-    "n": 633000,
+    "n": 633004,
     "alts": [
      "EV VE &lt;br&gt;YAŞAM",
      "Kopuk ve Hi&#231;",
@@ -294,7 +415,7 @@
   "Şimdinin Gücü": [
    {
     "q": "Şimdinin Gücü Eckhart Tolle",
-    "n": 497549,
+    "n": 497553,
     "alts": [],
     "imgs": 67,
     "raw": [
@@ -305,7 +426,7 @@
    },
    {
     "q": "Şimdinin Gücü",
-    "n": 697159,
+    "n": 694271,
     "alts": [
      "Şimdinin Bilgeliği"
     ],
@@ -320,7 +441,7 @@
   "Keşke Ailemin Okuduğu Bir Kitap Olsaydı": [
    {
     "q": "Keşke Ailemin Okuduğu Bir Kitap Olsaydı Philippa Perry",
-    "n": 660993,
+    "n": 660997,
     "alts": [
      "Keşke T&#252;m Sevdiklerim De Okusa Dediğiniz Kitap",
      "Keşke Zamanım Olsaydı",
@@ -337,7 +458,7 @@
    },
    {
     "q": "Keşke Ailemin Okuduğu Bir Kitap Olsaydı",
-    "n": 659506,
+    "n": 659510,
     "alts": [
      "Keşke Zamanım Olsaydı",
      "Keşke - Sessiz Kitap",
