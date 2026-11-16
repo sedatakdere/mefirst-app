@@ -7945,6 +7945,10 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+body.zs-on .bnav{z-index:70}
+body.zs-on #zsh{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+body.zs-on #zsh .rs-btn.kf{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+
 .cp-envl{grid-template-columns:minmax(0,1fr)}.cp-envr{min-width:0}
 .cp-locked-f{display:none!important}
 
@@ -18718,6 +18722,17 @@ let MF_SHOWN;function mfShown(){if(!MF_SHOWN){try{MF_SHOWN=new Set(JSON.parse(lo
 function mfShownHas(k){return mfShown().has(k);}function mfShownAdd(k){mfShown().add(k);try{localStorage.setItem("mf-shown",JSON.stringify([...MF_SHOWN].slice(-400)));}catch(e){}}
 (function(){const _t=cpToast;cpToast=function(x){if(!x||!x.id||mfShownHas("c"+x.id))return;mfShownAdd("c"+x.id);return _t.apply(this,arguments);};
  const _s=spNotiShow;spNotiShow=function(force){const ids=(SB_FNOTI||[]).map(n=>n.id);if(!force&&ids.length&&ids.every(i=>mfShownHas("f"+i)))return;const r=_s.apply(this,arguments);if(document.getElementById("spnoti")){ids.forEach(i=>mfShownAdd("f"+i));try{spNotiRead(ids);}catch(e){}}return r;};})();
+/* v0.69.2: Keyif köşemde de alt menü — kaydırınca gizlenir/çıkar; oyunların tam ekran halinde gizli */
+(function(){const Z=document.getElementById("zsh");if(!Z)return;const nav=()=>document.getElementById("bnav");
+ const sync=()=>{const on=!Z.hidden,pz=on&&Z.classList.contains("pzmode");document.body.classList.toggle("zs-on",on&&!pz);document.body.classList.toggle("zs-pz",pz);
+  const n=nav();if(!n)return;if(on){n.classList.remove("nav-hide");n.querySelectorAll("[data-nv]").forEach(b=>b.setAttribute("aria-current",b.dataset.nv==="keyif"?"page":"false"));}else{try{navCur();}catch(e){}}};
+ new MutationObserver(sync).observe(Z,{attributes:true,attributeFilter:["hidden","class"]});
+ let ly=0,acc=0;Z.addEventListener("scroll",()=>{const y=Z.scrollTop,d=y-ly;ly=y;const n=nav();if(!n||Z.classList.contains("pzmode"))return;const max=Z.scrollHeight-Z.clientHeight;
+  if(y<40||max<120){n.classList.remove("nav-hide");acc=0;return;}if((d>0)!==(acc>0))acc=0;acc+=d;if(acc>28)n.classList.add("nav-hide");else if(acc<-14)n.classList.remove("nav-hide");},{passive:true});
+ document.addEventListener("click",e=>{const b=e.target.closest("#bnav [data-nv]");if(!b||Z.hidden)return;
+  if(b.dataset.nv==="keyif"){e.stopPropagation();e.preventDefault();kv="hub";keyRender();Z.scrollTop=0;return;}
+  zodClose();},true);})();
+
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
