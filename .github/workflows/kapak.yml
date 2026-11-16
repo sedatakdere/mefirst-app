@@ -1,0 +1,26 @@
+name: Kitap kapakları
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/kapak.yml", ".github/scripts/kapak.py"]
+  workflow_dispatch:
+  schedule:
+    - cron: "41 3 * * 3"
+permissions:
+  contents: write
+concurrency: kapak
+jobs:
+  kapak:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hazırlık
+        run: pip install --quiet pillow
+      - name: Kapakları indir
+        run: python3 .github/scripts/kapak.py
+      - name: Kaydet
+        run: |
+          git config user.name "Me First Bot"
+          git config user.email "me-first-bot@users.noreply.github.com"
+          git add app/kapak
+          git diff --cached --quiet || (git commit -m "Kitap kapakları güncellendi" && git pull --rebase && git push)

@@ -18704,6 +18704,15 @@ function rsPwInject(){const w=document.querySelector("#ktpanel .ktshelf.wsh");if
  const _pl=cpPull;cpPull=async function(){await _pl.apply(this,arguments);try{if(step===95)rsStrip(document.getElementById("macpanel"),["mac"],"Ruh eşinden maceralar");if(step===96||document.getElementById("sppanel")&&!document.getElementById("sppanel").closest("[hidden]"))rsStrip(document.getElementById("sppanel"),["film","etk"],"Ruh eşinden davetler");if(step===90)rsPwInject();}catch(e){}};
 })();
 
+/* ===== v0.69 Kendi kapak arşivimiz (app/kapak, bot doldurur) — her kaynaktan önce gelir ===== */
+const KAPAK={m:{}};
+function kpFold(s){return String(s||"").replace(/ı/g,"i").replace(/İ/g,"i").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();}
+function kpKey(t){return kpFold(String(t||"").split(/\s*[:(]\s*/)[0]);}
+(function(){try{const c=JSON.parse(localStorage.getItem("mf-kapak")||"null");if(c)KAPAK.m=c;}catch(e){}
+ fetch("kapak/kapak.json?d="+dkey(),{cache:"no-store"}).then(r=>r.ok?r.json():null).then(j=>{if(!j)return;KAPAK.m=j;try{localStorage.setItem("mf-kapak",JSON.stringify(j));}catch(e){}
+  document.querySelectorAll("[data-cvt]").forEach(el=>{if(!el.classList.contains("hascv")&&KAPAK.m[kpKey(el.dataset.cvt)])delete el.dataset.cvd;});try{covScan();}catch(e){}}).catch(()=>{});
+ const _g=covGet;covGet=function(t,a){const u=KAPAK.m[kpKey(t)];if(u&&!(typeof COV_BAD!=="undefined"&&COV_BAD[u]))return u;return _g(t,a);};})();
+
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
