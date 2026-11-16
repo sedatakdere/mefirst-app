@@ -1,5 +1,5 @@
 {
- "tarih": "2026-11-16 12:35",
+ "tarih": "2026-11-16 12:38",
  "bulunan": {},
  "bulunamayan": {
   "Kedi Kitabı": [
@@ -69,26 +69,35 @@
   "Kedi Kitabı": [
    {
     "q": "Kedi Kitabı Ursula K. Le Guin",
-    "n": 726744,
+    "n": 726786,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
+     "Ursula K.Le Guin&#39;in Kedi Kitabı",
+     "Kanatlı Kediler Masalı 4-Kentte Tek",
+     "Kanatlı Kediler Masalı 2-Yuvaya D&#246;n",
+     "Kanatlı Kediler Masalı 1 - D&#246;rt Yavru",
+     "Kanatlı Kediler Masalı 3 - Yeni Arkadaş"
+    ],
+    "imgs": 95,
+    "raw": [
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002242447001-1.jpg\" height=\"194px\" alt=\"Ursula K.Le Guin&#39;in Kedi Kitabı\" />"
     ]
    },
    {
     "q": "Kedi Kitabı",
-    "n": 660255,
+    "n": 660237,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
+     "Ursula K.Le Guin&#39;in Kedi Kitabı",
+     "Kitapları Kurtaran Kedi",
+     "Kedi Pon&#231;ik&#39;le Kedi Olma Kuralları - Zıtlıklar Kitabı",
+     "K&#252;&#231;&#252;k Kediler - Bebek Kitapları",
+     "Kedi - Şekilli Kitap",
+     "İlk Sesli Kitabım - Benim Kedim"
+    ],
+    "imgs": 95,
+    "raw": [
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002242447001-1.jpg\" height=\"194px\" alt=\"Ursula K.Le Guin&#39;in Kedi Kitabı\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002132103001-1.jpg\" height=\"194px\" alt=\"Kedi Pon&#231;ik&#39;le Kedi Olma Kuralları - Zıtlıklar Kitabı\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002219723001-1.jpg\" height=\"194px\" alt=\"İlk Sesli Kitabım - Benim Kedim\" />"
     ]
    }
   ],
@@ -97,50 +106,50 @@
     "q": "Kurt Seyit ve Şura Nermin Bezmen",
     "n": 631881,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
-    ]
+     "Kurt Seyt ve Shura",
+     "Peynir ve Kurtlar",
+     "Ayı ve Kurt",
+     "Kurt ve Ormancı",
+     "G&#252;zelim Portakal-B&#252;y&#252;k Kurt ve K&#252;&#231;&#252;k Kurt",
+     "Kurt ve Kız"
+    ],
+    "imgs": 95,
+    "raw": []
    },
    {
     "q": "Kurt Seyit ve Şura",
     "n": 613840,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
-    ]
+     "Peynir ve Kurtlar",
+     "Ayı ve Kurt",
+     "Kurt ve Ormancı",
+     "G&#252;zelim Portakal-B&#252;y&#252;k Kurt ve K&#252;&#231;&#252;k Kurt",
+     "Kurt ve Kız",
+     "Beklenmeyen Misafir-B&#252;y&#252;k Kurt ve K&#252;&#231;&#252;k Kurt"
+    ],
+    "imgs": 95,
+    "raw": []
    }
   ],
   "Hayata Röveşata Çeken Adam": [
    {
     "q": "Hayata Röveşata Çeken Adam Fredrik Backman",
     "n": 411620,
-    "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
-    ]
+    "alts": [],
+    "imgs": 62,
+    "raw": []
    },
    {
     "q": "Hayata Röveşata Çeken Adam",
     "n": 624659,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
+     "Kızlar &#199;etesi - Adım Adım Hayata"
+    ],
+    "imgs": 95,
+    "raw": [
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0001705183001-1.jpg\" height=\"194px\" alt=\"Acı &#199;eken Bilim Adamları\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0000000629336-1.jpg\" height=\"194px\" alt=\"Kuyrukluyıldız Eken Adam\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0001802593001-1.jpg\" height=\"194px\" alt=\"Hayatındaki T&#252;m Kışları Unutan Adam\" />"
     ]
    }
   ],
@@ -149,51 +158,55 @@
     "q": "Dört Bin Hafta Oliver Burkeman",
     "n": 352061,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
-    ]
+     "Anadolu&#39;da D&#246;rt Bin Yılı Yaşayanlar",
+     "Bilim: D&#246;rt Bin Yıllık Bir Tarih"
+    ],
+    "imgs": 59,
+    "raw": []
    },
    {
     "q": "Dört Bin Hafta",
     "n": 549308,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
-    ]
+     "Bilim: D&#246;rt Bin Yıllık Bir Tarih",
+     "Anadolu&#39;da D&#246;rt Bin Yılı Yaşayanlar",
+     "Lanark D&#246;rt Kitaplık Bir Hayat",
+     "D&#246;rt Kafadarlar Takımı 14-Limandaki Canavar",
+     "D&#246;rt Kafadarlar Takımı 44 - Han&#231;er Dişli Kaplanlar",
+     "D&#246;rt Kafadarlar Takımı 13-Uğursuz Kuşun &#214;t&#252;ş&#252;"
+    ],
+    "imgs": 82,
+    "raw": []
    }
   ],
   "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli": [
    {
     "q": "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli Adele Faber & Elaine Mazlish",
-    "n": 700901,
+    "n": 701340,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
-    ]
+     "&#199;ocuklarımızla Cinsellik Hakkında Nasıl Konuşmalı?",
+     "Gizemli Mağara - &#199;ocuklar i&#231;in Felsefe",
+     "Athena&#39;nın İntikamı - &#199;ocuklar i&#231;in Felsefe",
+     "Ş&#246;len - &#199;ocuklar i&#231;in Felsefe",
+     "Her Şeyin Başlangıcı - &#199;ocuklar i&#231;in Felsefe",
+     "Muhteşem Atlantis Krallığı - &#199;ocuklar i&#231;in Felsefe"
+    ],
+    "imgs": 95,
+    "raw": []
    },
    {
     "q": "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli",
     "n": 696140,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
-    ]
+     "&#199;ocuklarımızla Cinsellik Hakkında Nasıl Konuşmalı?",
+     "Gizemli Mağara - &#199;ocuklar i&#231;in Felsefe",
+     "Athena&#39;nın İntikamı - &#199;ocuklar i&#231;in Felsefe",
+     "Ş&#246;len - &#199;ocuklar i&#231;in Felsefe",
+     "Her Şeyin Başlangıcı - &#199;ocuklar i&#231;in Felsefe",
+     "Muhteşem Atlantis Krallığı - &#199;ocuklar i&#231;in Felsefe"
+    ],
+    "imgs": 95,
+    "raw": []
    }
   ],
   "Kayıp Gül": [
@@ -201,24 +214,30 @@
     "q": "Kayıp Gül Serdar Özkan",
     "n": 465177,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
+     "Kayıp G&#252;l 2 - &#214;l&#252;ms&#252;z Kalp"
+    ],
+    "imgs": 70,
+    "raw": [
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0000000380451-1.jpg\" height=\"194px\" alt=\"Kayıp G&#252;l 2 - &#214;l&#252;ms&#252;z Kalp\" />",
+     "<img class=\"footer-app-drawer__panel-image\" src=\"https://i.dr.com.tr/pimages/Content/Uploads/LandingPage/frontend-assets/dr-qr2x-2.webp\" alt=\"Mobil uygulama QR kodu\" />"
     ]
    },
    {
     "q": "Kayıp Gül",
     "n": 668104,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
+     "Kayıp G&#252;l 2 - &#214;l&#252;ms&#252;z Kalp",
+     "Kayıp Kiracı",
+     "Kayıp Kiracı",
+     "Albertine Kayıp",
+     "Kayıp Arkadaş",
+     "309 Kayıp G&#252;n"
+    ],
+    "imgs": 95,
+    "raw": [
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0000000380451-1.jpg\" height=\"194px\" alt=\"Kayıp G&#252;l 2 - &#214;l&#252;ms&#252;z Kalp\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0000000678603-1.jpg\" height=\"194px\" alt=\"G&#252;ld&#252;r G&#252;ld&#252;r Fıkralar\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002169285001-1.jpg\" height=\"194px\" alt=\"G&#252;l ve G&#252;ld&#252;r\" />"
     ]
    }
   ],
@@ -227,25 +246,19 @@
     "q": "Evelyn Hugo'nun Yedi Kocası Taylor Jenkins Reid",
     "n": 427354,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
-    ]
+     "Evelyn Hardcastle&#39;ın Yedi &#214;l&#252;m&#252;"
+    ],
+    "imgs": 65,
+    "raw": []
    },
    {
     "q": "Evelyn Hugo'nun Yedi Kocası",
     "n": 330286,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
-    ]
+     "Evelyn Hardcastle&#39;ın Yedi &#214;l&#252;m&#252;"
+    ],
+    "imgs": 56,
+    "raw": []
    }
   ],
   "Ve Sonra Hiç Kalmadı": [
@@ -253,76 +266,90 @@
     "q": "Ve Sonra Hiç Kalmadı Agatha Christie",
     "n": 756308,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
-    ]
+     "EV VE &lt;br&gt;YAŞAM",
+     "N veya M ?",
+     "G&#252;vercinler Arasında Bir Kedi",
+     "Beklenmeyen Şahit ve Diğer &#214;yk&#252;ler",
+     "Ve Ayna Kırıldı",
+     "Ve Perde İndi"
+    ],
+    "imgs": 95,
+    "raw": []
    },
    {
     "q": "Ve Sonra Hiç Kalmadı",
     "n": 633000,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
-    ]
+     "EV VE &lt;br&gt;YAŞAM",
+     "Kopuk ve Hi&#231;",
+     "Hın&#231; ve Hi&#231;",
+     "Gece ve Sonra",
+     "Her ve Hi&#231;",
+     "Hi&#231; ve Her Şey"
+    ],
+    "imgs": 95,
+    "raw": []
    }
   ],
   "Şimdinin Gücü": [
    {
     "q": "Şimdinin Gücü Eckhart Tolle",
     "n": 497549,
-    "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
+    "alts": [],
+    "imgs": 67,
+    "raw": [
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0001947084001-1.jpg\" height=\"194px\" alt=\"Şimdi&#39;nin G&#252;c&#252; G&#252;nl&#252;ğ&#252;\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0000000132448-1.jpg\" height=\"194px\" alt=\"Şimdi&#39;nin G&#252;c&#252; Uygulama Kitabı\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0000000104045-1.jpg\" height=\"194px\" alt=\"Şimdi&#39;nin G&#252;c&#252; - Ger&#231;eği Arayanların Mutlaka Okumaları Gereken Bir Kitap\" />"
     ]
    },
    {
     "q": "Şimdinin Gücü",
-    "n": 689027,
+    "n": 697159,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
+     "Şimdinin Bilgeliği"
+    ],
+    "imgs": 95,
+    "raw": [
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002097662001-1.jpg\" height=\"194px\" alt=\"Şimdi&#39;nin G&#252;c&#252;\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0001947084001-1.jpg\" height=\"194px\" alt=\"Şimdi&#39;nin G&#252;c&#252; G&#252;nl&#252;ğ&#252;\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0000000132448-1.jpg\" height=\"194px\" alt=\"Şimdi&#39;nin G&#252;c&#252; Uygulama Kitabı\" />"
     ]
    }
   ],
   "Keşke Ailemin Okuduğu Bir Kitap Olsaydı": [
    {
     "q": "Keşke Ailemin Okuduğu Bir Kitap Olsaydı Philippa Perry",
-    "n": 660994,
+    "n": 660993,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
+     "Keşke T&#252;m Sevdiklerim De Okusa Dediğiniz Kitap",
+     "Keşke Zamanım Olsaydı",
+     "Keşke - Sessiz Kitap",
+     "Bir K&#246;y Enstit&#252;s&#252; - Keşke",
+     "Keşke Bir &#214;p&#252;p Koklasaydım"
+    ],
+    "imgs": 95,
+    "raw": [
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0001792450001-1.jpg\" height=\"194px\" alt=\"Keşke Zamanım Olsaydı\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002020100001-1.jpg\" height=\"194px\" alt=\"Nietzsche Bir Denizgergedanı Olsaydı\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0000000640851-1.jpg\" height=\"194px\" alt=\"Eğer Bu Bir Film Olsaydı\" />"
     ]
    },
    {
     "q": "Keşke Ailemin Okuduğu Bir Kitap Olsaydı",
     "n": 659506,
     "alts": [
-     "KİTAP",
-     "",
-     "",
-     "",
-     "EĞİTİM &lt;br&gt;KİTAPLARI",
-     ""
+     "Keşke Zamanım Olsaydı",
+     "Keşke - Sessiz Kitap",
+     "Bir K&#246;y Enstit&#252;s&#252; - Keşke",
+     "Keşke Bir &#214;p&#252;p Koklasaydım",
+     "Keşke T&#252;m Sevdiklerim De Okusa Dediğiniz Kitap"
+    ],
+    "imgs": 95,
+    "raw": [
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0001792450001-1.jpg\" height=\"194px\" alt=\"Keşke Zamanım Olsaydı\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002020100001-1.jpg\" height=\"194px\" alt=\"Nietzsche Bir Denizgergedanı Olsaydı\" />",
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0000000640851-1.jpg\" height=\"194px\" alt=\"Eğer Bu Bir Film Olsaydı\" />"
     ]
    }
   ]
