@@ -1,6 +1,18 @@
 {
-"updated": "2026-11-15",
+"updated": "2026-11-16",
 "wants": [
+{
+"q": "wd:q934718 g.o.r.a.",
+"kind": "film",
+"n": 2,
+"last": "2026-11-16"
+},
+{
+"q": "gora",
+"kind": "sahne",
+"n": 2,
+"last": "2026-11-16"
+},
 {
 "q": "füruzan",
 "kind": "ara",
