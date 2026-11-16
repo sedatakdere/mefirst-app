@@ -7945,6 +7945,9 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+.cp-locked{opacity:.85;background-image:none}
+.cp-lockn{display:block;margin:4px 2px 0;font-size:11.5px;opacity:.65}
+
 #cp-w{margin:4px 0 16px}
 .cp-card{position:relative;padding:18px;border-radius:24px;background:linear-gradient(145deg,rgba(255,158,196,.18),rgba(224,69,127,.1));box-shadow:inset 0 0 0 1.5px rgba(255,158,196,.28);color:#FFF4F8;overflow:hidden}
 .cp-card::before{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,158,196,.35),transparent 70%)}
@@ -16262,7 +16265,7 @@ onbRender=function(){const O=document.getElementById("onb"),k=ONB[onbI],P=st.pro
  try{if(step===0)bentoRender();}catch(e){}})();
 setTimeout(()=>{try{const O=document.getElementById("onb");if(O&&!O.hidden)onbRender();}catch(e){console.error(e);}},0);
 /* Biz ikimiz: özel sorular burada, ilk girişte bir kez */
-(function(){const ask=()=>{try{if(step!==10||st.bizIntro||((st.pname||"").trim()&&st.last))return;const L=document.querySelector(".love");const sub=document.getElementById("love-sub");if(!L||!sub||document.getElementById("bz-intro"))return;
+(function(){const ask=()=>{try{if(step!==10||st.bizIntro||((st.pname||"").trim()&&st.last)||(typeof CP!=="undefined"&&CP.c))return;const L=document.querySelector(".love");const sub=document.getElementById("love-sub");if(!L||!sub||document.getElementById("bz-intro"))return;
   const c=document.createElement("div");c.id="bz-intro";c.className="bz-intro";
   c.innerHTML=`<div class="bz-h"><b>İkinize özel birkaç bilgi</b><small>Sadece burada durur, sadece sen görürsün.</small></div>
    <div class="bz-g"><label><span>Onun adı</span><input id="bz-pn" type="text" maxlength="20" value="${esc(st.pname||"")}" placeholder="ör. Murat"></label>
@@ -18231,7 +18234,7 @@ function cpErr(e){const k=Object.keys(CP_ERR).find(x=>String(e||"").includes(x))
 async function cpEnsureName(n,kind){const P=sbPublic()||{};if(P.ok)return true;const S=await sbAuth();if(!S)return false;n=(n||"").trim()||((st.name||"").trim().split(" ")[0])||"Me First üyesi";
  const body={id:S.uid,name:n.slice(0,20)};if(kind)body.kind=kind;let r=await sbReq("POST","profiles?on_conflict=id",body,"resolution=merge-duplicates,return=minimal");if(r===null&&kind){delete body.kind;r=await sbReq("POST","profiles?on_conflict=id",body,"resolution=merge-duplicates,return=minimal");}
  if(r===null)return false;try{localStorage.setItem("mf-sbp",JSON.stringify(Object.assign({},P,{ok:1,name:n})));}catch(e){}return true;}
-async function cpLoad(){const S=sbSess();if(!S||navigator.onLine===false)return;const v=await sbReq("GET","couple_view?select=*");CP.c=Array.isArray(v)&&v[0]?v[0]:null;
+async function cpLoad(){const S=sbSess();if(!S||navigator.onLine===false)return;const v=await sbReq("GET","couple_view?select=*");CP.ok=Array.isArray(v);CP.c=Array.isArray(v)&&v[0]?v[0]:null;
  if(!CP.c){const p=await sbReq("GET",`couples?select=id,code,status,created_at&a=eq.${S.uid}&status=eq.bekliyor&limit=1`);CP.pend=Array.isArray(p)&&p[0]?p[0]:null;}else CP.pend=null;
  if(CP.c){await cpPull();cpDaysPush();cpCyclePush();}CP.at=Date.now();cpPaint();}
 async function cpPull(){if(!CP.c)return;const C=cpSt();const r=await sbReq("GET",`couple_items?select=*&couple_id=eq.${CP.c.id}&order=created_at.desc&limit=60`);if(!Array.isArray(r))return;CP.items=r;
@@ -18273,7 +18276,7 @@ function cpPaint(){if(step!==10)return;const sub=document.getElementById("love-s
  if($("cp-have"))$("cp-have").onclick=()=>cpAccept("");
  if($("cp-share"))$("cp-share").onclick=()=>{const nm=(st.name||"").split(" ")[0];const link=`https://mefirst.app/app/?davet=${CP.pend.code}`;const t=`${nm?nm+" seni":"Seni"} Me First'te Biz ikimiz'e davet ediyor 💞\n\nBağlantıya dokun ya da uygulamada "Bende davet kodu var" deyip bu kodu gir: ${CP.pend.code}\n\n${link}`;if(navigator.share)navigator.share({text:t}).catch(()=>{});else window.open("https://wa.me/?text="+encodeURIComponent(t),"_blank","noopener");};
  if($("cp-cancel"))$("cp-cancel").onclick=async()=>{await cpRpc("couple_end");CP.pend=null;cpPaint();};
- if($("cp-end"))$("cp-end").onclick=async e=>{const b=e.currentTarget;if(!b.dataset.sure){b.dataset.sure=1;b.textContent="Emin misin? Ortak mesajlar ve paylaşımlar kapanır";return;}await cpRpc("couple_end");CP.c=null;CP.items=[];CP.pend=null;biz().days=biz().days.filter(d=>d.src!=="p");save();cpTile();cpPaint();try{loveRender();}catch(_){}};
+ if($("cp-end"))$("cp-end").onclick=async e=>{const b=e.currentTarget;if(!b.dataset.sure){b.dataset.sure=1;b.textContent="Emin misin? Ortak mesajlar ve paylaşımlar kapanır";return;}await cpRpc("couple_end");CP.c=null;CP.items=[];CP.pend=null;cpRestore();cpTile();cpPaint();try{loveRender();}catch(_){}};
  W.querySelectorAll("[data-cps]").forEach(b=>b.onclick=async()=>{const v=+b.dataset.cps;CP.c.share_cycle=v;CP.c.cycle_note=null;const body={share_cycle:v,cycle_note:null};if(v){const I=cpCycInfo();if(I){body.cycle_note=v===2?{ph:I.ph,tx:I.tx,next:I.next,at:dkey()}:{ph:I.ph,tx:I.tx,at:dkey()};CP.c.cycle_note=body.cycle_note;}}await sbReq("PATCH",`couples?id=eq.${CP.c.id}`,body,"return=minimal");cpPaint();});
  W.querySelectorAll("[data-cpa]").forEach(b=>b.onclick=async()=>{const x=CP.items.find(i=>i.id===b.dataset.cpa);if(!x)return;x.data=Object.assign({},x.data,{ans:b.dataset.v});await sbReq("PATCH",`couple_items?id=eq.${x.id}`,{data:x.data,updated_at:new Date().toISOString()},"return=minimal");if(b.dataset.v==="evet")try{mfConfetti("Plan tamam!",["#FF9EC4","#E0457F","#fff","#FFE7A0"],"linear-gradient(135deg,#E0457F,#7A1F4A)");}catch(_){}cpPaint();});
  const q=$("cp-q");if(q){const go=async()=>{const t=q.value.trim();if(!t)return;q.value="";await cpSend("msg",{t});cpPaint();};$("cp-qs").onclick=go;q.addEventListener("keydown",e=>{if(e.key==="Enter")go();});}
@@ -18304,6 +18307,30 @@ async function cpAccept(code){const peek=code?await cpRpc("couple_peek",{p_code:
  document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&sbSess()&&Date.now()-CP.at>20000)cpLoad();});
  const _s=show;show=function(){const r=_s.apply(this,arguments);if(step===10){setTimeout(cpPaint,80);if(sbSess()&&Date.now()-CP.at>15000)cpLoad();}if(step===0)setTimeout(cpTile,300);return r;};
  const _l=loveRender;loveRender=function(){const r=_l.apply(this,arguments);try{cpSendBtns();}catch(e){}return r;};})();
+
+/* ===== v0.64.1: Kodla bağlanan kişi = partnerin. Tek doğru kaynak; elle girilen eş bilgileri bağlantı süresince devre dışı ===== */
+function cpApplyLink(){const c=CP.c;if(!c)return;const B=biz(),C=cpSt(),me=(sbSess()||{}).uid;
+ if(!C.linked||C.linked!==c.id){C.linked=c.id;C.pnameMan=st.pname||"";B.daysMan=(B.days||[]).filter(d=>d.src!=="p"&&(d.ty==="dogum"||(!c.i_invited&&d.ty==="yil")));B.days=(B.days||[]).filter(d=>!B.daysMan.includes(d));}
+ const pn=(c.partner_name||"").trim();if(pn)st.pname=pn;
+ const ben=CP.items.find(x=>x.kind==="ben"&&x.author!==me);const dob=ben&&ben.data&&ben.data.dob;
+ B.days=B.days.filter(d=>!(d.ty==="dogum"&&d.src!=="p")&&!(d.ty==="dogum"&&d.src==="p"&&dob&&d.d!==dob));
+ if(dob&&!B.days.some(d=>d.ty==="dogum"&&d.d===dob))B.days.push({ty:"dogum",d:dob,n:"",src:"p"});
+ if(!c.i_invited)B.days=B.days.filter(d=>!(d.ty==="yil"&&d.src!=="p"));else B.days=B.days.filter(d=>!(d.ty==="yil"&&d.src==="p"));
+ save();cpLockFields();}
+function cpRestore(){const C=cpSt(),B=biz();if(!C.linked)return;B.days=(B.days||[]).filter(d=>d.src!=="p").concat(B.daysMan||[]);delete B.daysMan;st.pname=C.pnameMan||"";delete C.pnameMan;C.linked=null;C.syncedDays={};save();cpLockFields();}
+function cpLockFields(){const on=!!CP.c;["pname","bz-pn","ob-pn"].forEach(id=>{const el=document.getElementById(id);if(!el)return;el.readOnly=on;el.classList.toggle("cp-locked",on);if(on)el.value=st.pname||"";
+  let n=el.parentElement&&el.parentElement.querySelector(".cp-lockn");if(on&&!n){n=document.createElement("small");n.className="cp-lockn";el.after(n);}if(n){if(on)n.textContent="Bağlı olduğun kişinin adı; bağlantı sürdükçe buradan değişmez.";else n.remove();}});}
+async function cpPushBen(){if(!CP.c)return;const me=(sbSess()||{}).uid;const P=prof(),dob=P.dob||"";const nm=(st.name||"").trim().split(" ")[0];const old=CP.items.find(x=>x.kind==="ben"&&x.author===me);const data={name:nm,dob};
+ if(old){if(old.data&&old.data.dob===dob&&old.data.name===nm)return;old.data=data;await sbReq("PATCH",`couple_items?id=eq.${old.id}`,{data,updated_at:new Date().toISOString()},"return=minimal");}
+ else{const r=await sbReq("POST","couple_items",{couple_id:CP.c.id,kind:"ben",data},"return=representation");if(Array.isArray(r)&&r[0])CP.items.unshift(r[0]);}}
+/* gün senkronu kuralı: doğum günü kişinin kendisinden gelir ('ben'); yıldönümü daveti açandan gelir; diğer özel günler ortak */
+cpDaysPush=function(){if(!CP.c)return;const C=cpSt(),B=biz();B.days.filter(d=>d.src!=="p"&&d.d&&d.ty!=="dogum"&&(d.ty!=="yil"||CP.c.i_invited)&&!C.syncedDays[d.ty+"|"+d.d]).forEach(d=>{C.syncedDays[d.ty+"|"+d.d]=1;sbReq("POST","couple_items",{couple_id:CP.c.id,kind:"gun",data:{ty:d.ty,d:d.d,n:d.n||""}},"return=minimal");});save();};
+(function(){const _pull=cpPull;cpPull=async function(){if(!CP.c)return;const me=(sbSess()||{}).uid;const r0=await sbReq("GET",`couple_items?select=*&couple_id=eq.${CP.c.id}&order=created_at.desc&limit=80`);if(!Array.isArray(r0))return;
+  const C=cpSt(),B=biz();CP.items=r0;r0.filter(x=>x.kind==="gun"&&x.author!==me).forEach(x=>{const d=x.data||{};if(!d.d||d.ty==="dogum")return;if(d.ty==="yil"&&CP.c.i_invited)return;if(!B.days.some(y=>y.ty===d.ty&&y.d===d.d))B.days.push({ty:d.ty||"ozel",d:d.d,n:d.n||"",src:"p"});});
+  const nw=r0.filter(x=>x.author!==me&&(x.kind==="msg"||x.kind==="plan")&&x.created_at>(C.seen||""));CP.unread=nw.length;if(nw.length&&nw[0].id!==CP.lastToast){CP.lastToast=nw[0].id;cpToast(nw[0]);}cpApplyLink();cpTile();};
+ const _load=cpLoad;cpLoad=async function(){const had=!!cpSt().linked;await _load.apply(this,arguments);try{if(CP.c){await cpPushBen();cpApplyLink();if(step===10){try{loveRender();}catch(e){}cpPaint();}}else if(had&&CP.ok){cpRestore();if(step===10){try{loveRender();}catch(e){}}}}catch(e){console.error(e);}};
+ const _lr=loveRender;loveRender=function(){const r=_lr.apply(this,arguments);try{cpLockFields();}catch(e){}return r;};
+ const _s=show;show=function(){const r=_s.apply(this,arguments);setTimeout(()=>{try{cpLockFields();}catch(e){}},120);return r;};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
