@@ -7945,6 +7945,21 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+.rsm{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;line-height:1;white-space:nowrap}
+.rsm-i{flex:0 0 auto;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;color:#fff;background:radial-gradient(circle at 34% 30%,#FF9EC4,#E0457F 60%,#A8325C);box-shadow:0 2px 6px -2px rgba(168,50,92,.7),inset 0 1px 1px rgba(255,255,255,.4)}
+.rsm-i svg{width:13px;height:13px}
+.rsm.l{font-size:15px;gap:10px}.rsm.l .rsm-i{width:30px;height:30px}.rsm.l .rsm-i svg{width:16px;height:16px}
+.rsm.s{font-size:11px;gap:5px;white-space:normal;text-align:left;line-height:1.1}.rsm.s .rsm-i{width:20px;height:20px}.rsm.s .rsm-i svg{width:11px;height:11px}
+.ktw-hint .pl-add.rs-pl,.pl-add.wsh-go.rs-pl{background:linear-gradient(135deg,#FFF4F7,#FFE4EC)!important;color:#A8325C!important;box-shadow:0 6px 16px -8px rgba(224,69,127,.6),inset 0 0 0 1.5px rgba(224,69,127,.3)!important;padding:10px 20px 10px 12px!important}
+.kwb.kws{background:linear-gradient(135deg,#FFF4F7,#FFE4EC)!important;color:#A8325C!important;box-shadow:inset 0 0 0 1px rgba(224,69,127,.28)!important}
+.ktwa{grid-template-columns:1fr 1fr 1.6fr!important}
+.rs-done .rsm-i{background:radial-gradient(circle at 34% 30%,#7FC9A4,#2E8B67 60%,#1E5E45)}
+.rs-pl.busy,.kwb.busy{opacity:.6}
+.cp-sendapp .rsm{color:inherit}
+.rs-wli{display:grid;gap:8px;text-align:left;max-height:50vh;overflow:auto}
+.rs-wli button{all:unset;cursor:pointer;display:grid;grid-template-columns:1fr auto;padding:11px 14px;border-radius:14px;background:rgba(255,255,255,.08)}
+.rs-wli b{font-size:14px}.rs-wli small{grid-column:1;font-size:11.5px;opacity:.65}.rs-wli span{grid-row:1/3;grid-column:2;align-self:center;font-size:12px;font-weight:800;color:#FF9EC4}
+
 .rs-lib .rl-tx em{white-space:nowrap!important;font-size:18px!important;text-transform:none!important;letter-spacing:0!important;line-height:1.2!important}
 .rs-lib .rl-tx small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.1em!important}
 .rs-lib .rl-x{position:absolute;top:-11px;right:12px;padding:4px 10px;font-size:10.5px;background:#FFF;color:#9E2F4F;box-shadow:0 3px 8px -3px rgba(122,58,30,.45),inset 0 0 0 1px rgba(201,130,43,.35)}
@@ -13554,7 +13569,7 @@ function wishInject(){try{
     row.querySelectorAll("[data-lk2]").forEach(b=>b.addEventListener("click",()=>{if(b===wb){row.querySelectorAll("[data-lk2]").forEach(x=>x.setAttribute("aria-pressed",x===wb));const wf=document.getElementById("lb2-whof");if(wf)wf.hidden=true;set(true);}else set(false);}));
     const old=btn.onclick;btn.onclick=function(e){if(!wish)return old&&old.call(this,e);const ti=document.getElementById("kt-st"),t=ti.value.trim();if(!t){ti.focus();return;}wishSave(t,(document.getElementById("kt-sa").value||"").trim());};}
   /* 2) İstek rafı slaytında ekleme düğmesi */
-  [...document.querySelectorAll("#ktpanel button")].filter(b=>/Ruh Eşime Gönder/.test(b.textContent)&&!b.dataset.wadd).forEach(b=>{b.dataset.wadd=1;const n=document.createElement("button");n.type="button";n.className="kt-wadd";n.innerHTML="＋ Kitap ekle";n.onclick=e=>{e.stopPropagation();wishAddOpen();};b.insertAdjacentElement("afterend",n);});
+  [...document.querySelectorAll("#ktpanel button")].filter(b=>/Ruh eşime gönder/i.test(b.textContent)&&!b.dataset.wadd&&!b.closest(".ktwa")&&!b.closest(".ktw-hint")).forEach(b=>{b.dataset.wadd=1;const n=document.createElement("button");n.type="button";n.className="kt-wadd";n.innerHTML="＋ Kitap ekle";n.onclick=e=>{e.stopPropagation();wishAddOpen();};b.insertAdjacentElement("afterend",n);});
 }catch(err){}}
 (function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);wishInject();};const _c=ktShelfCtx;ktShelfCtx=function(){_c.apply(this,arguments);wishInject();};
   const P=document.getElementById("ktpanel");if(P)new MutationObserver(()=>{clearTimeout(window.__wiT);window.__wiT=setTimeout(wishInject,30);}).observe(P,{childList:true,subtree:true});})();
@@ -18363,8 +18378,8 @@ function cpPaint(){if(step!==10)return;const sub=document.getElementById("love-s
  cpSendBtns();}
 /* mesaj ve plan kartlarına "Uygulamadan gönder" */
 function cpSendBtns(){document.querySelectorAll('.cp-sendapp').forEach(b=>b.remove());if(!CP.c)return;const pn=CP.c.partner_name||"ona";
- document.querySelectorAll('#msg-wa, [data-panel] a.btn.wa').forEach(a=>{if(!a.closest("[data-panel]")&&a.id!=="msg-wa")return;const isPlan=/bizAct\('plan'\)/.test(a.getAttribute("onclick")||"");const b=document.createElement("button");b.type="button";b.className="btn cp-sendapp";b.innerHTML=`${ySvg("heart")} ${esc(pn)}'a uygulamadan gönder`;
-  b.onclick=async()=>{let t="";try{t=decodeURIComponent((a.getAttribute("href")||"").split("text=")[1]||"");}catch(e){}if(!t)return;b.disabled=true;const ok=await cpSend(isPlan?"plan":"msg",{t});b.innerHTML=ok?"Gönderildi 💌":"Gönderilemedi, tekrar dene";try{bizAct(isPlan?"plan":"msg");}catch(e){}setTimeout(()=>{b.disabled=false;b.innerHTML=`${ySvg("heart")} ${esc(pn)}'a uygulamadan gönder`;cpPaint();},1800);};
+ document.querySelectorAll('#msg-wa, [data-panel] a.btn.wa').forEach(a=>{if(!a.closest("[data-panel]")&&a.id!=="msg-wa")return;const isPlan=/bizAct\('plan'\)/.test(a.getAttribute("onclick")||"");const b=document.createElement("button");b.type="button";b.className="btn cp-sendapp";b.innerHTML=`${rsMark('m')}`;
+  b.onclick=async()=>{let t="";try{t=decodeURIComponent((a.getAttribute("href")||"").split("text=")[1]||"");}catch(e){}if(!t)return;b.disabled=true;const ok=await cpSend(isPlan?"plan":"msg",{t});b.innerHTML=ok?"Gönderildi 💌":"Gönderilemedi, tekrar dene";try{bizAct(isPlan?"plan":"msg");}catch(e){}setTimeout(()=>{b.disabled=false;b.innerHTML=`${rsMark('m')}`;cpPaint();},1800);};
   a.after(b);});}
 /* davet kabul ekranı */
 async function cpAccept(code){const peek=code?await cpRpc("couple_peek",{p_code:code}):{data:[]};const who=peek.data&&peek.data[0];const ok=(sbPublic()||{}).ok;
@@ -18564,6 +18579,27 @@ function rsDuelFab(d){const O=document.getElementById("zsh");if(!O)return;O.quer
  b.innerHTML=`<span>${RS_HEART}</span><em>⚔</em>${dot}`;b.onclick=()=>rsDuel(d);O.appendChild(b);}
 (function(){const _k=keyRender;keyRender=function(){const r=_k.apply(this,arguments);try{const O=document.getElementById("zsh");O.querySelectorAll(".rs-fab").forEach(b=>b.remove());if(RS_G[kv]){O.querySelectorAll(".rs-btn.kf").forEach(b=>b.remove());rsDuelFab({k:"oyun",v:kv});}}catch(e){}return r;};
  const _kr=kkRender;kkRender=function(){const r=_kr.apply(this,arguments);try{const O=document.getElementById("zsh");O.querySelectorAll(".rs-btn.kf,.rs-fab").forEach(b=>b.remove());if(kv==="kk")rsDuelFab({k:"oyun",v:"kk"});}catch(e){}return r;};})();
+
+/* v0.67: istek rafı uygulama içinden ruh eşine; "Ruh eşime gönder" tek imza (ikon + yazı sabit, boy yere göre) */
+RS_CX.istek=["Hediye ipucu","Bunu çok istiyor","Not aldın 🎁"];RS_CX.istekl=RS_CX.istek;
+RS_K.istek=["book","istek rafından bir ipucu bıraktı","Bak"];RS_K.istekl=["book","istek rafını seninle paylaştı","Bak"];
+function rsMark(cls){return `<span class="rsm ${cls||""}"><span class="rsm-i">${RS_HEART}</span><span class="rsm-t">Ruh eşime gönder</span></span>`;}
+(function(){const _f=rsFind;rsFind=function(d){if(d&&d.k==="istekl"){if(!CP.c)return null;const td=dkey();return CP.items.find(x=>x.kind==="oneri"&&(x.data||{}).k==="istekl"&&(x.created_at||"").slice(0,10)===td)||null;}return _f.apply(this,arguments);};
+ const _o=rsOpen;rsOpen=function(x){const d=x.data||{};if(d.k==="istek"){rsCloseAll();setTimeout(()=>{try{bookOpen(null,true,{t:d.t||"",a:d.a||"",d:dkey()});}catch(e){}},320);return;}
+  if(d.k==="istekl"){rsCloseAll();setTimeout(()=>{const L=d.list||[];const O=ySheet("rswish",`<div class="rs-sell rs-wl"><button type="button" class="shs-x" aria-label="Kapat">✕</button><small class="rs-k">🎁 Hediye ipucu</small><h3>Ruh eşinin istek rafı</h3><p>Bunlardan biri onu çok mutlu eder.</p>
+    <div class="rs-wli">${L.map((b,i)=>`<button type="button" data-rwb="${i}"><b>${esc(b.t)}</b><small>${esc(b.a||"")}</small><span>Aç ›</span></button>`).join("")}</div></div>`,"rs-sh");
+   O.querySelectorAll("[data-rwb]").forEach(b=>b.onclick=()=>{const k=L[+b.dataset.rwb];O._close();setTimeout(()=>bookOpen(null,true,{t:k.t,a:k.a||"",d:dkey()}),280);});},320);return;}
+  return _o.apply(this,arguments);};
+ const _i=rsItemHTML;rsItemHTML=function(x,mine,pn){const d=x.data||{};if(d.k==="istekl"&&!d.t)d.t="İstek rafı";if(d.k==="istekl"&&!d.s)d.s=(d.list||[]).length+" kitap";return _i.apply(this,arguments);};})();
+async function rsWishSend(d,b){if(!CP.c){rsSell();return;}if(d.k==="istek"&&rsFind(d)){yToast("Bu ipucu zaten ruh eşinde 🎁");return;}if(b){b.disabled=true;b.classList.add("busy");}
+ const ok=await cpSend("oneri",d);if(b){b.disabled=false;b.classList.remove("busy");if(ok)b.classList.add("rs-done");}yToast(ok?(d.k==="istekl"?"İstek rafın ruh eşine gitti 🎁":"İpucu ruh eşine gitti 🎁"):"Gönderemedim, tekrar dene");}
+ktHintOne=function(x){if(!x)return;rsWishSend({k:"istek",t:x.t,a:x.a||"",s:x.a||""},window.event&&window.event.target&&window.event.target.closest("button"));};
+ktHint=function(){const W2=kt().shelf.filter(x=>x.s==="istek");if(!W2.length)return;rsWishSend({k:"istekl",t:"İstek rafı",s:W2.length+" kitap",list:W2.slice(0,30).map(x=>({t:x.t,a:x.a||""}))},window.event&&window.event.target&&window.event.target.closest("button"));};
+function rsWishDecor(){const P=document.getElementById("ktpanel");if(!P)return;
+ ["kt-hint","kt-hint2"].forEach(id=>{const b=document.getElementById(id);if(!b||b.dataset.rs)return;b.dataset.rs=1;b.classList.add("rs-pl");b.innerHTML=rsMark("l");if(id==="kt-hint2")b.onclick=e=>{e.stopPropagation();ktHint();};});
+ P.querySelectorAll(".ktw-hint small").forEach(s=>{if(!s.dataset.rs){s.dataset.rs=1;s.textContent="Listen ruh eşinin telefonuna hediye ipucu olarak düşer";}});
+ P.querySelectorAll(".kwb.kws").forEach(b=>{if(b.dataset.rs)return;b.dataset.rs=1;b.innerHTML=rsMark("s");const x=kt().shelf[+b.dataset.kws];if(x&&CP.c&&rsFind({k:"istek",t:x.t}))b.classList.add("rs-done");});}
+(function(){const _k=kitapRender;kitapRender=function(){const r=_k.apply(this,arguments);try{rsWishDecor();}catch(e){}return r;};const P=document.getElementById("ktpanel");if(P)new MutationObserver(()=>{clearTimeout(window.__rsW);window.__rsW=setTimeout(()=>{try{rsWishDecor();}catch(e){}},40);}).observe(P,{childList:true,subtree:true});})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
