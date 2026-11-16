@@ -7945,6 +7945,10 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+.bkp-rs{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:800;padding:5px 12px 5px 9px;border-radius:99px;background:#FFF0F4;border:1px solid rgba(224,69,127,.35);color:#B5486E}
+.bkp-rs i{display:inline-grid;width:14px;height:14px;color:#E0457F}.bkp-rs i svg{width:14px;height:14px}
+.bkp-rs.sent{background:#E9F8F1;border-color:rgba(46,156,120,.4);color:#2E7A5E}.bkp-rs.sent i{color:#2E9C78}.bkp-rs.busy{opacity:.6}
+
 .love.cp-gate .seg,.love.cp-gate [data-panel]{display:none!important}
 .love.cp-gate.cp-solo [data-panel="cycle"]{display:block!important}
 .rs-solo{display:flex;align-items:center;gap:8px;width:100%;margin:0 0 14px;padding:13px 16px;border:0;border-radius:16px;background:rgba(255,255,255,.08);color:#FFE3EE;font:700 14px var(--f-body);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.1)}
@@ -18422,7 +18426,7 @@ function rsGate(){const L=document.querySelector('.love[data-step="10"]');if(!L)
  const _f=spFilmOpen;spFilmOpen=function(id){const r=_f.apply(this,arguments);try{const f=spFilm(id),O=document.getElementById("ysheet");const bd=O&&O.querySelector(".y-bd");if(f&&bd)bd.prepend(rsBtn({k:"film",id,t:f[1],s:[f[3],f[4]].filter(Boolean).join(" · "),f:PF.find(x=>x[0]===id)?null:f}));}catch(e){console.error(e);}return r;};
  const _e=spOpen;spOpen=function(id){const r=_e.apply(this,arguments);try{const e=spEv(id),O=document.getElementById("ysheet");const bd=O&&(O.querySelector(".y-bd")||O.querySelector(".shs-c"));if(e&&bd&&!bd.querySelector(".rs-btn")){const D=spDay(e[3]);bd.prepend(rsBtn({k:"etk",id,t:e[1],s:`${D.d} ${D.m}${e[5]?" · "+e[5]:""}`}));}}catch(x){console.error(x);}return r;};
  const _m=macOpen;macOpen=function(id){const r=_m.apply(this,arguments);try{const e=macEv(id),O=document.getElementById("mep");const bd=O&&O.querySelector(".mep-b");if(e&&bd&&!bd.querySelector(".rs-btn")){const D=evDate(e);bd.prepend(rsBtn({k:"mac",id,t:e[1],s:`${D.d} ${D.m}${e[5]?" · "+e[5]:""}`}));}}catch(x){console.error(x);}return r;};
- const _b=bookOpen;bookOpen=function(i,anim,X){const r=_b.apply(this,arguments);try{const x=X||klib()[i],O=document.getElementById("bkp");const w=O&&O.querySelector(".bk3-wrap");if(x&&w&&!O.querySelector(".rs-btn"))w.after(rsBtn({k:"kitap",t:x.t,a:x.a||"",c:x.c||"",s:x.a||""},"bk"));}catch(e){console.error(e);}return r;};
+ const _b=bookOpen;bookOpen=function(i,anim,X){const r=_b.apply(this,arguments);try{const x=X||klib()[i],O=document.getElementById("bkp");const w=O&&O.querySelector(".bk3-wrap");const ch=O&&O.querySelector(".bkp-chips");if(x&&ch&&!ch.querySelector(".bkp-rs")){const pn=CP.c&&CP.c.partner_name;const bt=document.createElement("button");bt.type="button";bt.className="bkp-rs";bt.innerHTML=`<i>${RS_HEART}</i><b>${pn?esc(pn)+"'a gönder":"Ruh eşime gönder"}</b>`;bt.onclick=e=>{e.stopPropagation();rsSend({k:"kitap",t:x.t,a:x.a||"",c:x.c||"",s:x.a||""},bt);};ch.appendChild(bt);}}catch(e){console.error(e);}return r;};
  const _k=keyRender;keyRender=function(){const r=_k.apply(this,arguments);try{const O=document.getElementById("zsh");const old=O.querySelector(".rs-btn");if(old)old.remove();if(RS_V[kv]&&!(kv==="burc"&&!(st.prof||{}).dob)){const p=[...O.querySelectorAll("p,.zr-t,.kf-txt")].map(e=>e.textContent.trim()).find(t=>t.length>50)||"";
    const d={k:"keyif",v:kv,t:RS_V[kv],x:kv==="burc"||kv==="fal"?p.slice(0,200):"Ben oynadım, sıra sende 🙂"};O.appendChild(rsBtn(d,"kf"));}}catch(e){console.error(e);}return r;};
 })();
