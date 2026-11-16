@@ -3,7 +3,7 @@ import hashlib, html, io, json, os, re, time, unicodedata, urllib.parse, urllib.
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36 MeFirstCoverBot/1.0",
       "Accept-Language": "tr-TR,tr;q=0.9"}
 ROOT = "app/kapak"; MAP = ROOT + "/kapak.json"; REP = ROOT + "/rapor.json"
-def fetch(url, raw=False, t=25):
+def fetch(url, raw=False, t=15):
     req = urllib.request.Request(url, headers=UA)
     with urllib.request.urlopen(req, timeout=t) as r:
         b = r.read()
@@ -14,9 +14,13 @@ def fold(s):
     s = "".join(c for c in s if not unicodedata.combining(c))
     return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9 ]", " ", s)).strip()
 def tkey(t): return fold(re.split(r"\s*[:(]\s*", str(t))[0])
-def same(cand, t):
-    c, w = tkey(html.unescape(cand)), tkey(t)
-    return bool(c and w) and (c == w or (c.startswith(w) and len(w) >= 5) or (w.startswith(c) and len(c) >= 6))
+def same(cand, t, loose=False):
+    raw = html.unescape(cand)
+    if re.search(r"\bset(i)?\b|\bkutu\b|\+|\bciltlik\b", fold(raw)): return False
+    c, w = tkey(re.split(r"\s+[-–]\s+", raw)[0]), tkey(t)
+    if not (c and w): return False
+    if c == w: return True
+    return loose and ((c.startswith(w) and len(w) >= 5) or (w.startswith(c) and len(c) >= 6))
 def imgs(page, host):
     out = []
     for m in re.finditer(r"<img\b[^>]*>", page, re.I):
@@ -32,10 +36,11 @@ def kitapyurdu(t, a):
         if same(alt, t): return re.sub(r"/wi:\d+", "/wi:500", src)
     return ""
 def dr(t, a):
-    q = urllib.parse.quote_plus(f"{t} {a}".strip())
-    p = fetch(f"https://www.dr.com.tr/search?q={q}")
-    for alt, src in imgs(p, "dr.com.tr"):
-        if same(alt, t) and re.search(r"\.(jpe?g|png|webp)", src, re.I): return src
+    for qq in (f"{t} {a}".strip(), t):
+        p = fetch("https://www.dr.com.tr/search?q=" + urllib.parse.quote_plus(qq))
+        for alt, src in imgs(p, "dr.com.tr"):
+            if same(alt, t) and re.search(r"\.(jpe?g|png|webp)", src, re.I): return src
+        time.sleep(0.6)
     return ""
 def idefix(t, a):
     q = urllib.parse.quote_plus(f"{t} {a}".strip())
@@ -51,15 +56,15 @@ def gbooks(t, a):
     for it in j.get("items", []) or []:
         v = it.get("volumeInfo") or {}; il = v.get("imageLinks") or {}
         u = il.get("thumbnail") or il.get("smallThumbnail")
-        if u and same(v.get("title", ""), t):
+        if u and same(v.get("title", ""), t, True):
             return u.replace("http://", "https://").replace("&edge=curl", "").replace("zoom=1", "zoom=2")
     return ""
 def openlib(t, a):
     j = json.loads(fetch("https://openlibrary.org/search.json?" + urllib.parse.urlencode({"title": t, "author": a or "", "limit": 8, "fields": "title,cover_i"})))
     for d in j.get("docs", []):
-        if d.get("cover_i") and same(d.get("title", ""), t): return f"https://covers.openlibrary.org/b/id/{d['cover_i']}-L.jpg"
+        if d.get("cover_i") and same(d.get("title", ""), t, True): return f"https://covers.openlibrary.org/b/id/{d['cover_i']}-L.jpg"
     return ""
-SRC = [("kitapyurdu", kitapyurdu), ("idefix", idefix), ("dr", dr), ("google", gbooks), ("openlibrary", openlib)]
+SRC = [("dr", dr), ("idefix", idefix), ("kitapyurdu", kitapyurdu), ("google", gbooks), ("openlibrary", openlib)]
 def save_img(u, path):
     from PIL import Image
     b = fetch(u, raw=True)
@@ -81,6 +86,7 @@ def books():
     except Exception: pass
     seen, out = set(), []
     for t, a in rows:
+        if a.startswith("#"): continue
         k = tkey(t)
         if k in seen or k in have: continue
         seen.add(k); out.append((t, a))
