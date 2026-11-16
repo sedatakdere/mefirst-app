@@ -111,10 +111,16 @@ def main():
                 u = fn(ALIAS.get(t, t), a)
                 if not u: errs.append(name + ":yok"); continue
                 fid = hashlib.sha1(k.encode()).hexdigest()[:12]
-                try: save_img(u, f"{ROOT}/{fid}.jpg")
-                except Exception:
-                    if "/cache/500x400-0/" not in u: raise
-                    save_img(u.replace("/cache/500x400-0/", "/cache/180x245-0/"), f"{ROOT}/{fid}.jpg")
+                if "i.dr.com.tr" in u:
+                    base = re.sub(r"/cache/\d+x\d+-\d+/", "/", u)
+                    cands = [base, base.replace("/originals/", "/cache/600x600-0/originals/"), base.replace("/originals/", "/cache/354x500-0/originals/"), base.replace("/originals/", "/cache/180x245-0/originals/")]
+                else: cands = [u]
+                last = None
+                for cu in cands:
+                    try:
+                        save_img(cu, f"{ROOT}/{fid}.jpg"); R.setdefault("boyut", {})[cu.split("/")[3] if "/cache/" in cu else "orijinal"] = R.get("boyut", {}).get(cu.split("/")[3] if "/cache/" in cu else "orijinal", 0) + 1; last = None; break
+                    except Exception as e: last = e
+                if last: raise last
                 M[k] = f"kapak/{fid}.jpg"; R["bulunan"][t] = name; R["kaynak"][name] = R["kaynak"].get(name, 0) + 1
                 break
             except Exception as e:
