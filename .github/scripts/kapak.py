@@ -134,3 +134,4 @@ def main():
     json.dump(R, open(REP, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(len(R["bulunan"]), "bulundu,", len(R["bulunamayan"]), "bulunamadı", R["kaynak"])
 main()
+# yeniden: küçük kapakları büyüt
