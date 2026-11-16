@@ -14249,7 +14249,7 @@ function sbBindLine(O,x,re){O.querySelectorAll("[data-lk]").forEach(b=>b.onclick
 let SB_NOTI=[],SB_NOTI_AT=0;
 async function sbNotiPull(force){const P=sbPublic();if(!P||!P.ok||!navigator.onLine)return;if(!force&&Date.now()-SB_NOTI_AT<90000)return;SB_NOTI_AT=Date.now();
  const r=await sbReq("GET","notifications?read=eq.false&order=created_at.desc&limit=30");if(Array.isArray(r)){const nw=r.length&&(!SB_NOTI.length||r[0].id!==SB_NOTI[0].id);SB_NOTI=r;sbBadge();
-  if(nw)setTimeout(()=>{try{if(!document.getElementById("ktpop")&&!document.getElementById("bkp")&&!document.querySelector(".zsh.on,#zsh:not([hidden])"))(window.__ktPopOrig||ktPop)();}catch(e){}},400);}}
+  if(nw&&!mfShownHas("n"+r[0].id)&&(mfShownAdd("n"+r[0].id),1))setTimeout(()=>{try{if(!document.getElementById("ktpop")&&!document.getElementById("bkp")&&!document.querySelector(".zsh.on,#zsh:not([hidden])"))(window.__ktPopOrig||ktPop)();}catch(e){}},400);}}
 function sbBadge(){const b=document.querySelector('#bnav [data-nv="kitap"]');if(!b)return;let d=b.querySelector(".sbdot");const n=SB_NOTI.length;if(!n){if(d)d.remove();return;}if(!d){d=document.createElement("span");d.className="sbdot";b.appendChild(d);}d.textContent=n>9?"9+":n;}
 function sbNotiCand(){if(!SB_NOTI.length)return null;const N=SB_NOTI;const likes=N.filter(n=>n.kind==="like"),pols=N.filter(n=>n.kind==="pol"),qs=N.filter(n=>n.kind==="quote"),rps=N.filter(n=>n.kind==="reply"||n.kind==="reply2");
  const top=rps[0]||pols[0]||likes[0]||qs[0];const uniq=a=>[...new Set(a.map(n=>n.actor))];let h,d;
@@ -18713,6 +18713,11 @@ function kpKey(t){return kpFold(String(t||"").split(/\s*[:(]\s*/)[0]);}
   document.querySelectorAll("[data-cvt]").forEach(el=>{if(!el.classList.contains("hascv")&&KAPAK.m[kpKey(el.dataset.cvt)])delete el.dataset.cvd;});try{covScan();}catch(e){}}).catch(()=>{});
  const _g=covGet;covGet=function(t,a){const u=KAPAK.m[kpKey(t)];if(u&&!(typeof COV_BAD!=="undefined"&&COV_BAD[u]))return u;return _g(t,a);};})();
 
+/* v0.69.1: bir kez gösterilen bildirim bir daha kendiliğinden açılmaz (her girişte tekrar çıkmasın) */
+let MF_SHOWN;function mfShown(){if(!MF_SHOWN){try{MF_SHOWN=new Set(JSON.parse(localStorage.getItem("mf-shown")||"[]"));}catch(e){MF_SHOWN=new Set();}}return MF_SHOWN;}
+function mfShownHas(k){return mfShown().has(k);}function mfShownAdd(k){mfShown().add(k);try{localStorage.setItem("mf-shown",JSON.stringify([...MF_SHOWN].slice(-400)));}catch(e){}}
+(function(){const _t=cpToast;cpToast=function(x){if(!x||!x.id||mfShownHas("c"+x.id))return;mfShownAdd("c"+x.id);return _t.apply(this,arguments);};
+ const _s=spNotiShow;spNotiShow=function(force){const ids=(SB_FNOTI||[]).map(n=>n.id);if(!force&&ids.length&&ids.every(i=>mfShownHas("f"+i)))return;const r=_s.apply(this,arguments);if(document.getElementById("spnoti")){ids.forEach(i=>mfShownAdd("f"+i));try{spNotiRead(ids);}catch(e){}}return r;};})();
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
