@@ -7945,6 +7945,51 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+.cp-envl{grid-template-columns:minmax(0,1fr)}.cp-envr{min-width:0}
+.cp-locked-f{display:none!important}
+
+.cp-env{margin:14px 0 2px;border-radius:20px;background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1.5px rgba(255,158,196,.22);overflow:hidden}
+.cp-env.new{box-shadow:inset 0 0 0 1.5px rgba(255,194,75,.55),0 8px 22px -12px rgba(255,194,75,.6)}
+.cp-envb{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;width:100%;padding:12px 14px}
+.cp-envi{position:relative;flex:0 0 44px;height:44px;display:grid;place-items:center;transition:transform .35s}.cp-envi svg{width:40px;height:40px;filter:drop-shadow(0 4px 6px rgba(0,0,0,.25))}
+.cp-env.new .cp-envi{animation:rsenv 2.4s ease-in-out infinite}@keyframes rsenv{0%,100%{transform:rotate(0)}8%{transform:rotate(-9deg)}16%{transform:rotate(7deg)}24%{transform:rotate(0)}}
+.cp-envi i{position:absolute;top:-2px;right:-4px;min-width:18px;height:18px;padding:0 4px;box-sizing:border-box;border-radius:9px;background:#FFC24B;color:#5A1430;font:900 11px/18px var(--f-body);text-align:center;font-style:normal;box-shadow:0 0 0 2px #3A1430}
+.cp-envt{flex:1;min-width:0}.cp-envt b{display:block;font-size:15px;color:#FFF4F8}.cp-envt small{font-size:11.5px;opacity:.65;color:#FFE3EE}
+.cp-envc{font-size:11.5px;font-weight:800;padding:6px 11px;border-radius:99px;background:rgba(255,255,255,.12);color:#FFE3EE}
+.cp-envl{display:grid;gap:6px;max-height:0;overflow:hidden;padding:0 10px;transition:max-height .45s cubic-bezier(.2,.8,.2,1),padding .3s}
+.cp-env.open .cp-envl{max-height:330px;overflow:auto;padding:2px 10px 12px}
+.cp-env.open .cp-envi{transform:translateY(-2px) scale(1.05)}
+.cp-envr{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:14px;background:rgba(255,255,255,.06);color:#FFF4F8}
+.cp-envr.nw{background:rgba(255,194,75,.12)}
+.cp-envri{flex:0 0 32px;height:32px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(255,158,196,.35),rgba(224,69,127,.3))}.cp-envri svg{width:17px;height:17px}
+.cp-envrt{flex:1;min-width:0}.cp-envrt small{display:block;font-size:10.5px;opacity:.6}.cp-envrt b{display:block;font-size:13.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cp-envgo{font-size:15px;opacity:.75}
+.cp-th{margin:0 0 14px;padding:12px;border-radius:20px;background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1.5px rgba(255,158,196,.2);color:#FFF4F8}
+.cp-thh{display:flex;align-items:center;gap:8px;margin:0 2px 8px}.cp-thh b{font-size:15px}.cp-thh small{margin-left:auto;font-size:11.5px;opacity:.6}
+.cp-thl{display:flex;flex-direction:column;gap:6px;max-height:260px;overflow:auto;padding:2px}
+.cp-bub{max-width:80%;padding:8px 12px;border-radius:16px}.cp-bub p{margin:0;font-size:14px;line-height:1.35}.cp-bub small{display:block;font-size:10px;opacity:.55;margin-top:2px}
+.cp-bub.me{align-self:flex-end;background:linear-gradient(135deg,#FF9EC4,#E0457F);border-bottom-right-radius:5px;color:#fff}
+.cp-bub.you{align-self:flex-start;background:rgba(255,255,255,.12);border-bottom-left-radius:5px}
+.cp-th .cp-wr{margin-top:10px}
+.cp-plr{padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.07)}.cp-plr p{margin:0 0 3px;font-size:13.5px}.cp-plr small{font-size:11px;opacity:.6}
+.rs-strip{margin:0 0 16px;padding:12px 0 12px 12px;border-radius:20px;background:linear-gradient(135deg,rgba(255,158,196,.16),rgba(224,69,127,.08));box-shadow:inset 0 0 0 1.5px rgba(224,69,127,.22)}
+.rs-sth{display:flex;align-items:center;gap:8px;margin:0 12px 10px 2px}.rs-sth b{font-size:15px}.rs-sth small{margin-left:auto;font-size:11.5px;opacity:.6}
+.rs-str{display:flex;gap:10px;overflow-x:auto;padding:2px 12px 4px 2px;scrollbar-width:none}.rs-str::-webkit-scrollbar{display:none}
+.rs-stc{all:unset;box-sizing:border-box;cursor:pointer;flex:0 0 168px;display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:16px;background:var(--card,#fff);box-shadow:0 6px 16px -10px rgba(120,30,70,.5),inset 0 0 0 1px rgba(224,69,127,.18)}
+html[data-mf="dusk"] .rs-stc{background:rgba(255,255,255,.08)}
+.rs-stc b{font-size:14px;line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.rs-stc small{font-size:11.5px;opacity:.65;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rs-stc em{margin-top:auto;font-style:normal;font-size:11.5px;font-weight:800;color:#E0457F}.rs-stc.ok em{color:#2E9C78}.rs-stc.no em{opacity:.6}
+.rs-stc .rs-ii{color:#B5486E}
+.rs-pw{margin:12px 0 0;border-radius:18px;background:rgba(255,255,255,.55);box-shadow:inset 0 0 0 1.5px rgba(229,138,166,.4);overflow:hidden}
+html[data-mf="dusk"] .rs-pw{background:rgba(244,163,184,.08)}
+.rs-pwb{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:10px;width:100%;padding:11px 14px;color:#B85C78}
+html[data-mf="dusk"] .rs-pwb{color:#F4A3B8}
+.rs-pwb b{display:block;font-size:14px}.rs-pwb small{display:block;font-size:11px;opacity:.7}.rs-pwb>span:nth-child(2){flex:1}.rs-pwb em{font-style:normal;font-size:14px}
+.rs-pwl{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.2,.8,.2,1);padding:0 12px}
+.rs-pw.open .rs-pwl{max-height:320px;padding:0 12px 12px}
+.rs-pwf{margin:8px 0 0;font-size:11.5px;opacity:.7;text-align:center}
+.ktsh-dots.top{margin:0 0 10px!important}
+
 .rsm{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;line-height:1;white-space:nowrap}
 .rsm-i{flex:0 0 auto;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;color:#fff;background:radial-gradient(circle at 34% 30%,#FF9EC4,#E0457F 60%,#A8325C);box-shadow:0 2px 6px -2px rgba(168,50,92,.7),inset 0 1px 1px rgba(255,255,255,.4)}
 .rsm-i svg{width:13px;height:13px}
@@ -18601,6 +18646,63 @@ function rsWishDecor(){const P=document.getElementById("ktpanel");if(!P)return;
  P.querySelectorAll(".ktw-hint small").forEach(s=>{if(!s.dataset.rs){s.dataset.rs=1;s.textContent="Listen ruh eşinin telefonuna hediye ipucu olarak düşer";}});
  P.querySelectorAll(".kwb.kws").forEach(b=>{if(b.dataset.rs)return;b.dataset.rs=1;b.innerHTML=rsMark("s");const x=kt().shelf[+b.dataset.kws];if(x&&CP.c&&rsFind({k:"istek",t:x.t}))b.classList.add("rs-done");});}
 (function(){const _k=kitapRender;kitapRender=function(){const r=_k.apply(this,arguments);try{rsWishDecor();}catch(e){}return r;};const P=document.getElementById("ktpanel");if(P)new MutationObserver(()=>{clearTimeout(window.__rsW);window.__rsW=setTimeout(()=>{try{rsWishDecor();}catch(e){}},40);}).observe(P,{childList:true,subtree:true});})();
+
+/* ===== v0.68 Biz ikimiz sadeleşti: zarf + öneriler kendi köşelerinde, mesajlar Mesaj sekmesinde, planlar Plan sekmesinde ===== */
+const RS_ENV='<svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="19" rx="4" fill="#FFF4F7"/><path d="M4 9l12 9 12-9" fill="none" stroke="#E0457F" stroke-width="2" stroke-linejoin="round"/><path d="M16 21.2s-3.6-2.2-3.6-4.6a1.9 1.9 0 0 1 3.6-.8 1.9 1.9 0 0 1 3.6.8c0 2.4-3.6 4.6-3.6 4.6z" fill="#E0457F"/></svg>';
+function rsPartnerItems(kinds){if(!CP.c)return [];const me=rsMe();return CP.items.filter(x=>x.author!==me&&(!kinds||kinds.includes(x.kind==="oneri"?(x.data||{}).k:x.kind)));}
+function rsNav(btnId,after){rsCloseAll();try{const z=document.getElementById("zsh");if(z&&!z.hidden)zodClose();}catch(e){}setTimeout(()=>{const g=document.getElementById(btnId);if(g)g.click();setTimeout(()=>{try{after&&after();}catch(e){console.error(e);}},450);},280);}
+/* bildirime dokununca: yerine git */
+function rsGo(x){const d=x.data||{};
+ if(x.kind==="msg"){rsNav("go-love",()=>{tab="msg";loveRender();const t=document.getElementById("cp-th");if(t)goTo(t);});return;}
+ if(x.kind==="plan"){rsNav("go-love",()=>{tab="night";loveRender();const t=document.getElementById("cp-pl");if(t)goTo(t);});return;}
+ if(d.k==="istek"||d.k==="istekl"||d.k==="kitap"){if(d.k==="kitap"){rsNav("go-kitap",()=>{try{bookOpen(null,true,{t:d.t||"",a:d.a||"",d:dkey()});}catch(e){}});return;}
+  rsNav("go-kitap",()=>{kttab="raf";ktShelfI=1;CP.pwOpen=1;kitapRender();try{ktSettle();}catch(e){}setTimeout(()=>{const p=document.getElementById("rs-pw");if(p)p.scrollIntoView({behavior:"smooth",block:"center"});},350);});return;}
+ if(d.k==="film"||d.k==="etk"){rsNav("go-sahne",()=>rsOpen(x));return;}
+ if(d.k==="mac"){rsNav("go-mac",()=>rsOpen(x));return;}
+ rsOpen(x);}
+function rsWhat(x){const d=x.data||{};if(x.kind==="msg")return ["chat","Mesaj",d.t||""];if(x.kind==="plan")return ["cal","Plan daveti",d.t||""];const K=RS_K[d.k]||RS_K.keyif;const G=d.k==="oyun"?RS_G[d.v]:null;
+ return [K[0],{film:"Film daveti",etk:"Etkinlik daveti",mac:"Macera daveti",kitap:"Birlikte okuma daveti",istek:"Hediye ipucu",istekl:"İstek rafı",oyun:"Meydan okuma",keyif:"Paylaşım"}[d.k]||"Öneri",G?G[0]:(d.t||rsLabel(d))+(d.k==="istekl"&&d.list?` · ${d.list.length} kitap`:"")];}
+function rsEnvHTML(){const C=cpSt(),L=rsPartnerItems().slice(0,20),nw=L.filter(x=>x.created_at>(C.envSeen||"")).length,op=!!CP.envOpen;
+ return `<div class="cp-env${op?" open":""}${nw?" new":""}"><button type="button" class="cp-envb" id="cp-envb"><span class="cp-envi">${RS_ENV}${nw?`<i>${nw}</i>`:""}</span><span class="cp-envt"><b>${nw?`Ruh eşinden ${nw} yeni`:"Ruh eşinden gelenler"}</b><small>${L.length?"Dokun, zarfı aç":"Henüz bir şey gelmedi"}</small></span><span class="cp-envc">${op?"Kapat":"Aç"}</span></button>
+  <div class="cp-envl">${L.length?L.map(x=>{const w=rsWhat(x),y=x.data||{};const st2=y.ans==="evet"?"💚":y.ans==="sonra"?"🕰️":"";return `<button type="button" class="cp-envr${x.created_at>(C.envSeen||"")?" nw":""}" data-env="${esc(x.id)}"><span class="cp-envri">${ySvg(w[0])}</span><span class="cp-envrt"><small>${w[1]} · ${cpAgo(x.created_at)}</small><b>${esc(w[2]).slice(0,90)}</b></span><span class="cp-envgo">${st2||"›"}</span></button>`;}).join(""):`<p class="cp-empty">Ruh eşin sana bir şey gönderdiğinde zarfın içine düşer.</p>`}</div></div>`;}
+/* Mesaj sekmesi: aranızdaki sohbet; Plan sekmesi: plan davetleri */
+function cpThreads(){if(step!==10)return;try{const pf=document.getElementById("pname");const f=pf&&pf.closest(".field");if(f)f.classList.toggle("cp-locked-f",!!CP.c);}catch(e){}const me=rsMe();["cp-th","cp-pl"].forEach(id=>{const e=document.getElementById(id);if(e&&!CP.c)e.remove();});if(!CP.c)return;
+ const mp=document.querySelector('[data-panel="msg"]'),np=document.querySelector('[data-panel="night"]');
+ if(mp){let T=document.getElementById("cp-th");if(!T){T=document.createElement("div");T.id="cp-th";T.className="cp-th";mp.prepend(T);}
+  const M=CP.items.filter(x=>x.kind==="msg").slice(0,40).reverse();
+  T.innerHTML=`<div class="cp-thh"><span class="rsm-i">${RS_HEART}</span><b>Aranızda</b><small>${M.length?M.length+" mesaj":""}</small></div><div class="cp-thl" id="cp-thl">${M.length?M.map(x=>`<div class="cp-bub ${x.author===me?"me":"you"}"><p>${esc((x.data||{}).t||"")}</p><small>${cpAgo(x.created_at)}</small></div>`).join(""):`<p class="cp-empty">Buraya yaz ya da aşağıda bir mesaj seçip "Ruh eşime gönder" de.</p>`}</div>
+   <div class="cp-wr"><input id="cp-q2" type="text" maxlength="240" placeholder="Ruh eşine yaz…"><button type="button" id="cp-qs2" aria-label="Gönder">${RS_HEART}</button></div>`;
+  const l=T.querySelector("#cp-thl");l.scrollTop=l.scrollHeight;const q=T.querySelector("#cp-q2");const go=async()=>{const t=q.value.trim();if(!t)return;q.value="";await cpSend("msg",{t});cpThreads();};T.querySelector("#cp-qs2").onclick=go;q.onkeydown=e=>{if(e.key==="Enter")go();};}
+ if(np){let T=document.getElementById("cp-pl");const P=CP.items.filter(x=>x.kind==="plan").slice(0,10);if(!P.length){if(T)T.remove();}else{if(!T){T=document.createElement("div");T.id="cp-pl";T.className="cp-th";np.prepend(T);}
+  T.innerHTML=`<div class="cp-thh"><span class="rsm-i">${RS_HEART}</span><b>Plan davetleriniz</b><small>${P.length}</small></div><div class="cp-thl pl">${P.map(x=>{const d=x.data||{},mine=x.author===me;return `<div class="cp-plr"><p>${esc(d.t||"")}</p><small>${mine?"Sen davet ettin":"Ruh eşin davet etti"} · ${cpAgo(x.created_at)}${d.ans?` · ${d.ans==="evet"?"💚 Varım dedi":"🕰️ Başka zamana"}`:""}</small>${!mine&&!d.ans?`<div class="cp-pa"><button type="button" data-cpa2="${x.id}" data-v="evet">Varım 💚</button><button type="button" data-cpa2="${x.id}" data-v="sonra">Başka zaman</button></div>`:""}</div>`;}).join("")}</div>`;
+  T.querySelectorAll("[data-cpa2]").forEach(b=>b.onclick=async()=>{const x=CP.items.find(i=>i.id===b.dataset.cpa2);if(!x)return;await rsPatch(x,z=>{z.ans=b.dataset.v;return z;});if(b.dataset.v==="evet")try{mfConfetti("Plan tamam!",["#FF9EC4","#E0457F","#fff","#FFE7A0"],"linear-gradient(135deg,#E0457F,#7A1F4A)");}catch(_){}cpThreads();});}}}
+/* Sahne ve Macera: ruh eşinden gelen davetler kendi köşesinde */
+function rsStrip(P,kinds,title){if(!P)return;let S=P.querySelector(".rs-strip");const L=rsPartnerItems().filter(x=>x.kind==="oneri"&&kinds.includes((x.data||{}).k)).slice(0,10);if(!L.length){if(S)S.remove();return;}
+ if(!S){S=document.createElement("div");S.className="rs-strip";P.prepend(S);}
+ S.innerHTML=`<div class="rs-sth"><span class="rsm-i">${RS_HEART}</span><b>${title}</b><small>${L.length}</small></div><div class="rs-str">${L.map(x=>{const d=x.data||{},w=rsWhat(x);return `<button type="button" class="rs-stc${d.ans==="evet"?" ok":d.ans?" no":""}" data-rst="${esc(x.id)}"><span class="rs-ii">${ySvg(w[0])}</span><b>${esc(d.t||"")}</b><small>${esc(d.s||w[1])}</small><em>${d.ans==="evet"?"İkiniz de varsınız 💚":d.ans==="sonra"?"Başka zamana":"Varım de ›"}</em></button>`;}).join("")}</div>`;
+ S.querySelectorAll("[data-rst]").forEach(b=>b.onclick=()=>{const x=CP.items.find(i=>i.id===b.dataset.rst);if(x)rsOpen(x);});}
+/* Kitap: ruh eşimin istek rafı, benim istek rafımın altında açılır */
+function rsPartnerWish(){const m=new Map();rsPartnerItems().filter(x=>x.kind==="oneri").forEach(x=>{const d=x.data||{};const add=(t,a)=>{const k=ktN(t||"");if(k&&!m.has(k))m.set(k,{t,a:a||"",s:"istek"});};if(d.k==="istek")add(d.t,d.a);if(d.k==="istekl")(d.list||[]).forEach(b=>add(b.t,b.a));});return [...m.values()];}
+function rsPwInject(){const w=document.querySelector("#ktpanel .ktshelf.wsh");if(!w||!CP.c)return;const L=rsPartnerWish();let B=document.getElementById("rs-pw");if(!L.length){if(B)B.remove();return;}
+ if(!B){B=document.createElement("div");B.id="rs-pw";B.className="rs-pw";w.appendChild(B);}const op=!!CP.pwOpen;B.classList.toggle("open",op);
+ B.innerHTML=`<button type="button" class="rs-pwb"><span class="rsm-i">${RS_HEART}</span><span><b>Ruh eşimin istek rafı</b><small>${L.length} kitap · hediye ipucu</small></span><em>${op?"▴":"▾"}</em></button>
+  <div class="rs-pwl"><div class="ktwood">${L.slice(0,10).map(x=>ktSpine(x,1)).join("")}${L.length>10?`<span class="wsh-more">+${L.length-10}</span>`:""}</div><div class="ktplank wpl"></div><p class="rs-pwf">Kitaba dokun, fiyatına bak; hediye etmek sana kalmış 🎁</p></div>`;
+ B.querySelector(".rs-pwb").onclick=e=>{e.stopPropagation();CP.pwOpen=!CP.pwOpen;rsPwInject();};}
+(function(){
+ const _p=cpPaint;cpPaint=function(){_p.apply(this,arguments);try{const W=document.getElementById("cp-w");if(!W||!CP.c)return;W.querySelectorAll(".cp-in,.rs-box").forEach(e=>e.remove());
+   const h=W.querySelector(".cp-h");if(h){const e=document.createElement("div");e.innerHTML=rsEnvHTML();const n=e.firstElementChild;h.after(n);
+    n.querySelector("#cp-envb").onclick=()=>{CP.envOpen=!CP.envOpen;if(CP.envOpen){const C=cpSt();const top=rsPartnerItems()[0];setTimeout(()=>{if(top){C.envSeen=top.created_at;save();}},1500);}cpPaint();};
+    n.querySelectorAll("[data-env]").forEach(b=>b.onclick=()=>{const x=CP.items.find(i=>i.id===b.dataset.env);if(x)rsGo(x);});}
+   cpThreads();}catch(e){console.error(e);}};
+ const _lr=loveRender;loveRender=function(){const r=_lr.apply(this,arguments);try{cpThreads();}catch(e){}return r;};
+ const _t=cpToast;cpToast=function(x){_t.apply(this,arguments);try{const t=[...document.querySelectorAll(".cp-toast")].pop();if(t&&x)t.onclick=()=>{t.remove();rsGo(x);};}catch(e){}};
+ const _sp=spRender;spRender=function(){const r=_sp.apply(this,arguments);try{rsStrip(document.getElementById("sppanel"),["film","etk"],"Ruh eşinden davetler");}catch(e){}return r;};
+ const _mr=macRender;macRender=function(){const r=_mr.apply(this,arguments);try{rsStrip(document.getElementById("macpanel"),["mac"],"Ruh eşinden maceralar");}catch(e){}return r;};
+ const _ks=ktShelves;ktShelves=function(){const r=_ks.apply(this,arguments);try{rsPwInject();const wrap=document.querySelector("#ktpanel .ktshv"),dots=document.querySelector("#ktpanel .ktsh-dots");if(wrap&&dots&&wrap.previousElementSibling!==dots){wrap.before(dots);dots.classList.add("top");}}catch(e){console.error(e);}return r;};
+ const _kr=kitapRender;kitapRender=function(){const r=_kr.apply(this,arguments);try{rsPwInject();const wrap=document.querySelector("#ktpanel .ktshv"),dots=document.querySelector("#ktpanel .ktsh-dots");if(wrap&&dots&&wrap.previousElementSibling!==dots){wrap.before(dots);dots.classList.add("top");}}catch(e){}return r;};
+ /* yeni gelen olunca açık köşe tazelensin */
+ const _pl=cpPull;cpPull=async function(){await _pl.apply(this,arguments);try{if(step===95)rsStrip(document.getElementById("macpanel"),["mac"],"Ruh eşinden maceralar");if(step===96||document.getElementById("sppanel")&&!document.getElementById("sppanel").closest("[hidden]"))rsStrip(document.getElementById("sppanel"),["film","etk"],"Ruh eşinden davetler");if(step===90)rsPwInject();}catch(e){}};
+})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
