@@ -7947,6 +7947,44 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+.evv .eseg .ev-tb{display:inline-flex!important;align-items:center;justify-content:center;gap:5px}
+.evv .eseg .ev-ic{width:17px;height:17px;flex:none}
+@media (max-width:374px){.evv .eseg .ev-tb{gap:3px;font-size:13px!important;padding-inline:4px!important}.evv .eseg .ev-ic{width:14px;height:14px}}
+.evv .esum span.ev-st{position:relative;padding:10px 10px 9px!important;border-radius:16px!important;gap:1px}
+.evv .esum span.ev-st .ev-ic{width:18px;height:18px;margin-bottom:2px;opacity:.95}
+.evv .esum span.ev-st b{font-size:22px!important;line-height:1.1}
+html:not([data-mf="dusk"]) .evv .esum span.ev-st{background:rgba(255,249,241,.94)!important;border:0!important;color:#8A5A42!important;box-shadow:0 10px 20px -14px rgba(60,20,8,.8)}
+html:not([data-mf="dusk"]) .evv .esum span.ev-st b{color:#B8502E!important}
+html:not([data-mf="dusk"]) .evv .esum span.ev-st .ev-ic{color:#D2643C}
+html:not([data-mf="dusk"]) .evv .esum span.ev-st.warn{background:#FFE7B8!important}
+.ev-more{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin:10px 0 4px;height:46px;border:0;border-radius:15px;background:rgba(184,80,46,.1);color:#9A3E20;font:800 14px var(--f-body);cursor:pointer}
+.ev-more b{min-width:28px;padding:2px 8px;border-radius:99px;background:#B8502E;color:#fff;font-size:12px}
+html[data-mf="dusk"] .ev-more{background:rgba(242,193,78,.12);color:#F6CFA8}
+
+/* v0.79 Evimin düzeni: sıcak mutfak teması — açık zemin yerine kavrulmuş keten + çini deseni */
+html:not([data-mf="dusk"]) body.ev-on{
+  --bg:#ECD6BC;--surface:#FFF9F1;--ink:#3B2116;--muted:#8A6450;--line:#EAD3BB;
+  --lilac:#F5E6D4;--lilac-d:#B8502E;--peach:#FBE1CD;--peach-d:#D2643C;--mint:#E2EDD5;--mint-d:#4F8E62;
+  --sky:#DCEAEC;--sky-d:#3B7C8F;--butter:#FBEBC4;--butter-d:#B67F14;--pink:#F7DCD1;--pink-d:#C04A32;
+  background-color:#ECD6BC!important;
+  background-image:radial-gradient(120% 60% at 50% -10%,rgba(255,236,210,.9),transparent 60%),
+   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23B8502E' stroke-opacity='.09' stroke-width='1.4'%3E%3Cpath d='M32 6l7 19 19 7-19 7-7 19-7-19-19-7 19-7z'/%3E%3Ccircle cx='32' cy='32' r='5'/%3E%3Cpath d='M0 0l10 10M64 0L54 10M0 64l10-10M64 64L54 54'/%3E%3C/g%3E%3C/svg%3E"),
+   linear-gradient(180deg,#F1DFC8,#E6C9A6)!important;
+  background-attachment:fixed,scroll,fixed!important}
+html:not([data-mf="dusk"]) body.ev-on .evv .lcard.evc,html:not([data-mf="dusk"]) body.ev-on .evv .lcard{background:#FFF9F1!important;border:1px solid rgba(150,70,35,.14)!important;box-shadow:0 1px 0 rgba(255,255,255,.8) inset,0 16px 32px -22px rgba(90,40,18,.55)!important}
+html:not([data-mf="dusk"]) body.ev-on .evv .lcard h3{color:#3B2116}
+html:not([data-mf="dusk"]) body.ev-on .evv .lcard h3 .step{background:linear-gradient(135deg,#E8845C,#B8502E)!important;color:#fff!important;box-shadow:0 6px 12px -6px rgba(184,80,46,.8)}
+html:not([data-mf="dusk"]) body.ev-on .evv .seg.eseg{background:rgba(255,249,241,.92)!important;border-color:rgba(150,70,35,.18)!important;box-shadow:0 12px 26px -18px rgba(90,40,18,.6);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+html:not([data-mf="dusk"]) body.ev-on .evv .seg.eseg button{color:#7A3A22!important}
+html:not([data-mf="dusk"]) body.ev-on .evv .seg.eseg button[aria-selected="true"]{color:#fff!important}
+html:not([data-mf="dusk"]) body.ev-on .evv .ksub,html:not([data-mf="dusk"]) body.ev-on .evv .ksq,html:not([data-mf="dusk"]) body.ev-on .evv .act,html:not([data-mf="dusk"]) body.ev-on .evv .food,html:not([data-mf="dusk"]) body.ev-on .evv .wk7{background:#F6E7D6!important;color:#4A2718!important;border-color:transparent!important}
+html:not([data-mf="dusk"]) body.ev-on .evv .act[aria-pressed="true"],html:not([data-mf="dusk"]) body.ev-on .evv .ksq.on,html:not([data-mf="dusk"]) body.ev-on .evv .food.picked,html:not([data-mf="dusk"]) body.ev-on .evv .wk7.sel{background:#FFE9D9!important;box-shadow:inset 0 0 0 1.5px #D2643C!important;color:#7A2E14!important}
+html:not([data-mf="dusk"]) body.ev-on .evv input,html:not([data-mf="dusk"]) body.ev-on .evv select{background:#F8EBDD!important;border:1px solid rgba(150,70,35,.16)!important;color:#3B2116!important}
+html:not([data-mf="dusk"]) body.ev-on .evv input::placeholder{color:#A88672}
+html:not([data-mf="dusk"]) body.ev-on .evv .field label{color:#8A5A42!important}
+html:not([data-mf="dusk"]) body.ev-on .evv .gsur{background:rgba(255,249,241,.85)!important;border-color:rgba(192,74,50,.35)!important}
+html:not([data-mf="dusk"]) body.ev-on .evv .ehero{box-shadow:0 22px 40px -22px rgba(120,45,18,.75)!important}
+
 .bz-frc{display:flex;align-items:center;gap:12px;width:100%;margin:22px 0 10px;padding:12px 14px;border:0;border-radius:20px;text-align:left;color:#fff;font-family:var(--f-body);background:linear-gradient(170deg,rgba(255,255,255,.1),rgba(255,255,255,.04));box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);cursor:pointer}
 .bz-frc i{flex:none;width:36px;height:36px;border-radius:12px;display:grid;place-items:center;font-style:normal;font-weight:900;font-size:17px;color:#fff;background:linear-gradient(135deg,#B9A2FF,#7A55E8)}
 .bz-frc span{flex:1;min-width:0}.bz-frc b{display:block;font-size:15px}.bz-frc small{display:block;font-size:12px;opacity:.65;margin-top:1px}
@@ -19817,6 +19855,18 @@ function bzSignsHTML(me){const sel=BZC.sg;let card="";
    O.querySelectorAll("[data-bzsg]").forEach(b=>b.onclick=()=>{const v=b.dataset.bzsg;BZC.sg=v&&BZC.sg!==v?v:null;const y=O.scrollTop;zodRender();O.scrollTop=y;if(BZC.sg){const c=O.querySelector(".bz-sgc");if(c&&c.getBoundingClientRect().bottom>innerHeight-90)O.scrollTo({top:O.scrollTop+c.getBoundingClientRect().bottom-innerHeight+110,behavior:"smooth"});}});
    const u=O.querySelector("[data-bzsgu]");if(u)u.onclick=()=>{BZC.pick=u.dataset.bzsgu;BZC.who=null;BZC.open=0;zodRender();const e=O.querySelector(".bz-uy");if(e)O.scrollTo({top:e.offsetTop-90,behavior:"smooth"});try{sndPlay("bowl");}catch(_){}};}
  }catch(e){console.error(e);}};})();
+
+/* v0.79: Evimin düzeni kendi zeminini giysin */
+(function(){const _s=show;show=function(){const r=_s.apply(this,arguments);try{document.body.classList.toggle("ev-on",step===80);}catch(e){}return r;};})();
+
+const EV_IC={shop:'<path d="M3 4h2.2l2.3 11h10.8L21 7.5H6.3"/><circle cx="9.5" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/>',meal:'<path d="M4 10.5h16v5a4.5 4.5 0 0 1-4.5 4.5h-7A4.5 4.5 0 0 1 4 15.5z"/><path d="M2 10.5h2M20 10.5h2M9 7c-.8-1 .8-2 0-3.2M15 7c-.8-1 .8-2 0-3.2M12 7.5c-.8-1 .8-2 0-3.2"/>',bill:'<path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/>',chore:'<path d="M15 3l-3.5 8.5"/><path d="M6.5 11.5h9.5l2 9.5H4.5z"/><path d="M8.5 15.5V21M12 15.5V21M15.5 15.5V21"/>'};
+const evIco=k=>`<svg class="ev-ic" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${EV_IC[k]}</g></svg>`;
+let EVF=0;
+(function(){const _e=evRender;evRender=function(){const r=_e.apply(this,arguments);try{
+  document.querySelectorAll(".eseg button").forEach(b=>{if(!b.querySelector(".ev-ic")){b.insertAdjacentHTML("afterbegin",evIco(b.dataset.et));b.classList.add("ev-tb");}});
+  const S=document.getElementById("esum");if(S){const sp=S.querySelectorAll(":scope>span");const ks=["shop","meal","bill"];sp.forEach((s,i)=>{if(s.querySelector(".ev-ic"))return;s.classList.add("ev-st");s.insertAdjacentHTML("afterbegin",evIco(ks[i]||"shop"));});}
+  const F=document.querySelector("#epanel .foods");if(F&&F.children.length>12){if(!EVF){[...F.children].slice(12).forEach(c=>c.hidden=true);F.insertAdjacentHTML("afterend",`<button type="button" class="ev-more" id="ev-more">Tüm yemekleri gör <b>${F.children.length}</b></button>`);document.getElementById("ev-more").onclick=()=>{EVF=1;evRender();};}}
+ }catch(e){console.error(e);}return r;};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
