@@ -19729,7 +19729,9 @@ SPS_REG.bzs=(o,g,W,H)=>bzPolStory(o,g,W,H,"s",0);SPS_REG.bzk=(o,g,W,H)=>bzPolSto
 
 /* v0.78.7: story çizimi asla takılı kalmasın — roundRect yedeği + hata olursa çizim yine biter */
 if(window.CanvasRenderingContext2D&&!CanvasRenderingContext2D.prototype.roundRect){CanvasRenderingContext2D.prototype.roundRect=function(x,y,w,h,r){r=Math.min(+r||0,w/2,h/2);this.moveTo(x+r,y);this.arcTo(x+w,y,x+w,y+h,r);this.arcTo(x+w,y+h,x,y+h,r);this.arcTo(x,y+h,x,y,r);this.arcTo(x,y,x+w,y,r);this.closePath();return this;};}
-(function(){const _r=spsRender;spsRender=async function(o,tpl,scale){try{return await Promise.race([_r.apply(this,arguments),new Promise((_,j)=>setTimeout(()=>j(new Error("zaman aşımı")),9000))]);}catch(e){console.error("story",tpl,e);
+(function(){const _r=spsRender;try{const F=document.fonts;if(F&&F.load&&!F._mfCap){const fl=F.load.bind(F);F.load=(f,t)=>Promise.race([fl(f,t).catch(()=>[]),new Promise(r=>setTimeout(()=>r([]),2500))]);F._mfCap=1;}}catch(e){}
+ const _try=(a,ms)=>Promise.race([_r.apply(null,a),new Promise((_,j)=>setTimeout(()=>j(new Error("zaman aşımı")),ms))]);
+ spsRender=async function(o,tpl,scale){const a=arguments;try{try{return await _try(a,12000);}catch(e1){console.warn("story retry",tpl,e1);delete o._im;delete o._emb;return await _try(a,15000);}}catch(e){console.error("story",tpl,e);
   const k=scale||1,cv=document.createElement("canvas");cv.width=1080*k;cv.height=1920*k;const g=cv.getContext("2d");g.scale(k,k);const bg=g.createLinearGradient(0,0,0,1920);bg.addColorStop(0,"#2B1B54");bg.addColorStop(1,"#5B3FB0");g.fillStyle=bg;g.fillRect(0,0,1080,1920);
   g.fillStyle="#fff";g.textAlign="center";g.font="700 44px sans-serif";g.fillText("Bu şablon şu an hazırlanamadı",540,900);g.font="400 30px sans-serif";g.fillText(String(e&&e.message||e).slice(0,60),540,960);try{yToast("Şablon hazırlanamadı: "+String(e&&e.message||e).slice(0,50));}catch(_){}return cv;}};})();
 
