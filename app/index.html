@@ -19051,7 +19051,7 @@ function bkPlace(ti,r0,c0){const p=BK.tray[ti];if(!p||!bkFits(BK.g,p.s,r0,c0))re
   if(BK.g.every((v,i)=>v<0||clr.has(i))){BK.sc+=300;setTimeout(()=>bkFloat("Tertemiz! +300","cb"),350);}}
  else{BK.miss++;if(BK.miss>=3)BK.combo=0;}
  if(BK.tray.every(x=>!x))BK.tray=bkTray();
- setTimeout(()=>{bkPaint();if(!BK.tray.some(x=>x&&bkAny(BK.g,x.s)))bkOver();},L?420:60);bkSave();return true;}
+ const _clrN=L?(rows.length+cols.length)*BK_N:0;setTimeout(()=>{bkPaint();if(!BK.tray.some(x=>x&&bkAny(BK.g,x.s)))bkOver();},L?380+_clrN*14+120:60);bkSave();return true;}
 function bkOver(){BK.over=1;const best=bkBest(),nb=BK.sc>best;if(nb){bkG2().blkBest=BK.sc;}bkSave();bkSnd(nb?"best":"over");
  try{if(nb&&CP.c){const x=rsFind({k:"oyun",v:"blk"});if(x)rsPatch(x,z=>{z.lv=Object.assign({},z.lv||{},{[rsMe()]:BK.sc});return z;});}}catch(e){}
  const O=document.getElementById("bk2-ov");if(!O)return;O.hidden=false;O.innerHTML=`<div class="bk2-card">${nb?`<div class="bk2-crown">👑</div><small>Yeni rekor!</small>`:`<small>Yer kalmadı</small>`}<b>${BK.sc}</b><span>En iyi: ${Math.max(best,BK.sc)}</span>
@@ -19400,6 +19400,13 @@ function tmIntro(){const W=document.getElementById("tm");if(!W)return;const d=do
 
 /* v0.75.3: Keyif köşesindeki ✕ her oyunda kapatsın (bazı oyunlar düğmeyi yeniden çizip bağlantıyı koparıyordu) */
 document.addEventListener("click",e=>{const x=e.target.closest&&e.target.closest("#zsh #zs-x");if(!x)return;e.preventDefault();e.stopPropagation();try{zodClose();}catch(_){}},true);
+
+/* v0.75.4 Blok Keyfi uzun soluklu: üç parçanın üçü de bir sırayla sığacak şekilde gelir; tahta dolunca küçük parçalar artar */
+function bkPlaceSim(g,sh){for(let r=0;r<BK_N;r++)for(let c=0;c<BK_N;c++)if(bkFits(g,sh,r,c)){const h=g.slice();BK_SH[sh].forEach(([a,b])=>h[(r+a)*BK_N+c+b]=0);const F=bkFull(h);F.rows.forEach(R=>{for(let k=0;k<BK_N;k++)h[R*BK_N+k]=-1;});F.cols.forEach(C=>{for(let k=0;k<BK_N;k++)h[k*BK_N+C]=-1;});return h;}return null;}
+function bkAllFit(g,T){const P=[[0,1,2],[0,2,1],[1,0,2],[1,2,0],[2,0,1],[2,1,0]];return P.some(o=>{let h=g;for(const i of o){h=bkPlaceSim(h,T[i].s);if(!h)return false;}return true;});}
+bkTray=function(){const fill=BK.g.filter(v=>v>=0).length/64;const pick=()=>{if(fill>.45&&Math.random()<fill*.9){const small=[0,1,2,3,4,9,13,14,15,16,37,38];return small[Math.floor(Math.random()*small.length)];}return bkPick();};
+ let fb=null;for(let k=0;k<80;k++){const T=[0,1,2].map(()=>({s:pick(),c:Math.floor(Math.random()*BK_COL.length)}));if(bkAllFit(BK.g,T))return T;if(!fb&&T.some(p=>bkAny(BK.g,p.s)))fb=T;}
+ return fb||[0,1,2].map(()=>({s:0,c:Math.floor(Math.random()*BK_COL.length)}));};
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
