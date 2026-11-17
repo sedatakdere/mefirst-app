@@ -7945,6 +7945,8 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+.tm-s .tm-f{box-shadow:0 4px 0 #C4A46C,inset 0 2px 0 #fff,inset 0 -3px 0 rgba(210,180,120,.45)!important;background:linear-gradient(165deg,#FFFFFF 0%,#FFF8EA 60%,#F6E9CF 100%)!important}
+
 .tm-t{background:#D9BE8C!important;border-radius:20%!important;box-shadow:0 6px 0 #C4A46C,0 7px 0 #A9874F,0 12px 16px -6px rgba(20,70,60,.5)!important}
 .tm-t .tm-f{height:90%!important;border-radius:20%!important;background:linear-gradient(165deg,#FFFFFF 0%,#FFF8EA 60%,#F6E9CF 100%)!important;box-shadow:inset 0 2px 0 #fff,inset 0 -3px 0 rgba(210,180,120,.45),inset 0 0 0 1px rgba(200,160,100,.25)!important}
 .tm-t .tm-f::before,.tm-s .tm-f::before{display:none}
@@ -19374,6 +19376,7 @@ tmTile=function(t,sz){const I=TM_I[t.c],b=TM.bb;const lift=t.l*sz*.1;return `<bu
   const top=B.getBoundingClientRect().top;const availH=window.innerHeight-top-210;const rows=(TM.bb.y1-TM.bb.y0)/2+.6;let sz=Math.floor(Math.min(w/cols,availH/(rows*1.05),62));sz=Math.max(sz,30);
   const _w=B.parentElement.clientWidth;_p.apply(this,arguments);
   B.style.width=((TM.bb.x1-TM.bb.x0)*sz/2+sz*.4)+"px";B.style.height=((TM.bb.y1-TM.bb.y0)*sz/2+sz*.55)+"px";TM.sz=sz;B.innerHTML=TM.T.filter(t=>!t.gone).sort((a,b)=>a.l-b.l||a.y-b.y).map(t=>tmTile(t,sz)).join("");
+  const Tr=document.getElementById("tm-tray");if(Tr){Tr.style.setProperty("--sz",Math.min(sz*.92,54)+"px");Tr.innerHTML=Array.from({length:TM_CAP},(_,i)=>{const c=TM.tray[i];return `<span class="tm-s">${c!=null?`<span class="tm-f" style="--c:${TM_I[c][1]}"><span class="tm-chip">${ySvg(TM_I[c][0])}</span></span>`:""}</span>`;}).join("");}
   const tot=TM.T.length,gone=TM.T.filter(t=>t.gone).length;let P=document.getElementById("tm-prog");if(!P){P=document.createElement("div");P.id="tm-prog";P.className="tm-prog";document.querySelector(".tm .ws-top").after(P);}
   P.innerHTML=`<i style="width:${Math.round(gone/tot*100)}%"></i><span>${Math.round(gone/tot*100)}%</span>`;
   const hb=document.getElementById("tm-hint");if(hb){hb.querySelector("i").textContent=TM.hintN;hb.disabled=!TM.hintN;}};})();
