@@ -4308,7 +4308,9 @@ html[data-mf="dusk"] .zsh.kf-falbg{background:radial-gradient(60% 35% at 15% 8%,
 .kf-fal2 .kf-hero h2{font-size:40px!important;background:linear-gradient(90deg,#C2578A,#E07A3A,#2A9DAE);-webkit-background-clip:text;background-clip:text;color:transparent!important}
 .kf-cup2{width:250px;height:216px;margin:0 auto;animation:dmBob 3.4s ease-in-out infinite}
 .kf-cup2 svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 16px 20px rgba(27,110,138,.35))}
-.kf-cup2.flip .cupg{transform-origin:110px 100px;animation:kFlip .9s cubic-bezier(.5,0,.3,1.3) both}
+.kf-cup2.flip .cupg{transform-origin:110px 100px;animation:kFlip2 1s cubic-bezier(.5,0,.3,1.2) both}
+.kf-cup2 .fc-ft{opacity:0}.kf-cup2.flip .fc-ft{animation:kFtIn .01s linear .45s both}.kf-cup2.flip .fc-in{animation:kFtOut .01s linear .45s both}
+@keyframes kFlip2{0%{transform:none}35%{transform:translateY(-26px) rotate(90deg)}100%{transform:translateY(20px) rotate(180deg)}}@keyframes kFtIn{to{opacity:1}}@keyframes kFtOut{to{opacity:0}}
 .kf-cup2 .steam2 path{fill:none;stroke:#E8A0BC;stroke-width:5;stroke-linecap:round;opacity:.8;animation:kfSm 2.8s ease-in-out infinite}
 .kf-cup2 .steam2 path:nth-child(2){animation-delay:.5s;stroke:#F2C27A}.kf-cup2 .steam2 path:nth-child(3){animation-delay:1s;stroke:#8FD6CF}
 .kf-cup2 .fc-sp path{animation:kfTw 2.4s ease-in-out infinite}.kf-cup2 .fc-sp path:nth-child(2){animation-delay:.8s}.kf-cup2 .fc-sp path:nth-child(3){animation-delay:1.6s}
@@ -13209,7 +13211,7 @@ function falCup(flip){return `<div class="kf-cup2${flip?" flip":""}" aria-hidden
   <path d="M168 78c18 0 26 10 22 22s-16 17-26 13" fill="none" stroke="url(#fcG)" stroke-width="9" stroke-linecap="round"/>
   <path d="M56 84h108" stroke="url(#fcG)" stroke-width="5"/><path d="M62 130h96" stroke="url(#fcG)" stroke-width="3" opacity=".8"/>
   ${[0,1,2,3,4].map(i=>`<g transform="translate(${74+i*18} 107)"><circle r="6" fill="#F49AB8"/><circle r="2.6" fill="#FFF1B8"/><path d="M0-12v4M0 8v4M-12 0h4M8 0h4" stroke="#FFF1B8" stroke-width="2" stroke-linecap="round"/></g>`).join("")}
-  <ellipse cx="110" cy="66" rx="58" ry="10" fill="url(#fcG)"/><ellipse cx="110" cy="66" rx="52" ry="7.5" fill="url(#fcC)"/><ellipse cx="96" cy="64" rx="12" ry="2" fill="#C99A6A" opacity=".7"/></g>
+  <ellipse cx="110" cy="66" rx="58" ry="10" fill="url(#fcG)"/><g class="fc-in"><ellipse cx="110" cy="66" rx="52" ry="7.5" fill="url(#fcC)"/><ellipse cx="96" cy="64" rx="12" ry="2" fill="#C99A6A" opacity=".7"/></g><g class="fc-ft"><ellipse cx="110" cy="151" rx="30" ry="6" fill="url(#fcG)"/><ellipse cx="110" cy="151" rx="24" ry="4" fill="#1B6E8A"/></g></g>
   ${flip?"":`<g class="steam2"><path d="M88 52c-8-10 8-16 0-28"/><path d="M110 52c-8-10 8-16 0-28"/><path d="M132 52c-8-10 8-16 0-28"/></g>`}
   <g class="fc-sp"><path d="M30 40l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#FFE16B"/><path d="M190 30l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#FF9EC4"/><path d="M196 120l2 4 4 2-4 2-2 4-2-4-4-2 4-2z" fill="#9FE3D6"/></g></svg></div>`;}
 /* fotoğraf analizi: telvenin koyu bölgeleri ve dokusu */
