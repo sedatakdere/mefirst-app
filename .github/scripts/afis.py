@@ -226,6 +226,8 @@ if not kat.get("v2"):
     for f in eski:
         have.discard(f["id"]); have_names.discard(fold(f["o"])); films.pop(f["id"], None)
     kat["v2"] = 1; print("eski tohum temizlendi:", len(eski))
+HAYIR = {fold(x) for x in ["Grinin Elli Tonu", "Lolita", "Paris'te Son Tango", "Borat: Şanlı Kazakistan Milletinin Çıkarlarını Arttırmak İçin Amerikan Kültürünün İncelenmesi", "Yasak İlişki"]}
+kat["films"] = [f for f in kat.get("films", []) if fold(f["t"]) not in HAYIR]
 eklenen = 0
 T = tohum() if TOHUM_N > 0 else [[], []]
 for liste, kota in ((T[0], TOHUM_N - YERLI_N), (T[1], YERLI_N)):
@@ -237,7 +239,7 @@ for liste, kota in ((T[0], TOHUM_N - YERLI_N), (T[1], YERLI_N)):
             gs = gs | wd_genres(qid)
             if gs & BAD: continue
             f = wd_film(qid)
-            if not f or fold(f["o"]) in have_names: continue
+            if not f or fold(f["o"]) in have_names or fold(f["t"]) in HAYIR: continue
             g = {GMAP[x] for x in gs if x in GMAP} | ({"gul"} if "Q860626" in gs else set())
             if f["y"] < 1985 or (yerli and f["y"] < 1995): g.add("nost")
             if yerli: f["tr"] = 1

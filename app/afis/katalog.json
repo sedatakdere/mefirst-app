@@ -1168,19 +1168,6 @@
 "p": 68
 },
 {
-"id": "wd-Q186323",
-"q": "Q186323",
-"t": "Borat: Şanlı Kazakistan Milletinin Çıkarlarını Arttırmak İçin Amerikan Kültürünün İncelenmesi",
-"o": "Borat",
-"y": 2006,
-"d": "Larry Charles",
-"line": "2006 tarihli Larry Charles'ın komedi filmi",
-"g": [
-"gul"
-],
-"p": 67
-},
-{
 "id": "wd-Q218235",
 "q": "Q218235",
 "t": "Charlie'nin Çikolata Fabrikası",
@@ -1513,21 +1500,6 @@
 "p": 57
 },
 {
-"id": "wd-Q570567",
-"q": "Q570567",
-"t": "Paris'te Son Tango",
-"o": "Last Tango in Paris",
-"y": 1972,
-"d": "Bernardo Bertolucci",
-"line": "1972 film directed by Bernardo Bertolucci",
-"g": [
-"agla",
-"ask",
-"nost"
-],
-"p": 57
-},
-{
 "id": "wd-Q454398",
 "q": "Q454398",
 "t": "Şirinler",
@@ -1620,20 +1592,6 @@
 "g": [
 "agla",
 "gul"
-],
-"p": 55
-},
-{
-"id": "wd-Q14566553",
-"q": "Q14566553",
-"t": "Grinin Elli Tonu",
-"o": "Fifty Shades of Grey",
-"y": 2015,
-"d": "Sam Taylor-Johnson",
-"line": "Film",
-"g": [
-"agla",
-"ask"
 ],
 "p": 55
 },
@@ -1775,22 +1733,6 @@
 "g": [
 "agla",
 "ask"
-],
-"p": 53
-},
-{
-"id": "wd-Q536560",
-"q": "Q536560",
-"t": "Lolita",
-"o": "Lolita",
-"y": 1962,
-"d": "Stanley Kubrick",
-"line": "1962 USA film by Stanley Kubrick",
-"g": [
-"agla",
-"ask",
-"gul",
-"nost"
 ],
 "p": 53
 },
@@ -1953,20 +1895,6 @@
 "agla",
 "ask",
 "iyi"
-],
-"p": 52
-},
-{
-"id": "wd-Q399823",
-"q": "Q399823",
-"t": "Yasak İlişki",
-"o": "Yasak İlişki",
-"y": 1995,
-"d": "Clint Eastwood",
-"line": "Robert James Waller'ın romanından uyarlanan 1995 ABD yapımı romantik-drama filmi",
-"g": [
-"agla",
-"ask"
 ],
 "p": 52
 },
