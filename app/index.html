@@ -7957,7 +7957,7 @@ html #zsh.pzmode:has(.mv-in){background:#FFB7A0}
 .mv-nx{display:flex;flex-direction:column;align-items:center;width:64px;height:64px;justify-content:center;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:inset 0 0 0 2px rgba(255,255,255,.8),0 6px 14px -8px rgba(150,50,20,.5)}
 .mv-nx small{font-size:9px;font-weight:800;letter-spacing:.06em;color:#B5552E;margin-top:4px;margin-bottom:-6px}.mv-nx canvas{width:44px;height:44px}
 .mv-jar{position:relative;border-radius:10px 10px 34px 34px;background:linear-gradient(180deg,rgba(255,250,240,.75),rgba(255,244,228,.92));box-shadow:inset 0 0 0 4px rgba(255,255,255,.9),inset 0 -14px 30px rgba(230,150,90,.18),0 22px 40px -22px rgba(150,50,20,.65),0 0 0 6px rgba(233,160,110,.55);overflow:hidden;cursor:pointer}
-.mv-jar::before{content:"";position:absolute;left:5%;top:6%;width:4%;height:70%;border-radius:99px;background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(255,255,255,0));pointer-events:none;z-index:2}
+
 .mv-jar canvas{display:block}
 .mv-evo{width:100%;max-width:430px;display:flex;justify-content:center;padding:4px 0 calc(8px + env(safe-area-inset-bottom,0px));border-radius:22px}
 .mv-card{color:#7A2E1C}.mv-card small{color:#F0567A}.mv-card>b{font-size:52px}
@@ -19128,7 +19128,7 @@ RS_G.ws=["Renk Sırala bölüm yarışı","Kim daha ileride?"];
 (function(){const _l=rsLv;rsLv=function(v){if(v==="ws")return wsLvMax();return _l.apply(this,arguments);};})();
 
 /* ===== v0.74 Meyve Keyfi: meyveleri kavanoza bırak, aynılar birleşip büyüsün — kiraz'dan karpuza ===== */
-const MV_F=[["Kiraz",.046,"#FF5A72","#C81E3C"],["Çilek",.06,"#FF6B7E","#E0283F"],["Üzüm",.074,"#B58CFF","#6E3FC4"],["Mandalina",.088,"#FFC15A","#F08A1C"],["Portakal",.106,"#FFB24A","#F2780F"],["Elma",.126,"#FF7A7A","#D9283A"],["Armut",.146,"#E6F07A","#A9C23A"],["Şeftali",.166,"#FFD0B0","#FF8E72"],["Ananas",.188,"#FFE27A","#E6A91F"],["Kavun",.212,"#D9F29A","#8FC24A"],["Karpuz",.248,"#7FD97A","#2E8F3E"]];
+const MV_F=[["Kiraz",.046,"#FF5A72","#C81E3C"],["Çilek",.06,"#FF6B7E","#E0283F"],["Üzüm",.074,"#B58CFF","#6E3FC4"],["Limon",.088,"#FFF6A0","#E9CF1E"],["Portakal",.106,"#FFB24A","#F2780F"],["Elma",.126,"#FF7A7A","#D9283A"],["Armut",.146,"#E6F07A","#A9C23A"],["Şeftali",.166,"#FFD0B0","#FF8E72"],["Ananas",.188,"#FFE27A","#E6A91F"],["Kavun",.212,"#D9F29A","#8FC24A"],["Karpuz",.248,"#7FD97A","#2E8F3E"]];
 const MV_PT=[1,3,6,10,15,21,28,36,45,55,66];
 let MV=null,MVR=0;
 function mvG2(){return st.games2=st.games2||{};}function mvBest(){return +mvG2().mvBest||0;}function mvSndOn(){return mvG2().mvSnd!==0;}
@@ -19175,8 +19175,8 @@ function mvDraw(g,x,y,r,t,a,sc){const F=MV_F[t];g.save();g.translate(x,y);g.rota
 /* --- fizik --- */
 function mvStep(dt){const W=MV.W,H=MV.H,Gv=W*4.6;const F=MV.F;
  for(const f of F){const vx=(f.x-f.px)*.992,vy=(f.y-f.py)*.992;f.px=f.x;f.py=f.y;f.x+=vx;f.y+=vy+Gv*dt*dt;f.a+=vx/f.r*.9;f.age+=dt;}
- for(let it=0;it<3;it++){for(let i=0;i<F.length;i++){const a=F[i];for(let j=i+1;j<F.length;j++){const b=F[j];const dx=b.x-a.x,dy=b.y-a.y,R=a.r+b.r,d2=dx*dx+dy*dy;if(d2>=R*R||d2===0)continue;const d=Math.sqrt(d2),o=(R-d),nx=dx/d,ny=dy/d;
-   if(a.t===b.t&&!a.m&&!b.m&&o>.5){a.m=b.m=1;MV.mq.push([a,b]);continue;}const ma=a.r*a.r,mb=b.r*b.r,s=o/(ma+mb);a.x-=nx*s*mb*.9;a.y-=ny*s*mb*.9;b.x+=nx*s*ma*.9;b.y+=ny*s*ma*.9;}}
+ for(let it=0;it<3;it++){for(let i=0;i<F.length;i++){const a=F[i];for(let j=i+1;j<F.length;j++){const b=F[j];const dx=b.x-a.x,dy=b.y-a.y,R=a.r+b.r,d2=dx*dx+dy*dy;if(a.t===b.t&&!a.m&&!b.m&&d2<(R+2)*(R+2)&&d2>0){a.m=b.m=1;MV.mq.push([a,b]);continue;}if(d2>=R*R||d2===0)continue;const d=Math.sqrt(d2),o=(R-d),nx=dx/d,ny=dy/d;
+   if(a.t===b.t&&!a.m&&!b.m){a.m=b.m=1;MV.mq.push([a,b]);continue;}const ma=a.r*a.r,mb=b.r*b.r,s=o/(ma+mb);a.x-=nx*s*mb*.9;a.y-=ny*s*mb*.9;b.x+=nx*s*ma*.9;b.y+=ny*s*ma*.9;}}
   for(const f of F){if(f.x<f.r){f.x=f.r;}if(f.x>W-f.r){f.x=W-f.r;}if(f.y>H-f.r){f.y=H-f.r;f.px=f.x-(f.x-f.px)*.85;}}}}
 function mvMerge(){const now=performance.now();for(const [a,b] of MV.mq){if(!MV.F.includes(a)||!MV.F.includes(b))continue;MV.F=MV.F.filter(f=>f!==a&&f!==b);const x=(a.x+b.x)/2,y=(a.y+b.y)/2;
   if(a.t===10){MV.sc+=200;mvBurst(x,y,10,40);mvPop(x,y,"Karpuz şöleni! +200",1);mvSnd("melon");try{navigator.vibrate&&navigator.vibrate([30,50,30,50,40]);}catch(e){}continue;}
