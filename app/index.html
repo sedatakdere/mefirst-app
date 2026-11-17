@@ -7947,6 +7947,12 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.77.1: story stüdyosu şablon şeridi kaydırılabilir */
+html body .spst-ts{overflow-x:auto!important;justify-content:flex-start!important;scrollbar-width:none;touch-action:pan-x;overscroll-behavior-x:contain;scroll-snap-type:x proximity;margin-left:-16px!important;margin-right:-16px!important;padding:3px 16px 4px!important}
+html body .spst-ts::-webkit-scrollbar{display:none}
+html body .spst-ts button{scroll-snap-align:center}
+html body .spst-ts button:first-child{margin-left:auto}html body .spst-ts button:last-child{margin-right:auto}
+
 .bz-sec{display:flex;align-items:baseline;gap:8px;margin:26px 4px 10px;font-family:var(--f-display);font-weight:400;font-size:26px;color:#fff}
 .bz-sec>span{font-size:18px;color:#FFD27A;align-self:center}.bz-sec small{margin-left:auto;font-family:var(--f-body);font-size:12px;font-weight:700;opacity:.6}
 .bz-card{margin:10px 0!important}
@@ -18470,7 +18476,7 @@ async function spStudio(kind,id){const o=kind==="film"?spsDataFilm(id):spsDataEv
  const $=s=>O.querySelector(s);let busy=0,tok=0;
  const draw=async()=>{const my=++tok;$("#spst-ld").hidden=false;const cv=await spsRender(o,tpl,.5);if(my!==tok)return;$("#spst-img").src=cv.toDataURL("image/jpeg",.86);$("#spst-ld").hidden=true;};
  const thumbs=async()=>{for(const [k] of SPS_T){const cv=await spsRender(o,k,.16);const t=$("#spst-th-"+k);if(t)t.style.backgroundImage=`url(${cv.toDataURL("image/jpeg",.8)})`;}};
- O.querySelectorAll("[data-tp]").forEach(b=>b.onclick=()=>{tpl=b.dataset.tp;try{localStorage.setItem("mf-sps-t",tpl);}catch(e){}O.querySelectorAll("[data-tp]").forEach(x=>x.setAttribute("aria-pressed",x===b));draw();});
+ O.querySelectorAll("[data-tp]").forEach(b=>b.onclick=()=>{try{b.scrollIntoView({inline:"center",block:"nearest",behavior:"smooth"});}catch(e){}tpl=b.dataset.tp;try{localStorage.setItem("mf-sps-t",tpl);}catch(e){}O.querySelectorAll("[data-tp]").forEach(x=>x.setAttribute("aria-pressed",x===b));draw();});
  let deb=null;$("#spst-cm").addEventListener("input",e=>{o.cm=e.target.value.trim();clearTimeout(deb);deb=setTimeout(()=>{draw();thumbs();},350);});
  O.querySelectorAll("[data-rt]").forEach(b=>b.onclick=()=>{o.rt=+b.dataset.rt;O.querySelectorAll("[data-rt]").forEach(x=>x.classList.toggle("on",+x.dataset.rt<=o.rt));draw();});
  $("#spst-file").addEventListener("change",e=>{const f=e.target.files[0];if(!f)return;phRead(f,d=>{o.photo=d;$("#spst-phl").textContent="Fotoğrafın eklendi";draw();thumbs();},{w:1080,h:1350});});
@@ -18598,7 +18604,7 @@ function studioOpen(o){const set=o.set;const key="mf-sps-"+o.theme;let tpl=local
  const $=s=>O.querySelector(s);let busy=0,tok=0;
  const draw=async()=>{const my=++tok;$("#spst-ld").hidden=false;const cv=await spsRender(o,tpl,.5);if(my!==tok)return;$("#spst-img").src=cv.toDataURL("image/jpeg",.86);$("#spst-ld").hidden=true;};
  const thumbs=async()=>{for(const [k] of set){const cv=await spsRender(o,k,.16);const t=$("#spst-th-"+k);if(t)t.style.backgroundImage=`url(${cv.toDataURL("image/jpeg",.8)})`;}};
- O.querySelectorAll("[data-tp]").forEach(b=>b.onclick=()=>{tpl=b.dataset.tp;try{localStorage.setItem(key,tpl);}catch(e){}O.querySelectorAll("[data-tp]").forEach(x=>x.setAttribute("aria-pressed",x===b));draw();});
+ O.querySelectorAll("[data-tp]").forEach(b=>b.onclick=()=>{try{b.scrollIntoView({inline:"center",block:"nearest",behavior:"smooth"});}catch(e){}tpl=b.dataset.tp;try{localStorage.setItem(key,tpl);}catch(e){}O.querySelectorAll("[data-tp]").forEach(x=>x.setAttribute("aria-pressed",x===b));draw();});
  let deb=null;$("#spst-cm").addEventListener("input",e=>{o.cm=e.target.value.trim();clearTimeout(deb);deb=setTimeout(()=>{draw();thumbs();},350);});
  O.querySelectorAll("[data-rt]").forEach(b=>b.onclick=()=>{o.rt=+b.dataset.rt;O.querySelectorAll("[data-rt]").forEach(x=>x.classList.toggle("on",+x.dataset.rt<=o.rt));draw();});
  $("#spst-file").addEventListener("change",e=>{const f=e.target.files[0];if(!f)return;phRead(f,d=>{o.photo=d;$("#spst-phl").textContent="Fotoğrafın eklendi";draw();thumbs();},{w:1080,h:1350});});
