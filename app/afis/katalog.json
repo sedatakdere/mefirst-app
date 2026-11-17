@@ -2985,6 +2985,981 @@
 "agla"
 ],
 "p": 6
+},
+{
+"id": "wd-Q327685",
+"q": "Q327685",
+"t": "Karate Kid",
+"o": "The Karate Kid",
+"y": 2010,
+"d": "Harald Zwart",
+"line": "2010 film directed by Harald Zwart",
+"g": [
+"agla",
+"gul"
+],
+"p": 52
+},
+{
+"id": "wd-Q659609",
+"q": "Q659609",
+"t": "Gün Doğmadan",
+"o": "Gün Doğmadan",
+"y": 1995,
+"d": "Richard Linklater",
+"line": "1995 yapımı Amerikan romantik dram filmi",
+"g": [
+"agla",
+"ask"
+],
+"p": 52
+},
+{
+"id": "wd-Q109767",
+"q": "Q109767",
+"t": "Cazcı Kardeşler",
+"o": "Cazcı Kardeşler",
+"y": 1980,
+"d": "John Landis",
+"line": "1980 film directed by John Landis",
+"g": [
+"gul",
+"iyi",
+"nost"
+],
+"p": 52
+},
+{
+"id": "wd-Q131864",
+"q": "Q131864",
+"t": "Grinç",
+"o": "Grinç",
+"y": 2000,
+"d": "Ron Howard",
+"line": "2000 film directed by Ron Howard",
+"g": [
+"gul",
+"iyi"
+],
+"p": 52
+},
+{
+"id": "wd-Q462418",
+"q": "Q462418",
+"t": "Salak ile Avanak",
+"o": "Dumb and Dumber",
+"y": 1994,
+"d": "Peter Farrelly, Bobby Farrelly",
+"line": "1994 comedy film by Peter Farrelly",
+"g": [
+"gul"
+],
+"p": 52
+},
+{
+"id": "wd-Q641760",
+"q": "Q641760",
+"t": "Ayı Teddy",
+"o": "Ted",
+"y": 2012,
+"d": "Seth MacFarlane",
+"line": "Komedi filmi",
+"g": [
+"gul"
+],
+"p": 52
+},
+{
+"id": "wd-Q308920",
+"q": "Q308920",
+"t": "Burjuvazinin Gizli Çekiciliği",
+"o": "The Discreet Charm of the Bourgeoisie",
+"y": 1972,
+"d": "Luis Buñuel",
+"line": "1972 film by Luis Buñuel",
+"g": [
+"agla",
+"gul",
+"nost"
+],
+"p": 51
+},
+{
+"id": "wd-Q660894",
+"q": "Q660894",
+"t": "Gilbert'in Hayalleri",
+"o": "What's Eating Gilbert Grape",
+"y": 1993,
+"d": "Lasse Halström",
+"line": "1993 film directed by Lasse Hallström",
+"g": [
+"agla",
+"gul"
+],
+"p": 51
+},
+{
+"id": "wd-Q720724",
+"q": "Q720724",
+"t": "Babe",
+"o": "Babe",
+"y": 1995,
+"d": "Chris Noonan",
+"line": "1995 film directed by Chris Noonan",
+"g": [
+"agla",
+"gul"
+],
+"p": 51
+},
+{
+"id": "wd-Q7117022",
+"q": "Q7117022",
+"t": "PK",
+"o": "PK",
+"y": 2015,
+"d": "Rajkumar Hirani",
+"line": "2014 yapımı Hint filmi",
+"g": [
+"agla",
+"gul",
+"iyi"
+],
+"p": 51
+},
+{
+"id": "wd-Q212098",
+"q": "Q212098",
+"t": "Daha Yaklaş",
+"o": "Daha Yaklaş",
+"y": 2004,
+"d": "Mike Nichols",
+"line": "2004 film directed by Mike Nichols",
+"g": [
+"agla",
+"ask"
+],
+"p": 51
+},
+{
+"id": "wd-Q464964",
+"q": "Q464964",
+"t": "Diktatör",
+"o": "The Dictator",
+"y": 2012,
+"d": "Larry Charles",
+"line": "2012 yapımı Amerikan-İngiliz filmi",
+"g": [
+"gul"
+],
+"p": 51
+},
+{
+"id": "wd-Q303678",
+"q": "Q303678",
+"t": "Alvin ve Sincaplar 3",
+"o": "Alvin and the Chipmunks: Chipwrecked",
+"y": 2011,
+"d": "Mike Mitchell",
+"line": "2011 çıkışlı film",
+"g": [
+"gul",
+"iyi"
+],
+"p": 51
+},
+{
+"id": "wd-Q623443",
+"q": "Q623443",
+"t": "Başkanın Adamları",
+"o": "Başkanın Adamları",
+"y": 1997,
+"d": "Barry Levinson",
+"line": "1997 film by Barry Levinson",
+"g": [
+"gul"
+],
+"p": 51
+},
+{
+"id": "wd-Q640387",
+"q": "Q640387",
+"t": "Benim Adım Sam",
+"o": "I Am Sam",
+"y": 2001,
+"d": "Jessie Nelson",
+"line": "2001 yapımı ABD filmi",
+"g": [
+"agla",
+"gul"
+],
+"p": 45
+},
+{
+"id": "wd-Q16242543",
+"q": "Q16242543",
+"t": "Ölümsüz Aşk",
+"o": "The Age of Adaline",
+"y": 2015,
+"d": "Lee Toland Krieger",
+"line": "2015 film directed by Lee Toland Krieger",
+"g": [
+"agla",
+"ask"
+],
+"p": 45
+},
+{
+"id": "wd-Q258647",
+"q": "Q258647",
+"t": "Postacı",
+"o": "Il Postino: The Postman",
+"y": 1994,
+"d": "Michael Radford",
+"line": "1994 film by Michael Radford",
+"g": [
+"agla",
+"ask"
+],
+"p": 45
+},
+{
+"id": "wd-Q798797",
+"q": "Q798797",
+"t": "Kötü Öğretmen",
+"o": "Bad Teacher",
+"y": 2011,
+"d": "Jake Kasdan",
+"line": "2011 yapımı Amerikan komedi filmi",
+"g": [
+"ask",
+"gul"
+],
+"p": 45
+},
+{
+"id": "wd-Q820753",
+"q": "Q820753",
+"t": "Hababam Rock",
+"o": "School of Rock",
+"y": 2003,
+"d": "Richard Linklater",
+"line": "2003 yapımı Richard Linklater filmi",
+"g": [
+"gul",
+"iyi"
+],
+"p": 45
+},
+{
+"id": "wd-Q912877",
+"q": "Q912877",
+"t": "A Good Year",
+"o": "A Good Year",
+"y": 2006,
+"d": "Ridley Scott",
+"line": "2006 film by Ridley Scott",
+"g": [
+"ask",
+"gul"
+],
+"p": 45
+},
+{
+"id": "wd-Q538266",
+"q": "Q538266",
+"t": "Siyah Orfe",
+"o": "Black Orpheus",
+"y": 1959,
+"d": "Marcel Camus",
+"line": "1959 film by Marcel Camus",
+"g": [
+"agla",
+"ask",
+"gul",
+"iyi",
+"nost"
+],
+"p": 44
+},
+{
+"id": "wd-Q280918",
+"q": "Q280918",
+"t": "Elveda Las Vegas",
+"o": "Elveda Las Vegas",
+"y": 1995,
+"d": "Mike Figgis",
+"line": "1995 film directed by Mike Figgis",
+"g": [
+"agla",
+"ask"
+],
+"p": 44
+},
+{
+"id": "wd-Q222800",
+"q": "Q222800",
+"t": "Kaza Kurşunu",
+"o": "Kaza Kurşunu",
+"y": 2007,
+"d": "Judd Apatow",
+"line": "2007 film by Judd Apatow",
+"g": [
+"agla",
+"gul"
+],
+"p": 44
+},
+{
+"id": "wd-Q1129778",
+"q": "Q1129778",
+"t": "Cennetin Doğusu",
+"o": "East of Eden",
+"y": 1955,
+"d": "Elia Kazan",
+"line": "1955 film directed by Elia Kazan",
+"g": [
+"agla",
+"ask",
+"nost"
+],
+"p": 44
+},
+{
+"id": "wd-Q474087",
+"q": "Q474087",
+"t": "Bağlanmak Yok",
+"o": "Bağlanmak Yok",
+"y": 2011,
+"d": "Ivan Reitman",
+"line": "2011 yapımı Amerikan romantik komedi filmi",
+"g": [
+"agla",
+"ask",
+"gul"
+],
+"p": 44
+},
+{
+"id": "wd-Q635924",
+"q": "Q635924",
+"t": "Yedi Yaşam",
+"o": "Yedi Yaşam",
+"y": 2008,
+"d": "Gabriele Muccino",
+"line": "2008 film by Gabriele Muccino",
+"g": [
+"agla",
+"ask"
+],
+"p": 44
+},
+{
+"id": "wd-Q512350",
+"q": "Q512350",
+"t": "Jules ve Jim",
+"o": "Jules and Jim",
+"y": 1962,
+"d": "François Truffaut",
+"line": "1962 film by François Truffaut",
+"g": [
+"agla",
+"ask",
+"nost"
+],
+"p": 44
+},
+{
+"id": "wd-Q208263",
+"q": "Q208263",
+"t": "Yeşil Yol",
+"o": "Yeşil Yol",
+"y": 1999,
+"d": "Frank Darabont",
+"line": "1999 yapımı Amerikan dram ve gizem filmi",
+"g": [
+"agla"
+],
+"p": 78
+},
+{
+"id": "wd-Q2345",
+"q": "Q2345",
+"t": "12 Öfkeli Adam",
+"o": "12 Öfkeli Adam",
+"y": 1957,
+"d": "Sidney Lumet",
+"line": "Sidney Lumet'in yönettiği 1957 yapımı Amerikan filmi",
+"g": [
+"agla",
+"nost"
+],
+"p": 76
+},
+{
+"id": "wd-Q152780",
+"q": "Q152780",
+"t": "Pi'nin Yaşamı",
+"o": "Pi'nin Yaşamı",
+"y": 2012,
+"d": "Ang Lee",
+"line": "2012 yapımı Amerikan filmi",
+"g": [
+"agla"
+],
+"p": 73
+},
+{
+"id": "wd-Q184255",
+"q": "Q184255",
+"t": "Milyonluk Bebek",
+"o": "Milyonluk Bebek",
+"y": 2004,
+"d": "Clint Eastwood",
+"line": "Clint Eastwood'un 2004 yapımı filmi",
+"g": [
+"agla"
+],
+"p": 72
+},
+{
+"id": "wd-Q107270",
+"q": "Q107270",
+"t": "Bir Konuşabilse",
+"o": "Lost in Translation",
+"y": 2003,
+"d": "Sofia Coppola",
+"line": "2003 film directed by Sofia Coppola",
+"g": [
+"agla"
+],
+"p": 69
+},
+{
+"id": "wd-Q213411",
+"q": "Q213411",
+"t": "Yeni Hayat",
+"o": "Cast Away",
+"y": 2000,
+"d": "Robert Zemeckis",
+"line": "2000 film directed by Robert Zemeckis",
+"g": [
+"agla"
+],
+"p": 69
+},
+{
+"id": "wd-Q188035",
+"q": "Q188035",
+"t": "Apocalypto",
+"o": "Apocalypto",
+"y": 2006,
+"d": "Mel Gibson",
+"line": "2006 yapımı bir film",
+"g": [
+"agla"
+],
+"p": 66
+},
+{
+"id": "wd-Q18199330",
+"q": "Q18199330",
+"t": "Fantastik Canavarlar Nelerdir, Nerede Bulunurlar?",
+"o": "Fantastic Beasts and Where to Find Them",
+"y": 2016,
+"d": "David Yates",
+"line": "2016 film directed by David Yates",
+"g": [
+"agla"
+],
+"p": 66
+},
+{
+"id": "wd-Q217189",
+"q": "Q217189",
+"t": "Yedinci Mühür",
+"o": "The Seventh Seal",
+"y": 1957,
+"d": "Ingmar Bergman",
+"line": "Ingmar Bergman'ın 1957 tarihli filmi",
+"g": [
+"agla",
+"nost"
+],
+"p": 65
+},
+{
+"id": "wd-Q193577",
+"q": "Q193577",
+"t": "Kramer Kramer'e Karşı",
+"o": "Kramer vs. Kramer",
+"y": 1979,
+"d": "Robert Benton",
+"line": "1979 film by Robert Benton",
+"g": [
+"agla",
+"nost"
+],
+"p": 63
+},
+{
+"id": "wd-Q321561",
+"q": "Q321561",
+"t": "Kadın Kokusu",
+"o": "Kadın Kokusu",
+"y": 1992,
+"d": "Martin Brest",
+"line": "Martin Brest'in 1992 tarihli filmi",
+"g": [
+"agla"
+],
+"p": 62
+},
+{
+"id": "wd-Q193066",
+"q": "Q193066",
+"t": "Çılgınlar Kraliçesi",
+"o": "Çılgınlar Kraliçesi",
+"y": 1961,
+"d": "Blake Edwards",
+"line": "1961 yapımı film",
+"g": [
+"agla",
+"nost"
+],
+"p": 62
+},
+{
+"id": "wd-Q193570",
+"q": "Q193570",
+"t": "Sunset Bulvarı",
+"o": "Sunset Bulvarı",
+"y": 1950,
+"d": "Billy Wilder",
+"line": "1950 yapımı Amerikan filmi",
+"g": [
+"agla",
+"nost"
+],
+"p": 62
+},
+{
+"id": "wd-Q487181",
+"q": "Q487181",
+"t": "Bir Rüya İçin Ağıt",
+"o": "Requiem for a Dream",
+"y": 2000,
+"d": "Darren Aronofsky",
+"line": "2000 yapımı bir Darren Aronofsky filmi",
+"g": [
+"agla"
+],
+"p": 62
+},
+{
+"id": "wd-Q191074",
+"q": "Q191074",
+"t": "Babil",
+"o": "Babil",
+"y": 2006,
+"d": "Alejandro González Iñárritu",
+"line": "2006 film directed by Alejandro González Iñárritu",
+"g": [
+"agla"
+],
+"p": 61
+},
+{
+"id": "wd-Q637820",
+"q": "Q637820",
+"t": "Aşk",
+"o": "Amour",
+"y": 2012,
+"d": "Michael Haneke",
+"line": "2012 Austrian-German-French film directed by Michael Haneke",
+"g": [
+"agla"
+],
+"p": 52
+},
+{
+"id": "wd-Q165651",
+"q": "Q165651",
+"t": "Fanny ve Alexander",
+"o": "Fanny and Alexander",
+"y": 1982,
+"d": "Ingmar Bergman",
+"line": "1982 Swedish film by Ingmar Bergman",
+"g": [
+"agla",
+"nost"
+],
+"p": 51
+},
+{
+"id": "wd-Q746733",
+"q": "Q746733",
+"t": "On Emir",
+"o": "On Emir",
+"y": 1956,
+"d": "Cecil B. DeMille",
+"line": "1956 film directed by Cecil B. DeMille",
+"g": [
+"agla",
+"nost"
+],
+"p": 51
+},
+{
+"id": "wd-Q588420",
+"q": "Q588420",
+"t": "Manolya",
+"o": "Magnolia",
+"y": 1999,
+"d": "Paul Thomas Anderson",
+"line": "1999 film by Paul Thomas Anderson",
+"g": [
+"agla"
+],
+"p": 51
+},
+{
+"id": "wd-Q817159",
+"q": "Q817159",
+"t": "All the King's Men",
+"o": "All the King's Men",
+"y": 1950,
+"d": "Robert Rossen",
+"line": "Film",
+"g": [
+"agla",
+"nost"
+],
+"p": 51
+},
+{
+"id": "wd-Q211429",
+"q": "Q211429",
+"t": "Aklı Havada",
+"o": "Aklı Havada",
+"y": 2009,
+"d": "Jason Reitman",
+"line": "2009 film directed by Jason Reitman",
+"g": [
+"agla"
+],
+"p": 51
+},
+{
+"id": "wd-Q244398",
+"q": "Q244398",
+"t": "Yıldız Tozu",
+"o": "Stardust",
+"y": 2007,
+"d": "Matthew Vaughn",
+"line": "2007 film directed by Matthew Vaughn",
+"g": [
+"agla"
+],
+"p": 51
+},
+{
+"id": "wd-Q20475",
+"q": "Q20475",
+"t": "Yojimbo",
+"o": "Yojimbo",
+"y": 1961,
+"d": "Akira Kurosava",
+"line": "1961 film directed by Akira Kurosawa",
+"g": [
+"agla",
+"nost"
+],
+"p": 50
+},
+{
+"id": "wd-Q596623",
+"q": "Q596623",
+"t": "Leopar",
+"o": "The Leopard",
+"y": 1963,
+"d": "Luchino Visconti",
+"line": "1963 film by Luchino Visconti",
+"g": [
+"agla",
+"nost"
+],
+"p": 50
+},
+{
+"id": "wd-Q641061",
+"q": "Q641061",
+"t": "The Greatest Show on Earth (film, 1953)",
+"o": "The Greatest Show on Earth",
+"y": 1952,
+"d": "Cecil B. DeMille",
+"line": "1952 film by Cecil B. DeMille",
+"g": [
+"agla",
+"nost"
+],
+"p": 50
+},
+{
+"id": "wd-Q176826",
+"q": "Q176826",
+"t": "İskoçya'nın Son Kralı",
+"o": "İskoçya'nın Son Kralı",
+"y": 2006,
+"d": "Kevin Macdonald",
+"line": "2006 yapımı İngiliz tarihî dram filmi",
+"g": [
+"agla"
+],
+"p": 50
+},
+{
+"id": "wd-Q18405",
+"q": "Q18405",
+"t": "Cabiria'nın Geceleri",
+"o": "Nights of Cabiria",
+"y": 1957,
+"d": "Federico Fellini",
+"line": "Federico Fellini'nin 1957 yapımı filmi",
+"g": [
+"agla",
+"nost"
+],
+"p": 49
+},
+{
+"id": "wd-Q157556",
+"q": "Q157556",
+"t": "Çizgili Pijamalı Çocuk",
+"o": "The Boy in the Striped Pajamas",
+"y": 2008,
+"d": "Mark Herman",
+"line": "2008 çıkışlı tarihi drama film",
+"g": [
+"agla"
+],
+"p": 49
+},
+{
+"id": "wd-Q279274",
+"q": "Q279274",
+"t": "Terabithia Köprüsü",
+"o": "Bridge to Terabithia",
+"y": 2007,
+"d": "Gábor Csupó",
+"line": "2007 film directed by Gábor Csupó",
+"g": [
+"agla"
+],
+"p": 49
+},
+{
+"id": "wd-Q503313",
+"q": "Q503313",
+"t": "Sıradan İnsanlar",
+"o": "Sıradan İnsanlar",
+"y": 1980,
+"d": "Robert Redford",
+"line": "1980 film by Robert Redford",
+"g": [
+"agla",
+"nost"
+],
+"p": 48
+},
+{
+"id": "wd-Q26060",
+"q": "Q26060",
+"t": "Tokyo Hikayesi",
+"o": "Tokyo Story",
+"y": 1953,
+"d": "Yasujirō Ozu",
+"line": "1953 Japanese film by Yasujiro Ozu",
+"g": [
+"agla",
+"nost"
+],
+"p": 47
+},
+{
+"id": "wd-Q139326",
+"q": "Q139326",
+"t": "Şampiyon",
+"o": "The Wrestler",
+"y": 2008,
+"d": "Darren Aronofsky",
+"line": "2008 film directed by Darren Aronofsky",
+"g": [
+"agla"
+],
+"p": 47
+},
+{
+"id": "wd-Q156911",
+"q": "Q156911",
+"t": "Berlin Üzerindeki Gökyüzü",
+"o": "Wings of Desire",
+"y": 1987,
+"d": "Wim Wenders",
+"line": "1987 Almanya Fransa ortak yapımı şiirsel fantastik film",
+"g": [
+"agla"
+],
+"p": 47
+},
+{
+"id": "wd-Q640561",
+"q": "Q640561",
+"t": "Bir Ayrılık",
+"o": "A Separation",
+"y": 2011,
+"d": "Asgar Ferhadi",
+"line": "2011 yapımı İran filmi",
+"g": [
+"agla"
+],
+"p": 47
+},
+{
+"id": "wd-Q684150",
+"q": "Q684150",
+"t": "Parmaklıklar Arkasında",
+"o": "Cool Hand Luke",
+"y": 1967,
+"d": "Stuart Rosenberg",
+"line": "1967 film directed by Stuart Rosenberg",
+"g": [
+"agla",
+"nost"
+],
+"p": 47
+},
+{
+"id": "wd-Q16954098",
+"q": "Q16954098",
+"t": "Brooklyn",
+"o": "Brooklyn",
+"y": 2015,
+"d": "John Crowley",
+"line": "2015 film directed by John Crowley",
+"g": [
+"agla"
+],
+"p": 47
+},
+{
+"id": "wd-Q65066669",
+"q": "Q65066669",
+"t": "Baba",
+"o": "The Father",
+"y": 2020,
+"d": "Florian Zeller",
+"line": "2020 film directed by Florian Zeller",
+"g": [
+"agla"
+],
+"p": 47
+},
+{
+"id": "wd-Q152105",
+"q": "Q152105",
+"t": "Yaşamak",
+"o": "Ikiru",
+"y": 1952,
+"d": "Akira Kurosava",
+"line": "1952 film by Akira Kurosawa",
+"g": [
+"agla",
+"nost"
+],
+"p": 46
+},
+{
+"id": "wd-Q325643",
+"q": "Q325643",
+"t": "Kim Korkar Hain Kurttan?",
+"o": "Who's Afraid of Virginia Woolf?",
+"y": 1966,
+"d": "Mike Nichols",
+"line": "Mike Nichols'un filmi (1966)",
+"g": [
+"agla",
+"nost"
+],
+"p": 46
+},
+{
+"id": "wd-Q695255",
+"q": "Q695255",
+"t": "Persona",
+"o": "Persona",
+"y": 1966,
+"d": "Ingmar Bergman",
+"line": "Ingmar Bergman'ın yönettiği 1966 İsveç psikolojik dram filmi",
+"g": [
+"agla",
+"nost"
+],
+"p": 46
+},
+{
+"id": "wd-Q19864603",
+"q": "Q19864603",
+"t": "Yaşamın Kıyısında",
+"o": "Manchester by the Sea",
+"y": 2016,
+"d": "Kenneth Lonergan",
+"line": "Kenneth Lonergan tarafından yazılıp yönetilen 2016 ABD yapımı dram filmi",
+"g": [
+"agla"
+],
+"p": 46
+},
+{
+"id": "wd-Q32303",
+"q": "Q32303",
+"t": "Onur Savaşı",
+"o": "The Hunt",
+"y": 2012,
+"d": "Thomas Vinterberg",
+"line": "2012 film by Thomas Vinterberg",
+"g": [
+"agla"
+],
+"p": 45
+},
+{
+"id": "wd-Q309545",
+"q": "Q309545",
+"t": "Nüremberg Duruşması",
+"o": "Judgment at Nuremberg",
+"y": 1961,
+"d": "Stanley Kramer",
+"line": "1961 yapımı Amerikan filmi",
+"g": [
+"agla",
+"nost"
+],
+"p": 45
+},
+{
+"id": "wd-Q830874",
+"q": "Q830874",
+"t": "Çığlıklar ve Fısıltılar",
+"o": "Cries and Whispers",
+"y": 1972,
+"d": "Ingmar Bergman",
+"line": "1972 film directed by Ingmar Bergman",
+"g": [
+"agla",
+"nost"
+],
+"p": 45
 }
 ],
 "updated": "2026-11-17",

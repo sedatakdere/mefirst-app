@@ -2003,6 +2003,33 @@
 "Nuri Bilge Ceylan"
 ]
 },
+"wd-Q109767": {
+"imdb": "tt0080455",
+"konu": "Cazcı Kardeşler, yönetmenliğini John Landis'in yaptığı 1980 tarihli müzikal-komedi filmi. 'Joliet' Jake ve Elwood Blues adında iki kardeşi canlandıran John Belushi ve Dan Aykroyd başrollerdedir. Cazcı Kardeşler Orkestrası ayrıca filmde önemli yer tutar.\nFilm, orkestradaki müzisyenler dışında ayrıca; Aretha Franklin, James Brown, Cab Calloway, Ray Charles ve John Lee Hooker gibi önemli müzisyenlerin performanslarını da sergiler.",
+"oyuncu": [
+"Aretha Franklin",
+"Carrie Fisher",
+"Ray Charles",
+"James Brown",
+"Dan Aykroyd",
+"John Belushi"
+],
+"puan": {
+"Metacritic": "60/100",
+"Rotten Tomatoes": "%72"
+},
+"sure": 148,
+"tur": [
+"müzikal",
+"komedi"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"John Landis"
+]
+},
 "wd-Q10986215": {
 "imdb": "tt0138412",
 "konu": "Düşman, yönetmenliğini Zeki Ökten'in üstlendiği senarosunu ise Yılmaz Güney'in yazdığı 1979 yapımı Türk filmidir.",
@@ -2155,6 +2182,35 @@
 ],
 "yonetmen": [
 "Martin Scorsese"
+]
+},
+"wd-Q1129778": {
+"imdb": "tt0048028",
+"konu": "Cennet Yolu, yönetmenliğini Elia Kazan'ın yaptığı, 1955 yapımı bir ABD filmidir. John Steinbeck'in aynı adlı romanından, Paul Osborn tarafından senaryolaştırıldı. Başlıca rollerini James Dean, Julie Harris ve Raymond Massey'nin paylaştığı film, Jo Van Fleet'e En iyi yardımcı kadın oyuncu oscarını kazandırdı. Ayrıca film, en iyi oyuncu, en iyi yönetmen ve en iyi senaryo oscarlarına da aday gösterildi.",
+"oscar": 1,
+"oyuncu": [
+"James Dean",
+"Burl Ives",
+"Jo Van Fleet",
+"Julie Harris",
+"Raymond Massey",
+"Lois Smith"
+],
+"puan": {
+"IMDb": "7.8/10",
+"Metacritic": "72/100",
+"Rotten Tomatoes": "%86"
+},
+"sure": 115,
+"tur": [
+"romantik",
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Elia Kazan"
 ]
 },
 "wd-Q11621": {
@@ -2515,6 +2571,35 @@
 "Zack Snyder"
 ]
 },
+"wd-Q131864": {
+"imdb": "tt0170016",
+"konu": "Grinç, Dr Seuss'ın çocuk klasiği romanından Ron Howard tarafından uyarlanan filmdir. Jim Carrey Grinç karakterini canlandırdı.",
+"oscar": 1,
+"oyuncu": [
+"Jim Carrey",
+"Anthony Hopkins",
+"Taylor Momsen",
+"Ron Howard",
+"Bryce Dallas Howard",
+"Verne Troyer"
+],
+"puan": {
+"Metacritic": "46/100",
+"Rotten Tomatoes": "%50"
+},
+"sure": 105,
+"tur": [
+"komedi",
+"macera",
+"Aile"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Ron Howard"
+]
+},
 "wd-Q132351": {
 "imdb": "tt0114814",
 "konu": "Olağan Şüpheliler, Christopher McQuarrie'nin yazıp Bryan Singer'in yönettiği 1995 ABD yapımı neo-noir türü bir filmdir. Film polis sorgusuna alınan küçük çapta bir dolandırıcı Roger \"Verbal\" Kint'in  hikâyesini anlatır. Kint sorgulayıcısı ABD Gümrük İdaresi'nden Ajan David Kujan'a, San Pedro Bay'deki Los Angeles limanında demirlemiş bir gemide meydana gelen büyük yangın ve katliama kadar uzanan karmaşık bir hikâye anlatır. Geri dönüşler ve öyküleme kullanan Kint'in hikâyesi o suç partnerleri ile birlikte gemide ne işleri olduğunu anlatmaya çalıştıkça giderek artan bir şekilde karmaşık bir hale",
@@ -2786,6 +2871,34 @@
 "Martin Scorsese"
 ]
 },
+"wd-Q139326": {
+"imdb": "tt1125849",
+"konu": "The Wrestler  Darren Aronofsky'nin yönettiği 2008 yapımı film. Mickey Rourke, Ernest Miller, Marisa Tomei ve Evan Rachel Wood filmin başrollerinde yer almaktadır. Film galasını 2008 Venedik Film Festivali'nde yapmış ve En İyi Film'e verilen büyük ödül olan Altın Aslan'ı kazanmıştır. Fox Searchlight filmin ABD'deki dağıtım haklarını almış ve film ABD'de 19 Aralık 2008'de gösterime girmiştir.",
+"oyuncu": [
+"Mickey Rourke",
+"Marisa Tomei",
+"Evan Rachel Wood",
+"Mark Margolis",
+"Ron Killings",
+"Antonio Cesaro"
+],
+"puan": {
+"Metacritic": "80/100",
+"Rotten Tomatoes": "%98"
+},
+"sure": 105,
+"tur": [
+"drama",
+"spor"
+],
+"ulke": [
+"ABD",
+"Fransa"
+],
+"yonetmen": [
+"Darren Aronofsky"
+]
+},
 "wd-Q1402686": {
 "imdb": "tt0437405",
 "konu": "Paper Man, Kieran ve Michele Mulroney tarafından yazılan ve yönetilen 2009 yapımı bir Amerikan bağımsız  komedi drama filmi. Filmin başrollerinde Jeff Daniels hayatıyla ilgili kararlarında kendisine yardımcı olması için çocukluğundan kalma hayali bir arkadaşına bel bağlayan zor durumdaki bir yazarı, Emma Stone onunla arkadaş olan 17 yaşındaki bir lise öğrencisini ve Ryan Reynolds hayali Kaptan Mükemmel'i canlandırıyor. Film Sundance Filmmakers' Labs'da geliştirildi.",
@@ -3031,6 +3144,33 @@
 ],
 "yonetmen": [
 "Togan Gökbakar"
+]
+},
+"wd-Q152105": {
+"imdb": "tt0044741",
+"konu": "Yaşamak, 1952 Japonya yapımı psikolojik, dramatik bir filmdir. Özgün adı Ikiru'dur. Ikiru Japoncada yaşamak anlamına gelmektedir. \"Japon sinemasının imparatoru\" olarak da adlandırılan Akira Kurosawa'nın yönettiği, aynı zamanda Shinobu Hashimoto ve Hideo Oguni'yle birlikte senaryosunu da yazdığı filmin başlıca rollerinde Takashi Shimura, Shin'ichi Himori, Haruo Tanaka ve Minoru Chiaki oynamıştır.",
+"oyuncu": [
+"Takashi Shimura",
+"Minoru Chiaki",
+"Seiji Miyaguchi",
+"Kamatari Fujiwara",
+"Noriko Honma",
+"Nobuo Nakamura"
+],
+"puan": {
+"IMDb": "8.3/10",
+"Metacritic": "92/100",
+"Rotten Tomatoes": "%98"
+},
+"sure": 143,
+"tur": [
+"drama"
+],
+"ulke": [
+"Japonya"
+],
+"yonetmen": [
+"Akira Kurosava"
 ]
 },
 "wd-Q152780": {
@@ -3310,6 +3450,34 @@
 "Damien Chazelle"
 ]
 },
+"wd-Q156911": {
+"imdb": "tt0093191",
+"konu": "Berlin Üzerindeki Gökyüzü, 1987 Almanya Fransa ortak yapımı şiirsel fantastik filmdir. Özgün adı Der Himmel über Berlin olan film ABD'de Wings of Desire adıyla gösterilmişti. Film Türkiye'de Nisan 1989'da 8. Uluslararası İstanbul Film Festivali kapsamında gösterildi.",
+"oyuncu": [
+"Peter Falk",
+"Bruno Ganz",
+"Nick Cave",
+"Otto Sander",
+"Solveig Dommartin",
+"Curt Bois"
+],
+"puan": {
+"Metacritic": "79/100",
+"Rotten Tomatoes": "%95"
+},
+"sure": 128,
+"tur": [
+"drama",
+"fantasy"
+],
+"ulke": [
+"Fransa",
+"Almanya"
+],
+"yonetmen": [
+"Wim Wenders"
+]
+},
 "wd-Q1573810": {
 "imdb": "tt1577061",
 "konu": "Recep İvedik 3, 12 Şubat 2010'da vizyona giren Şahan Gökbakar'ın oynadığı Recep İvedik 2'nin devam filmidir. Yönetmenliğini Togan Gökbakar'ın yaptığı filmin yapımcılığını Faruk Aksoy üstlenmiştir.",
@@ -3325,6 +3493,33 @@
 ],
 "yonetmen": [
 "Togan Gökbakar"
+]
+},
+"wd-Q157556": {
+"imdb": "tt0914798",
+"konu": "Çizgili Pijamalı Çocuk, II. Dünya Savaşı sırasında bir Alman askerinin 8 yaşındaki çocuğu ile toplama kampı Auschwitz'deki bir Yahudi çocuğun arkadaşlığını ele alan filmdir.",
+"oyuncu": [
+"Vera Farmiga",
+"David Thewlis",
+"Asa Butterfield",
+"Rupert Friend",
+"Richard Johnson",
+"Sheila Hancock"
+],
+"puan": {
+"Metacritic": "55/100",
+"Rotten Tomatoes": "%65"
+},
+"sure": 94,
+"tur": [
+"drama"
+],
+"ulke": [
+"İngiltere",
+"ABD"
+],
+"yonetmen": [
+"Mark Herman"
 ]
 },
 "wd-Q159063": {
@@ -3559,6 +3754,34 @@
 "James Cameron"
 ]
 },
+"wd-Q16242543": {
+"imdb": "tt1655441",
+"konu": "Ölümsüz Aşk, Lee Toland Krieger tarafından yönetilen ve J. Mills Goodloe ve Salvador Paskowitz tarafından senaryosu yazılan 2015 Amerikan romantik fantastik filmidir. Filmin başrolünde Blake Lively, yardımcı rollerde Michiel Huisman, Kathy Baker, Amanda Crew, Harrison Ford ve Ellen Burstyn yer alıyor. Hugh Ross tarafından anlatılan hikâye, 29 yaşında bir kaza sonrasında ölümden hayata döndürüldükten sonra yaşlanması duran genç bir kadın olan Adaline Bowman'ı takip ediyor.\nFilm, Sidney Kimmel Entertainment ve Lakeshore Entertainment tarafından ortaklaşa yapıldı.",
+"oyuncu": [
+"Harrison Ford",
+"Blake Lively",
+"Ellen Burstyn",
+"Kathy Baker",
+"Michiel Huisman",
+"Amanda Crew"
+],
+"puan": {
+"Metacritic": "51/100",
+"Rotten Tomatoes": "%55"
+},
+"sure": 112,
+"tur": [
+"romantik",
+"drama",
+"fantasy"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Lee Toland Krieger"
+]
+},
 "wd-Q162729": {
 "imdb": "tt0112573",
 "konu": "Cesur Yürek, Mel Gibson'ın yönettiği ve yapımcılığını üstlendiği, aynı zamanda İskoç savaşçı Sir William Wallace'ı canlandırdığı 1995 yapımı Amerikan epik tarihî savaş-dram filmidir. Oyuncu kadrosunda Sophie Marceau, Patrick McGoohan, Catherine McCormack ve Angus Macfadyen yer alır. Hikâye, Blind Harry'nin 15. yüzyıla ait bir epik şiirinden esinlendi ve senaryosu Randall Wallace tarafından sinemaya uyarlandı.",
@@ -3694,6 +3917,37 @@
 "Kutluğ Ataman"
 ]
 },
+"wd-Q165651": {
+"imdb": "tt0083922",
+"konu": "Fanny ve Alexander, 1982 yapımı bir dönem drama filmi olup, senaryosu ve yönetmenliği Ingmar Bergman tarafından gerçekleştirilmiştir. Film, İsveç’in Uppsala kentinde yaşayan iki kardeş ve geniş ailelerinin hikâyesine odaklanmaktadır. Roger Ebert, filmde geçen kentin isimsiz olduğunu gözlemlerken, bazı yayınlar buranın Bergman’ın doğduğu şehir olan Uppsala olduğunu belirtir. Frank Gado, şehrin ismen tanımlanmasa da \"şüphesiz Uppsala\" olduğunu öne sürer.",
+"oscar": 4,
+"oyuncu": [
+"Lena Olin",
+"Erland Josephson",
+"Harriet Andersson",
+"Allan Edwall",
+"Gunn Wållgren",
+"Jarl Kulle"
+],
+"puan": {
+"IMDb": "8.1/10",
+"Metacritic": "100/100",
+"Rotten Tomatoes": "%100"
+},
+"sure": 188,
+"tur": [
+"drama",
+"Christmas",
+"historical"
+],
+"ulke": [
+"Fransa",
+"Almanya"
+],
+"yonetmen": [
+"Ingmar Bergman"
+]
+},
 "wd-Q165817": {
 "imdb": "tt0120815",
 "konu": "Er Ryan'ı Kurtarmak, Steven Spielberg tarafından yönetilerek Robert Rodat tarafından yazılan, II. Dünya Savaşı konulu bir epik savaş filmidir.\nFilm, Yüzbaşı John H. Miller ve yanında bulunan askerlerin, diğer üç kardeşi savaş sırasında farklı cephelerde ölen, bunun sonucunda eve dönüş vizesi alan James Francis Ryan isimli askeri bulmaya çalışırken başlarından geçenleri konu almaktadır.\nFilm, DreamWorks Pictures, Paramount Pictures, Amblin Entertainment ve Mutual Film Company arasında bir ortak yapımdı ve DreamWorks filmi Kuzey Amerika'da dağıtırken Paramount filmi uluslararası olarak gösterime",
@@ -3808,6 +4062,35 @@
 "yonetmen": [
 "Jon Favreau",
 "Juan Logar Jr."
+]
+},
+"wd-Q16954098": {
+"imdb": "tt2381111",
+"konu": "Brooklyn, John Crowley tarafından yönetilen ve senaryosu  Nick Hornby tarafından Colm Tóibín'in aynı adlı romanından uyarlanan 2015 İrlanda-Kanada-Birleşik Krallık yapımı tarihsel dram filmi. Filmde Saoirse Ronan, Emory Cohen, Domhnall Gleeson, Jim Broadbent ve Julie Walters oynamaktadır. 1952'de geçen film genç İrlandalı bir kadının Brooklyn'e yaptığı göçü konu ediniyor.\nBrooklyn galasını 2015 Sundance Film Festivali'nde yaptı.",
+"oyuncu": [
+"Saoirse Ronan",
+"Jim Broadbent",
+"Julie Walters",
+"Domhnall Gleeson",
+"Emily Bett Rickards",
+"Jessica Paré"
+],
+"puan": {
+"IMDb": "7.5/10",
+"Metacritic": "88/100",
+"Rotten Tomatoes": "%97"
+},
+"sure": 112,
+"tur": [
+"drama",
+"melodrama"
+],
+"ulke": [
+"İngiltere",
+"İrlanda"
+],
+"yonetmen": [
+"John Crowley"
 ]
 },
 "wd-Q1705034": {
@@ -5217,6 +5500,34 @@
 "Oliver Stone"
 ]
 },
+"wd-Q191074": {
+"imdb": "tt0449467",
+"konu": "Babil, Meksikalı yönetmen Alejandro González Iñárritu tarafından yönetilen 2006 filmi. Senaryo yazarı, 'Paramparça Aşklar Köpekler ve '21 Gram filmlerinde, yine yönetmen Iñárritu ile birlikte çalışan senarist Guillermo Arriaga'dır. Başlıca rolleri,Brad Pitt, Cate Blanchett, Gael Garcia Bernal, Adriana Barraza, Kôji Yakusho paylaşır. Üç ayrı kıtada, dört farklı konuyu birbirine bağlayan filmin ana teması, iletişimsizlik.",
+"oscar": 1,
+"oyuncu": [
+"Brad Pitt",
+"Cate Blanchett",
+"Elle Fanning",
+"Gael García Bernal",
+"Michael Peña",
+"Rinko Kikuchi"
+],
+"puan": {
+"Metacritic": "69/100",
+"Rotten Tomatoes": "%69"
+},
+"sure": 142,
+"tur": [
+"drama"
+],
+"ulke": [
+"ABD",
+"Meksika"
+],
+"yonetmen": [
+"Alejandro González Iñárritu"
+]
+},
 "wd-Q192073": {
 "imdb": "tt0449059",
 "konu": "Küçük Gün Işığım veya özgün İngilizce adıyla Little Miss Sunshine, 2006, ABD yapımı komedi-drama filmi. 79. Akademi Ödülleri'ne En İyi Film dahil 4 dalda aday olurken bunlardan ikisini kazandı. Greg Kinnear, Toni Collette, Steve Carell, Abigail Breslin, Alan Arkin ve Paul Dano filmde rol alırken, filmin yönetmenliğini Jonathan Dayton ve Valerie Faris yaptı.",
@@ -5277,6 +5588,34 @@
 "Frank Miller"
 ]
 },
+"wd-Q193066": {
+"imdb": "tt0054698",
+"konu": "Çılgınlar Kraliçesi  1961 ABD yapımı romantik filmdir. Özgün adı Breakfast at Tiffany's  olan film Türkiye'de bazı TV kanallarında özgün adının tam çevirisi olan Tiffany'de Kahvaltı adı ile de gösterilmiştir.. Film Türkiye'de ilk kez 10 Şubat 1963 tarihinde gösterime girmiştir.",
+"oscar": 1,
+"oyuncu": [
+"Audrey Hepburn",
+"Patricia Neal",
+"Mickey Rooney",
+"Martin Balsam",
+"George Peppard",
+"Buddy Ebsen"
+],
+"puan": {
+"Metacritic": "77/100",
+"Rotten Tomatoes": "%88"
+},
+"sure": 110,
+"tur": [
+"romantik komedi",
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Blake Edwards"
+]
+},
 "wd-Q19355": {
 "imdb": "tt0118799",
 "konu": "Hayat Güzeldir, İtalyan yönetmen Roberto Benigni'in yönettiği 1997 yapımı İtalyan drama filmidir.\nII. Dünya Savaşı zamanında karısı ve oğlu ile birlikte Yahudi kamplarına götürülen Yahudi bir babanın ve peşinden giden İtalyan bir annenin, çocuğunu korumak için yaptığı sayısız özveriyi anlatıyor. Film 1998 Cannes Film Festivali'nde Büyük Ödül'ü kazandı. 1999'da 7 dalda Oscar'a aday olan film, en iyi yabancı film, en iyi erkek oyuncu ve en iyi müzik dallarında bu ödülü kazandı.",
@@ -5304,6 +5643,36 @@
 ],
 "yonetmen": [
 "Roberto Benigni"
+]
+},
+"wd-Q193570": {
+"imdb": "tt0043014",
+"konu": "Sunset Bulvarı, başrollerinde Gloria Swanson ve William Holden'ın yer aldığı Billy Wilder yönetmenliğindeki 1950 yapımı bir filmdir. Film adını Los Angeles'ta yer alan ünlü bulvardan almaktadır. Gloria Swanson filmde canlandırdığı, parlaklığını yitirmiş Hollywood yıldızı Norma Desmond rolüyle unutulmazlar arasına girmiştir.",
+"oscar": 3,
+"oyuncu": [
+"Buster Keaton",
+"Gloria Swanson",
+"William Holden",
+"Erich von Stroheim",
+"Hedda Hopper",
+"Nancy Olson"
+],
+"puan": {
+"IMDb": "8.4/10",
+"Metacritic": "94/100",
+"Rotten Tomatoes": "%98"
+},
+"sure": 110,
+"tur": [
+"drama",
+"kara",
+"flashback"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Billy Wilder"
 ]
 },
 "wd-Q193573": {
@@ -5449,6 +5818,34 @@
 ],
 "yonetmen": [
 "Deniz Gamze Ergüven"
+]
+},
+"wd-Q19864603": {
+"imdb": "tt4034228",
+"konu": "Yaşamın Kıyısında, Kenneth Lonergan tarafından yazılıp yönetilen 2016 Amerikan yapımı dram filmi. Filmin başrollerinde Casey Affleck, Michelle Williams, Kyle Chandler, Gretchen Mol ve Lucas Hedges yer almaktadır. Film, abisinin ölümü üzerine Massachusetts'e giden ve abisinin vesayeti yeğenine bakmak zorunda olan boşanmış bir adamın hikâyesini konu edinmektedir. Filmin temel çekimleri 23 Mart 2015'te Manchester-by-the-Sea, Massachusetts'te başladı.",
+"oscar": 2,
+"oyuncu": [
+"Michelle Williams",
+"Casey Affleck",
+"Matthew Broderick",
+"Kyle Chandler",
+"Tate Donovan",
+"Gretchen Mol"
+],
+"puan": {
+"IMDb": "7.8/10",
+"Metacritic": "96/100",
+"Rotten Tomatoes": "%96"
+},
+"sure": 135,
+"tur": [
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Kenneth Lonergan"
 ]
 },
 "wd-Q19946102": {
@@ -6278,6 +6675,33 @@
 "Bruce Beresford"
 ]
 },
+"wd-Q212098": {
+"imdb": "tt0376541",
+"konu": "Closer 2004 yapımı aynı adlı bir tiyatro oyunundan uyarlama film. Jude Law, Clive Owen, Natalie Portman ve Julia Roberts filmde rol alırken filmin yönetmenliğini Mike Nichols yapmıştır. Bu filmdeki rolleri ile Clive Owen ve Natalie Portman Akademi Ödüllerine aday gösterilmişlerdir. Filmin bütçesi 27 milyon $ 'dır.",
+"oyuncu": [
+"Natalie Portman",
+"Julia Roberts",
+"Jude Law",
+"Clive Owen",
+"Colin Stinton",
+"Elizabeth Bower"
+],
+"puan": {
+"Metacritic": "65/100",
+"Rotten Tomatoes": "%67"
+},
+"sure": 104,
+"tur": [
+"romantik",
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Mike Nichols"
+]
+},
 "wd-Q212775": {
 "imdb": "tt0093389",
 "konu": "Son İmparator, 1987, ABD yapımı Oscar ödüllü film. Çin hanedanı Qing'in son hakanı Puyi'nin yaşam öyküsünü konu edinir. Mark Peploe ve Bernardo Bertolucci tarafından yazılmış, Bertolucci tarafından yönetilmiştir. Bu filmle ilk kez Çin hükûmeti Yasak Şehir'de film çekimine izin vermiştir.",
@@ -6659,6 +7083,34 @@
 ],
 "yonetmen": [
 "Chris Columbus"
+]
+},
+"wd-Q222800": {
+"imdb": "tt0478311",
+"konu": "Kaza Kurşunu; senaristliği, yapımcılığı ve yönetmenliği Judd Apatow tarafından yapılan 2007 yapımı Amerikan romantik komedi filmidir.",
+"oyuncu": [
+"Paul Rudd",
+"Katherine Heigl",
+"Seth Rogen",
+"Jonah Hill",
+"Andy Dick",
+"Jason Segel"
+],
+"puan": {
+"Metacritic": "85/100",
+"Rotten Tomatoes": "%90"
+},
+"sure": 129,
+"tur": [
+"romantik komedi",
+"Komedi-drama",
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Judd Apatow"
 ]
 },
 "wd-Q2278004": {
@@ -7251,6 +7703,35 @@
 "Alfonso Cuarón"
 ]
 },
+"wd-Q258647": {
+"imdb": "tt0110877",
+"konu": "Postacı, 1994 İtalya yapımı dramatik dönem filmidir. Özgün adı II Postino olan film ABD ve İngiltere'de II Postino: The Postman adıyla gösterilmiştir. Film Türkiye'de 5 Ocak 1996 tarihinde gösterime girmiştir.\nİngiliz yönetmen Michael Radford'un yönettiği filmin senaryosu, Antonio Skármeta'nın Ardiente Paciencia adlı tiyatro eserinden Anna Pavignano, Michael Radford, Furio Scarpelli, Giacomo Scarpelli ve filmin oyuncularından Massimo Troisi tarafından birlikte uyarlanıp yazılmıştır.",
+"oscar": 1,
+"oyuncu": [
+"Philippe Noiret",
+"Massimo Troisi",
+"Maria Grazia Cucinotta",
+"Anna Bonaiuto",
+"Simona Caparrini",
+"Renato Scarpa"
+],
+"puan": {
+"Metacritic": "81/100",
+"Rotten Tomatoes": "%94"
+},
+"sure": 108,
+"tur": [
+"romantik",
+"drama"
+],
+"ulke": [
+"Fransa",
+"Belçika"
+],
+"yonetmen": [
+"Michael Radford"
+]
+},
 "wd-Q2599661": {
 "imdb": "tt0096476",
 "konu": "Yasemin, Ayşe Romey ve Uwe Bohm'un başrollerini paylaştığı, Hark Bohm'un yönetmenliğini yaptığı 1988 yapımı Alman uzun metrajlı sinema filmi.",
@@ -7295,6 +7776,33 @@
 ],
 "yonetmen": [
 "Uğur Yücel"
+]
+},
+"wd-Q26060": {
+"imdb": "tt0046438",
+"konu": "Tokyo Hikâyesi 1953 Japonya yapımı film. Filmin yönetmenliğini Yasujirō Ozu yapmıştır. Filmde yaşlı bir çiftin çocuklarını görmek amacıyla Tokyo'ya seyahatleri anlatılmaktadır. Ozu'nun başyapıtı sayılan film Britanya Film Enstitüsü tarafından yapılmış en iyi filmler arasında gösterilmiştir.",
+"oyuncu": [
+"Setsuko Hara",
+"Kyōko Kagawa",
+"Chishū Ryū",
+"Sō Yamamura",
+"Sugimura Haruko",
+"Chieko Higashiyama"
+],
+"puan": {
+"IMDb": "8.1/10",
+"Metacritic": "100/100",
+"Rotten Tomatoes": "%100"
+},
+"sure": 136,
+"tur": [
+"drama"
+],
+"ulke": [
+"Japonya"
+],
+"yonetmen": [
+"Yasujirō Ozu"
 ]
 },
 "wd-Q26698156": {
@@ -7646,6 +8154,64 @@
 "Tim Burton"
 ]
 },
+"wd-Q279274": {
+"imdb": "tt0398808",
+"konu": "Terabithia Köprüsü, Katherine Paterson'ın aynı isimli romanından uyarlanan film, Jess adındaki bir çocuğun sihirli hikâyesini anlatıyor. Jess okulundaki tüm koşu yarışlarının birincisidir, ta ki Leslie aynı okula gelene kadar. Kısa zamanda çok iyi iki arkadaş olan Leslie ile Jess, evlerinin yakınında bulunan ormanda devlerden, perilerden, trollerden ve cücelerden oluşan, Terabithia adında hayali bir krallık kurarlar.",
+"oyuncu": [
+"Josh Hutcherson",
+"AnnaSophia Robb",
+"Robert Patrick",
+"Bailee Madison",
+"Latham Gaines",
+"Lauren Clinton"
+],
+"puan": {
+"Metacritic": "74/100",
+"Rotten Tomatoes": "%85"
+},
+"sure": 95,
+"tur": [
+"drama",
+"macera",
+"çocuk"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Gábor Csupó"
+]
+},
+"wd-Q280918": {
+"imdb": "tt0113627",
+"konu": "Leaving Las Vegas, Mike Figgis'in yazıp yönettiği ve John O'brien'ın aynı adlı yarı otobiyografik 1990 tarihli romanından uyarlanan 1995 ABD yapımı drama filmidir. Nicolas Cage, ailesini kaybeden, yakın zamanda işinden kovulan ve intihara meyilli olan bir alkolik olarak filmde rol aldı. Las Vegas'a taşınmaya karar veren karakter, BMW'sine bir miktar likör ve bira yükler ve Los Angeles'tan Nevada'ya giderken sarhoş olur. Bir kez orada, güzel bir fahişeyle romantik bir ilişki yaşar.",
+"oscar": 1,
+"oyuncu": [
+"Nicolas Cage",
+"Elisabeth Shue",
+"Mariska Hargitay",
+"Richard Lewis",
+"Valeria Golino",
+"Julian Sands"
+],
+"puan": {
+"Metacritic": "82/100",
+"Rotten Tomatoes": "%91"
+},
+"sure": 107,
+"tur": [
+"romantik",
+"drama",
+"Erotik"
+],
+"ulke": [
+"Fransa",
+"ABD"
+],
+"yonetmen": [
+"Mike Figgis"
+]
+},
 "wd-Q28234": {
 "imdb": "tt1707386",
 "konu": "Sefiller, 2012 tarihli İngiliz yapımı müzikal drama filmidir. Yapımını Working Title Films, dağıtımını Universal Pictures üstlenmiştir. Film, Alain Boublil ve Claude-Michel Schönberg'ün Victor Hugo'nun 1862 tarihli romanından ilham alarak yarattıkları aynı isimli müzikalden uyarlanmıştır. Zoraki Kral'ın yönetmeni Tom Hooper'ın yönettiği filmin senaryosunu William Nicholson, Boublil, Schönberg ve Herbert Kretzmer yazmıştır.",
@@ -7837,6 +8403,93 @@
 "Steve McQueen"
 ]
 },
+"wd-Q303678": {
+"imdb": "tt1615918",
+"konu": "Alvin ve Sincaplar'ın 3. filmi. 16 Aralık 2011'de vizyona girmiştir. Yönetmenliğini Mike Mitchell'ın yaptığı film büyük beğeni toplamıştır.",
+"oyuncu": [
+"Christina Applegate",
+"Anna Faris",
+"Jenny Slate",
+"Amy Poehler",
+"Jason Lee",
+"Jesse McCartney"
+],
+"puan": {
+"Metacritic": "24/100",
+"Rotten Tomatoes": "%10"
+},
+"sure": 87,
+"tur": [
+"müzikal",
+"komedi",
+"Aile"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Mike Mitchell"
+]
+},
+"wd-Q308920": {
+"imdb": "tt0068361",
+"konu": "Burjuvazinin Gizli Çekiciliği, sürrealist sinema akımının öncülerinden olan İspanyol yönetmen Luis Buñuel'in yazıp yönettiği 1972 yapımı sürrealist bir filmdir. Film Fransa'da çekilmiştir.\nLuis Buñuel film boyunca her seferinde bir aksilik çıktığı için bir türlü toplanıp yemek yemeyi başaramayan birkaç burjuva çiftin öyküsünü anlattığı \"Burjuvazinin Gizli Çekiciliği\"nde gerçeküstücü simgeleri alaycı bir mizahla harmanlayarak her zaman yaptığı gibi burjuva sınıfını alabildiğine eleştirir, bu sınıfın zaaflarını korkularını bir kara mizah tarzında birbiri ardına sıralayarak onları hicveder.\nFilm ",
+"oscar": 1,
+"oyuncu": [
+"Michel Piccoli",
+"Stéphane Audran",
+"Fernando Rey",
+"Delphine Seyrig",
+"Jean-Pierre Cassel",
+"Milena Vukotic"
+],
+"puan": {
+"IMDb": "7.7/10",
+"Metacritic": "93/100",
+"Rotten Tomatoes": "%98"
+},
+"sure": 96,
+"tur": [
+"komedi",
+"drama",
+"fantasy"
+],
+"ulke": [
+"Fransa",
+"İtalya"
+],
+"yonetmen": [
+"Luis Buñuel"
+]
+},
+"wd-Q309545": {
+"imdb": "tt0055031",
+"konu": "Nüremberg Duruşması, Stanley Kramer'in yönettiği 1961 ABD yapımı film, gerçek olaylara dayanmaktadır. Film sonraki yıllarda bazı özel televizyon kanallarında Nuremberg Mahkemesi adıyla da yayına verilmiştir.",
+"oscar": 2,
+"oyuncu": [
+"Marlene Dietrich",
+"Judy Garland",
+"Spencer Tracy",
+"Burt Lancaster",
+"Maximilian Schell",
+"Montgomery Clift"
+],
+"puan": {
+"Metacritic": "60/100",
+"Rotten Tomatoes": "%92"
+},
+"sure": 188,
+"tur": [
+"drama",
+"trial"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Stanley Kramer"
+]
+},
 "wd-Q3100285": {
 "imdb": "tt0071626",
 "oyuncu": [
@@ -7998,6 +8651,34 @@
 "Ömer Lütfi Akad"
 ]
 },
+"wd-Q321561": {
+"imdb": "tt0105323",
+"konu": "Kadın Kokusu, 1992 yapımı Martin Brest filmidir. Al Pacino bu filmde emekli olmuş kör bir subayı kendi dünyasından izleyicilere sunmaktadır. Film, Akademi Ödülleri'nde en iyi görüntü, düzenleme, en iyi oyuncu dallarında aday gösterilmiş, en iyi oyuncu ödülünü Al Pacino ile kazanmıştır.",
+"oscar": 1,
+"oyuncu": [
+"Al Pacino",
+"Philip Seymour Hoffman",
+"June Squibb",
+"Chris O'Donnell",
+"Frances Conroy",
+"Cebraile Enver"
+],
+"puan": {
+"Metacritic": "57/100",
+"Rotten Tomatoes": "%82"
+},
+"sure": 150,
+"tur": [
+"drama",
+"coming-of-age"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Martin Brest"
+]
+},
 "wd-Q3224848": {
 "imdb": "tt0090982",
 "konu": "Duvar, Yılmaz Güney'in yazıp yönettiği 1983 yapımı filmdir. Yılmaz Güney'in, Cannes Film Festivali'nde büyük ödül Altın Palmiye'yi alan Yol filminden sonraki ilk, hayatını kaybetmeden önceki son filmidir. Ayrıca 1974 yılındaki Arkadaş filminden beri bizzat çekimlerinin başında bulunduğu ilk filmidir. Güney, 1974–1981 yılları arasını cinayetten ötürü hapishanelerde geçirdiği için bu dönemdeki filmlerinin çekimlerinde bulunamamış, filmlerini hapishaneden organize ve takip etmiştir.",
@@ -8016,6 +8697,58 @@
 ],
 "yonetmen": [
 "Yılmaz Güney"
+]
+},
+"wd-Q32303": {
+"imdb": "tt2106476",
+"konu": "Onur Savaşı, başrolünde Mads Mikkelsen'in yer aldığı, Thomas Vinterberg tarafından yönetilen 2012 yapımı dram filmidir. Hikâye Noel'e doğru küçük bir Danimarka kasabasında geçer. Kendi anasınıfındaki küçük bir kız tarafından haksız yere cinsel istismarla suçlanıp, toplumsal histeriye maruz kalan bir adamın hikâyesini konu almaktadır.\nFilm 2012 Toronto Uluslararası Film Festivali'nde gösterilmiş ve 2012 Cannes Film Festivali'nde ana kategoride yarışmıştır.",
+"oyuncu": [
+"Thomas Vinterberg",
+"Alexandra Rapaport",
+"Thomas Bo Larsen",
+"Susse Wold",
+"Sebastian Bull Sarning",
+"Lasse Fogelstrøm"
+],
+"puan": {
+"Metacritic": "77/100",
+"Rotten Tomatoes": "%92"
+},
+"sure": 111,
+"tur": [
+"drama"
+],
+"ulke": [
+"Danimarka",
+"İsveç"
+],
+"yonetmen": [
+"Thomas Vinterberg"
+]
+},
+"wd-Q325643": {
+"imdb": "tt0061184",
+"konu": "Kim Korkar Hain Kurttan?, 1966 ABD yapımı dramatik filmdir. Özgün adı Who's Afraid of Virginia Woolf? olan film Türkiye'de ilk kez 30 Ocak 1967'de sinemalarda gösterime girmişti.\nSenaryosunu Edward Albee'nin 1962 tarihli Tony ödüllü aynı adlı Broadway oyunundan Ernest Lehman'ın uyarlayıp yazdığı filmi Mike Nichols yönetmiştir.",
+"oscar": 5,
+"oyuncu": [
+"Elizabeth Taylor",
+"Richard Burton",
+"George Segal",
+"Sandy Dennis"
+],
+"puan": {
+"Metacritic": "75/100",
+"Rotten Tomatoes": "%96"
+},
+"sure": 131,
+"tur": [
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Mike Nichols"
 ]
 },
 "wd-Q325648": {
@@ -8067,6 +8800,35 @@
 ],
 "yonetmen": [
 "Çağan Irmak"
+]
+},
+"wd-Q327685": {
+"imdb": "tt1155076",
+"konu": "The Karate Kid, Harald Zwart'ın yönettiği 2010 yapımı ABD filmi. Başrollerinde Jackie Chan ve aktör Will Smith'in oğlu Jaden Smith yer almıştır. 1984'teki Karate Kid filminin günümüz uyarlamasıdır.",
+"oyuncu": [
+"Jackie Chan",
+"Michelle Yeoh",
+"Jaden Smith",
+"Taraji P. Henson",
+"Yu Rongguang",
+"Zhenwei Wang"
+],
+"puan": {
+"Metacritic": "61/100",
+"Rotten Tomatoes": "%66"
+},
+"sure": 140,
+"tur": [
+"Komedi-drama",
+"drama",
+"dövüş sanatları"
+],
+"ulke": [
+"Çin Halk Cumhuriyeti",
+"ABD"
+],
+"yonetmen": [
+"Harald Zwart"
 ]
 },
 "wd-Q327852": {
@@ -8798,6 +9560,61 @@
 "Stephen Daldry"
 ]
 },
+"wd-Q462418": {
+"imdb": "tt0109686",
+"konu": "Salak ile Avanak, 1994 yılı ABD yapımı, başrollerinde Jim Carrey ve Jeff Daniels'in oynadığı komedi filmi.\nDumb ve Dumber'in başarısı, Farrelly kardeşlerin kariyerini başlattı ve Carrey'in 1990'ların en köklü yıldızlarından biri olarak ününü sağlamlaştırdı.\nFilm ayrıca 2003 yapımı Salak ile Avanak 2: Harry ve Lloyd Buluşursa adlı bir animasyon dizisi ve 2014'te Salak ile Avanak Geri Dönüyor isimli devam filmi çekilmiştir.",
+"oyuncu": [
+"Jim Carrey",
+"Jeff Daniels",
+"Teri Garr",
+"Lauren Holly",
+"Lin Shaye",
+"Mike Starr"
+],
+"puan": {
+"Metacritic": "41/100",
+"Rotten Tomatoes": "%67"
+},
+"sure": 109,
+"tur": [
+"komedi",
+"Buddy",
+"yol"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Peter Farrelly",
+"Bobby Farrelly"
+]
+},
+"wd-Q464964": {
+"imdb": "tt1645170",
+"konu": "Diktatör, 2012 Amerika Birleşik Devletleri-Birleşik Krallık ortak yapımı komedi filmi. Sacha Baron Cohen'in senaryosuna katkıda bulunduğu ve başrolü oynadığı film New York ile İspanya'da çekildi, 16 Mayıs 2012 tarihinde gösterime girdi.",
+"oyuncu": [
+"Barack Obama",
+"Megan Fox",
+"Edward Norton",
+"Ben Kingsley",
+"Sacha Baron Cohen",
+"Anna Faris"
+],
+"puan": {
+"Metacritic": "58/100",
+"Rotten Tomatoes": "%56"
+},
+"sure": 83,
+"tur": [
+"komedi"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Larry Charles"
+]
+},
 "wd-Q46551": {
 "imdb": "tt0482571",
 "konu": "Prestij, yönetmenliğini Christopher Nolan'ın yaptığı 2006 ABD-Birleşik Krallık ortak yapımı film. Yazar Christopher Priest'in aynı adlı romanından sinemaya uyarlanmıştır. Nolan'a, senaryo yazımında 2000 yılında Akıl Defteri filminde de birlikte çalıştığı kardeşi Jonathan Nolan eşlik etmiştir. Sinema tarihinin en iyi filmleri arasında gösterilmiştir.",
@@ -9012,6 +9829,33 @@
 ],
 "yonetmen": [
 "Quentin Tarantino"
+]
+},
+"wd-Q474087": {
+"imdb": "tt1411238",
+"konu": "Bağlanmak Yok 2011 yapımı Amerikan romantik komedi filmi. Ivan Reitman tarafından yönetilen film Elizabeth Meriwether tarafından yazılmıştır. Filmin oyuncu kadrosunda Natalie Portman ve Ashton Kutcher bulunmaktadır.",
+"oyuncu": [
+"Natalie Portman",
+"Ashton Kutcher",
+"Greta Gerwig",
+"Kevin Kline",
+"Ludacris",
+"Mindy Kaling"
+],
+"puan": {
+"Metacritic": "50/100",
+"Rotten Tomatoes": "%47"
+},
+"sure": 108,
+"tur": [
+"romantik komedi",
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Ivan Reitman"
 ]
 },
 "wd-Q47703": {
@@ -9284,6 +10128,33 @@
 "Peter Farrelly"
 ]
 },
+"wd-Q487181": {
+"imdb": "tt0180093",
+"konu": "Bir Rüya İçin Ağıt, yönetmenliğini Darren Aronofsky'nin yaptığı ve başrollerinde Ellen Burstyn, Jared Leto, Jennifer Connelly ve Marlon Wayans'ın yer aldığı 2000 yapımı dram, psikolojik, gerilim ve suç filmidir. Hubert Selby Jr.'ün 1978 tarihli aynı adlı romanından uyarlanan film, madde bağımlılığından etkilenen dört karakteri ve bunun fiziksel ve duygusal durumlarını nasıl değiştirdiğini konu almaktadır. Bağımlılıkları, dört karakteri bir yanılsama ve umutsuzluk dünyasına hapseder. Film ilerledikçe her karakterin durumu kötüleşir; hayallerle beslenen yanılsamaları, içinde bulundukları koşulla",
+"oyuncu": [
+"Jared Leto",
+"Jennifer Connelly",
+"Ellen Burstyn",
+"Marlon Wayans",
+"Keith David",
+"Christopher McDonald"
+],
+"puan": {
+"IMDb": "8.3/10",
+"Metacritic": "71/100",
+"Rotten Tomatoes": "%80"
+},
+"sure": 102,
+"tur": [
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Darren Aronofsky"
+]
+},
 "wd-Q49003": {
 "imdb": "tt0099653",
 "konu": "Hayalet, 1990 Amerika Birleşik Devletleri yapımı film. Başrollerinde Patrick Swayze, Demi Moore, Tony Goldwyn ve Whoopi Goldberg bulunur. Senaryosunu Bruce Joel Rubin, yönetmenliğini Jerry Zucker yaptığı film, 21.000.000 $ bir bütçe ile hazırlanarak 505.702.588 $ hasılat elde ederek bir gişe başarısı göstermiştir. 1990'ın en yüksek hasılat yapan filmi oldu.",
@@ -9369,6 +10240,62 @@
 "Fatih Akın"
 ]
 },
+"wd-Q503313": {
+"imdb": "tt0081283",
+"konu": "Sıradan İnsanlar 1980 yapımı Amerikan drama filmi. Filmin yönetmeni Robert Redford'dur. Önemli oyuncular ise Donald Sutherland, Mary Tyler Moore, Judd Hirsch ve Timothy Hutton'dur.\nFilmin senaryosu Alvin Sargent tarafından oluşturulmuştur.",
+"oscar": 4,
+"oyuncu": [
+"Donald Sutherland",
+"Mary Tyler Moore",
+"Timothy Hutton",
+"Adam Baldwin",
+"Elizabeth McGovern",
+"M. Emmet Walsh"
+],
+"puan": {
+"Metacritic": "86/100",
+"Rotten Tomatoes": "%89"
+},
+"sure": 124,
+"tur": [
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Robert Redford"
+]
+},
+"wd-Q512350": {
+"imdb": "tt0055032",
+"konu": "Jules ve Jim, Henri-Pierre Roché'nin aynı adı taşıyan romanından uyarlanan, yönetmenliğini  François Truffaut'nun yaptığı 1962 yapımı bir Fransız filmidir.",
+"oyuncu": [
+"Jeanne Moreau",
+"Oskar Werner",
+"Marie Dubois",
+"Michel Subor",
+"Jean-Louis Richard",
+"Sabine Haudepin"
+],
+"puan": {
+"IMDb": "7.6/10",
+"Metacritic": "97/100",
+"Rotten Tomatoes": "%94"
+},
+"sure": 105,
+"tur": [
+"romantik",
+"drama",
+"Buddy"
+],
+"ulke": [
+"Fransa"
+],
+"yonetmen": [
+"François Truffaut"
+]
+},
 "wd-Q51416": {
 "imdb": "tt0119654",
 "konu": "Siyah Giyen Adamlar, yönetmenliğini Barry Sonnenfeld'in yaptığı, 1997 yapımı, aksiyon-güldürü tarzında bir bilimkurgu filmidir. Başrollerinde Tommy Lee Jones ve Will Smith'in olduğu film, Marvel Comics'in sahibi olduğu Aircel Comics tarafından yayımlanan ve Lowell Cunningham'ın yarattığı The Men in Black adlı çizgi roman serisine dayanmaktadır.\n\"Siyah Giyen Adamlar 2\" adlı ve 2002 yapımı bir devam filmi de olan bu film, gösterime girdiği 1997'de büyük sükse yaratmış ve ABD'de 250 milyon, tüm dünyada da 326 milyon $'dan fazla gelir elde etmiştir. 2019 yılında Siyah Giyen Adamlar: Global Tehdit ",
@@ -9452,6 +10379,36 @@
 ],
 "yonetmen": [
 "Stanley Kubrick"
+]
+},
+"wd-Q538266": {
+"imdb": "tt0053146",
+"konu": "Siyah Orfe  1959 Fransa Brezilya ve İtalya ortak yapımı romantik fantastik filmdir. Özgün adı Orfeu Negro dur. İngilizce konuşulan ülkelerde Black Orpheus adı ile gösterime sunulmuştur. Film Türkiye'de 1 Ocak 1962'de gösterime girmiştir.",
+"oscar": 1,
+"oyuncu": [
+"Adhemar Ferreira da Silva",
+"Marcel Camus",
+"Marpessa Dawn",
+"Léa Garcia",
+"Cartola",
+"Breno Mello"
+],
+"puan": {
+"Metacritic": "81/100",
+"Rotten Tomatoes": "%88"
+},
+"sure": 107,
+"tur": [
+"müzikal",
+"romantik",
+"komedi"
+],
+"ulke": [
+"Fransa",
+"Brezilya"
+],
+"yonetmen": [
+"Marcel Camus"
 ]
 },
 "wd-Q54274": {
@@ -9957,6 +10914,34 @@
 "Karan Johar"
 ]
 },
+"wd-Q623443": {
+"imdb": "tt0120885",
+"konu": "Başkanın Adamları 1997 yapımlı Barry Levinson'un yönettiği ve yapımcılığını Robert De Niro ile yaptığı, senaryosunu ise Hilary Henkin ve David Mamet'in yazdığı politik bir komedi filmidir. Film Clinton skandalına yakın zamanlarda çekilmiştir. Eleştirmenler tarafından iyi eleştiriler alan film, başarılı olmuştur. Bazı eleştirmenler filmin \"ABD'yi hem eleştiren, hem de iğneleyen cesur bir yapım\" olarak nitelendirdiler.",
+"oyuncu": [
+"Robert De Niro",
+"Kirsten Dunst",
+"Woody Harrelson",
+"Willie Nelson",
+"William H. Macy",
+"James Belushi"
+],
+"puan": {
+"IMDb": "7.1/10",
+"Metacritic": "74/100",
+"Rotten Tomatoes": "%76"
+},
+"sure": 97,
+"tur": [
+"Komedi-drama",
+"hiciv"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Barry Levinson"
+]
+},
 "wd-Q623724": {
 "imdb": "tt0212338",
 "konu": "Zor Baba, 2000 yapımı Amerikan romantik komedi filmidir. Jim Herzfeld ve John Hamburg tarafından yazılmış ve Jay Roach tarafından yönetilmiştir. Filmde Ben Stiller, kız arkadaşı Pam'in ailesini, aşırı koruyucu Jack ve barışsever Dina'yı ziyaret eden ve bir dizi talihsiz olay yaşayan hemşire Greg Focker rolündedir. Teri Polo, Pam rolünde ve Owen Wilson ise Pam'in eski erkek arkadaşı Kevin rolünde yer almaktadır.",
@@ -10033,6 +11018,63 @@
 "Anthony Minghella"
 ]
 },
+"wd-Q635924": {
+"imdb": "tt0814314",
+"konu": "Seven Pounds, 2008 yapımı Amerikan drama filmidir. Yönetmenliğini Gabriele Muccino yapmış, başrolde Will Smith yer almıştır. Filmde Tim Thomas adlı geçmişi acılarla dolu bir vergi memurunun çeşitli sağlık sorunları bulunan 7 kişiye yardım etmesi ve içlerinden birine aşık olması konu edinilmiştir.\nFilm, 19 Aralık 2008'de Amerika Birleşik Devletleri ve Kanada'daki sinemalarda Columbia Pictures tarafından yayınlandı.",
+"oyuncu": [
+"Will Smith",
+"Woody Harrelson",
+"Octavia Spencer",
+"Rosario Dawson",
+"Barry Pepper",
+"Madison Pettis"
+],
+"puan": {
+"Metacritic": "36/100",
+"Rotten Tomatoes": "%27"
+},
+"sure": 123,
+"tur": [
+"romantik",
+"drama",
+"fantasy"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Gabriele Muccino"
+]
+},
+"wd-Q637820": {
+"imdb": "tt1602620",
+"konu": "Aşk, 2012 yılı yapımı drama filmi. Yönetmenliğini Michael Haneke'nin üstlendiği filmin başrollerinde Jean-Louis Trintignant, Emmanuelle Riva ve Isabelle Huppert bulunuyor. Film 85. Akademi Ödülleri ve 70.",
+"oscar": 1,
+"oyuncu": [
+"Isabelle Huppert",
+"Jean-Louis Trintignant",
+"Emmanuelle Riva",
+"Alexandre Tharaud",
+"Rita Blanco",
+"Laurent Capelluto"
+],
+"puan": {
+"IMDb": "7.9/10",
+"Metacritic": "95/100",
+"Rotten Tomatoes": "%93"
+},
+"sure": 127,
+"tur": [
+"drama"
+],
+"ulke": [
+"Fransa",
+"Almanya"
+],
+"yonetmen": [
+"Michael Haneke"
+]
+},
 "wd-Q638267": {
 "imdb": "tt0298780",
 "konu": "Büyük Adam Küçük Aşk, Şükran Güngör, Dilan Erçetin, Füsun Demirel, Yıldız Kenter, İsmail Hakkı Şen'in rol aldığı 2001 yapımı film. 2001 yılında Uluslararası Antalya Film Festivali'nde 5 dalda aday olmuş ve tamamında ödül almıştır. Uluslararası İstanbul Film Festivali'nde ise \"Yılın En İyi Türk Filmi\" kategorisinde aday olmuştur.",
@@ -10094,6 +11136,90 @@
 ],
 "yonetmen": [
 "Cem Yılmaz"
+]
+},
+"wd-Q640387": {
+"imdb": "tt0277027",
+"konu": "I Am Sam, Jessie Nelson'ın yapımcılığını ve yönetmenliğini üstlendiği, Sean Penn'in başrolde ana karakter \"Sam\"i canlandırdığı 2001 yapımı ABD filmi.",
+"oyuncu": [
+"Michelle Pfeiffer",
+"Sean Penn",
+"Dakota Fanning",
+"Laura Dern",
+"Elle Fanning",
+"Richard Schiff"
+],
+"puan": {
+"Metacritic": "28/100",
+"Rotten Tomatoes": "%36"
+},
+"sure": 127,
+"tur": [
+"komedi",
+"drama",
+"trial"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Jessie Nelson"
+]
+},
+"wd-Q640561": {
+"imdb": "tt1832382",
+"konu": "Bir Ayrılık, Asgar Ferhadi tarafından yönetilen ve Leyla Hatemi, Peyman Muadi, Şahab Hüseyni, Sareh Bayat ile Sarina Farhadi'nin oynadığı 2011 İran drama filmi. Boşanmış bir orta sınıf İranlı çifti ile yaşlı babası için alt sınıf bir bakıcı tutmasını izleyen entrikaları konu edinmektedir. 61. Berlin Film Festivali'nde En İyi Film dalında Altın Ayı ve En İyi Erkek Oyuncu ile En İyi Kadın Oyuncu dallarında Gümüş Ayı kazanarak Altın Ayı kazanan ilk İran filmi oldu.",
+"oscar": 1,
+"oyuncu": [
+"Leyla Hatemi",
+"Şahab Hüseyni",
+"Payman Maadi",
+"Sareh Bayat",
+"Sarina Farhadi",
+"Kimia Hosseini"
+],
+"puan": {
+"IMDb": "8.3/10",
+"Metacritic": "95/100",
+"Rotten Tomatoes": "%99"
+},
+"sure": 123,
+"tur": [
+"drama"
+],
+"ulke": [
+"İran"
+],
+"yonetmen": [
+"Asgar Ferhadi"
+]
+},
+"wd-Q641760": {
+"imdb": "tt1637725",
+"konu": "Ayı Teddy, 2012 yılı yapımı komedi filmi.",
+"oyuncu": [
+"Mark Wahlberg",
+"Seth MacFarlane",
+"Norah Jones",
+"Giovanni Ribisi",
+"Joel McHale",
+"Patrick Warburton"
+],
+"puan": {
+"Metacritic": "62/100",
+"Rotten Tomatoes": "%69"
+},
+"sure": 106,
+"tur": [
+"komedi",
+"fantasy",
+"Christmas"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Seth MacFarlane"
 ]
 },
 "wd-Q642546": {
@@ -10182,6 +11308,36 @@
 "Spike Jonze"
 ]
 },
+"wd-Q65066669": {
+"imdb": "tt10272386",
+"konu": "Baba, Florian Zeller'in ilk yönetmenlik denemesinde ortak yazıp yönettiği 2020 yapımı bir drama filmidir; Zeller'in 2012 oyunu Le Père'ye dayanan oyun yazarı Christopher Hampton ile birlikte yazdı. Bir Fransız-İngiliz ortak yapımı olan filmde, Anthony Hopkins, Olivia Colman, Mark Gatiss, Imogen Poots, Rufus Sewell ve Olivia Williams yer alıyor ve ilerleyen demans hastalığı ile uğraşması gereken yaşlanan bir adamı konu ediyor. Film, 2015 yapımı Floride filminden sonra oyunun ikinci uyarlaması.\nBaba, dünya prömiyerini 27 Ocak 2020'de Sundance Film Festivali'nde yaptı ve 26 Mayıs 2021'de UGC Dist",
+"oscar": 2,
+"oyuncu": [
+"Anthony Hopkins",
+"Olivia Colman",
+"Olivia Williams",
+"Imogen Poots",
+"Rufus Sewell",
+"Mark Gatiss"
+],
+"puan": {
+"IMDb": "8.2/10",
+"Metacritic": "88/100",
+"Rotten Tomatoes": "%98"
+},
+"sure": 97,
+"tur": [
+"drama",
+"psychological"
+],
+"ulke": [
+"İngiltere",
+"Fransa"
+],
+"yonetmen": [
+"Florian Zeller"
+]
+},
 "wd-Q65921361": {
 "imdb": "tt1361336",
 "konu": "Tom & Jerry 2021 Amerikan yapımı bir canlı çekim/bilgisayar animasyonlu slapstick komedi aynı adı taşıyan adlı çizgi film karakterlerine dayanan film, William Hanna ve Joseph Barbera tarafından yaratıldı, yapımcılığı Warner Animation Group tarafından ve Warner Bros. Pictures tarafından dağıtıldı. 1992'deki Tom ve Jerry Filmiden sonraki karakterlere dayanan ikinci sinema filmidir.",
@@ -10208,6 +11364,62 @@
 ],
 "yonetmen": [
 "Tim Story"
+]
+},
+"wd-Q659609": {
+"imdb": "tt0112471",
+"konu": "Gün Doğmadan, Richard Linklater'ın yönettiği, Linklater'ın Kim Krizan'ın birlikte kaleme aldığı 1995 yapımı romantik dram filmdir. Before üçlemesinin ilk yapımıdır. Bir trende yolları kesişen iki gencin bir gecelik tutkulu aşkını konu almaktadır.",
+"oyuncu": [
+"Ethan Hawke",
+"Julie Delpy",
+"Adam Goldberg",
+"Erni Mangold",
+"Hanno Pöschl",
+"Andrea Eckert"
+],
+"puan": {
+"Metacritic": "79/100",
+"Rotten Tomatoes": "%100"
+},
+"sure": 97,
+"tur": [
+"romantik",
+"drama"
+],
+"ulke": [
+"Avusturya",
+"ABD"
+],
+"yonetmen": [
+"Richard Linklater"
+]
+},
+"wd-Q660894": {
+"imdb": "tt0108550",
+"konu": "Gilbert'in Hayalleri 1993 ABD yapımı dramatik filmdir. Özgün adı What's Eating Gilbert Grape olan filmi Lasse Hallström yönetmiş, başrollerinde Johnny Depp, Juliette Lewis ve Leonardo DiCaprio oynamıştır. Film Peter Hedges'in aynı isimli romanından sinemaya uyarlanmıştır. Manor, Texas'da çekilen filmin müziklerini ise Alan Parker yapmıştır.",
+"oyuncu": [
+"Leonardo DiCaprio",
+"Johnny Depp",
+"John C. Reilly",
+"Juliette Lewis",
+"Mary Steenburgen",
+"Crispin Glover"
+],
+"puan": {
+"Metacritic": "73/100",
+"Rotten Tomatoes": "%90"
+},
+"sure": 118,
+"tur": [
+"komedi",
+"drama",
+"coming-of-age"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Lasse Halström"
 ]
 },
 "wd-Q6683587": {
@@ -10352,6 +11564,35 @@
 "Şerif Gören"
 ]
 },
+"wd-Q684150": {
+"imdb": "tt0061512",
+"konu": "Parmaklıklar Arkasında, 1967 ABD yapımı, bir hapishanede geçen, macera türünde bir sinema filmidir. Film, Paul Newman’ın canlandırdığı İkinci Dünya Savaşı gazisi Luke Jackson’ın hikâyesini anlatır. Özel mülke zarar verme suçundan hapis cezasına çarptırılan Jackson, hapishanede acımasız gardiyanlara karşı başkaldırmaya çalışır ve bu tavrı sayesinde diğer mahkûmların saygısını kazanır. Başarısız bir kaçış girişiminin ardından Jackson bir deneme daha yapar.",
+"oscar": 1,
+"oyuncu": [
+"Paul Newman",
+"Dennis Hopper",
+"George Kennedy",
+"Harry Dean Stanton",
+"Ralph Waite",
+"Wayne Rogers"
+],
+"puan": {
+"IMDb": "8.0/10",
+"Metacritic": "92/100",
+"Rotten Tomatoes": "%100"
+},
+"sure": 123,
+"tur": [
+"drama",
+"prison"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Stuart Rosenberg"
+]
+},
 "wd-Q6929007": {
 "imdb": "tt0184756",
 "konu": "Muhsin Bey, 1987 yapımı, Yavuz Turgul'un yazıp yönettiği filmdir. Oyuncular Şener Şen ve Uğur Yücel, sinema çevrelerine göre bu film ile oyunculuklarının zirvesine çıkmışlardır. Film yine birçok otoriteye göre Türk sinema tarihinin en başarılı filmlerindendir. Filmin yüksek çözünürlüğe sahip bir kopyasını yapmak üzere Mimar Sinan Üniversitesi 2014 yılında çeşitli çalışmalar yapmıştır.",
@@ -10369,6 +11610,88 @@
 ],
 "yonetmen": [
 "Yavuz Turgul"
+]
+},
+"wd-Q695255": {
+"imdb": "tt0060827",
+"konu": "Persona Ingmar Bergman'nın yönetmenliğini yaptığı, Bibi Andersson ve Liv Ullmann'nın başrollerde oynadığı 1966 yılı yapımı bir İsveç filmdir. Bergman bu filmi yönettiği en önemli filmler arasında kabul eder. Drama türündeki filmin 7 ödül ve 1 adaylığı bulunmaktadır. Film oldukça deneysel bir film olmakla birlikte bir psikolojik korku olarak da değerlendirilir.",
+"oyuncu": [
+"Liv Ullmann",
+"Bibi Andersson",
+"Gunnar Björnstrand",
+"Margaretha Krook"
+],
+"puan": {
+"Metacritic": "86/100",
+"Rotten Tomatoes": "%91"
+},
+"sure": 84,
+"tur": [
+"drama",
+"sanat"
+],
+"ulke": [
+"İsveç"
+],
+"yonetmen": [
+"Ingmar Bergman"
+]
+},
+"wd-Q7117022": {
+"imdb": "tt2338151",
+"konu": "PK, 2014 yapımı bilimkurgu ve komedi filmidir. Yönetmenliği Rajkumar Hirani, yapımı Hirani ve Vidhu Vinod Chopra, yazarlığı ise Hirani ve Abhijat Joshi tarafından yapılan bir Hint filmidir. Filmin başrollerinde Aamir Khan olmak üzere Anushka Sharma, Sushant Singh Rajput, Boman Irani, Saurabh Shukla ve Sanjay Dutt rol almıştır. Film, araştırma görevi için dünyaya gelen bir uzaylının hikâyesini anlatıyor.",
+"oyuncu": [
+"Aamir Khan",
+"Anushka Sharma",
+"Sushant Singh Rajput",
+"Sanjay Dutt",
+"Boman Irani",
+"Saurabh Shukla"
+],
+"puan": {
+"Metacritic": "tbd/100",
+"Rotten Tomatoes": "%80"
+},
+"sure": 153,
+"tur": [
+"müzikal",
+"komedi",
+"drama"
+],
+"ulke": [
+"Hindistan"
+],
+"yonetmen": [
+"Rajkumar Hirani"
+]
+},
+"wd-Q720724": {
+"imdb": "tt0112431",
+"konu": "Babe Chris Noonan'ın yönettiği ve George Miller tarafından yapımcılığı yapılan aile komedi-drama filmi. Dick King-Smith'in 1983 tarihli The Sheep-Pig adlı romanından uyarlanan film, aynı zamanda Babe: The Gallant Pig olarak da bilinir ve bir çoban köpeğinin işini yapmak isteyen bir çiftlik hayvanı olarak yetiştirilen bir domuzun hikâyesini anlatır. Ana hayvan karakterleri, gerçek ve animatronik domuzlar ve Border Collie'lerin bir kombinasyonu tarafından oynanır.",
+"oscar": 1,
+"oyuncu": [
+"James Cromwell",
+"Brittany Byrnes",
+"Patrika Darbo",
+"Magda Szubanski",
+"Ross Bagley",
+"Tina Lifford"
+],
+"puan": {
+"Metacritic": "83/100",
+"Rotten Tomatoes": "%98"
+},
+"sure": 92,
+"tur": [
+"komedi",
+"drama"
+],
+"ulke": [
+"Avustralya",
+"ABD"
+],
+"yonetmen": [
+"Chris Noonan"
 ]
 },
 "wd-Q72962": {
@@ -10529,6 +11852,34 @@
 "Giuseppe Tornatore"
 ]
 },
+"wd-Q746733": {
+"imdb": "tt0049833",
+"konu": "On Emir, 1956 yılı Amerika Birleşik Devletleri yapımı epik bir film. Cecil B. DeMille tarafından yönetilen filmde Charlton Heston, Yul Brynner ve Anne Baxter başrollerde oynamışlardır.\nİlk olarak 1952'de çekileceği duyurulan On Emir, DeMille'in 1923 yapımı aynı adlı sessiz filminin yeniden çevrimidir. Filmde dört senarist, üç sanat yönetmeni ve beş kostüm tasarımcısı çalıştı.",
+"oscar": 1,
+"oyuncu": [
+"Charlton Heston",
+"Yul Brynner",
+"Cecil B. DeMille",
+"Anne Baxter",
+"Vincent Price",
+"Edward G. Robinson"
+],
+"puan": {
+"Rotten Tomatoes": "%84"
+},
+"sure": 220,
+"tur": [
+"drama",
+"macera",
+"Kılıç ve sandalet"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Cecil B. DeMille"
+]
+},
 "wd-Q747570": {
 "imdb": "tt0043278",
 "konu": "Paris'te Bir Amerikalı 1951 Amerikan müzikal romantik komedi filmi 1928 cazdan etkilenen senfonik şiir'den esinlenmiştir. Paris'te Bir Amerikalı  George Gershwin tarafından yazılmıştır. Başrollerinde Gene Kelly, Leslie Caron, Oscar Levant, Georges Guétary ve Nina Foch'un yer aldığı film Paris'te geçer ve Alan Jay Lerner'ın senaryosundan Vincente Minnelli tarafından yönetilmiştir. Müzikler George Gershwin'e, sözler kardeşi Ira'ya, ek müzikler Johnny Green ve Saul Chaplin'e aittir.",
@@ -10667,6 +12018,34 @@
 "Çağan Irmak"
 ]
 },
+"wd-Q798797": {
+"imdb": "tt1284575",
+"konu": "Kötü Öğretmen, Jake Kasdan'ın yönetmenliğini üstlendiği 2011 yapımı komedi filmidir. Filmin başrollerinde Cameron Diaz, Justin Timberlake ve Jason Segel yer almaktadır.",
+"oyuncu": [
+"Cameron Diaz",
+"Jason Segel",
+"Kaitlyn Dever",
+"Kathryn Newton",
+"Molly Shannon",
+"Eric Stonestreet"
+],
+"puan": {
+"Metacritic": "47/100",
+"Rotten Tomatoes": "%46"
+},
+"sure": 92,
+"tur": [
+"romantik komedi",
+"romantik",
+"komedi"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Jake Kasdan"
+]
+},
 "wd-Q7993438": {
 "imdb": "tt2207439",
 "konu": "Ateşin Düştüğü Yer, İsmail Güneş'in yazıp yönettiği 2012 yapımı sinema filmidir. Başrollerini Hakan Karahan, Elifcan Ongurlar ve Yeşim Ceren Bozoğlu paylaşmaktadır.\nFilm, 85. Akademi Ödülleri'nde Türkiye'nin yabancı dilde en iyi film dalında Oscar aday adayı olarak seçilmiştir.",
@@ -10733,6 +12112,61 @@
 ],
 "yonetmen": [
 "Mihalis Kakoyannis"
+]
+},
+"wd-Q820753": {
+"imdb": "tt0332379",
+"konu": "School of Rock, Jack Black'in başrolde olduğu, rock müzik hakkında bir komedi filmidir.\nGitarist olma hayalleri kurarak 30'unu bulmuş bir adamın hayatın gerçekleri ile yüzleşmesi ve arkadaşının yerine öğretmen olarak görev aldığı okulda içindeki Rocker ruhu dışarı çıkartmasını konu almaktadır.",
+"oyuncu": [
+"Jack Black",
+"Miranda Cosgrove",
+"Joan Cusack",
+"Sarah Silverman",
+"Mike White",
+"Adam Pascal"
+],
+"puan": {
+"Metacritic": "82/100",
+"Rotten Tomatoes": "%92"
+},
+"sure": 108,
+"tur": [
+"müzikal",
+"komedi"
+],
+"ulke": [
+"Almanya",
+"ABD"
+],
+"yonetmen": [
+"Richard Linklater"
+]
+},
+"wd-Q830874": {
+"imdb": "tt0069467",
+"konu": "Çığlıklar ve Fısıltılar, Ingmar Bergman'ın yazıp yönettiği ve başrollerinde Harriet Andersson, Kari Sylwan, Ingrid Thulin ve Liv Ullmann'ın oynadığı 1972 yapımı İsveç dönem dramasıdır. Film, 19. yüzyılın sonlarında bir malikanede geçen, kız kardeşlerden birinin ölümcül kanseriyle mücadele eden üç kız kardeş ve bir hizmetçiyi konu alıyor. Hizmetçi ona yakınken diğer iki kız kardeş birbirlerine olan duygusal uzaklıklarıyla yüzleşiyor.",
+"oscar": 1,
+"oyuncu": [
+"Ingrid Bergman",
+"Liv Ullmann",
+"Ingrid Thulin",
+"Erland Josephson",
+"Harriet Andersson",
+"Linn Ullmann"
+],
+"puan": {
+"Rotten Tomatoes": "%94"
+},
+"sure": 90,
+"tur": [
+"drama",
+"historical"
+],
+"ulke": [
+"İsveç"
+],
+"yonetmen": [
+"Ingmar Bergman"
 ]
 },
 "wd-Q832180": {
@@ -10840,6 +12274,34 @@
 ],
 "yonetmen": [
 "Baz Luhrmann"
+]
+},
+"wd-Q912877": {
+"imdb": "tt0401445",
+"konu": "A Good Year, 2006 İngiliz yapımı romantik komedi filmi. Film Londra ve Fransa'nın Provence bölgesinde çekilmiştir. Filmin yönetmenliğini Ridley Scott yapmıştır ve Russell Crowe, Marion Cotillard, Didier Bourdon, Abbie Cornish ve Albert Finney gibi oyuncular filmde yer almışlardır. Film İngiliz yazar Peter Mayle'in aynı adı taşıyan 2004 yılında yayımlanan romanından sinemaya aktarılmıştır.",
+"oyuncu": [
+"Russell Crowe",
+"Marion Cotillard",
+"Albert Finney",
+"Abbie Cornish",
+"Freddie Highmore",
+"Valeria Bruni Tedeschi"
+],
+"puan": {
+"Metacritic": "47/100",
+"Rotten Tomatoes": "%27"
+},
+"sure": 118,
+"tur": [
+"romantik komedi",
+"Komedi-drama"
+],
+"ulke": [
+"İngiltere",
+"ABD"
+],
+"yonetmen": [
+"Ridley Scott"
 ]
 },
 "wd-Q91540": {
