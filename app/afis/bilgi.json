@@ -1011,6 +1011,7 @@
 },
 "t20261118-eliotttordo-samsun": {},
 "t20261118-emreaydin-urfa": {},
+"t20261118-fareler-ve-insanlar-ordu": {},
 "t20261118-gercekbiroperaaksami": {},
 "t20261118-savastayasam-izmir": {},
 "t20261118-sibelcan-epicsymphony-ankara": {},
@@ -1037,6 +1038,7 @@
 },
 "t20261119-lucia": {},
 "t20261119-okan-cabalar-adana": {},
+"t20261119-on-ikinci-gece-kocaeli": {},
 "t20261119-ozgur-turhan-izmir": {},
 "t20261119-saksakcilar": {
 "mekan": "Muammer Karaca Tiyatrosu, 1955 yılında Beyoğlu'nda açılan tiyatro salonu."
@@ -1063,6 +1065,7 @@
 "t20261120-hisseliharikalar-izmir": {},
 "t20261120-korayavci-antep": {},
 "t20261120-macbeth-eskisehir": {},
+"t20261120-mizojini-manisa": {},
 "t20261120-pinokyoexe": {},
 "t20261120-soytarilar-antep": {},
 "t20261121-alevligunler-antep": {},
@@ -1071,6 +1074,7 @@
 "t20261121-bsoraiskin-ankara": {
 "mekan": "Bilkent Konser Salonu; Ankara'nın Çankaya ilçesinde, Bilkent Üniversitesi'ne bağlı olan Müzik ve Sahne Sanatları Fakültesi'nin içinde yer alan bir konser salonudur."
 },
+"t20261121-dus-payi-denizli": {},
 "t20261121-gayesuakyol": {},
 "t20261121-karmakarisik": {
 "mekan": "Muammer Karaca Tiyatrosu, 1955 yılında Beyoğlu'nda açılan tiyatro salonu."
@@ -1084,11 +1088,22 @@
 "t20261122-denizkizi": {
 "mekan": "Muammer Karaca Tiyatrosu, 1955 yılında Beyoğlu'nda açılan tiyatro salonu."
 },
+"t20261122-elsa-sihirli-macera-corum": {
+"mekan": "Çorum Devlet Tiyatrosu, Devlet Tiyatroları Genel Müdürlüğü'ne bağlı olarak faaliyetlerini sürdüren bölge tiyatrolarından biridir."
+},
+"t20261122-emre-aydin-batman": {},
+"t20261122-hijyenik-asklar-amasya": {},
 "t20261122-idammahkumu-antep": {},
+"t20261122-lady-macbeth-elazig": {},
+"t20261122-lady-susan-edirne": {},
 "t20261122-masumiyetmuzesi-antep": {},
 "t20261122-papagenolar-ankara": {},
 "t20261122-romeojuliet-antep": {},
+"t20261122-sefa-doganay-rize": {},
 "t20261122-sihirli-oyuncak": {},
+"t20261122-tut-elimden-rovni-canakkale": {},
+"t20261123-bir-baba-hamlet-canakkale": {},
+"t20261123-bosanma-teklifi-usak": {},
 "t20261123-onikiofkeli-ankara": {
 "mekan": "Ankara Devlet Tiyatrosu; Devlet Tiyatroları Genel Müdürlüğü'ne bağlı olarak faaliyet gösteren yerleşik bir tiyatrodur."
 },
@@ -1144,6 +1159,7 @@
 "mekan": "Zorlu Performans Sanatları Merkezi veya kısaltılmış ismiyle Zorlu PSM, İstanbul'un Beşiktaş ilçesindeki Zorlu Center kompleksinin içinde yer alan çok amaçlı bir sanat ve kültür merkezidir."
 },
 "t20261126-oivavoi-ankara": {},
+"t20261126-simyaci-zonguldak": {},
 "t20261126-yenilmez-izmir": {},
 "t20261126-yeniturku-eskisehir": {},
 "t20261127-amorisospesi": {
@@ -1152,12 +1168,14 @@
 "t20261127-arche": {
 "mekan": "Muammer Karaca Tiyatrosu, 1955 yılında Beyoğlu'nda açılan tiyatro salonu."
 },
+"t20261127-calikusu-sakarya": {},
 "t20261127-csofazilsay-ankara": {},
 "t20261127-devlerinsavasi-antep": {},
 "t20261127-emreaydin-sivas": {},
 "t20261127-karsu-kayseri": {},
 "t20261127-oivavoi-izmir": {},
 "t20261127-teror": {},
+"t20261127-ve-ates-bizi-tuketiyor-kocaeli": {},
 "t20261127-verimsizler-eskisehir": {},
 "t20261128-cirkin": {},
 "t20261128-evelynhardcastle-antep": {},
@@ -1167,6 +1185,7 @@
 },
 "t20261128-kalben-antep": {},
 "t20261128-operadakihayalet-antep": {},
+"t20261128-singir-singir-beyoglu-sakarya": {},
 "t20261128-sucveceza-antep": {},
 "t20261128-ucurtma": {
 "mekan": "Muammer Karaca Tiyatrosu, 1955 yılında Beyoğlu'nda açılan tiyatro salonu."
@@ -1182,11 +1201,14 @@
 },
 "t20261129-julideozcelik-eskisehir": {},
 "t20261129-keremgorsevquartet-ankara": {},
+"t20261129-kuyucakli-yusuf-mugla": {},
 "t20261129-ogulcanbektas-ankara": {},
 "t20261129-pinokyo-kayseri": {},
 "t20261129-spencer": {
 "mekan": "Muammer Karaca Tiyatrosu, 1955 yılında Beyoğlu'nda açılan tiyatro salonu."
 },
+"t20261130-amadeus-kocaeli": {},
+"t20261130-eser-yenenler-amasya": {},
 "t20261130-parla-ankara": {
 "mekan": "Ankara Devlet Tiyatrosu; Devlet Tiyatroları Genel Müdürlüğü'ne bağlı olarak faaliyet gösteren yerleşik bir tiyatrodur."
 },
@@ -1196,7 +1218,9 @@
 "t20261201-anadolu-atesi-bursa": {},
 "t20261201-cemerdost-erzurum": {},
 "t20261201-degisim-donusum": {},
+"t20261201-ozge-arslan-tekirdag": {},
 "t20261201-pinarfidan-izmir": {},
+"t20261201-suc-ve-ceza-ordu": {},
 "t20261201-xeroabbas-van": {},
 "t20261202-bulasikcilar-izmir": {},
 "t20261202-carmen-ankara": {},
@@ -1206,6 +1230,7 @@
 "t20261203-bernarda-alba-adana": {
 "mekan": "Ramazanoğlu Kültür Merkezi, Türkiye'nin Adana kentinde bulunan bir kültür merkezidir."
 },
+"t20261203-cem-isciler-edirne": {},
 "t20261203-dorian-gray": {},
 "t20261203-leylatheband": {
 "mekan": "Volkswagen Arena, Almanya'nın VfL Wolfsburg takımının iç saha maçlarını oynadığı stadyumdur.",
@@ -1225,22 +1250,30 @@
 "t20261204-dearnewyear": {
 "mekan": "Zorlu Performans Sanatları Merkezi veya kısaltılmış ismiyle Zorlu PSM, İstanbul'un Beşiktaş ilçesindeki Zorlu Center kompleksinin içinde yer alan çok amaçlı bir sanat ve kültür merkezidir."
 },
+"t20261204-doktor-bana-bir-care-rize": {},
 "t20261204-gokhanturkmen-izmir": {},
 "t20261204-guldurguldur-antep": {},
 "t20261204-ransevmisimmeger-antep": {},
 "t20261204-sila-ankara": {
 "mekan": "Congresium Ankara veya eski adıyla ATO Congresium; Türkiye'nin başkenti Ankara'da bulunan çok amaçlı bir kongre ve gösteri salonu kompleksidir."
 },
+"t20261205-bir-yaz-gecesi-ruyasi-corum": {
+"mekan": "Çorum Devlet Tiyatrosu, Devlet Tiyatroları Genel Müdürlüğü'ne bağlı olarak faaliyetlerini sürdüren bölge tiyatrolarından biridir."
+},
 "t20261205-blackbriar-izmir": {},
 "t20261205-bsoschuldt-ankara": {
 "mekan": "Bilkent Konser Salonu; Ankara'nın Çankaya ilçesinde, Bilkent Üniversitesi'ne bağlı olan Müzik ve Sahne Sanatları Fakültesi'nin içinde yer alan bir konser salonudur."
 },
+"t20261205-donusum-kahramanmaras": {},
 "t20261205-emreaydin-izmir": {},
 "t20261205-handeyener-ankara": {},
 "t20261205-romeojuliet": {},
 "t20261205-tantasci": {
 "mekan": "Volkswagen Arena, Almanya'nın VfL Wolfsburg takımının iç saha maçlarını oynadığı stadyumdur."
 },
+"t20261205-tartuffe-manisa": {},
+"t20261206-alevli-gunler-rize": {},
+"t20261206-icimizdeki-seytan-isparta": {},
 "t20261206-isaculun-izmir": {},
 "t20261207-donusum-antep": {},
 "t20261207-kadimdenkudume-ankara": {},
@@ -1250,7 +1283,9 @@
 },
 "t20261208-keldiva-antep": {},
 "t20261208-sonersarikabadayi-izmir": {},
+"t20261209-iki-sehrin-hikayesi-denizli": {},
 "t20261209-puccinigala": {},
+"t20261210-donusum-batman": {},
 "t20261210-kardesturkuler-izmir": {},
 "t20261210-kaspar-bursa": {
 "mekan": "Bursa Devlet Tiyatrosu, Bursa'da 1957'den bu yana Devlet Tiyatroları Genel Müdürlüğü'ne bağlı olarak faaliyetlerini sürdüren yerleşik bölge tiyatrosu."
@@ -1271,6 +1306,9 @@
 "t20261211-cemerdost-malatya": {},
 "t20261211-csosostakovic-ankara": {},
 "t20261211-gripin-izmir": {},
+"t20261211-kayahani-beklerken-istanbul": {
+"mekan": "Bostancı Gösteri Merkezi, Bostancı, Kadıköy'de, Mehmet Şevki Paşa Caddesi'nde bulunan, 1991 yılında kurulmuş kapalı gösteri merkezi."
+},
 "t20261211-konken-samsun": {},
 "t20261211-kovacs-izmir": {},
 "t20261211-teoman-trabzon": {},
@@ -1278,30 +1316,53 @@
 "mekan": "Volkswagen Arena, Almanya'nın VfL Wolfsburg takımının iç saha maçlarını oynadığı stadyumdur."
 },
 "t20261212-chromas": {},
+"t20261212-feridun-duzagac-batman": {},
 "t20261212-hekimoglu-ankara": {},
 "t20261212-hologramsirki-antep": {},
 "t20261212-kirac-mersin": {},
 "t20261212-konken-trabzon": {},
+"t20261212-soner-arica-kayseri": {},
+"t20261212-televizyon-cumhuriyeti-tekirdag": {},
+"t20261212-uc-kadin-kavanoz-kul-elazig": {},
+"t20261213-donusum-samsa-balikesir": {},
 "t20261213-konken-erzurum": {},
+"t20261213-masa-koca-ayi-izmir": {},
+"t20261213-oz-buyucusu-adana": {
+"mekan": "Adana Büyükşehir Belediyesi Tiyatro Salonu, Türkiye'nin Adana kentinde bulunan bir tiyatro merkezidir."
+},
+"t20261213-plastik-asklar-balikesir": {},
+"t20261213-soner-sarikabadayi-diyarbakir": {},
 "t20261214-benmiyapmisim-antep": {},
+"t20261215-amadeus-eskisehir": {},
+"t20261215-findikkiran-antdob-antalya": {},
 "t20261215-julideozcelik-ankara": {
 "mekan": "CSO Ada Ankara, Ankara’da Cumhurbaşkanlığı Senfoni Orkestrası konserleri için 1995-2020 arasında inşa edilmiş senfonik müzik salonu."
 },
 "t20261215-la-boheme-mersin": {
 "mekan": "Mersin Kültür Merkezi veya eski ismiyle Mersin Halkevi Binası, Mersin'de yer alan bir opera ve kültür merkezi."
 },
+"t20261215-mahser-i-cumbus-corum": {
+"mekan": "Çorum Devlet Tiyatrosu, Devlet Tiyatroları Genel Müdürlüğü'ne bağlı olarak faaliyetlerini sürdüren bölge tiyatrolarından biridir."
+},
+"t20261215-ozgur-turhan-eskisehir": {},
+"t20261215-sefiller-ordu": {},
+"t20261216-ali-congun-kahramanmaras": {},
+"t20261216-lumera-sezen-aksu-antalya": {},
 "t20261216-ozlemkosif-izmir": {},
 "t20261216-triggerfinger-izmir": {},
 "t20261217-evgenygrinko-diyarbakir": {
 "sanatci": "Evgeny Grinko ya da Yevgeni Grinko, Rus müzisyen, piyanist ve davulcu.",
 "wp": "tr:Evgeny Grinko"
 },
+"t20261217-findikkiran-adob-ankara": {},
+"t20261218-7-kocali-hurmuz-gaziantep": {},
 "t20261218-alicongun-izmir": {},
 "t20261218-antalya-dso-bruckner": {},
 "t20261218-cemadrian-ankara": {},
 "t20261218-csobrahms-ankara": {},
 "t20261218-feridun-duzagac-mersin": {},
 "t20261218-hayrettin-malatya": {},
+"t20261218-imperial-nutcracker-istanbul": {},
 "t20261218-kibariye-antep": {
 "sanatci": "Bahriye Tokmak sahne adıyla Kibariye, Roman asıllı Türk Arabesk-pop müzik şarkıcısı.",
 "wp": "tr:Kibariye"
@@ -1319,8 +1380,15 @@
 "t20261219-vivaldi-mevsimler-izmir": {
 "mekan": "İzmir Devlet Opera ve Balesi, Türkiye'de Devlet Opera ve Balesi Genel Müdürlüğü'ne bağlı olarak faaliyet gösteren altı opera-bale müdürlüğünden biridir."
 },
+"t20261220-dogu-demirkol-konya": {},
+"t20261220-georgia-nutcracker-ankara": {
+"mekan": "Congresium Ankara veya eski adıyla ATO Congresium; Türkiye'nin başkenti Ankara'da bulunan çok amaçlı bir kongre ve gösteri salonu kompleksidir."
+},
+"t20261220-gokhan-turkmen-elazig": {},
 "t20261220-hijyenikasklar-antep": {},
 "t20261220-kalhorerzincan-diyarbakir": {},
+"t20261220-pinokyo-konya": {},
+"t20261220-yeni-turku-bursa": {},
 "thelmalouise": {
 "imdb": "tt0103074",
 "konu": "Thelma ve Louise, 1991 yapımı bir yol filmidir. Senaryosunu  Callie Khouri'nin yazdığı filmin yönetmenliğini Ridley Scott üstlenmiştir. Başrol oyuncularından Geena Davis, \"Thelma\" karakterini, Susan Sarandon \"Louise\" karakterini, Harvey Keitel, filmin iki kadın karakterinin işlediği suçları aydınlatma çabasında olan bir dedektifi; Hal kerekterini, Michael Madsen Louise'in erkek arkadaşını, Christopher McDonald Thelma'nın eşini, Brad Pitt ise Thelma ve Louise'in yanlarına aldıkları otostopçuyu canlandırmıştır.\nDiğer bazı yol filmleriyle ve özellikle Alain Tanner'in yönettiği 1979 yapımı Messido",
@@ -1431,6 +1499,23 @@
 "Ti West"
 ]
 },
+"v-hexe": {
+"imdb": "tt38077943",
+"konu": "Hexe: Sihir Krallığı, Walt Disney Animation Studios tarafından üretilen, 27 Kasım 2026'da gösterime girecek bir Amerika Birleşik Devletleri yapımlı animasyonlu büyüme çağı fantastik komedi filmidir. Fawn Veerasunthorn ve Jason Hand'in yönettiği filmde Hailee Steinfeld, Rashida Jones, Tracey Ullman ve Stephen Fry'ın seslendirmeleri yer alıyor. Film, banliyöden Hexe'e götüren sihirli yetenekler keşfeden Billie adlı genç bir kızı konu alıyor.",
+"sure": 103,
+"tur": [
+"komedi",
+"fantasy",
+"coming-of-age"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Fawn Veerasunthorn",
+"Jason Hand"
+]
+},
 "v-hungergames-sunrise": {
 "imdb": "tt32558705",
 "oyuncu": [
@@ -1450,6 +1535,27 @@
 ],
 "yonetmen": [
 "Francis Lawrence"
+]
+},
+"v-idealkoca": {
+"imdb": "tt29611136",
+"oyuncu": [
+"Peter Dinklage",
+"Olivia Colman",
+"Alexander Skarsgård",
+"Elizabeth Debicki"
+],
+"sure": 105,
+"tur": [
+"romantik",
+"komedi"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Eleanor Wilson",
+"Alex Huston Fischer"
 ]
 },
 "v-sapkalikedi": {
@@ -2213,6 +2319,24 @@
 "Elia Kazan"
 ]
 },
+"wd-Q115634487": {
+"imdb": "tt19759204",
+"konu": "Recep İvedik 7, Cielo Medya imzalı, 9 Aralık 2022 tarihinde Disney+'ta yayımlanan, Togan Gökbakar'ın yönetip senaryosunu Şahan Gökbakar ile birlikte yazdığı, başrollerinde Şahan Gökbakar, Öznur Serçeler ve Nurullah Çelebi'nin yer aldığı Türk komedi filmi. Recep İvedik film serisinin yedinci filmidir.",
+"oyuncu": [
+"Şahan Gökbakar",
+"Öznur Serçeler",
+"Nurullah Çelebi"
+],
+"tur": [
+"komedi"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Togan Gökbakar"
+]
+},
 "wd-Q11621": {
 "imdb": "tt0083866",
 "konu": "E.T., 1982 yapımı bilimkurgu filmi. Yönetmenliğini Steven Spielberg'ün yaptığı filmin senaryosu Melissa Mathison tarafından yazılmıştır. Filmin başrollerinde  Henry Thomas, Robert MacNaughton, Drew Barrymore, Dee Wallace ve Peter Coyote yer almaktadır.\nAmerikan Film Enstitüsü'nün hazırladığı tüm zamanların en iyi 100 ABD filminin yer aldığı AFI's 100 Years...",
@@ -2361,6 +2485,27 @@
 "Ismaël Ferroukhi"
 ]
 },
+"wd-Q1219034": {
+"imdb": "tt0486708",
+"konu": "Maskeli Beşler İntikam Peşinde, Maskeli Beşler sinema filmi serisinin 2005 yapımı ilk filmi. Filmin kadrosunun büyük bir kısmını, Hababam Sınıfı Üç Buçuk filminde oynayan oyuncular oluşturmuştur. Tezcan, Bahattin, Murat, Zeki ve Kamil'in hikâyelerinin anlatıldığı Maskeli Beşler İntikam Peşinde'nin gördüğü ilgiden sonra, filmin yapımcı şirketleri Arzu Film ve Fida Film, filmi bir seri hâlinde devam ettirme kararı almışlardır. Bu kararın ardından 8 Ocak 2007'de Maskeli Beşler: Irak ve 7 Ocak 2008'de Maskeli Beşler: Kıbrıs filmleri, seri olarak vizyona girmiştir.",
+"oyuncu": [
+"Peker Açıkalın",
+"Cengiz Küçükayvaz",
+"Sümer Tilmaç",
+"Şafak Sezer",
+"Melih Ekener"
+],
+"sure": 93,
+"tur": [
+"komedi"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Murat Aslan"
+]
+},
 "wd-Q12208610": {
 "imdb": "tt2608224",
 "konu": "Kelebeğin Rüyası, Yılmaz Erdoğan'ın yazıp yönettiği 2013 yapımı dram filmidir. Başrollerini Kıvanç Tatlıtuğ ve Mert Fırat'ın paylaştığı film, II. Dünya Savaşı döneminde Zonguldak'ta yaşayan genç şairler Rüştü Onur ve Muzaffer Tayyip Uslu'nun hayat hikâyesini anlatıyor. O dönemde şairlerin Mehmet Çelikel Lisesinde edebiyat öğretmeni olan Behçet Necatigil'i de Yılmaz Erdoğan canlandırmaktadır.\nFilm, Eylül 2013 tarihinde, 86.",
@@ -2382,6 +2527,47 @@
 ],
 "yonetmen": [
 "Yılmaz Erdoğan"
+]
+},
+"wd-Q124697": {
+"imdb": "tt0074084",
+"konu": "1900, Bernardo Bertolucci'nin yönettiği ve Robert De Niro, Gérard Depardieu, Dominique Sanda, Donald Sutherland, Alida Valli ve Burt Lancaster'nin başrollerini oynadığı 1976 yılı İtalya yapımı dönemsel tarih filmi.\nBertolucci'nin memleketi Emilia bölgesinde çekilen film, 20. yüzyılın ilk yarısında İtalya'da yaşanan siyasi kargaşalar içinde iki erkeğin hayat kronolojisini kaydetmektedir. 1976 Cannes Film Festival'inde gösterilmiştir.",
+"oyuncu": [
+"Robert De Niro",
+"Gérard Depardieu",
+"Donald Sutherland",
+"Burt Lancaster",
+"Alida Valli",
+"Sterling Hayden"
+],
+"puan": {
+"Rotten Tomatoes": "%50"
+},
+"sure": 317,
+"tur": [
+"romantik",
+"drama"
+],
+"ulke": [
+"İtalya",
+"Fransa"
+],
+"yonetmen": [
+"Bernardo Bertolucci"
+]
+},
+"wd-Q125055432": {
+"imdb": "tt20236042",
+"konu": "Yurt, yönetmenliğini ve senaristliğini Nehir Tuna'nın gerçekleştirdiği 2023 çıkışlı drama filmidir. Nehir Tuna'nın ilk uzun metrajlı filmi olan Yurt, Türkiye, Almanya ve Fransa ortak yapımıdır.\nFilm, ilk gösterimini 80. Venedik Uluslararası Film Festivali'nde \"Horizons\" bölümünde gerçekleştirdi.",
+"tur": [
+"drama"
+],
+"ulke": [
+"Türkiye",
+"Almanya"
+],
+"yonetmen": [
+"Nehir Tuna"
 ]
 },
 "wd-Q125076": {
@@ -2490,6 +2676,39 @@
 ],
 "yonetmen": [
 "Atıf Yılmaz"
+]
+},
+"wd-Q12809917": {
+"imdb": "tt7399138",
+"konu": "Recep İvedik 6, Çamaşırhane Film imzalı, Togan Gökbakar'ın yönettiği ve senaryosunu Şahan Gökbakar ile birlikte yazdığı, Başrollerinde Şahan Gökbakar ve Nurullah Çelebi'nin yer aldığı Türk komedi filmi. Recep İvedik film serisinin altıncı filmidir.\nKonusu; Recep, bir gün evde televizyon izlerken kapısına gelen postacıdan aldığı bir davetiyeyle çok heyecanlanır. Üyesi olduğu Kara Ambar Kamyoncular Derneğinin Konya'da düzenleyeceği kuru fasulye festivaline çağrılmıştır.",
+"oyuncu": [
+"Şahan Gökbakar"
+],
+"tur": [
+"komedi"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Togan Gökbakar"
+]
+},
+"wd-Q12810220": {
+"imdb": "tt0252591",
+"konu": "Kapıcılar Kralı, yönetmenliğini Zeki Ökten'in yaptığı, senaryosunu Umur Bugay'ın yazdığı, başrollerinde Kemal Sunal, Sevda Ferdağ, Bilge Zobu ve Sevil Üstekin'in yer aldığı 1976 yapımı Türk filmidir. Film, 1975 yılında çekilen Hanzo ve Şaşkın Damat filmlerinden sonra Zeki Ökten ve Kemal Sunal'ın üçüncü ortak çalışmasıdır. Türk sinema sanatçısı Kemal Sunal'ın kariyerindeki en unutulmaz filmlerinden biri olarak kabul edilen Kapıcılar Kralı, 14. Altın Portakal Film Festivali'nde Kemal Sunal'a En İyi Erkek Oyuncu Ödülü'nü kazandırarak kariyerindeki ilk büyük ödülünü almasını sağlamış ve bu ödülü \"",
+"oyuncu": [
+"Kemal Sunal"
+],
+"sure": 84,
+"tur": [
+"komedi"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Zeki Ökten"
 ]
 },
 "wd-Q12812808": {
@@ -2983,6 +3202,29 @@
 "Josh Boone"
 ]
 },
+"wd-Q14757056": {
+"imdb": "tt0405908",
+"konu": "Fadime, yapımcılığını ve yönetmenliğini Türker İnanoğlu'nun üstlendiği 1970 yapımı Türk filmidir. Melodram türündeki filmin başrollerinde Filiz Akın ile Kartal Tibet rol aldı.",
+"oyuncu": [
+"Filiz Akın",
+"Kartal Tibet",
+"Cihangir Gaffari",
+"Necdet Tosun",
+"Mualla Sürer",
+"Mansour Sepehrnia"
+],
+"tur": [
+"romantik komedi",
+"Filmfarsi"
+],
+"ulke": [
+"İran",
+"Türkiye"
+],
+"yonetmen": [
+"Türker İnanoğlu"
+]
+},
 "wd-Q14757167": {
 "imdb": "tt5547212",
 "konu": "Hak Yolu 1971 çıkışlı Türkiye-İran ortak yapımı sinema filmidir.",
@@ -3006,6 +3248,33 @@
 ],
 "yonetmen": [
 "Mahmoud Koushan"
+]
+},
+"wd-Q14847067": {
+"imdb": "tt2180411",
+"konu": "Sihirli Orman, Rob Marshall tarafından yönetilen müzikal fantezi türünde 2014 yapımı bir ABD filmi. James Lapine ve Stephen Sondheim tarafından yaratılan ve Tony Ödülü kazanan aynı adlı Broadway müzikalinden sinemaya uyarlandı. Filmin başrollerinde Meryl Streep, Emily Blunt, James Corden, Anna Kendrick, Chris Pine, Tracey Ullman, Christine Baranski, Lilla Crawford, Daniel Huttlestone, MacKenzie Mauzy, Billy Magnussen ve Johnny Depp yer almaktadır. Filmde Grimm Kardeşler'in \"Kırmızı Başlıklı Kız\", \"Külkedisi\", \"Jack ve Fasulye Sırığı\" ve \"Rapunzel\" masallarından esinlenildi.",
+"oyuncu": [
+"Johnny Depp",
+"Meryl Streep",
+"Chris Pine",
+"Emily Blunt",
+"Anna Kendrick",
+"Christine Baranski"
+],
+"puan": {
+"Metacritic": "69/100",
+"Rotten Tomatoes": "%71"
+},
+"sure": 125,
+"tur": [
+"müzikal",
+"fantasy"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Rob Marshall"
 ]
 },
 "wd-Q14918344": {
@@ -3127,6 +3396,35 @@
 ],
 "yonetmen": [
 "Roman Polanski"
+]
+},
+"wd-Q15087230": {
+"imdb": "tt2718492",
+"konu": "Ida 2013 Polonya yapımı dramatik filmdir. Yönetmenliğini Pawel Pawlikowski, yazarlığını Rebecca Lenkiewicz'in üstlendiği yapımda, Almanya'nın Polonya'yı işgali sonrası ülkeyi terk etmek zorunda kalan ailesini arayan bir kadının başından geçenler ele alınmaktadır.",
+"oscar": 1,
+"oyuncu": [
+"Joanna Kulig",
+"Agata Kulesza",
+"Jerzy Trela",
+"Dawid Ogrodnik",
+"Agata Trzebuchowska",
+"Izabela Dąbrowska"
+],
+"puan": {
+"IMDb": "7.4/10",
+"Metacritic": "91/100",
+"Rotten Tomatoes": "%95"
+},
+"sure": 80,
+"tur": [
+"drama"
+],
+"ulke": [
+"Polonya",
+"Danimarka"
+],
+"yonetmen": [
+"Paweł Pawlikowski"
 ]
 },
 "wd-Q1518391": {
@@ -3782,6 +4080,33 @@
 "Lee Toland Krieger"
 ]
 },
+"wd-Q1625242": {
+"imdb": "tt0107943",
+"konu": "Günden Kalanlar, James Ivory'nin yönettiği 1993 yapımı bir İngiliz-Amerikan dram filmidir. Kazuo Ishiguro'nun Booker Ödülü kazanan 1989 tarihli aynı adlı romanından, Ruth Prawer Jhabvala tarafından uyarlanmış, yapımcılığını Ismail Merchant, Mike Nichols ve John Calley üstlenmiştir. Başrolde Anthony Hopkins ve Emma Thompson, yardımcı rollerde ise James Fox, Christopher Reeve, Hugh Grant ve Ben Chaplin oynadı.\nGünden Kalanlar, En İyi Film, En İyi Erkek Oyuncu, En İyi Kadın Oyuncu ve En İyi Uyarlama Senaryo dahil olmak üzere toplam sekiz dalda Akademi Ödülü'ne aday gösterildi.",
+"oyuncu": [
+"Anthony Hopkins",
+"Emma Thompson",
+"Hugh Grant",
+"Christopher Reeve",
+"Lena Headey",
+"Michael Lonsdale"
+],
+"puan": {
+"Metacritic": "86/100",
+"Rotten Tomatoes": "%96"
+},
+"sure": 134,
+"tur": [
+"drama"
+],
+"ulke": [
+"İngiltere",
+"ABD"
+],
+"yonetmen": [
+"James Ivory"
+]
+},
 "wd-Q162729": {
 "imdb": "tt0112573",
 "konu": "Cesur Yürek, Mel Gibson'ın yönettiği ve yapımcılığını üstlendiği, aynı zamanda İskoç savaşçı Sir William Wallace'ı canlandırdığı 1995 yapımı Amerikan epik tarihî savaş-dram filmidir. Oyuncu kadrosunda Sophie Marceau, Patrick McGoohan, Catherine McCormack ve Angus Macfadyen yer alır. Hikâye, Blind Harry'nin 15. yüzyıla ait bir epik şiirinden esinlendi ve senaryosu Randall Wallace tarafından sinemaya uyarlandı.",
@@ -4399,6 +4724,34 @@
 "Kaan Müjdeci"
 ]
 },
+"wd-Q176826": {
+"imdb": "tt0455590",
+"konu": "İskoçya'nın Son Kralı, 2006 yılında \"en iyi erkek oyuncu\" dalında Forest Whitaker'ın performansı ile Akademi Ödülü'ne ulaşan, Uganda'nın bir dönemine damgasını vuran İdi Amin'in yaşamından kesiti yansıtan, gerçek kişi ve olaylara dayanan filmdir.",
+"oscar": 1,
+"oyuncu": [
+"Gillian Anderson",
+"Forest Whitaker",
+"James McAvoy",
+"Kerry Washington",
+"David Oyelowo",
+"Simon McBurney"
+],
+"puan": {
+"Metacritic": "74/100",
+"Rotten Tomatoes": "%87"
+},
+"sure": 121,
+"tur": [
+"drama"
+],
+"ulke": [
+"İngiltere",
+"Almanya"
+],
+"yonetmen": [
+"Kevin Macdonald"
+]
+},
 "wd-Q1769370": {
 "imdb": "tt0978649",
 "konu": "Mutluluk, Zülfü Livaneli'nin eserinden uyarlanan, 2007 yapımı bir Abdullah Oğuz filmi. Film, 2007 Antalya Altın Portakal Film Festivali'nin ulusal uzun metrajlı film yarışmasında aday gösterildi.",
@@ -4422,6 +4775,33 @@
 ],
 "yonetmen": [
 "Abdullah Oğuz"
+]
+},
+"wd-Q17713411": {
+"imdb": "tt2637276",
+"konu": "Ted 2, 2015 yılı ABD yapımı komedi filmi. Seth MacFarlane'in yönettiği film 2012 yapımı Ayı Teddy'nin devamıdır. Bir ayının sivil haklarını elde etme yolundaki mücadelesini konu almaktadır.\nTemel çekimler Massachusetts'te Temmuz 2014'te başladı.",
+"oyuncu": [
+"Morgan Freeman",
+"Mark Wahlberg",
+"Liam Neeson",
+"Amanda Seyfried",
+"Seth MacFarlane",
+"Giovanni Ribisi"
+],
+"puan": {
+"Metacritic": "48/100",
+"Rotten Tomatoes": "%44"
+},
+"sure": 115,
+"tur": [
+"komedi",
+"fantasy"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Seth MacFarlane"
 ]
 },
 "wd-Q18002795": {
@@ -4550,6 +4930,35 @@
 "drama",
 "macera",
 "çocuk"
+],
+"ulke": [
+"İngiltere",
+"ABD"
+],
+"yonetmen": [
+"David Yates"
+]
+},
+"wd-Q18199331": {
+"imdb": "tt4123430",
+"konu": "Fantastik Canavarlar: Grindelwald'ın Suçları, David Yates tarafından yönetilen ve senaryosu J. K. Rowling tarafından yazılan 2018 yapımı ABD-Birleşik Krallık fantezi filmidir. Fantastik Canavarlar Nelerdir, Nerede Bulunurlar? filminin devamı ve Fantastik Canavarlar film serisinin ikinci filmidir. Filmin ansambl oyuncu kadrosunda Eddie Redmayne, Katherine Waterston, Dan Fogler, Alison Sudol, Ezra Miller, Zoë Kravitz, Callum Turner, Claudia Kim, William Nadylam, Kevin Guthrie, Jude Law ve Johnny Depp yer almaktadır.",
+"oyuncu": [
+"Johnny Depp",
+"Jude Law",
+"Eddie Redmayne",
+"Zoë Kravitz",
+"Ezra Miller",
+"Katherine Waterston"
+],
+"puan": {
+"Metacritic": "52/100",
+"Rotten Tomatoes": "%36"
+},
+"sure": 134,
+"tur": [
+"drama",
+"macera",
+"fantasy"
 ],
 "ulke": [
 "İngiltere",
@@ -4792,6 +5201,59 @@
 ],
 "yonetmen": [
 "Rob Marshall"
+]
+},
+"wd-Q18402": {
+"imdb": "tt0047528",
+"konu": "Sonsuz Sokaklar 1954 İtalya yapımı melodramatik filmdir. Özgün adı La Strada dır. İngilizce konuşulan ülkelerde özgün adının tam karşılığı olan The Road adı ile gösterilmiştir.\nFilmin yönetmeni Federico Fellini aynı zamanda Tullio Pinelli ve Ennio Flaiano ile birlikte filmin senaryosunu da yazmıştır.",
+"oscar": 1,
+"oyuncu": [
+"Anthony Quinn",
+"Giulietta Masina",
+"Richard Basehart",
+"Aldo Silvani",
+"Marcella Rovena",
+"Goffredo Unger"
+],
+"puan": {
+"Rotten Tomatoes": "%98"
+},
+"sure": 104,
+"tur": [
+"drama"
+],
+"ulke": [
+"İtalya"
+],
+"yonetmen": [
+"Federico Fellini"
+]
+},
+"wd-Q18405": {
+"imdb": "tt0050783",
+"konu": "Cabiria'nın Geceleri  1957 İtalya yapımı melodramatik filmdir. Özgün adı Le Notti di Cabiria olan film İngilizce konuşulan ülkelerde Nights of Cabiria veya sadece Cabiria adı ile gösterilmiştir.\nMaria Molinari 'nin romanından senaryosunu Pier Paolo Pasolini'nin Federico Fellini, Ennio Flaiano ve Tullio Pinelli ile birlikte uyarlayıp yazdıkları filmin yönetmeni Federico Fellini'dir. Başrolde aynı zamanda Fellini'nin eşi olan Giulietta Masina rol almıştır.",
+"oscar": 1,
+"oyuncu": [
+"Giulietta Masina",
+"François Périer",
+"Amedeo Nazzari",
+"Dorian Gray",
+"Franco Fabrizi",
+"Aldo Silvani"
+],
+"puan": {
+"Rotten Tomatoes": "%100"
+},
+"sure": 111,
+"tur": [
+"drama"
+],
+"ulke": [
+"Fransa",
+"İtalya"
+],
+"yonetmen": [
+"Federico Fellini"
 ]
 },
 "wd-Q18407": {
@@ -5138,6 +5600,34 @@
 ],
 "yonetmen": [
 "Wolfgang Petersen"
+]
+},
+"wd-Q18703032": {
+"imdb": "tt3170832",
+"konu": "Gizli Dünya, Lenny Abrahamson'un yönettiği ve senaryosunu Emma Donoghue'nun yazdığı Oda adlı romandan uyarladığı 2015 yapımı dram filmi. Filmde Brie Larson, Jacob Tremblay, Joan Allen, Sean Bridgers ve William H. Macy oynamaktadır.\nFilm galasını 4 Eylül 2015 tarihinde Telluride Film Festivali'nde yaptı ve 16 Ekim 2015'te sınırlı yayınla ABD'de gösterime girdi.\n88.",
+"oscar": 1,
+"oyuncu": [
+"Brie Larson",
+"William H. Macy",
+"Joan Allen",
+"Jacob Tremblay",
+"Wendy Crewson",
+"R. J. Palacio"
+],
+"puan": {
+"Metacritic": "86/100",
+"Rotten Tomatoes": "%93"
+},
+"sure": 118,
+"tur": [
+"drama"
+],
+"ulke": [
+"Kanada",
+"İrlanda"
+],
+"yonetmen": [
+"Lenny Abrahamson"
 ]
 },
 "wd-Q18729081": {
@@ -5762,6 +6252,52 @@
 "Gus Van Sant"
 ]
 },
+"wd-Q19473396": {
+"imdb": "tt4005692",
+"konu": "Kırımlı, Cengiz Dağcı'nın 1956 tarihli romanı Korkunç Yıllar'dan esinlenerek beyazperdeye uyarlanan film. Kırımlı, II. Dünya Savaşı sırasında Alman esir kamplarında rehin alınan Tatar Türk esirlerin yaşadıkları insanlık dramını ve çektikleri acıları konu alıyor.",
+"oyuncu": [
+"Selma Ergeç",
+"Murat Yıldırım",
+"Joshy Peters"
+],
+"tur": [
+"drama"
+],
+"ulke": [
+"Türkiye",
+"Almanya"
+],
+"yonetmen": [
+"Burak Arlıel"
+]
+},
+"wd-Q195949": {
+"imdb": "tt0413099",
+"konu": "Aman Tanrım 2, 2007 yapımı ABD filmi. 2003 yılında çekilen Aman Tanrım! filminin devamı niteliğindedir.",
+"oyuncu": [
+"Morgan Freeman",
+"John Goodman",
+"Steve Carell",
+"Jonah Hill",
+"Lauren Graham",
+"Molly Shannon"
+],
+"puan": {
+"Metacritic": "37/100",
+"Rotten Tomatoes": "%24"
+},
+"sure": 96,
+"tur": [
+"komedi",
+"fantasy"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Tom Shadyac"
+]
+},
 "wd-Q196665": {
 "imdb": "tt0298203",
 "konu": "8 Mil 2002 yılında çekilmiş, Eminem'in başrolde oynadığı ve Curtis Hanson'ın yönettiği bir drama filmidir. 1995 yılında Detroit'in hiphop dünyasında geçen film, siyahların tarzı olan hiphop müzikte beyaz bir rapçi olan Jimmy \"B-Rabbit\" Smith Jr.'ın saygı kazanmaya çalışırken verdiği mücadeleleri anlatmaktadır. Film, Eminem'in \"Lose Yourself\" şarkısıyla En İyi Orijinal Şarkı dalında Akademi Ödülü kazanmıştır. 2023 yılında filmin 50 Cent tarafından diziye uyarlanacağı açıklanmıştır.",
@@ -6197,6 +6733,33 @@
 "Kevin Costner"
 ]
 },
+"wd-Q20475": {
+"imdb": "tt0055630",
+"konu": "Yojimbo, 1961 yılında Akira Kurosawa tarafından çekilmiş jidaigeki türü film. Ronin olarak adlandırılan efendisiz bir samurayın hikâyesini anlatır. Hikâye, Toshiro Mifune tarafından canlandırılan samurayın, kumardan kazandıkları para uğruna aralarında çatışma yaşanan iki suç baronunun otoritesi altındaki küçük bir kasabayı ziyaret etmesi ile başlar.\nYojimbo, Japoncada koruma anlamını taşımaktadır.",
+"oyuncu": [
+"Toshiro Mifune",
+"Takashi Shimura",
+"Tatsuya Nakadai",
+"Isuzu Yamada",
+"Daisuke Katō",
+"Yoshio Tsuchiya"
+],
+"puan": {
+"IMDb": "8.2/10",
+"Metacritic": "93/100",
+"Rotten Tomatoes": "%96"
+},
+"sure": 110,
+"tur": [
+"drama"
+],
+"ulke": [
+"Japonya"
+],
+"yonetmen": [
+"Akira Kurosava"
+]
+},
 "wd-Q206388": {
 "imdb": "tt0087843",
 "konu": "Bir Zamanlar Amerika 1984 yılında Sergio Leone tarafından yönetilen İtalya-ABD ortak yapımı filmdir. Film, Sergio Leone'nin yönettiği son filmdir. Filmin müziklerini İtalyan müzisyen Ennio Morricone yapmış olup, dünyanın en iyi soundtrack albümlerinden biri olarak görülmektedir. Başlıca oyuncuları Robert De Niro, James Woods, Elizabeth McGovern ve Tuesday Weld'dir.",
@@ -6254,6 +6817,34 @@
 ],
 "yonetmen": [
 "Edward Zwick"
+]
+},
+"wd-Q20735644": {
+"imdb": "tt2674426",
+"konu": "Senden Önce Ben, 2016 Amerikan-İngiliz yapımı romantik komedi-drama filmidir. Yönetmen Thea Sharrock'tur. Jojo Moyes'un 2012 yılında yayınladığı romandan uyarlanmıştır. Filmin başrollerini Emilia Clarke, Sam Claflin, Jenna Coleman, Charles Dance, Matthew Lewis, Ben Lloyd-Hughes ve Janet McTeer paylaşmaktadır.",
+"oyuncu": [
+"Emilia Clarke",
+"Charles Dance",
+"Vanessa Kirby",
+"Janet McTeer",
+"Sam Claflin",
+"Jenna-Louise Coleman"
+],
+"puan": {
+"Metacritic": "51/100",
+"Rotten Tomatoes": "%54"
+},
+"sure": 123,
+"tur": [
+"romantik",
+"drama"
+],
+"ulke": [
+"ABD",
+"İngiltere"
+],
+"yonetmen": [
+"Thea Sharrock"
 ]
 },
 "wd-Q20751322": {
@@ -6675,6 +7266,34 @@
 "Bruce Beresford"
 ]
 },
+"wd-Q211429": {
+"imdb": "tt1193138",
+"konu": "Up in the Air 2009 yapımı Amerikan filmi. Yönetmenliğini Jason Reitman, sernaryo yazarlığını Reitman ve Sheldon Turner yapmıştır. Walter Kirn'ün 2001 yılında yayınlanan Up in the Air isimli romanından uyarlanmıştır. George Clooney, Vera Farmiga ve Anna Kendrick'in rol aldığı film 67.",
+"oyuncu": [
+"George Clooney",
+"Jason Bateman",
+"Anna Kendrick",
+"Vera Farmiga",
+"J. K. Simmons",
+"Zach Galifianakis"
+],
+"puan": {
+"IMDb": "7.4/10",
+"Metacritic": "83/100",
+"Rotten Tomatoes": "%90"
+},
+"sure": 109,
+"tur": [
+"romantik komedi",
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Jason Reitman"
+]
+},
 "wd-Q212098": {
 "imdb": "tt0376541",
 "konu": "Closer 2004 yapımı aynı adlı bir tiyatro oyunundan uyarlama film. Jude Law, Clive Owen, Natalie Portman ve Julia Roberts filmde rol alırken filmin yönetmenliğini Mike Nichols yapmıştır. Bu filmdeki rolleri ile Clive Owen ve Natalie Portman Akademi Ödüllerine aday gösterilmişlerdir. Filmin bütçesi 27 milyon $ 'dır.",
@@ -6700,6 +7319,34 @@
 ],
 "yonetmen": [
 "Mike Nichols"
+]
+},
+"wd-Q212129": {
+"imdb": "tt0044081",
+"konu": "İhtiras Tramvayı, 1951 yılında Pulitzer Ödülü kazanmış Tennessee Williams'ın aynı adlı oyunundan uyarlanmış bir Oscar Ödüllü filmdir. Filmi, oyununu da yöneten Elia Kazan yönetmiş, baş rollerde Marlon Brando, Vivien Leigh, Kim Hunter ve Karl Malden. Leigh dışında hepsi Broadway kadrosunda görev almıştır.\nFilmin yapımcısı yetenek avcısı avukat Charles K. Feldman ve Warner Bros Stüdyoları'nda çekilmiştir.",
+"oscar": 4,
+"oyuncu": [
+"Marlon Brando",
+"Vivien Leigh",
+"Karl Malden",
+"Kim Hunter",
+"Mickey Kuhn",
+"Wright King"
+],
+"puan": {
+"IMDb": "7.9/10",
+"Metacritic": "97/100",
+"Rotten Tomatoes": "%97"
+},
+"sure": 120,
+"tur": [
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Elia Kazan"
 ]
 },
 "wd-Q212775": {
@@ -7347,6 +7994,62 @@
 "Abdullah Oğuz"
 ]
 },
+"wd-Q238245": {
+"imdb": "tt1032846",
+"konu": "4 Ay, 3 Hafta, 2 Gün, 2007 Romanya yapımı Cristian Mungiu filmidir. 2007 Cannes Film Festivali'nde Altın Palmiye ile FIPRESCI ödülünü kazandı.\nKomünist Romanya'da, Çavuşesku rejiminin son dönemlerinde geçer. 1987 yılında üniversite yurdunda oda arkadaşı olan iki öğrencinin, içlerinden birinin yasa dışı kürtaj olması için ayarladıkları randevunun ve sonrasında yaşadıklarının trajik hikâyesini anlatır.",
+"oyuncu": [
+"Anamaria Marinca",
+"Luminiţa Gheorghiu",
+"Vlad Ivanov",
+"Laura Vasiliu",
+"Teodor Corban",
+"Alexandru Potocean"
+],
+"puan": {
+"IMDb": "7.9/10",
+"Metacritic": "97/100",
+"Rotten Tomatoes": "%96"
+},
+"sure": 113,
+"tur": [
+"drama"
+],
+"ulke": [
+"Romanya",
+"Belçika"
+],
+"yonetmen": [
+"Cristian Mungiu"
+]
+},
+"wd-Q239756": {
+"imdb": "tt0050986",
+"konu": "Yaban Çilekleri, İsveçli yönetmen Ingmar Bergman'ın 1957 yılında çektiği film. Yaşlı bir profesörün ölümle ve kendisiyle olan hesaplaşmasını rüyalar üzerinden anlatır.",
+"oyuncu": [
+"Max von Sydow",
+"Bibi Andersson",
+"Victor Sjöström",
+"Ingrid Thulin",
+"Gunnell Lindblom",
+"Gunnar Björnstrand"
+],
+"puan": {
+"IMDb": "8.1/10",
+"Metacritic": "88/100",
+"Rotten Tomatoes": "%94"
+},
+"sure": 92,
+"tur": [
+"drama",
+"flashback"
+],
+"ulke": [
+"İsveç"
+],
+"yonetmen": [
+"Ingmar Bergman"
+]
+},
 "wd-Q24272881": {
 "imdb": "tt5028340",
 "konu": "Mary Poppins: Sihirli Dadı, Rob Marshall'ın yönettiği ve Magee, Marshall ve John DeLuca'nın hikâyelerinden uyarlanarak David Magee tarafından senaryolaştırılan 2018 çıkışlı Amerikan yapımı müzikal fantastik filmdir.",
@@ -7373,6 +8076,63 @@
 ],
 "yonetmen": [
 "Rob Marshall"
+]
+},
+"wd-Q24284798": {
+"imdb": "tt3861390",
+"konu": "Dumbo, Tim Burton tarafından yönetilen, senaryoda Ehren Kruger'ın yer aldığı 2019 Amerikan fantastik dönem macera filmidir. Film, Walt Disney'in Helen Aberson ve Harold Pearl'ün romanından uyarlanan 1941 tarihli aynı isimli animasyon filminin canlı aksiyon uyarlaması filmidir. Filmin başrollerinde Colin Farrell, Michael Keaton, Danny DeVito, Eva Green ve Alan Arkin yer alıyor. Hikâye, başarısız bir gezici sirkte çalışan ve uçabilen, son derece büyük kulakları olan bir bebek fil ile karşılaşan bir aileyi anlatıyor.",
+"oyuncu": [
+"Eva Green",
+"Danny DeVito",
+"Michael Keaton",
+"Colin Farrell",
+"Alan Arkin",
+"Roshan Seth"
+],
+"puan": {
+"Metacritic": "51/100",
+"Rotten Tomatoes": "%46"
+},
+"sure": 112,
+"tur": [
+"macera",
+"Aile",
+"fantasy"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Tim Burton"
+]
+},
+"wd-Q244398": {
+"imdb": "tt0486655",
+"konu": "Yıldız Tozu, Matthew Vaughn'ın yönettiği ve Jane Goldman ile birlikte senaryosunu yazdığı 2007 yapımı Amerikan romantik, fantastik ve macera filmi.",
+"oyuncu": [
+"Robert De Niro",
+"Peter O'Toole",
+"Michelle Pfeiffer",
+"Claire Danes",
+"Sienna Miller",
+"Ricky Gervais"
+],
+"puan": {
+"Metacritic": "66/100",
+"Rotten Tomatoes": "%77"
+},
+"sure": 127,
+"tur": [
+"drama",
+"çocuk",
+"fantasy"
+],
+"ulke": [
+"İngiltere",
+"ABD"
+],
+"yonetmen": [
+"Matthew Vaughn"
 ]
 },
 "wd-Q24672271": {
@@ -7419,6 +8179,34 @@
 ],
 "yonetmen": [
 "Sanjay Leela Bhansali"
+]
+},
+"wd-Q24797403": {
+"imdb": "tt1262426",
+"konu": "Wicked: Part One, Jon M. Chu tarafından yönetilen ve Winnie Holzman tarafından yazılan  bir Amerikan müzikal-fantastik film. Film, Stephen Schwartz ve Holzman'ın Gregory Maguire'ın 1995 tarihli aynı adlı romanına dayanan aynı adlı sahne müzikalinin iki parçalı film uyarlamasının ilkidir. Filmin başrollerinde Cynthia Erivo ve Ariana Grande, yardımcı rollerde ise Michelle Yeoh, Jeff Goldblum, Jonathan Bailey, Ethan Slater, Marissa Bode, Peter Dinklage, Bowen Yang, Bronwyn James ve Keala Settle yer alıyor. Dorothy Gale'in Kansas'tan gelişinden önce Oz Ülkesi'nde geçen ve sonrasında devam eden fil",
+"oyuncu": [
+"Ariana Grande",
+"Peter Dinklage",
+"Michelle Yeoh",
+"Jeff Goldblum",
+"Cynthia Erivo",
+"Jonathan Bailey"
+],
+"puan": {
+"Metacritic": "73/100",
+"Rotten Tomatoes": "%88"
+},
+"sure": 160,
+"tur": [
+"müzikal",
+"fantasy",
+"cinematic fairy tale"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Jon M. Chu"
 ]
 },
 "wd-Q24953": {
@@ -7673,6 +8461,32 @@
 "Ferzan Özpetek"
 ]
 },
+"wd-Q257818": {
+"imdb": "tt0050613",
+"konu": "Throne of Blood, Japon yönetmen Akira Kurosava tarafından çekilmiş bir sinema filmidir.",
+"oyuncu": [
+"Toshiro Mifune",
+"Takashi Shimura",
+"Isuzu Yamada",
+"Minoru Chiaki",
+"Akira Kubo",
+"Seiji Miyaguchi"
+],
+"puan": {
+"Rotten Tomatoes": "%96"
+},
+"sure": 105,
+"tur": [
+"drama",
+"samurai cinema"
+],
+"ulke": [
+"Japonya"
+],
+"yonetmen": [
+"Akira Kurosava"
+]
+},
 "wd-Q2579784": {
 "imdb": "tt1454468",
 "konu": "Yerçekimi, yönetmenliğini Alfonso Cuarón'un yaptığı, bilimkurgu gerilim ve dram türündeki, 2013 ABD-Birleşik Krallık ortak yapımı üç boyutlu film. Senaryosunu Alfonso Cuarón ve oğlu Jonás Cuarón'un yazdığı filmin başrollerini Sandra Bullock ve George Clooney paylaşmaktadır. Uzaydaki görevleri esnasında, uzay gemilerinin hasar görmesi sonucu iki astronotun hayatta kalma mücadelesini konu alır.\nFilm, ilk gösterimini 28 Ağustos 2013 günü, açılış filmi sıfatıyla 70.",
@@ -7881,6 +8695,36 @@
 ],
 "yonetmen": [
 "Jon Favreau"
+]
+},
+"wd-Q270510": {
+"imdb": "tt0053604",
+"konu": "Garsoniyer, 1960 ABD yapımı dramatik komedi filmidir. Özgün adı The Apartment olan film 23 Şubat 1961 tarihinde Türkiye'de sinemalarda gösterime girmiştir.\nFilmin yapımcılığını ve yönetmenliğini Billy Wilder yapmıştır. Wilder ayrıca I.A.L. Diamond ile birlikte filmin senaryosunu da yazmıştır.",
+"oscar": 5,
+"oyuncu": [
+"Shirley MacLaine",
+"Jack Lemmon",
+"Fred MacMurray",
+"Ray Walston",
+"Edie Adams",
+"Jack Kruschen"
+],
+"puan": {
+"IMDb": "8.3/10",
+"Metacritic": "94/100",
+"Rotten Tomatoes": "%94"
+},
+"sure": 125,
+"tur": [
+"romantik komedi",
+"drama",
+"Christmas"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Billy Wilder"
 ]
 },
 "wd-Q271830": {
@@ -8182,6 +9026,34 @@
 "Gábor Csupó"
 ]
 },
+"wd-Q27959455": {
+"imdb": "tt6155172",
+"konu": "Roma, yönetmenliği, senaristliği ve görüntü yönetmenliği Alfonso Cuarón tarafından gerçekleştirilen Meksika ve Amerika Birleşik Devletleri ortak yapımı aile drama filmidir. Roma'nın dağıtım hakları ise Netflix'tedir.\nİlk gösterimini 30 Ağustos 2018'de 75. Venedik Uluslararası Film Festivali kapsamında gerçekleştiren ve burada Altın Aslan ödülünü kazanan film, 91.",
+"oscar": 2,
+"oyuncu": [
+"Marina de Tavira",
+"Jorge Antonio Guerrero",
+"Latin Lover",
+"Jennifer Armour",
+"Kjartan Halvorsen"
+],
+"puan": {
+"IMDb": "7.6/10",
+"Metacritic": "96/100",
+"Rotten Tomatoes": "%96"
+},
+"sure": 135,
+"tur": [
+"drama"
+],
+"ulke": [
+"ABD",
+"Meksika"
+],
+"yonetmen": [
+"Alfonso Cuarón"
+]
+},
 "wd-Q280918": {
 "imdb": "tt0113627",
 "konu": "Leaving Las Vegas, Mike Figgis'in yazıp yönettiği ve John O'brien'ın aynı adlı yarı otobiyografik 1990 tarihli romanından uyarlanan 1995 ABD yapımı drama filmidir. Nicolas Cage, ailesini kaybeden, yakın zamanda işinden kovulan ve intihara meyilli olan bir alkolik olarak filmde rol aldı. Las Vegas'a taşınmaya karar veren karakter, BMW'sine bir miktar likör ve bira yükler ve Los Angeles'tan Nevada'ya giderken sarhoş olur. Bir kez orada, güzel bir fahişeyle romantik bir ilişki yaşar.",
@@ -8401,6 +9273,35 @@
 ],
 "yonetmen": [
 "Steve McQueen"
+]
+},
+"wd-Q302490": {
+"imdb": "tt0091530",
+"konu": "Misyon Roland Joffé yönetmenliğinde, 1986 yılında vizyona girmiştir. Filmin başrollerini Robert De Niro ve Jeremy Irons paylaşmaktadır.",
+"oscar": 1,
+"oyuncu": [
+"Robert De Niro",
+"Liam Neeson",
+"Jeremy Irons",
+"Aidan Quinn",
+"Ronald Pickup",
+"Fred Melamed"
+],
+"puan": {
+"Metacritic": "55/100",
+"Rotten Tomatoes": "%66"
+},
+"sure": 126,
+"tur": [
+"drama",
+"historical"
+],
+"ulke": [
+"İngiltere",
+"Fransa"
+],
+"yonetmen": [
+"Roland Joffé"
 ]
 },
 "wd-Q303678": {
@@ -8726,6 +9627,32 @@
 "Thomas Vinterberg"
 ]
 },
+"wd-Q324933": {
+"imdb": "tt0062695",
+"konu": "Çalınan Buseler veya Fransızca adıyla Baisers volés, 1968 yapımı Fransız filmi.",
+"oyuncu": [
+"Claude Jade",
+"Jean-Pierre Léaud",
+"Michael Lonsdale",
+"Delphine Seyrig",
+"Marie-France Pisier",
+"Martine Brochard"
+],
+"puan": {
+"Rotten Tomatoes": "%97"
+},
+"sure": 87,
+"tur": [
+"romantik komedi",
+"drama"
+],
+"ulke": [
+"Fransa"
+],
+"yonetmen": [
+"François Truffaut"
+]
+},
 "wd-Q325643": {
 "imdb": "tt0061184",
 "konu": "Kim Korkar Hain Kurttan?, 1966 ABD yapımı dramatik filmdir. Özgün adı Who's Afraid of Virginia Woolf? olan film Türkiye'de ilk kez 30 Ocak 1967'de sinemalarda gösterime girmişti.\nSenaryosunu Edward Albee'nin 1962 tarihli Tony ödüllü aynı adlı Broadway oyunundan Ernest Lehman'ın uyarlayıp yazdığı filmi Mike Nichols yönetmiştir.",
@@ -8777,6 +9704,33 @@
 ],
 "yonetmen": [
 "Fatih Akın"
+]
+},
+"wd-Q325662": {
+"imdb": "tt0068182",
+"konu": "Aguirre, Tanrının Gazabı 1972 Batı Almanya-Peru-Meksika ortak yapımı tarihi dramatik filmdir. Özgün adı Aguirre, der Zorn Gottes dir. ABD'de Aguirre: The Wrath of God adı ile gösterilmiştir. Yapımcılığını ve yönetmenliğini Werner Herzog'un yaptığı filmin senaryosu da Herzog'a aittir.",
+"oyuncu": [
+"Klaus Kinski",
+"Helena Rojo",
+"Peter Berling",
+"Ruy Guerra",
+"Claus Biederstaedt",
+"Christian Brückner"
+],
+"puan": {
+"Rotten Tomatoes": "%96"
+},
+"sure": 91,
+"tur": [
+"drama",
+"macera"
+],
+"ulke": [
+"Almanya",
+"Meksika"
+],
+"yonetmen": [
+"Werner Herzog"
 ]
 },
 "wd-Q3275371": {
@@ -9074,6 +10028,35 @@
 "Bahman Ghobadi"
 ]
 },
+"wd-Q352431": {
+"imdb": "tt0268126",
+"konu": "Tersyüz,, yönetmenliğini Spike Jonze'un yaptığı 2002 yapımı film. Senaryosunu Charlie Kaufman yazmıştır.\nJonathan Demme, Vincent Landay, Edward Saxon filmin yapımcılığını üstlenmiştir. Nicolas Cage, Meryl Streep, Chris Cooper, Ron Livingston, Brian Cox ve Maggie Gyllenhaal filmde rol almıştır.",
+"oscar": 1,
+"oyuncu": [
+"Meryl Streep",
+"Nicolas Cage",
+"Tilda Swinton",
+"Maggie Gyllenhaal",
+"Chris Cooper",
+"Brian Cox"
+],
+"puan": {
+"IMDb": "7.6/10",
+"Metacritic": "83/100",
+"Rotten Tomatoes": "%90"
+},
+"sure": 110,
+"tur": [
+"komedi",
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Spike Jonze"
+]
+},
 "wd-Q3549679": {
 "imdb": "tt0100267",
 "konu": "Aşk Nöbeti, 1995 çıkışlı Muhsin Mahmelbaf filmidir. Film, İstanbul'da geçmekte ve Türkçe - Farsça dilindedir.\nDiyaloglar felsefi, özenle planlanmış, kısa ve özdür. Mahmelbaf, hakimin kalem kırdığı sahnede Türklere özgü olan idamda kullanılan ögeyi kullandığını belirtmiştir.",
@@ -9316,6 +10299,35 @@
 ],
 "yonetmen": [
 "Togan Gökbakar"
+]
+},
+"wd-Q4103201": {
+"imdb": "tt1065073",
+"konu": "Çocukluk, 2014 yapımı sinema filmi. Yönetmen Richard Linklater'ın 12 seneye yaydığı bu film, bir gencin çocukluğundan üniversiteye kadar geçirdiği dönemi konu alıyor. Başrol oyuncusu Ellar Coltrane'in 8 yaşından itibaren oynadığı bu filmde, izleyiciler oyuncunun büyümesine şahit olmaktadır.",
+"oscar": 1,
+"oyuncu": [
+"Ethan Hawke",
+"Patricia Arquette",
+"Ellar Coltrane",
+"Nick Krause",
+"Lorelei Linklater",
+"Brad Hawkins"
+],
+"puan": {
+"IMDb": "7.9/10",
+"Metacritic": "100/100",
+"Rotten Tomatoes": "%97"
+},
+"sure": 165,
+"tur": [
+"drama",
+"coming-of-age"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Richard Linklater"
 ]
 },
 "wd-Q41483": {
@@ -9589,6 +10601,36 @@
 "Bobby Farrelly"
 ]
 },
+"wd-Q464032": {
+"imdb": "tt0095765",
+"konu": "Cennet Sineması, 1988 yapımı İtalyan filmi. Giuseppe Tornatore'nin ikinci filmi olan Cinema Paradiso, yayınlandığı günden bu yana İtalya ve dünyada sinema klasikleri arasındaki yerini almıştır. Yapımcılığını Franco Cristaldi ve Giovanna Romagnoli'nin üstlediği filmin müziklerini, yaklaşık 500'den fazla filmin müziklerini yapan Ennio Morricone üstlenmiştir.",
+"oscar": 1,
+"oyuncu": [
+"Philippe Noiret",
+"Jacques Perrin",
+"Brigitte Fossey",
+"Leopoldo Trieste",
+"Enzo Cannavale",
+"Tano Cimarosa"
+],
+"puan": {
+"IMDb": "8.5/10",
+"Metacritic": "80/100",
+"Rotten Tomatoes": "%90"
+},
+"sure": 155,
+"tur": [
+"drama",
+"coming-of-age"
+],
+"ulke": [
+"Fransa",
+"İtalya"
+],
+"yonetmen": [
+"Giuseppe Tornatore"
+]
+},
 "wd-Q464964": {
 "imdb": "tt1645170",
 "konu": "Diktatör, 2012 Amerika Birleşik Devletleri-Birleşik Krallık ortak yapımı komedi filmi. Sacha Baron Cohen'in senaryosuna katkıda bulunduğu ve başrolü oynadığı film New York ile İspanya'da çekildi, 16 Mayıs 2012 tarihinde gösterime girdi.",
@@ -9640,6 +10682,34 @@
 "ulke": [
 "İngiltere",
 "ABD"
+]
+},
+"wd-Q465773": {
+"imdb": "tt0046268",
+"konu": "Dehşet Yolcuları, yönetmenliği Henri-Georges Clouzot tarafından gerçekleştirilen, başrollerinde Yves Montand, Charles Vanel, Folco Lulli, Peter Van Eyck ve Véra Clouzot'nun yer aldığı 1953 çıkışlı Fransa-İtalya ortak yapımı sinema filmi. Film, 6. Cannes Film Festivali'nde Altın Palmiye ödülünü kazandı.",
+"oyuncu": [
+"Yves Montand",
+"Charles Vanel",
+"Véra Clouzot",
+"Peter van Eyck",
+"Folco Lulli",
+"Dario Moreno"
+],
+"puan": {
+"Metacritic": "85/100",
+"Rotten Tomatoes": "%100"
+},
+"sure": 148,
+"tur": [
+"drama",
+"macera"
+],
+"ulke": [
+"Fransa",
+"İtalya"
+],
+"yonetmen": [
+"Henri-Georges Clouzot"
 ]
 },
 "wd-Q4663809": {
@@ -9856,6 +10926,23 @@
 ],
 "yonetmen": [
 "Ivan Reitman"
+]
+},
+"wd-Q47465720": {
+"imdb": "tt7318202",
+"konu": "Kelebekler, yönetmenliğini ve senaristliğini Tolga Karaçelik'in üstlendiği 2017 yapımı komedi-drama türündeki sinema filmidir. Başrollerinde Tolga Tekin, Bartu Küçükçağlayan ve Tuğçe Altuğ'un yer aldığı filmde, \"annelerinin intiharı sonrası farklı akrabalarına gönderilmiş ve yaklaşık 20 yıl sonra, yabancılaştıkları babaları tarafından uzaktaki köyüne çağrılan, köye vardıklarında babalarının öldüğünü öğrenen üç kardeşin öyküsünü\" konu almaktadır.\nFilmin ilk gösterimi 18-28 Ocak 2018 tarihleri arasında düzenlenen Sundance Film Festivali'nin \"Dünya Sineması Dramatik Film Yarışması\" bölümünde gerç",
+"oyuncu": [
+"Tolga Tekin",
+"Bartu Küçükçağlayan"
+],
+"tur": [
+"drama"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Tolga Karaçelik"
 ]
 },
 "wd-Q47703": {
@@ -10267,6 +11354,33 @@
 "Robert Redford"
 ]
 },
+"wd-Q503638": {
+"imdb": "tt0064276",
+"konu": "Easy Rider, başrollerini Peter Fonda, Dennis Hopper ve Jack Nicholson'ın paylaştığı 1969 ABD yapımı bir yol filmidir.\nEasy Rider teriminin Türkçesi Geniş İnsan'dır. Yani hayatı hafife alan, para kazanmayan ama harcayan insanları betimler. Filmde de bu tip canlandırılmıştır.",
+"oyuncu": [
+"Jack Nicholson",
+"Dennis Hopper",
+"Peter Fonda",
+"Bridget Fonda",
+"Karen Black",
+"Phil Spector"
+],
+"puan": {
+"Metacritic": "85/100",
+"Rotten Tomatoes": "%84"
+},
+"sure": 95,
+"tur": [
+"drama",
+"yol"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Dennis Hopper"
+]
+},
 "wd-Q512350": {
 "imdb": "tt0055032",
 "konu": "Jules ve Jim, Henri-Pierre Roché'nin aynı adı taşıyan romanından uyarlanan, yönetmenliğini  François Truffaut'nun yaptığı 1962 yapımı bir Fransız filmidir.",
@@ -10323,6 +11437,33 @@
 ],
 "yonetmen": [
 "Barry Sonnenfeld"
+]
+},
+"wd-Q525415": {
+"imdb": "tt0259446",
+"konu": "Kalbinin sesini dinle, yönetmenliğini Joel Zwick'in üstlendiği 2002 yılı Amerika-Kanada ortak yapımı romantik komedi türünde bağımsız sinema filmi. Filmin senaristi olan Nia Vardalos aynı zamanda başrolü de üstlenmiştir.",
+"oyuncu": [
+"John Corbett",
+"Nia Vardalos",
+"Andrea Martin",
+"Lainie Kazan",
+"Joey Fatone",
+"Michael Constantine"
+],
+"puan": {
+"Metacritic": "62/100",
+"Rotten Tomatoes": "%76"
+},
+"sure": 95,
+"tur": [
+"romantik komedi"
+],
+"ulke": [
+"ABD",
+"Kanada"
+],
+"yonetmen": [
+"Joel Zwick"
 ]
 },
 "wd-Q53105": {
@@ -10644,6 +11785,32 @@
 "Fatih Akın"
 ]
 },
+"wd-Q588420": {
+"imdb": "tt0175880",
+"konu": "Manolya, Paul Thomas Anderson tarafından yazılan ve yönetilen 1999 yapımı Amerikan filmidir. Ricky Jay'in anlatıcı rolünde boy gösterdiği yapımın başrollerini Tom Cruise, Philip Baker Hall, Philip Seymour Hoffman, William H. Macy, Julianne Moore, John C. Reilly ve Jason Robards paylaşmaktadır.\nTom Cruise filmdeki rolüyle En İyi Yardımcı Erkek Oyuncu dalında Oscar'a aday gösterilmiş ve aynı dalda Altın Küre Ödülü'nü kazanmıştır. Anderson, Manolya'nın -iyisiyle kötüsüyle- hayatı boyunca yapacağı en iyi film olduğunu düşündüğünü söylemiştir.",
+"oyuncu": [
+"Tom Cruise",
+"Julianne Moore",
+"Philip Seymour Hoffman",
+"John C. Reilly",
+"William H. Macy",
+"Felicity Huffman"
+],
+"puan": {
+"Metacritic": "78/100",
+"Rotten Tomatoes": "%82"
+},
+"sure": 188,
+"tur": [
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Paul Thomas Anderson"
+]
+},
 "wd-Q590216": {
 "imdb": "tt1623205",
 "konu": "Muhteşem ve Kudretli Oz 2013 tarihli, L.Frank Baum'un Oz Büyücüsü roman serisinin öncülü niteliğindeki, Disney yapımı, fanastik macera filmi. Başrollerinde James Franco, Mila Kunis, Rachel Weisz ve Michelle Williams rol almışlardır.",
@@ -10670,6 +11837,34 @@
 ],
 "yonetmen": [
 "Sam Raimi"
+]
+},
+"wd-Q596623": {
+"imdb": "tt0057091",
+"konu": "Leopar, 1963 İtalya - Fransa ortak yapımı dönemsel tarihi filmdir. Özgün adı Il gattopardo olan ve ortak yapımcı ülke Fransa'da Le guépard adıyla gösterilen film Türkiye'de ilk kez Ocak 1965'te sinemalarda gösterime girmiştir.\nİtalyan Yeni Gerçekçiliği sinema akımının usta yönetmenlerinden Luchino Visconti'nin bazılarınca en iyi filmi sayılan ve çekmiş olduğu tarihsel epiklerin en kişiseli olarak değerlendirilen \"Leopar\", Sicilyalı yazar Giuseppe Tomasi di Lampedusa'nın ölümünden bir yıl sonra, 1958'de yayımlanan aynı adlı çok satan otobiyografik romanından uyarlanmıştır.\nFilmin uluslararası b",
+"oyuncu": [
+"Alain Delon",
+"Claudia Cardinale",
+"Burt Lancaster",
+"Terence Hill",
+"Giuliano Gemma",
+"Ottavia Piccolo"
+],
+"puan": {
+"IMDb": "7.9/10",
+"Metacritic": "100/100",
+"Rotten Tomatoes": "%98"
+},
+"sure": 183,
+"tur": [
+"drama"
+],
+"ulke": [
+"Fransa",
+"İtalya"
+],
+"yonetmen": [
+"Luchino Visconti"
 ]
 },
 "wd-Q59687": {
@@ -11166,6 +12361,32 @@
 "Jessie Nelson"
 ]
 },
+"wd-Q640450": {
+"imdb": "tt0918927",
+"konu": "Şüphe 2008 Amerikan yapımı dram filmidir. John Patrick Shanley'nin Doubt isimli tiyatro oyunundan kendisi tarafından uyarlanmıştır. Başrollerde Meryl Streep, Philip Seymour Hoffman, Amy Adams ve Viola Davis yer almaktadır. Filmin yönetmenliğini Shanley yapmış, yapımcılığını Scott Rudin üstlenmiştir.",
+"oyuncu": [
+"Meryl Streep",
+"Amy Adams",
+"Philip Seymour Hoffman",
+"Viola Davis",
+"Carrie Preston",
+"Alice Drummond"
+],
+"puan": {
+"Metacritic": "68/100",
+"Rotten Tomatoes": "%79"
+},
+"sure": 104,
+"tur": [
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"John Patrick Shanley"
+]
+},
 "wd-Q640561": {
 "imdb": "tt1832382",
 "konu": "Bir Ayrılık, Asgar Ferhadi tarafından yönetilen ve Leyla Hatemi, Peyman Muadi, Şahab Hüseyni, Sareh Bayat ile Sarina Farhadi'nin oynadığı 2011 İran drama filmi. Boşanmış bir orta sınıf İranlı çifti ile yaşlı babası için alt sınıf bir bakıcı tutmasını izleyen entrikaları konu edinmektedir. 61. Berlin Film Festivali'nde En İyi Film dalında Altın Ayı ve En İyi Erkek Oyuncu ile En İyi Kadın Oyuncu dallarında Gümüş Ayı kazanarak Altın Ayı kazanan ilk İran filmi oldu.",
@@ -11192,6 +12413,32 @@
 ],
 "yonetmen": [
 "Asgar Ferhadi"
+]
+},
+"wd-Q641061": {
+"imdb": "tt0044672",
+"konu": "Harikalar Sirki Cecil B. DeMille'in yapımcılığını ve yönetmenliğini üstlendiği 1952 yapımı bir Amerikan drama filmi. Technicolor ile çekildi ve Paramount Pictures tarafından yayınlandı. Ringling Bros. and Barnum & Bailey Circus]]'da geçen filmde Betty Hutton ve Cornel Wilde orta ring için yarışan trapez sanatçıları, Charlton Heston ise sirk yöneticisi olarak rol alıyor.",
+"oscar": 2,
+"oyuncu": [
+"Bing Crosby",
+"James Stewart",
+"Charlton Heston",
+"Cecil B. DeMille",
+"Gloria Grahame",
+"Dorothy Lamour"
+],
+"puan": {
+"Rotten Tomatoes": "%50"
+},
+"sure": 152,
+"tur": [
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Cecil B. DeMille"
 ]
 },
 "wd-Q641760": {
@@ -11277,6 +12524,35 @@
 ],
 "yonetmen": [
 "Ang Lee"
+]
+},
+"wd-Q645168": {
+"imdb": "tt0387131",
+"konu": "The Constant Gardener, Fernando Meirelles tarafından yönetilen 2005 İngiliz-Alman drama gerilim filmidir. Jeffrey Caine'in senaryosu, John le Carré'nin 2001 yılındaki aynı adlı romanına dayanıyor. Hikâye, Kenya'daki bir İngiliz diplomat olan Justin Quayle'ın, bir Af Örgütü aktivisti olan karısı Tessa'nın cinayetini çözmeye çalışmasını anlatıyor.\nFilm Loiyangalani'de Kenya ve Nairobi'nin bir bölümü olan Kibera'nın kenar mahallelerinde çekildi.",
+"oscar": 1,
+"oyuncu": [
+"Rachel Weisz",
+"Ralph Fiennes",
+"Bill Nighy",
+"Pete Postlethwaite",
+"Danny Huston",
+"Archie Panjabi"
+],
+"puan": {
+"Metacritic": "82/100",
+"Rotten Tomatoes": "%83"
+},
+"sure": 128,
+"tur": [
+"drama",
+"political thriller"
+],
+"ulke": [
+"İngiltere",
+"Almanya"
+],
+"yonetmen": [
+"Fernando Meirelles"
 ]
 },
 "wd-Q649165": {
@@ -11637,6 +12913,23 @@
 "Ingmar Bergman"
 ]
 },
+"wd-Q7091610": {
+"imdb": "tt1312137",
+"konu": "İki Dil Bir Bavul, 2008 yapımı Türk filmi. Orhan Eskiköy ve Özgür Doğan'ın yönetmenliğini ve yapımcılığını üstlendiği film, bir Türk öğretmenin, Şanlıurfa'nın Siverek ilçesine bağlı Demirci köyündeki ilkokula atanmasını ve orada Türkçe bilmeyen Kürt öğrencileriyle geçirdiği bir yılını anlatır. 23 Ekim 2009 tarihinde vizyona girmiştir. Orijinal adı Okul Yolunda olan filmin adı daha sonradan İki Dil Bir Bavul olarak değiştirildi ve filmin adında geçen \"bavul\" metaforu, \"bizzat sınıfın kendisi, köyün kendisi, bölgenin kendisi, ülkenin kendisi\"dir.",
+"oyuncu": [
+"Emre Aydın"
+],
+"tur": [
+"belgesel"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Özgür Doğan",
+"Orhan Eskiköy"
+]
+},
 "wd-Q7117022": {
 "imdb": "tt2338151",
 "konu": "PK, 2014 yapımı bilimkurgu ve komedi filmidir. Yönetmenliği Rajkumar Hirani, yapımı Hirani ve Vidhu Vinod Chopra, yazarlığı ise Hirani ve Abhijat Joshi tarafından yapılan bir Hint filmidir. Filmin başrollerinde Aamir Khan olmak üzere Anushka Sharma, Sushant Singh Rajput, Boman Irani, Saurabh Shukla ve Sanjay Dutt rol almıştır. Film, araştırma görevi için dünyaya gelen bir uzaylının hikâyesini anlatıyor.",
@@ -11663,6 +12956,28 @@
 ],
 "yonetmen": [
 "Rajkumar Hirani"
+]
+},
+"wd-Q7124906": {
+"imdb": "tt0425080",
+"konu": "Güz Sancısı, Yılmaz Karakoyunlu'nun aynı adlı kitabından uyarlanmış, 2008 yapımı, yapımcılığını Bahadır Atay ve Fatih Enes Ömeroğlu'nun yaptığı Tomris Giritlioğlu filmi. 23 Ocak 2009 tarihinde gösterime girmiştir.\nSuyun Öte Yanı ve özellikle Salkım Hanımın Taneleri filminin devamı niteliğinde olup 6-7 Eylül Olayları'nı konu almış ve yoğun tartışmalara neden olmuştur.",
+"oyuncu": [
+"Beren Saat",
+"Murat Yıldırım",
+"Tuncel Kurtiz",
+"Okan Yalabık",
+"İlker Aksum",
+"Belçim Bilgin"
+],
+"sure": 112,
+"tur": [
+"drama"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Tomris Giritlioğlu"
 ]
 },
 "wd-Q720724": {
@@ -11779,6 +13094,35 @@
 "Woody Allen"
 ]
 },
+"wd-Q733627": {
+"imdb": "tt0043924",
+"konu": "İnsanlık suçu Theodore Dreiser'in 1925 tarihli An American Tragedy adlı romanından uyarlanan, 1951 çıkışlı Amerikan dram filmidir. Biri varlıklı amcasının fabrikasında çalışan, diğeri ise güzel bir sosyetik kadın olan iki kadınla aşk yaşayan işçi sınıftan bir adamın hikâyesini konu edindi. Filmin asıl esin konusu ise 1906 yılında Grace Brown öldürülmesidir.\nA Place in the Sun, Harry Brown ve Michael Wilson'ın senaryosundan George Stevens tarafından yönetildi ve başrollerinde Montgomery Clift, Elizabeth Taylor ve Shelley Winters vardı.",
+"oscar": 6,
+"oyuncu": [
+"Elizabeth Taylor",
+"Montgomery Clift",
+"Shelley Winters",
+"Anne Revere",
+"Raymond Burr",
+"Kathleen Freeman"
+],
+"puan": {
+"Metacritic": "76/100",
+"Rotten Tomatoes": "%82"
+},
+"sure": 117,
+"tur": [
+"romantik",
+"drama",
+"kara"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"George Stevens"
+]
+},
 "wd-Q737904": {
 "imdb": "tt0250223",
 "konu": "Asteriks ve Oburiks: Görevimiz Kleopatra, René Goscinny ve Albert Uderzo'nun Asteriks ve Kleopatra  çizgi romanından uyarlanan 2002 Fransız yapımı filmdir. 1999 yapımı Asterix ve Oburiks Sezar'a Karşı devam filmidir. Filmde Oburiks'i canlandıran oyuncu Gerard Depardieu, film hakkında şunları söylüyor; “Bu harika, komedilerde asla seks olmuyor, aşk hikâyesi olsa da oldukça erdemli yaşanıyor. Yanlış anlama ve acı çekme de yok”.",
@@ -11806,6 +13150,20 @@
 "Alain Chabat"
 ]
 },
+"wd-Q7379552": {
+"imdb": "tt0254463",
+"konu": "Kaç Para Kaç, 1998 yapımı Türk filmi. Başrollerini Taner Birsel, Bennu Yıldırımlar, Zuhal Gencer, Engin Alkan ve Bülent Emin Yarar oynamıştır. Yönetmeni Reha Erdem, yapımcısı Ömer Atay, görüntü yönetmenleri Florent Herry ve Jean Louıs Vıalard'dır.",
+"sure": 100,
+"tur": [
+"Komedi-drama"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Reha Erdem"
+]
+},
 "wd-Q73804850": {
 "imdb": "tt10431500",
 "konu": "7. Koğuştaki Mucize, Mehmet Ada Öztekin'in yönetmenliğini yaptığı; Aras Bulut İynemli, Nisa Sofiya Aksongur, Celile Toyon, İlker Aksum, Mesut Akusta, Deniz Baysal, Yurdaer Okur ve Sarp Akkaya'nın başrollerini paylaştığı Türk yapımı dram filmi. Güney Kore yapımı Miracle in Cell No.7'den uyarlanmıştır. 2019 yılında Türkiye'de en çok izlenen film olmuştur.",
@@ -11821,6 +13179,32 @@
 ],
 "yonetmen": [
 "Mehmet Ada Öztekin"
+]
+},
+"wd-Q740489": {
+"imdb": "tt0290002",
+"konu": "Zor Baba ve Dünür, yönetmenliğini Jay Roach'nın yaptığı, Universal Pictures, 2004 yılı yapımlı bir sinema filmidir.",
+"oyuncu": [
+"Robert De Niro",
+"Barbra Streisand",
+"Ben Stiller",
+"Owen Wilson",
+"Blythe Danner",
+"Tim Blake Nelson"
+],
+"puan": {
+"Metacritic": "41/100",
+"Rotten Tomatoes": "%39"
+},
+"sure": 110,
+"tur": [
+"komedi"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Jay Roach"
 ]
 },
 "wd-Q745973": {
@@ -11934,6 +13318,66 @@
 ],
 "yonetmen": [
 "Edward Zwick"
+]
+},
+"wd-Q7539880": {
+"imdb": "tt1772339",
+"konu": "Prensesin Uykusu, Çağan Irmak'ın yönettiği 2010 yapımı sinema filmidir. Çağan Irmak'ın, Redd grubunun 2006 yılında çıkan  Kirli Suyunda Parıltılar albümünde yer alan \"Prensesin Uykusuyum\"  şarkısından ilham alarak senaryosunu yazdığı filmin yapımcılığını Most Production ve İmaj üstlenmiştir. Film müzikleri de filme ismini veren şarkının yaratıcısı Redd tarafından hazırlanmıştır, soundtrack albüm Prensesin Uykusu 14 Ekim 2010'da yayınlanmıştır. Bu albümün filmle aynı adı taşıyan \"Prensesin Uykusuyum\" şarkısına Çağan Irmak tarafından 11 Eylül 2010'da klip çekilmiştir.",
+"oyuncu": [
+"Genco Erkal",
+"Işıl Yücesoy",
+"Sevinç Erbulak",
+"Çağlar Çorumlu",
+"Alican Yücesoy",
+"Ayşenil Şamlıoğlu"
+],
+"tur": [
+"komedi",
+"drama"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Çağan Irmak"
+]
+},
+"wd-Q7744599": {
+"imdb": "tt0253997",
+"konu": "Çöpçüler Kralı, yönetmenliğini Zeki Ökten'in üstlendiği, 1977 yapımı uzun metrajlı bir Türk komedi filmidir. Bu sinema filminin başrollerini Kemal Sunal, Şener Şen ve Ayşen Gruda paylaşmıştır. Film; Güneşli Sokak, Cihangir ve çevresinde çekilmiştir.\nFilm; 15.",
+"oyuncu": [
+"Kemal Sunal",
+"Ayşen Gruda",
+"Şener Şen"
+],
+"sure": 80,
+"tur": [
+"komedi"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Zeki Ökten"
+]
+},
+"wd-Q7751546": {
+"imdb": "tt0183459",
+"konu": "Maden, 1978 Türkiye yapımı politik dram türünde bir sinema filmidir. Filmin yönetmenliğini yapan Yavuz Özkan senaryosunu da kaleme almıştır.\nFilm \"işçiler birleşin\" sloganıyla biter.",
+"oyuncu": [
+"Cüneyt Arkın",
+"Tarık Akan",
+"Hale Soygazi"
+],
+"sure": 90,
+"tur": [
+"politik sinema"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Yavuz Özkan"
 ]
 },
 "wd-Q7755621": {
@@ -12086,6 +13530,55 @@
 "Semih Kaplanoğlu"
 ]
 },
+"wd-Q8076089": {
+"imdb": "tt0201368",
+"konu": "Züğürt Ağa, yönetmenliğini Nesli Çölgeçen'in yaptığı 1985 yapımı Türk Dram filmi.",
+"oyuncu": [
+"Şener Şen",
+"Erdal Özyağcılar",
+"Füsun Demirel",
+"Ayla Arslancan",
+"Can Kolukısa",
+"Kemal İnci"
+],
+"sure": 101,
+"tur": [
+"komedi"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Nesli Çölgeçen"
+]
+},
+"wd-Q817159": {
+"imdb": "tt0041113",
+"konu": "All the King's Men, Robert Rossen tarafından yazılan, üretilen ve yönetilen 1949 tarihli bir Amerikan kara filmidir. Aynı adlı 1946 Robert Penn Warren romanına dayanıyor. Filmde Broderick Crawford, John Ireland, Mercedes McCambridge ve Joanne Dru rol alıyor. Film Amerika'nın güneyinde hırslı ve acımasız politikacı Willie Stark'ın yükselişi ve düşüşünü konu edindi.",
+"oscar": 3,
+"oyuncu": [
+"Broderick Crawford",
+"Mercedes McCambridge",
+"Joanne Dru",
+"John Derek",
+"John Ireland",
+"Anne Seymour"
+],
+"puan": {
+"Rotten Tomatoes": "%97"
+},
+"sure": 109,
+"tur": [
+"drama",
+"kara"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Robert Rossen"
+]
+},
 "wd-Q818710": {
 "imdb": "tt0057831",
 "konu": "Zorba, 1964 ABD - İngiltere - Yunanistan ortak yapımı dramatik filmdir. Özgün adı Alexis Zorbas olan film İngilizce konuşulan ülkelerde Zorba the Greek adı ile gösterilmiştir. Filmin Türkiye'de İki Arkadaş adıyla da gösterildiğine dair kayıtlar bulunmaktadır.\nFilm, Zorba ve Basil'in, yoksul bir Girit köyünde linyit madeni inşa etmeye çalışırken yaşadıkları talihsizliklere odaklanıyor; kutupsal farklı kişilikleri onları, köyün halk tarafından boşaltılmasıyla sonuçlanan feci sonuçlara yol açan işlere ve planlara sürükler.",
@@ -12192,6 +13685,34 @@
 "Özer Kızıltan"
 ]
 },
+"wd-Q843949": {
+"imdb": "tt0169102",
+"konu": "Lagaan 2001 yapımlı Hint filmidir. Başrollerinde Aamir Khan, Gracy Singh ve Rachel Shelley; yönetmen koltuğunda Ashutosh Gowariker vardır. Oscar adaylığı da olan film birçok ödül almıştır.",
+"oyuncu": [
+"Aamir Khan",
+"Gracy Singh",
+"Paul Blackthorne",
+"Rachel Shelley",
+"Kulbhushan Kharbanda",
+"Raghubir Yadav"
+],
+"puan": {
+"Metacritic": "84/100",
+"Rotten Tomatoes": "%95"
+},
+"sure": 224,
+"tur": [
+"müzikal",
+"romantik",
+"drama"
+],
+"ulke": [
+"Hindistan"
+],
+"yonetmen": [
+"Ashutosh Gowariker"
+]
+},
 "wd-Q845057": {
 "imdb": "tt0091167",
 "konu": "Hannah ve Kız Kardeşleri, bir aile Şükran Günü yemeğiyle başlayıp iki yıl boyunca geniş bir ailenin iç içe geçmiş hikâyelerini anlatan 1986 Amerikan komedi-drama filmidir. Film, Hannah rolünde Mia Farrow, kocası Michael Caine ve kız kardeşleri Barbara Hershey ve Dianne Wiest ile birlikte rol alan Woody Allen tarafından yazıldı ve yönetildi.\nFilmin oyuncu kadrosunda ayrıca Carrie Fisher, Maureen O'Sullivan, Lloyd Nolan, Max von Sydow ve Julie Kavner yer alıyor. Daniel Stern, Richard Jenkins, Fred Melamed, Lewis Black, Joanna Gleason, John Turturro ve Julia Louis-Dreyfus'un hepsinin küçük roller",
@@ -12276,6 +13797,33 @@
 "Baz Luhrmann"
 ]
 },
+"wd-Q901213": {
+"imdb": "tt0109831",
+"konu": "Four Weddings and a Funeral, Mike Newell tarafından yönetilen 1994 yapımı İngiliz romantik komedi filmidir. 6 haftada yapımı tamamlanan ve 3 milyon sterlinin altında bir bütçeye sahip olan film, beklenmedik bir biçimde başarı sağlamış ve uluslararası gösterimlerinden  $245,7 milyon gelir elde ederek o zamana kadarki en yüksek gelir getirmiş Britanyalı film olmuştur.",
+"oyuncu": [
+"Rowan Atkinson",
+"Hugh Grant",
+"Andie MacDowell",
+"Kristin Scott Thomas",
+"John Hannah",
+"Simon Callow"
+],
+"puan": {
+"Metacritic": "81/100",
+"Rotten Tomatoes": "%92"
+},
+"sure": 113,
+"tur": [
+"romantik komedi",
+"drama"
+],
+"ulke": [
+"İngiltere"
+],
+"yonetmen": [
+"Mike Newell"
+]
+},
 "wd-Q912877": {
 "imdb": "tt0401445",
 "konu": "A Good Year, 2006 İngiliz yapımı romantik komedi filmi. Film Londra ve Fransa'nın Provence bölgesinde çekilmiştir. Filmin yönetmenliğini Ridley Scott yapmıştır ve Russell Crowe, Marion Cotillard, Didier Bourdon, Abbie Cornish ve Albert Finney gibi oyuncular filmde yer almışlardır. Film İngiliz yazar Peter Mayle'in aynı adı taşıyan 2004 yılında yayımlanan romanından sinemaya aktarılmıştır.",
@@ -12334,6 +13882,34 @@
 "Robert Zemeckis"
 ]
 },
+"wd-Q918769": {
+"imdb": "tt0477302",
+"konu": "Çok Gürültülü ve Çok Yakın, Stephen Daldry tarafından yönetilen ve Eric Roth tarafından yazılan 2011 Amerikan dram filmidir. Jonathan Safran Foer'ın aynı adlı 2005 romanından uyarlanan filmde Tom Hanks, Sandra Bullock, Thomas Horn, Max von Sydow, Viola Davis, John Goodman, Jeffrey Wright ve Zoe Caldwell yer alıyor. Prodüksiyonü New York City'de gerçekleşen film, Amerika Birleşik Devletleri'nde 25 Aralık 2011'de gösterime girdi. Filme gelen karışık eleştirilere rağmen, film En İyi Film ve von Sydow'a En İyi Yardımcı Erkek Oyuncu adayı gösterildi.",
+"oyuncu": [
+"Tom Hanks",
+"Sandra Bullock",
+"John Goodman",
+"James Gandolfini",
+"Viola Davis",
+"Max von Sydow"
+],
+"puan": {
+"IMDb": "6.9/10",
+"Metacritic": "46/100",
+"Rotten Tomatoes": "%45"
+},
+"sure": 129,
+"tur": [
+"drama",
+"coming-of-age"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Stephen Daldry"
+]
+},
 "wd-Q934718": {
 "imdb": "tt0384116",
 "konu": "G.O.R.A., senaryosunu Cem Yılmaz'ın yazdığı, yönetmenliğini Ömer Faruk Sorak'ın yaptığı, bilimkurgu ve komedi türündeki 2004 çıkışlı Türk filmidir.\nÇekimleri 2002 yılında başlayan film, Türkiye'de 12 Kasım 2004 tarihinde gösterime girdi. Türk sinemasında en pahalı yapımlardan biri olan filmi 4 milyon kişi izledi. Filmin yapımcılığı, Uzan Ailesi'ne ait olan TürkFilmi adlı şirket ile Ömer Faruk Sorak tarafından üstlenilmiştir.",
@@ -12373,6 +13949,26 @@
 ],
 "yonetmen": [
 "Togan Gökbakar"
+]
+},
+"wd-Q952672": {
+"imdb": "tt0216986",
+"konu": "Propaganda, 1999 yapımı Türk sinema filmi. Kemal Sunal'ın oynadığı son ve oğlu Ali Sunal ile oynadığı tek filmdir. 1948 yılında yaşanmış bir hikâyeden yola çıkılarak çekilen filmin çekimleri Aksaray'ın Yalman köyünde yapıldı. Filmde, gümrük memuru olan Mehti, memleketini bölen Türkiye ile Suriye arasındaki sınırı resmen belirleme görevi almıştır.",
+"oyuncu": [
+"Kemal Sunal",
+"Meltem Cumbul",
+"Rafet El Roman",
+"Metin Akpınar"
+],
+"sure": 107,
+"tur": [
+"komedi"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Sinan Çetin"
 ]
 },
 "wd-Q97304180": {

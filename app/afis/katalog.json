@@ -3960,6 +3960,922 @@
 "nost"
 ],
 "p": 45
+},
+{
+"id": "wd-Q729782",
+"q": "Q729782",
+"t": "The Parent Trap",
+"o": "The Parent Trap",
+"y": 1998,
+"d": "Nancy Meyers",
+"line": "Film",
+"g": [
+"gul",
+"iyi"
+],
+"p": 48
+},
+{
+"id": "wd-Q6379279",
+"q": "Q6379279",
+"t": "Muhteşem Güzellik",
+"o": "The Great Beauty",
+"y": 2013,
+"d": "Paolo Sorrentino",
+"line": "2013 film directed by Paolo Sorrentino",
+"g": [
+"gul"
+],
+"p": 48
+},
+{
+"id": "wd-Q59249",
+"q": "Q59249",
+"t": "Hachi: A Dog's Tale",
+"o": "Hachi: A Dog's Tale",
+"y": 2009,
+"d": "Lasse Halström",
+"line": "2009 yapımı Amerikan dram filmi",
+"g": [
+"agla",
+"iyi"
+],
+"p": 47
+},
+{
+"id": "wd-Q261403",
+"q": "Q261403",
+"t": "Bir Kadın ve Bir Erkek (film)",
+"o": "A Man and a Woman",
+"y": 1966,
+"d": "Claude Lelouch",
+"line": "1966 film directed by Claude Lelouch",
+"g": [
+"agla",
+"ask",
+"nost"
+],
+"p": 47
+},
+{
+"id": "wd-Q648977",
+"q": "Q648977",
+"t": "Tanrının Eseri Şeytanın Parçası",
+"o": "The Cider House Rules",
+"y": 1999,
+"d": "Lasse Halström",
+"line": "1999 film directed by Lasse Hallström",
+"g": [
+"agla",
+"ask"
+],
+"p": 47
+},
+{
+"id": "wd-Q179460",
+"q": "Q179460",
+"t": "About Schmidt",
+"o": "About Schmidt",
+"y": 2002,
+"d": "Alexander Payne",
+"line": "2002 film directed by Alexander Payne",
+"g": [
+"agla",
+"gul"
+],
+"p": 47
+},
+{
+"id": "wd-Q313315",
+"q": "Q313315",
+"t": "Tom Jones",
+"o": "Tom Jones",
+"y": 1963,
+"d": "Tony Richardson",
+"line": "1963 British adventure comedy film directed by Tony Richardson",
+"g": [
+"agla",
+"gul",
+"nost"
+],
+"p": 47
+},
+{
+"id": "wd-Q849343",
+"q": "Q849343",
+"t": "Dilwale Dulhania Le Jayenge",
+"o": "Dilwale Dulhania Le Jayenge",
+"y": 1995,
+"d": "Aditya Chopra",
+"line": "1995 film by Aditya Chopra",
+"g": [
+"agla",
+"ask",
+"gul",
+"iyi"
+],
+"p": 47
+},
+{
+"id": "wd-Q733627",
+"q": "Q733627",
+"t": "A Place in the Sun",
+"o": "A Place in the Sun",
+"y": 1951,
+"d": "George Stevens",
+"line": "1951 film by George Stevens",
+"g": [
+"agla",
+"ask",
+"nost"
+],
+"p": 47
+},
+{
+"id": "wd-Q20735644",
+"q": "Q20735644",
+"t": "Senden Önce Ben",
+"o": "Me Before You",
+"y": 2016,
+"d": "Thea Sharrock",
+"line": "2016 tarihli romantik drama filmi",
+"g": [
+"agla",
+"ask"
+],
+"p": 47
+},
+{
+"id": "wd-Q195949",
+"q": "Q195949",
+"t": "Aman Tanrım",
+"o": "Evan Almighty",
+"y": 2007,
+"d": "Tom Shadyac",
+"line": "2007 film by Tom Shadyac",
+"g": [
+"gul"
+],
+"p": 47
+},
+{
+"id": "wd-Q17713411",
+"q": "Q17713411",
+"t": "Ted 2",
+"o": "Ted 2",
+"y": 2015,
+"d": "Seth MacFarlane",
+"line": "2015 film by Seth MacFarlane",
+"g": [
+"gul"
+],
+"p": 47
+},
+{
+"id": "wd-Q740489",
+"q": "Q740489",
+"t": "Zor Baba ve Dünür",
+"o": "Meet the Fockers",
+"y": 2004,
+"d": "Jay Roach",
+"line": "2004 film by Jay Roach",
+"g": [
+"gul"
+],
+"p": 47
+},
+{
+"id": "wd-Q14847067",
+"q": "Q14847067",
+"t": "Sihirli Orman",
+"o": "Into the Woods",
+"y": 2014,
+"d": "Rob Marshall",
+"line": "2014 film directed by Rob Marshall",
+"g": [
+"iyi"
+],
+"p": 47
+},
+{
+"id": "wd-Q24797403",
+"q": "Q24797403",
+"t": "Wicked: Part One",
+"o": "Wicked",
+"y": 2024,
+"d": "Jon M. Chu",
+"line": "2024 musical film directed by Jon M. Chu",
+"g": [
+"iyi"
+],
+"p": 47
+},
+{
+"id": "wd-Q525415",
+"q": "Q525415",
+"t": "Kalbinin sesini dinle",
+"o": "My Big Fat Greek Wedding",
+"y": 2002,
+"d": "Joel Zwick",
+"line": "2002 film by Joel Zwick",
+"g": [
+"ask",
+"gul"
+],
+"p": 47
+},
+{
+"id": "wd-Q24284798",
+"q": "Q24284798",
+"t": "Dumbo",
+"o": "Dumbo",
+"y": 2019,
+"d": "Tim Burton",
+"line": "2019 film directed by Tim Burton",
+"g": [
+"iyi"
+],
+"p": 47
+},
+{
+"id": "wd-Q124697",
+"q": "Q124697",
+"t": "1900",
+"o": "1900",
+"y": 1976,
+"d": "Bernardo Bertolucci",
+"line": "İtalya yapımı dönemsel tarih filmi",
+"g": [
+"agla",
+"ask",
+"nost"
+],
+"p": 46
+},
+{
+"id": "wd-Q324933",
+"q": "Q324933",
+"t": "Çalınan Buseler",
+"o": "Stolen Kisses",
+"y": 1968,
+"d": "François Truffaut",
+"line": "1968 film by François Truffaut",
+"g": [
+"agla",
+"ask",
+"gul",
+"nost"
+],
+"p": 46
+},
+{
+"id": "wd-Q843949",
+"q": "Q843949",
+"t": "Lagaan",
+"o": "Lagaan",
+"y": 2001,
+"d": "Ashutosh Gowariker",
+"line": "2001 film directed by Ashutosh Gowariker",
+"g": [
+"agla",
+"ask",
+"iyi"
+],
+"p": 46
+},
+{
+"id": "wd-Q352431",
+"q": "Q352431",
+"t": "Tersyüz",
+"o": "Adaptation",
+"y": 2002,
+"d": "Spike Jonze",
+"line": "2002 film directed by Spike Jonze",
+"g": [
+"agla",
+"gul"
+],
+"p": 46
+},
+{
+"id": "wd-Q239756",
+"q": "Q239756",
+"t": "Yaban Çilekleri",
+"o": "Wild Strawberries",
+"y": 1957,
+"d": "Ingmar Bergman",
+"line": "1957 film by Ingmar Bergman",
+"g": [
+"agla",
+"nost"
+],
+"p": 59
+},
+{
+"id": "wd-Q270510",
+"q": "Q270510",
+"t": "Garsoniyer",
+"o": "The Apartment",
+"y": 1960,
+"d": "Billy Wilder",
+"line": "1960 yapımı Amerikan filmi",
+"g": [
+"agla",
+"nost"
+],
+"p": 58
+},
+{
+"id": "wd-Q18402",
+"q": "Q18402",
+"t": "Sonsuz Sokaklar",
+"o": "La Strada",
+"y": 1954,
+"d": "Federico Fellini",
+"line": "1954 İtalya yapımı melodramatik film",
+"g": [
+"agla",
+"nost"
+],
+"p": 56
+},
+{
+"id": "wd-Q18199331",
+"q": "Q18199331",
+"t": "Fantastik Canavarlar: Grindelwald'ın Suçları",
+"o": "Fantastic Beasts: The Crimes of Grindelwald",
+"y": 2018,
+"d": "David Yates",
+"line": "2018 yapımı David Yates filmi",
+"g": [
+"agla"
+],
+"p": 56
+},
+{
+"id": "wd-Q464032",
+"q": "Q464032",
+"t": "Cinema Paradiso",
+"o": "Cinema Paradiso",
+"y": 1988,
+"d": "Giuseppe Tornatore",
+"line": "İtalyan sinema filmi",
+"g": [
+"agla"
+],
+"p": 56
+},
+{
+"id": "wd-Q18703032",
+"q": "Q18703032",
+"t": "Gizli Dünya",
+"o": "Room",
+"y": 2015,
+"d": "Lenny Abrahamson",
+"line": "Lenny Abrahamson'ın yönettiği 2015 yapımı drama filmi",
+"g": [
+"agla"
+],
+"p": 54
+},
+{
+"id": "wd-Q302490",
+"q": "Q302490",
+"t": "Misyon",
+"o": "The Mission",
+"y": 1986,
+"d": "Roland Joffé",
+"line": "Film",
+"g": [
+"agla"
+],
+"p": 53
+},
+{
+"id": "wd-Q212129",
+"q": "Q212129",
+"t": "İhtiras Tramvayı",
+"o": "A Streetcar Named Desire",
+"y": 1951,
+"d": "Elia Kazan",
+"line": "1951 film directed by Elia Kazan",
+"g": [
+"agla",
+"nost"
+],
+"p": 53
+},
+{
+"id": "wd-Q503638",
+"q": "Q503638",
+"t": "Easy Rider",
+"o": "Easy Rider",
+"y": 1969,
+"d": "Dennis Hopper",
+"line": "1969 film by Dennis Hopper",
+"g": [
+"agla",
+"nost"
+],
+"p": 53
+},
+{
+"id": "wd-Q325662",
+"q": "Q325662",
+"t": "Aguirre, Tanrının Gazabı",
+"o": "Aguirre, the Wrath of God",
+"y": 1972,
+"d": "Werner Herzog",
+"line": "1972 film by Werner Herzog",
+"g": [
+"agla",
+"nost"
+],
+"p": 53
+},
+{
+"id": "wd-Q901213",
+"q": "Q901213",
+"t": "Dört Nikah Bir Cenaze",
+"o": "Four Weddings and a Funeral",
+"y": 1994,
+"d": "Mike Newell",
+"line": "1994 yapımı İngiliz romantik komedi filmi",
+"g": [
+"agla"
+],
+"p": 53
+},
+{
+"id": "wd-Q4103201",
+"q": "Q4103201",
+"t": "Boyhood",
+"o": "Boyhood",
+"y": 2014,
+"d": "Richard Linklater",
+"line": "2014 film directed by Richard Linklater",
+"g": [
+"agla"
+],
+"p": 53
+},
+{
+"id": "wd-Q27959455",
+"q": "Q27959455",
+"t": "Roma",
+"o": "Roma",
+"y": 2018,
+"d": "Alfonso Cuarón",
+"line": "2018 film directed by Alfonso Cuarón",
+"g": [
+"agla"
+],
+"p": 53
+},
+{
+"id": "wd-Q645168",
+"q": "Q645168",
+"t": "The Constant Gardener (film)",
+"o": "The Constant Gardener",
+"y": 2005,
+"d": "Fernando Meirelles",
+"line": "2005 film by Fernando Meirelles",
+"g": [
+"agla"
+],
+"p": 45
+},
+{
+"id": "wd-Q640450",
+"q": "Q640450",
+"t": "Şüphe",
+"o": "Doubt",
+"y": 2008,
+"d": "John Patrick Shanley",
+"line": "2008 film",
+"g": [
+"agla"
+],
+"p": 45
+},
+{
+"id": "wd-Q918769",
+"q": "Q918769",
+"t": "Çok Gürültülü ve Çok Yakın",
+"o": "Extremely Loud and Incredibly Close",
+"y": 2011,
+"d": "Stephen Daldry",
+"line": "2011 film directed by Stephen Daldry",
+"g": [
+"agla"
+],
+"p": 45
+},
+{
+"id": "wd-Q15087230",
+"q": "Q15087230",
+"t": "Ida",
+"o": "Ida",
+"y": 2013,
+"d": "Paweł Pawlikowski",
+"line": "Film",
+"g": [
+"agla"
+],
+"p": 45
+},
+{
+"id": "wd-Q238245",
+"q": "Q238245",
+"t": "4 Ay, 3 Hafta, 2 Gün",
+"o": "4 Months, 3 Weeks and 2 Days",
+"y": 2007,
+"d": "Cristian Mungiu",
+"line": "2007 film by Cristian Mungiu",
+"g": [
+"agla"
+],
+"p": 44
+},
+{
+"id": "wd-Q257818",
+"q": "Q257818",
+"t": "Throne of Blood",
+"o": "Throne of Blood",
+"y": 1957,
+"d": "Akira Kurosava",
+"line": "Akira Kurosava'nın 1957 yapımı filmi",
+"g": [
+"agla",
+"nost"
+],
+"p": 44
+},
+{
+"id": "wd-Q465773",
+"q": "Q465773",
+"t": "Dehşet Yolcuları",
+"o": "The Wages of Fear",
+"y": 1953,
+"d": "Henri-Georges Clouzot",
+"line": "1953 çıkışlı film",
+"g": [
+"agla",
+"nost"
+],
+"p": 44
+},
+{
+"id": "wd-Q1625242",
+"q": "Q1625242",
+"t": "Günden Kalanlar",
+"o": "Günden Kalanlar",
+"y": 1993,
+"d": "James Ivory",
+"line": "James Ivory'nin yönettiği, 1993 yapımı, Kazuo Ishiguro'nun Booker Ödülü kazanan 1989 tarihli aynı adlı romanından uyarlanmış bir İngiliz-Amerikan dram filmi",
+"g": [
+"agla"
+],
+"p": 44
+},
+{
+"id": "wd-Q821346",
+"q": "Q821346",
+"t": "Berlin in Berlin",
+"o": "Berlin in Berlin",
+"y": 1993,
+"d": "Sinan Çetin",
+"line": "Sinan Çetin'in yönettiği 1993 yapımı film",
+"tr": 1,
+"g": [
+"agla",
+"nost"
+],
+"p": 6
+},
+{
+"id": "wd-Q831943",
+"q": "Q831943",
+"t": "Min Dît",
+"o": "Min Dît: The Children of Diyarbakır",
+"y": 2009,
+"d": "Miraz Bezar",
+"line": "Miraz Bezar filmi (2009)",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 6
+},
+{
+"id": "wd-Q6099462",
+"q": "Q6099462",
+"t": "Araf",
+"o": "Somewhere in Between",
+"y": 2012,
+"d": "Yeşim Ustaoğlu",
+"line": "2012 yapımı Türk dram filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 6
+},
+{
+"id": "wd-Q19726886",
+"q": "Q19726886",
+"t": "Sarmaşık",
+"o": "Ivy",
+"y": 2015,
+"d": "Tolga Karaçelik",
+"line": "Tolga Karaçelik'in 2015 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 6
+},
+{
+"id": "wd-Q21643351",
+"q": "Q21643351",
+"t": "Ekşi Elmalar",
+"o": "Eksi Elmalar",
+"y": 2016,
+"d": "Yılmaz Erdoğan",
+"line": "2016 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"gul"
+],
+"p": 6
+},
+{
+"id": "wd-Q55138246",
+"q": "Q55138246",
+"t": "En Sevdiğim Kumaş",
+"o": "My Favourite Fabric",
+"y": 2018,
+"d": "Gaya Jiji",
+"line": "2018 film",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 6
+},
+{
+"id": "wd-Q56061842",
+"q": "Q56061842",
+"t": "Sibel",
+"o": "Sibel",
+"y": 2018,
+"d": "Guillaume Giovanetti, Çağla Zencirci",
+"line": "2018 yapımı drama filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 6
+},
+{
+"id": "wd-Q7752476",
+"q": "Q7752476",
+"t": "Dağ",
+"o": "The Mountain",
+"y": 2012,
+"d": "Alper Çağlar",
+"line": "2012 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 6
+},
+{
+"id": "wd-Q7091610",
+"q": "Q7091610",
+"t": "İki Dil Bir Bavul",
+"o": "On the Way to School",
+"y": 2008,
+"d": "Özgür Doğan, Orhan Eskiköy",
+"line": "2008 yapımı Kürt–Türk sinema filmi",
+"tr": 1,
+"g": [],
+"p": 6
+},
+{
+"id": "wd-Q7124906",
+"q": "Q7124906",
+"t": "Güz Sancısı",
+"o": "Pains of Autumn",
+"y": 2009,
+"d": "Tomris Giritlioğlu",
+"line": "2008 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 6
+},
+{
+"id": "wd-Q7379552",
+"q": "Q7379552",
+"t": "Kaç Para Kaç",
+"o": "Run for Money",
+"y": 1999,
+"d": "Reha Erdem",
+"line": "1999 film by Reha Erdem",
+"tr": 1,
+"g": [
+"gul"
+],
+"p": 6
+},
+{
+"id": "wd-Q7539880",
+"q": "Q7539880",
+"t": "Prensesin Uykusu",
+"o": "Sleeping Princess",
+"y": 2010,
+"d": "Çağan Irmak",
+"line": "Yönetmenliğini Çağan Irmak'ın yaptığı film",
+"tr": 1,
+"g": [
+"agla",
+"gul"
+],
+"p": 6
+},
+{
+"id": "wd-Q7744599",
+"q": "Q7744599",
+"t": "Çöpçüler Kralı",
+"o": "The King of the Street Cleaners",
+"y": 1977,
+"d": "Zeki Ökten",
+"line": "1977 yapımı Türk komedi filmi",
+"tr": 1,
+"g": [
+"gul",
+"nost"
+],
+"p": 6
+},
+{
+"id": "wd-Q7751546",
+"q": "Q7751546",
+"t": "Maden",
+"o": "The Mine",
+"y": 1978,
+"d": "Yavuz Özkan",
+"line": "Yavuz Özkan'ın yönettiği 1978 tarihli sinema filmi",
+"tr": 1,
+"g": [
+"nost"
+],
+"p": 6
+},
+{
+"id": "wd-Q8076089",
+"q": "Q8076089",
+"t": "Züğürt Ağa",
+"o": "The Broken Landlord",
+"y": 1985,
+"d": "Nesli Çölgeçen",
+"line": "1985 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"gul",
+"nost"
+],
+"p": 6
+},
+{
+"id": "wd-Q12809917",
+"q": "Q12809917",
+"t": "Recep İvedik 6",
+"o": "Recep İvedik 6",
+"y": 2019,
+"d": "Togan Gökbakar",
+"line": "2019 yapımı Türk komedi filmi",
+"tr": 1,
+"g": [
+"gul"
+],
+"p": 6
+},
+{
+"id": "wd-Q12810220",
+"q": "Q12810220",
+"t": "Kapıcılar Kralı",
+"o": "Kapıcılar Kralı",
+"y": 1977,
+"d": "Zeki Ökten",
+"line": "1976 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"gul",
+"nost"
+],
+"p": 6
+},
+{
+"id": "wd-Q14757056",
+"q": "Q14757056",
+"t": "Fadime",
+"o": "Fadime",
+"y": 1970,
+"d": "Türker İnanoğlu",
+"line": "1970 film",
+"tr": 1,
+"g": [
+"nost"
+],
+"p": 6
+},
+{
+"id": "wd-Q19473396",
+"q": "Q19473396",
+"t": "Kırımlı",
+"o": "The Crimean",
+"y": 2014,
+"d": "Burak Arlıel",
+"line": "2014 film",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 6
+},
+{
+"id": "wd-Q47465720",
+"q": "Q47465720",
+"t": "Kelebekler",
+"o": "Butterflies",
+"y": 2018,
+"d": "Tolga Karaçelik",
+"line": "2018 film directed by Tolga Karaçelik",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 6
+},
+{
+"id": "wd-Q115634487",
+"q": "Q115634487",
+"t": "Recep İvedik 7",
+"o": "Recep İvedik 7",
+"y": 2022,
+"d": "Togan Gökbakar",
+"line": "2022 yapımı Türk komedi filmi",
+"tr": 1,
+"g": [
+"gul"
+],
+"p": 6
+},
+{
+"id": "wd-Q952672",
+"q": "Q952672",
+"t": "Propaganda",
+"o": "Propaganda",
+"y": 1999,
+"d": "Sinan Çetin",
+"line": "1999 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"gul"
+],
+"p": 6
+},
+{
+"id": "wd-Q1219034",
+"q": "Q1219034",
+"t": "Maskeli Beşler İntikam Peşinde",
+"o": "The Masked Gang",
+"y": 2005,
+"d": "Murat Aslan",
+"line": "Maskeli Beşler serisinin ilk filmi (2005)",
+"tr": 1,
+"g": [
+"gul"
+],
+"p": 6
+},
+{
+"id": "wd-Q125055432",
+"q": "Q125055432",
+"t": "Yurt",
+"o": "Dormitory",
+"y": 2023,
+"d": "Nehir Tuna",
+"line": "2023 çıkışlı Nehir Tuna filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 6
 }
 ],
 "updated": "2026-11-17",
