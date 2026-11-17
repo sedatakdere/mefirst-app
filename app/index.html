@@ -7945,6 +7945,49 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+.kb-ws{--a:#3FC1C9;--b:#5A4FCF;min-height:118px}.kb-ws .kb-tx b{font-size:24px}.kb-ws .kb-art{width:150px!important;height:96px!important;top:6px!important}
+.kb-wsp{transform-origin:105px 20px;animation:wsTilt 3s ease-in-out infinite}@keyframes wsTilt{0%,30%,100%{transform:none}50%,70%{transform:translate(-14px,-6px) rotate(-28deg)}}
+#zsh .kf-in.ws-in{background:radial-gradient(80% 45% at 20% 0%,#B8F1EC 0%,transparent 70%),radial-gradient(70% 45% at 100% 100%,#F3B8E0 0%,transparent 70%),linear-gradient(180deg,#7FD6D4,#8C86E3 70%,#A68BE0)!important;color:#fff;max-width:none!important;margin:0!important}
+html #zsh.pzmode:has(.ws-in){background:#8C86E3}
+#zsh .ws-in .kf-back,#zsh .ws-in .zs-x{background:rgba(255,255,255,.25)!important;color:#fff!important;box-shadow:none!important}
+.ws{position:relative;width:100%;flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:46px;user-select:none;-webkit-user-select:none}
+.ws-top{width:100%;max-width:440px;display:flex;align-items:center;justify-content:space-between}
+.ws-btn{width:40px;height:40px;border:0;border-radius:14px;background:rgba(255,255,255,.22);color:#fff;font-size:17px}
+.ws-lvl{text-align:center;line-height:1}.ws-lvl small{display:block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.85}.ws-lvl b{display:block;font:900 38px/1.05 var(--f-body);text-shadow:0 4px 0 rgba(60,40,140,.25),0 6px 20px rgba(255,255,255,.5)}
+.ws-hint{margin:0;font-size:13px;opacity:.92;text-align:center;min-height:18px}.ws-hint.warn{font-weight:800}
+.ws-tubes{flex:1;width:100%;max-width:440px;display:grid;grid-template-columns:repeat(var(--per,5),minmax(0,1fr));align-content:center;justify-items:center;row-gap:34px;padding:8px 4px}
+.ws-t{position:relative;border:0;background:none;padding:0;width:clamp(40px,13vw,56px);height:calc(clamp(40px,13vw,56px)*3.1);cursor:pointer;transition:transform .3s cubic-bezier(.3,.9,.4,1.2);transform-origin:50% 12%;z-index:1;-webkit-tap-highlight-color:transparent}
+.ws-t.sel{transform:translateY(-22px)}
+.ws-t.pour{z-index:5;transition:transform .32s cubic-bezier(.4,.1,.3,1)}
+.ws-t.no{animation:wsNo .35s}@keyframes wsNo{20%,60%{transform:translateX(-5px)}40%,80%{transform:translateX(5px)}}
+.ws-g{position:absolute;inset:0;border-radius:7px 7px 999px 999px;background:linear-gradient(90deg,rgba(255,255,255,.32),rgba(255,255,255,.12) 40%,rgba(255,255,255,.22));box-shadow:inset 0 0 0 2.5px rgba(255,255,255,.85),inset 0 -6px 12px rgba(80,60,160,.15),0 10px 18px -10px rgba(40,20,100,.55);overflow:hidden}
+.ws-g::before{content:"";position:absolute;left:-4px;right:-4px;top:0;height:10px;border-radius:6px;background:rgba(255,255,255,.9);box-shadow:0 2px 4px rgba(60,40,140,.25);z-index:3}
+.ws-l{position:absolute;left:3px;right:3px;bottom:3px;top:14px;display:flex;flex-direction:column-reverse;border-radius:0 0 999px 999px;overflow:hidden}
+.ws-l i{flex:0 0 calc((100% - 0px)/4);background:linear-gradient(90deg,color-mix(in srgb,var(--c) 80%,#000) 0%,var(--c) 30%,color-mix(in srgb,var(--c) 70%,#fff) 60%,var(--c) 85%,color-mix(in srgb,var(--c) 85%,#000));box-shadow:inset 0 2px 0 color-mix(in srgb,var(--c) 55%,#fff);transform-origin:50% 100%}
+.ws-l i.j{box-shadow:none}
+.ws-l i.in{animation:wsIn .45s ease-out both}@keyframes wsIn{from{transform:scaleY(0)}}
+.ws-l i.out{animation:wsOut .4s ease-in forwards}@keyframes wsOut{to{transform:scaleY(0);transform-origin:50% 0}}
+.ws-sh{position:absolute;left:18%;top:16px;bottom:16%;width:12%;border-radius:99px;background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(255,255,255,.1));z-index:2;pointer-events:none}
+.ws-cork{position:absolute;left:12%;right:12%;top:-12px;height:16px;border-radius:5px 5px 3px 3px;background:linear-gradient(180deg,#D9A877,#A9744A);box-shadow:inset 0 2px 0 rgba(255,255,255,.4),0 3px 4px rgba(60,30,10,.35);transform:translateY(-30px);opacity:0;transition:transform .45s cubic-bezier(.3,1.6,.5,1),opacity .2s;z-index:4}
+.ws-t.full .ws-cork{transform:none;opacity:1}
+.ws-t.pop{animation:wsPop .5s cubic-bezier(.3,1.6,.5,1)}@keyframes wsPop{40%{transform:scale(1.1) translateY(-6px)}}
+.ws-stream{position:absolute;width:6px;border-radius:3px;z-index:4;transform-origin:50% 0;animation:wsSt .45s ease-out both;box-shadow:0 0 6px rgba(255,255,255,.6)}
+@keyframes wsSt{from{transform:scaleY(0)}30%{transform:scaleY(1)}to{transform:scaleY(1);opacity:.6}}
+.ws-sp{position:absolute;width:7px;height:7px;border-radius:50%;z-index:6;animation:bkSh .75s cubic-bezier(.2,.7,.4,1) forwards}
+.ws-acts{display:flex;gap:12px;margin-bottom:calc(14px + env(safe-area-inset-bottom,0px))}
+.ws-act{position:relative;display:flex;align-items:center;gap:8px;height:50px;padding:0 18px 0 14px;border:0;border-radius:18px;color:#fff;background:rgba(255,255,255,.25);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35),0 4px 0 rgba(60,40,140,.25);font:800 14px var(--f-body)}
+.ws-act span{font-size:20px}.ws-act:disabled{opacity:.45}
+.ws-act i{position:absolute;top:-7px;right:-7px;min-width:22px;height:22px;border-radius:11px;display:grid;place-items:center;font:900 12px var(--f-body);font-style:normal;color:#5A2E00;background:linear-gradient(160deg,#FFE9A8,#F5B841);box-shadow:0 2px 0 rgba(60,20,90,.3)}
+.ws-ov{position:absolute;inset:-46px -16px 0;z-index:20;display:grid;place-items:center;background:rgba(60,40,140,.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);animation:fadeIn .3s}
+.ws-card{width:min(300px,82vw);padding:24px 22px 20px;border-radius:28px;text-align:center;color:#3A2A7A;background:linear-gradient(170deg,#FFFFFF,#EEF0FF);box-shadow:0 30px 60px -20px rgba(40,20,100,.6);animation:bkIn .45s cubic-bezier(.2,1.4,.4,1)}
+.ws-stars{display:flex;justify-content:center;gap:6px;margin-bottom:6px}.ws-stars span{font-size:44px;color:#D9D6EE;filter:drop-shadow(0 3px 0 rgba(60,40,140,.15))}
+.ws-stars span.on{color:#FFC93C;animation:wsStar .5s cubic-bezier(.3,1.8,.5,1) both;animation-delay:var(--d)}@keyframes wsStar{from{transform:scale(0) rotate(-40deg)}}
+.ws-stars span:nth-child(2){transform:translateY(-8px);font-size:52px}
+.ws-card small{display:block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#8C86E3}
+.ws-card>b{display:block;font:900 30px/1.2 var(--f-body);margin:4px 0}.ws-card>span{display:block;font-size:13px;opacity:.65;margin-bottom:16px}
+.ws-go{width:100%;height:52px;border:0;border-radius:16px;background:linear-gradient(135deg,#3FC1C9,#5A4FCF);color:#fff;font:800 16px var(--f-body);box-shadow:0 12px 24px -12px #5A4FCF}
+.ws-card .bk2-du{color:#C2457F}
+
 .bk2-lv{width:100%;max-width:440px;display:flex;align-items:center;gap:10px;margin:-4px 0 -2px}
 .bk2-lvb{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:#FFE6A8}
 .bk2-lvb i{font-style:normal;min-width:26px;height:26px;padding:0 6px;box-sizing:border-box;border-radius:9px;display:grid;place-items:center;font:900 14px/1 var(--f-body);color:#5A2E00;background:linear-gradient(160deg,#FFE9A8,#F5B841);box-shadow:inset 0 2px 0 rgba(255,255,255,.6),inset 0 -3px 0 rgba(150,80,0,.35),0 3px 0 rgba(60,20,90,.4)}
@@ -18996,6 +19039,75 @@ function bkMisPaint(){const e=document.getElementById("bk2-ms");if(!e)return;con
    bkEv("score",BK.sc);setTimeout(()=>{if(BK.g.every(v=>v<0))bkEv("clean");},800);}catch(e){console.error(e);}return ok;};
  const _o=bkOver;bkOver=function(){_o.apply(this,arguments);try{bkEv("over");bkXp(Math.round(BK.sc/40));}catch(e){}};
 })();
+
+/* ===== v0.73 Renk Sırala: şişelerdeki renkli suları ayır — sakin, süresiz, bölüm bölüm ===== */
+const WS_C=["#FF6FA8","#FF8A5B","#FFD24A","#4FD18B","#2EC4C9","#4C8DFF","#8E6CFF","#E5484D","#D69CFF","#A6E05A","#9B6A4A","#FFFFFF"];
+const WS_CAP=4;let WS=null,WSB=false;
+function wsG2(){return st.games2=st.games2||{};}
+function wsSndOn(){return wsG2().wsSnd!==0;}
+function wsSnd(k,x){if(!wsSndOn())return;try{const C=sndCtx();if(!C||C.state!=="running")return;const m=C.createGain();m.gain.value=.5;m.connect(C.destination);const t=C.currentTime+.01;
+ if(k==="sel")sndTone(C,m,t,720,.08,"sine",.22,.003,980);
+ else if(k==="bad")sndTone(C,m,t,240,.16,"sine",.2,.004,170);
+ else if(k==="pour"){const n=Math.max(2,(x||1)*2);for(let i=0;i<n;i++){const f=260+Math.random()*90+i*14;sndTone(C,m,t+.05+i*.11,f,.12,"sine",.3,.004,f*.55);sndTone(C,m,t+.09+i*.11,f*2.2,.05,"sine",.06,.002);}}
+ else if(k==="done"){[880,1175,1568].forEach((f,i)=>sndBell(C,m,t+i*.08,f,.7,.12));}
+ else if(k==="win"){[523,659,784,1047,1319,1568,2093].forEach((f,i)=>sndBell(C,m,t+i*.09,f,.9,.13));}}catch(e){}}
+function wsRand(seed){let x=(seed*2654435761)%2147483647||11;return()=>(x=x*48271%2147483647)/2147483647;}
+function wsTop(t){if(!t.length)return [-1,0];const c=t[t.length-1];let n=0;for(let i=t.length-1;i>=0&&t[i]===c;i--)n++;return [c,n];}
+function wsCan(T,a,b){if(a===b||!T[a].length||T[b].length>=WS_CAP)return 0;const [c,n]=wsTop(T[a]);if(T[b].length&&T[b][T[b].length-1]!==c)return 0;return Math.min(n,WS_CAP-T[b].length);}
+function wsSolved(T){return T.every(t=>!t.length||(t.length===WS_CAP&&t.every(x=>x===t[0])));}
+function wsSolvable(T0){const seen=new Set(),key=T=>T.map(t=>t.join(",")).sort().join("|");const st2=[T0.map(t=>t.slice())];let n=0;
+ while(st2.length){const T=st2.pop();if(wsSolved(T))return true;const k=key(T);if(seen.has(k))continue;seen.add(k);if(++n>60000)return false;
+  for(let a=0;a<T.length;a++)for(let b=0;b<T.length;b++){const m=wsCan(T,a,b);if(!m)continue;const [c,nn]=wsTop(T[a]);if(!T[b].length&&nn===T[a].length)continue;const U=T.map(t=>t.slice());for(let i=0;i<m;i++)U[b].push(U[a].pop());st2.push(U);}}return false;}
+function wsMake(lv){const nc=Math.min(3+Math.floor((lv+1)/2),11);for(let s=0;s<40;s++){const r=wsRand(lv*7919+s*104729+17);const pool=[];for(let c=0;c<nc;c++)for(let k=0;k<WS_CAP;k++)pool.push(c);
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}const T=[];for(let c=0;c<nc;c++)T.push(pool.slice(c*WS_CAP,c*WS_CAP+WS_CAP));T.push([],[]);
+  if(!wsSolved(T)&&!T.some(t=>t.length&&t.every(x=>x===t[0]))&&wsSolvable(T))return T;}const T=[];for(let c=0;c<nc;c++)T.push([c,c,c,(c+1)%nc]);T.push([],[]);return T;}
+function wsLvMax(){return +wsG2().wsLv||1;}
+function wsStart(lv){WS={lv,T:wsMake(lv),H:[],undo:3,plus:1,used:0,mv:0,sel:-1,won:0};wsSave();}
+function wsSave(){const o=Object.assign({},WS);o.H=WS.H.slice(-30);wsG2().ws=o;try{save();}catch(e){}}
+function wsLoad(){const o=wsG2().ws;if(o&&Array.isArray(o.T)&&!o.won){WS=Object.assign({},o,{sel:-1});return true;}return false;}
+function wsTubeHTML(t,i){return `<button type="button" class="ws-t${WS.sel===i?" sel":""}${t.length===WS_CAP&&t.every(x=>x===t[0])?" full":""}" data-t="${i}" aria-label="Şişe ${i+1}"><span class="ws-g"><span class="ws-l">${t.map((c,k)=>`<i style="--c:${WS_C[c]}"${t[k+1]===c?' class="j"':""}></i>`).join("")}</span><span class="ws-sh"></span></span><span class="ws-cork"></span></button>`;}
+function wsHTML(){return `<div class="ws" id="ws"><div class="ws-top"><button type="button" class="ws-btn" id="ws-snd" aria-label="Ses">${wsSndOn()?"🔊":"🔇"}</button><div class="ws-lvl"><small>Bölüm</small><b id="ws-lv">${WS.lv}</b></div><button type="button" class="ws-btn" id="ws-re" aria-label="Baştan">↻</button></div>
+ <p class="ws-hint" id="ws-hint">Bir şişeye dokun, sonra dökmek istediğin şişeye.</p><div class="ws-tubes" id="ws-tubes"></div><div class="ws-stream" id="ws-stream" hidden></div>
+ <div class="ws-acts"><button type="button" class="ws-act" id="ws-undo"><span>↶</span><b>Geri al</b><i id="ws-un">${WS.undo}</i></button><button type="button" class="ws-act" id="ws-add"><span>＋</span><b>Boş şişe</b><i id="ws-pl">${WS.plus}</i></button></div><div class="ws-ov" id="ws-ov" hidden></div></div>`;}
+function wsPaint(){const E=document.getElementById("ws-tubes");if(!E)return;const n=WS.T.length,per=n<=5?n:n<=10?Math.ceil(n/2):Math.ceil(n/3);E.style.setProperty("--per",per);E.innerHTML=WS.T.map(wsTubeHTML).join("");
+ document.getElementById("ws-un").textContent=WS.undo;document.getElementById("ws-pl").textContent=WS.plus;document.getElementById("ws-undo").disabled=!WS.H.length||!WS.undo;document.getElementById("ws-add").disabled=!WS.plus;
+ const lv=document.getElementById("ws-lv");if(lv)lv.textContent=WS.lv;}
+function wsTap(i){if(WSB||WS.won)return;sndCtx();if(WS.sel<0){if(!WS.T[i].length)return;WS.sel=i;wsSnd("sel");wsPaint();return;}
+ if(WS.sel===i){WS.sel=-1;wsPaint();return;}const a=WS.sel,m=wsCan(WS.T,a,i);if(!m){if(WS.T[i].length){WS.sel=i;wsSnd("sel");}else{wsSnd("bad");WS.sel=-1;}wsPaint();const t=document.querySelector(`.ws-t[data-t="${i}"]`);if(t&&!m&&WS.sel!==i){t.classList.add("no");setTimeout(()=>t.classList.remove("no"),350);}return;}
+ wsPour(a,i,m);}
+function wsPour(a,b,m){WSB=true;const E=document.getElementById("ws-tubes");const A=E.querySelector(`.ws-t[data-t="${a}"]`),B=E.querySelector(`.ws-t[data-t="${b}"]`);const ra=A.getBoundingClientRect(),rb=B.getBoundingClientRect();
+ const left=rb.left>=ra.left;const dx=rb.left-ra.left+(left?-ra.width*.55:ra.width*.55),dy=rb.top-ra.top-ra.height*.62;const c=WS_C[wsTop(WS.T[a])[0]];
+ A.classList.add("pour");A.style.transform=`translate(${dx}px,${dy}px) rotate(${left?72:-72}deg)`;wsSnd("pour",m);
+ setTimeout(()=>{const S=document.getElementById("ws-stream"),W=document.getElementById("ws").getBoundingClientRect();S.hidden=false;S.style.cssText=`left:${rb.left-W.left+rb.width/2-3}px;top:${rb.top-W.top-rb.height*.22}px;height:${rb.height*.9}px;background:${c}`;
+  WS.H.push(WS.T.map(t=>t.slice()));for(let k=0;k<m;k++)WS.T[b].push(WS.T[a].pop());WS.mv++;
+  const BL=B.querySelector(".ws-l");const tb=WS.T[b];BL.innerHTML=tb.map((cc,k)=>`<i style="--c:${WS_C[cc]}" class="${k>=tb.length-m?"in":""}${tb[k+1]===cc?" j":""}"></i>`).join("");const AL=A.querySelector(".ws-l");[...AL.children].slice(-m).forEach(x=>x.classList.add("out"));
+  setTimeout(()=>{S.hidden=true;A.style.transform="";setTimeout(()=>{A.classList.remove("pour");WS.sel=-1;WSB=false;const full=tb.length===WS_CAP&&tb.every(x=>x===tb[0]);wsPaint();
+   if(full){wsSnd("done");const t=document.querySelector(`.ws-t[data-t="${b}"]`);if(t){t.classList.add("pop");wsSpark(t,WS_C[tb[0]]);}try{navigator.vibrate&&navigator.vibrate(18);}catch(e){}}
+   if(wsSolved(WS.T))setTimeout(wsWin,full?500:150);else if(!wsAnyMove()&&!WS.undo&&!WS.plus)wsStuck();wsSave();},300);},460);},330);}
+function wsAnyMove(){for(let a=0;a<WS.T.length;a++)for(let b=0;b<WS.T.length;b++)if(wsCan(WS.T,a,b))return true;return false;}
+function wsSpark(t,c){const W=document.getElementById("ws"),r=t.getBoundingClientRect(),R=W.getBoundingClientRect();for(let i=0;i<12;i++){const d=document.createElement("b");d.className="ws-sp";const a=-Math.PI/2+(Math.random()-.5)*2.2,v=40+Math.random()*50;
+ d.style.cssText=`left:${r.left-R.left+r.width/2}px;top:${r.top-R.top+8}px;background:${i%3?c:"#fff"};--dx:${Math.cos(a)*v}px;--dy:${Math.sin(a)*v}px`;W.appendChild(d);setTimeout(()=>d.remove(),800);}}
+function wsWin(){WS.won=1;const st3=WS.used===0?3:WS.used<=2?2:1;const G=wsG2();G.wsLv=Math.max(wsLvMax(),WS.lv+1);G.wsStars=(G.wsStars||0)+st3;wsSave();wsSnd("win");try{navigator.vibrate&&navigator.vibrate([20,40,20,40,30]);}catch(e){}
+ try{if(CP.c){const x=rsFind({k:"oyun",v:"ws"});if(x)rsPatch(x,z=>{z.lv=Object.assign({},z.lv||{},{[rsMe()]:wsLvMax()});return z;});}}catch(e){}
+ try{if(typeof bkXp==="function"){}}catch(e){}
+ const O=document.getElementById("ws-ov");O.hidden=false;O.innerHTML=`<div class="ws-card"><div class="ws-stars">${[1,2,3].map(k=>`<span class="${k<=st3?"on":""}" style="--d:${k*.15}s">★</span>`).join("")}</div><small>Bölüm ${WS.lv}</small><b>Tamamlandı!</b><span>${WS.mv} hamle${WS.used?` · ${WS.used} yardım`:""}</span>
+  <button type="button" class="ws-go" id="ws-next">Sonraki bölüm →</button><button type="button" class="bk2-du" id="ws-duel"><span class="rsm-i">${RS_HEART}</span>Ruh eşine meydan oku</button></div>`;
+ O.querySelector("#ws-next").onclick=()=>{O.hidden=true;wsStart(WS.lv+1);wsPaint();};O.querySelector("#ws-duel").onclick=()=>{try{rsDuel({k:"oyun",v:"ws"});}catch(e){}};}
+function wsStuck(){const h=document.getElementById("ws-hint");if(h){h.textContent="Hamle kalmadı; baştan dene 🙂";h.classList.add("warn");}}
+function wsBind(){wsPaint();const E=document.getElementById("ws-tubes");E.onclick=e=>{const t=e.target.closest(".ws-t");if(t)wsTap(+t.dataset.t);};
+ document.getElementById("ws-snd").onclick=e=>{wsG2().wsSnd=wsSndOn()?0:1;try{save();}catch(x){}e.currentTarget.textContent=wsSndOn()?"🔊":"🔇";};
+ document.getElementById("ws-re").onclick=()=>{if(WSB)return;const lv=WS.lv;WS={lv,T:wsMake(lv),H:[],undo:3,plus:1,used:0,mv:0,sel:-1,won:0};wsSave();wsPaint();const h=document.getElementById("ws-hint");if(h){h.classList.remove("warn");h.textContent="Yeniden başladın; acele yok 🌿";}};
+ document.getElementById("ws-undo").onclick=()=>{if(WSB||!WS.H.length||!WS.undo)return;WS.T=WS.H.pop();WS.undo--;WS.used++;WS.sel=-1;wsSnd("sel");wsSave();wsPaint();};
+ document.getElementById("ws-add").onclick=()=>{if(WSB||!WS.plus)return;WS.plus--;WS.used++;WS.T.push([]);WS.sel=-1;wsSnd("done");wsSave();wsPaint();};
+ if(WS.won){WS.won=0;wsWin();}}
+function wsCard(){const lv=wsLvMax();const tube=(x,cs)=>`<g transform="translate(${x} 10)"><rect x="0" y="0" width="22" height="70" rx="11" fill="rgba(255,255,255,.28)" stroke="rgba(255,255,255,.8)" stroke-width="2"/>${cs.map((c,i)=>`<rect x="3" y="${54-i*15}" width="16" height="${i?15:13}" ${i?"":'rx="7"'} fill="${WS_C[c]}"/>`).join("")}<rect x="5" y="6" width="3.5" height="50" rx="1.7" fill="#fff" opacity=".55"/></g>`;
+ return `<button type="button" class="kb kb-ws wide" data-kv="ws" style="--i:0"><span class="kb-new">YENİ</span><span class="kb-art no-mi"><svg viewBox="0 0 140 90">${tube(30,[0,4,0,6])}${tube(62,[4,6,4])}<g class="kb-wsp">${tube(94,[6,0,6,4])}</g></svg></span><span class="kb-tx"><b>Renk Sırala</b><small>${lv>1?`Bölüm ${lv} · ⭐ ${wsG2().wsStars||0}`:"Renkli suları şişelere ayır; acele yok"}</small></span></button>`;}
+(function(){const _k=keyRender;keyRender=function(){if(kv==="ws"){try{clearInterval(kTm);}catch(e){}const O=document.getElementById("zsh");O.classList.add("pzmode");if(!WS&&!wsLoad())wsStart(wsLvMax());
+  O.innerHTML=`<div class="ob-in zs-in kf-in ws-in"><button class="zs-x" type="button" id="zs-x" aria-label="Kapat">✕</button><button class="kf-back" type="button" data-kv="hub" aria-label="Keyif köşeme geri dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Geri</span></button>${wsHTML()}</div>`;
+  document.getElementById("zs-x").onclick=zodClose;O.scrollTop=0;requestAnimationFrame(wsBind);try{rsDuelFab({k:"oyun",v:"ws"});}catch(e){}return;}
+ _k.apply(this,arguments);if(kv==="hub"){const b=document.querySelector("#zsh .kb-blk");if(b&&!document.querySelector("#zsh .kb-ws")){b.insertAdjacentHTML("afterend",wsCard());}}};})();
+RS_G.ws=["Renk Sırala bölüm yarışı","Kim daha ileride?"];
+(function(){const _l=rsLv;rsLv=function(v){if(v==="ws")return wsLvMax();return _l.apply(this,arguments);};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
