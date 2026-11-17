@@ -177,6 +177,51 @@ for w in W[:80]:
     except Exception as x:
         print("katalog hata", q, x)
     time.sleep(0.3)
+# ---- Me First Sineması: Wikidata'dan sevilen filmlerle kataloğu büyüt (her turda en çok TOHUM_N yeni film) ----
+TOHUM_N = int(os.environ.get("TOHUM_N", "160"))
+GMAP = {"Q1054574": "ask", "Q860626": "ask", "Q157443": "gul", "Q859369": "gul", "Q130232": "agla", "Q842256": "iyi"}
+BAD = {"Q2484376", "Q200092", "Q185529", "Q1342372", "Q20442589", "Q1270142", "Q2421031", "Q959790", "Q7174604"}
+def sparql(q):
+    req = urllib.request.Request("https://query.wikidata.org/sparql?" + urllib.parse.urlencode({"query": q, "format": "json"}), headers={**UA, "Accept": "application/sparql-results+json"})
+    with urllib.request.urlopen(req, timeout=90) as r: return json.loads(r.read().decode("utf-8"))["results"]["bindings"]
+def tohum():
+    G = " ".join("wd:" + g for g in GMAP)
+    qs = [f"""SELECT ?f (SAMPLE(?sl) AS ?s) (GROUP_CONCAT(DISTINCT STRAFTER(STR(?g),"entity/");separator=",") AS ?gs) WHERE {{
+      ?f wdt:P31 wd:Q11424; wikibase:sitelinks ?sl; wdt:P136 ?g. VALUES ?g {{ {G} }}
+      ?a schema:about ?f; schema:isPartOf <https://tr.wikipedia.org/>. ?f wdt:P577 ?d. FILTER(YEAR(?d) >= 1950) FILTER(?sl > 45)
+    }} GROUP BY ?f ORDER BY DESC(?s) LIMIT 700""",
+          """SELECT ?f (SAMPLE(?sl) AS ?s) (GROUP_CONCAT(DISTINCT STRAFTER(STR(?g),"entity/");separator=",") AS ?gs) WHERE {
+      ?f wdt:P31 wd:Q11424; wdt:P495 wd:Q43; wikibase:sitelinks ?sl. OPTIONAL { ?f wdt:P136 ?g. }
+      ?a schema:about ?f; schema:isPartOf <https://tr.wikipedia.org/>. FILTER(?sl > 6)
+    } GROUP BY ?f ORDER BY DESC(?s) LIMIT 250"""]
+    out = []
+    for i, q in enumerate(qs):
+        try:
+            for b in sparql(q):
+                qid = b["f"]["value"].rsplit("/", 1)[-1]
+                gs = set((b.get("gs") or {}).get("value", "").split(",")) - {""}
+                if gs & BAD: continue
+                out.append((int(b["s"]["value"]), qid, gs, i == 1))
+        except Exception as e: print("SPARQL hata", i, e)
+        time.sleep(2)
+    out.sort(key=lambda x: -x[0])
+    return out
+eklenen = 0
+for sl, qid, gs, yerli in (tohum() if TOHUM_N > 0 else []):
+    if eklenen >= TOHUM_N: break
+    if "wd-" + qid in have: continue
+    try:
+        f = wd_film(qid)
+        if not f or fold(f["o"]) in have_names: continue
+        g = sorted({GMAP[x] for x in gs if x in GMAP} | ({"gul"} if "Q860626" in gs else set()))
+        if f["y"] < 1985 or (yerli and f["y"] < 1995): g.append("nost")
+        if yerli: f["tr"] = 1
+        f["g"] = sorted(set(g)); f["p"] = sl
+        kat["films"].append(f); have.add(f["id"]); have_names.add(fold(f["o"])); eklenen += 1
+        print("SİNEMA +", f["id"], f["t"], f["y"], f["g"])
+    except Exception as x: print("tohum hata", qid, x)
+    time.sleep(0.25)
+print("Sinemaya eklenen:", eklenen, "toplam katalog:", len(kat.get("films", [])))
 for f in kat.get("films", []): films.setdefault(f["id"], (f["t"], f["o"], f["y"]))
 kat["updated"] = time.strftime("%Y-%m-%d")
 json.dump(kat, open(katp, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
