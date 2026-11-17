@@ -7947,6 +7947,28 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+.bz-sec{display:flex;align-items:baseline;gap:8px;margin:26px 4px 10px;font-family:var(--f-display);font-weight:400;font-size:26px;color:#fff}
+.bz-sec>span{font-size:18px;color:#FFD27A;align-self:center}.bz-sec small{margin-left:auto;font-family:var(--f-body);font-size:12px;font-weight:700;opacity:.6}
+.bz-card{margin:10px 0!important}
+.bz-ey{display:block;font-size:10.5px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#FFD27A;opacity:.85;margin-bottom:2px}
+.bz-moonc{background:radial-gradient(120% 140% at 0% 0%,#3D2E7A,#1A1240)!important}
+.bz-moonc .bz-moon{background:none;padding:0}.bz-gi{font-style:normal;color:#FFD27A}.bz-phx{margin:10px 0 0;font-size:13.5px;opacity:.85}
+.bz-theme{background:linear-gradient(160deg,rgba(255,210,122,.16),rgba(255,143,184,.08))!important}.bz-theme .bz-hs{margin:0 0 6px}.bz-theme .bz-lead{margin:4px 0 0;font-size:21px}
+.bz-tri{display:grid;grid-template-columns:1fr;gap:8px;margin:10px 0}
+.bz-mini{display:grid;grid-template-columns:34px 1fr;column-gap:10px;align-items:start;padding:12px 14px;border-radius:18px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+.bz-mini i{grid-row:span 2;width:34px;height:34px;border-radius:12px;display:grid;place-items:center;font-style:normal;font-size:16px;color:#fff}
+.bz-mini.k1 i{background:linear-gradient(135deg,#FF8FB8,#E0457F)}.bz-mini.k2 i{background:linear-gradient(135deg,#FFD27A,#E6A91F)}.bz-mini.k3 i{background:linear-gradient(135deg,#7FE0C2,#2FA585)}
+.bz-mini b{font-size:13px;color:#fff}.bz-mini p{margin:2px 0 0;font-size:14px;line-height:1.45;opacity:.9}
+.bz-meter .bz-bars{margin:8px 0 12px}
+.bz-hero .bz-acts{margin:14px 0 10px}.bz-hero .bz-pol{margin:0}
+.bz-uy{padding-top:12px!important}
+/* uygulama geneli: geri tuşları sade yuvarlak ikon */
+html body .kf-back{width:42px!important;height:42px!important;padding:0!important;justify-content:center!important;border-radius:50%!important;gap:0!important}
+html body .kf-back span{display:none!important}html body .kf-back svg{width:22px!important;height:22px!important;margin:0!important}html body .kf-back::before{content:none!important}
+.back,.g-back,.kt-back,.kx-back,.mfr-back,.mw-back{font-size:0!important;width:42px!important;min-width:42px;height:42px!important;padding:0!important;border-radius:50%!important;display:inline-grid!important;place-items:center;flex:none}
+.back::before,.g-back::before,.kt-back::before,.kx-back::before,.mfr-back::before,.mw-back::before{content:"";width:22px;height:22px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15 5l-7 7 7 7' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15 5l-7 7 7 7' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.sf-back{font-size:22px!important;width:42px;height:42px;border-radius:50%}
+
 .bz-hero .bz-acts{margin-top:12px}
 .bz-acts{display:flex;align-items:stretch;gap:8px;margin-top:12px}.bz-acts .bz-pol{flex:1;margin:0}
 .rs-chip{border:0;border-radius:16px;padding:0 14px;background:rgba(255,255,255,.12);color:#FFC2D8;font:800 12px var(--f-body);box-shadow:inset 0 0 0 1px rgba(255,143,184,.35)}
@@ -19523,22 +19545,23 @@ function bzHTML(me){const D=bzDaily(me),P=st.prof||{};const name=(st.name||"").t
  <div class="bz-sky" aria-hidden="true">${Array.from({length:26},(_,i)=>`<i style="--x:${(i*37)%100}%;--y:${(i*53)%100}%;--d:${(i%7)*.4}s"></i>`).join("")}</div>
  <div class="bz-hero"><small>${name?esc(name)+", ":""}büyük üçlün</small><div class="bz-big3">${bzMed("Güneş",me.sun,"özün","bzm-s")}${bzMed("Ay",me.moon,me.moonApprox?"duyguların · yaklaşık":"duyguların","bzm-m")}${bzMed("Yükselen",me.asc,me.asc?"dışarıdan görünüşün":"saatini ekle","bzm-a"+(me.asc?"":" bzm-off"))}</div>
   <p class="bz-sum">☀️ ${SUN_TXT[me.sun]} ${me.moon?`🌙 ${MOON_TXT[me.moon]}`:""} ${me.asc?`🌅 ${ASC_TXT[me.asc][0]}.`:""}</p>
+  <div class="bz-acts"><button type="button" class="bz-pol" id="bz-pol"><span class="bk-pzi" aria-hidden="true"></span><span><b>Polaroidle</b><small>Story stüdyosu</small></span></button><span id="bz-rs"></span></div>
   <button type="button" class="bz-edit" id="bz-edit">${me.asc?"Doğum bilgilerimi düzenle":"Doğum saatimi ekle, yükselenim çıksın"}</button></div>
- <section class="bz-card bz-day"><div class="bz-ch"><b>Bugün gökyüzü</b><small>${today}</small></div>
-  <div class="bz-moon"><span class="bz-ph" style="--ill:${D.sky.ill}%;--dir:${D.sky.el<180?1:-1}"></span><div><b>Ay bugün ${D.sky.ms} burcunda ${ZG(D.sky.ms)}︎</b><small>${D.ph[0]} · %${D.sky.ill} aydınlık · ${D.ph[1]}</small></div></div>
-  <div class="bz-hs"><span>${D.hi+1}. ev</span><b>${D.H.n}</b></div><p class="bz-lead">${D.g}</p>
-  <div class="bz-rows"><div><i>♥</i><b>Aşk</b><p>${D.a}</p></div><div><i>✦</i><b>Kariyer & para</b><p>${D.k}</p></div><div><i>❀</i><b>Sağlık & enerji</b><p>${D.s}</p></div></div>
-  <div class="bz-bars">${bar("Aşk",D.m.ask,"#FF8FB8")}${bar("Kariyer",D.m.kar,"#FFD27A")}${bar("Enerji",D.m.enj,"#7FE0C2")}${bar("Şans",D.m.sans,"#B9A2FF")}</div>
-  <div class="bz-luck"><span><i style="background:${D.dc[1]}"></i>Şanslı rengin <b>${D.dc[0]}</b></span><span>Sayın <b>${D.ln}</b></span><span>Saatin <b>${String(D.hr).padStart(2,"0")}:00</b></span></div>
-  <p class="bz-tip">💫 <b>Günün tavsiyesi:</b> ${D.t}</p>
-  <div class="bz-acts"><button type="button" class="bz-pol" id="bz-pol"><span class="bk-pzi" aria-hidden="true"></span><span><b>Polaroidle</b><small>Sadece kendi burcum</small></span></button><span id="bz-rs"></span></div></section>
- <section class="bz-card bz-uy"><div class="bz-ch"><b>Burç uyumu</b><small>${me.sun} ile</small></div>
+<h3 class="bz-sec"><span>☾</span>Bugün<small>${today}</small></h3>
+ <section class="bz-card bz-moonc"><div class="bz-moon"><span class="bz-ph" style="--ill:${D.sky.ill}%;--dir:${D.sky.el<180?1:-1}"></span><div><small class="bz-ey">Gökyüzü</small><b>Ay bugün ${D.sky.ms} burcunda <i class="bz-gi">${ZG(D.sky.ms)}\uFE0E</i></b><small>${D.ph[0]} · %${D.sky.ill} aydınlık</small></div></div><p class="bz-phx">${D.ph[1]}</p></section>
+ <section class="bz-card bz-theme"><div class="bz-hs"><span>${D.hi+1}. ev</span><b>${D.H.n}</b></div><p class="bz-lead">${D.g}</p></section>
+ <div class="bz-tri"><div class="bz-mini k1"><i>♥</i><b>Aşk</b><p>${D.a}</p></div><div class="bz-mini k2"><i>✦</i><b>Kariyer & para</b><p>${D.k}</p></div><div class="bz-mini k3"><i>❀</i><b>Sağlık & enerji</b><p>${D.s}</p></div></div>
+ <section class="bz-card bz-meter"><small class="bz-ey">Günün enerjisi</small><div class="bz-bars">${bar("Aşk",D.m.ask,"#FF8FB8")}${bar("Kariyer",D.m.kar,"#FFD27A")}${bar("Enerji",D.m.enj,"#7FE0C2")}${bar("Şans",D.m.sans,"#B9A2FF")}</div>
+  <div class="bz-luck"><span><i style="background:${D.dc[1]}"></i>Renk <b>${D.dc[0]}</b></span><span>Sayı <b>${D.ln}</b></span><span>Saat <b>${String(D.hr).padStart(2,"0")}:00</b></span></div>
+  <p class="bz-tip">💫 <b>Günün tavsiyesi:</b> ${D.t}</p></section>
+ <h3 class="bz-sec"><span>✦</span>Burç uyumu<small>${me.sun} ile</small></h3>
+ <section class="bz-card bz-uy">
   <div class="bz-ppl">${ppl.map(p=>`<button type="button" data-bzw="${p.id}" aria-pressed="${!BZC.pick&&(BZC.who?BZC.who===p.id:p===ppl[0])}"><span>${ZG(p.sun)}︎</span><b>${esc(p.n)}</b></button>`).join("")}<button type="button" data-bzw="any" aria-pressed="${!!BZC.pick}"><span>✦</span><b>Bir burç seç</b></button></div>
   ${BZC.open||!tgt?`<div class="bz-zg">${ZS.map(z=>`<button type="button" data-bzz="${z}" aria-pressed="${BZC.pick===z}"><span>${ZG(z)}︎</span>${z}</button>`).join("")}</div>`:""}
   ${C?`<div class="bz-res"><div class="bz-pair"><span>${ZG(me.sun)}︎</span>${ring(C.all)}<span>${ZG(tgt)}︎</span></div><b class="bz-rt">${me.sun} & ${tgt}${tn&&!BZC.pick?` · ${esc(tn)}`:""}</b><em class="bz-rl">${C.R[0]}</em><p>${C.R[1]} ${C.el}</p>
    <div class="bz-bars">${bar("Aşk",C.ask,"#FF8FB8")}${bar("İletişim",C.ilet,"#7FC8FF")}${bar("Güven",C.guv,"#7FE0C2")}${bar("Tutku",C.tut,"#FFB36B")}</div>
-   <button type="button" class="bz-pol sm" id="bz-pol2"><span class="bk-pzi" aria-hidden="true"></span><span><b>Uyumumuzu paylaş</b><small>Polaroidle</small></span></button></div>`:`<p class="bz-empty">Ruh eşin bağlanınca, çocuklarını ya da arkadaşlarını ekleyince burada çıkar. Şimdilik bir burç seç.</p>`}</section>
- <section class="bz-card bz-fr"><div class="bz-ch"><b>Arkadaşının yükseleni</b></div><div id="bz-za"></div></section>
+</div>`:`<p class="bz-empty">Ruh eşin bağlanınca, çocuklarını ya da arkadaşlarını ekleyince burada çıkar. Şimdilik bir burç seç.</p>`}</section>
+ <h3 class="bz-sec"><span>↑</span>Arkadaşının yükseleni</h3><section class="bz-card bz-fr"><div id="bz-za"></div></section>
  <p class="zs-fine bz-fine">Burç yorumları eğlence ve ilham içindir; bilimsel bir iddiası yoktur. Gökyüzü konumları gerçek hesaplanır ✨</p></div>`;}
 function bzSetup(){const P=st.prof=st.prof||{};const b=P.birth||{};let city=b.city;if(!city){try{city=(mfCity()||{}).name;}catch(e){}}city=city||"İstanbul";
  return `<div class="ob-in zs-in bz-in"><button class="zs-x" type="button" id="zs-x" aria-label="Kapat">✕</button><button class="kf-back" type="button" data-kv="hub" aria-label="Keyif köşeme geri dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Geri</span></button>
@@ -19555,14 +19578,14 @@ zodRender=function(){const O=document.getElementById("zsh");const P=st.prof=st.p
  O.innerHTML=bzHTML(me);const q=id=>O.querySelector("#"+id);q("zs-x").onclick=zodClose;q("bz-edit").onclick=()=>{BZC.edit=1;zodRender();O.scrollTop=0;};
  O.querySelectorAll("[data-bzw]").forEach(b=>b.onclick=()=>{const v=b.dataset.bzw;if(v==="any"){BZC.open=!BZC.open;}else{BZC.who=v;BZC.pick=null;BZC.open=0;}const y=O.scrollTop;zodRender();O.scrollTop=y;});
  O.querySelectorAll("[data-bzz]").forEach(b=>b.onclick=()=>{BZC.pick=b.dataset.bzz;BZC.open=0;const y=O.scrollTop;zodRender();O.scrollTop=y;try{sndPlay("bowl");}catch(e){}});
- q("bz-pol").onclick=()=>bzStudio(me,null);const p2=q("bz-pol2");if(p2)p2.onclick=()=>{const ppl=bzPeople();const t=BZC.pick||(BZC.who&&(ppl.find(p=>p.id===BZC.who)||{}).sun)||(ppl[0]&&ppl[0].sun);const n=BZC.pick?"":(BZC.who?(ppl.find(p=>p.id===BZC.who)||{}).n:(ppl[0]&&ppl[0].n));bzStudio(me,{sign:t,n});};
+ q("bz-pol").onclick=()=>{const ppl=bzPeople();const t=BZC.pick||(BZC.who&&(ppl.find(p=>p.id===BZC.who)||{}).sun)||(ppl[0]&&ppl[0].sun);const n=BZC.pick?"":(BZC.who?(ppl.find(p=>p.id===BZC.who)||{}).n:(ppl[0]&&ppl[0].n));bzStudio(me,t?{sign:t,n}:null);};
  /* arkadaşın yükseleni: eski modül, yalnızca arkadaş modu */
  try{const box=q("bz-za");ZA.who="fr";const h=zaHTML(zodiac(P.dob));box.innerHTML=h.replace(/<h4>[\s\S]*?<\/h4>/,"").replace(/<div class="za-who">[\s\S]*?<\/div>/,"");box.firstElementChild&&box.firstElementChild.classList.add("bz-zawrap");zaBind(box,zodiac(P.dob));}catch(e){console.error(e);}};
 (function(){const _b=zaBind;zaBind=function(box,mine){_b.apply(this,arguments);};
  /* arkadaş hesabından sonra kendi bölümümüze kaydır */
  const _s=zaScroll;zaScroll=function(){const O=document.getElementById("zsh"),e=O&&O.querySelector(".bz-fr");if(e){O.scrollTo({top:e.offsetTop-70,behavior:"smooth"});return;}_s.apply(this,arguments);};})();
 /* Polaroidle: burç story'leri */
-function bzStudio(me,cmp){const D=bzDaily(me);const o={theme:cmp?"bzu":"bz",set:cmp?[["bzu","Uyumumuz"],["bzu2","Uyum kartı"],["bzs","Sadece burcum"],["bzk","Burcum · kart"]]:[["bzs","Gökyüzü"],["bzk","Kart"]],brand:"Burcum",kind:"burc",me,cmp,D,cm:"",cmLabel:"Story'ne bir not",cmMax:70,cmPh:cmp?"ör. Yıldızlar bile onaylıyor 💫":"ör. Bugün benim günüm ✨",file:"burc-",shareText:"#polaroidle #MeFirst #burç"};studioOpen(o);}
+function bzStudio(me,cmp){const D=bzDaily(me);const o={theme:"bz",set:cmp?[["bzs","Burcum"],["bzk","Burcum · kart"],["bzu","Uyumumuz"],["bzu2","Uyum kartı"]]:[["bzs","Burcum"],["bzk","Burcum · kart"]],brand:"Burcum",kind:"burc",me,cmp,D,cm:"",cmLabel:"Story'ne bir not",cmMax:70,cmPh:cmp?"ör. Yıldızlar bile onaylıyor 💫":"ör. Bugün benim günüm ✨",file:"burc-",shareText:"#polaroidle #MeFirst #burç"};studioOpen(o);}
 function bzWrap(g,t,x,y,mw,lh){const w=t.split(" ");let line="",yy=y;for(const s of w){const tt=line?line+" "+s:s;if(g.measureText(tt).width>mw&&line){g.fillText(line,x,yy);line=s;yy+=lh;}else line=tt;}if(line)g.fillText(line,x,yy);return yy;}
 async function bzStory(o,g,W,H,card,uy){const me=o.me,D=o.D,c=uy?o.cmp:null;const bg=g.createLinearGradient(0,0,0,H);bg.addColorStop(0,card?"#2B1B54":"#120B33");bg.addColorStop(.5,card?"#5B3FB0":"#2B1B5E");bg.addColorStop(1,card?"#B0336A":"#3A1650");g.fillStyle=bg;g.fillRect(0,0,W,H);
  for(let i=0;i<160;i++){const x=(i*733)%W,y=(i*1291)%H,r=(i%5)*.6+.6;g.fillStyle=`rgba(255,255,255,${.25+(i%4)*.15})`;g.beginPath();g.arc(x,y,r,0,7);g.fill();}
