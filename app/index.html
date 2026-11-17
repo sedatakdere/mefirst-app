@@ -7947,6 +7947,16 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+.bz-hero{margin-bottom:0!important}.bz-hero .bz-acts{margin:12px 0 0!important}
+.bz-hero+.bz-sec{margin-top:16px!important}
+.bz-hero .bz-pol.bz-pol2{justify-content:center;gap:12px;height:54px;padding:0 16px;margin:0;text-align:center}
+.bz-pol.bz-pol2 .bk-pzw{font-size:21px!important;color:#3A1E0E;white-space:nowrap}
+.bz-pol.bz-pol2 .bk-sharr{font-weight:800;font-size:16px;opacity:.85;color:#3A1E0E}
+.bz-pen{display:inline-grid;place-items:center;width:24px;height:24px;margin:-4px 0 -4px 6px;padding:0;border:0;border-radius:50%;background:rgba(255,210,122,.16);color:#FFD27A;vertical-align:middle;cursor:pointer}
+.bz-pen svg{width:13px;height:13px}
+.bz-theme .bz-long{margin:10px 0 0;font-size:14.5px;line-height:1.6;opacity:.92}
+.bz-theme .bz-ey2{display:block;margin:14px 0 0;padding-top:12px;border-top:1px solid rgba(255,255,255,.12)}
+
 .spst-bz .spst-ph{display:none!important}
 .bz-dd{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px!important}
 .bz-ddc{padding:12px;border-radius:16px;background:rgba(127,224,194,.1);box-shadow:inset 0 0 0 1px rgba(127,224,194,.3)}.bz-ddc.no{background:rgba(255,143,184,.1);box-shadow:inset 0 0 0 1px rgba(255,143,184,.3)}
@@ -19716,6 +19726,36 @@ if(window.CanvasRenderingContext2D&&!CanvasRenderingContext2D.prototype.roundRec
 (function(){const _r=spsRender;spsRender=async function(o,tpl,scale){try{return await Promise.race([_r.apply(this,arguments),new Promise((_,j)=>setTimeout(()=>j(new Error("zaman aşımı")),9000))]);}catch(e){console.error("story",tpl,e);
   const k=scale||1,cv=document.createElement("canvas");cv.width=1080*k;cv.height=1920*k;const g=cv.getContext("2d");g.scale(k,k);const bg=g.createLinearGradient(0,0,0,1920);bg.addColorStop(0,"#2B1B54");bg.addColorStop(1,"#5B3FB0");g.fillStyle=bg;g.fillRect(0,0,1080,1920);
   g.fillStyle="#fff";g.textAlign="center";g.font="700 44px sans-serif";g.fillText("Bu şablon şu an hazırlanamadı",540,900);g.font="400 30px sans-serif";g.fillText(String(e&&e.message||e).slice(0,60),540,960);try{yToast("Şablon hazırlanamadı: "+String(e&&e.message||e).slice(0,50));}catch(_){}return cv;}};})();
+
+/* ===== v0.78.8 Burcum: Kitap'la aynı Polaroidle, sıkı hero, uzun yorumlar (The Pattern / Co-Star / CHANI ilhamı) ===== */
+const BZ_HD=[
+ ["Ay'ın 1. evinden geçişi duygularını yüzüne taşır; ne hissediyorsan dışarıdan da görünür. Bugün rol yapmak yerine olduğun gibi görünmek sana güç kazandırır.","Bu geçiş kısa ama etkili: iki gün boyunca ilgi odağı sensin. Kendi ihtiyaçlarını listenin en başına yazmak için bundan iyi zaman yok."],
+ ["Ay değerler evinde dolaşırken güvende hissetme ihtiyacın artar; biraz kontrol, biraz konfor istersin. Bu bir zayıflık değil, sağlam zemin arayışı.","Bugün neye para ve enerji harcadığın, neye değer verdiğini ele veriyor. Küçük bir düzenleme, ay sonunda büyük bir ferahlık olarak geri döner."],
+ ["Ay iletişim evindeyken zihnin bir arı kovanı gibi; fikirler, mesajlar, küçük yollar birbirini kovalar. Hepsine yetişmeye çalışma, en önemlisini seç.","Bugün yakın çevrenle kurduğun bağ moralini belirliyor. Kısa bir telefon, unuttuğun bir teşekkür ya da yarım kalmış bir konuşma günün düğümünü çözebilir."],
+ ["Ay köklerinin evinden geçiyor; geçmiş, aile ve ev duygusu bugün daha yakın. Eski bir anı aklına düşerse geri itme, sana bir şey anlatıyor.","Dış dünyanın gürültüsü bugün seni çabuk yorabilir. Kendine güvenli bir köşe yarat; şarj olduğun yer evin."],
+ ["Ay keyif evindeyken kalbin hafifler, yaratıcılığın kıpırdar. Bugün 'yapmam gereken' değil 'yapmak istediğim' sorusu daha doğru cevaplar verir.","Bu geçiş oyunbazlığı, flörtü ve kendini ifade etmeyi destekliyor. Bir fotoğraf, bir kombin, bir şarkı; ortaya koyduğun her şey bugün daha çok yankı bulur."],
+ ["Ay günlük düzen evinde; bedenin ve takvimin aynı şeyi söylüyor: düzen. Küçük ve tekrarlanabilir adımlar bugün büyük hedeflerden daha çok işe yarar.","Bugün yardım etme isteğin artıyor ama sınırını koru. Başkalarının işini üstlenmek yerine kendi listeni bitirmek seni daha mutlu eder."],
+ ["Ay ilişkiler evinden geçerken kendine karşındaki insanın aynasından bakarsın. Bugün birinin söylediği bir söz, kendinle ilgili bir şeyi fark ettirebilir.","Bu geçiş ortaklıkları, anlaşmaları ve yüz yüze konuşmaları öne çıkarıyor. Tek başına uğraştığın bir meselede yardım istemek seni küçültmez, hızlandırır."],
+ ["Ay haritanın en derin evinde; yüzeydeki sohbetler bugün seni doyurmayabilir. Gerçek olanı, samimi olanı istiyorsun ve bu çok doğal.","Bugün kontrol etmeye çalıştığın bir şeyi bırakmak, beklediğinden büyük bir rahatlama getirir. Bu geçişin anahtar kelimesi güven."],
+ ["Ay ufuk evinde dolaşırken rutin sana dar gelir. Yeni bir yol, yeni bir fikir ya da farklı bir bakış açısı ruhunu havalandırır.","Bu geçiş anlam arayışını uyandırır; 'neden?' sorusu bugün sık aklına gelebilir. Cevap bir kitapta, bir sohbette ya da kısa bir kaçamakta saklı."],
+ ["Ay haritanın zirvesinden geçiyor; emeğin ve duruşun bugün daha görünür. İnsanlar senden bir yön, bir karar bekleyebilir.","Duygularınla hedeflerin bugün aynı masada. Neyi başarmak istediğini değil, başardığında nasıl hissetmek istediğini sor; yön kendiliğinden netleşir."],
+ ["Ay topluluk evindeyken 'benim insanlarım' duygusu öne çıkar. Seni anlayan biriyle geçen yarım saat bütün günü toparlayabilir.","Bu geçiş gelecek hayallerini tazeliyor. Bir dileğini yüksek sesle söylemek onu gerçeğe bir adım yaklaştırır."],
+ ["Ay haritanın en sessiz evinde; enerjin biraz düşük olabilir ve bu tamamen normal. Bir sonraki döngüye hazırlanmak için verilmiş bir mola bu.","Bugün sezgilerin mantığından önce konuşuyor. Bir rüya, bir his ya da tekrar eden bir düşünce sana yol gösterebilir."]];
+const BZ_MD={"Koç":"Ay Koç'ta: gökyüzünün temposu hızlı, herkes biraz sabırsız, biraz cesur.","Boğa":"Ay Boğa'da: dünya yavaşlıyor; güzel yemek, konfor ve huzur herkesin listesinde.","İkizler":"Ay İkizler'de: mesajlar, fikirler, dedikodular havada uçuşuyor; dikkat kolay dağılıyor.","Yengeç":"Ay kendi evi Yengeç'te: duygular yüzeye yakın, herkes biraz daha hassas ve yuvasına dönük.","Aslan":"Ay Aslan'da: herkes görülmek, takdir edilmek istiyor; cömertlik ve drama aynı sahnede.","Başak":"Ay Başak'ta: düzen ve detay günü; eleştiriye karşı herkes biraz daha alıngan.","Terazi":"Ay Terazi'de: uyum ve estetik öne çıkıyor; karar vermek her zamankinden zor.","Akrep":"Ay Akrep'te: duygular derin ve yoğun; sırlar, sezgiler ve tutku gündemde.","Yay":"Ay Yay'da: iyimser, özgür bir hava; büyük laflar, büyük planlar.","Oğlak":"Ay Oğlak'ta: ciddi, odaklı ve verimli bir hava; duygular biraz geri planda.","Kova":"Ay Kova'da: sıra dışı fikirler, arkadaş grupları ve hafif bir duygusal mesafe.","Balık":"Ay Balık'ta: sınırlar eriyor; hayal gücü, şefkat ve dalgınlık bir arada."};
+const BZ_ASP=["Üstelik Ay bugün Güneş burcunun üzerinden geçiyor; kalbinle aklın aynı şeyi istiyor, bu ayın en uyumlu günlerinden biri.","Ay Güneş burcuna komşu; hafif bir ritim farkı hissedebilirsin, küçük ayarlarla gün yumuşar.","Ay Güneş burcunla altmışlık açıda; fırsatlar kapını çalıyor ama kapıyı açmak sende.","Ay Güneş burcuna kare açı yapıyor; içinde bir gerilim, bir 'harekete geç' dürtüsü var. Bu sürtünmeyi enerjiye çevir.","Ay Güneş burcunla üçgen açıda; işler akıyor, duyguların seni destekliyor. Zorlamadan ilerleyebileceğin bir gün.","Ay Güneş burcunla tuhaf bir açıda; planlar son dakika değişebilir, esnek kalmak en iyi strateji.","Ay Güneş burcunun tam karşısında; başkalarının ihtiyaçlarıyla kendininkiler arasında denge kurman gerekebilir."];
+const BZ_SK={"Koç":"Koç olarak en iyi hızla çalışırsın; bugün başlattığını bitir.","Boğa":"Boğa sabrın ödülünü bilir; aceleyle değil, kaliteyle kazan.","İkizler":"İkizler'in kozu ikna gücü; sunum, yazışma, pazarlık bugün senin alanın.","Yengeç":"Yengeç sezgisi iş hayatında pusula; kimin neye ihtiyacı olduğunu ilk sen görürsün.","Aslan":"Aslan liderliği bugün ekip ruhuyla parlar; övgüyü paylaş.","Başak":"Başak titizliği bugün bir hatayı önleyebilir; ama mükemmeli bekleme.","Terazi":"Terazi diplomasisi bugün bir anlaşmayı kurtarabilir.","Akrep":"Akrep odağı derin işlerde rakipsiz; dikkat dağıtıcıları kapat.","Yay":"Yay vizyonu büyük resmi görür; detayları devretmekten çekinme.","Oğlak":"Oğlak disiplini meyvesini veriyor; uzun vadeli bir adım at.","Kova":"Kova'nın farklı bakışı bugün sorunu çözen fikir olabilir.","Balık":"Balık yaratıcılığı bugün işine renk katar; hayal gücünü saklama."};
+function bzLong(me){const D=bzDaily(me),h=bzSeed("ln"+me.sun+(me.asc||"")),el=ZEL[me.sun],Z=ZDAY[el]||ZDAY.su,pk=(a,k)=>a[(h>>k)%a.length];
+ const d0=(ZS.indexOf(D.sky.ms)-ZS.indexOf(me.sun)+12)%12,d=Math.min(d0,12-d0);
+ return {deep:pk(BZ_HD[D.hi],2),mood:BZ_MD[D.sky.ms]+" "+BZ_ASP[d]+" "+pk(Z.k,5),a:D.a+" "+pk(Z.a,8),k:D.k+" "+BZ_SK[me.sun],s:D.s+" "+pk(Z.e,11)};}
+(function(){const _z=zodRender;zodRender=function(){_z.apply(this,arguments);try{const O=document.getElementById("zsh");const me=bzMe();if(!me||BZC.edit)return;
+  const ed=O.querySelector("#bz-edit");if(ed)ed.remove();
+  const pol=O.querySelector("#bz-pol");if(pol&&!pol.classList.contains("bz-pol2")){pol.classList.add("bz-pol2");pol.innerHTML=`<span class="bk-pzi" aria-hidden="true"></span><b class="bk-pzw">Story'de Polaroidle</b><span class="bk-sharr" aria-hidden="true">↗</span>`;}
+  const goEdit=()=>{BZC.edit=1;zodRender();O.scrollTop=0;};
+  const lab=O.querySelector(".bz-hero>small");if(lab&&!lab.querySelector(".bz-pen")){const b=document.createElement("button");b.type="button";b.className="bz-pen";b.setAttribute("aria-label","Doğum bilgilerimi düzenle");b.innerHTML=`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16v4zM14 6l4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;b.onclick=goEdit;lab.appendChild(b);}
+  const off=O.querySelector(".bzm-off");if(off){off.style.cursor="pointer";off.onclick=goEdit;}
+  const L=bzLong(me),th=O.querySelector(".bz-theme");if(th&&!th.querySelector(".bz-long"))th.insertAdjacentHTML("beforeend",`<p class="bz-long">${L.deep}</p><small class="bz-ey bz-ey2">Gökyüzünün havası</small><p class="bz-long">${L.mood}</p>`);
+  const mp=O.querySelectorAll(".bz-tri .bz-mini p");if(mp.length===3){mp[0].textContent=L.a;mp[1].textContent=L.k;mp[2].textContent=L.s;}
+ }catch(e){console.error(e);}};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
