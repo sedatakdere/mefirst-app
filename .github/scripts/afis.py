@@ -128,9 +128,15 @@ except Exception as e:
     print("sahne.json okunamadı", e)
 
 # ---- Arama ile büyüyen film kataloğu: wants.json (kind=film "wd:Q.. Ad", kind=sahne serbest arama) -> app/afis/katalog.json ----
+WDC = {}
 def wd_entity(qid):
+    if qid in WDC: return WDC[qid]
     j = get("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({"action": "wbgetentities", "format": "json", "ids": qid, "props": "labels|descriptions|claims|sitelinks", "languages": "tr|en"}))
-    return (j.get("entities") or {}).get(qid) or {}
+    WDC[qid] = (j.get("entities") or {}).get(qid) or {}
+    return WDC[qid]
+def wd_genres(qid):
+    C = (wd_entity(qid).get("claims") or {})
+    return {((c.get("mainsnak") or {}).get("datavalue") or {}).get("value", {}).get("id") for c in C.get("P136", [])} - {None}
 def wd_film(qid):
     E = wd_entity(qid)
     C = E.get("claims") or {}
@@ -188,10 +194,9 @@ def sparql(q):
     with urllib.request.urlopen(req, timeout=120) as r: return json.loads(r.read().decode("utf-8"))["results"]["bindings"]
 def tohum():
     G = " ".join("wd:" + g for g in GMAP)
-    qs = [f"""SELECT ?f (SAMPLE(?sl) AS ?s) (GROUP_CONCAT(DISTINCT STRAFTER(STR(?ag),"entity/");separator=",") AS ?gs) WHERE {{
-      {{ SELECT DISTINCT ?f ?sl WHERE {{ ?f wdt:P31 wd:Q11424; wikibase:sitelinks ?sl; wdt:P136 ?g. VALUES ?g {{ {G} }} FILTER(?sl > 40)
-        ?a schema:about ?f; schema:isPartOf <https://tr.wikipedia.org/>. }} }}
-      ?f wdt:P577 ?d. FILTER(YEAR(?d) >= 1950) OPTIONAL {{ ?f wdt:P136 ?ag. }}
+    qs = [f"""SELECT ?f (SAMPLE(?sl) AS ?s) (GROUP_CONCAT(DISTINCT STRAFTER(STR(?g),"entity/");separator=",") AS ?gs) WHERE {{
+      ?f wdt:P31 wd:Q11424; wikibase:sitelinks ?sl; wdt:P136 ?g. VALUES ?g {{ {G} }}
+      ?a schema:about ?f; schema:isPartOf <https://tr.wikipedia.org/>. ?f wdt:P577 ?d. FILTER(YEAR(?d) >= 1950) FILTER(?sl > 40)
     }} GROUP BY ?f ORDER BY DESC(?s) LIMIT 900""",
           """SELECT ?f (SAMPLE(?sl) AS ?s) (GROUP_CONCAT(DISTINCT STRAFTER(STR(?ag),"entity/");separator=",") AS ?gs) WHERE {
       { SELECT DISTINCT ?f ?sl WHERE { ?f wdt:P31 wd:Q11424; wdt:P495 wd:Q43; wikibase:sitelinks ?sl. FILTER(?sl > 5)
@@ -229,6 +234,8 @@ for liste, kota in ((T[0], TOHUM_N - YERLI_N), (T[1], YERLI_N)):
         if n >= kota: break
         if "wd-" + qid in have: continue
         try:
+            gs = gs | wd_genres(qid)
+            if gs & BAD: continue
             f = wd_film(qid)
             if not f or fold(f["o"]) in have_names: continue
             g = {GMAP[x] for x in gs if x in GMAP} | ({"gul"} if "Q860626" in gs else set())
