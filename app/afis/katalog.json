@@ -10,2167 +10,1008 @@
 "line": "2004 yapımı Türk filmi"
 },
 {
-"id": "wd-Q44578",
-"q": "Q44578",
-"t": "Titanik",
-"o": "Titanik",
-"y": 1997,
-"d": "James Cameron",
-"line": "1997 yapımı Amerikan filmi",
-"g": [
-"agla",
-"ask"
-],
-"p": 138
-},
-{
-"id": "wd-Q47703",
-"q": "Q47703",
-"t": "Baba",
-"o": "Baba",
-"y": 1972,
-"d": "Francis Ford Coppola",
-"line": "1972 yapımı Francis Ford Coppola filmi",
-"g": [
-"agla",
-"nost"
-],
-"p": 133
-},
-{
-"id": "wd-Q128518",
-"q": "Q128518",
-"t": "Gladyatör",
-"o": "Gladyatör",
-"y": 2000,
-"d": "Ridley Scott",
-"line": "2000 yapımı Ridley Scott filmi",
-"g": [
-"agla"
-],
-"p": 108
-},
-{
-"id": "wd-Q104123",
-"q": "Q104123",
-"t": "Ucuz Roman",
-"o": "Ucuz Roman",
-"y": 1994,
-"d": "Quentin Tarantino",
-"line": "Quentin Tarantino tarafından yönetilen 1994 yapımı Amerikan suç filmi",
-"g": [
-"agla",
-"gul"
-],
-"p": 107
-},
-{
-"id": "wd-Q163872",
-"q": "Q163872",
-"t": "Kara Şövalye",
-"o": "Kara Şövalye",
-"y": 2008,
-"d": "",
-"line": "Christopher Nolan'ın yönettiği 2008 yapımı film",
-"g": [
-"agla"
-],
-"p": 107
-},
-{
-"id": "wd-Q172241",
-"q": "Q172241",
-"t": "Esaretin Bedeli",
-"o": "Esaretin Bedeli",
-"y": 1994,
-"d": "Frank Darabont",
-"line": "1994 yapımı Amerikan dram filmi",
-"g": [
-"agla"
-],
-"p": 107
-},
-{
-"id": "wd-Q133654",
-"q": "Q133654",
-"t": "Kuzuların Sessizliği",
-"o": "The Silence of the Lambs",
-"y": 1991,
-"d": "Jonathan Demme",
-"line": "Psikolojik gerilim filmi",
-"g": [
-"agla"
-],
-"p": 103
-},
-{
-"id": "wd-Q91540",
-"q": "Q91540",
-"t": "Geleceğe Dönüş",
-"o": "Geleceğe Dönüş",
-"y": 1985,
-"d": "Robert Zemeckis",
-"line": "1985 yapımı film",
-"g": [
-"gul"
-],
-"p": 103
-},
-{
-"id": "wd-Q190050",
-"q": "Q190050",
-"t": "Dövüş Kulübü",
-"o": "Dövüş Kulübü",
-"y": 1999,
-"d": "David Fincher",
-"line": "1999 yapımı Amerikan filmi",
-"g": [
-"agla"
-],
-"p": 102
-},
-{
-"id": "wd-Q483941",
-"q": "Q483941",
-"t": "Schindler'in Listesi",
-"o": "Schindler's List",
-"y": 1993,
-"d": "Steven Spielberg",
-"line": "Steven Spielberg'in yönettiği 1993 yapımı film",
-"g": [
-"agla"
-],
-"p": 102
-},
-{
-"id": "wd-Q162255",
-"q": "Q162255",
-"t": "Terminatör",
-"o": "Terminatör",
-"y": 1984,
-"d": "James Cameron",
-"line": "1984 film directed by James Cameron",
-"g": [
-"agla",
-"nost"
-],
-"p": 100
-},
-{
-"id": "wd-Q13417189",
-"q": "Q13417189",
-"t": "Yıldızlararası",
-"o": "Interstellar",
+"id": "wd-Q15921329",
+"q": "Q15921329",
+"t": "Kış Uykusu",
+"o": "Winter Sleep",
 "y": 2014,
-"d": "",
-"line": "Christopher Nolan'ın yönettiği 2014 yapımı film",
+"d": "Nuri Bilge Ceylan",
+"line": "Nuri Bilge Ceylan'ın 2014 yapımı filmi",
+"tr": 1,
 "g": [
 "agla"
 ],
-"p": 98
+"p": 43
 },
 {
-"id": "wd-Q25188",
-"q": "Q25188",
-"t": "Başlangıç",
-"o": "Inception",
-"y": 2010,
-"d": "",
-"line": "Christopher Nolan'ın 2010 tarihli filmi",
-"g": [
-"agla"
-],
-"p": 97
-},
-{
-"id": "wd-Q41483",
-"q": "Q41483",
-"t": "İyi, Kötü ve Çirkin",
-"o": "The Good, the Bad and the Ugly",
-"y": 1966,
-"d": "Sergio Leone",
-"line": "1966 yapımı Sergio Leone'nin yönettiği Western filmi",
-"g": [
-"agla",
-"nost"
-],
-"p": 95
-},
-{
-"id": "wd-Q162729",
-"q": "Q162729",
-"t": "Cesur Yürek",
-"o": "Cesur Yürek",
-"y": 1995,
-"d": "Mel Gibson",
-"line": "1995 film directed by Mel Gibson",
-"g": [
-"agla"
-],
-"p": 92
-},
-{
-"id": "wd-Q170564",
-"q": "Q170564",
-"t": "Terminatör 2: Kıyamet Günü",
-"o": "Terminatör 2: Kıyamet Günü",
-"y": 1991,
-"d": "James Cameron",
-"line": "1991 yapımı Amerikan bilim kurgu ve aksiyon filmi",
-"g": [
-"agla",
-"gul"
-],
-"p": 92
-},
-{
-"id": "wd-Q125076",
-"q": "Q125076",
-"t": "Milyoner",
-"o": "Milyoner",
-"y": 2008,
-"d": "Danny Boyle, Loveleen Tandan",
-"line": "2008 yapımı İngiliz filmi",
-"g": [
-"agla",
-"ask"
-],
-"p": 90
-},
-{
-"id": "wd-Q46717",
-"q": "Q46717",
-"t": "Karayip Korsanları: Siyah İnci'nin Laneti",
-"o": "Karayip Korsanları: Siyah İnci'nin Laneti",
-"y": 2003,
-"d": "Gore Verbinski",
-"line": "Walt Disney yapımı macera filmi",
-"g": [
-"gul"
-],
-"p": 90
-},
-{
-"id": "wd-Q164103",
-"q": "Q164103",
-"t": "Akıl Oyunları",
-"o": "Akıl Oyunları",
-"y": 2001,
-"d": "Ron Howard",
-"line": "2001 film directed by Ron Howard",
-"g": [
-"agla"
-],
-"p": 87
-},
-{
-"id": "wd-Q165817",
-"q": "Q165817",
-"t": "Er Ryan'ı Kurtarmak",
-"o": "Saving Private Ryan",
-"y": 1998,
-"d": "Steven Spielberg",
-"line": "1998 yapımı Steven Spielberg filmi",
-"g": [
-"agla"
-],
-"p": 87
-},
-{
-"id": "wd-Q106316",
-"q": "Q106316",
-"t": "Ölü Ozanlar Derneği",
-"o": "Ölü Ozanlar Derneği",
-"y": 1989,
-"d": "Peter Weir",
-"line": "Peter Weir yönetiminde 1989 yılında çekilmiş bir film",
-"g": [
-"agla"
-],
-"p": 86
-},
-{
-"id": "wd-Q184768",
-"q": "Q184768",
-"t": "Baba II",
-"o": "Baba II",
-"y": 1974,
-"d": "Francis Ford Coppola",
-"line": "Francis Ford Coppola'nın 1974 tarihli filmi",
-"g": [
-"agla",
-"nost"
-],
-"p": 86
-},
-{
-"id": "wd-Q160618",
-"q": "Q160618",
-"t": "Brokeback Dağı",
-"o": "Brokeback Mountain",
-"y": 2005,
-"d": "Ang Lee",
-"line": "2005 yılı ABD yapımı film",
-"g": [
-"agla",
-"ask"
-],
-"p": 85
-},
-{
-"id": "wd-Q166262",
-"q": "Q166262",
-"t": "Batman Başlıyor",
-"o": "Batman Başlıyor",
-"y": 2005,
-"d": "",
-"line": "Christopher Nolan'ın yönettiği 2005 yapımı film",
-"g": [
-"agla"
-],
-"p": 85
-},
-{
-"id": "wd-Q54274",
-"q": "Q54274",
-"t": "Karayip Korsanları: Dünyanın Sonu",
-"o": "Karayip Korsanları: Dünyanın Sonu",
-"y": 2007,
-"d": "Gore Verbinski",
-"line": "Karayip Korsanları serisinin üçüncü bölümü",
-"g": [
-"gul"
-],
-"p": 85
-},
-{
-"id": "wd-Q182692",
-"q": "Q182692",
-"t": "Kıyamet",
-"o": "Kıyamet",
-"y": 1979,
-"d": "Francis Ford Coppola",
-"line": "Francis Ford Coppola’nın yönettiği 1979 yapımı film",
-"g": [
-"agla",
-"nost"
-],
-"p": 84
-},
-{
-"id": "wd-Q484442",
-"q": "Q484442",
-"t": "Örümcek Adam",
-"o": "Spider-Man",
-"y": 2002,
-"d": "Sam Raimi",
-"line": "2002 yapımı Amerikan süper kahraman filmi",
-"g": [
-"agla"
-],
-"p": 84
-},
-{
-"id": "wd-Q184843",
-"q": "Q184843",
-"t": "Bıçak Sırtı",
-"o": "Blade Runner",
-"y": 1982,
-"d": "Ridley Scott",
-"line": "Ridley Scott'ın yönettiği 1982 yapımı bilimkurgu filmi",
-"g": [
-"agla",
-"nost"
-],
-"p": 84
-},
-{
-"id": "wd-Q161087",
-"q": "Q161087",
-"t": "Karayip Korsanları: Ölü Adamın Sandığı",
-"o": "Karayip Korsanları: Ölü Adamın Sandığı",
-"y": 2006,
-"d": "Gore Verbinski",
-"line": "2006 film directed by Gore Verbinski",
-"g": [
-"gul"
-],
-"p": 84
-},
-{
-"id": "wd-Q131390",
-"q": "Q131390",
-"t": "300",
-"o": "300",
-"y": 2006,
-"d": "Zack Snyder",
-"line": "Zack Snyder'ın yönettiği 2007 yapımı film",
-"g": [
-"agla"
-],
-"p": 83
-},
-{
-"id": "wd-Q105031",
-"q": "Q105031",
-"t": "Evde Tek Başına",
-"o": "Evde Tek Başına",
-"y": 1990,
-"d": "Chris Columbus",
-"line": "1990 yapımı Amerikan filmi",
-"g": [
-"gul"
-],
-"p": 82
-},
-{
-"id": "wd-Q109116",
-"q": "Q109116",
-"t": "Büyük Diktatör",
-"o": "The Great Dictator",
-"y": 1940,
-"d": "Charlie Chaplin",
-"line": "1940 film directed by Charlie Chaplin",
-"g": [
-"agla",
-"gul",
-"nost"
-],
-"p": 81
-},
-{
-"id": "wd-Q190086",
-"q": "Q190086",
-"t": "Bazıları Sıcak Sever",
-"o": "Bazıları Sıcak Sever",
-"y": 1959,
-"d": "Billy Wilder",
-"line": "1959 film directed by Billy Wilder",
-"g": [
-"agla",
-"iyi",
-"nost"
-],
-"p": 81
-},
-{
-"id": "wd-Q172975",
-"q": "Q172975",
-"t": "Köstebek",
-"o": "Köstebek",
-"y": 2006,
-"d": "Martin Scorsese",
-"line": "2006 film directed by Martin Scorsese",
-"g": [
-"agla"
-],
-"p": 81
-},
-{
-"id": "wd-Q61448040",
-"q": "Q61448040",
-"t": "Parazit",
-"o": "Parasite",
-"y": 2019,
-"d": "Bong Joon-ho",
-"line": "Bong Joon-ho'nun yönettiği 2019 yapımı film",
-"g": [
-"gul"
-],
-"p": 81
-},
-{
-"id": "wd-Q19355",
-"q": "Q19355",
-"t": "Hayat Güzeldir",
-"o": "Life Is Beautiful",
-"y": 1997,
-"d": "Roberto Benigni",
-"line": "1997 film by Roberto Benigni",
-"g": [
-"agla",
-"gul"
-],
-"p": 80
-},
-{
-"id": "wd-Q153723",
-"q": "Q153723",
-"t": "Soysuzlar Çetesi",
-"o": "Soysuzlar Çetesi",
-"y": 2009,
-"d": "Quentin Tarantino",
-"line": "Quentin Tarantino'nun yönettiği 2009 yapımı film",
-"g": [
-"agla",
-"gul"
-],
-"p": 80
-},
-{
-"id": "wd-Q25139",
-"q": "Q25139",
-"t": "Amerikan Güzeli",
-"o": "Amerikan Güzeli",
-"y": 1999,
-"d": "Sam Mendes",
-"line": "1999 yapımı ABD filmi",
-"g": [
-"agla",
-"gul"
-],
-"p": 79
-},
-{
-"id": "wd-Q47221",
-"q": "Q47221",
-"t": "Taksi Şoförü",
-"o": "Taksi Şoförü",
-"y": 1976,
-"d": "Martin Scorsese",
-"line": "Martin Scorsese'nin yönettiği 1976 yapımı film",
-"g": [
-"agla",
-"nost"
-],
-"p": 79
-},
-{
-"id": "wd-Q183081",
-"q": "Q183081",
-"t": "İhtiyarlara Yer Yok",
-"o": "İhtiyarlara Yer Yok",
-"y": 2007,
-"d": "Ethan Coen, Joel Coen",
-"line": "Ethan ve Joel Coen filmi (2017)",
-"g": [
-"agla"
-],
-"p": 79
-},
-{
-"id": "wd-Q160060",
-"q": "Q160060",
-"t": "Zoraki Kral",
-"o": "Zoraki Kral",
-"y": 2010,
-"d": "Tom Hooper",
-"line": "2010 yapımı İngiliz filmi",
-"g": [
-"agla"
-],
-"p": 79
-},
-{
-"id": "wd-Q46551",
-"q": "Q46551",
-"t": "Prestij",
-"o": "Prestij",
-"y": 2006,
-"d": "",
-"line": "Christopher Nolan Filmi (2006)",
-"g": [
-"agla"
-],
-"p": 78
-},
-{
-"id": "wd-Q163038",
-"q": "Q163038",
-"t": "Sapık",
-"o": "Psycho",
-"y": 1960,
-"d": "Alfred Hitchcock",
-"line": "Alfred Hitchcock'un 1960 yapımı ABD filmi",
-"g": [
-"agla",
-"nost"
-],
-"p": 78
-},
-{
-"id": "wd-Q208263",
-"q": "Q208263",
-"t": "Yeşil Yol",
-"o": "Yeşil Yol",
-"y": 1999,
-"d": "Frank Darabont",
-"line": "1999 yapımı Amerikan dram ve gizem filmi",
-"g": [
-"agla"
-],
-"p": 78
-},
-{
-"id": "wd-Q484048",
-"q": "Q484048",
-"t": "Amélie",
-"o": "Amélie",
-"y": 2001,
-"d": "Jean-Pierre Jeunet",
-"line": "2001 yapımı Fransız filmi",
-"g": [
-"agla",
-"gul"
-],
-"p": 78
-},
-{
-"id": "wd-Q3023357",
-"q": "Q3023357",
-"t": "12 Yıllık Esaret",
-"o": "12 Yıllık Esaret",
-"y": 2013,
-"d": "Steve McQueen",
-"line": "2013 film directed by Steve McQueen",
-"g": [
-"agla"
-],
-"p": 78
-},
-{
-"id": "wd-Q228186",
-"q": "Q228186",
-"t": "Arabistanlı Lawrence",
-"o": "Lawrence of Arabia",
-"y": 1962,
-"d": "David Lean",
-"line": "David Lean'in yönettiği 1962 yapımı film",
-"g": [
-"agla",
-"nost"
-],
-"p": 78
-},
-{
-"id": "wd-Q150804",
-"q": "Q150804",
-"t": "Piyanist",
-"o": "The Pianist",
-"y": 2002,
-"d": "Roman Polanski",
-"line": "2002 yapımı film",
-"g": [
-"agla",
-"iyi"
-],
-"p": 78
-},
-{
-"id": "wd-Q171669",
-"q": "Q171669",
-"t": "Guguk Kuşu",
-"o": "Guguk Kuşu",
-"y": 1975,
-"d": "Miloš Forman",
-"line": "1975 yılı yapımlı Amerikan drama filmi",
-"g": [
-"gul",
-"nost"
-],
-"p": 78
-},
-{
-"id": "wd-Q42759035",
-"q": "Q42759035",
-"t": "Joker",
-"o": "Joker",
-"y": 2019,
-"d": "Todd Phillips",
-"line": "Todd Phillips'in yönettiği Amerikan filmi",
-"g": [
-"agla"
-],
-"p": 77
-},
-{
-"id": "wd-Q2345",
-"q": "Q2345",
-"t": "12 Öfkeli Adam",
-"o": "12 Öfkeli Adam",
-"y": 1957,
-"d": "Sidney Lumet",
-"line": "Sidney Lumet'in yönettiği 1957 yapımı Amerikan filmi",
-"g": [
-"agla",
-"nost"
-],
-"p": 76
-},
-{
-"id": "wd-Q202326",
-"q": "Q202326",
-"t": "Baba III",
-"o": "Baba III",
-"y": 1990,
-"d": "Francis Ford Coppola",
-"line": "1990 film by Francis Ford Coppola",
-"g": [
-"agla"
-],
-"p": 76
-},
-{
-"id": "wd-Q2579784",
-"q": "Q2579784",
-"t": "Yerçekimi",
-"o": "Yerçekimi",
-"y": 2013,
-"d": "Alfonso Cuarón",
-"line": "Film",
-"g": [
-"agla"
-],
-"p": 76
-},
-{
-"id": "wd-Q208108",
-"q": "Q208108",
-"t": "Sıkıysa Yakala",
-"o": "Sıkıysa Yakala",
-"y": 2002,
-"d": "Steven Spielberg",
-"line": "2002 yapımı komedi-drama türünde bir sinema filmi",
-"g": [
-"agla",
-"gul"
-],
-"p": 76
-},
-{
-"id": "wd-Q1392744",
-"q": "Q1392744",
-"t": "Para Avcısı",
-"o": "Para Avcısı",
-"y": 2013,
-"d": "Martin Scorsese",
-"line": "2013 Martin Scorcese yapımı kara komedi filmi",
-"g": [
-"agla",
-"gul"
-],
-"p": 75
-},
-{
-"id": "wd-Q186587",
-"q": "Q186587",
-"t": "Truva",
-"o": "Truva",
-"y": 2004,
-"d": "Wolfgang Petersen",
-"line": "2004 yapımı Amerikan filmi",
-"g": [
-"agla"
-],
-"p": 75
-},
-{
-"id": "wd-Q186341",
-"q": "Q186341",
-"t": "Cinnet",
-"o": "Cinnet",
-"y": 1980,
-"d": "Stanley Kubrick",
-"line": "Stanley Kubrick tarafından yönetilen 1980 yapımı film",
-"g": [
-"agla",
-"nost"
-],
-"p": 75
-},
-{
-"id": "wd-Q20856802",
-"q": "Q20856802",
-"t": "Aşıklar Şehri",
-"o": "Aşıklar Şehri",
-"y": 2017,
-"d": "Damien Chazelle",
-"line": "2016 yapımı Amerikan filmi",
-"g": [
-"agla",
-"ask",
-"gul",
-"iyi"
-],
-"p": 75
-},
-{
-"id": "wd-Q180214",
-"q": "Q180214",
-"t": "Siyah Kuğu",
-"o": "Black Swan",
-"y": 2010,
-"d": "Darren Aronofsky",
-"line": "2010 yapımı Amerikan filmi",
-"g": [
-"agla"
-],
-"p": 74
-},
-{
-"id": "wd-Q571032",
-"q": "Q571032",
-"t": "Zincirsiz",
-"o": "Django Unchained",
-"y": 2012,
-"d": "Quentin Tarantino",
-"line": "2012 yapımı Quentin Tarantino filmi",
-"g": [
-"agla",
-"gul"
-],
-"p": 74
-},
-{
-"id": "wd-Q160071",
-"q": "Q160071",
-"t": "Alacakaranlık",
-"o": "Twilight",
-"y": 2008,
-"d": "Catherine Hardwicke",
-"line": "2008 yapımı Amerikan filmi",
-"g": [
-"agla",
-"ask"
-],
-"p": 74
-},
-{
-"id": "wd-Q185888",
-"q": "Q185888",
-"t": "Sosyal Ağ",
-"o": "The Social Network",
-"y": 2010,
-"d": "David Fincher",
-"line": "2010 film by David Fincher",
-"g": [
-"agla"
-],
-"p": 74
-},
-{
-"id": "wd-Q188845",
-"q": "Q188845",
-"t": "Yağmur Adam",
-"o": "Yağmur Adam",
-"y": 1988,
-"d": "Barry Levinson",
-"line": "1988 film directed by Barry Levinson",
-"g": [
-"agla",
-"gul"
-],
-"p": 74
-},
-{
-"id": "wd-Q189540",
-"q": "Q189540",
-"t": "Yedi Samuray",
-"o": "Seven Samurai",
-"y": 1954,
-"d": "Akira Kurosava",
-"line": "1954 Japanese film by Akira Kurosawa",
-"g": [
-"agla",
-"nost"
-],
-"p": 74
-},
-{
-"id": "wd-Q183555",
-"q": "Q183555",
-"t": "Karayip Korsanları: Gizemli Denizlerde",
-"o": "Karayip Korsanları: Gizemli Denizlerde",
-"y": 2011,
-"d": "Rob Marshall",
-"line": "2011 film by Rob Marshall",
-"g": [
-"gul"
-],
-"p": 74
-},
-{
-"id": "wd-Q42047",
-"q": "Q42047",
-"t": "Sıkı Dostlar",
-"o": "Sıkı Dostlar",
-"y": 1990,
-"d": "Martin Scorsese",
-"line": "1990 yapımı Amerikan filmi",
-"g": [
-"agla"
-],
-"p": 73
-},
-{
-"id": "wd-Q190908",
-"q": "Q190908",
-"t": "Yedi",
-"o": "Yedi",
-"y": 1995,
-"d": "David Fincher",
-"line": "David Fincher tarafından yönetilen 1995 yapımı film",
-"g": [
-"agla"
-],
-"p": 73
-},
-{
-"id": "wd-Q484675",
-"q": "Q484675",
-"t": "Leon: Sevginin Gücü",
-"o": "Léon: The Professional",
-"y": 1995,
-"d": "Luc Besson",
-"line": "1994 yapımı Luc Besson filmi",
-"g": [
-"agla"
-],
-"p": 73
-},
-{
-"id": "wd-Q171861",
-"q": "Q171861",
-"t": "Artist",
-"o": "Artist",
-"y": 2011,
-"d": "Michel Hazanavicius",
-"line": "Michel Hazanavicius’ın yönettiği 2011 yapımı film",
-"g": [
-"agla",
-"ask",
-"gul"
-],
-"p": 73
-},
-{
-"id": "wd-Q152780",
-"q": "Q152780",
-"t": "Pi'nin Yaşamı",
-"o": "Pi'nin Yaşamı",
-"y": 2012,
-"d": "Ang Lee",
-"line": "2012 yapımı Amerikan filmi",
-"g": [
-"agla"
-],
-"p": 73
-},
-{
-"id": "wd-Q18002795",
-"q": "Q18002795",
-"t": "Diriliş",
-"o": "Diriliş",
-"y": 2015,
-"d": "Alejandro González Iñárritu",
-"line": "2015 yapımı Amerikan filmi",
-"g": [
-"agla"
-],
-"p": 73
-},
-{
-"id": "wd-Q212965",
-"q": "Q212965",
-"t": "Açlık Oyunları",
-"o": "Açlık Oyunları",
-"y": 2012,
-"d": "Gary Ross",
-"line": "2012 film directed by Gary Ross",
-"g": [
-"agla"
-],
-"p": 73
-},
-{
-"id": "wd-Q214801",
-"q": "Q214801",
-"t": "Truman Show",
-"o": "Truman Show",
-"y": 1998,
-"d": "Peter Weir",
-"line": "Peter Weir'ın filmi (1998)",
-"g": [
-"agla",
-"gul"
-],
-"p": 73
-},
-{
-"id": "wd-Q47075",
-"q": "Q47075",
-"t": "Yaralı Yüz",
-"o": "Scarface",
-"y": 1983,
-"d": "Brian De Palma",
-"line": "1983 çıkışlı Amerikan suç ve drama filmi",
-"g": [
-"agla",
-"nost"
-],
-"p": 72
-},
-{
-"id": "wd-Q63026",
-"q": "Q63026",
-"t": "İngiliz Hasta",
-"o": "İngiliz Hasta",
-"y": 1996,
-"d": "Anthony Minghella",
-"line": "1996 film directed by Anthony Minghella",
-"g": [
-"agla",
-"ask"
-],
-"p": 72
-},
-{
-"id": "wd-Q181086",
-"q": "Q181086",
-"t": "Otomatik Portakal",
-"o": "Otomatik Portakal",
-"y": 1971,
-"d": "Stanley Kubrick",
-"line": "1971 film directed by Stanley Kubrick",
-"g": [
-"agla",
-"gul",
-"nost"
-],
-"p": 72
-},
-{
-"id": "wd-Q182944",
-"q": "Q182944",
-"t": "Aşık Shakespeare",
-"o": "Aşık Shakespeare",
-"y": 1998,
-"d": "John Madden",
-"line": "1998 film directed by John Madden",
-"g": [
-"agla",
-"gul"
-],
-"p": 72
-},
-{
-"id": "wd-Q184255",
-"q": "Q184255",
-"t": "Milyonluk Bebek",
-"o": "Milyonluk Bebek",
-"y": 2004,
-"d": "Clint Eastwood",
-"line": "Clint Eastwood'un 2004 yapımı filmi",
-"g": [
-"agla"
-],
-"p": 72
-},
-{
-"id": "wd-Q190525",
-"q": "Q190525",
-"t": "Akıl Defteri",
-"o": "Akıl Defteri",
-"y": 2000,
-"d": "",
-"line": "Christopher Nolan'ın 2000 yapımı filmi",
-"g": [
-"agla"
-],
-"p": 72
-},
-{
-"id": "wd-Q18547944",
-"q": "Q18547944",
-"t": "Marslı",
-"o": "Marslı",
-"y": 2015,
-"d": "Ridley Scott",
-"line": "2015 yapımı bilimkurgu ABD filmi",
-"g": [
-"agla"
-],
-"p": 72
-},
-{
-"id": "wd-Q188718",
-"q": "Q188718",
-"t": "Kwai Köprüsü",
-"o": "The Bridge on the River Kwai",
-"y": 1957,
-"d": "David Lean",
-"line": "1957 film directed by David Lean",
-"g": [
-"agla",
-"nost"
-],
-"p": 72
-},
-{
-"id": "wd-Q105702",
-"q": "Q105702",
-"t": "Dr. Garipaşk",
-"o": "Dr. Garipaşk",
-"y": 1964,
-"d": "Stanley Kubrick",
-"line": "1964 British satire film directed by Stanley Kubrick",
-"g": [
-"gul",
-"nost"
-],
-"p": 72
-},
-{
-"id": "wd-Q109331",
-"q": "Q109331",
-"t": "Geleceğe Dönüş II",
-"o": "Geleceğe Dönüş II",
-"y": 1989,
-"d": "Robert Zemeckis",
-"line": "Robert Zemeckis'in 1989 yılı ABD yapımı filmi",
-"g": [
-"gul"
-],
-"p": 72
-},
-{
-"id": "wd-Q60072",
-"q": "Q60072",
-"t": "Neşeli Günler",
-"o": "The Sound of Music",
-"y": 1965,
-"d": "Robert Wise",
-"line": "1965 yapımı Amerikan filmi",
-"g": [
-"agla",
-"ask",
-"iyi",
-"nost"
-],
-"p": 71
-},
-{
-"id": "wd-Q210364",
-"q": "Q210364",
-"t": "Zindan Adası",
-"o": "Shutter Island",
-"y": 2010,
-"d": "Martin Scorsese",
-"line": "2010 yapımı ABD filmi",
-"g": [
-"agla"
-],
-"p": 71
-},
-{
-"id": "wd-Q3604746",
-"q": "Q3604746",
-"t": "Avatar: Suyun Yolu",
-"o": "Avatar: Suyun Yolu",
+"id": "wd-Q97304180",
+"q": "Q97304180",
+"t": "Hüzün Üçgeni",
+"o": "Hüzün Üçgeni",
 "y": 2022,
-"d": "James Cameron",
-"line": "James Cameron tarafından yönetilen 2022 Amerikan bilim kurgu filmi",
-"g": [
-"agla"
-],
-"p": 71
-},
-{
-"id": "wd-Q189330",
-"q": "Q189330",
-"t": "Kara Şövalye Yükseliyor",
-"o": "Kara Şövalye Yükseliyor",
-"y": 2012,
-"d": "",
-"line": "Christopher Nolan'ın yönettiği 2012 yapımı film",
-"g": [
-"agla"
-],
-"p": 71
-},
-{
-"id": "wd-Q48673898",
-"q": "Q48673898",
-"t": "Yeşil Rehber",
-"o": "Yeşil Rehber",
-"y": 2018,
-"d": "Peter Farrelly",
-"line": "Peter Farrelly'nin Filmi (2018)",
+"d": "Ruben Östlund",
+"line": "2022 film directed by Ruben Östlund",
+"tr": 1,
 "g": [
 "agla",
 "gul"
 ],
-"p": 71
+"p": 43
 },
 {
-"id": "wd-Q26698156",
-"q": "Q26698156",
-"t": "Suyun Sesi",
-"o": "Suyun Sesi",
-"y": 2017,
-"d": "Guillermo del Toro",
-"line": "2017 film directed by Guillermo del Toro",
-"g": [
-"agla",
-"ask"
-],
-"p": 71
-},
-{
-"id": "wd-Q202508",
-"q": "Q202508",
-"t": "Mumya",
-"o": "Mumya",
-"y": 1999,
-"d": "Stephen Sommers",
-"line": "1999 film directed by Stephen Sommers",
-"g": [
-"gul"
-],
-"p": 71
-},
-{
-"id": "wd-Q209538",
-"q": "Q209538",
-"t": "Iron Man 3",
-"o": "Iron Man 3",
-"y": 2013,
-"d": "Shane Black",
-"line": "Marvel Stüdyoları tarafından yapılmış süperkahraman filmi",
-"g": [
-"gul"
-],
-"p": 71
-},
-{
-"id": "wd-Q55436290",
-"q": "Q55436290",
-"t": "Barbie",
-"o": "Barbie",
-"y": 2023,
-"d": "Greta Gerwig",
-"line": "2023 yapımı Amerikan komedi filmi",
-"g": [
-"ask",
-"gul",
-"iyi"
-],
-"p": 71
-},
-{
-"id": "wd-Q72962",
-"q": "Q72962",
-"t": "Rezervuar Köpekleri",
-"o": "Rezervuar Köpekleri",
-"y": 1992,
-"d": "Quentin Tarantino",
-"line": "Quentin Tarantino tarafından yönetilen 1992 çıkışlı film",
-"g": [
-"agla",
-"gul"
-],
-"p": 70
-},
-{
-"id": "wd-Q20456",
-"q": "Q20456",
-"t": "Kurtlarla Dans",
-"o": "Kurtlarla Dans",
-"y": 1990,
-"d": "Kevin Costner",
-"line": "1990 film directed by Kevin Costner",
-"g": [
-"agla"
-],
-"p": 70
-},
-{
-"id": "wd-Q190145",
-"q": "Q190145",
-"t": "Örümcek Adam 2",
-"o": "Spider-Man 2",
+"id": "wd-Q325648",
+"q": "Q325648",
+"t": "Duvara Karşı",
+"o": "Head-On",
 "y": 2004,
-"d": "Sam Raimi",
-"line": "2004 yapımı Amerikan süper kahraman filmi",
-"g": [
-"agla"
-],
-"p": 70
-},
-{
-"id": "wd-Q160560",
-"q": "Q160560",
-"t": "Da Vinci Şifresi",
-"o": "Da Vinci Şifresi",
-"y": 2006,
-"d": "Ron Howard",
-"line": "2006 yapımı Amerikan gerilim filmi",
-"g": [
-"agla"
-],
-"p": 70
-},
-{
-"id": "wd-Q193835",
-"q": "Q193835",
-"t": "Can Dostum",
-"o": "Can Dostum",
-"y": 1997,
-"d": "Gus Van Sant",
-"line": "Gus Vant Sant'ın yönettiği 1997 tarihli ABD yapımı drama filmi",
+"d": "Fatih Akın",
+"line": "Fatih Akın'ın yönettiği 2004 Türkiye yapımı film",
+"tr": 1,
 "g": [
 "agla",
 "ask"
 ],
-"p": 70
+"p": 37
 },
 {
-"id": "wd-Q11621",
-"q": "Q11621",
-"t": "E.T. the Extra-Terrestrial",
-"o": "E.T. the Extra-Terrestrial",
+"id": "wd-Q19824796",
+"q": "Q19824796",
+"t": "Mustang",
+"o": "Mustang",
+"y": 2015,
+"d": "Deniz Gamze Ergüven",
+"line": "2015 film",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 35
+},
+{
+"id": "wd-Q683020",
+"q": "Q683020",
+"t": "Yol",
+"o": "Yol",
 "y": 1982,
-"d": "Steven Spielberg",
-"line": "Bilim kurgu filmi",
+"d": "Yılmaz Güney, Şerif Gören",
+"line": "Yılmaz Güney ve Şerif Gören tarafından yönetilen, Altın Palmiye Ödülü kazanan 1981 yapımı Türk filmi",
+"tr": 1,
 "g": [
 "agla",
 "nost"
 ],
-"p": 69
+"p": 33
 },
 {
-"id": "wd-Q107270",
-"q": "Q107270",
-"t": "Bir Konuşabilse",
-"o": "Lost in Translation",
-"y": 2003,
-"d": "Sofia Coppola",
-"line": "2003 film directed by Sofia Coppola",
+"id": "wd-Q804582",
+"q": "Q804582",
+"t": "Bal",
+"o": "Honey",
+"y": 2010,
+"d": "Semih Kaplanoğlu",
+"line": "\"Yusuf Üçlemesi\"nin üçüncü filmi (2010)",
+"tr": 1,
 "g": [
 "agla"
 ],
-"p": 69
+"p": 31
 },
 {
-"id": "wd-Q183066",
-"q": "Q183066",
-"t": "Ölümcül Tuzak",
-"o": "Ölümcül Tuzak",
+"id": "wd-Q15411503",
+"q": "Q15411503",
+"t": "The Water Diviner",
+"o": "The Water Diviner",
+"y": 2014,
+"d": "Russell Crowe",
+"line": "Russell Crowe'un yönettiği 2014 Avustralya, Türkiye, ABD ortak yapımı film",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 28
+},
+{
+"id": "wd-Q31193168",
+"q": "Q31193168",
+"t": "Ahlat Ağacı",
+"o": "The Wild Pear Tree",
+"y": 2018,
+"d": "Nuri Bilge Ceylan",
+"line": "2018 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 27
+},
+{
+"id": "wd-Q2352649",
+"q": "Q2352649",
+"t": "Üç Maymun",
+"o": "Three Monkeys",
 "y": 2008,
-"d": "Kathryn Bigelow",
-"line": "2009 ABD yapımı gerilim filmi",
+"d": "Nuri Bilge Ceylan",
+"line": "2008 yapımı Türk dram filmi",
+"tr": 1,
 "g": [
 "agla"
 ],
-"p": 69
+"p": 24
 },
 {
-"id": "wd-Q213411",
-"q": "Q213411",
-"t": "Yeni Hayat",
-"o": "Cast Away",
-"y": 2000,
-"d": "Robert Zemeckis",
-"line": "2000 film directed by Robert Zemeckis",
-"g": [
-"agla"
-],
-"p": 69
-},
-{
-"id": "wd-Q47300912",
-"q": "Q47300912",
-"t": "Bir Zamanlar Hollywood'da",
-"o": "Bir Zamanlar Hollywood'da",
-"y": 2019,
-"d": "Quentin Tarantino",
-"line": "Quentin Tarantino filmi (2019)",
-"g": [
-"agla",
-"gul"
-],
-"p": 69
-},
-{
-"id": "wd-Q5901134",
-"q": "Q5901134",
-"t": "Karınca Adam",
-"o": "Karınca Adam",
-"y": 2015,
-"d": "Peyton Reed, Edgar Wright",
-"line": "2015 yapımı film",
-"g": [
-"gul"
-],
-"p": 69
-},
-{
-"id": "wd-Q13619743",
-"q": "Q13619743",
-"t": "Minyonlar",
-"o": "Minions",
-"y": 2015,
-"d": "Pierre Coffin, Kyle Balda",
-"line": "2015 çıkışlı Amerikan animasyon filmi",
-"g": [
-"gul"
-],
-"p": 69
-},
-{
-"id": "wd-Q132351",
-"q": "Q132351",
-"t": "Olağan Şüpheliler",
-"o": "The Usual Suspects",
-"y": 1995,
-"d": "Bryan Singer",
-"line": "1995 film directed by Bryan Singer",
-"g": [
-"agla"
-],
-"p": 68
-},
-{
-"id": "wd-Q182212",
-"q": "Q182212",
-"t": "Örümcek Adam 3",
-"o": "Spider-Man 3",
-"y": 2007,
-"d": "Sam Raimi",
-"line": "2007 yapımı Amerikan süper kahraman filmi",
-"g": [
-"agla"
-],
-"p": 68
-},
-{
-"id": "wd-Q183063",
-"q": "Q183063",
-"t": "Altıncı His",
-"o": "The Sixth Sense",
-"y": 1999,
-"d": "M. Night Shyamalan",
-"line": "1999 film directed by M. Night Shyamalan",
-"g": [
-"agla"
-],
-"p": 68
-},
-{
-"id": "wd-Q154581",
-"q": "Q154581",
-"t": "New York Çeteleri",
-"o": "New York Çeteleri",
-"y": 2002,
-"d": "Martin Scorsese",
-"line": "2002 film directed by Martin Scorsese",
-"g": [
-"agla"
-],
-"p": 68
-},
-{
-"id": "wd-Q220741",
-"q": "Q220741",
-"t": "Tanrı Kent",
-"o": "City of God",
-"y": 2002,
-"d": "Fernando Meirelles, Kátia Lund",
-"line": "2002 yılında Fernando Meirelles ve Kátia Lund tarafından yönetilmiş bir film",
-"g": [
-"agla"
-],
-"p": 68
-},
-{
-"id": "wd-Q200299",
-"q": "Q200299",
-"t": "Perde Açılıyor",
-"o": "All About Eve",
-"y": 1950,
-"d": "Joseph L. Mankiewicz",
-"line": "Film",
-"g": [
-"agla",
-"gul",
-"nost"
-],
-"p": 68
-},
-{
-"id": "wd-Q108297",
-"q": "Q108297",
-"t": "Spartaküs",
-"o": "Spartacus",
-"y": 1960,
-"d": "Stanley Kubrick",
-"line": "1960 film directed by Stanley Kubrick",
-"g": [
-"agla",
-"ask",
-"nost"
-],
-"p": 67
-},
-{
-"id": "wd-Q207698",
-"q": "Q207698",
-"t": "Cennetin Krallığı",
-"o": "Cennetin Krallığı",
-"y": 2005,
-"d": "Ridley Scott",
-"line": "Ridley Scott'ın filmi (2005)",
-"g": [
-"agla"
-],
-"p": 67
-},
-{
-"id": "wd-Q186323",
-"q": "Q186323",
-"t": "Borat: Şanlı Kazakistan Milletinin Çıkarlarını Arttırmak İçin Amerikan Kültürünün İncelenmesi",
-"o": "Borat",
-"y": 2006,
-"d": "Larry Charles",
-"line": "2006 tarihli Larry Charles'ın komedi filmi",
-"g": [
-"gul"
-],
-"p": 67
-},
-{
-"id": "wd-Q221202",
-"q": "Q221202",
-"t": "Evde Tek Başına 2",
-"o": "Evde Tek Başına 2",
-"y": 1992,
-"d": "Chris Columbus",
-"line": "1992 yapımı Amerikan filmi",
-"g": [
-"gul"
-],
-"p": 67
-},
-{
-"id": "wd-Q20001199",
-"q": "Q20001199",
-"t": "Galaksinin Koruyucuları 2",
-"o": "Galaksinin Koruyucuları 2",
-"y": 2017,
-"d": "James Gunn",
-"line": "2017 yapımı Amerikan süper kahraman filmi",
-"g": [
-"gul"
-],
-"p": 67
-},
-{
-"id": "wd-Q208269",
-"q": "Q208269",
-"t": "Sil Baştan",
-"o": "Sil Baştan",
-"y": 2004,
-"d": "Michel Gondry",
-"line": "Michael Gondry'nin 2004 yapımı filmi",
-"g": [
-"gul"
-],
-"p": 67
-},
-{
-"id": "wd-Q190643",
-"q": "Q190643",
-"t": "Müfreze",
-"o": "Müfreze",
-"y": 1986,
-"d": "Oliver Stone",
-"line": "1986 ABD yapımı dramatik savaş filmi",
-"g": [
-"agla"
-],
-"p": 66
-},
-{
-"id": "wd-Q273978",
-"q": "Q273978",
-"t": "Kaplan ve Ejderha",
-"o": "Crouching Tiger, Hidden Dragon",
-"y": 2000,
-"d": "Ang Lee",
-"line": "2000 film by Ang Lee",
-"g": [
-"agla",
-"ask"
-],
-"p": 66
-},
-{
-"id": "wd-Q202548",
-"q": "Q202548",
-"t": "Ölüm Korkusu",
-"o": "Vertigo",
-"y": 1958,
-"d": "Alfred Hitchcock",
-"line": "Alfred Hitchcock'un bir filmi",
-"g": [
-"agla",
-"ask",
-"nost"
-],
-"p": 66
-},
-{
-"id": "wd-Q188035",
-"q": "Q188035",
-"t": "Apocalypto",
-"o": "Apocalypto",
-"y": 2006,
-"d": "Mel Gibson",
-"line": "2006 yapımı bir film",
-"g": [
-"agla"
-],
-"p": 66
-},
-{
-"id": "wd-Q20382729",
-"q": "Q20382729",
-"t": "Arrival",
-"o": "Arrival",
-"y": 2016,
-"d": "Denis Villeneuve",
-"line": "2016 science fiction film by Denis Villeneuve",
-"g": [
-"agla"
-],
-"p": 66
-},
-{
-"id": "wd-Q18199330",
-"q": "Q18199330",
-"t": "Fantastik Canavarlar Nelerdir, Nerede Bulunurlar?",
-"o": "Fantastic Beasts and Where to Find Them",
-"y": 2016,
-"d": "David Yates",
-"line": "2016 film directed by David Yates",
-"g": [
-"agla"
-],
-"p": 66
-},
-{
-"id": "wd-Q212775",
-"q": "Q212775",
-"t": "Son İmparator",
-"o": "The Last Emperor",
-"y": 1987,
-"d": "Bernardo Bertolucci",
-"line": "1987 ABD yapımı Oscar ödüllü film",
-"g": [
-"agla"
-],
-"p": 66
-},
-{
-"id": "wd-Q219421",
-"q": "Q219421",
-"t": "Maske",
-"o": "Maske",
-"y": 1994,
-"d": "Chuck Russell",
-"line": "1994 yapımı Amerikan komedi filmi",
-"g": [
-"gul"
-],
-"p": 66
-},
-{
-"id": "wd-Q230552",
-"q": "Q230552",
-"t": "Geleceğe Dönüş III",
-"o": "Geleceğe Dönüş III",
+"id": "wd-Q675112",
+"q": "Q675112",
+"t": "Umuda Yolculuk",
+"o": "Journey of Hope",
 "y": 1990,
-"d": "Robert Zemeckis",
-"line": "Amerikan bilim kurgu filmi",
+"d": "Xavier Koller",
+"line": "1990 film by Xavier Koller",
+"tr": 1,
 "g": [
-"gul"
+"agla",
+"nost"
 ],
-"p": 66
+"p": 23
 },
 {
-"id": "wd-Q218235",
-"q": "Q218235",
-"t": "Charlie'nin Çikolata Fabrikası",
-"o": "Charlie and the Chocolate Factory",
-"y": 2005,
-"d": "Tim Burton",
-"line": "2005 yapımı Amerikan filmi",
-"g": [
-"iyi"
-],
-"p": 66
-},
-{
-"id": "wd-Q201924",
-"q": "Q201924",
-"t": "Göklerin Hakimi",
-"o": "Göklerin Hakimi",
-"y": 2004,
-"d": "Martin Scorsese",
-"line": "2004 film directed by Martin Scorsese",
+"id": "wd-Q1361018",
+"q": "Q1361018",
+"t": "Uzak",
+"o": "Uzak",
+"y": 2002,
+"d": "Nuri Bilge Ceylan",
+"line": "2002 yapımı Türk dram filmi",
+"tr": 1,
 "g": [
 "agla"
 ],
-"p": 65
+"p": 23
 },
 {
-"id": "wd-Q229633",
-"q": "Q229633",
-"t": "3 Aptal",
-"o": "3 Idiots",
-"y": 2009,
-"d": "Rajkumar Hirani",
-"line": "Rajkumar Hirani'nin yönettiği 2009 yapımı film",
+"id": "wd-Q24672271",
+"q": "Q24672271",
+"t": "Kedi",
+"o": "Kedi",
+"y": 2016,
+"d": "Ceyda Torun",
+"line": "Filmi",
+"tr": 1,
+"g": [],
+"p": 23
+},
+{
+"id": "wd-Q494719",
+"q": "Q494719",
+"t": "Temmuz'da",
+"o": "In July",
+"y": 2000,
+"d": "Fatih Akın",
+"line": "Alman Sinema Filmi",
+"tr": 1,
+"g": [
+"ask"
+],
+"p": 23
+},
+{
+"id": "wd-Q59687",
+"q": "Q59687",
+"t": "Bir Tutam Baharat",
+"o": "A Touch of Spice",
+"y": 2003,
+"d": "Tasos Bulmetis",
+"line": "Tassos Boulmetis'in tönettiği 2003 yapımı film",
+"tr": 1,
+"g": [
+"agla",
+"gul"
+],
+"p": 22
+},
+{
+"id": "wd-Q1542380",
+"q": "Q1542380",
+"t": "Susuz Yaz",
+"o": "Dry Summer",
+"y": 1964,
+"d": "Metin Erksan",
+"line": "1963 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"agla",
+"nost"
+],
+"p": 22
+},
+{
+"id": "wd-Q17512617",
+"q": "Q17512617",
+"t": "Kesik",
+"o": "The Cut",
+"y": 2014,
+"d": "Fatih Akın",
+"line": "2014 film by Fatih Akın",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 20
+},
+{
+"id": "wd-Q17560788",
+"q": "Q17560788",
+"t": "Sivas",
+"o": "Sivas",
+"y": 2014,
+"d": "Kaan Müjdeci",
+"line": "Kaan Müjdeci'nin 2014 tarihli filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 20
+},
+{
+"id": "wd-Q797577",
+"q": "Q797577",
+"t": "Babam ve Oğlum",
+"o": "My Father and My Son",
+"y": 2005,
+"d": "Çağan Irmak",
+"line": "2005 yapımı Türk dram filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 20
+},
+{
+"id": "wd-Q1538293",
+"q": "Q1538293",
+"t": "Fuse (film)",
+"o": "Fuse",
+"y": 2003,
+"d": "Pjer Žalica",
+"line": "2003 film by Pjer Žalica",
+"tr": 1,
+"g": [
+"agla",
+"gul"
+],
+"p": 20
+},
+{
+"id": "wd-Q109387468",
+"q": "Q109387468",
+"t": "Kuru Otlar Üstüne",
+"o": "About Dry Grasses",
+"y": 2023,
+"d": "Nuri Bilge Ceylan",
+"line": "Nuri Bilge Ceylan'ın 2023 çıkışlı filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 20
+},
+{
+"id": "wd-Q3794352",
+"q": "Q3794352",
+"t": "Sürü",
+"o": "The Herd",
+"y": 1979,
+"d": "Zeki Ökten, Yılmaz Güney",
+"line": "1978 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"agla",
+"nost"
+],
+"p": 18
+},
+{
+"id": "wd-Q73804850",
+"q": "Q73804850",
+"t": "7. Koğuştaki Mucize",
+"o": "Miracle in Cell No. 7",
+"y": 2019,
+"d": "Mehmet Ada Öztekin",
+"line": "2019 yapımı Türk dram filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 18
+},
+{
+"id": "wd-Q2758737",
+"q": "Q2758737",
+"t": "İklimler",
+"o": "Climates",
+"y": 2006,
+"d": "Nuri Bilge Ceylan",
+"line": "Nuri Bilge Ceylan'ın 2006 yapımı filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 18
+},
+{
+"id": "wd-Q110492062",
+"q": "Q110492062",
+"t": "Klondike",
+"o": "Klondike",
+"y": 2022,
+"d": "Maryna Er Gorbach",
+"line": "2022 film directed by Maryna Er Gorbach",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 18
+},
+{
+"id": "wd-Q27536569",
+"q": "Q27536569",
+"t": "Osmanlı Subayı",
+"o": "The Ottoman Lieutenant",
+"y": 2017,
+"d": "Joseph Ruben",
+"line": "2016 film by Joseph Ruben",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 17
+},
+{
+"id": "wd-Q1861857",
+"q": "Q1861857",
+"t": "Yumurta",
+"o": "Egg",
+"y": 2007,
+"d": "Semih Kaplanoğlu",
+"line": "\"Yusuf Üçlemesi\"nin ilk filmi (2007)",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 17
+},
+{
+"id": "wd-Q12208610",
+"q": "Q12208610",
+"t": "Kelebeğin Rüyası",
+"o": "The Butterfly's Dream",
+"y": 2013,
+"d": "Yılmaz Erdoğan",
+"line": "2013 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"agla",
+"ask"
+],
+"p": 16
+},
+{
+"id": "wd-Q25480414",
+"q": "Q25480414",
+"t": "İstanbul Kırmızısı",
+"o": "Red Istanbul",
+"y": 2017,
+"d": "Ferzan Özpetek",
+"line": "2017 yapımı Ferzan Özpetek filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 14
+},
+{
+"id": "wd-Q573156",
+"q": "Q573156",
+"t": "İstanbul Hatırası: Köprüyü Geçmek",
+"o": "Crossing the Bridge: The Sound of Istanbul",
+"y": 2005,
+"d": "Fatih Akın",
+"line": "2005 documentary film directed by Fatih Akın",
+"tr": 1,
+"g": [
+"iyi"
+],
+"p": 14
+},
+{
+"id": "wd-Q85974844",
+"q": "Q85974844",
+"t": "Mevlana Mesti Aşk",
+"o": "Intoxicated by Love",
+"y": 2024,
+"d": "Hassan Fathi",
+"line": "2024 Iranian-Turkish film by Hassan Fathi",
+"tr": 1,
+"g": [
+"agla",
+"ask"
+],
+"p": 14
+},
+{
+"id": "wd-Q2086445",
+"q": "Q2086445",
+"t": "Mayıs Sıkıntısı",
+"o": "Clouds of May",
+"y": 1999,
+"d": "Nuri Bilge Ceylan",
+"line": "1999 film by Nuri Bilge Ceylan",
+"tr": 1,
+"g": [
+"agla",
+"gul"
+],
+"p": 13
+},
+{
+"id": "wd-Q3472288",
+"q": "Q3472288",
+"t": "Gergedan Mevsimi",
+"o": "Rhino Season",
+"y": 2012,
+"d": "Bahman Ghobadi",
+"line": "2012 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 13
+},
+{
+"id": "wd-Q14757167",
+"q": "Q14757167",
+"t": "Hak Yolu",
+"o": "Mive-ye gonah",
+"y": 1970,
+"d": "Mahmoud Koushan",
+"line": "1971 çıkışlı Türkiye-İran ortak yapımı sinema filmi",
+"tr": 1,
 "g": [
 "agla",
 "ask",
-"gul",
-"iyi"
-],
-"p": 65
-},
-{
-"id": "wd-Q207130",
-"q": "Q207130",
-"t": "Son Samuray",
-"o": "The Last Samurai",
-"y": 2003,
-"d": "Edward Zwick",
-"line": "Edward Zwick filmi",
-"g": [
-"agla"
-],
-"p": 65
-},
-{
-"id": "wd-Q15079318",
-"q": "Q15079318",
-"t": "Her Şeyin Teorisi",
-"o": "The Theory of Everything",
-"y": 2014,
-"d": "James Marsh",
-"line": "Stephen Hawking konulu 2014 yapımı film",
-"g": [
-"agla",
-"ask"
-],
-"p": 65
-},
-{
-"id": "wd-Q14918344",
-"q": "Q14918344",
-"t": "Yapay Oyun",
-"o": "The Imitation Game",
-"y": 2014,
-"d": "Morten Tyldum",
-"line": "2014 filmi",
-"g": [
-"agla"
-],
-"p": 65
-},
-{
-"id": "wd-Q217189",
-"q": "Q217189",
-"t": "Yedinci Mühür",
-"o": "The Seventh Seal",
-"y": 1957,
-"d": "Ingmar Bergman",
-"line": "Ingmar Bergman'ın 1957 tarihli filmi",
-"g": [
-"agla",
 "nost"
 ],
-"p": 65
+"p": 13
 },
 {
-"id": "wd-Q51416",
-"q": "Q51416",
-"t": "Siyah Giyen Adamlar",
-"o": "Siyah Giyen Adamlar",
-"y": 1997,
-"d": "Barry Sonnenfeld",
-"line": "1997 science fiction film directed by Barry Sonnenfeld",
-"g": [
-"gul"
-],
-"p": 65
-},
-{
-"id": "wd-Q74958",
-"q": "Q74958",
-"t": "Kanlı Elmas",
-"o": "Blood Diamond",
-"y": 2006,
-"d": "Edward Zwick",
-"line": "2006 Yapımı Film",
-"g": [
-"agla"
-],
-"p": 64
-},
-{
-"id": "wd-Q318766",
-"q": "Q318766",
-"t": "Terminal",
-"o": "Terminal",
-"y": 2004,
-"d": "Steven Spielberg",
-"line": "Steven Spielberg'in politik komedi-drama türündeki 2004 yapımı filmi",
-"g": [
-"agla"
-],
-"p": 64
-},
-{
-"id": "wd-Q104137",
-"q": "Q104137",
-"t": "Affedilmeyen",
-"o": "Affedilmeyen",
-"y": 1992,
-"d": "Clint Eastwood",
-"line": "1992 film directed by Clint Eastwood",
-"g": [
-"agla"
-],
-"p": 64
-},
-{
-"id": "wd-Q208572",
-"q": "Q208572",
-"t": "Geçmişin Gölgesinde",
-"o": "American History X",
-"y": 1998,
-"d": "Tony Kaye",
-"line": "1998 film directed by Tony Kaye",
-"g": [
-"agla"
-],
-"p": 64
-},
-{
-"id": "wd-Q201674",
-"q": "Q201674",
-"t": "Avcı",
-"o": "Avcı",
-"y": 1978,
-"d": "Michael Cimino",
-"line": "1978 film directed by Michael Cimino",
-"g": [
-"agla",
-"nost"
-],
-"p": 64
-},
-{
-"id": "wd-Q106506",
-"q": "Q106506",
-"t": "Beşinci Element",
-"o": "The Fifth Element",
-"y": 1997,
-"d": "Luc Besson",
-"line": "1997 film directed by Luc Besson",
-"g": [
-"gul"
-],
-"p": 64
-},
-{
-"id": "wd-Q10350033",
-"q": "Q10350033",
-"t": "Karayip Korsanları: Salazar'ın İntikamı",
-"o": "Karayip Korsanları: Salazar'ın İntikamı",
-"y": 2017,
-"d": "Joachim Rønning, Espen Sandberg",
-"line": "2017 yapımı Espen Sandberg ve Joachim Rønning filmi",
-"g": [
-"gul"
-],
-"p": 64
-},
-{
-"id": "wd-Q22957393",
-"q": "Q22957393",
-"t": "Ant-Man ve Wasp",
-"o": "Ant-Man and the Wasp",
-"y": 2018,
-"d": "Peyton Reed",
-"line": "2018 çıkışlı film",
-"g": [
-"gul"
-],
-"p": 64
-},
-{
-"id": "wd-Q135465",
-"q": "Q135465",
-"t": "Raşomon",
-"o": "Rashomon",
-"y": 1950,
-"d": "Akira Kurosava",
-"line": "1950 film directed by Akira Kurosawa",
-"g": [
-"agla",
-"nost"
-],
-"p": 63
-},
-{
-"id": "wd-Q183239",
-"q": "Q183239",
-"t": "Benjamin Button'ın Tuhaf Hikayesi",
-"o": "Benjamin Button'ın Tuhaf Hikayesi",
+"id": "wd-Q672402",
+"q": "Q672402",
+"t": "For a Moment Freedom",
+"o": "For a Moment Freedom",
 "y": 2008,
-"d": "David Fincher",
-"line": "2008 yapımı ABD filmi",
+"d": "Arash T. Riahi",
+"line": "Film",
+"tr": 1,
 "g": [
-"agla",
-"ask"
+"agla"
 ],
-"p": 63
+"p": 12
 },
 {
-"id": "wd-Q34414",
-"q": "Q34414",
-"t": "Arka Pencere",
-"o": "Arka Pencere",
-"y": 1954,
-"d": "Alfred Hitchcock",
-"line": "1954 film directed by Alfred Hitchcock",
+"id": "wd-Q16533418",
+"q": "Q16533418",
+"t": "Kuzu",
+"o": "The Lamb",
+"y": 2014,
+"d": "Kutluğ Ataman",
+"line": "Film",
+"tr": 1,
 "g": [
-"agla",
-"nost"
+"agla"
 ],
-"p": 63
+"p": 12
 },
 {
-"id": "wd-Q209481",
-"q": "Q209481",
-"t": "Gözleri Tamamen Kapalı",
-"o": "Eyes Wide Shut",
+"id": "wd-Q550012",
+"q": "Q550012",
+"t": "Harem Suare",
+"o": "Harem Suare",
 "y": 1999,
-"d": "Stanley Kubrick",
-"line": "1999 yapımı Stanley Kubrick'in son filmi",
+"d": "Ferzan Özpetek",
+"line": "Film",
+"tr": 1,
 "g": [
 "agla"
 ],
-"p": 63
+"p": 12
 },
 {
-"id": "wd-Q211372",
-"q": "Q211372",
-"t": "Rıhtımlar Üzerinde",
-"o": "On the Waterfront",
-"y": 1954,
-"d": "Elia Kazan",
-"line": "1954 film by Elia Kazan",
+"id": "wd-Q567579",
+"q": "Q567579",
+"t": "Kebab Connection",
+"o": "Kebab Connection",
+"y": 2004,
+"d": "Anno Saul",
+"line": "2004 film by Anno Saul",
+"tr": 1,
 "g": [
-"agla",
-"nost"
+"gul"
 ],
-"p": 63
+"p": 12
 },
 {
-"id": "wd-Q153882",
-"q": "Q153882",
-"t": "Başkalarının Hayatı",
-"o": "The Lives of Others",
-"y": 2006,
-"d": "Florian Henckel von Donnersmarck",
-"line": "2006 film directed by Florian Henckel von Donnersmarck",
+"id": "wd-Q1218525",
+"q": "Q1218525",
+"t": "Büyük Yolculuk",
+"o": "Le Grand Voyage",
+"y": 2004,
+"d": "Ismaël Ferroukhi",
+"line": "2004 film by Ismaël Ferroukhi",
+"tr": 1,
 "g": [
 "agla"
 ],
-"p": 63
+"p": 12
 },
 {
-"id": "wd-Q271830",
-"q": "Q271830",
-"t": "Üçüncü Adam",
-"o": "The Third Man",
-"y": 1949,
-"d": "Carol Reed",
-"line": "1949 film directed by Carol Reed",
+"id": "wd-Q2761562",
+"q": "Q2761562",
+"t": "Kasaba",
+"o": "The Small Town",
+"y": 1997,
+"d": "Nuri Bilge Ceylan",
+"line": "Nuri Bilge Ceylan'ın 1997 tarihli filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 12
+},
+{
+"id": "wd-Q136163095",
+"q": "Q136163095",
+"t": "Sarı Zarflar",
+"o": "Yellow Letters",
+"y": 2026,
+"d": "İlker Çatak",
+"line": "2026 film by İlker Çatak",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 12
+},
+{
+"id": "wd-Q2278004",
+"q": "Q2278004",
+"t": "Selvi Boylum Al Yazmalım",
+"o": "The Girl with the Red Scarf",
+"y": 1977,
+"d": "Atıf Yılmaz",
+"line": "1977 film by Atıf Yılmaz",
+"tr": 1,
 "g": [
 "agla",
 "nost"
 ],
-"p": 63
+"p": 11
 },
 {
-"id": "wd-Q274167",
-"q": "Q274167",
-"t": "Şeytan",
-"o": "Şeytan",
-"y": 1973,
-"d": "William Friedkin",
-"line": "1973 film directed by William Friedkin",
+"id": "wd-Q2599661",
+"q": "Q2599661",
+"t": "Yasemin (film)",
+"o": "Yasemin",
+"y": 1988,
+"d": "Hark Bohm",
+"line": "1988 film by Hark Bohm",
+"tr": 1,
 "g": [
 "agla",
+"ask",
 "nost"
 ],
-"p": 63
+"p": 11
 },
 {
-"id": "wd-Q168154",
-"q": "Q168154",
-"t": "Batıda Kan Var",
-"o": "Batıda Kan Var",
-"y": 1968,
-"d": "Sergio Leone",
-"line": "1968 film by Sergio Leone",
+"id": "wd-Q21787529",
+"q": "Q21787529",
+"t": "Ertuğrul 1890",
+"o": "125 Years Memory",
+"y": 2015,
+"d": "Mitsutoshi Tanaka",
+"line": "Türk-Japon ortak yapımı dostluk ve barış hikâyesi",
+"tr": 1,
 "g": [
-"agla",
-"nost"
+"agla"
 ],
-"p": 63
+"p": 11
 },
 {
-"id": "wd-Q172271",
-"q": "Q172271",
-"t": "Malefiz",
-"o": "Maleficent",
-"y": 2014,
-"d": "Robert Stromberg",
-"line": "Robert Stromberg tarafından yönetilen fantastik türde 2014 yapımı bir ABD filmi",
+"id": "wd-Q2845101",
+"q": "Q2845101",
+"t": "Anadolu Kartalları",
+"o": "Anadolu Kartalları",
+"y": 2011,
+"d": "Ömer Vargı",
+"line": "2011 yapımı Türk filmi",
+"tr": 1,
 "g": [
 "agla",
 "ask"
 ],
-"p": 63
+"p": 11
 },
 {
-"id": "wd-Q152857",
-"q": "Q152857",
-"t": "Çöküş",
-"o": "Downfall",
-"y": 2004,
-"d": "Oliver Hirschbiegel",
-"line": "2004 film by Oliver Hirschbiegel",
+"id": "wd-Q1518391",
+"q": "Q1518391",
+"t": "Recep İvedik",
+"o": "Recep İvedik",
+"y": 2008,
+"d": "Togan Gökbakar",
+"line": "2008 yapımı Türk komedi filmi",
+"tr": 1,
+"g": [
+"gul"
+],
+"p": 10
+},
+{
+"id": "wd-Q18123900",
+"q": "Q18123900",
+"t": "Benim Dünyam",
+"o": "Benim Dünyam",
+"y": 2013,
+"d": "Uğur Yücel",
+"line": "2013 yapımı Türk filmi",
+"tr": 1,
 "g": [
 "agla"
 ],
-"p": 63
+"p": 10
 },
 {
-"id": "wd-Q206388",
-"q": "Q206388",
-"t": "Bir Zamanlar Amerika",
-"o": "Bir Zamanlar Amerika",
-"y": 1984,
-"d": "Sergio Leone",
-"line": "1984 film directed by Sergio Leone",
-"g": [
-"agla",
-"nost"
-],
-"p": 63
-},
-{
-"id": "wd-Q15648198",
-"q": "Q15648198",
-"t": "Whiplash",
-"o": "Whiplash",
-"y": 2014,
-"d": "Damien Chazelle",
-"line": "2014 filmi",
-"g": [
-"agla",
-"iyi"
-],
-"p": 63
-},
-{
-"id": "wd-Q16857406",
-"q": "Q16857406",
-"t": "Orman Çocuğu",
-"o": "Orman Çocuğu",
-"y": 2016,
-"d": "Jon Favreau, Juan Logar Jr.",
-"line": "2016 film directed by Jon Favreau",
-"g": [
-"agla"
-],
-"p": 63
-},
-{
-"id": "wd-Q188000",
-"q": "Q188000",
-"t": "Çarpışma",
-"o": "Çarpışma",
-"y": 2004,
-"d": "Paul Haggis",
-"line": "En İyi Film Akademi Ödülü sahibi 2004 yapımı Paul Haggis filmi",
-"g": [
-"agla"
-],
-"p": 63
-},
-{
-"id": "wd-Q192115",
-"q": "Q192115",
-"t": "Günah Şehri",
-"o": "Günah Şehri",
+"id": "wd-Q5519097",
+"q": "Q5519097",
+"t": "Gelibolu",
+"o": "Gallipoli",
 "y": 2005,
-"d": "Robert Anthony Rodriguez, Frank Miller",
-"line": "2005 film directed by Frank Miller and Robert Rodriguez",
+"d": "Tolga Örnek",
+"line": "2005 documentary film directed by Tolga Örnek",
+"tr": 1,
+"g": [],
+"p": 10
+},
+{
+"id": "wd-Q278190",
+"q": "Q278190",
+"t": "A.R.O.G",
+"o": "A.R.O.G",
+"y": 2008,
+"d": "Cem Yılmaz",
+"line": "2008 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"gul"
+],
+"p": 10
+},
+{
+"id": "wd-Q638267",
+"q": "Q638267",
+"t": "Büyük Adam Küçük Aşk",
+"o": "Big Man, Little Love",
+"y": 2001,
+"d": "Handan İpekçi",
+"line": "2001 film by Handan İpekçi",
+"tr": 1,
 "g": [
 "agla"
 ],
-"p": 63
+"p": 10
 },
 {
-"id": "wd-Q27894574",
-"q": "Q27894574",
-"t": "Bohemian Rhapsody",
-"o": "Bohemian Rhapsody",
-"y": 2018,
-"d": "Bryan Singer",
-"line": "2018 tarihli biyografik film",
+"id": "wd-Q832180",
+"q": "Q832180",
+"t": "Takva",
+"o": "Takva: A Man's Fear of God",
+"y": 2006,
+"d": "Özer Kızıltan",
+"line": "2006 Film directed by Özer Kiziltan",
+"tr": 1,
 "g": [
-"agla",
-"iyi"
+"agla"
 ],
-"p": 63
+"p": 10
 },
 {
-"id": "wd-Q193577",
-"q": "Q193577",
-"t": "Kramer Kramer'e Karşı",
-"o": "Kramer vs. Kramer",
-"y": 1979,
-"d": "Robert Benton",
-"line": "1979 film by Robert Benton",
+"id": "wd-Q1573810",
+"q": "Q1573810",
+"t": "Recep İvedik 3",
+"o": "Recep İvedik 3",
+"y": 2010,
+"d": "Togan Gökbakar",
+"line": "2010 yapımı Türk komedi filmi",
+"tr": 1,
+"g": [
+"gul"
+],
+"p": 10
+},
+{
+"id": "wd-Q2505085",
+"q": "Q2505085",
+"t": "Uçurtmayı Vurmasınlar",
+"o": "Don't Let Them Shoot the Kite",
+"y": 1989,
+"d": "Tunç Başaran",
+"line": "1989 film by Tunç Başaran",
+"tr": 1,
 "g": [
 "agla",
 "nost"
 ],
-"p": 63
+"p": 9
 },
 {
-"id": "wd-Q25136757",
-"q": "Q25136757",
-"t": "Beni Adınla Çağır",
-"o": "Call Me by Your Name",
-"y": 2017,
-"d": "Luca Guadagnino",
-"line": "2017 yapımı romantik drama filmi",
+"id": "wd-Q3459778",
+"q": "Q3459778",
+"t": "11'e 10 kala",
+"o": "10 to 11",
+"y": 2009,
+"d": "Pelin Esmer",
+"line": "Pelin Esmer'in yazıp yönettiği, 2009 yapımı, 16. Altın Koza Film Festivali’nde En İyi Senaryo Ödülü’nü almış ve Köprüdekiler ile En İyi Film Ödülü’nü paylaşmış film",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 9
+},
+{
+"id": "wd-Q3553819",
+"q": "Q3553819",
+"t": "Hakkâri'de Bir Mevsim",
+"o": "A Season in Hakkari",
+"y": 1983,
+"d": "Erden Kıral",
+"line": "Türk filmi",
+"tr": 1,
+"g": [
+"agla",
+"nost"
+],
+"p": 9
+},
+{
+"id": "wd-Q20751322",
+"q": "Q20751322",
+"t": "Abluka",
+"o": "Frenzy",
+"y": 2015,
+"d": "Emin Alper",
+"line": "Film",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 9
+},
+{
+"id": "wd-Q23817411",
+"q": "Q23817411",
+"t": "Senden Bana Kalan",
+"o": "Senden Bana Kalan",
+"y": 2015,
+"d": "Abdullah Oğuz",
+"line": "2015 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 9
+},
+{
+"id": "wd-Q6070309",
+"q": "Q6070309",
+"t": "Dedemin İnsanları",
+"o": "My Grandfather's People",
+"y": 2011,
+"d": "Çağan Irmak",
+"line": "2011 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"agla",
+"gul"
+],
+"p": 9
+},
+{
+"id": "wd-Q1769370",
+"q": "Q1769370",
+"t": "Mutluluk",
+"o": "Bliss",
+"y": 2007,
+"d": "Abdullah Oğuz",
+"line": "2007 film by Abdullah Oğuz",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 9
+},
+{
+"id": "wd-Q3204027",
+"q": "Q3204027",
+"t": "L'Immortelle",
+"o": "L'Immortelle",
+"y": 1963,
+"d": "Alain Robbe-Grillet",
+"line": "Film",
+"tr": 1,
+"g": [
+"agla",
+"nost"
+],
+"p": 9
+},
+{
+"id": "wd-Q3206830",
+"q": "Q3206830",
+"t": "Pandora'nın Kutusu",
+"o": "Pandora's Box",
+"y": 2008,
+"d": "Yeşim Ustaoğlu",
+"line": "2008 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 9
+},
+{
+"id": "wd-Q3224848",
+"q": "Q3224848",
+"t": "Duvar",
+"o": "Duvar",
+"y": 1983,
+"d": "Yılmaz Güney",
+"line": "Yılmaz Güney'in 1983 yapımı son filmi",
+"tr": 1,
+"g": [
+"agla",
+"nost"
+],
+"p": 9
+},
+{
+"id": "wd-Q3912102",
+"q": "Q3912102",
+"t": "Kosmos",
+"o": "Cosmos",
+"y": 2010,
+"d": "Reha Erdem",
+"line": "Reha Erdem tarafından yazılıp yönetilen 2010 çıkışlı film",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 9
+},
+{
+"id": "wd-Q104816324",
+"q": "Q104816324",
+"t": "Mücadele Çıkmazı",
+"o": "Paper Lives",
+"y": 2021,
+"d": "Can Ülkay",
+"line": "Türk dram filmi",
+"tr": 1,
+"g": [
+"agla"
+],
+"p": 9
+},
+{
+"id": "wd-Q17378488",
+"q": "Q17378488",
+"t": "Recep İvedik 4",
+"o": "Recep İvedik 4",
+"y": 2014,
+"d": "Togan Gökbakar",
+"line": "2014 yapımı Türk komedi filmi",
+"tr": 1,
+"g": [
+"gul"
+],
+"p": 8
+},
+{
+"id": "wd-Q3275371",
+"q": "Q3275371",
+"t": "Issız Adam",
+"o": "Alone",
+"y": 2008,
+"d": "Çağan Irmak",
+"line": "2008 yapımı Türk filmi",
+"tr": 1,
 "g": [
 "agla",
 "ask"
 ],
-"p": 63
+"p": 8
+},
+{
+"id": "wd-Q3549679",
+"q": "Q3549679",
+"t": "Aşk Nöbeti",
+"o": "Time of Love",
+"y": 1990,
+"d": "Muhsin Mahmelbaf",
+"line": "1990 film by Mohsen Makhmalbaf",
+"tr": 1,
+"g": [
+"agla",
+"nost"
+],
+"p": 8
+},
+{
+"id": "wd-Q25477896",
+"q": "Q25477896",
+"t": "Recep İvedik 5",
+"o": "Recep İvedik 5",
+"y": 2017,
+"d": "Togan Gökbakar",
+"line": "2017 yapımı Türk komedi filmi",
+"tr": 1,
+"g": [
+"gul"
+],
+"p": 8
+},
+{
+"id": "wd-Q7755621",
+"q": "Q7755621",
+"t": "Osmanlı Cumhuriyeti",
+"o": "The Ottoman Republic",
+"y": 2008,
+"d": "Gani Müjde",
+"line": "2008 yapımı Türk filmi",
+"tr": 1,
+"g": [
+"gul"
+],
+"p": 8
+},
+{
+"id": "wd-Q7827905",
+"q": "Q7827905",
+"t": "Tosun Paşa",
+"o": "Tosun Paşa",
+"y": 1976,
+"d": "Kartal Tibet",
+"line": "1976 yapımı Türk komedi filmi",
+"tr": 1,
+"g": [
+"gul",
+"nost"
+],
+"p": 8
+},
+{
+"id": "wd-Q7881869",
+"q": "Q7881869",
+"t": "Umut",
+"o": "Umut",
+"y": 1970,
+"d": "Yılmaz Güney",
+"line": "Yılmaz Güney'in 1970 yapımı dram filmi",
+"tr": 1,
+"g": [
+"agla",
+"nost"
+],
+"p": 8
 }
 ],
-"updated": "2026-11-17"
+"updated": "2026-11-17",
+"v2": 1
 }
