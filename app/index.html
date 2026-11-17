@@ -7945,6 +7945,24 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+.bk2-lv{width:100%;max-width:440px;display:flex;align-items:center;gap:10px;margin:-4px 0 -2px}
+.bk2-lvb{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:#FFE6A8}
+.bk2-lvb i{font-style:normal;min-width:26px;height:26px;padding:0 6px;box-sizing:border-box;border-radius:9px;display:grid;place-items:center;font:900 14px/1 var(--f-body);color:#5A2E00;background:linear-gradient(160deg,#FFE9A8,#F5B841);box-shadow:inset 0 2px 0 rgba(255,255,255,.6),inset 0 -3px 0 rgba(150,80,0,.35),0 3px 0 rgba(60,20,90,.4)}
+.bk2-xp{flex:1;height:10px;border-radius:99px;background:rgba(20,8,60,.35);box-shadow:inset 0 2px 3px rgba(0,0,0,.3);overflow:hidden}
+.bk2-xp i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#FFD27A,#FF8FB8);box-shadow:inset 0 2px 0 rgba(255,255,255,.5);transition:width .6s cubic-bezier(.2,.9,.3,1)}
+.bk2-lv small{font-size:11px;font-weight:700;opacity:.75;min-width:52px;text-align:right}
+.bk2-ms{width:100%;max-width:440px;box-sizing:border-box;padding:12px 14px;border-radius:20px;background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.14),0 10px 24px -16px rgba(20,8,60,.8)}
+.bk2-ms[hidden]{display:none}
+.bk2-msh{display:flex;align-items:center;gap:8px;margin-bottom:8px}.bk2-msh b{font-size:14px}.bk2-msh span{color:#FFD27A;font-size:16px;letter-spacing:2px}.bk2-msh em{font-style:normal;opacity:.3;color:#fff}
+.bk2-msh small{margin-left:auto;font-size:12px;font-weight:800;padding:3px 9px;border-radius:99px;background:rgba(255,140,80,.25)}
+.bk2-mi{display:grid;grid-template-columns:20px 1fr 56px 62px;align-items:center;gap:8px;padding:5px 0;font-size:12.5px}
+.bk2-mc{width:18px;height:18px;border-radius:6px;display:grid;place-items:center;font-size:12px;font-weight:900;background:rgba(255,255,255,.15)}
+.bk2-mi.ok .bk2-mc{background:linear-gradient(160deg,#9FF0C0,#2FB574);color:#fff}.bk2-mi.ok .bk2-mt{opacity:.6;text-decoration:line-through}
+.bk2-mt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bk2-mp{height:7px;border-radius:99px;background:rgba(20,8,60,.35);overflow:hidden}.bk2-mp i{display:block;height:100%;background:linear-gradient(90deg,#9FF0C0,#2FB574);border-radius:99px;transition:width .5s}
+.bk2-mi small{font-size:11px;opacity:.75;text-align:right}
+.bk2-ft.lv{font-size:44px}.bk2-ft.ms{top:30%;font-size:28px}
+
 /* v0.71.1 Blok Keyfi: 3B kabartma bloklar + açık zemin */
 #zsh .kf-in.bk2-in{background:radial-gradient(90% 50% at 50% 0%,#8E74F0 0%,transparent 70%),radial-gradient(70% 40% at 100% 100%,#E07AAE66 0%,transparent 70%),linear-gradient(180deg,#6450C4,#4A3796)!important}
 html #zsh.pzmode:has(.bk2-in){background:#4A3796}
@@ -18949,6 +18967,35 @@ RS_G.blk=["Blok Keyfi rekor yarışı","Kim daha yüksek puan yapacak?"];
  const _v=rsDuelVals;rsDuelVals=function(d){const r=_v.apply(this,arguments);if(d.v==="blk")return [String(bkBest()),String(r[1]).replace(/\.$/,""),"puan"];return r;};
  const _d=rsDecorate;rsDecorate=function(b,d){const r=_d.apply(this,arguments);try{if(d.v==="blk"){const s=b.querySelector(".rs-s");if(s)s.textContent=s.textContent.replace(/\. seviye/g," puan");}}catch(e){}return r;};
  const _du=rsDuel;rsDuel=function(d){_du.apply(this,arguments);try{if(d.v==="blk"){const u=document.querySelector("#rsduel .vs-u");if(u)u.textContent="Yüksek puan kazanır";}}catch(e){}};})();
+
+/* ===== v0.72 Blok Keyfi: seviye + XP, günün görevleri, seri ===== */
+const BKM=[["two","Tek hamlede 2 satır patlat",1],["cmb3","Kombo ×3 yap",1],["s500","Bir oyunda 500 puan",500],["l10","Toplam 12 satır patlat",12],["clean","Tahtayı tertemiz yap",1],["g3","3 oyun bitir",3],["big9","3×3 kareyi 4 kez yerleştir",4],["s1k","Bir oyunda 1000 puan",1000],["cmb5","Kombo ×5 yap",1],["l25","Toplam 25 satır patlat",25]];
+function bkLv(xp){return Math.floor(Math.sqrt((xp||0)/120))+1;}function bkLvXp(l){return 120*(l-1)*(l-1);}
+function bkDay(){const G=bkG2(),d=dkey();if(!G.blkDay||G.blkDay.d!==d){const n=spDayN?spDayN():Math.floor(Date.now()/864e5);const r=spRand(n*97+13);const ids=[];const pool=BKM.map(m=>m[0]);while(ids.length<3){const k=pool[Math.floor(r()*pool.length)];if(!ids.includes(k))ids.push(k);}
+  const y=G.blkDay&&G.blkDay.all;const prev=G.blkStreakD;G.blkDay={d,ids,p:{},done:{},all:0};}return G.blkDay;}
+function bkMis(id){return BKM.find(m=>m[0]===id);}
+function bkXp(n,why){const G=bkG2(),l0=bkLv(G.blkXp);G.blkXp=(G.blkXp||0)+n;const l1=bkLv(G.blkXp);bkLvPaint();if(l1>l0){setTimeout(()=>{bkFloat(`Seviye ${l1}!`,"cb lv");bkSnd("best");try{navigator.vibrate&&navigator.vibrate([20,40,20,40,30]);}catch(e){}},why?600:200);}}
+function bkEv(k,v){const D=bkDay();let ch=0;const set=(id,val,mode)=>{if(!D.ids.includes(id)||D.done[id])return;const m=bkMis(id);const cur=D.p[id]||0;const nv=mode==="max"?Math.max(cur,val):cur+val;if(nv!==cur){D.p[id]=nv;ch=1;}
+  if(D.p[id]>=m[2]){D.done[id]=1;ch=1;setTimeout(()=>{bkFloat("Görev tamam! ⭐","cb ms");bkSnd("combo");},450);bkXp(60,1);if(D.ids.every(i=>D.done[i])&&!D.all){D.all=1;const G=bkG2();const y=new Date(Date.now()-864e5);const yk=y.getFullYear()+"-"+String(y.getMonth()+1).padStart(2,"0")+"-"+String(y.getDate()).padStart(2,"0");G.blkStreak=G.blkStreakD===yk?(G.blkStreak||0)+1:1;G.blkStreakD=D.d;setTimeout(()=>bkFloat("Günün yıldızı! 🌟","cb ms"),1400);bkXp(150,1);}}};
+ if(k==="lines"){set("l10",v);set("l25",v);if(v>=2)set("two",1);}
+ if(k==="combo"){if(v>=3)set("cmb3",1);if(v>=5)set("cmb5",1);}
+ if(k==="score"){set("s500",v,"max");set("s1k",v,"max");}
+ if(k==="clean")set("clean",1);if(k==="over")set("g3",1);if(k==="big9")set("big9",1);
+ if(ch){try{save();}catch(e){}bkMisPaint();}}
+function bkLvPaint(){const e=document.getElementById("bk2-lv");if(!e)return;const xp=bkG2().blkXp||0,l=bkLv(xp),a=bkLvXp(l),b=bkLvXp(l+1),pc=Math.round((xp-a)/(b-a)*100);
+ e.innerHTML=`<span class="bk2-lvb"><i>${l}</i>Seviye</span><span class="bk2-xp"><i style="width:${pc}%"></i></span><small>${xp-a}/${b-a}</small>`;}
+function bkMisPaint(){const e=document.getElementById("bk2-ms");if(!e)return;const D=bkDay(),G=bkG2();const n=D.ids.filter(i=>D.done[i]).length;
+ e.innerHTML=`<div class="bk2-msh"><b>Günün görevleri</b><span>${"★".repeat(n)}<em>${"★".repeat(3-n)}</em></span>${G.blkStreak>1&&G.blkStreakD===D.d?`<small>🔥 ${G.blkStreak} gün</small>`:""}</div>${D.ids.map(id=>{const m=bkMis(id),v=Math.min(D.p[id]||0,m[2]),ok=D.done[id];return `<div class="bk2-mi${ok?" ok":""}"><span class="bk2-mc">${ok?"✓":""}</span><span class="bk2-mt">${m[1]}</span><span class="bk2-mp"><i style="width:${Math.round(v/m[2]*100)}%"></i></span><small>${m[2]>1?`${v}/${m[2]}`:ok?"":"0/1"}</small></div>`;}).join("")}`;}
+(function(){
+ const _h=bkHTML;bkHTML=function(){return _h.apply(this,arguments).replace('<div class="bk2-bw">','<div class="bk2-lv" id="bk2-lv"></div><div class="bk2-bw">').replace('<div class="bk2-ov"','<div class="bk2-ms" id="bk2-ms"></div><div class="bk2-ov"');};
+ const _b=bkBind;bkBind=function(){_b.apply(this,arguments);bkLvPaint();bkMisPaint();bkFit();};
+ const _f=bkFit;bkFit=function(){_f.apply(this,arguments);try{const W=document.getElementById("bk2"),M=document.getElementById("bk2-ms");if(!W||!M)return;M.hidden=false;const r=M.getBoundingClientRect();M.hidden=r.bottom>window.innerHeight-6;}catch(e){}};
+ const _p=bkPlace;bkPlace=function(ti,r0,c0){const p=BK.tray[ti];let L=0;if(p&&bkFits(BK.g,p.s,r0,c0)){const g1=BK.g.slice();BK_SH[p.s].forEach(([r,c])=>g1[(r0+r)*BK_N+c0+c]=p.c);const F=bkFull(g1);L=F.rows.length+F.cols.length;}
+   const ok=_p.apply(this,arguments);if(!ok)return ok;try{if(p.s===10)bkEv("big9");
+   if(L>0){bkEv("lines",L);bkEv("combo",BK.combo);bkXp(L*6+(BK.combo>1?BK.combo*2:0));}else bkXp(1);
+   bkEv("score",BK.sc);setTimeout(()=>{if(BK.g.every(v=>v<0))bkEv("clean");},800);}catch(e){console.error(e);}return ok;};
+ const _o=bkOver;bkOver=function(){_o.apply(this,arguments);try{bkEv("over");bkXp(Math.round(BK.sc/40));}catch(e){}};
+})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
