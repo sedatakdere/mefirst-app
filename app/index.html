@@ -4309,7 +4309,7 @@ html[data-mf="dusk"] .zsh.kf-falbg{background:radial-gradient(60% 35% at 15% 8%,
 .kf-cup2{width:250px;height:216px;margin:0 auto;animation:dmBob 3.4s ease-in-out infinite}
 .kf-cup2 svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 16px 20px rgba(27,110,138,.35))}
 .kf-cup2.flip .cupg{transform-origin:110px 100px;animation:kFlip2 1s cubic-bezier(.5,0,.3,1.2) both}
-.kf-cup2 .fc-ft{opacity:0}.kf-cup2.flip .fc-ft{animation:kFtIn .01s linear .45s both}.kf-cup2.flip .fc-in{animation:kFtOut .01s linear .45s both}
+.kf-cup2 .fc-ft{opacity:0}.kf-cup2 .fc-sh{opacity:0}.kf-cup2.flip .fc-sh{animation:kFtIn .3s ease .7s both}.kf-cup2.flip .fc-ft{animation:kFtIn .01s linear .45s both}.kf-cup2.flip .fc-in{animation:kFtOut .01s linear .45s both}
 @keyframes kFlip2{0%{transform:none}35%{transform:translateY(-26px) rotate(90deg)}100%{transform:translateY(20px) rotate(180deg)}}@keyframes kFtIn{to{opacity:1}}@keyframes kFtOut{to{opacity:0}}
 .kf-cup2 .steam2 path{fill:none;stroke:#E8A0BC;stroke-width:5;stroke-linecap:round;opacity:.8;animation:kfSm 2.8s ease-in-out infinite}
 .kf-cup2 .steam2 path:nth-child(2){animation-delay:.5s;stroke:#F2C27A}.kf-cup2 .steam2 path:nth-child(3){animation-delay:1s;stroke:#8FD6CF}
@@ -13204,9 +13204,9 @@ function kfHub(){const O=document.getElementById("zsh");const z=zodiac((st.prof|
 function falCup(flip){return `<div class="kf-cup2${flip?" flip":""}" aria-hidden="true"><svg viewBox="0 0 220 190"><defs>
   <linearGradient id="fcB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3FC1C9"/><stop offset="1" stop-color="#1B6E8A"/></linearGradient>
   <linearGradient id="fcG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F6D27A"/><stop offset=".5" stop-color="#FFF1B8"/><stop offset="1" stop-color="#D9A441"/></linearGradient>
-  <radialGradient id="fcC" cx=".4" cy=".35"><stop offset="0" stop-color="#8A5A3C"/><stop offset="1" stop-color="#3E2416"/></radialGradient></defs>
+  <radialGradient id="fcS" cx=".45" cy=".35"><stop offset="0" stop-color="#FFFDF7"/><stop offset="1" stop-color="#F2E2C4"/></radialGradient><radialGradient id="fcC" cx=".4" cy=".35"><stop offset="0" stop-color="#8A5A3C"/><stop offset="1" stop-color="#3E2416"/></radialGradient></defs>
   <ellipse cx="110" cy="168" rx="92" ry="16" fill="rgba(0,0,0,.18)"/>
-  <ellipse cx="110" cy="160" rx="90" ry="18" fill="url(#fcB)"/><ellipse cx="110" cy="156" rx="90" ry="16" fill="url(#fcG)"/><ellipse cx="110" cy="155" rx="80" ry="12" fill="#2A9DAE"/>
+  <ellipse cx="110" cy="160" rx="90" ry="18" fill="#D9C3A0"/><ellipse cx="110" cy="156" rx="90" ry="16" fill="url(#fcG)"/><ellipse cx="110" cy="155" rx="84" ry="13.5" fill="url(#fcS)"/><ellipse cx="110" cy="155" rx="62" ry="8" fill="none" stroke="#E2C58E" stroke-width="1.5" opacity=".8"/><ellipse class="fc-sh" cx="110" cy="154" rx="56" ry="7" fill="rgba(60,30,20,.28)"/>
   <g class="cupg"><path d="M52 66h116l-10 66a24 24 0 0 1-24 20H86a24 24 0 0 1-24-20z" fill="url(#fcB)"/>
   <path d="M168 78c18 0 26 10 22 22s-16 17-26 13" fill="none" stroke="url(#fcG)" stroke-width="9" stroke-linecap="round"/>
   <path d="M56 84h108" stroke="url(#fcG)" stroke-width="5"/><path d="M62 130h96" stroke="url(#fcG)" stroke-width="3" opacity=".8"/>
