@@ -7947,6 +7947,12 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.79.1: Burcum kaydırırken titremesin — bulanık cam efekti yok, yıldızlar kendi katmanında; Ev zemini sabit değil */
+.bz-in *{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.bz-in .bz-sky{bottom:auto;height:min(100%,900px);overflow:hidden;contain:paint}
+#zsh{overscroll-behavior:contain}
+html:not([data-mf="dusk"]) body.ev-on{background-attachment:scroll!important}
+
 .evv .eseg .ev-tb{display:inline-flex!important;align-items:center;justify-content:center;gap:5px}
 .evv .eseg .ev-ic{width:17px;height:17px;flex:none}
 @media (max-width:374px){.evv .eseg .ev-tb{gap:3px;font-size:13px!important;padding-inline:4px!important}.evv .eseg .ev-ic{width:14px;height:14px}}
