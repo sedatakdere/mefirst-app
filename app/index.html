@@ -19398,6 +19398,9 @@ function tmIntro(){const W=document.getElementById("tm");if(!W)return;const d=do
 /* katmanlar çaprazlansın: tek katmanlar yarım taş aşağı-sağa */
 (function(){const _m=tmMake;tmMake=function(lv){const T=_m.apply(this,arguments);return T;};})();
 
+/* v0.75.3: Keyif köşesindeki ✕ her oyunda kapatsın (bazı oyunlar düğmeyi yeniden çizip bağlantıyı koparıyordu) */
+document.addEventListener("click",e=>{const x=e.target.closest&&e.target.closest("#zsh #zs-x");if(!x)return;e.preventDefault();e.stopPropagation();try{zodClose();}catch(_){}},true);
+
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
