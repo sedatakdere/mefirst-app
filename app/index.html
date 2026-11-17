@@ -7947,6 +7947,10 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.76.1: sayfa yana kaymasın (taşan raylar sayfayı sallıyordu) */
+html,body{overflow-x:hidden;overscroll-behavior-x:none}
+@supports (overflow-x:clip){html,body{overflow-x:clip}}
+
 #zsh .bz-in{position:relative;max-width:none!important;margin:0!important;min-height:100%;box-sizing:border-box;padding:64px 16px 30px!important;color:#F4EEFF;background:radial-gradient(90% 40% at 50% 0%,#5B3FB0 0%,transparent 70%),radial-gradient(80% 50% at 100% 60%,#8E2E6A55 0%,transparent 70%),linear-gradient(180deg,#1C1245,#120B33 60%,#1A0F3A)!important;overflow:hidden}
 html #zsh:has(.bz-in){background:#120B33}
 #zsh .bz-in .kf-back,#zsh .bz-in .zs-x{background:rgba(255,255,255,.12)!important;color:#fff!important;box-shadow:none!important}
