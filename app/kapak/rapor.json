@@ -1,5 +1,5 @@
 {
- "tarih": "2026-11-16 12:49",
+ "tarih": "2026-11-18 12:12",
  "bulunan": {
   "Tante Rosa": "dr",
   "Ruhlar Evi": "dr",
@@ -83,7 +83,7 @@
  "kaynak": {
   "dr": 4
  },
- "toplam": 91,
+ "toplam": 86,
  "boyut": {
   "orijinal": 4
  },
@@ -91,7 +91,7 @@
   "Bekar ve Mutlu Nasıl Yaşanır?": [
    {
     "q": "Bekar ve Mutlu Nasıl Yaşanır? Jennifer Taitz",
-    "n": 647272,
+    "n": 645648,
     "alts": [
      "Bekar ve Mutlu Nasıl Yaşanır-Doğru Kişiyi Ararken Kendini Kaybetmenin Yolları"
     ],
@@ -99,12 +99,12 @@
     "raw": [
      "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002245066001-1.jpg\" height=\"194px\" alt=\"Bekar ve Mutlu Nasıl Yaşanır-Doğru Kişiyi Ararken Kendini Kaybetmenin Yolları\" />",
      "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0001909991001-1.jpg\" height=\"194px\" alt=\"Aşk Nedir ve Nasıl Yaşanır?\" />",
-     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002216872001-1.jpg\" height=\"194px\" alt=\"24 Saat Nasıl Yaşanır\" />"
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0001796150001-1.jpg\" height=\"194px\" alt=\"Bir &#214;m&#252;r Nasıl Yaşanır?\" />"
     ]
    },
    {
     "q": "Bekar ve Mutlu Nasıl Yaşanır?",
-    "n": 646639,
+    "n": 645015,
     "alts": [
      "Bekar ve Mutlu Nasıl Yaşanır-Doğru Kişiyi Ararken Kendini Kaybetmenin Yolları"
     ],
@@ -112,21 +112,21 @@
     "raw": [
      "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002245066001-1.jpg\" height=\"194px\" alt=\"Bekar ve Mutlu Nasıl Yaşanır-Doğru Kişiyi Ararken Kendini Kaybetmenin Yolları\" />",
      "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0001909991001-1.jpg\" height=\"194px\" alt=\"Aşk Nedir ve Nasıl Yaşanır?\" />",
-     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0002216872001-1.jpg\" height=\"194px\" alt=\"24 Saat Nasıl Yaşanır\" />"
+     "<img class=\"lazyload\" data-src=\"https://i.dr.com.tr/cache/180x245-0/originals/0001796150001-1.jpg\" height=\"194px\" alt=\"Bir &#214;m&#252;r Nasıl Yaşanır?\" />"
     ]
    }
   ],
   "Kurt Seyit ve Şura": [
    {
     "q": "Kurt Seyit ve Şura Nermin Bezmen",
-    "n": 631885,
+    "n": 631881,
     "alts": [
      "Kurt Seyt ve Shura",
      "Peynir ve Kurtlar",
      "Ayı ve Kurt",
      "Kurt ve Ormancı",
-     "G&#252;zelim Portakal-B&#252;y&#252;k Kurt ve K&#252;&#231;&#252;k Kurt",
-     "Kurt ve Kız"
+     "Kurt ve Kız",
+     "G&#252;zelim Portakal-B&#252;y&#252;k Kurt ve K&#252;&#231;&#252;k Kurt"
     ],
     "imgs": 95,
     "raw": []
@@ -149,14 +149,14 @@
   "Hayata Röveşata Çeken Adam": [
    {
     "q": "Hayata Röveşata Çeken Adam Fredrik Backman",
-    "n": 411628,
+    "n": 411525,
     "alts": [],
     "imgs": 62,
     "raw": []
    },
    {
     "q": "Hayata Röveşata Çeken Adam",
-    "n": 624663,
+    "n": 631016,
     "alts": [
      "Kızlar &#199;etesi - Adım Adım Hayata"
     ],
@@ -171,7 +171,7 @@
   "Dört Bin Hafta": [
    {
     "q": "Dört Bin Hafta Oliver Burkeman",
-    "n": 352065,
+    "n": 352066,
     "alts": [
      "Anadolu&#39;da D&#246;rt Bin Yılı Yaşayanlar",
      "Bilim: D&#246;rt Bin Yıllık Bir Tarih"
@@ -181,7 +181,7 @@
    },
    {
     "q": "Dört Bin Hafta",
-    "n": 549312,
+    "n": 549308,
     "alts": [
      "Bilim: D&#246;rt Bin Yıllık Bir Tarih",
      "Anadolu&#39;da D&#246;rt Bin Yılı Yaşayanlar",
@@ -197,7 +197,7 @@
   "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli": [
    {
     "q": "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli Adele Faber & Elaine Mazlish",
-    "n": 700905,
+    "n": 705588,
     "alts": [
      "&#199;ocuklarımızla Cinsellik Hakkında Nasıl Konuşmalı?",
      "Gizemli Mağara - &#199;ocuklar i&#231;in Felsefe",
@@ -211,7 +211,7 @@
    },
    {
     "q": "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli",
-    "n": 696144,
+    "n": 700823,
     "alts": [
      "&#199;ocuklarımızla Cinsellik Hakkında Nasıl Konuşmalı?",
      "Gizemli Mağara - &#199;ocuklar i&#231;in Felsefe",
@@ -227,7 +227,7 @@
   "Fi": [
    {
     "q": "Fi Azra Kohen",
-    "n": 346689,
+    "n": 346685,
     "alts": [
      "OFİS,&lt;br&gt;KIRTASİYE",
      "SAP FI",
@@ -262,7 +262,7 @@
   "Kayıp Gül": [
    {
     "q": "Kayıp Gül Serdar Özkan",
-    "n": 465181,
+    "n": 465177,
     "alts": [
      "Kayıp G&#252;l 2 - &#214;l&#252;ms&#252;z Kalp"
     ],
@@ -274,7 +274,7 @@
    },
    {
     "q": "Kayıp Gül",
-    "n": 668939,
+    "n": 668567,
     "alts": [
      "Kayıp G&#252;l 2 - &#214;l&#252;ms&#252;z Kalp",
      "Kayıp Kiracı",
@@ -294,7 +294,7 @@
   "Evelyn Hugo'nun Yedi Kocası": [
    {
     "q": "Evelyn Hugo'nun Yedi Kocası Taylor Jenkins Reid",
-    "n": 427362,
+    "n": 427358,
     "alts": [
      "Evelyn Hardcastle&#39;ın Yedi &#214;l&#252;m&#252;"
     ],
@@ -303,7 +303,7 @@
    },
    {
     "q": "Evelyn Hugo'nun Yedi Kocası",
-    "n": 330290,
+    "n": 330286,
     "alts": [
      "Evelyn Hardcastle&#39;ın Yedi &#214;l&#252;m&#252;"
     ],
@@ -314,37 +314,35 @@
   "Ve Sonra Hiç Kalmadı": [
    {
     "q": "Ve Sonra Hiç Kalmadı Agatha Christie",
-    "n": 756311,
+    "n": 764324,
     "alts": [
      "EV VE &lt;br&gt;YAŞAM",
-     "N veya M ?",
-     "G&#252;vercinler Arasında Bir Kedi",
-     "Beklenmeyen Şahit ve Diğer &#214;yk&#252;ler",
-     "Ve Ayna Kırıldı",
-     "Ve Perde İndi"
+     "Ve Perde İndi",
+     "Zehiri Kim Verdi",
+     "G&uuml;venlik Sertifikası"
     ],
     "imgs": 95,
     "raw": []
    },
    {
     "q": "Ve Sonra Hiç Kalmadı",
-    "n": 633008,
+    "n": 626338,
     "alts": [
      "EV VE &lt;br&gt;YAŞAM",
      "Kopuk ve Hi&#231;",
      "Gece ve Sonra",
      "Hın&#231; ve Hi&#231;",
      "Her ve Hi&#231;",
-     "Hi&#231; ve Her Şey"
+     "Ve Sonra Sana Yazdım"
     ],
-    "imgs": 95,
+    "imgs": 94,
     "raw": []
    }
   ],
   "Şimdinin Gücü": [
    {
     "q": "Şimdinin Gücü Eckhart Tolle",
-    "n": 497557,
+    "n": 494018,
     "alts": [],
     "imgs": 67,
     "raw": [
@@ -355,7 +353,7 @@
    },
    {
     "q": "Şimdinin Gücü",
-    "n": 691254,
+    "n": 692843,
     "alts": [
      "Şimdinin Bilgeliği"
     ],
@@ -370,11 +368,10 @@
   "Keşke Ailemin Okuduğu Bir Kitap Olsaydı": [
    {
     "q": "Keşke Ailemin Okuduğu Bir Kitap Olsaydı Philippa Perry",
-    "n": 661001,
+    "n": 661040,
     "alts": [
      "Keşke T&#252;m Sevdiklerim De Okusa Dediğiniz Kitap",
      "Keşke Zamanım Olsaydı",
-     "Keşke - Sessiz Kitap",
      "Bir K&#246;y Enstit&#252;s&#252; - Keşke",
      "Keşke Bir &#214;p&#252;p Koklasaydım"
     ],
@@ -387,10 +384,9 @@
    },
    {
     "q": "Keşke Ailemin Okuduğu Bir Kitap Olsaydı",
-    "n": 659514,
+    "n": 659553,
     "alts": [
      "Keşke Zamanım Olsaydı",
-     "Keşke - Sessiz Kitap",
      "Bir K&#246;y Enstit&#252;s&#252; - Keşke",
      "Keşke Bir &#214;p&#252;p Koklasaydım",
      "Keşke T&#252;m Sevdiklerim De Okusa Dediğiniz Kitap"
