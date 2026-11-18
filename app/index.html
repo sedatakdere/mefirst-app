@@ -7947,6 +7947,21 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.84 Kendime iyi bak ana sayfa kutusu */
+.bn.bn-fit.bnf{background:radial-gradient(90% 80% at 100% 0%,rgba(200,255,60,.28),transparent 55%),radial-gradient(80% 70% at 0% 100%,rgba(57,208,255,.16),transparent 60%),linear-gradient(160deg,#1A1E24,#0B0D11)!important;
+ box-shadow:0 16px 30px -16px rgba(0,0,0,.85),0 0 0 1px rgba(200,255,60,.22) inset,0 10px 30px -16px rgba(200,255,60,.45)!important;filter:none!important;color:#fff!important;overflow:hidden}
+.bn.bn-fit.bnf::before,.bn.bn-fit.bnf::after{display:none!important}
+.bn.bnf .bn-art{transform:none!important;width:70px!important;height:70px!important;right:10px!important;top:10px!important;filter:drop-shadow(0 0 12px rgba(200,255,60,.35))}
+.bn.bnf .bnf-r{width:100%;height:100%}
+.bn.bnf .bn-tx b{color:#fff!important;text-shadow:none!important}
+.bn.bnf .bn-tx small{color:#AEB7C2!important;font-weight:800!important}.bn.bnf .bn-tx small em{font-style:normal;color:#C8FF3C}
+.bnf-k{position:absolute;top:14px;left:14px;z-index:2;padding:4px 8px;border-radius:7px;background:#C8FF3C;color:#0A0C10;font:900 10px var(--f-body);letter-spacing:.18em}
+.bnf-st{position:absolute;right:78px;top:22px;align-items:flex-end;z-index:0;display:flex;flex-direction:column;gap:6px;transform:skewX(-24deg);opacity:.55;pointer-events:none}
+.bnf-st i{display:block;height:3px;border-radius:3px;background:linear-gradient(90deg,transparent,rgba(200,255,60,.8));animation:bnfS 2.4s ease-in-out infinite}
+.bnf-st i:nth-child(1){width:46px}.bnf-st i:nth-child(2){width:58px;animation-delay:.3s;margin-right:8px}.bnf-st i:nth-child(3){width:34px;animation-delay:.6s}
+@keyframes bnfS{0%,100%{transform:translateX(0);opacity:.4}50%{transform:translateX(12px);opacity:1}}
+@media (prefers-reduced-motion:reduce){.bnf-st i{animation:none}}
+
 /* v0.83.1 */
 .yg-fig .tr,.yg-fig .nl{stroke:var(--c)!important}.yg-fig .fl{stroke:var(--c)!important;stroke-opacity:.42!important}
 .yg-fig .sh{fill:color-mix(in srgb,var(--c) 18%,transparent)!important}.yg-fig path[d^="M20 187"]{stroke:color-mix(in srgb,var(--c) 25%,transparent)!important}
@@ -20363,6 +20378,16 @@ FG.y_bebek.k=[[118,176,-90,0,0,[200,178],[204,182],[196,176],[200,180]],[118,176
 FG.y_duvar.k=FG.y_duvar.k.map(x=>{const y=x.slice();y[5]=[180,179];y[6]=[181,180];return y;});
 FG.y_savas.k=FG.y_savas.k.map(x=>{const y=x.slice();y[5]=[90,89];y[6]=[91,90];return y;});
 FG.y_yburgu.k=[[112,176,-90,0,-20,[165,95],[160,92],[-90,-90],[90,90]],[112,176,-90,0,-26,[160,92],[155,88],[-92,-92],[88,88]]];
+
+/* ===== v0.84 Ana sayfa: Kendime iyi bak kutusu FORM gücünde — koyu, neon, canlı halkalar ===== */
+function bnFitArt(){let D,T,mins=0,kin=0,w=0,g=30,kT=2000,hide=0;try{const F=fit();D=fday();T=fTarget();g=+(F.p.mg||30);hide=F.p.hide;mins=D.a.reduce((a,x)=>a+x.min,0);kin=D.m.reduce((a,m)=>a+m.k,0);w=D.w||0;kT=T?T.t:2000;}catch(e){}
+ const v=[hide?(D?D.m.length/4:0):kin/kT,mins/g,w/8],R=[40,30,20],C=["#FF5B3A","#C8FF3C","#39D0FF"];
+ return {svg:`<svg class="bnf-r" viewBox="0 0 100 100" aria-hidden="true">${R.map((r,i)=>{const c=2*Math.PI*r,p=Math.max(.02,Math.min(1,v[i]||0));return `<circle cx="50" cy="50" r="${r}" fill="none" stroke="${C[i]}" stroke-opacity=".18" stroke-width="8"/><circle cx="50" cy="50" r="${r}" fill="none" stroke="${C[i]}" stroke-width="8" stroke-linecap="round" stroke-dasharray="${(c*p).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 50 50)"/>`;}).join("")}
+  <path d="M53 34l-9 15h7l-3 13 10-17h-7z" fill="#C8FF3C"/></svg>`,sub:`<em>${mins}</em>/${g} dk · <em>${w}</em>/8 su`};}
+(function(){const _b=bentoRender;bentoRender=function(){_b.apply(this,arguments);try{const b=document.querySelector(".bn.bn-fit");if(!b)return;const A=bnFitArt();
+  b.classList.add("bnf");const art=b.querySelector(".bn-art");if(art)art.innerHTML=A.svg;const sm=b.querySelector(".bn-tx small");if(sm)sm.innerHTML=A.sub;
+  if(!b.querySelector(".bnf-k"))b.insertAdjacentHTML("afterbegin",`<span class="bnf-k">FORM</span><span class="bnf-st" aria-hidden="true"><i></i><i></i><i></i></span>`);
+ }catch(e){console.error(e);}};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
