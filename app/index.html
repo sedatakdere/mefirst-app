@@ -9462,7 +9462,7 @@ window.GB_KEY="AIzaSyB9TCHWh2eLFo87Cv400WDf1wYThln3bqs";
   <div class="lv-bg" aria-hidden="true"><span class="lk-glow g1"></span><span class="lk-glow g2"></span><i style="--x:12%;--d:1s;--s:.6"></i><i style="--x:34%;--d:4.2s;--s:.45"></i><i style="--x:63%;--d:2.5s;--s:.55"></i><i style="--x:88%;--d:6s;--s:.5"></i></div>
   <div class="onb zsh" id="zsh" hidden role="dialog" aria-modal="true" aria-label="Burcum"></div>
   <div class="onb sst" id="sst" hidden role="dialog" aria-modal="true" aria-label="Story stüdyom"></div>
-  <p class="foot">Me First · deneme sürümü<span id="mf-ver"></span></p>
+  <p class="foot">Me First<span id="mf-ver"></span></p>
 </div>
 
 <script>
@@ -20716,6 +20716,19 @@ FX_EQ.length=0;
    c.querySelectorAll("[data-spt2]").forEach(b=>b.onclick=()=>{SPRT=b.dataset.spt2;bind();});
    c.querySelectorAll("[data-fxeq]").forEach(b=>b.onclick=()=>{const x=SEPET.spor[SPRT][+b.dataset.fxeq];mfShopOpen({k:"Spor dükkânı",t:x[0],q:x[1],shops:affCfg().spor||affCfg().mama});});};bind();}catch(e){console.error(e);}};})();
 
+/* ===== v0.95 Anonim kullanım sayacı: bölüm başına günde bir kez, kişisel bilgi yok ===== */
+const USE_SECT={0:"anasayfa",9:"biz",10:"biz",20:"patili",30:"benitani",40:"dolap",50:"form",60:"manifest",70:"cocuk",80:"ev",90:"kitap",95:"macera",96:"sahne",97:"ogrenci"};
+function useDev(){try{let d=localStorage.getItem("mf-dev-u");if(!d){d=(crypto.randomUUID?crypto.randomUUID():String(Math.random()).slice(2)+Date.now());localStorage.setItem("mf-dev-u",d);}return d;}catch(e){return null;}}
+function useHit(sect){try{if(!sect||!navigator.onLine)return;const k="mf-use-"+dkey();const D=JSON.parse(localStorage.getItem(k)||"{}");if(D[sect])return;const dev=useDev();if(!dev)return;
+  fetch(SB_URL+"/rest/v1/rpc/usage_hit",{method:"POST",headers:{apikey:SB_KEY,Authorization:"Bearer "+SB_KEY,"Content-Type":"application/json"},body:JSON.stringify({p_sect:sect,p_dev:dev}),keepalive:true}).then(r=>{if(r.ok||r.status===204){D[sect]=1;localStorage.setItem(k,JSON.stringify(D));}}).catch(()=>{});
+  Object.keys(localStorage).filter(x=>x.startsWith("mf-use-")&&x!==k).forEach(x=>localStorage.removeItem(x));}catch(e){}}
+(function(){const _s=show;show=function(){const r=_s.apply(this,arguments);try{useHit(USE_SECT[step]);}catch(e){}return r;};})();
+(function(){const _z=zodOpen;zodOpen=function(){const r=_z.apply(this,arguments);try{useHit("keyif");}catch(e){}return r;};})();
+(function(){const _k=keyRender;keyRender=function(){const r=_k.apply(this,arguments);try{if(window.kv)useHit("k-"+String(window.kv).slice(0,20));}catch(e){}return r;};})();
+(function(){const _f=fxOpen;fxOpen=function(){const r=_f.apply(this,arguments);try{useHit("antrenman");}catch(e){}return r;};})();
+(function(){const _m=mfShopOpen;mfShopOpen=function(){const r=_m.apply(this,arguments);try{useHit("fiyat");}catch(e){}return r;};})();
+setTimeout(()=>useHit("acilis"),2500);
+
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
@@ -20757,7 +20770,7 @@ function spDialC(E){try{const D=E.querySelector("#spe-dial"),b=D&&D.querySelecto
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
     <button class="fb-x" type="button" id="fb-x" aria-label="Kapat">✕</button>
-    <span class="fb-badge">Beta · v<span id="fb-ver"></span></span>
+    <span class="fb-badge">v<span id="fb-ver"></span></span>
     <h2>Fikrini söyle 💬</h2>
     <p class="fb-sub">Me First'ü seninle birlikte büyütüyoruz. Her yorumu tek tek okuyorum.</p>
     <div class="fb-stars" id="fb-stars" role="radiogroup" aria-label="Puan"></div>
@@ -20855,7 +20868,7 @@ const MF_CFG={ver:"0.9",wa:"905326608118",mail:"destek@mefirst.app"};
   document.getElementById("fb-x").onclick=close;S.addEventListener("click",e=>{if(e.target===S)close();});
   ["fb-wa","fb-mail"].forEach(id=>document.getElementById(id).addEventListener("click",()=>{setTimeout(()=>{close();star=0;area=[];document.getElementById("fb-good").value="";document.getElementById("fb-bad").value="";},400);}));
   // Ana sayfaya ve profile "Fikrini söyle" kartı
-  const card=()=>{const b=document.createElement("button");b.type="button";b.className="fb-open";b.innerHTML='<span>💬</span><div><b>Fikrini söyle</b><small>Beta sürümdesin; yorumun Me First\'ü şekillendirecek</small></div>';b.onclick=()=>fbOpen();return b;};
+  const card=()=>{const b=document.createElement("button");b.type="button";b.className="fb-open";b.innerHTML='<span>💬</span><div><b>Fikrini söyle</b><small>Yorumun Me First\'ü şekillendirecek</small></div>';b.onclick=()=>fbOpen();return b;};
   const w=document.querySelector(".paths.world");if(w&&w.parentElement)w.parentElement.insertBefore(card(),w.nextSibling);
   const pf=document.getElementById("onb-again");if(pf)pf.parentElement.insertBefore(card(),pf);
   // Kurulum ipucu
