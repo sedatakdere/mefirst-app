@@ -20981,13 +20981,21 @@ document.addEventListener("visibilitychange",()=>{if(!document.hidden&&document.
 let mbAmb=null;
 function mbAmbStart(){if(mbAmb)return;const C=sndCtx();if(!C)return;const M=C.createGain();M.gain.value=0;M.connect(C.destination);M.gain.linearRampToValueAtTime(.9,C.currentTime+2.5);
  const nodes=[];const t=C.currentTime;
- [[98,.035],[98.6,.03],[147,.018],[196.2,.009]].forEach(([f,a])=>{const o=C.createOscillator(),g=C.createGain();o.type="sine";o.frequency.value=f;g.gain.value=a;const l=C.createOscillator(),lg=C.createGain();l.frequency.value=.05+Math.random()*.08;lg.gain.value=a*.6;l.connect(lg);lg.connect(g.gain);o.connect(g);g.connect(M);o.start(t);l.start(t);nodes.push(o,l);});
+ [[98,.022],[98.6,.018],[147,.01],[196.2,.005]].forEach(([f,a])=>{const o=C.createOscillator(),g=C.createGain();o.type="sine";o.frequency.value=f;g.gain.value=a;const l=C.createOscillator(),lg=C.createGain();l.frequency.value=.05+Math.random()*.08;lg.gain.value=a*.6;l.connect(lg);lg.connect(g.gain);o.connect(g);g.connect(M);o.start(t);l.start(t);nodes.push(o,l);});
  const len=C.sampleRate*4,buf=C.createBuffer(1,len,C.sampleRate),d=buf.getChannelData(0);let last=0;for(let i=0;i<len;i++){const w=Math.random()*2-1;last=(last+.02*w)/1.02;d[i]=last*3.2;}
- const br=C.createBufferSource();br.buffer=buf;br.loop=true;const bf=C.createBiquadFilter();bf.type="lowpass";bf.frequency.value=420;const bg=C.createGain();bg.gain.value=.05;br.connect(bf);bf.connect(bg);bg.connect(M);br.start(t);nodes.push(br);
- const crack=()=>{if(!mbAmb)return;const T=C.currentTime;const n=sndNoise(C,.05),f=C.createBiquadFilter(),g=C.createGain();f.type="bandpass";f.frequency.value=1200+Math.random()*3200;f.Q.value=.9;g.gain.setValueAtTime(.0001,T);g.gain.exponentialRampToValueAtTime(.05+Math.random()*.09,T+.003);g.gain.exponentialRampToValueAtTime(.0001,T+.03+Math.random()*.05);n.connect(f);f.connect(g);g.connect(M);n.start(T);n.stop(T+.1);
-  mbAmb.ct=setTimeout(crack,Math.random()<.25?30+Math.random()*80:180+Math.random()*900);};
- const chime=()=>{if(!mbAmb)return;const T=C.currentTime;const sc=[1046.5,1174.7,1318.5,1568,1760];try{sndBell(C,M,T,sc[Math.floor(Math.random()*sc.length)],2.8,.035);if(Math.random()<.5)sndBell(C,M,T+.35,sc[Math.floor(Math.random()*sc.length)],2.4,.025);}catch(e){}mbAmb.ch=setTimeout(chime,7000+Math.random()*9000);};
- mbAmb={C,M,nodes};crack();mbAmb.ch=setTimeout(chime,2500);mbSndBtn();}
+ const br=C.createBufferSource();br.buffer=buf;br.loop=true;const bf=C.createBiquadFilter();bf.type="lowpass";bf.frequency.value=300;const bg=C.createGain();bg.gain.value=.03;br.connect(bf);bf.connect(bg);bg.connect(M);br.start(t);nodes.push(br);
+ /* dere: iki bant filtreli, yavaşça dalgalanan su sesi */
+ const wbuf=C.createBuffer(2,C.sampleRate*6,C.sampleRate);for(let ch=0;ch<2;ch++){const w=wbuf.getChannelData(ch);let b0=0,b1=0;for(let i=0;i<w.length;i++){const x=Math.random()*2-1;b0=.97*b0+.03*x;b1=.6*b1+.4*x;w[i]=b0*2.2+b1*.35;}}
+ [[520,.9,.11,.13],[1350,1.1,.05,.09],[2600,1.4,.018,.21]].forEach(([f,q,a,lf])=>{const src=C.createBufferSource();src.buffer=wbuf;src.loop=true;src.loopStart=Math.random()*2;const bp=C.createBiquadFilter();bp.type="bandpass";bp.frequency.value=f;bp.Q.value=q;
+  const lo=C.createOscillator(),lg=C.createGain();lo.frequency.value=lf;lg.gain.value=f*.28;lo.connect(lg);lg.connect(bp.frequency);
+  const g=C.createGain();g.gain.value=a;const lo2=C.createOscillator(),lg2=C.createGain();lo2.frequency.value=lf*.7;lg2.gain.value=a*.45;lo2.connect(lg2);lg2.connect(g.gain);
+  src.connect(bp);bp.connect(g);g.connect(M);src.start(t,Math.random()*3);lo.start(t);lo2.start(t);nodes.push(src,lo,lo2);});
+ /* damlalar: perdesi yükselen yumuşak "plip" */
+ const drop=()=>{if(!mbAmb)return;const T=C.currentTime;const f=650+Math.random()*900,o=C.createOscillator(),g=C.createGain(),lp=C.createBiquadFilter();lp.type="lowpass";lp.frequency.value=2600;o.type="sine";o.frequency.setValueAtTime(f,T);o.frequency.exponentialRampToValueAtTime(f*(1.5+Math.random()*.5),T+.06);
+  g.gain.setValueAtTime(.0001,T);g.gain.exponentialRampToValueAtTime(.018+Math.random()*.03,T+.008);g.gain.exponentialRampToValueAtTime(.0001,T+.12+Math.random()*.08);o.connect(g);g.connect(lp);lp.connect(M);o.start(T);o.stop(T+.25);
+  mbAmb.ct=setTimeout(drop,Math.random()<.3?90+Math.random()*160:700+Math.random()*2600);};
+ const chime=()=>{if(!mbAmb)return;const T=C.currentTime;const sc=[1046.5,1174.7,1318.5,1568,1760];try{sndBell(C,M,T,sc[Math.floor(Math.random()*sc.length)],3.2,.022);if(Math.random()<.4)sndBell(C,M,T+.45,sc[Math.floor(Math.random()*sc.length)],2.8,.015);}catch(e){}mbAmb.ch=setTimeout(chime,11000+Math.random()*12000);};
+ mbAmb={C,M,nodes};drop();mbAmb.ch=setTimeout(chime,4000);mbSndBtn();}
 function mbAmbStop(keep){if(!mbAmb)return;const A=mbAmb;mbAmb=null;clearTimeout(A.ct);clearTimeout(A.ch);try{const T=A.C.currentTime;A.M.gain.cancelScheduledValues(T);A.M.gain.setValueAtTime(A.M.gain.value,T);A.M.gain.linearRampToValueAtTime(0,T+.8);setTimeout(()=>{A.nodes.forEach(n=>{try{n.stop();}catch(e){}});try{A.M.disconnect();}catch(e){}},900);}catch(e){}mbSndBtn();}
 function mbSndBtn(){const b=document.getElementById("mb-snd");if(!b)return;const on=!!mbAmb;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on);b.querySelector("small").textContent=on?"Ses açık":"Ortam sesi";}
 /* mum yakma */
@@ -21005,8 +21013,8 @@ function mbHero(){const R=document.querySelector(".rit");if(!R)return;const hero
   <div class="mb-stage">${mbAltarSVG()}</div>
   <p class="mb-kick"><span>${zm}</span><i></i><span>${esc(ph||"Gökyüzü")}</span></p>
   <h2 class="mb-h">Manifest <em>Me</em></h2>
-  <p class="mb-sub">${lit?(n?`Bugün <b>${n} ritüel</b> yaptın. Mumun hâlâ yanıyor.`:"Mumun yanıyor. Şimdi bir ritüel seç."):"Önce mumunu yak. Bu an yalnızca senin."}</p>
-  ${lit?`<p class="mb-lit"><span class="mb-dot"></span>${X.mbN>1?`${X.mbN}. kez mum yaktın`:"İlk mumun yandı"}</p>`:`<button type="button" class="mb-light" id="mb-light"><span class="mb-mt" aria-hidden="true"></span>Mumunu yak</button>`}`;
+  <p class="mb-sub">${lit?(n?`Bugün <b>${n} ritüel</b> yaptın. Mumun hâlâ yanıyor.`:"Mumun yanıyor. Şimdi bir ritüel seç."):"Her güne mumunu yakarak başla. Bu an yalnızca senin."}</p>
+  ${lit?`<p class="mb-lit"><span class="mb-dot"></span>${X.mbN>1?`${X.mbN}. mumun`:"İlk mumun"} · gece yarısına kadar yanar</p>`:`<button type="button" class="mb-light" id="mb-light"><span class="mb-mt" aria-hidden="true"></span>Mumunu yak</button>`}`;
  const L=H.querySelector("#mb-light");if(L)L.onclick=mbLight;
  const altar=H.querySelector(".mb-stage");if(altar&&!lit)altar.onclick=mbLight;
  H.querySelector("#mb-snd").onclick=()=>{const X2=mbX();if(mbAmb){mbAmbStop();X2.mbSnd=false;}else{const C=sndCtx();if(C&&C.state!=="running")C.resume().catch(()=>{});mbAmbStart();X2.mbSnd=true;}save();};
