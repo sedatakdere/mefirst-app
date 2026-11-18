@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Me First · Önce sen</title>
-<meta name="description" content="Kadınlar ve anneler için kişisel yardımcın: ritüeller, kitaplar, döngü takibi, çocuklar ve ikiniz için her şey. Verilerin sadece senin telefonunda.">
+<meta name="description" content="Sen ve ruh eşin için kişisel yardımcın: ritüeller, kitaplar, döngü takibi, çocuklar ve ikiniz için her şey. Verilerin sadece senin telefonunda.">
 <meta name="theme-color" content="#F7B3D2">
 <link rel="manifest" href="/app/manifest.webmanifest">
 <link rel="icon" type="image/png" href="/icons/favicon-48.png">
@@ -7947,6 +7947,12 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.87 cinsiyet */
+.ob-cins{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:6px}
+.ob-cins button{display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 4px;border:0;border-radius:14px;background:rgba(255,255,255,.7);color:var(--ink);font:800 13px var(--f-body);cursor:pointer;box-shadow:inset 0 0 0 1.5px rgba(155,120,180,.25)}
+.ob-cins button span{font-size:20px}.ob-cins button[aria-checked="true"]{background:linear-gradient(135deg,#F7B3D2,#C9B4F3);color:#2A1E36;box-shadow:inset 0 0 0 2px #D94F8C}
+body.mf-male .rs-solo{display:none!important}
+
 /* v0.86 Verilerimi sil */
 .mf-legal{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 16px;margin:18px 0 4px;font:700 12.5px var(--f-body)}
 .mf-legal a,.mf-legal button{padding:4px 0;border:0;background:none;color:var(--muted);text-decoration:none;font:inherit;cursor:pointer}
@@ -8934,7 +8940,7 @@ window.GB_KEY="AIzaSyB9TCHWh2eLFo87Cv400WDf1wYThln3bqs";
     <div class="me-nav" id="me-nav" role="tablist"><button type="button" data-mj="0">Ben</button><button type="button" data-mj="1">Tarzım</button><button type="button" data-mj="3">Bedenim</button><button type="button" data-mj="4">Renklerim</button><button type="button" data-mj="7">Detaylar</button></div>
     <div class="pgroup t-lilac"><h3><span class="step">1</span>Adın ve fotoğrafın</h3>
       <div class="phrow"><label class="phav" for="me-photo" id="me-phav" aria-label="Profil fotoğrafı seç"><span>📷</span></label><input id="me-photo" type="file" accept="image/*" hidden>
-        <div class="name-row"><input id="name" type="text" placeholder="ör. Ayşe" maxlength="24" autocomplete="given-name" aria-label="Adın"></div></div>
+        <div class="name-row"><input id="name" type="text" placeholder="ör. Deniz" maxlength="24" autocomplete="given-name" aria-label="Adın"></div></div>
       <p class="fine" id="me-phmsg">Fotoğrafın sadece bu telefonda saklanır, hiçbir yere gönderilmez.</p></div>
     <div class="pgroup t-pink"><h3><span class="step">2</span>Giyim tarzın <small>(birden fazla seçebilirsin)</small></h3><div class="pgrid g3" data-prof="giyim"></div></div>
     <div class="pgroup t-sky"><h3><span class="step">3</span>Boyun ve kilon</h3><div class="addgrid"><div class="field"><label>Boyun (cm)</label><input data-fitp="cm" type="number" inputmode="numeric" min="130" max="210" placeholder="ör. 165"></div><div class="field"><label>Kilon (kg)</label><input data-fitp="kg" type="number" inputmode="decimal" min="35" max="200" placeholder="ör. 62"></div></div><div class="pgrid g3" data-prof="boy"></div></div>
@@ -9446,7 +9452,7 @@ function render(){
   const nm=st.name.trim();
   const h=new Date().getHours();
   const hi=h<12?"Günaydın":h<18?"Merhaba":"İyi akşamlar";
-  document.getElementById("greet").innerHTML=`${hi}, <span>${nm?esc(nm):"güzelim"}</span> ${h<18?"☀️":"🌙"}`;
+  document.getElementById("greet").innerHTML=`${hi}, <span>${nm?esc(nm):(((st.prof||{}).cins==="e")?"dostum":"güzelim")}</span> ${h<18?"☀️":"🌙"}`;
   document.getElementById("r-title").textContent=m.title;
   document.getElementById("r-palette").innerHTML=m.pal.map(c=>`<span class="sw" style="background:${c}"></span>`).join("")+`<small>${m.palName}</small>`;
   document.getElementById("r-outfit").textContent=fitOutfit();
@@ -10245,7 +10251,7 @@ function fit(){if(!st.fit)st.fit={p:{act:"1.375",goal:"koru",hide:false},d:{}};r
 function fday(k){const F=fit();k=k||dkey();if(!F.d[k])F.d[k]={m:[],a:[],w:0};return F.d[k];}
 function fsave(){const F=fit();const ks=Object.keys(F.d).sort();while(ks.length>40)delete F.d[ks.shift()];save();}
 function fTarget(){const p=fit().p;const age=+p.age,cm=+p.cm,kg=+p.kg;if(!(age&&cm&&kg))return null;
-  const bmr=10*kg+6.25*cm-5*age-161;const tdee=bmr*(+p.act||1.375);const bmi=kg/((cm/100)**2);
+  const bmr=10*kg+6.25*cm-5*age+(((st.prof||{}).cins==="e")?5:-161);const tdee=bmr*(+p.act||1.375);const bmi=kg/((cm/100)**2);
   let t=tdee,note="";
   if(p.goal==="ver"){if(bmi<20){note="Kilon zaten sağlıklı aralıkta görünüyor; kilo vermek yerine formunu korumayı ve güçlenmeyi öneririm.";}
     else{t=Math.max(tdee-400,bmr,1300);note="Günde yaklaşık 400 kcal'lik küçük bir fark, haftada yaklaşık yarım kilo demek. Daha hızlısı sürdürülebilir değil.";}}
@@ -11226,7 +11232,7 @@ function onbRender(){const O=document.getElementById("onb"),k=ONB[onbI],P=st.pro
       <div class="ob-cta"><button class="btn ob-go glass" id="ob-next" type="button">Dünyama gir 💫</button></div></div>`;}}
   if(k==="me"){const z=zodiac(P.dob);body=head("Önce sen","Adın, fotoğrafın ve doğum günün.")+`
     <div class="ob-me"><label class="phav big${PH.me?" has":""}" for="ob-photo" ${PH.me?`style="background-image:url(${PH.me})"`:""} aria-label="Fotoğraf seç">${PH.me?"":"<span>📷</span>"}</label><input id="ob-photo" type="file" accept="image/*" hidden><small>${PH.me?"Değiştirmek için dokun":"Fotoğraf ekle (isteğe bağlı)"}</small></div>
-    <div class="field"><label for="ob-name">Adın</label><input id="ob-name" type="text" maxlength="24" value="${esc(nm)}" placeholder="ör. Ayşe" autocomplete="given-name"></div>
+    <div class="field"><label for="ob-name">Adın</label><input id="ob-name" type="text" maxlength="24" value="${esc(nm)}" placeholder="ör. Deniz" autocomplete="given-name"></div>
     <div class="field"><label for="ob-dob">Doğum tarihin</label><input id="ob-dob" type="text" inputmode="numeric" maxlength="10" placeholder="GG.AA.YYYY" data-dmy autocomplete="off" value="${isoToDmy(P.dob||"")}"></div>
     <div class="ob-zod" id="ob-zod">${z?`<span class="zs">${z[1]}</span><div><small>Burcun</small><b>${z[0]}</b><p>${z[2]}</p></div>`:"<p>Doğum gününü girince burcunu söyleyeceğim ✨</p>"}</div>`;}
   if(k==="style")body=head("Tarzın","Kimse tek tarzlı değil; sevdiklerinin hepsini seç, önerilerin günden güne aralarında dolaşsın.")+`<section class="obsec"><h4><i>1</i>Sevdiğin tarzlar<small>en fazla 4</small></h4><div class="pgrid g3" data-prof="giyim"></div></section><section class="obsec"><h4><i>2</i>Pek sevmediklerin<small>isteğe bağlı</small></h4><div class="pgrid g3" data-prof="kacin" data-multi="9"></div></section>`;
@@ -12284,7 +12290,7 @@ function kitapRender(){const K=kt();const P=document.getElementById("ktpanel");i
     const shelfBooks=[...now,...done];
     P.innerHTML=`<div class="ktshelf rdsh"><div class="ktshelf-t"><strong>${okData().n?`${trLoc(new Date().getFullYear())} ${okData().n} kitap bitirdin! 🎉`:"Rafın seni bekliyor 📚"}</strong></div>
       ${shelfBooks.length?(()=>{const R=[];for(let i=0;i<shelfBooks.length&&R.length<2;i+=8)R.push(shelfBooks.slice(i,i+8));const more=shelfBooks.length-R.flat().length;return R.map((r,k)=>`<div class="ktwood">${r.map(sp).join("")}${k===R.length-1?(more>0?`<span class="wsh-more">+${more}</span>`:r.length<8?'<span class="ktplant no-mi">🪴</span>':""):""}</div><div class="ktplank"></div>`).join("");})():'<div class="ktwood"><span class="ktempty">Bitirdiğin kitaplar buraya dizilecek 🍂</span><span class="ktplant no-mi">🪴</span></div><div class="ktplank"></div>'}
-      <small class="ktfine">${new Date().getFullYear()} hedefin ${goal} kitap · ${okData().n>=goal?"hedefi aştın, kraliçesin 👑":`${goal-okData().n} kitap kaldı`}</small></div>`+
+      <small class="ktfine">${new Date().getFullYear()} hedefin ${goal} kitap · ${okData().n>=goal?(((st.prof||{}).cins==="e")?"hedefi aştın, şampiyonsun 🏆":"hedefi aştın, kraliçesin 👑"):`${goal-okData().n} kitap kaldı`}</small></div>`+
       [["istek","İstek listem 💝",wish,"Kitap kartlarındaki 🤍 Keşke ile buraya eklenir."],["okuyor","Şu an elimde 📖",now,"Elinde kitap yok mu? Hemen bir tane seçelim 🍂"],["oku","Sırada bekleyenler 🔖",nx,"Önerilerden 'Rafa koy' dediklerin buraya gelir."],["istek_x","",[],"Önerilerdeki \u201cKeşke benim olsa\u201d ile buraya eklenir."],["okudu","Bitirdiklerim 🏆",done,"İlk kitabını bitirince burada parlayacak ✨"]].filter(g=>g[0]!=="istek_x"&&g[0]!=="istek").map(([k,l,X,em])=>`<div class="lcard ktcard"><h3>${l}<span class="nextf">${X.length||""}</span></h3>${X.length?X.map(x=>{const i=S.indexOf(x);return `<div class="ktsh">${ktCover(x.t,x.a||"",false)}<span class="kti"><strong>${esc(x.t)}</strong><small>${esc(x.a||"")}</small></span><span class="ktsa">${k==="oku"?`<button type="button" class="ktbtn sm" data-ks="${i}" data-to="okuyor">Başladım 🚀</button>`:""}${k==="okuyor"?`<button type="button" class="ktbtn sm" data-ks="${i}" data-to="okudu">Bitirdim 🎉</button>`:""}<button type="button" class="ktx" data-kx="${i}" aria-label="Kaldır">×</button></span></div>`;}).join(""):`<p class="ktfine">${em}</p>`}</div>`).join("")+
       `<div class="lcard ktcard"><h3>Elimdeki kitabı ekle ➕</h3><div class="addgrid"><div class="field"><label for="kt-st">Kitap</label><input id="kt-st" type="text" maxlength="70" list="kt-dl2" placeholder="Kitabın adı"></div><div class="field"><label for="kt-sa">Yazar</label><input id="kt-sa" type="text" maxlength="40" placeholder="Yazarı"></div></div><datalist id="kt-dl2">${KT_BOOKS.map(b=>`<option value="${esc(b[0])}">`).join("")}</datalist><button class="btn ktgo" id="kt-sadd" type="button">Rafa koy 📚</button></div>`;
     document.getElementById("kt-st").oninput=e=>{const m=KT_BOOKS.find(b=>ktN(b[0])===ktN(e.target.value));if(m)document.getElementById("kt-sa").value=m[1];};
@@ -12391,7 +12397,7 @@ function iyiRender(){const el=document.getElementById("fit-iyi");if(!el)return;c
   if(o.c==null){el.innerHTML=`<button type="button" class="iyi-draw" id="iyi-go"><span class="no-mi">🍃</span><span><strong>Kendine bir iyilik çek</strong><small>${o.n?`Bugün kendine ${o.n} iyilik yaptın 💚`:"Kartı çevir, bugünkü küçük spa anını gör"}</small></span><span class="iyi-lv">${leaves}</span></button>`;
     document.getElementById("iyi-go").onclick=()=>{const O=iyiSt();let c;do{c=Math.floor(Math.random()*IYI.length);}while(IYI.length>1&&c===O.last);O.c=c;O.last=c;iyiSave(O);iyiRender();const f=el.querySelector(".iyi-card");if(f){f.classList.remove("on");setTimeout(()=>f.classList.add("on"),40);}};return;}
   const x=IYI[o.c];el.innerHTML=`<div class="iyi-card on"><div class="iyi-in"><span class="iyi-e no-mi">${x[0]}</span><small>Bugünkü iyiliğin</small><p>${x[1]}</p><div class="iyi-a"><button type="button" class="ktbtn" id="iyi-ok">Yaptım 💚</button><button type="button" class="ktbtn gh" id="iyi-nx">Başka çek 🍃</button></div><span class="iyi-lv">${leaves}</span></div></div>`;
-  document.getElementById("iyi-ok").onclick=()=>{const O=iyiSt();O.n++;O.t=(O.t||0)+1;O.c=null;iyiSave(O);mfConfetti(O.n>=3?"Bugün spa kraliçesisin 👑":"Kendine iyi baktın 💚",SPA_C,SPA_BG);iyiRender();fitHeroSub();};
+  document.getElementById("iyi-ok").onclick=()=>{const O=iyiSt();O.n++;O.t=(O.t||0)+1;O.c=null;iyiSave(O);mfConfetti(O.n>=3?(((st.prof||{}).cins==="e")?"Bugün kendine harika baktın 🏆":"Bugün spa kraliçesisin 👑"):"Kendine iyi baktın 💚",SPA_C,SPA_BG);iyiRender();fitHeroSub();};
   document.getElementById("iyi-nx").onclick=()=>{const O=iyiSt();O.c=null;iyiSave(O);document.getElementById("iyi-go")||iyiRender();document.getElementById("iyi-go").click();};}
 function fitHeroSub(){const el=document.getElementById("fh-sub");if(!el)return;const D=fday(),mins=D.a.reduce((a,x)=>a+x.min,0),nm=(st.name||"").trim(),o=iyiSt();
   el.textContent=D.w>=8&&mins>=30?"Su tamam, hareket tamam… bugün parlıyorsun ✨":mins>=30?"Hareket hedefin tamam, bedenin sana teşekkür ediyor 💚":D.w>=4?"Yarı yoldasın, devam et":o.n?"Kendine iyilik yaptın, şimdi bir bardak su? 💧":D.w||mins||D.m.length?"Güzel başladın, adım adım 🌿":`${nm?nm+", b":"B"}ugün bedenin için küçük bir iyilik yapalım mı? 🍃`;}
@@ -13771,7 +13777,7 @@ const KSYM_V=[
 ["Bağımsızlığın güçleniyor; kendi kararlarını vermenin keyfini çıkar.","Sezgilerine güven; kalbin sana doğruyu söylüyor."],
 ["Yeni bir başlangıç; bir proje ya da bir müjde doğuyor.","Ailende sevinçli bir gelişme var; minik bir mucize kapıda."],
 ["Bir davet, bir mektup ya da önemli bir evrak geliyor.","Uzaktan bir haber alacaksın; seni duygulandıracak."],
-["Emeğinin takdir edileceği bir an geliyor; başın dik olacak.","Kendi hayatının kraliçesisin; kararlarında kendinden emin ol."],
+["Emeğinin takdir edileceği bir an geliyor; başın dik olacak.","Kendi hayatının yıldızısın; kararlarında kendinden emin ol."],
 ["Küçük bir kaygın var ama gelip geçici; yarın güneş açacak.","Kafandaki karışıklık dağılıyor; netlik geliyor."],
 ["Aydınlık günler; enerjin ve neşen etrafına yayılacak.","Bir sorun güneşin altındaki kar gibi eriyecek."],
 ["Ufukta bir fırsat görünüyor; yelkenleri şişir.","Uzaklardan bir haber ya da bir yolculuk planı var."],
@@ -15626,7 +15632,7 @@ function okData(Y){Y=Y||new Date().getFullYear();const K=kt(),L=klib(),M={};
 function okFeL(e){const f=(typeof BK_FE!=="undefined"?BK_FE:[]).find(x=>x[0]===e);return f?f[1]:"";}
 function okCard(){const D=okData(),pct=Math.min(1,D.n/D.goal),R=34,C=2*Math.PI*R;
  return `<button type="button" class="okc" id="ok-open"><span class="okc-r"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="${R}" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="7"/><circle cx="40" cy="40" r="${R}" fill="none" stroke="#FFE2B0" stroke-width="7" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C*(1-pct)}" transform="rotate(-90 40 40)"/></svg><b>${D.n}<small>/${D.goal}</small></b></span>
-  <span class="okc-t"><small>${D.Y} OKUMA KARNEM</small><strong>${D.n?(D.n>=D.goal?"Hedefi aştın, kraliçesin 👑":`${D.goal-D.n} kitap daha, hedef senin!`):"Yılın ilk kitabı seni bekliyor"}</strong><em>${D.n?`${D.n} kitap${D.pages?` · ${D.pages.toLocaleString("tr-TR")} sayfa`:""}${D.au?` · ${esc(D.au[0])}`:""}`:"Bitirdiğin her kitap karnene işlenir"}</em></span><span class="okc-go">›</span></button>`;}
+  <span class="okc-t"><small>${D.Y} OKUMA KARNEM</small><strong>${D.n?(D.n>=D.goal?(((st.prof||{}).cins==="e")?"Hedefi aştın, şampiyonsun 🏆":"Hedefi aştın, kraliçesin 👑"):`${D.goal-D.n} kitap daha, hedef senin!`):"Yılın ilk kitabı seni bekliyor"}</strong><em>${D.n?`${D.n} kitap${D.pages?` · ${D.pages.toLocaleString("tr-TR")} sayfa`:""}${D.au?` · ${esc(D.au[0])}`:""}`:"Bitirdiğin her kitap karnene işlenir"}</em></span><span class="okc-go">›</span></button>`;}
 function okSlides(D){const S=[];const cov=(t,a)=>ktCover(t,a,true);
  S.push({c:"s1",h:`<small>${D.Y} OKUMA KARNEM</small><div class="ok-big">${D.n}</div><p>kitap bitirdin${D.n>=D.goal?" 👑":""}</p><div class="ok-bar"><i style="width:${Math.min(100,D.n/D.goal*100)}%"></i></div><em>Hedefin ${D.goal} kitap${D.n>=D.goal?" · hedefi aştın!":` · ${D.goal-D.n} kitap kaldı`}</em>${D.pages?`<p class="ok-sub">${D.pages.toLocaleString("tr-TR")} sayfa çevirdin 📖</p>`:""}`});
  if(D.au)S.push({c:"s2",h:`<small>EN ÇOK OKUDUĞUN YAZAR</small><div class="ok-name">${esc(D.au[0])}</div><p>${D.au[1]} kitabını bitirdin</p>${D.nAu>1?`<em>Bu yıl ${D.nAu} farklı yazarla tanıştın ✨</em>`:""}`});
@@ -16971,7 +16977,7 @@ onbRender=function(){const O=document.getElementById("onb"),k=ONB[onbI],P=st.pro
    <div class="ob2-cta"><button class="ob2-go" id="ob-next" type="button">Dünyama gir</button></div></div></div>`;}
  else{const T=OB_STEP[k];let body="";
   if(k==="me"){const z=zodiac(P.dob);body=`<div class="ob2-me"><label class="ob2-ph${PH.me?" has":""}" for="ob-photo" ${PH.me?`style="background-image:url(${PH.me})"`:""}>${PH.me?"":`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.6-2.4h6.8L17 8h3v11H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="13.2" r="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>`}<i>+</i></label><input id="ob-photo" type="file" accept="image/*" hidden><small>${PH.me?"Fotoğrafını değiştirmek için dokun":"Fotoğraf ekle · isteğe bağlı"}</small></div>
-   <label class="ob2-f"><span>Adın</span><input id="ob-name" type="text" maxlength="24" value="${esc(nm)}" placeholder="ör. Ayşe" autocomplete="given-name"></label>
+   <label class="ob2-f"><span>Adın</span><input id="ob-name" type="text" maxlength="24" value="${esc(nm)}" placeholder="ör. Deniz" autocomplete="given-name"></label>
    <label class="ob2-f"><span>Doğum tarihin</span><input id="ob-dob" type="text" inputmode="numeric" maxlength="10" placeholder="GG.AA.YYYY" data-dmy autocomplete="off" value="${isoToDmy(P.dob||"")}"></label>
    <div class="ob2-zod${z?" on":""}" id="ob-zod">${z?`<b>${z[1]}</b><div><small>Burcun</small><strong>${z[0]}</strong><p>${z[2]}</p></div>`:`<p>Doğum gününü yazınca burcunu söyleyeceğim.</p>`}</div>`;}
   if(k==="rol")body=`<div class="ob2-rol">${OB_ROL.map(([v,a,l,sb],i)=>`<button type="button" class="ob2-card" data-obr="${v}" aria-pressed="${P.rol===v}" style="--i:${i}"><span class="ob2-ic">${a==="both"?`<span class="ob2-both">${obArt("kids")}${obArt("stu")}</span>`:obArt(a)}</span><b>${l}</b><small>${sb}</small>${obChk()}</button>`).join("")}</div>`;
@@ -17892,7 +17898,7 @@ const Y_HERO=`<svg class="yh-art" viewBox="0 0 170 150" aria-hidden="true">
  <g transform="translate(104 46)"><path d="M0 0 V-26" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M0 -26 L18 -20 L0 -13Z" fill="#FFD45C" class="yh-flag"/><circle r="4" fill="#fff"/></g>
  <g class="yh-spark" fill="#fff"><circle cx="78" cy="20" r="1.6"/><circle cx="134" cy="26" r="1.2"/><circle cx="150" cy="54" r="1.6"/><circle cx="60" cy="40" r="1.1"/></g></svg>`;
 
-const YW={any:["paths","Herkese açık"],cocuk:["kid","Çocuklu anneler"],yetiskin:["coffee","Yetişkinler"]};
+const YW={any:["paths","Herkese açık"],cocuk:["kid","Çocuklu aileler"],yetiskin:["coffee","Yetişkinler"]};
 const YK={ev:"Etkinlik",mm:"Mikro macera",own:"Macera"};
 function yolOk(){try{return localStorage.getItem("mf-yol-ok")==="1"&&sbPublic()&&sbPublic().ok;}catch(e){return false;}}
 function yolCity(){if(YOL.city)return YOL.city;let c=null;try{c=localStorage.getItem("mf-yol-city");}catch(e){}if(!c){try{const C=mfCity();if(C&&C.name)c=C.name;}catch(e){}}if(!c){try{c=localStorage.getItem("mf-sf-city");}catch(e){}}YOL.city=c;return c;}
@@ -17962,7 +17968,7 @@ const YIDEA=[["gundogumu","Gün doğumu ekibi","Termoslar dolu, güne birlikte m
  ["pazar","Pazar turu & çay","Semt pazarını gez, sonra demli bir çay","10:00","ör. pazar yerinin ana girişi","any"],
  ["parkkitap","Parkta kitap buluşması","Herkes kitabını getirsin, önce okuma sonra sohbet","15:00","ör. parktaki çay bahçesi","yetiskin"],
  ["piknik","Paylaşmalı piknik","Herkes bir şey getirsin, örtüler yan yana","12:30","ör. parkın çimenlik alanı","any"],
- ["hazine","Çocuklarla hazine avı","Minikler toplasın, anneler soluklansın","11:00","ör. parkın oyun alanı","cocuk"],
+ ["hazine","Çocuklarla hazine avı","Minikler toplasın, büyükler soluklansın","11:00","ör. parkın oyun alanı","cocuk"],
  ["yoga","Çimende yoga","Matını kap gel, 30 dakika esne ve nefes al","09:00","ör. parkın sakin köşesi","any"],
  ["bisiklet","Bisiklet turu","Kirala ya da getir, sahilde yavaş tempo","10:30","ör. bisiklet istasyonu","any"],
  ["muze","Müze kaçamağı","Bir sergi, bir kahve, bol sohbet","14:00","ör. müze girişi","yetiskin"],
@@ -17976,7 +17982,7 @@ function yIdeaCard(o,mini){const [id,t,l,tm,,who]=o.i,x=o.x;return mini?`<button
  :`<button type="button" class="yid" data-yidea="${id}" style="--c:${x[8]}"><span class="yid-top">${yTile({kind:"mm",ref:id,color:x[8]},"idea")}<span class="yid-tm">${ySvg("clock")}${tm}</span></span><b>${esc(t)}</b><small>${esc(l)}</small><span class="yid-go">${who==="cocuk"?"Çocuklu · ":""}Davet aç →</span></button>`;}
 function yIdeaNew(id){const i=YIDEA.find(z=>z[0]===id),x=MM.find(y=>y[0]===id);if(!i||!x)return;yolNew({kind:"mm",ref:id,title:i[1],emoji:"i:"+(YI_MM[id]||"compass"),color:x[8],tm:i[3],who:i[5],note:i[2],meetPh:i[4]});}
 function yolPaint(){const P=document.getElementById("macpanel");if(!P||mactab!=="yol")return;const c=yolCity();const L=YOL.list;const mine=(YOL.mine||[]).filter(v=>!v.past&&v.role!=="declined"&&v.role!=="removed");
- let H=`<section class="yhero">${Y_HERO}<small>YOL ARKADAŞI</small><h3>Yalnız gitme,<em>birlikte git</em></h3><p>Şehrindeki kadınlarla etkinliğe, yürüyüşe, gün doğumuna.</p>
+ let H=`<section class="yhero">${Y_HERO}<small>YOL ARKADAŞI</small><h3>Yalnız gitme,<em>birlikte git</em></h3><p>Şehrindeki insanlarla etkinliğe, yürüyüşe, gün doğumuna.</p>
   <div class="yh-a"><button type="button" class="mcta" id="y-new">＋ Davet aç</button><button type="button" class="y-city" id="y-city">${ySvg("pin")}${esc(c||"Şehrini seç")} ▾</button></div></section>`;
  if(mine.length)H+=`<div class="kthead"><span>Ekiplerim</span><small>${mine.length}</small></div><div class="ktrow ymrow">${mine.map(yMineCard).join("")}</div>`;
  H+=`<div class="kthead"><span>${c?esc(trLoc(c))+"ki davetler":"Davetler"}</span>${L&&L.length?`<small>${L.length}</small>`:""}</div>`;
@@ -20455,6 +20461,26 @@ try{if(new URLSearchParams(location.search).has("silindi")){history.replaceState
 /* v0.86: ilk açılış karşılaması (onboarding) açıkken hatırlatma kartları çıkmasın */
 (function(){const _o=onbOpen;onbOpen=function(){try{document.querySelectorAll("#ktpop,.ktpop").forEach(e=>e.remove());}catch(e){}return _o.apply(this,arguments);};})();
 (function(){const _k=ktPop;ktPop=function(){try{const o=document.getElementById("onb");if((o&&!o.hidden)||document.body.classList.contains("onb-on"))return;}catch(e){}return _k.apply(this,arguments);};})();
+
+/* ===== v0.87 Kadın ve erkek: cinsiyet sorusu, dil buna göre ===== */
+const mfMale=()=>((st.prof||{}).cins==="e");
+const MF_CINS=[["k","👩","Kadın"],["e","👨","Erkek"],["x","✨","Söylemek istemem"]];
+TN_Q.splice(1,0,{k:"cins",t:"Seni nasıl tanıyalım?",s:"Dilimi ve önerilerimi buna göre ayarlarım.",ty:"one",o:MF_CINS.map(x=>x.slice())});TN_LAB.cins="Ben";
+Object.defineProperty(OZX,"03-08",{configurable:true,enumerable:true,get(){return mfMale()?["8 MART","Hayatındaki kadınları kutla","Bugün onlar için küçük bir jest yap 💜"]:["8 MART","Dünya Kadınlar Günün kutlu olsun","Bugün önce sen 💜"];}});
+Object.defineProperty(OZX,"anne",{configurable:true,enumerable:true,get(){return mfMale()?["ANNELER GÜNÜ","Anneni ara, sıkıca sarıl","Herkese yetişen o kalbe 💐"]:["ANNELER GÜNÜ","Anneler Günün kutlu olsun","Herkese yetişen kalbine 💐"];}});
+(function(){const _o=onbRender;onbRender=function(){_o.apply(this,arguments);
+  try{if(ONB[onbI]!=="me")return;const O=document.getElementById("onb"),nmf=O.querySelector("#ob-name");if(!nmf||O.querySelector(".ob-cins"))return;const P=st.prof=st.prof||{kacin:[]};const host=nmf.closest(".ob2-f,.field");if(!host)return;
+   host.insertAdjacentHTML("afterend",`<div class="ob2-f ob-cinsw"><span>Ben</span><div class="ob-cins" role="radiogroup" aria-label="Cinsiyet">${MF_CINS.map(([v,e,l])=>`<button type="button" role="radio" data-cins="${v}" aria-checked="${P.cins===v}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div></div>`);
+   O.querySelectorAll("[data-cins]").forEach(b=>b.onclick=()=>{P.cins=b.dataset.cins;save();O.querySelectorAll("[data-cins]").forEach(x=>x.setAttribute("aria-checked",String(x===b)));try{mfGenderApply();}catch(e){}});
+  }catch(e){console.error(e);}};})();
+function mfGenderApply(){const m=mfMale();document.body.classList.toggle("mf-male",m);try{const g=document.getElementById("greet");if(g&&!(st.name||"").trim()){const sp=g.querySelector("span");if(sp)sp.textContent=m?"dostum":"güzelim";}}catch(e){}}
+(function(){const _s=show;show=function(){const r=_s.apply(this,arguments);try{mfGenderApply();}catch(e){}return r;};})();
+mfGenderApply();
+(function(){const _t=tnRender;tnRender=function(){_t.apply(this,arguments);try{const el=document.getElementById("tn");if(!el)return;const top=el.querySelector(".mw-top");if(!top||el.querySelector(".mw-replay"))return;
+   top.insertAdjacentHTML("afterend",`<div class="mw-replay"><button type="button" data-rp="0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4.3h4.3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Soruları baştan sor</button><button type="button" class="alt" data-rp="1">Karşılamayı baştan izle</button><small>Cevapların silinmez, sadece baştan gezersin.</small></div>`);
+   el.querySelectorAll("[data-rp]").forEach(b=>b.onclick=()=>mfReplay(+b.dataset.rp));mfGenderApply();
+ }catch(e){console.error(e);}};})();
+mfReplay=function(full){try{if(full){onbOpen();return;}step=30;show();const root=document.querySelector('.prof[data-step="30"]');if(root&&root.classList.contains("tn")){tnI=0;tnRender();}else{mwI=0;mwRender();}mwTop();}catch(e){console.error(e);}};
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
