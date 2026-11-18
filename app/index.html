@@ -17270,7 +17270,7 @@ let OB_N=0;
 function obArt(k){let s=k==="sahne"?SP_EMBLEM:k==="pet"?BN_CATDOG:k==="kitap"?OB_BOOK:(BN_ART[k]||"");if(k==="fit")s=s.replace("{lvl}","46");
  const n="o"+(++OB_N);const ids=[...s.matchAll(/id="([^"]+)"/g)].map(m=>m[1]);ids.forEach(id=>{s=s.split(`id="${id}"`).join(`id="${id}${n}"`).split(`#${id})`).join(`#${id}${n})`);});
  return s.replace(/class="(bn-rich|sp-emb|bn-cd)"/,'class="ob-ic"');}
-const OB_KOSE=[["mac","Macera köşem","Koşu, yürüyüş, kamp"],["sahne","Sahne & Perde","Tiyatro, konser, film"],["kitap","Kitap köşem","Okumak, okur sohbeti"],["keyif","Keyif köşem","Oyun, burç, fal"],["rit","Manifest Me","Niyet ve ritüel"],["fit","Kendime iyi bak","Su, hareket, uyku"],["ev","Ev & düzen","Alışveriş, yemek, fatura"],["pet","Patili dostum","Mama, aşı, bakım"],["love","Biz ikimiz","Sadece sana özel"]];
+const OB_KOSE=[["mac","Macera köşem","Koşu, yürüyüş, kamp"],["sahne","Sahne & Perde","Tiyatro, konser, film"],["kitap","Kitap köşem","Okumak, okur sohbeti"],["keyif","Keyif köşem","Oyun, burç, fal"],["rit","Manifest Me","Niyet ve ritüel"],["fit","Kendime iyi bak","Spor, beslenme, su"],["ev","Ev & düzen","Alışveriş, yemek, fatura"],["pet","Patili dostum","Mama, aşı, bakım"],["love","Biz ikimiz","Sadece sana özel"]];
 const OB_ROL=[["veli","kids","Veliyim","Çanta, ödev, aşı, okul"],["ogr","stu","Öğrenciyim","Ders, sınav, odak"],["ikisi","both","İkisi de","Hem okuyorum hem çocuklarım var"],["yok","keyif","İkisi de değil","Bu alan tamamen benim"]];
 const OB_GUN=[["is","İşe gidiyorum"],["evden","Evden çalışıyorum"],["ev","Evdeyim"],["okul","Okuyorum"]];
 const OB_VAK=[["sabah","Sabah erken"],["ogle","Öğle arası"],["aksam","Akşam"],["gece","Herkes uyuyunca"]];
@@ -21156,6 +21156,12 @@ mfShare=async function(txt,F){try{await document.fonts.ready;}catch(e){}const W=
  const stars='<div class="ob-mst">'+Array.from({length:34},(_,i)=>`<i style="left:${(i*37+11)%97}%;top:${(i*23+5)%58}%;transform:scale(${(.6+(i%4)*.3).toFixed(2)});animation-delay:${((i*.41)%3.6).toFixed(2)}s"></i>`).join("")+'</div>';
  const heart='<svg class="ob-heart" viewBox="0 0 512 512" aria-hidden="true"><defs><radialGradient id="obHg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FF8A6B" stop-opacity=".55"/><stop offset=".6" stop-color="#F2635A" stop-opacity=".12"/><stop offset="1" stop-color="#F2635A" stop-opacity="0"/></radialGradient><linearGradient id="obHh" x1=".15" y1=".1" x2=".85" y2=".95"><stop offset="0" stop-color="#FFB08F" stop-opacity=".5"/><stop offset="1" stop-color="#F2635A" stop-opacity=".25"/></linearGradient></defs><circle cx="256" cy="290" r="250" fill="url(#obHg)"/><path d="M256 420 L140 290 C104 250 106 178 164 156 C206 140 240 160 256 194 C272 160 306 140 348 156 C406 178 408 250 372 290 Z" fill="url(#obHh)"/></svg>';
  r.html=r.html.replace('<svg class="hills"',stars+heart+'<svg class="hills"');}catch(e){}return r;};})();
+/* v0.97.1 karşılamada Kendime iyi bak = FORM halkaları */
+(function(){const _a=obArt;obArt=function(v){if(v!=="fit")return _a.apply(this,arguments);const R=[19,14,9],C=["#FF5B3A","#C8FF3C","#39D0FF"],P=[.78,.6,.85];
+ return `<svg class="ob-ic ob-fit" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="obFt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A4252"/><stop offset="1" stop-color="#161B24"/></linearGradient></defs>
+  <rect x="5" y="5" width="54" height="54" rx="16" fill="url(#obFt)"/><rect x="5.5" y="5.5" width="53" height="53" rx="15.5" fill="none" stroke="#fff" stroke-opacity=".14"/>
+  ${R.map((r,i)=>{const c=2*Math.PI*r;return `<circle cx="32" cy="32" r="${r}" fill="none" stroke="${C[i]}" stroke-opacity=".2" stroke-width="4"/><circle cx="32" cy="32" r="${r}" fill="none" stroke="${C[i]}" stroke-width="4" stroke-linecap="round" stroke-dasharray="${(c*P[i]).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 32 32)"/>`;}).join("")}
+  <path d="M34 24.5l-5.5 9h4.2l-1.8 7.5 6-10h-4.2z" fill="#C8FF3C"/></svg>`;};})();
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
