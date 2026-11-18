@@ -11,7 +11,7 @@
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=(), publickey-credentials-get=(self), publickey-credentials-create=(self)"
+    Permissions-Policy = "camera=(self), microphone=(), geolocation=(self), publickey-credentials-get=(self), publickey-credentials-create=(self)"
     X-Frame-Options = "SAMEORIGIN"
 
 [[headers]]

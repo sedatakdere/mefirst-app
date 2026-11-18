@@ -7947,6 +7947,23 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.86 Verilerimi sil */
+.mf-legal{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 16px;margin:18px 0 4px;font:700 12.5px var(--f-body)}
+.mf-legal a,.mf-legal button{padding:4px 0;border:0;background:none;color:var(--muted);text-decoration:none;font:inherit;cursor:pointer}
+.mf-legal button{color:#C0455A}
+.mfd{position:fixed;inset:0;z-index:9500;display:grid;place-items:end center;background:rgba(20,14,26,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);animation:fxUp .25s ease}
+.mfd[hidden]{display:none}
+.mfd-c{position:relative;width:100%;max-width:520px;max-height:92vh;overflow:auto;box-sizing:border-box;padding:24px 20px calc(20px + env(safe-area-inset-bottom,0px));border-radius:26px 26px 0 0;background:var(--surface,#fff);color:var(--ink);font-family:var(--f-body)}
+.mfd-x{position:absolute;top:14px;right:14px;width:36px;height:36px;border:0;border-radius:50%;background:rgba(127,127,140,.14);color:var(--ink);cursor:pointer}
+.mfd-i{display:grid;place-items:center;width:52px;height:52px;border-radius:16px;background:rgba(192,69,90,.12);color:#C0455A}.mfd-i svg{width:26px;height:26px}
+.mfd-c h3{margin:12px 0 6px;font:400 26px var(--f-display)}.mfd-c p{margin:0 0 8px;font-size:14.5px;line-height:1.5}
+.mfd-c ul{margin:0 0 12px;padding-left:18px;font-size:14px;line-height:1.5;color:var(--muted)}.mfd-c li{margin:4px 0}
+.mfd-code{padding:10px 12px;border-radius:12px;background:rgba(127,127,140,.1);font-size:13px!important}.mfd-code b{letter-spacing:.08em}
+.mfd-ok{display:flex;gap:10px;align-items:flex-start;margin:6px 0 14px;font:700 14px var(--f-body)}.mfd-ok input{width:20px;height:20px;margin:1px 0 0;accent-color:#C0455A;flex:none}
+.mfd-go{width:100%;height:52px;border:0;border-radius:16px;background:#C0455A;color:#fff;font:900 15.5px var(--f-body);cursor:pointer}.mfd-go:disabled{opacity:.45;cursor:not-allowed}
+.mfd-no{width:100%;height:46px;margin-top:6px;border:0;background:none;color:var(--muted);font:800 14.5px var(--f-body);cursor:pointer}
+.mfd-msg{margin-top:10px!important;font-size:13px!important;color:#C0455A}.mfd-msg a{color:inherit}
+
 /* v0.85 Beni tanı baştan */
 .mw-replay{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
 .mw-replay button{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:8px 10px;border:0;border-radius:14px;background:var(--pink-d,#D94F8C);color:#fff;font:800 13.5px var(--f-body);cursor:pointer;box-shadow:0 10px 20px -12px rgba(217,79,140,.7)}
@@ -14103,7 +14120,7 @@ function mfPopCands(){const C=[],now=new Date(),nm=now.getHours()*60+now.getMinu
       a:[["Yol tarifi",null,`https://www.google.com/maps/search/${encodeURIComponent(e[4].split("·").pop().trim()+" "+e[5])}`],["Tüm etkinlikler",()=>{kttab="etk";step=90;show();kitapRender();window.scrollTo({top:0});}]],x:"Süper, not aldım 💛"});}}}catch(e){}
   const S=mfPopSeen(),K=st.kitap?kt():null;
   return C.filter(c=>!S[c.id]&&!(c.kt&&K&&K.seen&&K.seen[c.kt])).sort((a,b)=>b.p-a.p);}
-function ktPop(chain){if(step!==0||document.getElementById("ktpop"))return;let L;try{L=mfPopCands();}catch(e){return;}if(!L.length)return;const c=L[0];if(chain&&(c.p<90||(window.__mfPopN||0)>=2))return;window.__mfPopN=(window.__mfPopN||0)+1;
+function ktPop(chain){if(step!==0||document.getElementById("ktpop")||document.body.classList.contains("onb-on"))return;let L;try{L=mfPopCands();}catch(e){return;}if(!L.length)return;const c=L[0];if(chain&&(c.p<90||(window.__mfPopN||0)>=2))return;window.__mfPopN=(window.__mfPopN||0)+1;
   const d=document.createElement("div");d.className="ktpop";d.id="ktpop";d.setAttribute("role","dialog");d.setAttribute("aria-label",c.k.replace(/^\S+\s/,""));
   const dec=c.leaves?ktLeaves(7):`<span class="pp-dec" aria-hidden="true">${Array.from({length:7},(_,i)=>`<i style="--x:${(i*37+9)%100}%;--d:${7+i%3*2}s;--dl:-${i*1.3}s;--s:${.7+(i%3)*.25}">${c.dec}</i>`).join("")}</span>`;
   d.innerHTML=`<div class="ktpop-c ${c.cls}">${dec}<span class="ktpop-k">${c.k}</span><h3>${c.h}</h3><p>${c.d}</p>
@@ -20404,6 +20421,40 @@ function mfReplay(full){try{if(full){onbOpen();return;}mwI=0;step=30;show();mwRe
    r.querySelector("#mw-re1").onclick=()=>mfReplay(0);r.querySelector("#mw-re2").onclick=()=>mfReplay(1);}else if(r)r.remove();
  }catch(e){console.error(e);}};})();
 try{const q=new URLSearchParams(location.search);if(q.has("bastan"))setTimeout(()=>mfReplay(1),900);}catch(e){}
+
+/* ===== v0.86 Gizlilik: Verilerimi sil (uygulama içi), yasal bağlantılar ===== */
+function mfCode(){const S=sbSess();return S&&S.uid?S.uid.replace(/-/g,"").slice(0,10).toUpperCase().replace(/(.{5})/,"$1-"):null;}
+async function mfWipeLocal(){try{localStorage.clear();}catch(e){}try{sessionStorage.clear();}catch(e){}
+ try{if(indexedDB.databases){const L=await indexedDB.databases();await Promise.all(L.map(d=>d.name&&new Promise(r=>{const q=indexedDB.deleteDatabase(d.name);q.onsuccess=q.onerror=q.onblocked=()=>r();})));}else await new Promise(r=>{const q=indexedDB.deleteDatabase("mefirst-media");q.onsuccess=q.onerror=q.onblocked=()=>r();});}catch(e){}
+ try{if(window.caches){const K=await caches.keys();await Promise.all(K.map(k=>caches.delete(k)));}}catch(e){}
+ try{if(navigator.serviceWorker){const R=await navigator.serviceWorker.getRegistrations();await Promise.all(R.map(r=>r.unregister()));}}catch(e){}}
+function mfDelOpen(){let O=document.getElementById("mf-del");if(!O){O=document.createElement("div");O.id="mf-del";O.className="mfd";O.setAttribute("role","dialog");O.setAttribute("aria-modal","true");document.body.appendChild(O);}
+ const code=mfCode();O.hidden=false;document.body.classList.add("fx-lock");
+ O.innerHTML=`<div class="mfd-c"><button type="button" class="mfd-x" aria-label="Kapat">✕</button>
+  <span class="mfd-i" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13M10 11v6M14 11v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  <h3>Verilerimi sil</h3><p>Bu işlem <b>geri alınamaz</b>. Şunların hepsi kalıcı olarak silinir:</p>
+  <ul><li>Telefonundaki tüm kayıtların: profilin, notların, döngü, form ve beslenme kayıtların, kitapların, anıların ve fotoğrafların</li>
+  <li>Sunucudaki anonim hesabın, ruh eşi alanında gönderdiklerin ve açtığın bağlantı</li>
+  <li>Polaroidlerin, altı çizili cümlelerin, film yorumların, beğeni, yanıt ve bildirimlerin</li></ul>
+  ${code?`<p class="mfd-code">Me First kodun: <b>${code}</b></p>`:""}
+  <label class="mfd-ok"><input type="checkbox" id="mfd-ck"> Anladım, her şeyimin silinmesini istiyorum</label>
+  <button type="button" class="mfd-go" id="mfd-go" disabled>Her şeyi kalıcı olarak sil</button>
+  <button type="button" class="mfd-no" id="mfd-no">Vazgeç</button><p class="mfd-msg" id="mfd-msg" role="status"></p></div>`;
+ const close=()=>{O.hidden=true;document.body.classList.remove("fx-lock");};
+ O.querySelector(".mfd-x").onclick=close;O.querySelector("#mfd-no").onclick=close;
+ const ck=O.querySelector("#mfd-ck"),go=O.querySelector("#mfd-go"),msg=O.querySelector("#mfd-msg");ck.onchange=()=>{go.disabled=!ck.checked;};
+ go.onclick=async()=>{go.disabled=true;ck.disabled=true;go.textContent="Siliniyor…";msg.textContent="";
+  let srvOk=true;if(sbSess()){srvOk=false;try{if(navigator.onLine){const r=await sbReq("POST","rpc/delete_me",{});srvOk=r!==null;}}catch(e){srvOk=false;}}
+  if(!srvOk){msg.innerHTML=`Sunucudaki verilerine şu an ulaşamadım (internet bağlantını kontrol et). Yine de devam edersen telefonundaki her şey silinir; sunucudakiler için <a href="mailto:destek@mefirst.app?subject=Verilerimi%20sil&body=Me%20First%20kodum%3A%20${encodeURIComponent(code||"")}">destek@mefirst.app</a> adresine kodunla (${code||"-"}) yaz.`;
+   go.textContent="Yine de telefondan sil";go.disabled=false;go.onclick=async()=>{go.disabled=true;go.textContent="Siliniyor…";await mfWipeLocal();location.replace(location.pathname+"?silindi=1");};return;}
+  await mfWipeLocal();location.replace(location.pathname+"?silindi=1");};}
+function mfLegal(){const f=document.querySelector("p.foot");if(!f||document.getElementById("mf-legal"))return;f.insertAdjacentHTML("beforebegin",`<nav class="mf-legal" id="mf-legal" aria-label="Yasal"><a href="/gizlilik/" target="_blank" rel="noopener">Gizlilik</a><a href="/kosullar/" target="_blank" rel="noopener">Koşullar</a><a href="/destek/" target="_blank" rel="noopener">Destek</a><button type="button" id="mf-delbtn">Verilerimi sil</button></nav>`);document.getElementById("mf-delbtn").onclick=mfDelOpen;}
+mfLegal();
+try{if(new URLSearchParams(location.search).has("silindi")){history.replaceState(null,"",location.pathname);setTimeout(()=>{try{alertSoft("Tüm verilerin silindi. Me First'e yeniden hoş geldin.");}catch(e){}},1200);}}catch(e){}
+
+/* v0.86: ilk açılış karşılaması (onboarding) açıkken hatırlatma kartları çıkmasın */
+(function(){const _o=onbOpen;onbOpen=function(){try{document.querySelectorAll("#ktpop,.ktpop").forEach(e=>e.remove());}catch(e){}return _o.apply(this,arguments);};})();
+(function(){const _k=ktPop;ktPop=function(){try{const o=document.getElementById("onb");if((o&&!o.hidden)||document.body.classList.contains("onb-on"))return;}catch(e){}return _k.apply(this,arguments);};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
