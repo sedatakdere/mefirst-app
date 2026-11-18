@@ -7947,6 +7947,23 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.94 sepet */
+.sp-rail{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:10px 0 0;padding:2px 0 6px;scrollbar-width:none}.sp-rail::-webkit-scrollbar{display:none}
+.sp-c{flex:none;width:148px;display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:12px;border:0;border-radius:16px;background:var(--surface,#fff);box-shadow:inset 0 0 0 1px rgba(150,70,35,.14);color:var(--ink);text-align:left;font-family:var(--f-body);cursor:pointer;scroll-snap-align:start}
+.sp-c b{font:800 14px/1.2 var(--f-body)}.sp-c small{font-size:11.5px;line-height:1.35;color:var(--muted);min-height:31px}.sp-c em{margin-top:2px;font:800 11.5px var(--f-body);font-style:normal;color:#C0552F}
+.sp-i{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:rgba(232,132,92,.14);color:#C0552F}.sp-i svg{width:20px;height:20px}.sp-i .mti{display:grid;place-items:center;width:22px;height:22px}.sp-i .mti svg{width:22px;height:22px}
+.ps-chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-top:4px}.ps-chips::-webkit-scrollbar{display:none}
+.ps-chips button{flex:none;display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border:0;border-radius:99px;background:rgba(0,0,0,.05);color:var(--ink);font:800 12.5px var(--f-body);cursor:pointer}
+.ps-chips button[aria-pressed="true"]{background:#B8502E;color:#fff}
+.ps-chips .mti{display:inline-grid;width:16px;height:16px}.ps-chips .mti svg{width:16px;height:16px}
+.ps-rem{display:grid;gap:8px;margin:4px 0 10px}.ps-r{display:flex;align-items:center;gap:10px;padding:10px;border-radius:14px;background:var(--surface,#fff);box-shadow:inset 0 0 0 1px rgba(150,70,35,.12)}
+.ps-r div{flex:1;min-width:0}.ps-r b{display:block;font-size:14px}.ps-r small{font-size:12px;color:var(--muted)}.ps-r button{border:0;border-radius:12px;padding:8px 12px;background:rgba(184,80,46,.12);color:#9A3E20;font:800 12.5px var(--f-body);cursor:pointer}
+.ps-r.due{box-shadow:inset 0 0 0 1.5px #E0623F}.ps-r.due small{color:#C0455A;font-weight:800}
+.meq .ps-chips button[aria-pressed="true"]{background:linear-gradient(135deg,var(--a),var(--b))}.meq .sp-i{background:color-mix(in srgb,var(--a) 18%,transparent);color:var(--b)}.meq .sp-c em{color:var(--b)}.meq .sp-c{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--b) 25%,transparent)}
+.fx-chips{padding:0 16px;margin:0 0 6px}.fx-chips button{background:#1B1F26;color:#AEB7C2}.fx-chips button[aria-pressed="true"]{background:#C8FF3C;color:#0A0C10}
+.fx-eqc small{font-size:11.5px;line-height:1.35;color:#8D97A3;min-height:31px}
+html[data-mf="dusk"] .sp-c,html[data-mf="dusk"] .ps-r{background:rgba(255,255,255,.06)}html[data-mf="dusk"] .ps-chips button:not([aria-pressed="true"]){background:rgba(255,255,255,.08);color:#E8E0F0}
+
 /* v0.93 */
 .mbag label{position:relative}.mb-shop{margin-left:auto;flex:none;width:32px;height:32px;border:0;border-radius:10px;display:grid;place-items:center;background:rgba(62,140,128,.12);color:#2F7F72;cursor:pointer}.mb-shop svg{width:17px;height:17px}
 html[data-mf="dusk"] .mb-shop{background:rgba(111,191,166,.16);color:#9FE1CB}
@@ -20633,6 +20650,71 @@ function fxEqHTML(){return `<div class="fx-sh"><h3>Evde antrenman ekipmanı</h3>
  <div class="fx-rail fx-eq">${FX_EQ.map(([n,q,ic],i)=>`<button type="button" class="fx-eqc" data-fxeq="${i}">${fxIco(ic)}<b>${n}</b><em>Fiyatlara bak ›</em></button>`).join("")}</div>`;}
 (function(){const _f=fitRender;fitRender=function(){_f.apply(this,arguments);try{const r=document.getElementById("fx-progs");if(r&&!document.getElementById("fx-eq")){const c=document.createElement("div");c.id="fx-eq";c.className="fx-progs";c.innerHTML=fxEqHTML();r.after(c);
    c.querySelectorAll("[data-fxeq]").forEach(b=>b.onclick=()=>{const x=FX_EQ[+b.dataset.fxeq];mfShopOpen({k:"Ekipman",t:x[0],q:x[1],shops:affCfg().spor||affCfg().mama});});}}catch(e){console.error(e);}};})();
+
+/* ===== v0.94 Sepet motoru: Patili sepeti (+periyodik hatırlatma), Macera ekipmanı, Spor dükkânı ===== */
+/* öğe: [ad, arama, kısa not, kategori, periyot(gün, isteğe bağlı)] */
+const SEPET={
+ pet:{
+  kedi:[["Kedi kumu","topaklanan kedi kumu 10 lt","Kokuyu tutan, topaklanan kum","bakim",21],["Tırmalama tahtası","kedi tırmalama tahtası","Koltuklarını kurtarır","ev"],["Tüy oltası","kedi oltası oyuncak tüylü","Avcı içgüdüsüne 10 dakika","oyun"],["Kedi tüneli","kedi tüneli oyuncak","Saklambaç keyfi","oyun"],["Pire-kene damlası","kedi dış parazit damlası","Veterinerin önerdiği markayı al","saglik",30],["Ödül maması","kedi ödül maması","Eğitimde küçük teşvik","beslenme"],["Su pınarı","kedi su pınarı","Akan su daha çok içirir","ev"],["Tüy toplama tarağı","kedi tüy toplama tarağı","Haftada iki kez fırçala","bakim"],["Taşıma çantası","kedi taşıma çantası","Veteriner yolu kolaylaşır","ev"]],
+  kopek:[["Çiğneme kemiği","köpek çiğneme kemiği doğal","Dişler ve sakinlik için","oyun"],["Kong oyuncak","kong köpek oyuncak","İçine ödül koy, oyalansın","oyun"],["Tasma ve gezdirme kayışı","köpek tasma gezdirme kayışı seti","Göğüs tasması daha rahat","ev"],["Dışkı torbası","köpek dışkı torbası","Yürüyüşün olmazsa olmazı","bakim",30],["Pire-kene damlası","köpek dış parazit damlası","Veterinerin önerdiği markayı al","saglik",30],["Ödül maması","köpek ödül maması","Eğitimde küçük teşvik","beslenme"],["Köpek yatağı","köpek yatağı ortopedik","Eklemleri korur","ev"],["Köpek şampuanı","köpek şampuanı","Ayda bir banyo yeter","bakim"],["Top fırlatıcı","köpek top fırlatıcı","Parkta enerji atsın","oyun"]],
+  kus:[["Kuş yemi","muhabbet kuşu yemi","Karışık tohum ve tahıl","beslenme",30],["Kalamar kemiği","kuş kalamar kemiği","Kalsiyum ve gaga bakımı","saglik"],["Kafes oyuncağı","kuş kafes oyuncağı","Sıkılmasın","oyun"],["Kafes kumu","kuş kafes kumu","Temiz taban","bakim",14],["Banyo kabı","kuş banyo kabı","Yazın çok sever","bakim"]],
+  diger:[["Kemirgen yemi","tavşan hamster yemi","Türüne uygun olanı seç","beslenme",30],["Talaş","kemirgen talaşı","Haftada bir değiştir","bakim",10],["Kemirme oyuncağı","kemirgen kemirme oyuncağı","Dişler için şart","oyun"],["Su şişesi","kemirgen su şişesi","Damlatmayan modeli al","ev"]]},
+ mac:{
+  kosu:[["Koşu ayakkabısı","koşu ayakkabısı","Bir numara büyük almak iyidir"],["GPS koşu saati","gps koşu saati","Tempo ve nabzını görürsün"],["Koşu kemeri","koşu kemeri telefon","Telefon ve anahtar zıplamasın"],["Kafa bandı","koşu kafa bandı","Ter gözüne kaçmasın"]],
+  trail:[["Arazi koşu ayakkabısı","trail koşu ayakkabısı","Tırtıklı taban kayma yapmaz"],["Su yeleği","trail koşu su yeleği","Elleri serbest bırakır"],["Kafa lambası","kafa lambası şarjlı","Erken start ve gece için"],["Rüzgarlık","ultra hafif rüzgarlık","Avuç içine katlanır"]],
+  yuruyus:[["Trekking ayakkabısı","su geçirmez trekking ayakkabısı","Bileği saran model seç"],["Trekking batonu","trekking batonu","İnişte dizlerini korur"],["Günlük sırt çantası","20 litre trekking sırt çantası","20-25 litre yeter"],["Yürüyüş çorabı","trekking çorabı","Kabarcıkları önler"]],
+  bisiklet:[["Bisiklet kaskı","bisiklet kaskı","Her sürüşte, kısa da olsa"],["Ön-arka lamba seti","bisiklet lamba seti şarjlı","Görünmek görmek kadar önemli"],["Mini pompa","bisiklet mini pompa","Yolda kalmazsın"],["Bisiklet kilidi","bisiklet u kilit","U kilit daha güvenli"]],
+  yoga:[["Yoga matı","yoga matı 6 mm","Kaymayan, kalın mat"],["Yoga bloğu","yoga bloğu mantar","Esnemeyi kolaylaştırır"],["Yoga kemeri","yoga kemeri","Uzanamadığın yere uzan"],["Mat çantası","yoga matı çantası","Derse giderken kolay"]],
+  yuzme:[["Yüzücü gözlüğü","yüzücü gözlüğü buğu önleyici","Buğu önleyici olsun"],["Bone","silikon yüzme bonesi","Silikon daha dayanıklı"],["Havlu panço","mikrofiber havlu","Hızlı kurur"],["Su geçirmez çanta","su geçirmez dry bag","Telefon ıslanmasın"]],
+  macera:[["Kafa lambası","kafa lambası şarjlı","Kampın ilk kuralı"],["Uyku tulumu","uyku tulumu kamp","Konfor derecesine bak"],["Kamp sandalyesi","katlanır kamp sandalyesi","Ateş başında keyif"],["Termos","çelik termos 750 ml","Sıcak çay her şeyi çözer"]]},
+ spor:{
+  ev:[["Yoga matı","yoga matı 6 mm","Her programın temeli","mobil"],["Direnç bandı seti","direnç bandı seti","Ağırlık yerine geçer","guc"],["Ayarlanabilir dambıl","ayarlanabilir dambıl seti","Az yer, çok seçenek","guc"],["Atlama ipi","rulmanlı atlama ipi","10 dakikada kardiyo","kardiyo"],["Köpük rulo","foam roller köpük rulo","Kas ağrısına iyi gelir","mobil"],["Akıllı tartı","akıllı tartı vücut analizi","İlerlemeni görürsün","core"]],
+  kosu:[["Koşu ayakkabısı","koşu ayakkabısı","Ayağına göre seç","kardiyo"],["Akıllı saat","akıllı saat nabız","Nabız ve adım","kardiyo"],["Kablosuz kulaklık","spor kablosuz kulaklık","Düşmeyen kulak içi","kardiyo"],["Koşu kemeri","koşu kemeri telefon","Telefon yanında","kardiyo"]],
+  yoga:[["Yoga bloğu","yoga bloğu mantar","Esnemeye destek","mobil"],["Pilates topu","pilates topu 65 cm","Core'u uyandırır","core"],["Yoga kemeri","yoga kemeri","Esnek olmayana dost","mobil"],["Mini pilates bandı","pilates mini band seti","Kalça ve bacak","core"]],
+  giyim:[["Spor tayt","yüksek bel spor tayt","Yüksek bel rahat eder","guc"],["Nefes alan tişört","dry fit spor tişört","Teri hızlı kurutur","kardiyo"],["Spor sütyeni","yüksek destekli spor sütyeni","Destek seviyesine bak","kardiyo"],["Spor çantası","spor çantası ayakkabı bölmeli","Ayakkabı bölmesi işe yarar","guc"]],
+  mutfak:[["Mutfak terazisi","dijital mutfak terazisi","Porsiyonu gözle değil gramla","core"],["Shaker","protein shaker","Smoothie ve ayran için","core"],["Yemek saklama kabı","cam yemek saklama kabı seti","Hazırlık günü kurtarır","core"],["Matara","çelik su matarası 1 litre","Su hedefin kolaylaşır","kardiyo"]]}};
+const SP_CAT={bakim:"Bakım",oyun:"Oyun",saglik:"Sağlık",beslenme:"Beslenme",ev:"Ev"};
+const SPOR_TAB=[["ev","Evde"],["kosu","Koşu"],["yoga","Yoga & pilates"],["giyim","Giyim"],["mutfak","Mutfak"]];
+function sepetCard(it,i,ico){return `<button type="button" class="sp-c" data-spi="${i}"><span class="sp-i">${ico||""}</span><b>${esc(it[0])}</b><small>${esc(it[2]||"")}</small><em>Fiyatlara bak ›</em></button>`;}
+function sepetBind(root,L,k){root.querySelectorAll("[data-spi]").forEach(b=>b.onclick=()=>{const it=L[+b.dataset.spi];mfShopOpen({k:k||"Fiyatlara bak",t:it[0],q:it[1],shops:affCfg().spor||affCfg().mama});});}
+/* ---- Patili sepeti ---- */
+const PET_IC={bakim:'<svg viewBox="0 0 24 24"><path d="M7 3h10l-1 5H8zM6 8h12l-1.5 13h-9z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>',oyun:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M4.5 9.5c5 1.5 10 1.5 15 0M4.5 14.5c5-1.5 10-1.5 15 0" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>',saglik:'<svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M12 10v5M9.5 12.5h5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>',beslenme:'<svg viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0zM8 8c0-2 2-2 2-4M13 8c0-2 2-2 2-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>',ev:'<svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.9"/></svg>'};
+let PSF="hepsi";
+function petCyc(P,name){P.cyc=P.cyc||{};return P.cyc[name];}
+function petCycLeft(P,it){const c=petCyc(P,it[0]);if(!c||!it[4])return null;return Math.round(it[4]-(Date.now()-new Date(c+"T00:00").getTime())/864e5);}
+function petSepetRender(){const P=petData();if(!P||!(P.name||"").trim())return;const anchor=document.getElementById("mm-card");if(!anchor)return;
+ const L=SEPET.pet[P.kind]||SEPET.pet.diger;let c=document.getElementById("ps-card");if(!c){c=document.createElement("div");c.id="ps-card";c.className="lcard t-peach ps-card";anchor.after(c);}
+ const cats=["hepsi",...new Set(L.map(x=>x[3]))];if(!cats.includes(PSF))PSF="hepsi";const V=L.map((x,i)=>[x,i]).filter(([x])=>PSF==="hepsi"||x[3]===PSF);
+ const rem=L.filter(x=>x[4]);
+ c.innerHTML=`<h3><span class="step">🛒</span>${esc(trGen(P.name))} sepeti<span class="nextf">ihtiyaçlar tek yerde</span></h3>
+  ${rem.length?`<div class="ps-rem">${rem.map(x=>{const l=petCycLeft(P,x);return `<div class="ps-r${l!==null&&l<=3?" due":""}"><span class="sp-i">${PET_IC[x[3]]}</span><div><b>${esc(x[0])}</b><small>${l===null?`Her ${x[4]} günde bir · başlat, hatırlatayım`:l<=0?"Yenileme zamanı geldi":`${l} gün sonra yenile`}</small></div><button type="button" data-psn="${esc(x[0])}">${l===null?"Başlat":"Yeniledim"}</button></div>`;}).join("")}</div>`:""}
+  <div class="ps-chips">${cats.map(k=>`<button type="button" data-psf="${k}" aria-pressed="${PSF===k}">${k==="hepsi"?"Hepsi":SP_CAT[k]}</button>`).join("")}</div>
+  <div class="sp-rail">${V.map(([x,i])=>sepetCard(x,i,PET_IC[x[3]])).join("")}</div>`;
+ c.querySelectorAll("[data-psf]").forEach(b=>b.onclick=()=>{PSF=b.dataset.psf;petSepetRender();});
+ c.querySelectorAll("[data-psn]").forEach(b=>b.onclick=()=>{P.cyc=P.cyc||{};P.cyc[b.dataset.psn]=dkey();save();petSepetRender();try{navigator.vibrate&&navigator.vibrate(12);}catch(e){}});
+ sepetBind(c,L,"Patili sepeti");}
+(function(){const _m=mamaRender;mamaRender=function(){const r=_m.apply(this,arguments);try{petSepetRender();}catch(e){console.error(e);}return r;};})();
+(function(){const _t=TC_EXTRA;TC_EXTRA=function(C,by){_t.apply(this,arguments);try{(st.pets||[]).forEach(P=>{const nm=(P.name||"").trim();if(!nm)return;(SEPET.pet[P.kind]||[]).filter(x=>x[4]).forEach(x=>{const l=petCycLeft(P,x);if(l===null||l>3)return;
+   C.unshift({t:"butter",e:"Patili dostum",h:l<=0?`${trGen(nm)} ${x[0].toLocaleLowerCase("tr-TR")} yenileme zamanı`:`${trGen(nm)} ${x[0].toLocaleLowerCase("tr-TR")} ${l} gün sonra bitiyor`,d:x[2]+". Fiyatlara şimdiden bak.",cta:"Fiyatlara bak",ic:"🛒",go:()=>mfShopOpen({k:"Patili sepeti",t:x[0],q:x[1]})});});});}catch(e){}};})();
+/* ---- Macera ekipmanı ---- */
+let MEQ=null;
+function macEqHTML(ks){const keys=ks.filter(k=>SEPET.mac[k]);if(!keys.length)return "";if(!MEQ||!keys.includes(MEQ))MEQ=keys[0];const L=SEPET.mac[MEQ],c=MT_C[MEQ]||MT_C.macera;
+ return `<div class="kthead"><span>Ekipman 🎒</span><small>sana göre</small></div><div class="meq" style="--a:${c[0]};--b:${c[1]}"><div class="ps-chips meq-chips">${keys.map(k=>`<button type="button" data-meq="${k}" aria-pressed="${MEQ===k}">${macIco(k)}${(MGUIDE[k]||[k])[0]}</button>`).join("")}</div><div class="sp-rail">${L.map((x,i)=>sepetCard(x,i,macIco(MEQ))).join("")}</div></div>`;}
+(function(){const _r=macRender;macRender=function(){const r=_r.apply(this,arguments);try{if(typeof mactab!=="undefined"&&mactab!=="oneri")return r;const P=document.getElementById("macpanel")||document.querySelector('[data-step="95"] .ktpanel, [data-step="95"]');if(!P||P.querySelector(".meq"))return r;
+  const M=mac();const ks=(M.evi&&M.evi.length?SP_I.filter(x=>M.evi.includes(x[0])).map(x=>x[3][0]):["kosu","yuruyus","bisiklet","macera"]).concat(Object.keys(SEPET.mac)).filter((v,i,a)=>a.indexOf(v)===i);
+  const heads=[...P.querySelectorAll(".kthead")];const rh=heads.find(h=>/Rehber/.test(h.textContent));const html=macEqHTML(ks);if(!html)return r;
+  if(rh&&rh.nextElementSibling)rh.nextElementSibling.insertAdjacentHTML("afterend",html);else P.insertAdjacentHTML("beforeend",html);
+  const W=P.querySelector(".meq");W.querySelectorAll("[data-meq]").forEach(b=>b.onclick=()=>{MEQ=b.dataset.meq;const h=W.previousElementSibling;W.remove();if(h&&h.classList.contains("kthead"))h.remove();macRender();});sepetBind(W,SEPET.mac[MEQ],"Macera ekipmanı");
+ }catch(e){console.error(e);}return r;};})();
+/* ---- Spor dükkânı (Kendime iyi bak) ---- */
+let SPRT="ev";
+fxEqHTML=function(){const L=SEPET.spor[SPRT];return `<div class="fx-sh"><h3>Spor dükkânı</h3><small>Programlarına güç katacak ekipman; dokun, fiyatları karşılaştır</small></div>
+ <div class="ps-chips fx-chips">${SPOR_TAB.map(([k,l])=>`<button type="button" data-spt2="${k}" aria-pressed="${SPRT===k}">${l}</button>`).join("")}</div>
+ <div class="fx-rail fx-eq">${L.map(([n,q,d,ic],i)=>`<button type="button" class="fx-eqc" data-fxeq="${i}">${fxIco(ic)}<b>${n}</b><small>${d}</small><em>Fiyatlara bak ›</em></button>`).join("")}</div>`;};
+FX_EQ.length=0;
+(function(){const _f=fitRender;fitRender=function(){_f.apply(this,arguments);try{const c=document.getElementById("fx-eq");if(!c)return;const bind=()=>{c.innerHTML=fxEqHTML();
+   c.querySelectorAll("[data-spt2]").forEach(b=>b.onclick=()=>{SPRT=b.dataset.spt2;bind();});
+   c.querySelectorAll("[data-fxeq]").forEach(b=>b.onclick=()=>{const x=SEPET.spor[SPRT][+b.dataset.fxeq];mfShopOpen({k:"Spor dükkânı",t:x[0],q:x[1],shops:affCfg().spor||affCfg().mama});});};bind();}catch(e){console.error(e);}};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
