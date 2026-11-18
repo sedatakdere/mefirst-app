@@ -7947,6 +7947,13 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.91 yukarı düğmesi */
+.mf-up{position:fixed;z-index:60;left:50%;bottom:calc(98px + env(safe-area-inset-bottom,0px));transform:translate(-50%,90px);transition:transform .35s cubic-bezier(.2,.9,.3,1.2),opacity .25s,bottom .3s ease!important;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 18px 0 14px;border:0;border-radius:999px;background:linear-gradient(135deg,var(--u1,#5B3577),var(--u2,#3A2350));color:#fff;font:800 14px/1 var(--f-body);box-shadow:0 12px 24px -10px rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:transform .35s cubic-bezier(.2,.9,.3,1.2),opacity .25s;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.mf-up svg{width:18px;height:18px}.mf-up.on{transform:translate(-50%,0);opacity:1;pointer-events:auto}.mf-up:active{transform:translate(-50%,0) scale(.95)}
+.mf-up.dk{color:#0A0C10}
+.mf-up.low{bottom:calc(22px + env(safe-area-inset-bottom,0px))}
+@media (prefers-reduced-motion:reduce){.mf-up{transition:opacity .2s}}
+
 html body .profbtn:not(.set) .pav::after{background:#E0623F!important;color:#fff!important;box-shadow:0 0 0 2px var(--surface)}
 html[data-mf="dusk"] body .profbtn:not(.set) .pav::after{background:#FF8A6B!important;color:#2A173B!important}
 
@@ -20526,6 +20533,20 @@ try{if(localStorage.getItem("mf-trend-v")!=="2"){localStorage.removeItem("mf-tre
   (SB_TR.pols||[]).forEach(q=>{if(me&&q.user_id===me&&!q.ph){q.img=(usePh&&PH.me)?PH.me:(q.av||"");}});
   if(SB_TR.pol&&me&&SB_TR.pol.user_id===me&&!SB_TR.pol.ph)SB_TR.pol.img=(usePh&&PH.me)?PH.me:(SB_TR.pol.av||"");}catch(e){}
  return _h.apply(this,arguments);};})();
+
+/* ===== v0.91 Tek dokunuşla yukarı: Sahne & Perde, Macera (takvim) ve diğer uzun sayfalar ===== */
+const UP_C={95:["#3E8C80","#1E4D5C"],96:["#A3263F","#5A0F22"],50:["#C8FF3C","#5BD35B"],70:["#5E86B8","#2E4A6B"],80:["#E8845C","#B8502E"],60:["#9A6ABF","#5A3A6B"],20:["#C29A6B","#7A5A3A"],10:["#E58AA6","#B85C78"]};
+function upBtn(){let B=document.getElementById("mf-up");const C=UP_C[step];
+ const nav=document.getElementById("bnav");const navOn=!nav||!nav.classList.contains("nav-hide");
+ const busy=document.getElementById("bkp")||document.querySelector("#fx-pl:not([hidden]),#mf-del:not([hidden]),.ktpop,#zsh:not([hidden])");
+ const on=!!C&&window.scrollY>700&&!busy;
+ if(!B){if(!on)return;B=document.createElement("button");B.type="button";B.id="mf-up";B.className="mf-up";B.setAttribute("aria-label","Sayfanın başına dön");
+  B.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Yukarı</span>';
+  B.onclick=()=>{window.scrollTo({top:0,behavior:"smooth"});try{navigator.vibrate&&navigator.vibrate(8);}catch(e){}};document.body.appendChild(B);}
+ if(C){B.style.setProperty("--u1",C[0]);B.style.setProperty("--u2",C[1]);B.classList.toggle("dk",step===50);}
+ B.classList.toggle("on",on);B.classList.toggle("low",!navOn);}
+window.addEventListener("scroll",()=>{if(!upBtn.r){upBtn.r=1;requestAnimationFrame(()=>{upBtn.r=0;try{upBtn();}catch(e){}});}},{passive:true});
+(function(){const _s=show;show=function(){const r=_s.apply(this,arguments);try{upBtn();}catch(e){}return r;};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
