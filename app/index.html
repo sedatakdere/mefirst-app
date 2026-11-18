@@ -7947,6 +7947,17 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.90 Ana sayfa vurguları: pembe yerine marka renkleri (gece moru + mercan) */
+html body .world-h em{color:#E0623F!important}
+html[data-mf="dusk"] body .world-h em{color:#FF9A7E!important}
+html body .wm .wm-me{color:#EF6B4E!important}
+html[data-mf="dusk"] body .wm .wm-me,html body .sky-gece .wm .wm-me{color:#FF9A7E!important}
+html body #todaycard .tc-dots i{background:rgba(74,44,99,.18)!important}html body #todaycard .tc-dots i.on{background:#4A2C63!important}html body.wb-gece #todaycard .tc-dots i{background:rgba(255,255,255,.28)!important}html body.wb-gece #todaycard .tc-dots i.on{background:#FF9A7E!important}
+html[data-mf="dusk"] body #todaycard .tc-dots i.on{background:#FF9A7E!important}
+html body .bnav button[aria-current="page"]{color:#fff!important;background:linear-gradient(135deg,#5B3577,#3A2350)!important;box-shadow:0 8px 16px -8px rgba(58,35,80,.8)!important}
+html[data-mf="dusk"] body .bnav button[aria-current="page"]{background:linear-gradient(135deg,#FF8A6B,#E0623F)!important;box-shadow:0 8px 16px -8px rgba(224,98,63,.7)!important}
+html body #go-prof:not(.slim){background:linear-gradient(120deg,var(--surface),color-mix(in srgb,#C9B6E8 35%,var(--surface)))!important;border:1px solid rgba(74,44,99,.22)!important;box-shadow:0 8px 20px -10px rgba(58,35,80,.35)!important}
+
 /* v0.89 Sallanma, alt bar ve tablet uyumu */
 html body #todaycard .tc-rail,html body .tc-rail{margin:0 -16px!important;padding:4px 16px 8px!important;scroll-padding:0 16px!important}
 .bnav.nav-hide{transform:translateY(calc(100% + 30px + env(safe-area-inset-bottom,0px)))!important}
