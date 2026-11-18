@@ -7947,6 +7947,30 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.81 FORM finali */
+.fx-ring.has-fig .fx-num{inset:auto 0 16% 0;display:block;text-align:center}
+.fx-ring.has-fig .fx-num b{font-size:54px}.fx-ring.has-fig .fx-num small{display:none}
+.fx-figw{position:absolute;left:16%;right:16%;top:9%;height:58%;pointer-events:none}
+.fx-fig{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 8px 18px rgba(0,0,0,.5))}
+.fx-wsum{display:flex;align-items:baseline;gap:14px;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.07);font:700 11.5px var(--f-body);color:#8D97A3}
+.fx-wsum span b{display:block;font:900 19px var(--f-body);color:#fff;font-variant-numeric:tabular-nums}
+.fx-wsum small{margin-left:auto;font:900 10px var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:#6B7480}
+.fx-pmv{display:block;margin-top:4px;font:800 11px var(--f-body);color:rgba(255,255,255,.7);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fx-rail .fx-pc{height:214px}
+.fx-mg{grid-template-columns:repeat(4,1fr)!important}.fx-mg b i{font-style:normal;font-size:12px;color:#8D97A3}
+.fx-mg button[aria-pressed="true"]{background:rgba(200,255,60,.12)!important;box-shadow:inset 0 0 0 1.5px #C8FF3C!important}.fx-mg button[aria-pressed="true"] b{color:#E9FFB0}
+.fx-drail .fx-dc{position:relative;flex:none;width:46%;max-width:190px;height:150px;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;padding:14px;border:0;border-radius:22px;overflow:hidden;text-align:left;color:#fff;font-family:var(--f-body);cursor:pointer;
+ background:radial-gradient(110% 80% at 100% 0%,color-mix(in srgb,var(--g1) 75%,transparent),transparent 65%),#16191F;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.fx-dd{position:absolute;top:14px;left:14px;width:34px;height:34px;border-radius:50%;background:conic-gradient(var(--g1) 0 50%,var(--g2) 50% 75%,rgba(255,255,255,.85) 75%);box-shadow:0 0 0 4px rgba(255,255,255,.08)}
+.fx-dc b{font:900 17px/1.1 var(--f-body)}.fx-dc small{font-size:12px;opacity:.8}.fx-dc em{margin-top:6px;font:800 11.5px var(--f-body);font-style:normal;color:var(--g1)}
+.fx-pl-in.fx-dt{align-items:stretch;text-align:left}.fx-dh{margin:18px 0 6px;padding:18px;border-radius:22px;background:radial-gradient(110% 90% at 100% 0%,color-mix(in srgb,var(--g1) 60%,transparent),transparent 65%),#14171C}
+.fx-dh small{font:900 10px var(--f-body);letter-spacing:.2em;color:var(--g1)}.fx-dh h2{margin:4px 0 6px;font:900 30px var(--f-body);letter-spacing:-.02em}.fx-dh p{margin:0;font-size:14.5px;line-height:1.5;color:#C9D0D8}
+.fx-dt h4{margin:18px 0 8px;font:900 12px var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:#8D97A3}
+.fx-dr{margin:0;padding:0;list-style:none;counter-reset:r;display:grid;gap:8px}.fx-dr li{counter-increment:r;display:flex;gap:10px;align-items:center;padding:11px 12px;border-radius:14px;background:#14171C;font-size:14.5px}
+.fx-dr li::before{content:counter(r);flex:none;width:24px;height:24px;border-radius:8px;display:grid;place-items:center;background:var(--g1);color:#0A0C10;font:900 12px var(--f-body)}
+.fx-do{display:grid;gap:8px}.fx-do div{padding:11px 12px;border-radius:14px;background:#14171C;border-left:3px solid var(--g1)}.fx-do small{display:block;font:900 10.5px var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--g1)}.fx-do b{font-size:14.5px;font-weight:700}
+.fx-pl-in.fx-dt .fx-go{max-width:none;margin-top:16px}
+
 /* v0.80 FORM: Kendime iyi bak sportif koyu tema */
 html[data-mf="dusk"] body.fit-on{--bg:#0A0C10;--surface:#15181E;--ink:#F2F5F7;--muted:#8D97A3;--line:#262B33;--mint:#1B2A12;--mint-d:#C8FF3C;--sky:#0F2733;--sky-d:#39D0FF;--peach:#2E1712;--peach-d:#FF7A5C;--lilac:#1E1A33;--lilac-d:#B9A2FF;--butter:#2A2410;--butter-d:#FFC94A;--pink:#2D1424;--pink-d:#FF6FB5;
  background:radial-gradient(90% 40% at 85% -5%,rgba(200,255,60,.14),transparent 60%),radial-gradient(70% 35% at 0% 10%,rgba(57,208,255,.10),transparent 60%),#0A0C10!important;background-attachment:scroll!important}
@@ -20100,6 +20124,122 @@ setInterval(()=>{try{if(step===50&&ftab==="food"&&fit().fast&&fit().fast.s&&!doc
   else if(prev!==null){if(step===9||step===10){if(typeof _lvPrev!=="undefined"&&_lvPrev==="dusk")_lvPrev=prev;}else R.dataset.mf=prev;prev=null;}
  }catch(e){}return r;};})();
 document.addEventListener("keydown",e=>{const O=document.getElementById("fx-pl");if(!O||O.hidden)return;if(e.key==="Escape")fxClose();if(e.key===" "){e.preventDefault();fxPlay();}});
+
+/* ===== v0.81 FORM finali: hareket çizimleri (canlı figür), hareket hedefi, haftalık özet, diyet tarzları ===== */
+/* poz: [hx,hy,t,c,h, farLeg[th,sh], nearLeg[th,sh], farArm[up,fo], nearArm[up,fo]]  açı: 0=aşağı, 90=ileri(sağ), 180=yukarı */
+const FG={
+ stand:{d:3200,k:[[100,104,0,0,0,[0,0],[0,0],[6,3],[-6,-3]],[100,103,0,0,0,[0,0],[0,0],[9,5],[-9,-5]]]},
+ breath:{d:8000,k:[[100,104,0,0,0,[0,0],[0,0],[8,6],[-8,-6]],[100,103,-3,0,-8,[0,0],[0,0],[165,175],[-165,-175]]]},
+ walk:{d:1100,k:[[100,107,2,0,0,[-22,-40],[24,6],[22,40],[-22,-12]],[100,104,2,0,0,[0,-8],[0,-5],[0,8],[0,6]],[100,107,2,0,0,[24,6],[-22,-40],[-22,-12],[22,40]],[100,104,2,0,0,[0,-5],[0,-8],[0,6],[0,8]]]},
+ run:{d:700,k:[[100,100,10,0,0,[-35,-95],[50,8],[45,135],[-45,40]],[100,96,10,0,0,[10,-60],[10,-30],[0,90],[0,90]],[100,100,10,0,0,[50,8],[-35,-95],[-45,40],[45,135]],[100,96,10,0,0,[10,-30],[10,-60],[0,90],[0,90]]]},
+ knee:{d:700,k:[[100,104,0,0,0,[0,0],[95,0],[40,130],[-40,40]],[100,100,0,0,0,[0,0],[0,0],[0,90],[0,90]],[100,104,0,0,0,[95,0],[0,0],[-40,40],[40,130]],[100,100,0,0,0,[0,0],[0,0],[0,90],[0,90]]]},
+ jack:{d:900,f:1,k:[[100,104,0,0,0,[-4,-4],[4,4],[-12,-8],[12,8]],[100,108,0,0,0,[-24,-24],[24,24],[-165,-172],[165,172]]]},
+ squat:{d:2200,k:[[100,104,0,0,0,[0,0],[0,0],[85,90],[85,90]],[86,138,38,0,0,[82,-22],[84,-20],[88,92],[88,92]]]},
+ lunge:{d:2400,k:[[100,104,0,0,0,[-8,-8],[8,8],[12,6],[-12,-6]],[100,140,0,0,0,[-14,-82],[86,2],[12,6],[-12,-6]]]},
+ push:{d:2000,k:[[110,135,-80,0,0,[60,60],[61,61],[0,0],[2,2]],[110,152,-86,0,0,[66,66],[67,67],[62,-32],[64,-30]]]},
+ plank:{d:3000,k:[[110,148,-82,0,0,[70,70],[71,71],[2,-88],[0,-88]],[110,145,-83,0,-4,[70,70],[71,71],[2,-88],[0,-88]]]},
+ side:{d:2600,k:[[105,138,-70,0,0,[69,69],[71,71],[0,0],[178,180]],[105,150,-74,0,0,[73,73],[75,75],[0,0],[178,180]]]},
+ climb:{d:800,k:[[110,135,-80,0,0,[60,60],[-50,40],[0,0],[2,2]],[110,135,-80,0,0,[-50,40],[60,60],[0,0],[2,2]]]},
+ burpee:{d:3200,k:[[100,104,0,0,0,[0,0],[0,0],[6,3],[-6,-3]],[88,142,55,0,0,[80,-25],[82,-23],[20,0],[22,0]],[110,135,-80,0,0,[60,60],[61,61],[0,0],[2,2]],[88,142,55,0,0,[80,-25],[82,-23],[20,0],[22,0]],[100,98,0,0,0,[0,0],[0,0],[170,178],[-170,-178]]]},
+ bridge:{d:2400,k:[[112,175,-87,0,0,[120,8],[122,10],[86,86],[88,88]],[112,150,-120,0,0,[100,5],[102,6],[86,86],[88,88]]]},
+ catcow:{d:3600,k:[[130,144,-76,9,-25,[0,90],[0,90],[0,0],[0,0]],[130,144,-76,-8,22,[0,90],[0,90],[0,0],[0,0]]]},
+ bug:{d:2400,k:[[120,172,-90,0,0,[180,90],[180,90],[180,180],[180,180]],[120,172,-90,0,0,[100,96],[180,90],[180,180],[-96,-96]],[120,172,-90,0,0,[180,90],[180,90],[180,180],[180,180]],[120,172,-90,0,0,[180,90],[100,96],[-96,-96],[180,180]]]},
+ bike:{d:1500,k:[[120,172,-72,0,0,[150,70],[100,98],[-150,120],[-150,120]],[120,172,-72,0,0,[100,98],[150,70],[-150,120],[-150,120]]]},
+ superman:{d:2600,k:[[110,174,-90,0,0,[90,90],[91,91],[-90,-90],[-91,-91]],[110,172,-80,0,-10,[80,80],[81,81],[-104,-104],[-105,-105]]]},
+ child:{d:4200,k:[[118,152,-111,0,0,[-50,90],[-48,90],[-90,-90],[-88,-88]],[118,148,-104,0,-6,[-46,90],[-44,90],[-94,-94],[-92,-92]]]},
+ fold:{d:4000,k:[[100,104,0,0,0,[0,0],[0,0],[170,178],[-170,-178]],[100,104,112,0,0,[0,0],[0,0],[25,25],[23,23]]]},
+ hip:{d:2600,f:1,k:[[90,112,-6,0,0,[-14,-28],[34,26],[-30,-20],[30,20]],[110,112,6,0,0,[-34,-26],[14,28],[-30,-20],[30,20]]]},
+ arms:{d:1800,f:1,k:[[100,104,0,0,0,[-4,-4],[4,4],[-10,-10],[10,10]],[100,104,0,0,0,[-4,-4],[4,4],[-95,-95],[95,95]],[100,104,0,0,0,[-4,-4],[4,4],[-180,-180],[180,180]],[100,104,0,0,0,[-4,-4],[4,4],[-265,-265],[265,265]],[100,104,0,0,0,[-4,-4],[4,4],[-350,-350],[350,350]]]},
+ neck:{d:3200,k:[[100,104,0,0,-20,[0,0],[0,0],[6,3],[-6,-3]],[100,104,0,0,20,[0,0],[0,0],[6,3],[-6,-3]]]},
+ chest:{d:3000,k:[[100,104,0,0,0,[0,0],[0,0],[8,4],[-8,-4]],[100,104,-6,0,-12,[0,0],[0,0],[-38,-30],[-40,-32]]]}};
+const FG_MAP={"Yerinde hafif koşu":"run","Yerinde koşu":"run","Jumping jack":"jack","Yüksek diz":"knee","Squat":"squat","Dağcı":"climb","Kolay burpee":"burpee","Squat + Dağcı":"burpee",
+ "Yürüyerek soğu":"walk","Rahat yürüyüş":"walk","Tempolu yürüyüş":"walk","Hızlı yürüyüş":"walk","Yavaş yürüyüş":"walk","Yürü ve nefeslen":"walk","Kol ve kalça çevirme":"arms","Şınav":"push","Lunge":"lunge","Köprü":"bridge","Plank":"plank",
+ "Kedi-inek":"catcow","Ölü böcek":"bug","Yan plank (sağ)":"side","Yan plank (sol)":"side","Bisiklet mekik":"bike","Süperman":"superman","Boyun çevirme":"neck","Omuz çevirme":"arms","Göğüs açma":"chest","Kalça açma":"hip",
+ "Arka bacak esnetme":"fold","Çocuk pozu":"child","Derin nefes":"breath","Dinlen":"stand"};
+const fgR=a=>a*Math.PI/180;
+function fgPose(P){const [hx,hy,t,c,h,fl,nl,fa,na]=P;const H=[hx,hy],S=[hx+50*Math.sin(fgR(t)),hy-50*Math.cos(fgR(t))];
+ const nk=fgR(t+h),N=[S[0]+15*Math.sin(nk),S[1]-15*Math.cos(nk)];
+ const lim=(o,a,L1,L2)=>{const k=[o[0]+L1*Math.sin(fgR(a[0])),o[1]+L1*Math.cos(fgR(a[0]))];return [o,k,[k[0]+L2*Math.sin(fgR(a[1])),k[1]+L2*Math.cos(fgR(a[1]))]];};
+ const mx=(H[0]+S[0])/2,my=(H[1]+S[1])/2,dx=S[0]-H[0],dy=S[1]-H[1],ln=Math.hypot(dx,dy)||1,cp=[mx+(-dy/ln)*c*(dx>=0?1:-1)*-1,my+(dx/ln)*c*(dx>=0?1:-1)*-1];
+ const ss=[S[0]+(H[0]-S[0])*.06,S[1]+(H[1]-S[1])*.06];
+ return {H,S,N,cp,fl:lim(H,fl,38,38),nl:lim(H,nl,38,38),fa:lim(ss,fa,27,26),na:lim(ss,na,27,26)};}
+const fgL=p=>`M${p[0][0].toFixed(1)} ${p[0][1].toFixed(1)}L${p[1][0].toFixed(1)} ${p[1][1].toFixed(1)}L${p[2][0].toFixed(1)} ${p[2][1].toFixed(1)}`;
+function fgLerp(a,b,u){return a.map((x,i)=>Array.isArray(x)?x.map((y,j)=>y+(b[i][j]-y)*u):x+(b[i]-x)*u);}
+function fgAt(type,ms){const F=FG[type]||FG.stand,n=F.k.length,ph=((((ms||0)%F.d)+F.d)%F.d)/F.d*n,i=Math.floor(ph),u=ph-i,e=.5-Math.cos(u*Math.PI)/2;return fgLerp(F.k[i%n],F.k[(i+1)%n],e);}
+function fgSVG(id){return `<svg class="fx-fig" viewBox="0 0 200 200" aria-hidden="true"><defs><linearGradient id="${id}g" gradientUnits="userSpaceOnUse" x1="40" y1="20" x2="170" y2="190"><stop offset="0" stop-color="var(--g1)"/><stop offset="1" stop-color="var(--g2)"/></linearGradient></defs>
+ <ellipse cx="100" cy="186" rx="70" ry="5" fill="rgba(255,255,255,.07)"/><g fill="none" stroke-linecap="round" stroke-linejoin="round">
+ <path class="fl" stroke="#fff" stroke-opacity=".32" stroke-width="9"/><path class="fa" stroke="#fff" stroke-opacity=".32" stroke-width="8"/>
+ <path class="tr" stroke="url(#${id}g)" stroke-width="13"/><path class="nl" stroke="url(#${id}g)" stroke-width="10"/><path class="na" stroke="#fff" stroke-width="8"/></g><circle class="hd" r="11" fill="#fff"/></svg>`;}
+function fgDraw(svg,type,ms){const p=fgPose(fgAt(type,ms)),q=s=>svg.querySelector(s);if(!q(".tr"))return;
+ q(".fl").setAttribute("d",fgL(p.fl));q(".nl").setAttribute("d",fgL(p.nl));q(".fa").setAttribute("d",fgL(p.fa));q(".na").setAttribute("d",fgL(p.na));
+ q(".tr").setAttribute("d",`M${p.H[0].toFixed(1)} ${p.H[1].toFixed(1)}Q${p.cp[0].toFixed(1)} ${p.cp[1].toFixed(1)} ${p.S[0].toFixed(1)} ${p.S[1].toFixed(1)}`);
+ const hd=q(".hd");hd.setAttribute("cx",p.N[0].toFixed(1));hd.setAttribute("cy",p.N[1].toFixed(1));}
+let FG_RAF=0;
+function fgLoop(){cancelAnimationFrame(FG_RAF);const t0=performance.now();const tick=now=>{const O=document.getElementById("fx-pl");if(!O||O.hidden)return;
+  const sv=O.querySelector(".fx-fig");if(sv){const x=FXP.p&&FXP.p.s[FXP.i];const ty=x?(FG_MAP[x.n]||(x.ph==="DİNLEN"?"stand":"stand")):"stand";fgDraw(sv,FXP.run||!FXP.el?ty:ty,FXP.run?now-t0:(FXP._fr||0));if(FXP.run)FXP._fr=now-t0;}
+  FG_RAF=requestAnimationFrame(tick);};FG_RAF=requestAnimationFrame(tick);}
+/* oynatıcıya figürü ekle */
+(function(){const _p=fxPaint;fxPaint=function(full){const O=document.getElementById("fx-pl");const had=O&&O.querySelector(".fx-ring");_p.apply(this,arguments);try{
+  if(!O||O.hidden)return;const rg=O.querySelector(".fx-ring");if(rg&&!rg.querySelector(".fx-figw")){rg.insertAdjacentHTML("beforeend",`<div class="fx-figw">${fgSVG("fxf")}</div>`);rg.classList.add("has-fig");fgLoop();}
+ }catch(e){console.error(e);}};})();
+(function(){const _o=fxOpen;fxOpen=function(id){FXP._fr=0;_o.apply(this,arguments);};})();
+/* program kartlarında hareket listesi önizlemesi */
+function fxMoves(p){const seen=[];p.s.forEach(x=>{if(x.ph==="ÇALIŞ"&&!seen.includes(x.n))seen.push(x.n);});return seen;}
+/* ---- hareket hedefi ---- */
+const fxMG=()=>+(fit().p.mg||30);
+(function(){const _s=fxStreak;fxStreak=function(){const F=fit(),g=fxMG();let n=0;const d=new Date();const m=x=>x?x.a.reduce((a,y)=>a+y.min,0):0;
+  if(m(F.d[dkey(d)])<g)d.setDate(d.getDate()-1);while(m(F.d[dkey(d)])>=g&&n<400){n++;d.setDate(d.getDate()-1);}return n;};})();
+(function(){const _h=fxHero;fxHero=function(){_h.apply(this,arguments);try{const X=document.querySelector(".fx-hero");if(!X)return;const F=fit(),g=fxMG(),D=fday();const mins=D.a.reduce((a,x)=>a+x.min,0);
+  const c2=X.querySelector(".fx-leg .c2 b");if(c2)c2.innerHTML=`${mins}<i>/${g} dk</i>`;
+  const T=fTarget(),kin=D.m.reduce((a,m)=>a+m.k,0),r1=F.p.hide?D.m.length/4:kin/(T?T.t:2000);const r=X.querySelector(".fx-r3");if(r)r.outerHTML=fxRing3([r1,mins/g,D.w/8]);
+  let wm=0,wk=0,wn=0;const ws=X.querySelectorAll(".fx-wk i");for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);const x=F.d[dkey(d)];const m=x?x.a.reduce((a,y)=>a+y.min,0):0;wm+=m;wk+=x?x.a.reduce((a,y)=>a+y.k,0):0;wn+=x?x.a.length:0;
+   const el=ws[6-i];if(el){el.classList.toggle("ok",m>=g);const b=el.querySelector("b");if(b)b.style.height=Math.max(6,Math.min(100,m/(g*1.5)*100))+"%";}}
+  let sm=X.querySelector(".fx-wsum");if(!sm){sm=document.createElement("div");sm.className="fx-wsum";X.querySelector(".fx-wk").after(sm);}
+  sm.innerHTML=`<span><b>${wn}</b>aktivite</span><span><b>${wm}</b>dakika</span><span><b>${F.p.hide?"—":"≈"+wk}</b>${F.p.hide?"":"kcal"}</span><small>son 7 gün</small>`;
+ }catch(e){console.error(e);}};})();
+function fxGoalHTML(){const p=fit().p,g=fxMG();return `<div class="fx-sh"><h3>Günlük hareket hedefin</h3><small>Halkan ve serin buna göre dolar</small></div>
+ <div class="fx-fp fx-mg">${[[20,"Hafif"],[30,"Önerilen"],[45,"Aktif"],[60,"Sporcu"]].map(([m,l])=>`<button type="button" data-fxmg="${m}" aria-pressed="${g===m}"><b>${m}<i> dk</i></b><small>${l}</small></button>`).join("")}</div>
+ <p class="fx-fine">Dünya Sağlık Örgütü yetişkinlere haftada en az 150 dakika orta tempolu hareket öneriyor; bu da günde yaklaşık 20–30 dakika.</p>`;}
+/* ---- diyet tarzları ---- */
+const FX_DIET=[
+ {id:"akdeniz",n:"Akdeniz",s:"Zeytinyağı, sebze, balık",g:["#2EE6A6","#14A3C7"],
+  d:"Dünyada en çok araştırılan ve en sürdürülebilir beslenme düzenlerinden biri. Yasak yok; bol sebze, zeytinyağı, baklagil ve balık var.",
+  r:["Her öğünde sebze ya da salata","Ana yağın zeytinyağı olsun","Haftada en az 2 kez balık","Kırmızı eti ayda birkaç kezle sınırla"],
+  o:[["Kahvaltı","Beyaz peynir, zeytin, domates, salatalık, tam buğday ekmek"],["Öğle","Zeytinyağlı taze fasulye, yoğurt, bulgur pilavı"],["Akşam","Izgara levrek, roka salatası"],["Ara","Bir avuç ceviz ve mevsim meyvesi"]]},
+ {id:"protein",n:"Yüksek protein",s:"Tok tutar, kası korur",g:["#C8FF3C","#5BD35B"],
+  d:"Antrenman yapanlar ve kilo verirken kasını korumak isteyenler için. Protein uzun süre tok tutar.",
+  r:["Her öğünde bir avuç protein","Kilo başına yaklaşık 1,2–1,6 g protein hedefle","Yanına mutlaka sebze ekle","Böbrek sorunun varsa doktoruna danış"],
+  o:[["Kahvaltı","2 yumurtalı menemen, lor peyniri"],["Öğle","Tavuk şiş, cacık, çoban salata"],["Akşam","Kırmızı mercimek çorbası, köfte, közlenmiş sebze"],["Ara","Kefir ya da süzme yoğurt"]]},
+ {id:"denge",n:"Dengeli tabak",s:"Yarım sebze, çeyrek protein",g:["#FFB547","#FF7A1A"],
+  d:"Kalori saymadan dengede kalmanın en kolay yolu: tabağın yarısı sebze, çeyreği protein, çeyreği tahıl.",
+  r:["Tabağın yarısı sebze","Çeyreği protein, çeyreği tahıl","Su, ayran ya da şekersiz çay iç","Yavaş ye, 20 dakika ver"],
+  o:[["Kahvaltı","Yumurta, peynir, bol yeşillik, 1 dilim ekmek"],["Öğle","Etli nohut, bulgur pilavı, salata"],["Akşam","Fırın tavuk, mevsim sebzesi, yoğurt"],["Ara","Elma ve 10 badem"]]},
+ {id:"bitki",n:"Bitkisel ağırlıklı",s:"Baklagil ve tam tahıl",g:["#39D0FF","#5B7BFF"],
+  d:"Eti azaltıp baklagil, tahıl, sebze ve kuruyemişi öne çıkarır. Türk mutfağı bunun için çok zengin.",
+  r:["Günde en az bir baklagil yemeği","Tam tahılı tercih et","B12 ve demir için dikkatli ol","Yağlı tohum ve kuruyemiş ekle"],
+  o:[["Kahvaltı","Yulaf, ceviz, muz, tahin"],["Öğle","Zeytinyağlı barbunya, bulgur, turşu"],["Akşam","Mercimek köftesi, marul, nar ekşisi"],["Ara","Humus ve havuç"]]},
+ {id:"seker",n:"Düşük şeker",s:"Enerji iniş çıkışına son",g:["#9B7BFF","#FF4FD8"],
+  d:"Eklenmiş şekeri ve beyaz unu azaltır; kan şekerini dengede tutup ani acıkmaları önler.",
+  r:["Şekerli içecekleri bırak","Beyaz yerine tam tahıl seç","Tatlıyı yemeğin hemen ardından ye","Meyveyi suyu yerine bütün ye"],
+  o:[["Kahvaltı","Peynirli omlet, yeşillik, ceviz"],["Öğle","Izgara köfte, piyaz"],["Akşam","Fırında sebzeli somon"],["Ara","Tarçınlı yoğurt"]]}];
+function fxDietHTML(){return `<div class="fx-sh"><h3>Beslenme tarzları</h3><small>Sana uyanı seç, örnek bir günü gör</small></div>
+ <div class="fx-rail fx-drail">${FX_DIET.map(d=>`<button type="button" class="fx-dc" data-fxd="${d.id}" style="--g1:${d.g[0]};--g2:${d.g[1]}"><span class="fx-dd"></span><b>${d.n}</b><small>${d.s}</small><em>Örnek gün →</em></button>`).join("")}</div>`;}
+function fxDietOpen(id){const d=FX_DIET.find(x=>x.id===id);if(!d)return;let O=document.getElementById("fx-pl");if(!O){O=document.createElement("div");O.id="fx-pl";O.setAttribute("role","dialog");O.setAttribute("aria-modal","true");document.body.appendChild(O);}
+ O.style.setProperty("--g1",d.g[0]);O.style.setProperty("--g2",d.g[1]);O.hidden=false;document.body.classList.add("fx-lock");
+ O.innerHTML=`<div class="fx-pl-in fx-dt"><div class="fx-pt"><button type="button" class="fx-x" aria-label="Kapat">✕</button><span>Beslenme tarzı</span></div>
+  <div class="fx-dh"><small>BESLENME</small><h2>${d.n}</h2><p>${d.d}</p></div>
+  <h4>4 temel kural</h4><ol class="fx-dr">${d.r.map(x=>`<li>${x}</li>`).join("")}</ol>
+  <h4>Örnek bir gün</h4><div class="fx-do">${d.o.map(([a,b])=>`<div><small>${a}</small><b>${b}</b></div>`).join("")}</div>
+  <p class="fx-fine">Genel bilgidir; özel bir sağlık durumun varsa diyetisyenine danış.</p>
+  <button type="button" class="fx-go" id="fx-dok">Tamam</button></div>`;
+ O.querySelector(".fx-x").onclick=fxClose;O.querySelector("#fx-dok").onclick=fxClose;}
+/* ---- bağla ---- */
+(function(){const _f=fitRender;fitRender=function(){_f.apply(this,arguments);try{
+  const gp=document.querySelector('[data-fp="goal"]');if(gp){let c=document.getElementById("fx-goal");if(!c){c=document.createElement("div");c.id="fx-goal";c.className="lcard fx-card";gp.prepend(c);}c.innerHTML=fxGoalHTML();
+   c.querySelectorAll("[data-fxmg]").forEach(b=>b.onclick=()=>{fit().p.mg=+b.dataset.fxmg;fsave();fitRender();});}
+  const fp=document.querySelector('[data-fp="food"]');if(fp&&!document.getElementById("fx-diet")){const c=document.createElement("div");c.id="fx-diet";c.className="fx-progs";c.innerHTML=fxDietHTML();const fa=document.getElementById("fx-fast");(fa?fa.after(c):fp.prepend(c));c.querySelectorAll("[data-fxd]").forEach(b=>b.onclick=()=>fxDietOpen(b.dataset.fxd));}
+  document.querySelectorAll(".fx-pc").forEach(b=>{if(b.querySelector(".fx-pmv"))return;const p=FX_PROG.find(x=>x.id===b.dataset.fxp);if(!p)return;const mv=fxMoves(p);b.querySelector("small").insertAdjacentHTML("afterend",`<span class="fx-pmv">${mv.slice(0,4).join(" · ")}${mv.length>4?` +${mv.length-4}`:""}</span>`);});
+ }catch(e){console.error(e);}};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
