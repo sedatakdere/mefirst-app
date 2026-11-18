@@ -14938,7 +14938,7 @@ async function trLoad(force){let C=null;try{C=JSON.parse(localStorage.getItem("m
  const R=await sbGet(`polaroid_feed?select=id,user_id,book_key,book_title,book_author,body,hearts,created_at,name,like_count,reply_count&created_at=gte.${encodeURIComponent(since)}&order=created_at.desc&limit=400`);
  if(!Array.isArray(R)){if(C)Object.assign(SB_TR,C);return SB_TR;}
  const T=trCalc(R);if(T.pols.length){const ids=T.pols.map(p=>p.id).join(",");let im=await sbGet(`polaroid_feed?select=id,photo,avatar&id=in.(${ids})`);if(!Array.isArray(im))im=await sbGet(`polaroid_feed?select=id,avatar&id=in.(${ids})`);
-  if(Array.isArray(im))T.pols.forEach(p=>{const m=im.find(x=>x.id===p.id);if(m)p.img=m.photo||m.avatar||"";});}
+  if(Array.isArray(im))T.pols.forEach(p=>{const m=im.find(x=>x.id===p.id);if(m){p.ph=m.photo||"";p.av=m.avatar||"";p.img=p.ph||p.av;}});}
  const O={at:Date.now(),books:T.books,pol:T.pols[0]||null,pols:T.pols};try{localStorage.setItem("mf-trend",JSON.stringify(O));}catch(e){try{(O.pols||[]).forEach(p=>p.img="");localStorage.setItem("mf-trend",JSON.stringify(O));}catch(_){}}
  Object.assign(SB_TR,O);return SB_TR;}
 function trCol(t){let h=2166136261;for(const c of (t||""))h=Math.imul(h^c.charCodeAt(0),16777619)>>>0;const P=[["#7A2E3A","#C2546A"],["#2E4A6B","#5E86B8"],["#3E5A3A","#7A9A5A"],["#5A3A6B","#9A6ABF"],["#8A4A1E","#D08A4A"],["#1E4A4A","#3E8A82"],["#6B2E1E","#B85A3A"],["#2A2A4A","#5A5A9A"]];return P[(h>>>5)%P.length];}
@@ -20492,6 +20492,14 @@ mfGenderApply();
    el.querySelectorAll("[data-rp]").forEach(b=>b.onclick=()=>mfReplay(+b.dataset.rp));mfGenderApply();
  }catch(e){console.error(e);}};})();
 mfReplay=function(full){try{if(full){onbOpen();return;}step=30;show();const root=document.querySelector('.prof[data-step="30"]');if(root&&root.classList.contains("tn")){tnI=0;tnRender();}else{mwI=0;mwRender();}mwTop();}catch(e){console.error(e);}};
+
+/* ===== v0.88.1 "Okurlar bunu konuşuyor": profil fotoğrafı değişince eski foto kalmasın ===== */
+try{if(localStorage.getItem("mf-trend-v")!=="2"){localStorage.removeItem("mf-trend");localStorage.setItem("mf-trend-v","2");}}catch(e){}
+(function(){const _r=sbReq;sbReq=async function(method,path){const r=await _r.apply(this,arguments);try{if(method!=="GET"&&/^profiles/.test(path||"")){localStorage.removeItem("mf-trend");SB_TR.at=0;}}catch(e){}return r;};})();
+(function(){const _h=trHome;trHome=function(){try{const me=(sbSess()||{}).uid,P=sbPublic();const usePh=!!(P&&P.photo);
+  (SB_TR.pols||[]).forEach(q=>{if(me&&q.user_id===me&&!q.ph){q.img=(usePh&&PH.me)?PH.me:(q.av||"");}});
+  if(SB_TR.pol&&me&&SB_TR.pol.user_id===me&&!SB_TR.pol.ph)SB_TR.pol.img=(usePh&&PH.me)?PH.me:(SB_TR.pol.av||"");}catch(e){}
+ return _h.apply(this,arguments);};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
