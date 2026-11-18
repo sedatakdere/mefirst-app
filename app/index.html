@@ -7947,6 +7947,68 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.97 Karşılama: marka gecesi — gece moru + mercan kalp ışığı */
+.onb{--ob-bg:#1E1129;--ob-ink:#F7EEF6;--ob-mut:#BBA8CB;--ob-co1:#FFB08F;--ob-co2:#FF8A6B;--ob-co3:#F2635A;--ob-dk:#2A173B;
+ --bg:#1E1129;--ink:#F7EEF6;--muted:#BBA8CB;--pink-d:#FF8A6B;color:var(--ob-ink);color-scheme:dark}
+.onb:has(.ob2){background:#1E1129!important}
+.onb .ob2-bg{background:radial-gradient(120% 70% at 50% -10%,#4E2D66 0%,transparent 60%),radial-gradient(90% 50% at 50% 110%,rgba(255,138,107,.22),transparent 65%),linear-gradient(180deg,#2A173B,#1E1129 70%)!important}
+.onb .ob2-bg i{opacity:.32!important;filter:blur(50px)}
+.onb .ob2-bg i:nth-child(1){background:#7A4A9E!important}.onb .ob2-bg i:nth-child(2){background:#FF8A6B!important;opacity:.18!important}.onb .ob2-bg i:nth-child(3){background:#5B3A8A!important}
+.onb .ob2-top{background:transparent!important;border:0!important;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.onb .ob2-back,.onb .ob2-skip{background:rgba(255,255,255,.07)!important;color:var(--ob-ink)!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)!important}
+.onb .ob2-prog i{background:rgba(255,255,255,.1)!important}
+.onb .ob2-prog i.on,.onb .ob2-prog i.cur::after{background:linear-gradient(90deg,var(--ob-co1),var(--ob-co3))!important;box-shadow:0 0 10px rgba(255,138,107,.45)}
+.onb .ob2-eye{color:var(--ob-co1)!important;opacity:.9!important}
+.onb .ob2-t{color:#FFF6FA!important}.onb .ob2-sub{color:var(--ob-mut);opacity:1!important}
+.onb .ob2-foot{background:linear-gradient(180deg,rgba(30,17,41,0),#1E1129 45%)!important}
+.onb .ob2-go,.onb .ob2-kadd button{background:linear-gradient(135deg,var(--ob-co1),var(--ob-co2) 50%,var(--ob-co3))!important;color:var(--ob-dk)!important;box-shadow:0 16px 30px -14px rgba(255,110,90,.75),inset 0 1px 0 rgba(255,255,255,.45)!important}
+.onb .ob2-card,.onb .ob2-tile,.onb .ob2-box,.onb .ob2-zod{background:rgba(255,255,255,.055)!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.09)!important;color:var(--ob-ink)!important;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.onb .ob2-card[aria-pressed=true],.onb .ob2-tile[aria-pressed=true]{background:linear-gradient(160deg,rgba(255,138,107,.16),rgba(255,138,107,.04))!important;box-shadow:inset 0 0 0 1.5px var(--ob-co2),0 14px 30px -18px rgba(255,110,90,.8)!important}
+.onb .ob2-chk{background:rgba(255,255,255,.08)!important}
+.onb [aria-pressed=true] .ob2-chk{background:linear-gradient(135deg,var(--ob-co1),var(--ob-co3))!important;color:var(--ob-dk)!important}
+.onb .ob2-card small,.onb .ob2-tile small,.onb .ob2-bh small{color:var(--ob-mut);opacity:1!important}
+.onb .ob2-ic svg,.onb .ob2-ic .ob-ic{filter:drop-shadow(0 8px 14px rgba(0,0,0,.35))!important}
+.onb .ob2-chip,.onb .ob2-seg button{background:rgba(255,255,255,.055)!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)!important;color:var(--ob-ink)!important}
+.onb .ob2-chip[aria-pressed=true],.onb .ob2-seg button[aria-pressed=true]{background:linear-gradient(135deg,var(--ob-co1),var(--ob-co2) 55%,var(--ob-co3))!important;color:var(--ob-dk)!important;box-shadow:0 10px 20px -12px rgba(255,110,90,.8)!important}
+.onb .ob2-grp h4,.onb .ob2-f span{color:var(--ob-mut);opacity:1!important}
+.onb .ob2-sel select,.onb .ob2-f input,.onb .ob2-in,.onb .ob2-kadd input,.onb .ob2-kadd select{background:rgba(255,255,255,.06)!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)!important;color:var(--ob-ink)!important}
+.onb .ob2-sel select option{background:#2A173B;color:#F7EEF6}
+.onb .ob2-sel select:focus,.onb .ob2-f input:focus,.onb .ob2-in:focus,.onb .ob2-kadd input:focus{box-shadow:inset 0 0 0 1.5px var(--ob-co2),0 0 0 4px rgba(255,138,107,.15)!important}
+.onb input::placeholder{color:rgba(247,238,246,.4)}
+.onb .ob2-ph{background:radial-gradient(circle at 50% 35%,rgba(255,176,143,.22),rgba(78,45,102,.6))!important;background-size:cover!important;background-position:center!important;color:var(--ob-co1)!important;box-shadow:0 0 0 3px rgba(255,255,255,.08),0 0 0 6px rgba(255,138,107,.25),0 18px 34px -16px rgba(255,110,90,.6)!important}
+.onb .ob2-ph i{background:linear-gradient(135deg,var(--ob-co1),var(--ob-co3))!important;color:var(--ob-dk)!important;box-shadow:0 0 0 3px #2A173B!important}
+.onb .ob2-zod.on{background:linear-gradient(135deg,rgba(255,138,107,.14),rgba(122,74,158,.18))!important}
+.onb .ob2-zod b{background:rgba(255,255,255,.08)!important;color:var(--ob-co1)!important;box-shadow:none!important}
+.onb .ob2-kids span{background:rgba(255,255,255,.08)!important;color:var(--ob-ink)}
+.onb .ob-cins button{background:rgba(255,255,255,.055)!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)!important;color:var(--ob-ink)!important;padding:12px 4px 10px!important;gap:6px!important}
+.onb .ob-cins button[aria-checked="true"]{background:linear-gradient(160deg,rgba(255,138,107,.2),rgba(255,138,107,.05))!important;box-shadow:inset 0 0 0 1.5px var(--ob-co2)!important;color:#FFF6FA!important}
+.onb .ob-cic{display:grid;place-items:center;width:30px;height:30px;color:var(--ob-co1)}.onb .ob-cic svg{width:24px;height:24px}
+.onb .ob-cins button[aria-checked="true"] .ob-cic{color:var(--ob-co2);filter:drop-shadow(0 0 6px rgba(255,138,107,.6))}
+/* giriş ve bitiş sahnesi: gece göğü, mercan ufuk, kalp ışığı */
+.onb .ob2-hero{background:#1E1129!important}
+.onb .ob2-hero .ob-scene .sky-bg{background:radial-gradient(70% 45% at 50% 100%,rgba(255,138,107,.42),rgba(242,99,90,.12) 45%,transparent 75%),radial-gradient(90% 60% at 80% 0%,rgba(122,74,158,.55),transparent 60%),linear-gradient(180deg,#22132F 0%,#2E1A40 45%,#3A2350 75%,#4A2A55 100%)!important}
+.onb .ob2-hero .ob-scene .sky-aur{opacity:.35!important;filter:hue-rotate(0)!important}
+.onb .ob2-hero .ob-scene .cl{display:none!important}
+.onb .ob2-hero .ob-scene .ob-cel.sun{display:none!important}
+.onb .ob2-hero .ob-scene .hills path:first-child{fill:#5B3A70!important;opacity:.55!important}
+.onb .ob2-hero .ob-scene .hills path:last-child{fill:#1E1129!important}
+.onb .ob-mst{position:absolute;inset:0;pointer-events:none}
+.onb .ob-mst i{position:absolute;width:2px;height:2px;border-radius:50%;background:#FFF4EC;box-shadow:0 0 6px rgba(255,240,230,.9);animation:obTw 3.6s ease-in-out infinite}
+@keyframes obTw{0%,100%{opacity:.25}50%{opacity:1}}
+.onb .ob-heart{position:absolute;left:50%;top:calc(env(safe-area-inset-top,0px) + 70px);width:min(72vw,320px);aspect-ratio:1;transform:translateX(-50%);pointer-events:none;opacity:.55;filter:blur(1px);animation:obHb 5s ease-in-out infinite}
+.onb .obs-done .ob-heart{top:calc(env(safe-area-inset-top,0px) + 24px);left:72%;width:min(56vw,250px);opacity:.38}
+@keyframes obHb{0%,100%{transform:translateX(-50%) scale(1);opacity:.5}50%{transform:translateX(-50%) scale(1.04);opacity:.65}}
+.onb .ob2-wel{color:#FFF6FA!important}
+.onb .ob2-wel .ob-big{color:#FFF6FA!important;text-shadow:0 4px 30px rgba(30,17,41,.6)}
+.onb .ob2-wel .ob-big em{font-style:italic;background:linear-gradient(135deg,#FFD2BD,var(--ob-co2) 55%,var(--ob-co3));-webkit-background-clip:text;background-clip:text;color:transparent!important;padding-right:6px}
+.onb .ob2-wel .ob2-lead{color:#E3D3EA;opacity:1!important}
+.onb .ob2-wel .ob2-ghost{color:#E3D3EA}
+.onb .ob2-wel .ob2-fine{color:#BBA8CB;opacity:.8!important}
+.onb .ob2-wel .wm-me{color:var(--ob-co2)!important}.onb .ob2-wel .wm-first{color:#FFF6FA!important}
+.onb .ob2-av{background:linear-gradient(135deg,var(--ob-co1),var(--ob-co3))!important;background-size:cover!important;background-position:center!important;color:var(--ob-dk)!important;box-shadow:0 0 0 4px rgba(255,255,255,.12),0 0 40px -6px rgba(255,138,107,.7)!important}
+.onb .ob2-tags span{background:rgba(255,255,255,.1)!important;color:#FFF6FA!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)!important}
+
+
 /* v0.96 MABET — Manifest Me: gece ormanı, ahşap, mum ışığı */
 body.mb-on{--bg:#0C0806;--surface:#1A120D;--ink:#F3E6D3;--muted:#AE977D;--line:rgba(232,180,110,.16);
  --lilac:#272030;--lilac-d:#CDB8F0;--pink:#2E1D1B;--pink-d:#F2A98A;--butter:#2B2114;--butter-d:#E8B464;--peach:#2F1E17;--peach-d:#F0A070;--mint:#1B2519;--mint-d:#AFCB9F;--sky:#18202A;--sky-d:#A9C2DA;
@@ -14650,7 +14712,7 @@ function ygRender(){const P=document.getElementById("pr-yoga");if(!P)return;cons
  document.getElementById("rit-int").textContent="Bedenine birkaç dakika ayır; nefesin rehberin.";document.getElementById("rit-prog").innerHTML="";
  if(!ygCur){const dn=(X.ygDone||{})[k]||[];
   P.innerHTML=`<div class="lcard t-butter"><h3><span class="step">🧘‍♀️</span>Kısa yoga akışları${X.yoga?`<span class="nextf">${X.yoga} akış</span>`:""}</h3><div class="yg-flows">${YOGA.map(([id,e,l,d,cl,ps])=>`<button type="button" class="yg-f ${cl}${dn.includes(id)?" dn":""}" data-yg="${id}"><span class="e">${e}</span><span><b>${l}</b><small>${d} · ${ps.length} poz</small></span><span class="go">${dn.includes(id)?"Tekrar ✓":"Başla"}</span></button>`).join("")}</div>
-  <p class="fine">Her poz ekranda süresiyle gelir, geçişlerde çan sesi çalar. Hamileysen, ağrın ya da sakatlığın varsa zorlamadan, kendi sınırında kal.</p></div>`;
+  <p class="fine">Her poz ekranda süresiyle gelir, geçişlerde çan sesi çalar. ${mfMale()?"Ağrın ya da sakatlığın varsa":"Hamileysen, ağrın ya da sakatlığın varsa"} zorlamadan, kendi sınırında kal.</p></div>`;
   P.querySelectorAll("[data-yg]").forEach(b=>b.onclick=()=>{ygCur={f:b.dataset.yg,i:0,left:YOGA.find(x=>x[0]===b.dataset.yg)[5][0][3],pause:false};ygRender();ygTick();});return;}
  const Fw=YOGA.find(x=>x[0]===ygCur.f),ps=Fw[5],p=ps[ygCur.i],tot=p[3],nx=ps[ygCur.i+1];const C=2*Math.PI*94;
  P.innerHTML=`<div class="lcard ${Fw[4]}"><div class="yg-play"><div class="yg-top"><span>${Fw[1]} ${Fw[2]}</span><span class="yg-dots">${ps.map((_,i)=>`<i class="${i<ygCur.i?"dn":i===ygCur.i?"on":""}"></i>`).join("")}</span></div>
@@ -20727,12 +20789,19 @@ try{if(new URLSearchParams(location.search).has("silindi")){history.replaceState
 /* ===== v0.87 Kadın ve erkek: cinsiyet sorusu, dil buna göre ===== */
 const mfMale=()=>((st.prof||{}).cins==="e");
 const MF_CINS=[["k","👩","Kadın"],["e","👨","Erkek"],["x","✨","Söylemek istemem"]];
+const OB_CIC={k:'<svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="9" r="5.2"/><path d="M12 14.2V21M9 18h6"/></g></svg>',e:'<svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5.2"/><path d="M13.8 10.2L20 4M15 4h5v5"/></g></svg>',x:'<svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="7.5"/><path d="M12 8.5l1 2.5 2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1z" fill="currentColor" stroke="none"/></g></svg>'};
+/* Manifest: cinsiyete ve ebeveynliğe göre cümleler */
+function mfParent(){try{const P=st.prof||{};return ((kids().list||[]).length>0)||P.rol==="veli"||P.rol==="ikisi";}catch(e){return false;}}
+(function(){try{const B=IDEAS.birak.slice();Object.defineProperty(IDEAS,"birak",{configurable:true,get(){const m=mfMale(),pa=mfParent();return B.map(x=>x==="Mükemmel anne olma baskısı"?(pa?(m?"Mükemmel baba olma baskısı":"Mükemmel anne olma baskısı"):"Her şeyi kusursuz yapma baskısı"):x);}});
+ const A=MF_AFF.aile.slice();Object.defineProperty(MF_AFF,"aile",{configurable:true,get(){const m=mfMale(),pa=mfParent();return A.map(x=>{
+  if(x.startsWith("Çocuklarıma sabırlı"))return pa?(m?"Çocuklarıma sabırlı ve şefkatli bir babayım.":x):"Sevdiklerime sabırla ve şefkatle yaklaşıyorum.";
+  if(x.startsWith("Yeterince iyi bir anneyim"))return pa?(m?"Yeterince iyi bir babayım; bu fazlasıyla yeter.":x):"Ailem için yeterince iyiyim; bu fazlasıyla yeter.";return x;});}});}catch(e){console.error(e);}})();
 TN_Q.splice(1,0,{k:"cins",t:"Seni nasıl tanıyalım?",s:"Dilimi ve önerilerimi buna göre ayarlarım.",ty:"one",o:MF_CINS.map(x=>x.slice())});TN_LAB.cins="Ben";
 Object.defineProperty(OZX,"03-08",{configurable:true,enumerable:true,get(){return mfMale()?["8 MART","Hayatındaki kadınları kutla","Bugün onlar için küçük bir jest yap 💜"]:["8 MART","Dünya Kadınlar Günün kutlu olsun","Bugün önce sen 💜"];}});
 Object.defineProperty(OZX,"anne",{configurable:true,enumerable:true,get(){return mfMale()?["ANNELER GÜNÜ","Anneni ara, sıkıca sarıl","Herkese yetişen o kalbe 💐"]:["ANNELER GÜNÜ","Anneler Günün kutlu olsun","Herkese yetişen kalbine 💐"];}});
 (function(){const _o=onbRender;onbRender=function(){_o.apply(this,arguments);
   try{if(ONB[onbI]!=="me")return;const O=document.getElementById("onb"),nmf=O.querySelector("#ob-name");if(!nmf||O.querySelector(".ob-cins"))return;const P=st.prof=st.prof||{kacin:[]};const host=nmf.closest(".ob2-f,.field");if(!host)return;
-   host.insertAdjacentHTML("afterend",`<div class="ob2-f ob-cinsw"><span>Ben</span><div class="ob-cins" role="radiogroup" aria-label="Cinsiyet">${MF_CINS.map(([v,e,l])=>`<button type="button" role="radio" data-cins="${v}" aria-checked="${P.cins===v}"><span class="no-mi">${e}</span>${l}</button>`).join("")}</div></div>`);
+   host.insertAdjacentHTML("afterend",`<div class="ob2-f ob-cinsw"><span>Ben</span><div class="ob-cins" role="radiogroup" aria-label="Cinsiyet">${MF_CINS.map(([v,e,l])=>`<button type="button" role="radio" data-cins="${v}" aria-checked="${P.cins===v}"><span class="no-mi ob-cic">${OB_CIC[v]||""}</span>${l}</button>`).join("")}</div></div>`);
    O.querySelectorAll("[data-cins]").forEach(b=>b.onclick=()=>{P.cins=b.dataset.cins;save();O.querySelectorAll("[data-cins]").forEach(x=>x.setAttribute("aria-checked",String(x===b)));try{mfGenderApply();}catch(e){}});
   }catch(e){console.error(e);}};})();
 function mfGenderApply(){const m=mfMale();document.body.classList.toggle("mf-male",m);try{const g=document.getElementById("greet");if(g&&!(st.name||"").trim()){const sp=g.querySelector("span");if(sp)sp.textContent=m?"dostum":"güzelim";}}catch(e){}}
@@ -21082,6 +21151,11 @@ mfShare=async function(txt,F){try{await document.fonts.ready;}catch(e){}const W=
    <g class="bnm-f"><path d="M30 10C34 17 35.5 22 34 25.5 33 28 31.5 28.6 30 28.6S27 28 26 25.5C24.5 22 26 17 30 10z" fill="url(#bnmF)"/></g></svg>`;
   if(!b.querySelector(".bnm-k"))b.insertAdjacentHTML("afterbegin",`<span class="bnm-k">MABET</span>`);}catch(e){console.error(e);}};})();
 
+/* v0.97 karşılama sahnesi: yıldızlar + marka kalbi ışığı */
+(function(){const _o=obScene;obScene=function(){const r=_o.apply(this,arguments);try{
+ const stars='<div class="ob-mst">'+Array.from({length:34},(_,i)=>`<i style="left:${(i*37+11)%97}%;top:${(i*23+5)%58}%;transform:scale(${(.6+(i%4)*.3).toFixed(2)});animation-delay:${((i*.41)%3.6).toFixed(2)}s"></i>`).join("")+'</div>';
+ const heart='<svg class="ob-heart" viewBox="0 0 512 512" aria-hidden="true"><defs><radialGradient id="obHg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FF8A6B" stop-opacity=".55"/><stop offset=".6" stop-color="#F2635A" stop-opacity=".12"/><stop offset="1" stop-color="#F2635A" stop-opacity="0"/></radialGradient><linearGradient id="obHh" x1=".15" y1=".1" x2=".85" y2=".95"><stop offset="0" stop-color="#FFB08F" stop-opacity=".5"/><stop offset="1" stop-color="#F2635A" stop-opacity=".25"/></linearGradient></defs><circle cx="256" cy="290" r="250" fill="url(#obHg)"/><path d="M256 420 L140 290 C104 250 106 178 164 156 C206 140 240 160 256 194 C272 160 306 140 348 156 C406 178 408 250 372 290 Z" fill="url(#obHh)"/></svg>';
+ r.html=r.html.replace('<svg class="hills"',stars+heart+'<svg class="hills"');}catch(e){}return r;};})();
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
