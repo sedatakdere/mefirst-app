@@ -7947,6 +7947,14 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.93 */
+.mbag label{position:relative}.mb-shop{margin-left:auto;flex:none;width:32px;height:32px;border:0;border-radius:10px;display:grid;place-items:center;background:rgba(62,140,128,.12);color:#2F7F72;cursor:pointer}.mb-shop svg{width:17px;height:17px}
+html[data-mf="dusk"] .mb-shop{background:rgba(111,191,166,.16);color:#9FE1CB}
+.fx-eq .fx-eqc{flex:none;width:136px;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;border:0;border-radius:18px;background:#16191F;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);color:#fff;text-align:left;font-family:var(--f-body);cursor:pointer;scroll-snap-align:start}
+.fx-eqc .fx-ico{width:26px;height:26px;color:#C8FF3C}.fx-eqc b{font:800 14px/1.2 var(--f-body)}.fx-eqc em{font:800 11.5px var(--f-body);font-style:normal;color:#8D97A3}
+#mfshop .shs-c{z-index:2}
+body.fit-on #mfshop .shs-c{background:linear-gradient(180deg,#1B1F26,#121418);color:#F2F5F7}body.fit-on #mfshop .kpz-s{background:#20252D;color:#F2F5F7;border-color:rgba(255,255,255,.08)}body.fit-on #mfshop .kpz-t,body.fit-on #mfshop .aff-note{color:#AEB7C2}body.fit-on #mfshop .shs-h b{color:#fff}
+
 /* v0.92 mama stoğu + mağaza */
 .aff-note{margin:10px 2px 0;font-size:11.5px;line-height:1.45;color:#8A6450}
 .mm-f{display:grid;gap:10px}.mm-f label{display:grid;gap:4px;font:800 12px var(--f-body);color:var(--muted)}.mm-r{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -20609,6 +20617,22 @@ function mamaRender(){const P=petData();if(!P||!(P.name||"").trim())return;const
 /* ana sayfa: mama bitiyor kartı */
 (function(){const _t=TC_EXTRA;TC_EXTRA=function(C,by){_t.apply(this,arguments);try{(st.pets||[]).forEach(P=>{const L=mamaLeft(P);if(!L||L.left>5)return;const nm=(P.name||"").trim()||"Dostun";
    C.unshift({t:"butter",e:"Patili dostum",h:L.left===0?`${trGen(nm)} maması bitti mi?`:`${trGen(nm)} maması ${L.left} gün sonra bitiyor`,d:`${P.mama.n} · ${P.mama.kg} kg. Fiyatlara şimdiden bak, son güne kalmasın.`,cta:"Fiyatlara bak",ic:"🛍",go:()=>mfShopOpen({k:"Mama fiyatları",t:P.mama.n,s:`${P.mama.kg} kg`,q:P.mama.n+" "+P.mama.kg+" kg"})});});}catch(e){}};})();
+
+/* ===== v0.93 Gelir kapıları: bilet linkleri, macera malzemeleri, ev antrenmanı ekipmanı ===== */
+(function(){const _w=window.open;window.open=function(u){try{if(typeof u==="string"&&/^https?:/.test(u))arguments[0]=affWrap(u);}catch(e){}return _w.apply(window,arguments);};})();
+/* Macera: çantadaki malzemeyi bul */
+const MB_SKIP=/^(su$|şarjlı|telefon|kimlik|hava|bugün|rahat kıyafet|çöp|atıştırmalık|enerji barı|kuruyemiş)/i;
+function mbClean(t){return (t||"").replace(/\(.*?\)/g,"").replace(/ ve .*/," ").replace(/[!.,]/g,"").replace(/\s+/g," ").trim();}
+function mbDecorate(root){(root||document).querySelectorAll(".mbag label:not([data-sh])").forEach(l=>{l.dataset.sh="1";const t=(l.querySelector("span")||{}).textContent||"";if(MB_SKIP.test(t.trim()))return;
+  const b=document.createElement("button");b.type="button";b.className="mb-shop";b.setAttribute("aria-label",mbClean(t)+" fiyatlarına bak");b.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2.2l2.3 11h10.8L21 7.5H6.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19" r="1.4" fill="currentColor"/><circle cx="17" cy="19" r="1.4" fill="currentColor"/></svg>';
+  b.onclick=e=>{e.preventDefault();e.stopPropagation();const q=mbClean(t);mfShopOpen({k:"Macera malzemesi",t:q,q,shops:affCfg().spor||affCfg().mama});};l.appendChild(b);});}
+new MutationObserver(M=>{for(const m of M)for(const n of m.addedNodes){if(n.nodeType===1&&(n.matches&&n.matches(".mbag,.mbag *")||n.querySelector&&n.querySelector(".mbag"))){mbDecorate(n.closest?n.closest(".mbag")&&n.closest(".mbag").parentNode||n:n);return;}}}).observe(document.body,{childList:true,subtree:true});
+/* Kendime iyi bak: ev antrenmanı ekipmanı */
+const FX_EQ=[["Yoga matı","yoga matı 6 mm","mobil"],["Direnç bandı seti","direnç bandı seti","guc"],["Ayarlanabilir dambıl","ayarlanabilir dambıl seti","guc"],["Atlama ipi","rulmanlı atlama ipi","kardiyo"],["Köpük rulo","foam roller köpük rulo","mobil"],["Akıllı tartı","akıllı tartı vücut analizi","core"]];
+function fxEqHTML(){return `<div class="fx-sh"><h3>Evde antrenman ekipmanı</h3><small>Programlara güç katar; dokun, fiyatları karşılaştır</small></div>
+ <div class="fx-rail fx-eq">${FX_EQ.map(([n,q,ic],i)=>`<button type="button" class="fx-eqc" data-fxeq="${i}">${fxIco(ic)}<b>${n}</b><em>Fiyatlara bak ›</em></button>`).join("")}</div>`;}
+(function(){const _f=fitRender;fitRender=function(){_f.apply(this,arguments);try{const r=document.getElementById("fx-progs");if(r&&!document.getElementById("fx-eq")){const c=document.createElement("div");c.id="fx-eq";c.className="fx-progs";c.innerHTML=fxEqHTML();r.after(c);
+   c.querySelectorAll("[data-fxeq]").forEach(b=>b.onclick=()=>{const x=FX_EQ[+b.dataset.fxeq];mfShopOpen({k:"Ekipman",t:x[0],q:x[1],shops:affCfg().spor||affCfg().mama});});}}catch(e){console.error(e);}};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[

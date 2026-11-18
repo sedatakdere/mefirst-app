@@ -1,14 +1,146 @@
 {
-  "_not": "Satış ortaklığı ayarları. Bir program onaylanınca o mağazanın 'w' alanına takip kalıbını yaz: {u} = mağaza linki, {e} = mağaza linkinin kodlanmış hâli. Örnek ağ linki: https://ad.admitad.com/g/XXXX/?ulp={e}  ·  Mağazanın kendi parametresi: {u}&tag=mefirst-21. Boş bırakılan mağaza normal linkle açılır.",
+  "_not": "Satış ortaklığı ayarları. Bir program onaylanınca o mağazanın 'w' alanına takip kalıbını yaz: {u} = mağaza linki, {e} = mağaza linkinin kodlanmış hâli. Örnek ağ linki: https://ad.admitad.com/g/XXXX/?ulp={e}  ·  Mağazanın kendi parametresi: {u}&tag=mefirst-21. Boş bırakılan mağaza normal linkle açılır. Bilet siteleri (biletinial, biletix…) arama listesinde görünmez; etkinlik linkleri bu sitelere gidiyorsa takip kodu otomatik eklenir.",
   "shops": {
-    "akakce":      {"n": "Akakçe",      "d": "Fiyat karşılaştırma", "host": "akakce.com",      "q": "https://www.akakce.com/arama/?q=",      "c": "#F28C28", "w": ""},
-    "trendyol":    {"n": "Trendyol",    "d": "Pazaryeri",           "host": "trendyol.com",    "q": "https://www.trendyol.com/sr?q=",        "c": "#F27A1A", "w": ""},
-    "hepsiburada": {"n": "Hepsiburada", "d": "Pazaryeri",           "host": "hepsiburada.com", "q": "https://www.hepsiburada.com/ara?q=",    "c": "#FF6000", "w": ""},
-    "amazon":      {"n": "Amazon",      "d": "Pazaryeri",           "host": "amazon.com.tr",   "q": "https://www.amazon.com.tr/s?k=",        "c": "#232F3E", "w": ""},
-    "kitapyurdu":  {"n": "Kitapyurdu",  "d": "Kitapçı",             "host": "kitapyurdu.com",  "q": "https://www.kitapyurdu.com/index.php?route=product/search&filter_name=", "c": "#E53935", "w": ""},
-    "dr":          {"n": "D&R",         "d": "Kitapçı",             "host": "dr.com.tr",       "q": "https://www.dr.com.tr/search?q=",       "c": "#1E3A8A", "w": ""},
-    "bkm":         {"n": "BKM Kitap",   "d": "Kitapçı",             "host": "bkmkitap.com",    "q": "https://www.bkmkitap.com/arama?q=",     "c": "#C2185B", "w": ""}
+    "akakce": {
+      "n": "Akakçe",
+      "d": "Fiyat karşılaştırma",
+      "host": "akakce.com",
+      "q": "https://www.akakce.com/arama/?q=",
+      "c": "#F28C28",
+      "w": ""
+    },
+    "trendyol": {
+      "n": "Trendyol",
+      "d": "Pazaryeri",
+      "host": "trendyol.com",
+      "q": "https://www.trendyol.com/sr?q=",
+      "c": "#F27A1A",
+      "w": ""
+    },
+    "hepsiburada": {
+      "n": "Hepsiburada",
+      "d": "Pazaryeri",
+      "host": "hepsiburada.com",
+      "q": "https://www.hepsiburada.com/ara?q=",
+      "c": "#FF6000",
+      "w": ""
+    },
+    "amazon": {
+      "n": "Amazon",
+      "d": "Pazaryeri",
+      "host": "amazon.com.tr",
+      "q": "https://www.amazon.com.tr/s?k=",
+      "c": "#232F3E",
+      "w": ""
+    },
+    "kitapyurdu": {
+      "n": "Kitapyurdu",
+      "d": "Kitapçı",
+      "host": "kitapyurdu.com",
+      "q": "https://www.kitapyurdu.com/index.php?route=product/search&filter_name=",
+      "c": "#E53935",
+      "w": ""
+    },
+    "dr": {
+      "n": "D&R",
+      "d": "Kitapçı",
+      "host": "dr.com.tr",
+      "q": "https://www.dr.com.tr/search?q=",
+      "c": "#1E3A8A",
+      "w": ""
+    },
+    "bkm": {
+      "n": "BKM Kitap",
+      "d": "Kitapçı",
+      "host": "bkmkitap.com",
+      "q": "https://www.bkmkitap.com/arama?q=",
+      "c": "#C2185B",
+      "w": ""
+    },
+    "biletinial": {
+      "n": "Biletinial",
+      "d": "Bilet",
+      "host": "biletinial.com",
+      "q": "",
+      "c": "#8E1E36",
+      "w": ""
+    },
+    "biletix": {
+      "n": "Biletix",
+      "d": "Bilet",
+      "host": "biletix.com",
+      "q": "",
+      "c": "#8E1E36",
+      "w": ""
+    },
+    "iticket": {
+      "n": "iTicket",
+      "d": "Bilet",
+      "host": "iticket.com.tr",
+      "q": "",
+      "c": "#8E1E36",
+      "w": ""
+    },
+    "bubilet": {
+      "n": "Bubilet",
+      "d": "Bilet",
+      "host": "bubilet.com.tr",
+      "q": "",
+      "c": "#8E1E36",
+      "w": ""
+    },
+    "passo": {
+      "n": "Passo",
+      "d": "Bilet",
+      "host": "passo.com.tr",
+      "q": "",
+      "c": "#8E1E36",
+      "w": ""
+    },
+    "mobilet": {
+      "n": "Mobilet",
+      "d": "Bilet",
+      "host": "mobilet.com",
+      "q": "",
+      "c": "#8E1E36",
+      "w": ""
+    },
+    "tiyatrolar": {
+      "n": "Tiyatrolar.com.tr",
+      "d": "Bilet",
+      "host": "tiyatrolar.com.tr",
+      "q": "",
+      "c": "#8E1E36",
+      "w": ""
+    },
+    "sanatcepte": {
+      "n": "Sanatcepte",
+      "d": "Bilet",
+      "host": "sanatcepte.com",
+      "q": "",
+      "c": "#8E1E36",
+      "w": ""
+    },
+    "decathlon": {
+      "n": "Decathlon",
+      "d": "Spor mağazası",
+      "host": "decathlon.com.tr",
+      "q": "",
+      "c": "#8E1E36",
+      "w": ""
+    }
   },
-  "mama": ["akakce", "trendyol", "hepsiburada", "amazon"],
-  "yerel": []
+  "mama": [
+    "akakce",
+    "trendyol",
+    "hepsiburada",
+    "amazon"
+  ],
+  "yerel": [],
+  "spor": [
+    "akakce",
+    "trendyol",
+    "hepsiburada",
+    "amazon"
+  ]
 }
