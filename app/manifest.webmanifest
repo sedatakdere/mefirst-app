@@ -9,8 +9,8 @@
   "scope": "/app/",
   "display": "fullscreen",
   "orientation": "portrait",
-  "background_color": "#F7F4FB",
-  "theme_color": "#F7B3D2",
+  "background_color": "#2E1A40",
+  "theme_color": "#2E1A40",
   "categories": [
     "lifestyle",
     "health",
