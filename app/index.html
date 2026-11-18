@@ -7947,6 +7947,19 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.92 mama stoğu + mağaza */
+.aff-note{margin:10px 2px 0;font-size:11.5px;line-height:1.45;color:#8A6450}
+.mm-f{display:grid;gap:10px}.mm-f label{display:grid;gap:4px;font:800 12px var(--f-body);color:var(--muted)}.mm-r{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mm-save{margin-top:12px;width:100%}
+.mm-f input{width:100%;box-sizing:border-box;min-width:0;height:44px;padding:0 12px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:600 15px var(--f-body);-webkit-appearance:none;appearance:none}.mm-f input:focus{outline:2px solid #E8845C;outline-offset:1px}.mm-r label{min-width:0}
+.mm-ed{margin-left:auto;width:30px;height:30px;border:0;border-radius:50%;background:rgba(0,0,0,.06);color:var(--ink);cursor:pointer}
+.mm-c{display:flex;gap:14px;align-items:center}.mm-bag{position:relative;flex:none;width:46px;height:60px;border-radius:8px 8px 12px 12px;background:rgba(184,80,46,.12);overflow:hidden;box-shadow:inset 0 0 0 2px rgba(184,80,46,.3)}
+.mm-bag::before{content:"";position:absolute;left:8px;right:8px;top:-4px;height:10px;border-radius:0 0 6px 6px;background:rgba(184,80,46,.35)}
+.mm-bag i{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,#F2A27F,#D2643C);transition:height .6s ease}
+.mm-c.low .mm-bag i{background:linear-gradient(180deg,#FF8A6B,#E0453A)}
+.mm-c b{display:block;font-size:15px}.mm-c small{font-size:12px;color:var(--muted)}.mm-c p{margin:4px 0 0;font-size:13.5px}.mm-c em{font-style:normal;font-weight:900;color:#C0455A}
+.mm-a{display:flex;gap:8px;margin-top:12px}.mm-buy{flex:1}.mm-new{border:0;background:rgba(0,0,0,.06);border-radius:14px;padding:0 14px;font:800 13px var(--f-body);color:var(--ink);cursor:pointer}
+
 /* v0.91 yukarı düğmesi */
 .mf-up{position:fixed;z-index:60;left:50%;bottom:calc(98px + env(safe-area-inset-bottom,0px));transform:translate(-50%,90px);transition:transform .35s cubic-bezier(.2,.9,.3,1.2),opacity .25s,bottom .3s ease!important;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 18px 0 14px;border:0;border-radius:999px;background:linear-gradient(135deg,var(--u1,#5B3577),var(--u2,#3A2350));color:#fff;font:800 14px/1 var(--f-body);box-shadow:0 12px 24px -10px rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:transform .35s cubic-bezier(.2,.9,.3,1.2),opacity .25s;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .mf-up svg{width:18px;height:18px}.mf-up.on{transform:translate(-50%,0);opacity:1;pointer-events:auto}.mf-up:active{transform:translate(-50%,0) scale(.95)}
@@ -20547,6 +20560,55 @@ function upBtn(){let B=document.getElementById("mf-up");const C=UP_C[step];
  B.classList.toggle("on",on);B.classList.toggle("low",!navOn);}
 window.addEventListener("scroll",()=>{if(!upBtn.r){upBtn.r=1;requestAnimationFrame(()=>{upBtn.r=0;try{upBtn();}catch(e){}});}},{passive:true});
 (function(){const _s=show;show=function(){const r=_s.apply(this,arguments);try{upBtn();}catch(e){}return r;};})();
+
+/* ===== v0.92 Satış ortaklığı altyapısı + Patili mama stoğu ===== */
+let MF_ORT=null;
+const MF_ORT0={shops:{akakce:{n:"Akakçe",d:"Fiyat karşılaştırma",host:"akakce.com",q:"https://www.akakce.com/arama/?q=",c:"#F28C28",w:""},trendyol:{n:"Trendyol",d:"Pazaryeri",host:"trendyol.com",q:"https://www.trendyol.com/sr?q=",c:"#F27A1A",w:""},hepsiburada:{n:"Hepsiburada",d:"Pazaryeri",host:"hepsiburada.com",q:"https://www.hepsiburada.com/ara?q=",c:"#FF6000",w:""},amazon:{n:"Amazon",d:"Pazaryeri",host:"amazon.com.tr",q:"https://www.amazon.com.tr/s?k=",c:"#232F3E",w:""}},mama:["akakce","trendyol","hepsiburada","amazon"],yerel:[]};
+function affCfg(){return MF_ORT||MF_ORT0;}
+(async()=>{try{const C=JSON.parse(localStorage.getItem("mf-ort")||"null");if(C&&Date.now()-C.at<864e5)MF_ORT=C.v;const r=await fetch("ortak.json",{cache:"no-cache"});if(r.ok){const v=await r.json();MF_ORT=v;localStorage.setItem("mf-ort",JSON.stringify({at:Date.now(),v}));}}catch(e){}})();
+function affShopOf(u){try{const h=new URL(u).hostname.replace(/^www\./,"");const S=affCfg().shops||{};return Object.keys(S).find(k=>S[k].host&&(h===S[k].host||h.endsWith("."+S[k].host)))||null;}catch(e){return null;}}
+function affWrap(u){const k=affShopOf(u);if(!k)return u;const w=(affCfg().shops[k]||{}).w;if(!w)return u;return w.replace("{e}",encodeURIComponent(u)).replace("{u}",u);}
+function affActive(){const S=affCfg().shops||{};return Object.keys(S).some(k=>S[k].w);}
+document.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest("a[href^='http']");if(!a||a.dataset.affd)return;const n=affWrap(a.href);if(n!==a.href){a.href=n;a.dataset.affd="1";}},true);
+const AFF_NOTE='<p class="aff-note">Bazı bağlantılar satış ortaklığı linkidir; alışverişinden Me First küçük bir pay alabilir, sana ek maliyeti yoktur.</p>';
+(function(){const _o=ktPriceOpen;ktPriceOpen=function(){_o.apply(this,arguments);try{const b=document.querySelector("#kpz .kpz-b");if(b&&affActive()&&!b.querySelector(".aff-note"))b.insertAdjacentHTML("beforeend",AFF_NOTE);}catch(e){}};})();
+/* genel mağaza sayfası */
+function mfShopOpen(o){let O=document.getElementById("mfshop");if(!O){O=document.createElement("div");O.id="mfshop";O.className="shs kpz mfshop";O.setAttribute("role","dialog");document.body.appendChild(O);O.addEventListener("click",e=>{if(e.target===O)mfShopClose();});}
+ const C=affCfg(),q=encodeURIComponent(o.q);const ids=(o.shops||C.mama||[]).filter(k=>C.shops[k]);const Y=(C.yerel||[]).filter(y=>!y.city||!spCity||trN(y.city)===trN(spCity()||""));
+ O.innerHTML=`<div class="shs-c"><div class="shs-grab"></div><div class="shs-h"><div><small>${esc(o.k||"Fiyatlara bak")}</small><b>${esc(o.t)}</b>${o.s?`<em>${esc(o.s)}</em>`:""}</div><button type="button" class="shs-x" aria-label="Kapat">✕</button></div>
+  <div class="kpz-b"><p class="kpz-t">Mağazaya dokun, güncel fiyat açılsın. <b>Akakçe</b> tüm mağazaları tek sayfada karşılaştırır.</p>
+  ${Y.map(y=>`<a class="kpz-s best" href="${esc(y.u)}" target="_blank" rel="noopener"><span class="kpz-l" style="background:${y.c||"#3E8C80"}">${esc((y.n||"?").charAt(0))}</span><span class="kpz-n"><b>${esc(y.n)}</b><small>${esc(y.d||"Şehrindeki dükkan")}${y.kod?` · Kod: ${esc(y.kod)}`:""}</small></span><span class="kpz-go">›</span></a>`).join("")}
+  ${ids.map((k,i)=>{const S=C.shops[k];return `<a class="kpz-s${i===0&&!Y.length?" best":""}" href="${S.q}${q}" target="_blank" rel="noopener"><span class="kpz-l" style="background:${S.c}">${esc(S.n.charAt(0))}</span><span class="kpz-n"><b>${esc(S.n)}</b><small>${esc(S.d)}${i===0&&!Y.length?" · önerilen":""}</small></span><span class="kpz-go">›</span></a>`;}).join("")}
+  ${affActive()||Y.length?AFF_NOTE:""}</div></div>`;
+ O.querySelector(".shs-x").onclick=mfShopClose;O.hidden=false;requestAnimationFrame(()=>O.classList.add("on"));document.body.style.overflow="hidden";}
+function mfShopClose(){const O=document.getElementById("mfshop");if(!O||O.hidden)return;O.classList.remove("on");setTimeout(()=>O.hidden=true,280);document.body.style.overflow="";}
+/* Patili: mama stoğu */
+function trGen(n){n=(n||"").trim();if(!n)return "Dostunun";const lo=n.toLocaleLowerCase("tr-TR"),V="aeıioöuü";const v=[...lo].filter(c=>V.includes(c)).pop()||"e";const sf={a:"ın",ı:"ın",e:"in",i:"in",o:"un",u:"un",ö:"ün",ü:"ün"}[v];return n+"'"+(V.includes(lo.slice(-1))?"n":"")+sf;}
+
+function mamaOf(P){return P&&P.mama&&P.mama.n?P.mama:null;}
+function mamaLeft(P){const M=mamaOf(P);if(!M||!M.kg||!M.g||!M.d)return null;const tot=M.kg*1000/M.g,used=(Date.now()-new Date(M.d+"T00:00").getTime())/864e5;return {left:Math.max(0,Math.round(tot-used)),tot:Math.round(tot)};}
+function mamaHTML(P){const M=P.mama||{},L=mamaLeft(P),nm=(P.name||"").trim()||"Dostun",def=P.kind==="kopek"?250:P.kind==="kedi"?60:40;
+ if(!M.n||M.edit){return `<h3><span class="step">🛍</span>Mama stoğu<span class="nextf">bitmeden haber vereyim</span></h3>
+  <div class="mm-f"><label>Mama<input id="mm-n" type="text" maxlength="60" placeholder="ör. Royal Canin Kitten" value="${esc(M.n||"")}"></label>
+  <div class="mm-r"><label>Paket (kg)<input id="mm-kg" type="number" inputmode="decimal" min=".1" step=".1" placeholder="2" value="${M.kg||""}"></label><label>Günlük (gram)<input id="mm-g" type="number" inputmode="numeric" min="5" step="5" placeholder="${def}" value="${M.g||""}"></label></div>
+  <label>Paketi açtığın gün<input id="mm-d" type="date" value="${M.d||dkey()}"></label></div>
+  <button type="button" class="btn mm-save" id="mm-save">Kaydet</button>`;}
+ const p=L?Math.max(0,Math.min(1,L.left/Math.max(1,L.tot))):0,low=L&&L.left<=5;
+ return `<h3><span class="step">🛍</span>Mama stoğu<button type="button" class="mm-ed" id="mm-ed" aria-label="Düzenle">✎</button></h3>
+  <div class="mm-c${low?" low":""}"><div class="mm-bag"><i style="height:${Math.round(p*100)}%"></i></div><div><b>${esc(M.n)}</b><small>${M.kg} kg · günde ${M.g} g</small>
+   <p>${L?(L.left===0?`${esc(trGen(nm))} maması bitmiş olabilir.`:low?`${esc(trGen(nm))} maması yaklaşık <em>${L.left} gün</em> sonra bitiyor.`:`Yaklaşık <em>${L.left} gün</em> yeter.`):""}</p></div></div>
+  <div class="mm-a"><button type="button" class="btn mm-buy" id="mm-buy">Fiyatlara bak</button><button type="button" class="mm-new" id="mm-new">Yeni paket açtım</button></div>`;}
+function mamaRender(){const P=petData();if(!P||!(P.name||"").trim())return;const feeds=document.getElementById("feeds");if(!feeds)return;const host=feeds.closest(".lcard");if(!host)return;
+ let c=document.getElementById("mm-card");if(!c){c=document.createElement("div");c.id="mm-card";c.className="lcard t-peach mm-card";host.after(c);}
+ c.innerHTML=mamaHTML(P);const q=id=>c.querySelector("#"+id);
+ if(q("mm-save"))q("mm-save").onclick=()=>{const n=q("mm-n").value.trim();if(!n){q("mm-n").focus();return;}P.mama={n,kg:+q("mm-kg").value||2,g:+q("mm-g").value||(P.kind==="kopek"?250:60),d:q("mm-d").value||dkey()};save();mamaRender();};
+ if(q("mm-ed"))q("mm-ed").onclick=()=>{P.mama.edit=1;mamaRender();delete P.mama.edit;};
+ if(q("mm-new"))q("mm-new").onclick=()=>{P.mama.d=dkey();save();mamaRender();try{mfConfetti("Mama tazelendi 🐾",["#F2A27F","#FFD45C","#fff"],"linear-gradient(135deg,#E8845C,#B8502E)");}catch(e){}};
+ if(q("mm-buy"))q("mm-buy").onclick=()=>mfShopOpen({k:"Mama fiyatları",t:P.mama.n,s:`${P.mama.kg} kg`,q:P.mama.n+" "+P.mama.kg+" kg"});}
+(function(){const _p=petRender;petRender=function(){const r=_p.apply(this,arguments);try{mamaRender();}catch(e){console.error(e);}return r;};})();
+/* ana sayfa: mama bitiyor kartı */
+(function(){const _t=TC_EXTRA;TC_EXTRA=function(C,by){_t.apply(this,arguments);try{(st.pets||[]).forEach(P=>{const L=mamaLeft(P);if(!L||L.left>5)return;const nm=(P.name||"").trim()||"Dostun";
+   C.unshift({t:"butter",e:"Patili dostum",h:L.left===0?`${trGen(nm)} maması bitti mi?`:`${trGen(nm)} maması ${L.left} gün sonra bitiyor`,d:`${P.mama.n} · ${P.mama.kg} kg. Fiyatlara şimdiden bak, son güne kalmasın.`,cta:"Fiyatlara bak",ic:"🛍",go:()=>mfShopOpen({k:"Mama fiyatları",t:P.mama.n,s:`${P.mama.kg} kg`,q:P.mama.n+" "+P.mama.kg+" kg"})});});}catch(e){}};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
