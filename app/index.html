@@ -7947,6 +7947,184 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.96 MABET — Manifest Me: gece ormanı, ahşap, mum ışığı */
+body.mb-on{--bg:#0C0806;--surface:#1A120D;--ink:#F3E6D3;--muted:#AE977D;--line:rgba(232,180,110,.16);
+ --lilac:#272030;--lilac-d:#CDB8F0;--pink:#2E1D1B;--pink-d:#F2A98A;--butter:#2B2114;--butter-d:#E8B464;--peach:#2F1E17;--peach-d:#F0A070;--mint:#1B2519;--mint-d:#AFCB9F;--sky:#18202A;--sky-d:#A9C2DA;
+ --mb-gold:#E8B464;--mb-amber:#FF9F43;--mb-ink:#F3E6D3;--mb-wood1:#21170F;--mb-wood2:#140D08;
+ background:transparent!important;background-image:none!important}
+html.mb-html{background:#0C0806!important}
+html.mb-html[data-mf] body.mb-on.mf-on{background:transparent!important}
+body.mb-on .mf-bg{display:none!important}
+#mb-bg{display:none}
+body.mb-on #mb-bg{display:block;position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+#mb-bg .mb-sky{position:absolute;inset:0;background:
+ radial-gradient(1px 1px at 12% 8%,rgba(255,244,220,.9),transparent 60%),radial-gradient(1px 1px at 27% 17%,rgba(255,244,220,.6),transparent 60%),radial-gradient(1.4px 1.4px at 44% 5%,rgba(255,244,220,.8),transparent 60%),radial-gradient(1px 1px at 61% 13%,rgba(255,244,220,.55),transparent 60%),radial-gradient(1.2px 1.2px at 88% 22%,rgba(255,244,220,.7),transparent 60%),radial-gradient(1px 1px at 6% 30%,rgba(255,244,220,.5),transparent 60%),radial-gradient(1px 1px at 52% 27%,rgba(255,244,220,.45),transparent 60%),radial-gradient(1.3px 1.3px at 34% 34%,rgba(255,244,220,.5),transparent 60%),radial-gradient(1px 1px at 95% 9%,rgba(255,244,220,.65),transparent 60%),
+ radial-gradient(70% 45% at 82% 6%,rgba(150,120,200,.20),transparent 70%),radial-gradient(90% 60% at 50% 100%,rgba(255,140,60,.10),transparent 70%),
+ linear-gradient(180deg,#14101C 0%,#17111A 30%,#140D0B 62%,#0B0706 100%)}
+#mb-bg .mb-moon{position:absolute;top:calc(env(safe-area-inset-top,0px) + 78px);right:26px;width:46px;height:46px;filter:drop-shadow(0 0 18px rgba(241,211,140,.45));opacity:.9;animation:mbFloat 12s ease-in-out infinite}
+#mb-bg .mb-moon::before{content:"";position:absolute;inset:-40px;border-radius:50%;background:radial-gradient(circle,rgba(241,211,140,.16),transparent 65%)}
+#mb-bg .mb-moon svg{width:100%!important;height:100%!important;position:relative;display:block}
+#mb-bg canvas{position:absolute;inset:0;z-index:2}
+#mb-bg .mb-forest{position:absolute;left:0;right:0;bottom:0;width:100%;height:38vh;z-index:1}
+@keyframes mbFloat{50%{transform:translateY(6px)}}
+@media (min-width:700px){#mb-bg .mb-moon{right:12%;width:70px;height:70px}}
+
+/* --- giriş: sunak --- */
+body.mf-on.mb-on .rit.mf-hub .rhero{background:none!important;border:0!important;box-shadow:none!important;padding:6px 0 4px!important;margin:0!important;min-height:0!important;overflow:visible!important}
+body.mb-on .rit .rhero::before,body.mb-on .rit .rhero::after{display:none!important}
+body.mb-on .rit .rhero>:not(.lhero-top):not(.mb-hero){display:none!important}
+body.mf-on.mb-on .rit .rhero .lhero-top,body.mf-on.mb-on .rit .rhero .lhero-top:has(>span.tag){position:absolute!important;top:6px!important;right:0!important;left:auto!important;z-index:4;margin:0!important;min-height:0!important;padding:0!important}body.mb-on .rit .rhero .lhero-top .tag{display:none!important}
+body.mb-on .rit .rhero .homebtn{background:rgba(26,18,13,.7)!important;color:var(--mb-gold)!important;border:1px solid rgba(232,180,110,.25)!important;box-shadow:none!important;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.mb-hero{position:relative;text-align:center;color:var(--mb-ink);padding-top:8px}
+.mb-snd{position:absolute;top:6px;left:0;z-index:4;display:inline-flex;align-items:center;gap:7px;height:38px;padding:0 13px 0 11px;border-radius:99px;border:1px solid rgba(232,180,110,.25);background:rgba(26,18,13,.7);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#CDB79A;font:700 12px var(--f-body);cursor:pointer}
+.mb-snd small{font:inherit}
+.mb-snd.on{color:var(--mb-gold);border-color:rgba(232,180,110,.5);box-shadow:0 0 18px -4px rgba(255,170,80,.45)}
+.mb-eq{display:inline-flex;align-items:flex-end;gap:2px;height:13px}.mb-eq i{width:2.5px;border-radius:2px;background:currentColor;height:4px;opacity:.75}
+.mb-snd.on .mb-eq i{animation:mbEq 1.1s ease-in-out infinite}.mb-snd.on .mb-eq i:nth-child(2){animation-delay:-.4s}.mb-snd.on .mb-eq i:nth-child(3){animation-delay:-.75s}.mb-snd.on .mb-eq i:nth-child(4){animation-delay:-.2s}
+@keyframes mbEq{0%,100%{height:3px}50%{height:13px}}
+.mb-stage{position:relative;width:min(340px,100%);margin:34px auto 0;cursor:default}
+.mb-hero:not(.lit) .mb-stage{cursor:pointer}
+.mb-altar{position:relative;z-index:1;display:block;width:100%;height:auto;overflow:visible}
+.mb-hero.lit .mb-stage::before{content:"";position:absolute;left:50%;top:44%;width:440px;height:320px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(255,170,80,.45),rgba(255,140,60,.12) 55%,transparent);pointer-events:none;animation:mbGlow 4s ease-in-out infinite}
+.mb-altar .mb-fl{transform-box:fill-box;transform-origin:50% 100%;opacity:0;transform:scale(.2);transition:opacity .5s,transform .7s cubic-bezier(.2,1.6,.4,1)}
+.mb-hero.lit .mb-altar .mb-fl{opacity:1;transform:scale(1)}
+.mb-hero.lit .mb-altar .mb-fl .mb-f1{transform-box:fill-box;transform-origin:50% 100%;animation:mbFlick 2.6s ease-in-out infinite;animation-delay:calc(var(--dl) * -1s)}
+.mb-hero.lit .mb-altar .mb-fh{animation:mbHalo 3.2s ease-in-out infinite;animation-delay:calc(var(--dl) * -1s)}
+.mb-hero.igniting .mb-altar .mb-cd:nth-of-type(1) .mb-fl{transition-delay:.15s}.mb-hero.igniting .mb-altar .mb-cd:nth-of-type(3) .mb-fl{transition-delay:.45s}
+@keyframes mbFlick{0%,100%{transform:scale(1,1) skewX(0)}18%{transform:scale(.94,1.06) skewX(2deg)}36%{transform:scale(1.04,.95) skewX(-2.5deg)}52%{transform:scale(.97,1.08) skewX(1deg)}70%{transform:scale(1.02,.97) skewX(-1deg)}86%{transform:scale(.96,1.04) skewX(2deg)}}
+@keyframes mbHalo{0%,100%{opacity:.85}40%{opacity:1}60%{opacity:.7}}
+.mb-altar .mb-glow{opacity:.12;transition:opacity 1.2s}
+.mb-hero.lit .mb-altar .mb-glow{opacity:1;animation:mbGlow 4s ease-in-out infinite}
+@keyframes mbGlow{0%,100%{opacity:.9}30%{opacity:1}55%{opacity:.78}75%{opacity:.95}}
+.mb-altar .mb-sm0{opacity:0;stroke-dasharray:6 60;filter:blur(.6px)}
+.mb-hero:not(.lit) .mb-altar .mb-sm0{animation:mbSm0 5s ease-in-out infinite}
+@keyframes mbSm0{0%{opacity:0;stroke-dashoffset:0}25%{opacity:.35}100%{opacity:0;stroke-dashoffset:-60}}
+.mb-altar .mb-smk{stroke-dasharray:14 90;filter:blur(1.4px);animation:mbSmk 6s linear infinite;opacity:.4}.mb-altar .mb-smk.s2{animation-duration:7.5s;animation-delay:-3s;opacity:.3}
+@keyframes mbSmk{0%{stroke-dashoffset:0;opacity:0}15%{opacity:.5}100%{stroke-dashoffset:-104;opacity:0}}
+.mb-altar .mb-emb{animation:mbEmb 2.4s ease-in-out infinite;filter:drop-shadow(0 0 3px #FF7A2A)}
+@keyframes mbEmb{50%{fill:#FFB25A;r:2.4px}}
+.mb-altar .mb-am{filter:drop-shadow(0 0 6px rgba(160,120,230,.25))}
+.mb-hero.lit .mb-altar .mb-am{filter:drop-shadow(0 0 10px rgba(200,160,255,.45))}
+.mb-hero.igniting .mb-stage::after{content:"";position:absolute;left:50%;top:38%;width:30px;height:30px;margin:-15px;border-radius:50%;background:radial-gradient(circle,rgba(255,240,200,.95),rgba(255,170,80,0) 70%);animation:mbFlash 1.1s ease-out forwards;pointer-events:none}
+@keyframes mbFlash{0%{transform:scale(.2);opacity:1}100%{transform:scale(14);opacity:0}}
+.mb-kick{display:flex;align-items:center;justify-content:center;gap:10px;margin:14px 0 0;font:800 10.5px var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:#C9A574}
+.mb-kick i{width:5px;height:5px;transform:rotate(45deg);background:var(--mb-gold);opacity:.7}
+body.mf-on.mb-on .rit.mf-hub .rhero h2.mb-h{margin:6px 0 0!important;font-family:var(--f-display)!important;font-weight:400!important;font-size:42px!important;line-height:1!important;letter-spacing:-.01em;color:#F7EBD8!important;text-shadow:0 0 30px rgba(255,170,80,.25)}
+body.mf-on.mb-on .rit .rhero .mb-h em{font-style:italic;background:linear-gradient(180deg,#FFE3A6,#E8A24E);-webkit-background-clip:text;background-clip:text;color:transparent!important;padding-right:4px}
+.mb-sub{margin:10px auto 0;max-width:290px;font-family:var(--f-display);font-style:italic;font-size:16px;line-height:1.35;color:#CDB79A}
+.mb-sub b{font-style:normal;color:var(--mb-gold);font-weight:400}
+.mb-light{margin:16px auto 0;display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 24px 0 18px;border-radius:99px;border:1px solid rgba(255,200,120,.55);background:linear-gradient(180deg,#F4C979,#D9893A);color:#2A1606;font:800 15px var(--f-body);cursor:pointer;box-shadow:0 10px 30px -10px rgba(255,150,60,.7),inset 0 1px 0 rgba(255,255,255,.45);animation:mbPulse 2.6s ease-in-out infinite}
+.mb-mt{width:10px;height:14px;border-radius:50% 50% 45% 45%/60% 60% 40% 40%;background:radial-gradient(circle at 50% 75%,#FFF8E0,#FFB347 60%,#E2561C);box-shadow:0 0 10px #FFB347}
+@keyframes mbPulse{0%,100%{box-shadow:0 10px 30px -10px rgba(255,150,60,.7),0 0 0 0 rgba(255,180,90,.35),inset 0 1px 0 rgba(255,255,255,.45)}50%{box-shadow:0 10px 30px -10px rgba(255,150,60,.7),0 0 0 10px rgba(255,180,90,0),inset 0 1px 0 rgba(255,255,255,.45)}}
+.mb-lit{display:inline-flex;align-items:center;gap:8px;margin:14px auto 0;padding:7px 14px;border-radius:99px;background:rgba(232,180,110,.08);border:1px solid rgba(232,180,110,.18);font:700 12px var(--f-body);color:#D8BE97}
+.mb-dot{width:7px;height:7px;border-radius:50%;background:#FFB347;box-shadow:0 0 10px 2px rgba(255,170,70,.7);animation:mbHalo 2s ease-in-out infinite}
+
+/* --- niyet alanı / olumlama --- */
+body.mb-on .rit #mfday{background:none!important;border:0!important;box-shadow:none!important;padding:0!important;margin:20px 0 0!important}
+body.mb-on .rit #mfday .mfday-h{display:none!important}
+body.mb-on .rit .mf-aff{position:relative;background:linear-gradient(170deg,rgba(40,28,20,.92),rgba(20,13,9,.92))!important;border:1px solid rgba(232,180,110,.22)!important;border-radius:22px!important;box-shadow:0 24px 50px -28px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,230,190,.06)!important;padding:18px 16px 16px!important;color:var(--mb-ink)!important;text-align:center;overflow:hidden}
+body.mb-on .rit .mf-aff::before{content:"";position:absolute;inset:6px;border-radius:17px;border:1px solid rgba(232,180,110,.10);pointer-events:none}
+body.mb-on .rit .mf-aff>small,body.mb-on .rit .mf-aff .mf-al{display:flex!important;justify-content:center;gap:8px;font:800 10.5px var(--f-body)!important;letter-spacing:.18em!important;text-transform:uppercase;color:#C9A574!important;background:none!important}
+body.mb-on .rit .mf-aff .mf-al span,body.mb-on .rit .mf-aff .mf-al em{background:none!important;color:inherit!important;padding:0!important}
+body.mb-on .rit .mf-aff p{font-family:var(--f-display)!important;font-style:italic;font-size:21px!important;line-height:1.3!important;color:#F7EBD8!important;margin:10px 4px 14px!important}
+body.mb-on .rit .mf-foc{display:grid!important;grid-template-columns:repeat(3,1fr);gap:8px!important}
+body.mb-on .rit .mf-foc button{background:rgba(255,255,255,.035)!important;border:1px solid rgba(232,180,110,.18)!important;color:#E9D9C2!important;border-radius:14px!important;height:44px;font:700 13px var(--f-body)!important;box-shadow:none!important}
+body.mb-on .rit .mf-foc button[aria-pressed="true"]{border-color:var(--mb-gold)!important;background:rgba(232,180,110,.14)!important;color:#FFE3B0!important}
+body.mb-on .rit .mf-ab{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+body.mb-on .rit .mf-ab button{background:transparent!important;border:1px solid rgba(232,180,110,.25)!important;color:#D8BE97!important;border-radius:99px!important;height:34px;padding:0 13px!important;font:700 12px var(--f-body)!important;box-shadow:none!important}
+body.mb-on .rit .mf-ab .mf-sh{background:linear-gradient(180deg,#F4C979,#D9893A)!important;color:#2A1606!important;border-color:transparent!important}
+body.mb-on .rit .mf-str{background:rgba(255,150,60,.14)!important;color:#FFB86B!important}
+
+/* --- ritüel kartları --- */
+body.mf-on.mb-on .rit.mf-hub #pracs{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:10px!important;margin:16px 0 0!important;padding:0!important;background:none!important;position:static!important;overflow:visible!important}
+body.mf-on.mb-on .rit.mf-hub #pracs::before{content:"RİTÜELLER";grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:12px;margin:4px 0 2px;font:800 10.5px var(--f-body);letter-spacing:.24em;color:#C9A574;background:linear-gradient(90deg,transparent,rgba(232,180,110,.35) 30%,transparent 30%,transparent 70%,rgba(232,180,110,.35) 70%,transparent) center/100% 1px no-repeat}
+body.mf-on.mb-on .rit #pracs .prac{position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:8px!important;min-height:104px!important;height:auto!important;padding:14px 6px 12px!important;border-radius:18px!important;
+ background:repeating-linear-gradient(94deg,rgba(255,235,200,.016) 0 2px,transparent 2px 11px),radial-gradient(90% 70% at 50% 0%,rgba(255,180,90,.10),transparent 70%),linear-gradient(165deg,#22170F,#120C08)!important;
+ border:1px solid rgba(232,180,110,.2)!important;box-shadow:0 18px 30px -22px rgba(0,0,0,.95),inset 0 1px 0 rgba(255,230,190,.07)!important;color:var(--mb-ink)!important;transition:transform .2s,box-shadow .3s,border-color .3s}
+body.mf-on.mb-on .rit #pracs .prac::before{content:"";position:absolute;inset:5px;border-radius:13px;border:1px solid rgba(232,180,110,.09);pointer-events:none}
+body.mf-on.mb-on .rit #pracs .prac:active{transform:scale(.97)}
+body.mf-on.mb-on .rit #pracs .prac .pre{display:none!important}
+body.mf-on.mb-on .rit #pracs .prac strong{font-family:var(--f-display)!important;font-weight:400!important;font-size:15.5px!important;line-height:1.1!important;color:#F3E6D3!important;letter-spacing:0!important;text-align:center}
+body.mf-on.mb-on .rit #pracs .prac .mf-dn{position:static!important;margin:-4px 0 0!important;font:700 10px var(--f-body)!important;color:#E8B464!important;background:none!important;padding:0!important}
+.mb-fc{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c);margin-right:8px;vertical-align:1px}
+.mb-pi{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;color:var(--mb-gold);background:radial-gradient(circle at 50% 40%,rgba(255,190,110,.16),rgba(255,190,110,.03) 70%);border:1px solid rgba(232,180,110,.28);box-shadow:0 0 0 4px rgba(232,180,110,.04)}
+.mb-pi .mb-ico{width:22px;height:22px}
+.mb-fd{position:absolute;top:9px;right:9px;width:12px;height:16px;display:none}
+.mb-fd i{position:absolute;inset:0;border-radius:50% 50% 45% 45%/62% 62% 38% 38%;background:radial-gradient(circle at 50% 78%,#FFF8E0,#FFC25A 50%,#E9601E);box-shadow:0 0 10px 2px rgba(255,160,60,.55);transform-origin:50% 100%;animation:mbFlick 2.2s ease-in-out infinite}
+body.mf-on.mb-on .rit #pracs .prac.mf-ok .mb-fd{display:block}
+body.mf-on.mb-on .rit #pracs .prac.mf-ok{border-color:rgba(255,190,110,.42)!important;box-shadow:0 18px 30px -22px rgba(0,0,0,.95),0 0 26px -10px rgba(255,160,70,.5),inset 0 1px 0 rgba(255,230,190,.1)!important}
+body.mf-on.mb-on .rit #pracs .prac.mf-ok .mb-pi{background:radial-gradient(circle at 50% 40%,rgba(255,190,110,.32),rgba(255,190,110,.06) 70%);border-color:rgba(255,200,130,.55)}
+body.mf-on.mb-on .rit #pracs .prac::after{display:none!important}
+
+/* --- oda başlığı --- */
+body.mb-on #mf-roomh{position:relative;background:radial-gradient(80% 120% at 0% 0%,rgba(255,170,80,.16),transparent 60%),linear-gradient(165deg,#24180F,#130C08)!important;border:1px solid rgba(232,180,110,.22)!important;border-radius:22px!important;box-shadow:0 26px 50px -28px rgba(0,0,0,.95)!important;color:var(--mb-ink)!important;overflow:hidden}
+body.mb-on #mf-roomh::before,body.mb-on #mf-roomh::after{display:none!important}
+body.mb-on #mf-roomh .mfr-back{background:rgba(255,255,255,.05)!important;border:1px solid rgba(232,180,110,.25)!important;color:var(--mb-gold)!important;box-shadow:none!important}
+body.mb-on #mf-roomh .mfr-ok{background:rgba(255,160,70,.14)!important;color:#FFC27A!important;border:0!important}
+body.mb-on #mf-roomh .mfr-ic{background:radial-gradient(circle at 50% 40%,rgba(255,190,110,.2),rgba(255,190,110,.04) 70%)!important;border:1px solid rgba(232,180,110,.32)!important;color:var(--mb-gold)!important;box-shadow:0 0 24px -6px rgba(255,170,80,.4)!important}
+body.mb-on #mf-roomh .mfr-ic .mb-ico{width:26px;height:26px}
+body.mb-on #mf-roomh .mfr-t b{font-family:var(--f-display)!important;font-weight:400!important;color:#F7EBD8!important}
+body.mb-on #mf-roomh .mfr-t small{color:#CDB79A!important}
+
+/* --- oda içi kartlar --- */
+body.mb-on .rit .lcard,body.mb-on .rit .qcard,body.mb-on .rit .rpanel>.lcard,body.mb-on .rit .gsur>*,body.mb-on .rit .moonc,body.mb-on .rit .hrow,body.mb-on .rit .mk-intro{
+ background:radial-gradient(90% 60% at 50% 0%,rgba(255,180,90,.06),transparent 70%),linear-gradient(170deg,rgba(34,23,16,.94),rgba(18,12,8,.94))!important;border:1px solid rgba(232,180,110,.17)!important;box-shadow:0 22px 44px -28px rgba(0,0,0,.95),inset 0 1px 0 rgba(255,230,190,.05)!important;color:var(--mb-ink)!important}
+body.mb-on .rit .lcard *:not(.btn):not(.mb-ico):not(svg *),body.mb-on .rit .qcard *,body.mb-on .rit .gsur *{border-color:rgba(232,180,110,.16)}
+body.mb-on .rit .lcard h3,body.mb-on .rit .lcard b,body.mb-on .rit .lcard strong,body.mb-on .rit .qcard b{color:#F3E6D3}
+body.mb-on .rit .fine,body.mb-on .rit small{color:#AE977D}
+body.mb-on .rit .step{background:rgba(232,180,110,.14)!important;color:var(--mb-gold)!important;border:1px solid rgba(232,180,110,.3)!important;box-shadow:none!important}
+body.mb-on .rit textarea,body.mb-on .rit input[type="text"],body.mb-on .rit input:not([type]){background:rgba(0,0,0,.32)!important;border:1px solid rgba(232,180,110,.2)!important;color:#F3E6D3!important;box-shadow:inset 0 2px 8px rgba(0,0,0,.35)!important}
+body.mb-on .rit textarea::placeholder,body.mb-on .rit input::placeholder{color:#7F6B57!important;font-style:italic}
+body.mb-on .rit textarea:focus,body.mb-on .rit input:focus{border-color:rgba(232,180,110,.55)!important;outline:none!important}
+body.mb-on .rit .btn,body.mb-on .rit .psave{background:linear-gradient(180deg,#F4C979,#D9893A)!important;color:#2A1606!important;border:0!important;box-shadow:0 10px 26px -12px rgba(255,150,60,.75),inset 0 1px 0 rgba(255,255,255,.4)!important}
+body.mb-on .rit .btn:disabled{opacity:.55}
+body.mb-on .rit .pill,body.mb-on .rit .ksub,body.mb-on .rit .nft,body.mb-on .rit .idea-next,body.mb-on .rit .popt,body.mb-on .rit .yg-f{background:rgba(255,255,255,.035)!important;border:1px solid rgba(232,180,110,.2)!important;color:#E3D0B6!important;box-shadow:none!important}
+body.mb-on .rit .nft[aria-pressed="true"],body.mb-on .rit .nft.on,body.mb-on .rit .popt.on,body.mb-on .rit .popt[aria-pressed="true"],body.mb-on .rit .ksub.on,body.mb-on .rit .ksub[aria-pressed="true"]{background:rgba(232,180,110,.15)!important;border-color:var(--mb-gold)!important;color:#FFE3B0!important}
+body.mb-on .rit .nft small,body.mb-on .rit .popt small{color:#AE977D!important}
+body.mb-on .rit .idea,body.mb-on .rit .aff-sug{background:rgba(0,0,0,.25)!important;border:1px solid rgba(232,180,110,.2)!important;color:#E9D9C2!important;box-shadow:none!important}
+body.mb-on .rit .idea-use,body.mb-on .rit .aff-use{background:rgba(232,180,110,.18)!important;color:#FFD89A!important;border:0!important}
+body.mb-on .rit .yg-f .e,body.mb-on .rit .yg-f span{color:inherit}
+body.mb-on .rit .yg-f .go{background:linear-gradient(180deg,#F4C979,#D9893A)!important;color:#2A1606!important}
+body.mb-on .rit .qcard p,body.mb-on .rit .qcard blockquote{color:#F7EBD8!important}
+body.mb-on .rit .qcard::before{color:rgba(232,180,110,.55)!important}
+body.mb-on .rit .lcard .mi,body.mb-on .rit .step .mi,body.mb-on .rit .hrow .mi{color:#E8B464!important;--deep:#E8B464!important}
+body.mb-on .rit .idea-use{background:transparent!important}
+body.mb-on .rit .idea-use b{background:linear-gradient(180deg,#F4C979,#D9893A)!important;color:#2A1606!important;box-shadow:none!important}
+body.mb-on .rit .idea-use .no-mi{display:none!important}
+body.mb-on .rit .idea-t small{color:#C9A574!important}body.mb-on .rit .idea-t em{color:#F3E6D3!important}
+body.mb-on .rit .yg-f .e{background:rgba(255,255,255,.06)!important;box-shadow:none!important}
+body.mb-on .rit .skrow>span{background:rgba(232,180,110,.12)!important;color:#E8B464!important}
+body.mb-on .rit .nextf{color:#E8B464!important;background:none!important}
+/* nefes: mum alevi küresi */
+body.mb-on .rit .nfc{background:radial-gradient(circle at 50% 62%,#FFF4D6 0%,#FFD486 28%,#F59A3E 58%,#8A3412 100%)!important;color:#2A1606!important;box-shadow:0 0 40px 6px rgba(255,150,60,.35),0 0 120px 20px rgba(255,130,50,.18)!important}
+body.mb-on .rit .nfstage{background:none!important}
+body.mb-on .rit .nfstage::before,body.mb-on .rit .nfstage::after{border-color:rgba(232,180,110,.18)!important;background:radial-gradient(circle,rgba(255,170,80,.08),transparent 70%)!important}
+/* bırak gitsin: harfler kor olur */
+body.mb-on .rit .bk-fx span{color:#FFC27A!important;text-shadow:0 0 6px #FF8A2A,0 0 14px rgba(255,100,30,.6)!important}
+body.mb-on .rit .bk-orb{background:radial-gradient(circle,#FFF2D0,#FFB04A 45%,rgba(255,120,40,0) 70%)!important}
+/* hediye kartı */
+body.mb-on .rit .gsur *{color:inherit}
+body.mb-on .rit .gsur [class*="-k"],body.mb-on .rit .gsur .k{color:#E8B464!important}
+/* tören */
+body.mb-on .mfcer{background:radial-gradient(circle at 50% 42%,rgba(255,214,150,.96),rgba(200,100,40,.9) 42%,rgba(14,9,6,.97) 82%)!important}
+body.mb-on .mfcer-c b{color:#2A1606}
+/* yukarı ve alt bar uyumu */
+body.mb-on #bnav{background:rgba(20,13,9,.82)!important;border-color:rgba(232,180,110,.16)!important}
+body.mb-on #bnav button small{color:#CDB79A!important}
+
+/* --- ana sayfa kutusu --- */
+.bn.bn-rit.bnm{background:radial-gradient(80% 70% at 85% 10%,rgba(255,170,80,.42),transparent 60%),radial-gradient(70% 60% at 0% 100%,rgba(150,110,210,.28),transparent 65%),linear-gradient(160deg,#6E4A3A,#3E2A35)!important;border:1px solid rgba(255,210,150,.25)!important}
+.bn.bnm .bn-art{transform:none!important;width:56px!important;height:66px!important;right:12px!important;top:8px!important;filter:drop-shadow(0 0 10px rgba(255,170,80,.5))}
+.bn.bnm .bnm-c{width:100%;height:100%;overflow:visible}
+.bn.bnm .bnm-f{transform-box:fill-box;transform-origin:50% 100%;animation:mbFlick 2.4s ease-in-out infinite}
+.bn.bnm .bnm-h{animation:mbHalo 3s ease-in-out infinite}
+.bn.bnm .bn-tx b{color:#FFF4E2!important;text-shadow:none!important}
+.bn.bnm .bn-tx small{color:#F1D9BC!important}
+.bn.bnm .bn-ring circle:last-child{stroke:#FFD08A}
+.bnm-k{position:absolute;top:12px;left:14px;font:800 9.5px var(--f-body);letter-spacing:.22em;color:#FFD9A0;opacity:.9}
+@media (prefers-reduced-motion:reduce){.mb-altar *,.mb-light,.bn.bnm *,.mb-fd i,#mb-bg .mb-moon{animation:none!important}}
+
+
 /* v0.94 sepet */
 .sp-rail{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:10px 0 0;padding:2px 0 6px;scrollbar-width:none}.sp-rail::-webkit-scrollbar{display:none}
 .sp-c{flex:none;width:148px;display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:12px;border:0;border-radius:16px;background:var(--surface,#fff);box-shadow:inset 0 0 0 1px rgba(150,70,35,.14);color:var(--ink);text-align:left;font-family:var(--f-body);cursor:pointer;scroll-snap-align:start}
@@ -20728,6 +20906,152 @@ function useHit(sect){try{if(!sect||!navigator.onLine)return;const k="mf-use-"+d
 (function(){const _f=fxOpen;fxOpen=function(){const r=_f.apply(this,arguments);try{useHit("antrenman");}catch(e){}return r;};})();
 (function(){const _m=mfShopOpen;mfShopOpen=function(){const r=_m.apply(this,arguments);try{useHit("fiyat");}catch(e){}return r;};})();
 setTimeout(()=>useHit("acilis"),2500);
+
+/* ===== v0.96 MABET: Manifest Me — gece ormanı, mum ışığı, ahşap sunak, ateş böcekleri, ortam sesi ===== */
+const MB_IC={
+ "369":'<path d="M12 3.5l1.2 3.1 3.1 1.2-3.1 1.2L12 12.1l-1.2-3.1L7.7 7.8l3.1-1.2z"/><circle cx="5" cy="19" r="1.6"/><circle cx="12" cy="19" r="1.6"/><circle cx="19" cy="19" r="1.6"/><path d="M5 15.5v1.5M12 14.5v2.5M19 15.5v1.5" opacity=".55"/>',
+ sukran:'<path d="M12 20s-6.5-4-6.5-9A3.6 3.6 0 0 1 12 8.8 3.6 3.6 0 0 1 18.5 11c0 5-6.5 9-6.5 9z"/><path d="M12 2.5v2.2M6.2 4.6l1.3 1.6M17.8 4.6l-1.3 1.6" opacity=".6"/>',
+ nefes:'<path d="M3 9h10.5a3 3 0 1 0-3-3"/><path d="M3 13h15a3 3 0 1 1-3 3"/><path d="M3 17h6" opacity=".55"/>',
+ yoga:'<path d="M12 19c-3-1.8-4.5-4.6-4.5-8 2.2.6 3.7 2 4.5 4 .8-2 2.3-3.4 4.5-4 0 3.4-1.5 6.2-4.5 8z"/><path d="M12 15c-.9-2.6-.9-5.6 0-9 .9 3.4.9 6.4 0 9z"/><path d="M3 19c3.2 0 5.5-.8 9 0 3.5-.8 5.8 0 9 0" opacity=".55"/>',
+ soz:'<path d="M7 4h11a2 2 0 0 1 0 4h-1v10a2 2 0 0 1-2 2H6a2 2 0 0 1 0-4h1z"/><path d="M6 20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/><path d="M10.5 9.5h4M10.5 12.5h4" opacity=".55"/>',
+ birak:'<path d="M12 21c-3.6 0-6-2.4-6-5.6 0-3.4 3-5.2 3.6-8.9C12.4 8 13 10.4 13 12c1-.5 1.8-1.7 2-3 1.9 1.6 3 3.9 3 6.4C18 18.6 15.6 21 12 21z"/><path d="M12 21c-1.5 0-2.5-1-2.5-2.4 0-1.6 1.5-2.4 2-4 1.5 1 3 2.4 3 4 0 1.4-1 2.4-2.5 2.4z" opacity=".55"/>',
+ ay:'<path d="M19.5 14.5A8 8 0 0 1 9.5 4.5a8 8 0 1 0 10 10z"/><path d="M17 3.5l.6 1.5 1.5.6-1.5.6L17 7.7l-.6-1.5-1.5-.6 1.5-.6z" opacity=".7"/>',
+ pano:'<circle cx="5" cy="17" r="1.5"/><circle cx="9.5" cy="8" r="1.5"/><circle cx="15" cy="12.5" r="1.5"/><circle cx="19.5" cy="5" r="1.5"/><path d="M6 15.6l2.8-6.2M10.8 9l3 2.4M16 11.2l2.6-4.8" opacity=".6"/>',
+ mektup:'<rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/><circle cx="12" cy="15.6" r="2.1" fill="currentColor" fill-opacity=".35"/>'};
+const mbIco=(k,c)=>`<svg class="mb-ico ${c||""}" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${MB_IC[k]||MB_IC["369"]}</g></svg>`;
+function mbX(){try{return rx();}catch(e){return {};}}
+function mbLit(){return mbX().mbLit===dkey();}
+/* sunak: ahşap raf, üç mum, ametist, tütsü */
+function mbAltarSVG(){
+ const cand=(x,w,top,id,dl)=>{const cx=x+w/2;return `<g class="mb-cd">
+  <rect x="${x}" y="${top}" width="${w}" height="${150-top}" rx="3" fill="url(#mbWax)"/>
+  <ellipse cx="${cx}" cy="${top+1}" rx="${w/2}" ry="3.2" fill="#E9D8BA"/>
+  <path d="M${x+3} ${top+2} q2 ${8+id*3} 3 0 M${x+w-8} ${top+2} q1.6 ${12-id*2} 3 0" fill="#F6EAD3" opacity=".9"/>
+  <path d="M${cx} ${top} q1.2 -4 -.4 -7" stroke="#2A1C12" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <g transform="translate(${cx} ${top-6})"><g class="mb-fl" style="--dl:${dl}"><ellipse class="mb-fh" cx="0" cy="-10" rx="16" ry="22" fill="url(#mbHalo)"/>
+   <path class="mb-f1" d="M0 -27C6 -17 8.5 -9 6 -4.2 4.2 -.5 2 .4 0 .4S-4.2 -.5-6 -4.2C-8.5 -9-6 -17 0 -27z" fill="url(#mbFl)"/>
+   <ellipse cx="0" cy="-3.2" rx="2.4" ry="3.6" fill="#7FA6FF" opacity=".55"/></g></g>
+  <path class="mb-sm0" d="M${cx} ${top-8} c-3 -8 4 -12 0 -20 c-3 -6 3 -10 1 -16" fill="none" stroke="#D8CFC6" stroke-width="1.3" stroke-linecap="round"/></g>`;};
+ return `<svg class="mb-altar" viewBox="0 0 320 170" aria-hidden="true"><defs>
+  <radialGradient id="mbGlow" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#FFB45C" stop-opacity=".55"/><stop offset=".45" stop-color="#FF8A3A" stop-opacity=".18"/><stop offset="1" stop-color="#FF8A3A" stop-opacity="0"/></radialGradient>
+  <radialGradient id="mbHalo"><stop offset="0" stop-color="#FFD88A" stop-opacity=".7"/><stop offset="1" stop-color="#FFB050" stop-opacity="0"/></radialGradient>
+  <radialGradient id="mbFl" cx=".5" cy=".78" r=".75"><stop offset="0" stop-color="#FFFBEA"/><stop offset=".35" stop-color="#FFE08A"/><stop offset=".7" stop-color="#FF9A2E"/><stop offset="1" stop-color="#E5531A" stop-opacity=".2"/></radialGradient>
+  <linearGradient id="mbWax" x1="0" x2="1"><stop offset="0" stop-color="#B69673"/><stop offset=".35" stop-color="#F2E3C6"/><stop offset=".7" stop-color="#E0CBA6"/><stop offset="1" stop-color="#9C7C5A"/></linearGradient>
+  <linearGradient id="mbWood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7A4E30"/><stop offset=".25" stop-color="#5A3820"/><stop offset="1" stop-color="#2E1C10"/></linearGradient>
+  <linearGradient id="mbAm1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D9C6FF"/><stop offset=".5" stop-color="#9372D6"/><stop offset="1" stop-color="#4A2F84"/></linearGradient>
+  <linearGradient id="mbAm2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9A0F2"/><stop offset="1" stop-color="#3B2470"/></linearGradient></defs>
+ <ellipse class="mb-glow" cx="160" cy="92" rx="160" ry="92" fill="url(#mbGlow)"/>
+ <g class="mb-am"><path d="M52 150l6-30 7 10 2 20z" fill="url(#mbAm2)"/><path d="M60 150l8-44 9 18-3 26z" fill="url(#mbAm1)"/><path d="M73 150l5-22 7 9-1 13z" fill="url(#mbAm2)"/><path d="M68 106l1 18 8 0z" fill="#F1E8FF" opacity=".55"/><path d="M58 120l2 10 5 0z" fill="#E6DAFF" opacity=".4"/></g>
+ <ellipse cx="96" cy="149" rx="7" ry="2.6" fill="#1B120B"/><ellipse cx="94" cy="146.6" rx="5" ry="3.4" fill="#6E6058"/><ellipse cx="99" cy="147.4" rx="4" ry="2.6" fill="#8C7E73"/>
+ ${cand(110,30,82,1,0)}${cand(146,34,52,2,.35)}${cand(186,28,94,3,.7)}
+ <g class="mb-inc"><path d="M236 150c0-5 30-5 30 0z" fill="#3A2416"/><path d="M251 146l12-44" stroke="#5B3A22" stroke-width="2" stroke-linecap="round"/><circle class="mb-emb" cx="263" cy="102" r="2" fill="#FF7A2A"/>
+  <path class="mb-smk s1" d="M263 100c-6-10 6-16 0-27s5-15 1-26" fill="none" stroke="#E8DFD6" stroke-width="2.2" stroke-linecap="round"/>
+  <path class="mb-smk s2" d="M263 100c5-9-5-15 1-25s-4-14 2-24" fill="none" stroke="#E8DFD6" stroke-width="1.6" stroke-linecap="round"/></g>
+ <rect x="18" y="148" width="284" height="12" rx="3" fill="url(#mbWood)"/><rect x="18" y="148" width="284" height="1.6" rx=".8" fill="#B07A4C" opacity=".7"/>
+ <path d="M30 153.5c40-1.6 80 1.4 120 0s90 1.2 140-.6M40 157c50-1 90 1 140-.2" stroke="#1C110A" stroke-width=".7" fill="none" opacity=".7"/>
+ <rect x="26" y="160" width="268" height="6" rx="2" fill="#1A0F08"/></svg>`;}
+/* arka plan: gökyüzü + ay + çam silueti + ateş böcekleri */
+function mbTrees(seed,h,base,col,step){let s=seed;const r=()=>{s=(s*9301+49297)%233280;return s/233280;};let d=`M0 200L0 ${base}`;let x=-10;
+ while(x<420){const w=step*(.7+r()*.8),th=h*(.55+r()*.6),cx=x+w/2,top=base-th;
+  d+=`L${(x).toFixed(1)} ${base}`;const tiers=4;for(let i=0;i<tiers;i++){const ty=top+th*i/tiers,bw=w*(.25+.75*(i+1)/tiers)/2;d+=`L${(cx-bw*.35).toFixed(1)} ${(ty+th/tiers*.35).toFixed(1)}L${(cx-bw).toFixed(1)} ${(ty+th/tiers).toFixed(1)}`;}
+  d+=`L${cx.toFixed(1)} ${top.toFixed(1)}`;for(let i=tiers-1;i>=0;i--){const ty=top+th*i/tiers,bw=w*(.25+.75*(i+1)/tiers)/2;d+=`L${(cx+bw).toFixed(1)} ${(ty+th/tiers).toFixed(1)}L${(cx+bw*.35).toFixed(1)} ${(ty+th/tiers*.35).toFixed(1)}`;}
+  d+=`L${(x+w).toFixed(1)} ${base}`;x+=w*(.55+r()*.5);}
+ d+=`L420 ${base}L420 200Z`;return `<path d="${d}" fill="${col}"/>`;}
+function mbBgMount(){let B=document.getElementById("mb-bg");if(B)return B;B=document.createElement("div");B.id="mb-bg";B.setAttribute("aria-hidden","true");
+ let moon="";try{moon=moonSVG(moonAge());}catch(e){}
+ B.innerHTML=`<div class="mb-sky"></div><div class="mb-moon">${moon}</div><canvas id="mb-cv"></canvas>
+  <svg class="mb-forest" viewBox="0 0 400 200" preserveAspectRatio="xMidYMax slice">${mbTrees(7,120,150,"#1B1422",34)}<rect x="0" y="120" width="400" height="80" fill="url(#mbMist)"/>${mbTrees(31,95,176,"#0A0706",28)}
+  <defs><linearGradient id="mbMist" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A2A35" stop-opacity="0"/><stop offset=".5" stop-color="#3A2A35" stop-opacity=".35"/><stop offset="1" stop-color="#0A0706" stop-opacity="0"/></linearGradient></defs></svg>`;
+ document.body.prepend(B);return B;}
+let mbRAF=0,mbP=null,mbSpr=null;
+function mbFlies(){const cv=document.getElementById("mb-cv");if(!cv)return;const dpr=Math.min(2,window.devicePixelRatio||1);const W=innerWidth,H=innerHeight;
+ if(cv.width!==Math.round(W*dpr)||cv.height!==Math.round(H*dpr)){cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);cv.style.width=W+"px";cv.style.height=H+"px";}
+ const g=cv.getContext("2d");g.setTransform(dpr,0,0,dpr,0,0);
+ if(!mbSpr){mbSpr=[["255,214,140"],["236,246,170"],["255,170,90"]].map(([c])=>{const s=document.createElement("canvas");s.width=s.height=48;const x=s.getContext("2d");const r=x.createRadialGradient(24,24,0,24,24,24);r.addColorStop(0,`rgba(${c},1)`);r.addColorStop(.18,`rgba(${c},.85)`);r.addColorStop(.45,`rgba(${c},.18)`);r.addColorStop(1,`rgba(${c},0)`);x.fillStyle=r;x.fillRect(0,0,48,48);return s;});}
+ if(!mbP){mbP=[];const n=W<500?24:38;for(let i=0;i<n;i++)mbP.push({x:Math.random()*W,y:H*.25+Math.random()*H*.75,vx:(Math.random()-.5)*.18,vy:-(.05+Math.random()*.22),r:5+Math.random()*9,ph:Math.random()*6.28,sp:.6+Math.random()*1.4,k:Math.random()<.55?0:Math.random()<.6?1:2,w:Math.random()*6.28});}
+ const red=matchMedia("(prefers-reduced-motion: reduce)").matches;let t0=performance.now();
+ const fr=t=>{const dt=Math.min(50,t-t0)/16.7;t0=t;g.clearRect(0,0,W,H);
+  for(const p of mbP){if(!red){p.w+=.01*dt;p.x+=(p.vx+Math.sin(p.w)*.12)*dt;p.y+=p.vy*dt;p.ph+=.03*p.sp*dt;if(p.y<-20){p.y=H+10;p.x=Math.random()*W;}if(p.x<-20)p.x=W+10;if(p.x>W+20)p.x=-10;}
+   const a=red?.6:Math.max(0,.25+.75*Math.sin(p.ph))**1.5;if(a<.02)continue;g.globalAlpha=a;const s=p.r*2;g.drawImage(mbSpr[p.k],p.x-s/2,p.y-s/2,s,s);}
+  g.globalAlpha=1;if(!red&&document.body.classList.contains("mb-on")&&!document.hidden)mbRAF=requestAnimationFrame(fr);else mbRAF=0;};
+ cancelAnimationFrame(mbRAF);mbRAF=requestAnimationFrame(fr);}
+addEventListener("resize",()=>{if(document.body.classList.contains("mb-on")){mbP=null;mbFlies();}});
+document.addEventListener("visibilitychange",()=>{if(!document.hidden&&document.body.classList.contains("mb-on")&&!mbRAF)mbFlies();if(document.hidden)mbAmbStop(true);else if(document.body.classList.contains("mb-on")&&mbX().mbSnd)mbAmbStart();});
+/* ortam sesi: ateş çıtırtısı + derin drone + ara ara rüzgâr çanı */
+let mbAmb=null;
+function mbAmbStart(){if(mbAmb)return;const C=sndCtx();if(!C)return;const M=C.createGain();M.gain.value=0;M.connect(C.destination);M.gain.linearRampToValueAtTime(.9,C.currentTime+2.5);
+ const nodes=[];const t=C.currentTime;
+ [[98,.035],[98.6,.03],[147,.018],[196.2,.009]].forEach(([f,a])=>{const o=C.createOscillator(),g=C.createGain();o.type="sine";o.frequency.value=f;g.gain.value=a;const l=C.createOscillator(),lg=C.createGain();l.frequency.value=.05+Math.random()*.08;lg.gain.value=a*.6;l.connect(lg);lg.connect(g.gain);o.connect(g);g.connect(M);o.start(t);l.start(t);nodes.push(o,l);});
+ const len=C.sampleRate*4,buf=C.createBuffer(1,len,C.sampleRate),d=buf.getChannelData(0);let last=0;for(let i=0;i<len;i++){const w=Math.random()*2-1;last=(last+.02*w)/1.02;d[i]=last*3.2;}
+ const br=C.createBufferSource();br.buffer=buf;br.loop=true;const bf=C.createBiquadFilter();bf.type="lowpass";bf.frequency.value=420;const bg=C.createGain();bg.gain.value=.05;br.connect(bf);bf.connect(bg);bg.connect(M);br.start(t);nodes.push(br);
+ const crack=()=>{if(!mbAmb)return;const T=C.currentTime;const n=sndNoise(C,.05),f=C.createBiquadFilter(),g=C.createGain();f.type="bandpass";f.frequency.value=1200+Math.random()*3200;f.Q.value=.9;g.gain.setValueAtTime(.0001,T);g.gain.exponentialRampToValueAtTime(.05+Math.random()*.09,T+.003);g.gain.exponentialRampToValueAtTime(.0001,T+.03+Math.random()*.05);n.connect(f);f.connect(g);g.connect(M);n.start(T);n.stop(T+.1);
+  mbAmb.ct=setTimeout(crack,Math.random()<.25?30+Math.random()*80:180+Math.random()*900);};
+ const chime=()=>{if(!mbAmb)return;const T=C.currentTime;const sc=[1046.5,1174.7,1318.5,1568,1760];try{sndBell(C,M,T,sc[Math.floor(Math.random()*sc.length)],2.8,.035);if(Math.random()<.5)sndBell(C,M,T+.35,sc[Math.floor(Math.random()*sc.length)],2.4,.025);}catch(e){}mbAmb.ch=setTimeout(chime,7000+Math.random()*9000);};
+ mbAmb={C,M,nodes};crack();mbAmb.ch=setTimeout(chime,2500);mbSndBtn();}
+function mbAmbStop(keep){if(!mbAmb)return;const A=mbAmb;mbAmb=null;clearTimeout(A.ct);clearTimeout(A.ch);try{const T=A.C.currentTime;A.M.gain.cancelScheduledValues(T);A.M.gain.setValueAtTime(A.M.gain.value,T);A.M.gain.linearRampToValueAtTime(0,T+.8);setTimeout(()=>{A.nodes.forEach(n=>{try{n.stop();}catch(e){}});try{A.M.disconnect();}catch(e){}},900);}catch(e){}mbSndBtn();}
+function mbSndBtn(){const b=document.getElementById("mb-snd");if(!b)return;const on=!!mbAmb;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on);b.querySelector("small").textContent=on?"Ses açık":"Ortam sesi";}
+/* mum yakma */
+function mbMatch(){const C=sndCtx();if(!C||C.state!=="running")return;const T=C.currentTime;const n=sndNoise(C,.5),f=C.createBiquadFilter(),g=C.createGain();f.type="bandpass";f.frequency.setValueAtTime(3200,T);f.frequency.exponentialRampToValueAtTime(700,T+.4);g.gain.setValueAtTime(.0001,T);g.gain.exponentialRampToValueAtTime(.28,T+.02);g.gain.exponentialRampToValueAtTime(.02,T+.18);g.gain.exponentialRampToValueAtTime(.0001,T+.5);n.connect(f);f.connect(g);g.connect(C.destination);n.start(T);n.stop(T+.55);
+ try{setTimeout(()=>sndPlay("bowl"),450);}catch(e){}}
+function mbLight(){const X=mbX();if(X.mbLit===dkey())return;X.mbLit=dkey();X.mbN=(X.mbN||0)+1;save();const H=document.querySelector(".mb-hero");
+ if(H){H.classList.add("igniting");setTimeout(()=>H.classList.remove("igniting"),1600);}if(sndOn())mbMatch();if(navigator.vibrate)try{navigator.vibrate([12,40,18]);}catch(e){}mbHero();}
+function mbHero(){const R=document.querySelector(".rit");if(!R)return;const hero=R.querySelector(".rhero");if(!hero)return;
+ let H=hero.querySelector(".mb-hero");if(!H){H=document.createElement("div");H.className="mb-hero";hero.appendChild(H);}
+ const lit=mbLit(),X=mbX();let ph="";try{ph=moonPhase(moonAge())[1];}catch(e){}
+ const int=document.getElementById("rit-int"),sub=int?int.innerHTML:"";const n=window.mfDoneN||0;
+ const h=new Date().getHours(),zm=h<5?"Gece yarısı":h<11?"Sabah":h<17?"Gün ortası":h<21?"Akşam":"Gece";
+ H.classList.toggle("lit",lit);
+ H.innerHTML=`<button type="button" class="mb-snd" id="mb-snd" aria-pressed="false"><span class="mb-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><small>Ortam sesi</small></button>
+  <div class="mb-stage">${mbAltarSVG()}</div>
+  <p class="mb-kick"><span>${zm}</span><i></i><span>${esc(ph||"Gökyüzü")}</span></p>
+  <h2 class="mb-h">Manifest <em>Me</em></h2>
+  <p class="mb-sub">${lit?(n?`Bugün <b>${n} ritüel</b> yaptın. Mumun hâlâ yanıyor.`:"Mumun yanıyor. Şimdi bir ritüel seç."):"Önce mumunu yak. Bu an yalnızca senin."}</p>
+  ${lit?`<p class="mb-lit"><span class="mb-dot"></span>${X.mbN>1?`${X.mbN}. kez mum yaktın`:"İlk mumun yandı"}</p>`:`<button type="button" class="mb-light" id="mb-light"><span class="mb-mt" aria-hidden="true"></span>Mumunu yak</button>`}`;
+ const L=H.querySelector("#mb-light");if(L)L.onclick=mbLight;
+ const altar=H.querySelector(".mb-stage");if(altar&&!lit)altar.onclick=mbLight;
+ H.querySelector("#mb-snd").onclick=()=>{const X2=mbX();if(mbAmb){mbAmbStop();X2.mbSnd=false;}else{const C=sndCtx();if(C&&C.state!=="running")C.resume().catch(()=>{});mbAmbStart();X2.mbSnd=true;}save();};
+ mbSndBtn();}
+function mbTiles(){document.querySelectorAll("#pracs .prac").forEach(b=>{const id=([...b.classList].find(c=>c.startsWith("pr-"))||"").slice(3);if(!id)return;let s=b.querySelector(".mb-pi");
+  if(!s){s=document.createElement("span");s.className="mb-pi";s.innerHTML=mbIco(id);b.prepend(s);}
+  if(!b.querySelector(".mb-fd")){b.insertAdjacentHTML("beforeend",'<span class="mb-fd" aria-hidden="true"><i></i></span>');}});
+ const ic=document.querySelector("#mf-roomh .mfr-ic");if(ic&&window.mfRoomOn){const k=typeof prac!=="undefined"?prac:"369";if(ic.dataset.mb!==k){ic.dataset.mb=k;ic.innerHTML=mbIco(k);}}}
+function mbFoc(){const MC={bolluk:"#E8B464",ask:"#E98A86",saglik:"#9FC28E",kariyer:"#8FB3E0",huzur:"#B9A2E8",aile:"#E6A07A"};
+ document.querySelectorAll(".rit [data-mff]").forEach(b=>{if(b.dataset.mb)return;const F=MF_FOC.find(x=>x[0]===b.dataset.mff);if(!F)return;b.dataset.mb=1;b.innerHTML=`<i class="mb-fc" style="--c:${MC[F[0]]}"></i>${esc(F[2])}`;});
+ const al=document.querySelector(".rit .mf-al span");if(al&&!al.dataset.mb){const F=MF_FOC.find(x=>x[0]===mfFoc());if(F){al.dataset.mb=1;al.innerHTML=`<i class="mb-fc" style="--c:${MC[F[0]]}"></i>${esc(F[2])}`;}}}
+function mbPaint(){if(!document.body.classList.contains("mb-on"))return;try{mbHero();mbTiles();mbFoc();}catch(e){console.error(e);}}
+(function(){const _r=ritRender;ritRender=function(){const r=_r.apply(this,arguments);try{mbPaint();}catch(e){}return r;};
+ const _d=mfDayRender;mfDayRender=function(){const r=_d.apply(this,arguments);try{mbPaint();}catch(e){}return r;};
+ let prev=null;const _s=show;show=function(){const R=document.documentElement,on=step===60;
+  if(!on&&prev!==null){R.dataset.mf=prev;prev=null;}
+  const r=_s.apply(this,arguments);try{const was=document.body.classList.contains("mb-on");document.body.classList.toggle("mb-on",on);R.classList.toggle("mb-html",on);
+  if(on){if(prev===null)prev=R.dataset.mf||"day";R.dataset.mf="dusk";mbBgMount();if(!was){mbP=null;mbFlies();if(mbX().mbSnd)mbAmbStart();}mbPaint();}
+  else if(was){mbAmbStop();cancelAnimationFrame(mbRAF);mbRAF=0;}
+ }catch(e){console.error(e);}return r;};})();
+/* paylaşım kartı: mum ışığında olumlama */
+mfShare=async function(txt,F){try{await document.fonts.ready;}catch(e){}const W=1080,H=1350,c=document.createElement("canvas");c.width=W;c.height=H;const g=c.getContext("2d");
+ let gr=g.createLinearGradient(0,0,0,H);gr.addColorStop(0,"#120D16");gr.addColorStop(.55,"#1A110C");gr.addColorStop(1,"#0B0705");g.fillStyle=gr;g.fillRect(0,0,W,H);
+ let rg=g.createRadialGradient(W/2,1020,10,W/2,1020,760);rg.addColorStop(0,"rgba(255,170,80,.42)");rg.addColorStop(.5,"rgba(255,130,50,.10)");rg.addColorStop(1,"rgba(255,130,50,0)");g.fillStyle=rg;g.fillRect(0,0,W,H);
+ for(let i=0;i<70;i++){const x=Math.random()*W,y=Math.random()*H*.55,r=Math.random()*1.8+.4;g.fillStyle=`rgba(255,240,215,${.15+Math.random()*.5})`;g.beginPath();g.arc(x,y,r,0,7);g.fill();}
+ for(let i=0;i<26;i++){const x=Math.random()*W,y=H*.35+Math.random()*H*.6,r=8+Math.random()*16;const q=g.createRadialGradient(x,y,0,x,y,r);q.addColorStop(0,"rgba(255,214,140,.9)");q.addColorStop(.3,"rgba(255,214,140,.25)");q.addColorStop(1,"rgba(255,214,140,0)");g.fillStyle=q;g.fillRect(x-r,y-r,r*2,r*2);}
+ g.save();g.translate(W/2,250);g.strokeStyle="rgba(232,180,100,.45)";g.lineWidth=1.6;for(let i=0;i<12;i++){g.rotate(Math.PI/6);g.beginPath();g.ellipse(0,-62,14,38,0,0,7);g.stroke();}g.beginPath();g.arc(0,0,118,0,7);g.stroke();g.setLineDash([2,8]);g.beginPath();g.arc(0,0,134,0,7);g.stroke();g.restore();
+ const fl=(x,y,s)=>{const h=g.createRadialGradient(x,y-20*s,0,x,y-20*s,60*s);h.addColorStop(0,"rgba(255,220,150,.75)");h.addColorStop(1,"rgba(255,180,90,0)");g.fillStyle=h;g.beginPath();g.arc(x,y-20*s,60*s,0,7);g.fill();
+  const q=g.createRadialGradient(x,y-8*s,0,x,y-14*s,30*s);q.addColorStop(0,"#FFFBEA");q.addColorStop(.4,"#FFE08A");q.addColorStop(.8,"#FF9A2E");q.addColorStop(1,"rgba(229,83,26,.2)");g.fillStyle=q;g.beginPath();g.moveTo(x,y-48*s);g.bezierCurveTo(x+16*s,y-26*s,x+14*s,y,x,y);g.bezierCurveTo(x-14*s,y,x-16*s,y-26*s,x,y-48*s);g.fill();};
+ fl(W/2,272,1.25);
+ g.fillStyle="#E8B464";g.font="700 30px Inter, system-ui, sans-serif";g.textAlign="center";g.textBaseline="middle";
+ const lab=((F?F[2]+"  ·  ":"")+"BUGÜNÜN OLUMLAMASI").toLocaleUpperCase("tr");g.save();try{g.letterSpacing="6px";}catch(e){}g.fillText(lab,W/2,505);g.restore();
+ g.fillStyle="#F3E6D3";const fs=txt.length>60?62:72;g.font=`italic ${fs}px "DM Serif Display", Georgia, serif`;const words=("“"+txt+"”").split(" ");const lines=[];let ln="";words.forEach(w=>{const t2=ln?ln+" "+w:w;if(g.measureText(t2).width>W-200){lines.push(ln);ln=w;}else ln=t2;});lines.push(ln);
+ const y0=760-(lines.length-1)*fs*.62;lines.forEach((l,i)=>g.fillText(l,W/2,y0+i*fs*1.24));
+ g.strokeStyle="rgba(232,180,100,.5)";g.lineWidth=1.5;g.beginPath();g.moveTo(W/2-120,H-170);g.lineTo(W/2-14,H-170);g.moveTo(W/2+14,H-170);g.lineTo(W/2+120,H-170);g.stroke();g.fillStyle="#E8B464";g.save();g.translate(W/2,H-170);g.rotate(Math.PI/4);g.fillRect(-5,-5,10,10);g.restore();
+ g.fillStyle="rgba(243,230,211,.8)";g.font="600 32px Inter, system-ui, sans-serif";g.fillText("Manifest Me · Me First",W/2,H-112);g.font="500 26px Inter, system-ui, sans-serif";g.fillStyle="rgba(243,230,211,.45)";g.fillText("mefirst.app",W/2,H-68);
+ c.toBlob(async b=>{if(!b)return;const file=new File([b],"olumlama.png",{type:"image/png"});
+  try{if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],text:txt+" ✨ #MeFirst"});return;}}catch(e){if(e&&e.name==="AbortError")return;}
+  const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="olumlama.png";document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1500);},"image/png");};
+/* ana sayfa kutusu: mum ışığı */
+(function(){const _b=bentoRender;bentoRender=function(){_b.apply(this,arguments);try{const b=document.querySelector(".bn.bn-rit");if(!b)return;b.classList.add("bnm");const art=b.querySelector(".bn-art");
+  if(art&&!art.querySelector(".bnm-c"))art.innerHTML=`<svg class="bnm-c" viewBox="0 0 60 70" aria-hidden="true"><defs><radialGradient id="bnmH"><stop offset="0" stop-color="#FFD88A" stop-opacity=".75"/><stop offset="1" stop-color="#FFB050" stop-opacity="0"/></radialGradient><radialGradient id="bnmF" cx=".5" cy=".78" r=".75"><stop offset="0" stop-color="#FFFBEA"/><stop offset=".4" stop-color="#FFE08A"/><stop offset=".75" stop-color="#FF9A2E"/><stop offset="1" stop-color="#E5531A" stop-opacity=".2"/></radialGradient><linearGradient id="bnmW" x1="0" x2="1"><stop offset="0" stop-color="#B69673"/><stop offset=".4" stop-color="#F2E3C6"/><stop offset="1" stop-color="#9C7C5A"/></linearGradient></defs>
+   <circle cx="30" cy="22" r="24" fill="url(#bnmH)" class="bnm-h"/><rect x="21" y="34" width="18" height="34" rx="2.5" fill="url(#bnmW)"/><ellipse cx="30" cy="34.5" rx="9" ry="2" fill="#E9D8BA"/><path d="M30 34q.8-3-.3-5" stroke="#2A1C12" stroke-width="1.3" fill="none"/>
+   <g class="bnm-f"><path d="M30 10C34 17 35.5 22 34 25.5 33 28 31.5 28.6 30 28.6S27 28 26 25.5C24.5 22 26 17 30 10z" fill="url(#bnmF)"/></g></svg>`;
+  if(!b.querySelector(".bnm-k"))b.insertAdjacentHTML("afterbegin",`<span class="bnm-k">MABET</span>`);}catch(e){console.error(e);}};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
