@@ -20290,6 +20290,30 @@ waterRender=function(){const host=document.getElementById("cups");if(!host)retur
  sg.querySelectorAll("[data-w2s]").forEach(b=>b.onclick=()=>{const D=fday(),n=+b.dataset.w2s,nw=n===D.w?n-1:n;D.wt=D.wt||[];while(D.wt.length<nw)D.wt.push(Date.now());D.wt.length=Math.min(D.wt.length,nw);D.w=nw;fsave();fitRender();});
  const wm=document.getElementById("wmsg");if(wm)wm.hidden=true;};
 
+/* ===== v0.82.1 Hareket figürleri daha anlaşılır: iki bacak/kol net, ayaklar yönü gösterir, eller, burpee tek yöne bakar ===== */
+FG.burpee.k=[[100,104,0,0,0,[0,0],[0,0],[6,3],[-6,-3]],[96,142,55,0,0,[80,-25],[82,-23],[20,0],[22,0]],[92,135,80,0,0,[-60,-60],[-61,-61],[0,0],[-2,-2]],[96,142,55,0,0,[80,-25],[82,-23],[20,0],[22,0]],[100,98,0,0,0,[0,0],[0,0],[170,178],[-170,-178]]];
+FG.squat.k[0]=[100,104,0,0,0,[0,0],[0,0],[85,90],[85,90]];
+["push","plank","side","climb","superman","child"].forEach(k=>FG[k].dir=-1);["jack","hip","arms"].forEach(k=>FG[k].front=1);
+FG_MAP["Kol ve kalça çevirme"]="arms";
+function fgSVG(id){return `<svg class="fx-fig" viewBox="0 0 200 200" aria-hidden="true"><defs><linearGradient id="${id}g" gradientUnits="userSpaceOnUse" x1="40" y1="20" x2="170" y2="190"><stop offset="0" stop-color="var(--g1)"/><stop offset="1" stop-color="var(--g2)"/></linearGradient></defs>
+ <path d="M20 187H180" stroke="rgba(255,255,255,.14)" stroke-width="2" stroke-linecap="round"/><ellipse class="sh" cx="100" cy="187" rx="34" ry="4" fill="rgba(0,0,0,.45)"/>
+ <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+ <path class="fl" stroke="url(#${id}g)" stroke-opacity=".5" stroke-width="11"/><path class="fa" stroke="#fff" stroke-opacity=".45" stroke-width="8"/>
+ <path class="tr" stroke="url(#${id}g)" stroke-width="15"/><path class="nl" stroke="url(#${id}g)" stroke-width="11"/><path class="na" stroke="#fff" stroke-width="8"/></g>
+ <circle class="fh" r="4.2" fill="#fff" fill-opacity=".45"/><circle class="nh" r="4.6" fill="#fff"/><circle class="hd" r="12" fill="#fff"/><circle class="ey" r="2.2" fill="#0A0C10"/></svg>`;}
+function fgDraw(svg,type,ms){const F=FG[type]||FG.stand,P=fgAt(type,ms),p=fgPose(P),q=s=>svg.querySelector(s);if(!q(".tr"))return;const dir=F.dir||1,fr=!!F.front;
+ const off=(pts,dx,dy)=>pts.map(a=>[a[0]+dx,a[1]+dy]);
+ const foot=(L,side)=>{const a=L[1],b=L[2],sh=Math.atan2(b[0]-a[0],b[1]-a[1])*180/Math.PI;const fa=fr?(side<0?-90:90):sh+90*dir;const len=fr?7:11;return [...L,[b[0]+len*Math.sin(fgR(fa)),b[1]+len*Math.cos(fgR(fa))]];};
+ const pl=pts=>"M"+pts.map(a=>a[0].toFixed(1)+" "+a[1].toFixed(1)).join("L");
+ const fdx=fr?0:-4*dir,fdy=fr?0:-1;
+ const fl=foot(off(p.fl,fdx,fdy),-1),nl=foot(p.nl,1),fa=off(p.fa,fdx,fdy),na=p.na;
+ q(".fl").setAttribute("d",pl(fl));q(".nl").setAttribute("d",pl(nl));q(".fa").setAttribute("d",pl(fa));q(".na").setAttribute("d",pl(na));
+ q(".tr").setAttribute("d",`M${p.H[0].toFixed(1)} ${p.H[1].toFixed(1)}Q${p.cp[0].toFixed(1)} ${p.cp[1].toFixed(1)} ${p.S[0].toFixed(1)} ${p.S[1].toFixed(1)}`);
+ const set=(c,x,y)=>{const e=q(c);e.setAttribute("cx",x.toFixed(1));e.setAttribute("cy",y.toFixed(1));};
+ set(".hd",p.N[0],p.N[1]);set(".fh",fa[2][0],fa[2][1]);set(".nh",na[2][0],na[2][1]);
+ const ey=q(".ey");if(fr){ey.setAttribute("r","0");}else{ey.setAttribute("r","2.2");const ta=fgR(P[2]+P[4]);const fx=Math.cos(ta)*dir,fy=Math.sin(ta)*dir;set(".ey",p.N[0]+fx*6-Math.sin(ta)*2,p.N[1]+fy*6-Math.cos(ta)*2);}
+ const sh=q(".sh");sh.setAttribute("cx",((p.H[0]+p.S[0])/2).toFixed(1));}
+
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
