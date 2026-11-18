@@ -7947,6 +7947,11 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.83.1 */
+.yg-fig .tr,.yg-fig .nl{stroke:var(--c)!important}.yg-fig .fl{stroke:var(--c)!important;stroke-opacity:.42!important}
+.yg-fig .sh{fill:color-mix(in srgb,var(--c) 18%,transparent)!important}.yg-fig path[d^="M20 187"]{stroke:color-mix(in srgb,var(--c) 25%,transparent)!important}
+.yg-fig .ey{fill:#fff!important}
+
 /* v0.83 yoga figürleri */
 .yg-ring .in .fx-fig.yg-fig{position:static!important;inset:auto!important;transform:none!important;width:150px;height:126px;margin-top:-4px;animation:none!important;filter:none}
 .yg-ring .in:has(.yg-fig) b{margin-top:-6px!important;font-size:26px!important}
@@ -20345,6 +20350,19 @@ yFig=function(k){return fgSVG("ygf").replace('class="fx-fig" viewBox="0 0 200 20
 function ygAnim(){cancelAnimationFrame(YG_RAF);const t0=performance.now();const tick=now=>{const sv=document.querySelector(".yg-ring .yg-fig");if(!sv)return;
   if(!(ygCur&&ygCur.pause))sv._t=(sv._t||0)+(now-(sv._l||now));sv._l=now;fgDraw(sv,sv.dataset.fg,sv._t||0);YG_RAF=requestAnimationFrame(tick);};YG_RAF=requestAnimationFrame(tick);}
 (function(){const _r=ygRender;ygRender=function(){const r=_r.apply(this,arguments);try{const sv=document.querySelector(".yg-ring .yg-fig");if(sv){fgDraw(sv,sv.dataset.fg,0);ygAnim();}}catch(e){console.error(e);}return r;};})();
+
+/* ===== v0.83.1 Figür düzeltmesi: Safari'de gövde/bacak görünmüyordu (SVG'de var() desteklenmiyor) + mutlu bebek dizleri doğru yöne ===== */
+fgSVG=function(id){return `<svg class="fx-fig" viewBox="0 0 200 200" aria-hidden="true">
+ <path d="M20 187H180" style="stroke:rgba(255,255,255,.14)" stroke-width="2" stroke-linecap="round"/><ellipse class="sh" cx="100" cy="187" rx="34" ry="4" style="fill:rgba(0,0,0,.4)"/>
+ <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+ <path class="fl" style="stroke:var(--g2,#5BD35B);stroke-opacity:.55" stroke-width="11"/><path class="fa" style="stroke:#fff;stroke-opacity:.45" stroke-width="8"/>
+ <path class="tr" style="stroke:var(--g1,#C8FF3C)" stroke-width="15"/><path class="nl" style="stroke:var(--g1,#C8FF3C)" stroke-width="11"/><path class="na" style="stroke:#fff" stroke-width="8"/></g>
+ <circle class="fh" r="4.2" style="fill:#fff;fill-opacity:.45"/><circle class="nh" r="4.6" style="fill:#fff"/><circle class="hd" r="12" style="fill:#fff"/><circle class="ey" r="2.2" style="fill:#0A0C10"/></svg>`;};
+FG.catcow.dir=-1;
+FG.y_bebek.k=[[118,176,-90,0,0,[200,178],[204,182],[196,176],[200,180]],[118,176,-87,0,0,[208,184],[212,188],[204,182],[208,186]]];
+FG.y_duvar.k=FG.y_duvar.k.map(x=>{const y=x.slice();y[5]=[180,179];y[6]=[181,180];return y;});
+FG.y_savas.k=FG.y_savas.k.map(x=>{const y=x.slice();y[5]=[90,89];y[6]=[91,90];return y;});
+FG.y_yburgu.k=[[112,176,-90,0,-20,[165,95],[160,92],[-90,-90],[90,90]],[112,176,-90,0,-26,[160,92],[155,88],[-92,-92],[88,88]]];
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
