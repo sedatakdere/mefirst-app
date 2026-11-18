@@ -7947,6 +7947,26 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.82 Su kartı */
+#wtr{display:none!important}
+.w2{display:grid;grid-template-columns:78px 1fr;gap:4px 16px;align-items:center}
+.w2-b{padding:0;border:0;background:none;cursor:pointer;-webkit-tap-highlight-color:transparent}.w2-b svg{display:block;width:78px;height:176px;filter:drop-shadow(0 10px 24px rgba(30,123,255,.35))}
+.w2lev{transition:transform .8s cubic-bezier(.3,1.3,.5,1)}.w2wa{animation:w2w 4s linear infinite}.w2wb{animation:w2w 2.6s linear infinite reverse}
+@keyframes w2w{to{transform:translateX(40px)}}
+.w2lev.sl .w2wb{animation:w2w 2.6s linear infinite reverse,w2s .7s ease-out}@keyframes w2s{30%{transform:translateY(-5px) skewY(-4deg)}70%{transform:translateY(2px) skewY(2deg)}}
+.w2-n{display:flex;align-items:baseline;gap:6px}.w2-n b{font:900 46px/1 var(--f-body);letter-spacing:-.03em;color:var(--ink);font-variant-numeric:tabular-nums}.w2-n span{font:800 14px var(--f-body);color:var(--muted)}
+.w2-i>small{display:block;margin-top:2px;font:800 12px var(--f-body);letter-spacing:.04em;color:#39A7E0}
+.w2-i>p{margin:8px 0 12px;font:700 14.5px var(--f-body);color:var(--ink)}
+.w2-q{display:flex;gap:8px}.w2-add{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;height:44px;padding:0 8px;border:0;border-radius:14px;background:linear-gradient(135deg,#39D0FF,#1E7BFF);color:#fff;font:900 14px var(--f-body);cursor:pointer;box-shadow:0 10px 22px -12px rgba(30,123,255,.8);white-space:nowrap}
+.w2-add svg{width:16px;height:16px;flex:none}.w2-add.alt{background:rgba(57,208,255,.12);color:#2A8FD0;box-shadow:inset 0 0 0 1.5px rgba(57,208,255,.45)}
+.w2-add:active{transform:scale(.96)}
+.w2-r{display:flex;align-items:center;gap:8px;margin-top:8px;min-height:22px}.w2-r small{flex:1;font-size:12px;color:var(--muted)}.w2-un{padding:3px 10px;border:0;border-radius:99px;background:rgba(127,140,160,.14);color:var(--muted);font:800 12px var(--f-body);cursor:pointer}
+.w2-seg{grid-column:1/-1;display:grid;grid-template-columns:repeat(8,1fr);gap:5px;margin-top:12px}
+.w2-seg button{height:10px;padding:0;border:0;border-radius:99px;background:rgba(57,208,255,.16);cursor:pointer;transition:background .3s,box-shadow .3s}
+.w2-seg button.on{background:linear-gradient(90deg,#39D0FF,#1E7BFF);box-shadow:0 0 10px rgba(57,208,255,.45)}
+.w2.done .w2-i>small{color:#C8FF3C}
+html[data-mf="dusk"] .w2-add.alt{color:#8FE3FF}html[data-mf="dusk"] .w2-i>small{color:#6FD6FF}
+
 /* v0.81 FORM finali */
 .fx-ring.has-fig .fx-num{inset:auto 0 16% 0;display:block;text-align:center}
 .fx-ring.has-fig .fx-num b{font-size:54px}.fx-ring.has-fig .fx-num small{display:none}
@@ -9156,7 +9176,7 @@ window.GB_KEY="AIzaSyB9TCHWh2eLFo87Cv400WDf1wYThln3bqs";
       <button type="button" role="tab" data-ft="goal">Hedefim</button>
     </div>
     <div class="fpanel" data-fp="today">
-      <div class="lcard t-sky"><h3><span class="step">💧</span>Su perisi<span class="nextf" id="water-t"></span></h3><div class="cups" id="cups"></div></div>
+      <div class="lcard t-sky"><h3><span class="step">💧</span>Su<span class="nextf" id="water-t"></span></h3><div class="cups" id="cups"></div></div>
       <div class="lcard t-mint" id="move-sug"></div>
       <div id="fit-iyi"></div>
       <div class="lcard t-butter" id="day-sum"></div>
@@ -12322,14 +12342,14 @@ function iyiRender(){const el=document.getElementById("fit-iyi");if(!el)return;c
   document.getElementById("iyi-ok").onclick=()=>{const O=iyiSt();O.n++;O.t=(O.t||0)+1;O.c=null;iyiSave(O);mfConfetti(O.n>=3?"Bugün spa kraliçesisin 👑":"Kendine iyi baktın 💚",SPA_C,SPA_BG);iyiRender();fitHeroSub();};
   document.getElementById("iyi-nx").onclick=()=>{const O=iyiSt();O.c=null;iyiSave(O);document.getElementById("iyi-go")||iyiRender();document.getElementById("iyi-go").click();};}
 function fitHeroSub(){const el=document.getElementById("fh-sub");if(!el)return;const D=fday(),mins=D.a.reduce((a,x)=>a+x.min,0),nm=(st.name||"").trim(),o=iyiSt();
-  el.textContent=D.w>=8&&mins>=30?"Su tamam, hareket tamam… bugün parlıyorsun ✨":mins>=30?"Hareket hedefin tamam, bedenin sana teşekkür ediyor 💚":D.w>=4?"Yarı yoldasın su perisi, devam 🧜‍♀️":o.n?"Kendine iyilik yaptın, şimdi bir bardak su? 💧":D.w||mins||D.m.length?"Güzel başladın, adım adım 🌿":`${nm?nm+", b":"B"}ugün bedenin için küçük bir iyilik yapalım mı? 🍃`;}
+  el.textContent=D.w>=8&&mins>=30?"Su tamam, hareket tamam… bugün parlıyorsun ✨":mins>=30?"Hareket hedefin tamam, bedenin sana teşekkür ediyor 💚":D.w>=4?"Yarı yoldasın, devam et":o.n?"Kendine iyilik yaptın, şimdi bir bardak su? 💧":D.w||mins||D.m.length?"Güzel başladın, adım adım 🌿":`${nm?nm+", b":"B"}ugün bedenin için küçük bir iyilik yapalım mı? 🍃`;}
 function fitSettle(){stickFix(document.querySelector(".fseg"));document.querySelectorAll(".fit [data-fp]:not([hidden])").forEach(P=>{P.classList.remove("pr-in");void P.offsetWidth;P.classList.add("pr-in");});}
 (function(){const _f=fitRender;fitRender=function(){const D=fday(),w0=fitRender._w;_f.apply(this,arguments);try{
   document.querySelectorAll(".fseg button").forEach(b=>{b.onclick=()=>{if(ftab===b.dataset.ft)return;ftab=b.dataset.ft;fitRender();fitSettle();};});
   const w=fday().w;const wt=document.getElementById("water-t");if(wt)wt.textContent=w>=8?"8/8 🧜‍♀️":`${w}/8 · ${w*250} ml`;
   let wm=document.getElementById("wmsg");const cw=document.getElementById("cups");if(cw&&!wm){wm=document.createElement("p");wm.id="wmsg";wm.className="wmsg";cw.after(wm);}
   if(wm)wm.textContent=w>=8?"Su perisi oldun! Cildin ışıl ışıl 🧜‍♀️✨":w>=6?"Az kaldı, son bardaklar en tatlıları 🌊":w>=4?"Yarı yoldasın, bedenin teşekkür ediyor 💙":w>=1?"Güzel başlangıç! Bir bardak daha? 💧":"Bugünün ilk bardağıyla başla, bardağa dokun 💧";
-  if(w0!=null&&w>w0){const c=cw&&cw.children[w-1];if(c){c.classList.add("splash");}if(w===8)mfConfetti("Su perisi oldun! 🧜‍♀️",["#7FC4E8","#BFE3F2","#A8D5BA","#fff"],"linear-gradient(135deg,#7FC4E8,#3F7FA0)");}
+  if(w0!=null&&w>w0){const c=cw&&cw.children[w-1];if(c){c.classList.add("splash");}if(w===8)mfConfetti("Su hedefin tamam!",["#7FC4E8","#BFE3F2","#A8D5BA","#fff"],"linear-gradient(135deg,#7FC4E8,#3F7FA0)");}
   fitRender._w=w;fitHeroSub();iyiRender();}catch(e){}};})();
 document.getElementById("act-add").addEventListener("click",()=>{setTimeout(()=>mfConfetti("Aferin sana! 💪",SPA_C,SPA_BG),50);});
 
@@ -12461,7 +12481,7 @@ const EV_C=["#E07A4F","#E2A93B","#7A8B4A","#F6E3C8","#B8502E"],EV_BG="linear-gra
 function evSub(){const el=document.getElementById("eh-sub");if(!el)return;const E=ev();const wd=(new Date().getDay()+6)%7,h=new Date().getHours();
   const open=E.shop.filter(x=>!x.done).length;const ub=E.bills.filter(b=>!(b.paid||{})[ym()]).map(b=>[b,billDue(b)]).filter(x=>x[1]>=0&&x[1]<=3).sort((a,b)=>a[1]-b[1])[0];
   const nm=(st.name||"").trim();
-  el.textContent=ub?`${(BTY.find(x=>x[0]===ub[0].ty)||BTY[8])[2]} faturası ${ub[1]===0?"bugün":ub[1]===1?"yarın":ub[1]+" gün sonra"} ⚡ unutma!`:E.plan[wd]&&h>=11?`Bu akşam menüde: ${E.plan[wd]} 🍲`:open?`Sepette ${open} ürün var, markete hazırsın 🛒`:h<11?`Günaydın ${nm||"ev hanımefendisi"}, kahve demlendi mi? ☕`:`${nm?nm+", b":"B"}u akşam ne pişsin? Çarka bir sor 🎡`;}
+  el.textContent=ub?`${(BTY.find(x=>x[0]===ub[0].ty)||BTY[8])[2]} faturası ${ub[1]===0?"bugün":ub[1]===1?"yarın":ub[1]+" gün sonra"} ⚡ unutma!`:E.plan[wd]&&h>=11?`Bu akşam menüde: ${E.plan[wd]} 🍲`:open?`Sepette ${open} ürün var, markete hazırsın 🛒`:h<11?`Günaydın${nm?" "+nm:""}, kahve demlendi mi? ☕`:`${nm?nm+", b":"B"}u akşam ne pişsin? Çarka bir sor 🎡`;}
 function evSettle(){stickFix(document.querySelector(".eseg"));const P=document.getElementById("epanel");if(P){P.classList.remove("pr-in");void P.offsetWidth;P.classList.add("pr-in");}}
 /* Market poşeti */
 let bagWas=null;
@@ -20240,6 +20260,35 @@ function fxDietOpen(id){const d=FX_DIET.find(x=>x.id===id);if(!d)return;let O=do
   const fp=document.querySelector('[data-fp="food"]');if(fp&&!document.getElementById("fx-diet")){const c=document.createElement("div");c.id="fx-diet";c.className="fx-progs";c.innerHTML=fxDietHTML();const fa=document.getElementById("fx-fast");(fa?fa.after(c):fp.prepend(c));c.querySelectorAll("[data-fxd]").forEach(b=>b.onclick=()=>fxDietOpen(b.dataset.fxd));}
   document.querySelectorAll(".fx-pc").forEach(b=>{if(b.querySelector(".fx-pmv"))return;const p=FX_PROG.find(x=>x.id===b.dataset.fxp);if(!p)return;const mv=fxMoves(p);b.querySelector("small").insertAdjacentHTML("afterend",`<span class="fx-pmv">${mv.slice(0,4).join(" · ")}${mv.length>4?` +${mv.length-4}`:""}</span>`);});
  }catch(e){console.error(e);}};})();
+
+/* ===== v0.82 Su: herkes için, sade ve sportif — şişe, hızlı ekle, 8 dilim ===== */
+const W2MSG=["Güne bir bardak suyla başla.","İyi başlangıç.","Ritmi tuttun.","Enerjin yerine geliyor.","Yarı yoldasın.","Yarıyı geçtin, devam.","Az kaldı.","Son bardak!","Hedef tamam. Harika!"];
+waterRender=function(){const host=document.getElementById("cups");if(!host)return;const D=fday();const w=D.w||0;D.wt=D.wt||[];const old=document.getElementById("wtr");if(old)old.remove();
+ let box=document.getElementById("wtr2");
+ if(!box){box=document.createElement("div");box.id="wtr2";box.className="w2";host.after(box);
+  box.innerHTML=`<button type="button" class="w2-b" id="w2-b" aria-label="Bir bardak ekle"><svg viewBox="0 0 80 180" aria-hidden="true"><defs><clipPath id="w2c"><path d="M26 30h28v6c8 2 14 8 14 18v104q0 14-14 14H26q-14 0-14-14V54c0-10 6-16 14-18z"/></clipPath><linearGradient id="w2g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6FE3FF"/><stop offset="1" stop-color="#1E7BFF"/></linearGradient></defs>
+   <rect x="27" y="6" width="26" height="16" rx="5" fill="#2A3340"/><rect x="24" y="20" width="32" height="10" rx="3" fill="#39424F"/>
+   <path d="M26 30h28v6c8 2 14 8 14 18v104q0 14-14 14H26q-14 0-14-14V54c0-10 6-16 14-18z" fill="rgba(57,208,255,.07)"/>
+   <g clip-path="url(#w2c)"><g id="w2lev" class="w2lev"><g class="w2wa"><path d="M-80 2q10-5 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0V220H-80Z" fill="#9BEBFF" opacity=".55"/></g><g class="w2wb"><path d="M-80 4q10-6 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0V220H-80Z" fill="url(#w2g)"/></g></g></g>
+   ${[1,2,3,4,5,6,7].map(i=>`<path d="M60 ${(168-134*i/8).toFixed(1)}h6" stroke="rgba(255,255,255,.22)" stroke-width="1.4" stroke-linecap="round"/>`).join("")}
+   <path d="M26 30h28v6c8 2 14 8 14 18v104q0 14-14 14H26q-14 0-14-14V54c0-10 6-16 14-18z" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="2"/><path d="M19 60v92" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".25"/></svg></button>
+   <div class="w2-i"><div class="w2-n"><b id="w2-n"></b><span id="w2-u"></span></div><small id="w2-l"></small><p id="w2-m"></p>
+    <div class="w2-q"><button type="button" class="w2-add" data-w2="1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12l-1.5 16h-9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M7 10h10" stroke="currentColor" stroke-width="2"/></svg>+1 bardak</button><button type="button" class="w2-add alt" data-w2="2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4v3c2 .6 3 2 3 4v11a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V9c0-2 1-3.4 3-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>+½ litre</button></div>
+    <div class="w2-r"><small id="w2-last"></small><button type="button" class="w2-un" id="w2-un">Geri al</button></div></div>
+   <div class="w2-seg" id="w2-seg"></div>`;
+  const add=n=>{const D=fday();if((D.w||0)>=12)return;for(let i=0;i<n&&(D.w||0)<12;i++){D.w=(D.w||0)+1;D.wt=D.wt||[];D.wt.push(Date.now());}fsave();fitRender();const l=document.getElementById("w2lev");if(l){l.classList.remove("sl");void l.getBBox();l.classList.add("sl");}try{navigator.vibrate&&navigator.vibrate(15);}catch(e){}};
+  box.querySelectorAll("[data-w2]").forEach(b=>b.onclick=()=>add(+b.dataset.w2));document.getElementById("w2-b").onclick=()=>add(1);
+  document.getElementById("w2-un").onclick=()=>{const D=fday();if(!D.w)return;D.w--;(D.wt||[]).pop();fsave();fitRender();};}
+ document.getElementById("w2lev").style.transform=`translateY(${(168-134*Math.min(8,w)/8).toFixed(1)}px)`;
+ document.getElementById("w2-n").textContent=w;document.getElementById("w2-u").textContent="/8 bardak";
+ document.getElementById("w2-l").textContent=`${(w*0.25).toLocaleString("tr-TR",{minimumFractionDigits:w%4?2:0,maximumFractionDigits:2})} L · ${w>=8?"hedef tamam":(8-w)+" bardak kaldı"}`;
+ document.getElementById("w2-m").textContent=W2MSG[Math.min(8,w)];box.classList.toggle("done",w>=8);
+ const last=D.wt.length?D.wt[D.wt.length-1]:null,mins=last?Math.round((Date.now()-last)/6e4):null,h=new Date().getHours();
+ document.getElementById("w2-last").textContent=last?(mins<1?"Az önce içtin":mins<60?`Son ${mins} dk önce`:`Son ${Math.floor(mins/60)} saat önce`):(h>=10&&h<22?"Bugün henüz içmedin":"");
+ document.getElementById("w2-un").hidden=!w;
+ const sg=document.getElementById("w2-seg");sg.innerHTML=Array.from({length:8},(_,i)=>`<button type="button" class="${i<w?"on":""}" data-w2s="${i+1}" aria-label="${i+1}. bardak"></button>`).join("");
+ sg.querySelectorAll("[data-w2s]").forEach(b=>b.onclick=()=>{const D=fday(),n=+b.dataset.w2s,nw=n===D.w?n-1:n;D.wt=D.wt||[];while(D.wt.length<nw)D.wt.push(Date.now());D.wt.length=Math.min(D.wt.length,nw);D.w=nw;fsave();fitRender();});
+ const wm=document.getElementById("wmsg");if(wm)wm.hidden=true;};
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
