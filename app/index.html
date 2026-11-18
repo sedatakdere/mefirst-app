@@ -20922,8 +20922,9 @@ const mbIco=(k,c)=>`<svg class="mb-ico ${c||""}" viewBox="0 0 24 24" aria-hidden
 function mbX(){try{return rx();}catch(e){return {};}}
 function mbLit(){return mbX().mbLit===dkey();}
 /* sunak: ahşap raf, üç mum, ametist, tütsü */
-function mbAltarSVG(){
- const cand=(x,w,top,id,dl)=>{const cx=x+w/2;return `<g class="mb-cd">
+function mbMelt(){const X=mbX();if(X.mbLit!==dkey()||!X.mbAt)return 1;const h=(Date.now()-X.mbAt)/36e5;return Math.max(.3,1-h/14*.7);}
+function mbAltarSVG(k){k=k||1;
+ const cand=(x,w,top0,id,dl)=>{const top=Math.round(150-(150-top0)*k),cx=x+w/2,pud=k<.97?`<ellipse cx="${cx}" cy="149" rx="${(w/2+3+(1-k)*14).toFixed(1)}" ry="${(1.6+(1-k)*2.2).toFixed(1)}" fill="#E6D3B0" opacity=".9"/><path d="M${x-1} 149q${-3-(1-k)*6} 1 ${-4-(1-k)*8} .4" stroke="#E6D3B0" stroke-width="2.4" stroke-linecap="round" fill="none"/>`:"";return `<g class="mb-cd">${pud}
   <rect x="${x}" y="${top}" width="${w}" height="${150-top}" rx="3" fill="url(#mbWax)"/>
   <ellipse cx="${cx}" cy="${top+1}" rx="${w/2}" ry="3.2" fill="#E9D8BA"/>
   <path d="M${x+3} ${top+2} q2 ${8+id*3} 3 0 M${x+w-8} ${top+2} q1.6 ${12-id*2} 3 0" fill="#F6EAD3" opacity=".9"/>
@@ -21001,7 +21002,7 @@ function mbSndBtn(){const b=document.getElementById("mb-snd");if(!b)return;const
 /* mum yakma */
 function mbMatch(){const C=sndCtx();if(!C||C.state!=="running")return;const T=C.currentTime;const n=sndNoise(C,.5),f=C.createBiquadFilter(),g=C.createGain();f.type="bandpass";f.frequency.setValueAtTime(3200,T);f.frequency.exponentialRampToValueAtTime(700,T+.4);g.gain.setValueAtTime(.0001,T);g.gain.exponentialRampToValueAtTime(.28,T+.02);g.gain.exponentialRampToValueAtTime(.02,T+.18);g.gain.exponentialRampToValueAtTime(.0001,T+.5);n.connect(f);f.connect(g);g.connect(C.destination);n.start(T);n.stop(T+.55);
  try{setTimeout(()=>sndPlay("bowl"),450);}catch(e){}}
-function mbLight(){const X=mbX();if(X.mbLit===dkey())return;X.mbLit=dkey();X.mbN=(X.mbN||0)+1;save();const H=document.querySelector(".mb-hero");
+function mbLight(){const X=mbX();if(X.mbLit===dkey())return;X.mbLit=dkey();X.mbAt=Date.now();X.mbN=(X.mbN||0)+1;save();const H=document.querySelector(".mb-hero");
  if(H){H.classList.add("igniting");setTimeout(()=>H.classList.remove("igniting"),1600);}if(sndOn())mbMatch();if(navigator.vibrate)try{navigator.vibrate([12,40,18]);}catch(e){}mbHero();}
 function mbHero(){const R=document.querySelector(".rit");if(!R)return;const hero=R.querySelector(".rhero");if(!hero)return;
  let H=hero.querySelector(".mb-hero");if(!H){H=document.createElement("div");H.className="mb-hero";hero.appendChild(H);}
@@ -21010,7 +21011,7 @@ function mbHero(){const R=document.querySelector(".rit");if(!R)return;const hero
  const h=new Date().getHours(),zm=h<5?"Gece yarısı":h<11?"Sabah":h<17?"Gün ortası":h<21?"Akşam":"Gece";
  H.classList.toggle("lit",lit);
  H.innerHTML=`<button type="button" class="mb-snd" id="mb-snd" aria-pressed="false"><span class="mb-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><small>Ortam sesi</small></button>
-  <div class="mb-stage">${mbAltarSVG()}</div>
+  <div class="mb-stage">${mbAltarSVG(lit?mbMelt():1)}</div>
   <p class="mb-kick"><span>${zm}</span><i></i><span>${esc(ph||"Gökyüzü")}</span></p>
   <h2 class="mb-h">Manifest <em>Me</em></h2>
   <p class="mb-sub">${lit?(n?`Bugün <b>${n} ritüel</b> yaptın. Mumun hâlâ yanıyor.`:"Mumun yanıyor. Şimdi bir ritüel seç."):"Her güne mumunu yakarak başla. Bu an yalnızca senin."}</p>
@@ -21026,6 +21027,7 @@ function mbTiles(){document.querySelectorAll("#pracs .prac").forEach(b=>{const i
 function mbFoc(){const MC={bolluk:"#E8B464",ask:"#E98A86",saglik:"#9FC28E",kariyer:"#8FB3E0",huzur:"#B9A2E8",aile:"#E6A07A"};
  document.querySelectorAll(".rit [data-mff]").forEach(b=>{if(b.dataset.mb)return;const F=MF_FOC.find(x=>x[0]===b.dataset.mff);if(!F)return;b.dataset.mb=1;b.innerHTML=`<i class="mb-fc" style="--c:${MC[F[0]]}"></i>${esc(F[2])}`;});
  const al=document.querySelector(".rit .mf-al span");if(al&&!al.dataset.mb){const F=MF_FOC.find(x=>x[0]===mfFoc());if(F){al.dataset.mb=1;al.innerHTML=`<i class="mb-fc" style="--c:${MC[F[0]]}"></i>${esc(F[2])}`;}}}
+let mbMk=null;setInterval(()=>{try{if(!document.body.classList.contains("mb-on")||window.mfRoomOn||!mbLit())return;const k=Math.round(mbMelt()*40);if(k!==mbMk){mbMk=k;mbHero();}}catch(e){}},120000);
 function mbPaint(){if(!document.body.classList.contains("mb-on"))return;try{mbHero();mbTiles();mbFoc();}catch(e){console.error(e);}}
 (function(){const _r=ritRender;ritRender=function(){const r=_r.apply(this,arguments);try{mbPaint();}catch(e){}return r;};
  const _d=mfDayRender;mfDayRender=function(){const r=_d.apply(this,arguments);try{mbPaint();}catch(e){}return r;};
