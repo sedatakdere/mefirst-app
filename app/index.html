@@ -7947,6 +7947,14 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.83 yoga figürleri */
+.yg-ring .in .fx-fig.yg-fig{position:static!important;inset:auto!important;transform:none!important;width:150px;height:126px;margin-top:-4px;animation:none!important;filter:none}
+.yg-ring .in:has(.yg-fig) b{margin-top:-6px!important;font-size:26px!important}
+.yg-fig .na{stroke:var(--c)!important}.yg-fig .fa{stroke:var(--c)!important;stroke-opacity:.4!important}
+.yg-fig .hd,.yg-fig .nh{fill:var(--c)!important}.yg-fig .fh{fill:var(--c)!important;fill-opacity:.4!important}.yg-fig .ey{fill:#fff!important}
+.yg-fig .fl{stroke-opacity:.42!important}.yg-fig .sh{fill:color-mix(in srgb,var(--c) 18%,transparent)!important}.yg-fig path[d^="M20 187"]{stroke:color-mix(in srgb,var(--c) 25%,transparent)!important}
+.yg-ring .in{--g1:var(--c);--g2:color-mix(in srgb,var(--c) 70%,#2A1A3A)}
+
 /* v0.82 Su kartı */
 #wtr{display:none!important}
 .w2{display:grid;grid-template-columns:78px 1fr;gap:4px 16px;align-items:center}
@@ -20313,6 +20321,30 @@ function fgDraw(svg,type,ms){const F=FG[type]||FG.stand,P=fgAt(type,ms),p=fgPose
  set(".hd",p.N[0],p.N[1]);set(".fh",fa[2][0],fa[2][1]);set(".nh",na[2][0],na[2][1]);
  const ey=q(".ey");if(fr){ey.setAttribute("r","0");}else{ey.setAttribute("r","2.2");const ta=fgR(P[2]+P[4]);const fx=Math.cos(ta)*dir,fy=Math.sin(ta)*dir;set(".ey",p.N[0]+fx*6-Math.sin(ta)*2,p.N[1]+fy*6-Math.cos(ta)*2);}
  const sh=q(".sh");sh.setAttribute("cx",((p.H[0]+p.S[0])/2).toFixed(1));}
+
+/* ===== v0.83 Yoga figürleri: canlı, net, herkes için (FG motoru) ===== */
+Object.assign(FG,{
+ y_dag:{d:6000,front:1,k:[[100,104,0,0,0,[-7,-5],[7,5],[-16,-10],[16,10]],[100,102,0,0,0,[-7,-5],[7,5],[-22,-14],[22,14]]]},
+ y_uzan:{d:6000,front:1,k:[[100,104,0,0,0,[-3,-3],[3,3],[-160,-172],[160,172]],[100,102,0,0,0,[-3,-3],[3,3],[-168,-178],[168,178]]]},
+ y_egil:{d:6000,k:[[100,106,148,0,6,[2,2],[4,4],[4,4],[6,6]],[100,106,156,0,8,[2,2],[4,4],[0,0],[2,2]]]},
+ y_kedi:FG.catcow,
+ y_kopek:{d:6000,dir:-1,k:[[112,104,-136,0,0,[30,30],[32,32],[-40,-40],[-38,-38]],[112,100,-138,0,4,[28,28],[30,30],[-42,-42],[-40,-40]]]},
+ y_cocuk:FG.child,
+ y_boyun:{d:7000,front:1,k:[[100,170,0,0,-28,[-75,75],[75,-75],[-30,-30],[30,30]],[100,170,0,0,28,[-75,75],[75,-75],[-30,-30],[30,30]]]},
+ y_omuz:{d:3000,front:1,k:[[100,170,0,0,0,[-75,75],[75,-75],[-25,-35],[25,35]],[100,167,0,0,0,[-75,75],[75,-75],[-55,-150],[55,150]],[100,170,0,0,0,[-75,75],[75,-75],[-25,-35],[25,35]]]},
+ y_burgu:{d:7000,front:1,k:[[100,170,-4,0,-22,[-75,75],[75,-75],[-30,-30],[-20,-70]],[100,170,4,0,22,[-75,75],[75,-75],[20,70],[30,30]]]},
+ y_bilek:{d:4000,k:[[96,168,4,0,0,[86,90],[88,90],[88,92],[78,120]],[96,168,4,0,0,[86,90],[88,90],[88,92],[95,60]]]},
+ y_katla:{d:7000,k:[[92,170,18,0,0,[88,90],[90,90],[60,80],[62,82]],[92,170,62,0,10,[88,90],[90,90],[86,88],[88,90]]]},
+ y_nefes:{d:8000,front:1,k:[[100,170,0,0,0,[-75,75],[75,-75],[-30,-30],[30,30]],[100,167,0,0,0,[-75,75],[75,-75],[-34,-34],[34,34]]]},
+ y_yburgu:{d:8000,k:[[112,176,-90,0,-20,[128,40],[124,36],[-90,-90],[90,90]],[112,176,-90,0,-26,[134,46],[130,42],[-92,-92],[88,88]]]},
+ y_bebek:{d:3200,k:[[118,176,-90,0,0,[168,180],[172,184],[168,178],[172,182]],[118,176,-87,0,0,[160,174],[164,178],[162,172],[166,176]]]},
+ y_duvar:{d:8000,wall:1,k:[[140,176,-90,0,0,[178,180],[180,180],[80,86],[82,88]],[140,176,-90,-2,0,[178,180],[180,180],[80,86],[82,88]]]},
+ y_savas:{d:9000,k:[[110,177,-90,0,0,[89,90],[91,90],[86,88],[88,89]],[110,177,-90,-3,0,[89,90],[91,90],[86,88],[88,89]]]}});
+let YG_RAF=0;
+yFig=function(k){return fgSVG("ygf").replace('class="fx-fig" viewBox="0 0 200 200"',`class="fx-fig yg-fig" data-fg="y_${k}" viewBox="10 22 180 172"`);};
+function ygAnim(){cancelAnimationFrame(YG_RAF);const t0=performance.now();const tick=now=>{const sv=document.querySelector(".yg-ring .yg-fig");if(!sv)return;
+  if(!(ygCur&&ygCur.pause))sv._t=(sv._t||0)+(now-(sv._l||now));sv._l=now;fgDraw(sv,sv.dataset.fg,sv._t||0);YG_RAF=requestAnimationFrame(tick);};YG_RAF=requestAnimationFrame(tick);}
+(function(){const _r=ygRender;ygRender=function(){const r=_r.apply(this,arguments);try{const sv=document.querySelector(".yg-ring .yg-fig");if(sv){fgDraw(sv,sv.dataset.fg,0);ygAnim();}}catch(e){console.error(e);}return r;};})();
 
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
