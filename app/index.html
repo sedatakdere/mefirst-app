@@ -7947,6 +7947,18 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v0.89 Sallanma, alt bar ve tablet uyumu */
+html body #todaycard .tc-rail,html body .tc-rail{margin:0 -16px!important;padding:4px 16px 8px!important;scroll-padding:0 16px!important}
+.bnav.nav-hide{transform:translateY(calc(100% + 30px + env(safe-area-inset-bottom,0px)))!important}
+@media (min-width:700px){
+ .wrap{max-width:620px!important}
+ .bnav{left:50%!important;right:auto!important;width:min(600px,calc(100% - 24px))!important;transform:translateX(-50%)}
+ .bnav.nav-hide{transform:translate(-50%,calc(100% + 30px + env(safe-area-inset-bottom,0px)))!important}
+ html body #todaycard .tc-rail,html body .tc-rail{margin:0!important;padding:4px 0 8px!important;scroll-padding:0!important}
+ .fx-pl-in,.mfd-c{max-width:620px;margin-left:auto;margin-right:auto}
+}
+@media (min-width:1000px){.wrap{max-width:680px!important}.bnav{width:min(640px,calc(100% - 24px))!important}}
+
 /* v0.88 Açılış: gece moru + mercan kalp */
 #mf-splash .sp-bokeh i{background:radial-gradient(circle,rgba(255,138,107,.28),rgba(255,138,107,0) 70%)!important}
 #mf-splash .sp-bokeh i:nth-child(2),#mf-splash .sp-bokeh i:nth-child(6){background:radial-gradient(circle,rgba(255,176,143,.3),transparent 70%)!important}
