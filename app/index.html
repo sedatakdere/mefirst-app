@@ -19809,7 +19809,10 @@ spSeasonPick=function(){const S=spSt(),m=new Date().getMonth(),key=m===10?"kasim
 const SNS={f:"all",o:"you",n:12,io:null};
 const SNS_F=[["all","Hepsi"],["ask","Aşk"],["gul","Komedi"],["agla","Dram"],["iyi","İyi hissettiren"],["tr","Türk sineması"],["yc","Yeşilçam"],["nost","Nostalji"],["yeni","Yeni"],["unseen","İzlemediklerim"]];
 const SP_TRID=/^(selvi|birudum|neseli|hababam|mavi|babamoglum|vizontele|ayla|kelebek)$/;
-function spIsTr(f){return !!(f.tr||SP_TRID.test(f[0])||/Türk (filmi|sinema)/.test(f[7]||"")||(f[10]==="reel"&&/[çğışöüÇĞİŞÖÜ]/.test(f[1]+f[4])));}
+const SP_TRD=/^(nuri bilge ceylan|ceyda torun|kartal tibet|pelin esmer|emin alper|reha erdem|metin erksan|mustafa kara|yavuz turgul|ferzan özpetek|engin erden|murat aslan|nehir tuna|mitsutoshi tanaka)$/i;
+function spIsTr(f){if(SP_TRID.test(f[0]))return true;const ln=f[7]||"",d=f[4]||"";if(/Türk (filmi|dram|komedi|sinema)|yapımı Türk|Türkiye yapımı|türk filmi/.test(ln))return true;
+ if(f.tr){if(/Östlund|Žalica|Gaya Jiji/.test(d)||/Alman|Iranian|İran yapımı|Avustralya|German/.test(ln))return false;return /[çğıöşüÇĞİÖŞÜ]/.test(d)||d.split(",").some(x=>SP_TRD.test(x.trim()));}
+ return f[10]==="reel"&&/[çğışöüÇĞİŞÖÜ]/.test(f[1]+f[4]);}
 function spIsYc(f){return spIsTr(f)&&f[3]>=1945&&f[3]<1990;}
 function spDayPick(L,n,salt){const S=spSt(),r=spRand(spDayN()*131+salt*977+7);return L.map(f=>[f,r()+(SP.afis&&SP.afis[f[0]]?.55:0)-(S.seen[f[0]]?.9:0)]).sort((a,b)=>b[1]-a[1]).slice(0,n).map(x=>x[0]);}
 const SNS_O=[["you","Sana göre"],["pop","Popüler"],["new","En yeni"],["az","A-Z"]];
