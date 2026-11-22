@@ -7947,6 +7947,34 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v1.0 imza günü kartı: rozetler yan yana, kutu o anki kart kadar */
+.ktsl{transition:height .3s ease}
+.ktbdg{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-bottom:3px}
+.ktbdg .ktcd{font-size:9.5px;padding:2px 8px}
+.ktbdg .ktnear{margin:0;font-size:9.5px;padding:2px 8px}
+.ktbdg .ktfolb{font-size:9.5px;padding:2px 8px;border-radius:99px}
+.ktsd-i>small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.ktsd-i>small.ktpl{-webkit-line-clamp:2}
+.ktsd-i .au-all:not([hidden]){display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;font-size:11.5px;opacity:.9}
+.ktsd-i strong{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.ktsd-i .ktbtn.sm{margin-top:4px}
+/* v1.0 sahaf kartında profil satırı hep altta */
+.sf-card .sf-ci{flex:1 1 auto}
+.sf-card .sf-ci .sf-who{margin-top:auto!important}
+.sf-card .sf-ci>b{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+/* v1.0 sahaf: tamamlandı mührü */
+.sf-seal{position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-14deg);display:flex;flex-direction:column;align-items:center;gap:1px;padding:7px 12px 6px;border:3px double var(--sc);border-radius:10px;color:var(--sc);background:rgba(255,250,240,.93);font:900 13px var(--f-body);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;pointer-events:none;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--sc) 40%,transparent),0 6px 16px -6px rgba(0,0,0,.45);animation:sfSeal .5s cubic-bezier(.2,1.6,.4,1) both}
+.sf-seal small{font:800 8.5px var(--f-body);letter-spacing:.16em;opacity:.85}
+.sf-seal.big{font-size:17px;padding:10px 16px 8px;border-width:4px}.sf-seal.big small{font-size:10px}
+.sf-seal.k-takas{--sc:#2F6B4F}.sf-seal.k-hediye{--sc:#B2392F}.sf-seal.k-odunc{--sc:#2E5A8A}
+@keyframes sfSeal{0%{transform:translate(-50%,-50%) rotate(-14deg) scale(1.8);opacity:0}100%{transform:translate(-50%,-50%) rotate(-14deg) scale(1);opacity:1}}
+.sf-card.dn .sf-cw>*:not(.sf-seal),.sf-mi.dn>.ktc,.sf-mi.dn>span:first-child{filter:saturate(.55)}
+.sf-mi{position:relative}.sf-mi .sf-seal{top:38%;font-size:9px;padding:4px 7px 3px;border-width:2px}.sf-mi .sf-seal small{display:none}
+.sf-adc{position:relative}
+html[data-mf="dusk"] .sf-seal{background:rgba(255,248,236,.85);mix-blend-mode:normal}
+.sf-st-c.dn{background:linear-gradient(135deg,rgba(47,107,79,.12),rgba(47,107,79,.04))}
+.sf-reo{margin-top:8px}
+
 /* v0.99 polaroid önizleme + tek satır düğmeler */
 .soz-q .qact{display:grid;grid-template-columns:auto auto auto;justify-content:center;gap:6px;flex-wrap:nowrap}
 .soz-q .qact .pill{white-space:nowrap;padding:0 12px!important;font-size:12.5px!important;min-width:0}
@@ -12729,14 +12757,15 @@ function ktSlide(e){const a=e[1].filter(ktFollow)[0]||e[1][0];const x=ktDays(e[2
   const q=encodeURIComponent((e[4].split("·").pop().trim())+" "+e[5]);
   let hh=0;for(const ch of a)hh=(hh*31+ch.charCodeAt(0))>>>0;const SEALC={roman:["#7A3322","#C9822B","ROMAN"],polisiye:["#1F3350","#5E86B8","POLİSİYE"],siir:["#5A2E44","#C98A9E","ŞİİR"],kisisel:["#4F5D3A","#A8B26A","İYİ YAŞAM"],psikoloji:["#3C5A4E","#8FBFA8","PSİKOLOJİ"],ebeveyn:["#8A4A2E","#E8A27A","AİLE"],tarih:["#6A4A20","#D9B36A","TARİH"],cocuk:["#3E2E5A","#9C8FE0","ÇOCUK"],romantik:["#7A2E4A","#E58AA6","AŞK"],dunya:["#2E4A6B","#7FA7CF","DÜNYA"],klasik:["#4A3A2E","#B89A7A","KLASİK"]};const sg=ktAG(a).find(g=>SEALC[g]);const pal=sg?SEALC[sg]:["#5A4A42","#B8A898","YAZAR"];
   return `<div class="ktsd"><span class="ktph" data-kph="${esc(a)}" style="--p1:${pal[0]};--p2:${pal[1]}"><svg class="ktex" viewBox="0 0 100 100" aria-hidden="true"><defs><path id="exc${hh%997}" d="M50 50m-36 0a36 36 0 1 1 72 0a36 36 0 1 1-72 0"/></defs><circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,243,222,.55)" stroke-width="1.5" stroke-dasharray="2 4"/><text font-size="7.6" font-weight="800" letter-spacing="1.6" fill="rgba(255,243,222,.85)"><textPath href="#exc${hh%997}">EX LIBRIS · ${esc(a.toLocaleUpperCase("tr-TR").slice(0,20))} · ${pal[2]} · </textPath></text><path d="M50 71l1.8 4.6 4.6 1.8-4.6 1.8L50 84l-1.8-4.6-4.6-1.8 4.6-1.8z" fill="rgba(255,226,176,.9)"/><path d="M50 16l1.4 3.4 3.4 1.4-3.4 1.4L50 26l-1.4-3.6-3.4-1.4 3.4-1.4z" fill="rgba(255,226,176,.7)"/></svg><b>${esc(ini)}</b></span><div class="ktsd-i">
-    ${ktNearB(e,1)}${e[1].some(ktFollow)?'<span class="ktfolb">💛 Takipte</span>':""}<span class="ktcd">${x===null?"Kasım · tarih yakında":x===0?"Bugün! 🔥":x===1?"Yarın! ✨":x+" gün kaldı"}</span>
+    <span class="ktbdg"><span class="ktcd">${x===null?"Tarih yakında":x===0?"Bugün! 🔥":x===1?"Yarın! ✨":x+" gün kaldı"}</span>${ktNearB(e)}${e[1].some(ktFollow)?'<span class="ktfolb">💛 Takipte</span>':""}</span>
     ${auKick(e)}<strong>${esc(auShort(e[1],1))}</strong>${e[1].length>2?`<button type="button" class="au-more" data-aum>+${e[1].length-2} yazar daha</button><span class="au-all" hidden>${esc(auSort(e[1]).join(" · "))}</span>`:""}
     <small>${d?d.toLocaleDateString("tr-TR",{day:"numeric",month:"long",weekday:"long"})+(e[3]?" · "+e[3]:""):"Tarih netleşince haber veririm"}</small>
-    <small>📍 ${esc(auPlace(e))}${e[2]?", "+esc(e[5]):""}</small>
+    <small class="ktpl">📍 ${esc(auPlace(e))}${e[2]?", "+esc(e[5]):""}</small>
     ${e[2]?`<a class="ktbtn sm" href="https://www.google.com/maps/search/${q}" target="_blank" rel="noopener">Yol tarifi 🗺</a>`:""}</div></div>`;}
 let ktSlT=null;
 function ktSlider(){clearInterval(ktSlT);const sl=document.getElementById("ktsl");if(!sl)return;const n=sl.children.length;const dots=[...document.querySelectorAll(".ktdots i")];
   const cur=()=>Math.round(sl.scrollLeft/sl.clientWidth);
+  const fit=()=>{const c=Math.max(0,Math.min(n-1,cur()));const el=sl.children[c];if(el)sl.style.height=el.offsetHeight+"px";};requestAnimationFrame(fit);let ft=0;sl.addEventListener("scroll",()=>{clearTimeout(ft);ft=setTimeout(fit,90);},{passive:true});sl.addEventListener("click",e=>{if(e.target.closest("[data-aum]"))setTimeout(fit,30);});
   const cnt=document.getElementById("ktcnt");sl.addEventListener("scroll",()=>{const c=cur();dots.forEach((d,i)=>d.classList.toggle("on",i===c));if(cnt)cnt.textContent=(c+1)+" / "+n;},{passive:true});
   if(n<2)return;let hold=0;["touchstart","pointerdown"].forEach(ev=>sl.addEventListener(ev,()=>{hold=Date.now();},{passive:true}));
   dots.forEach((d,i)=>d.onclick=()=>{hold=Date.now();sl.scrollTo({left:i*sl.clientWidth,behavior:"smooth"});});
@@ -17615,7 +17644,7 @@ function sfHTML(){const city=sfCityGet();const S=SF.stats||{};const n=(SF.badge.
  const acts=`<div class="sf-acts"><button type="button" class="sf-new" id="sf-new"><span class="no-mi">＋</span><span><b>Kitabını sahafa koy</b><small>Takas, hediye ya da ödünç</small></span></button><button type="button" class="sf-ib" id="sf-ib" aria-label="Mesajlarım"><span class="no-mi">💬</span><span>Mesajlar</span><i id="sf-ib-n"${n?"":" hidden"}>${n>9?"9+":n||""}</i></button></div>`;
  const how=sfOk()?"":`<div class="sf-how"><div><span class="no-mi">📸</span><b>İlanını ver</b><small>Kitabını seç, takas mı hediye mi söyle</small></div><div><span class="no-mi">💌</span><b>Talep gelsin</b><small>Kime vereceğini sen seçersin</small></div><div><span class="no-mi">☕</span><b>Buluşun</b><small>Gündüz, kalabalık bir yerde</small></div></div>`;
  const mine=SF.mine.filter(a=>a.status!=="closed").slice(0,12);
- const mineH=mine.length?`<div class="sf-sec"><h4>İlanlarım <small>${SF.mine.length}</small></h4><div class="sf-mine">${mine.map(a=>`<button type="button" class="sf-mi" data-sfa="${esc(a.id)}">${sfCover(a)}<span class="sf-ms ${a.status}">${a.hidden?"🚫 İncelemede":a.status==="reserved"?"🤝 Ayırtıldı":a.status==="done"?"✓ Verildi":a.pending?`💌 ${a.pending} talep`:"🕊 Yayında"}</span><b>${esc(a.title)}</b></button>`).join("")}</div></div>`:"";
+ const mineH=mine.length?`<div class="sf-sec"><h4>İlanlarım <small>${SF.mine.length}</small></h4><div class="sf-mine">${mine.map(a=>`<button type="button" class="sf-mi${a.status==="done"?" dn":""}" data-sfa="${esc(a.id)}">${sfCover(a)}${a.status==="done"?sfSeal(a.kind):""}<span class="sf-ms ${a.status}">${a.hidden?"🚫 İncelemede":a.status==="reserved"?"🤝 Ayırtıldı":a.status==="done"?"✓ Tamamlandı":a.pending?`💌 ${a.pending} talep`:"🕊 Yayında"}</span><b>${esc(a.title)}</b></button>`).join("")}</div></div>`:"";
  const bookF=SF.book?`<div class="sf-bookf"><span>📚 <b>${esc(SF.bookT)}</b> ilanları</span><button type="button" id="sf-bookx" aria-label="Filtreyi kaldır">✕</button></div>`:"";
  const scope=SF.book?"":`<div class="sf-sc"><button type="button" class="sf-c" data-sfs="city" aria-pressed="${SF.scope==="city"&&!!city}"><span class="no-mi">📍</span>${city?esc(city):"Şehrini seç"}<span class="sf-dd">▾</span></button><button type="button" class="sf-c" data-sfs="all" aria-pressed="${SF.scope==="all"||!city}"><span class="no-mi">🇹🇷</span>Tüm Türkiye</button></div>`;
  /* kart fişi dolabı: tür çekmeceleri */
@@ -17634,11 +17663,13 @@ function sfHTML(){const city=sfCityGet();const S=SF.stats||{};const n=(SF.badge.
  else{const F=!SF.book&&V.length>=3?(V.slice().sort((a,b)=>(b.req_count||0)-(a.req_count||0))[0].req_count>=2?V.slice().sort((a,b)=>(b.req_count||0)-(a.req_count||0))[0]:V[0]):null;const rest=F?V.filter(a=>a!==F):V;
   grid=`${F?sfFeat(F):""}<div class="sf-grid">${rest.map((a,i)=>sfCard(a,i)).join("")}</div>`;}
  return `<section class="sf" id="sf">${head}${acts}${how}${mineH}${bookF}<div class="sf-fil">${scope}${cab}${townH}${sortH}</div><div id="sf-res">${grid}</div><p class="sf-foot">🛡 Sahafta para yok, herkes kendinden sorumlu. Buluşmaları gündüz, kalabalık yerlerde yap. <a href="#" id="sf-rules">Kurallar</a></p></section>`;}
+const SF_DONE={takas:["Takas tamam","El sıkışıldı"],hediye:["Yerine ulaştı","Gönülden gönüle"],odunc:["Ödünç verildi","İyi okumalar"]};
+function sfSeal(k,big){const D=SF_DONE[k]||SF_DONE.hediye;return `<span class="sf-seal k-${k}${big?" big":""}" aria-label="${D[0]}">${D[0]}<small>${D[1]}</small></span>`;}
 function sfReal(big){return `<span class="sf-real${big?" big":""}"><span class="no-mi">📸</span>${big?"Satıcının kendi çektiği fotoğraf":"Gerçek foto"}</span>`;}
 function sfStamp(c){const C={yeni:"YENİ GİBİ",iyi:"İYİ DURUMDA",yipranmis:"YIPRANMIŞ"};return `<span class="sf-stamp c-${c}">${C[c]||""}</span>`;}
 function sfHTag(k){const K=SF_K[k]||SF_K.hediye;return `<span class="sf-htag k-${k}"><span class="no-mi">${K[0]}</span>${K[1]}</span>`;}
 function sfCard(a,i){const my=a.my_req;const tag=a.mine?`<span class="sf-tag me">Senin ilanın</span>`:my==="pending"?`<span class="sf-tag wt">⏳ Talebin gitti</span>`:my==="accepted"?`<span class="sf-tag ok">💬 Kabul edildi</span>`:a.status==="reserved"?`<span class="sf-tag rs">🤝 Ayırtıldı</span>`:a.req_count>=2?`<span class="sf-tag hot">🔥 ${a.req_count} talep</span>`:(Date.now()-new Date(a.created_at)<864e5)?`<span class="sf-tag nw">Yeni geldi</span>`:"";
- return `<button type="button" class="sf-card k-${a.kind}${a.status==="reserved"?" rsv":""}" data-sfa="${esc(a.id)}" style="--i:${i%10}"><span class="sf-cw">${sfCover(a)}${sfHTag(a.kind)}${sfStamp(a.cond)}${tag}${a.thumb?sfReal():""}</span>
+ return `<button type="button" class="sf-card k-${a.kind}${a.status==="reserved"?" rsv":""}${a.status==="done"?" dn":""}" data-sfa="${esc(a.id)}" style="--i:${i%10}"><span class="sf-cw">${sfCover(a)}${sfHTag(a.kind)}${sfStamp(a.cond)}${a.status==="done"?"":tag}${a.thumb?sfReal():""}${a.status==="done"?sfSeal(a.kind):""}</span>
   <span class="sf-ci"><b>${esc(a.title)}</b><small class="sf-au">${esc(a.author||"")}</small>${a.kind==="takas"&&a.want?`<span class="sf-wn">🔄 ${esc(a.want)}</span>`:""}
   <span class="sf-who">${sfAv(a.name,a.avatar)}<span>${esc(a.name||"Okur")}<small>📍 ${esc(a.town?a.town+", ":"")}${esc(a.city)} · ${sfAgo(a.created_at)}</small></span></span></span></button>`;}
 function sfFeat(a){const K=SF_K[a.kind]||SF_K.hediye;return `<button type="button" class="sf-feat k-${a.kind}" data-sfa="${esc(a.id)}"><span class="sf-ft-l">${sfCover(a)}${sfHTag(a.kind)}${a.thumb?sfReal():""}</span><span class="sf-ft-r"><span class="sf-ft-k">${a.req_count>=2?`🔥 ${a.req_count} kişi istiyor`:"✨ Vitrinde"}</span><b>${esc(a.title)}</b><small>${esc(a.author||"")}</small>${sfStamp(a.cond)}
@@ -17674,7 +17705,7 @@ function sfAdDraw(a){const K=SF_K[a.kind]||SF_K.hediye;const C=SF_C[a.cond]||[""
  const body=a.mine?sfAdOwner(a):sfAdOther(a);
  const O=libSheet(`<div class="shs-grab"></div><div class="sf-ad">
   <button type="button" class="shs-x sf-adx" aria-label="Kapat">✕</button>
-  <div class="sf-adh"><div class="sf-adc">${sfCover(a,true)}${a.photo||a.thumb?sfReal(true):""}</div><div class="sf-adt">${sfKindPill(a.kind)}<h3>${esc(a.title)}</h3><p>${esc(a.author||"")}</p><span class="sf-cdp"><span class="no-mi">${C[0]}</span>${C[1]}</span>
+  <div class="sf-adh"><div class="sf-adc">${sfCover(a,true)}${a.photo||a.thumb?sfReal(true):""}${a.status==="done"?sfSeal(a.kind,1):""}</div><div class="sf-adt">${sfKindPill(a.kind)}<h3>${esc(a.title)}</h3><p>${esc(a.author||"")}</p><span class="sf-cdp"><span class="no-mi">${C[0]}</span>${C[1]}</span>
    <button type="button" class="sf-bk" id="sf-bk">📖 Kitap sayfası ›</button></div></div>
   ${a.note?`<div class="sf-note"><span class="no-mi">✍️</span><p>${esc(a.note)}</p></div>`:""}
   ${a.kind==="takas"&&a.want?`<div class="sf-want"><span class="no-mi">🔄</span><span>Karşılığında: <b>${esc(a.want)}</b></span></div>`:""}
@@ -17686,8 +17717,9 @@ function sfAdDraw(a){const K=SF_K[a.kind]||SF_K.hediye;const C=SF_C[a.cond]||[""
  sfAdBind(O,a);}
 function sfAdOther(a){const nm=(a.name||"").split(" ")[0];
  if(a.my_req==="pending")return `<div class="sf-st-c wt"><span class="no-mi">⏳</span><span><b>Talebin ${esc(trEk(nm||"Okur","dat"))} iletildi</b><small>Yanıt gelince haber vereceğim.</small></span></div><button type="button" class="btn ktgo" data-sfchat="${esc(a.my_req_id)}">💬 Konuşmaya git</button>${sfAdFoot()}`;
- if(a.my_req==="accepted"||a.my_req==="done")return `<div class="sf-st-c ok"><span class="no-mi">🎉</span><span><b>${a.my_req==="done"?"Kitap sende, iyi okumalar!":"Talebin kabul edildi!"}</b><small>${a.my_req==="done"?"Bir teşekkür mesajı güzel olur 💛":"Buluşma için konuşabilirsiniz."}</small></span></div><button type="button" class="btn ktgo" data-sfchat="${esc(a.my_req_id)}">💬 Konuşmaya git</button>${sfAdFoot()}`;
- if(a.my_req==="declined")return `<div class="sf-st-c no"><span class="no-mi">🍂</span><span><b>Bu sefer olmadı</b><small>Sahafta daha nice kitap var.</small></span></div>${sfAdFoot()}`;
+ if(a.my_req==="accepted"||a.my_req==="done")return `<div class="sf-st-c ok"><span class="no-mi">🎉</span><span><b>${a.my_req==="done"?(a.kind==="takas"?"Takas tamam, iyi okumalar!":"Kitap sende, iyi okumalar!"):"Talebin kabul edildi!"}</b><small>${a.my_req==="done"?"Bir teşekkür mesajı güzel olur 💛":"Buluşma için konuşabilirsiniz."}</small></span></div><button type="button" class="btn ktgo" data-sfchat="${esc(a.my_req_id)}">💬 Konuşmaya git</button>${sfAdFoot()}`;
+ if(a.my_req==="declined"&&a.status!=="done")return a.kind==="takas"?`<div class="sf-st-c no"><span class="no-mi">🍂</span><span><b>Bu teklif olmadı</b><small>Rafında başka bir kitap varsa onu önerebilirsin.</small></span></div><button type="button" class="btn ktgo sf-reo" id="sf-ask">🔄 Başka bir kitap öner</button><button type="button" class="ghost" data-sfchat="${esc(a.my_req_id)}">💬 Konuşmaya bak</button>${sfAdFoot()}`:`<div class="sf-st-c no"><span class="no-mi">🍂</span><span><b>Bu sefer olmadı</b><small>Sahafta daha nice kitap var.</small></span></div>${sfAdFoot()}`;
+ if(a.status==="done")return `<div class="sf-st-c ok dn"><span class="no-mi">🏅</span><span><b>${(SF_DONE[a.kind]||SF_DONE.hediye)[0]}</b><small>Bu kitap yeni rafına gitti, ilan kapandı.</small></span></div>${sfAdFoot()}`;
  const cta={takas:"🔄 Takas teklif et",hediye:"🎁 Bana olur mu?",odunc:"🤝 Ödünç isteyebilir miyim?"}[a.kind];
  return `${a.status==="reserved"?`<p class="sf-hint">🤝 Bu kitap şu an başka bir okura ayırtıldı. Yine de sıraya girebilirsin.</p>`:""}<button type="button" class="btn ktgo sf-cta" id="sf-ask">${cta}</button>${sfAdFoot()}`;}
 function sfAdFoot(){return `<div class="sf-adf"><button type="button" data-sfrep>🚩 Şikâyet et</button><button type="button" data-sfblk>🚫 Engelle</button></div>`;}
@@ -17696,7 +17728,7 @@ function sfAdOwner(a){const R=a.reqs||[];const st={pending:"Bekliyor",accepted:"
  return `<div class="sf-sec"><h4>Talepler <small>${R.filter(q=>q.status==="pending"||q.status==="accepted").length}</small></h4>
   ${R.length?R.map(q=>`<div class="sf-rq ${q.status}">${sfAv(q.name,q.avatar)}<div class="sf-rqb"><b>${esc(q.name)}</b>${q.offer?`<small class="sf-of">🔄 Karşılığında: ${esc(q.offer)}</small>`:""}<p>${esc(q.first||"")}</p>
    <div class="sf-rqa">${q.status==="pending"?`<button type="button" class="sf-yes" data-sfans="accept" data-sfr="${esc(q.id)}">✓ Kabul et</button><button type="button" class="sf-nob" data-sfans="decline" data-sfr="${esc(q.id)}">Reddet</button>`:`<em class="sf-rst">${st[q.status]||""}</em>`}<button type="button" class="sf-go" data-sfchat="${esc(q.id)}">💬</button></div></div></div>`).join(""):`<p class="sf-hint">Henüz talep yok. Kitabın rafta seni bekliyor, ilk talep gelince haber vereceğim 🌱</p>`}</div>
-  <div class="sf-oa">${acc?`<button type="button" class="btn ktgo" data-sfst="done">✓ Kitap verildi</button>`:""}
+  <div class="sf-oa">${a.status==="done"?`<div class="sf-st-c ok dn"><span class="no-mi">🏅</span><span><b>${(SF_DONE[a.kind]||SF_DONE.hediye)[0]}!</b><small>Bu ilan kapandı, artık katalogda görünmüyor.</small></span></div>`:acc?`<button type="button" class="btn ktgo" data-sfst="done">${{takas:"✓ Takas gerçekleşti",hediye:"✓ Hediye yerine ulaştı",odunc:"✓ Ödünç verildi"}[a.kind]||"✓ Kitap verildi"}</button>`:""}
   ${a.status==="closed"?`<button type="button" class="pl-add" data-sfst="open">🕊 Yeniden yayınla</button>`:a.status==="done"?"":`<button type="button" class="pl-add" data-sfst="closed">⏸ Yayından kaldır</button>`}
   <button type="button" class="ghost danger" data-sfst="deleted">İlanı sil</button></div>`;}
 function sfAdBind(O,a){
@@ -17708,7 +17740,7 @@ function sfAdBind(O,a){
   if(b.dataset.sfans==="accept"){mfConfetti("Talep kabul edildi 🤝",KT_C,"linear-gradient(135deg,#6B7A3A,#4F5D3A)");setTimeout(()=>sfChat(b.dataset.sfr),500);}else sfAdOpen(a.id,1);SF.at=0;sfBadgePull();});
  O.querySelectorAll("[data-sfst]").forEach(b=>b.onclick=async()=>{const v=b.dataset.sfst;if(v==="deleted"&&!b.dataset.sure){b.dataset.sure=1;b.textContent="Emin misin? Konuşmalar da silinir";return;}
   b.disabled=true;const r=await sfRpc("sahaf_status",{p_id:a.id,p_st:v});if(r.err||r.data!==true){sfToast(sfErr(r.err));b.disabled=false;return;}SF.at=0;
-  if(v==="done"){libClose();mfConfetti("Kitap yeni sahibine ulaştı 🌱",KT_C,"linear-gradient(135deg,#6B7A3A,#4F5D3A)");try{sfLibGone(a);}catch(e){}}else if(v==="deleted"){libClose();sfToast("İlan silindi");}else sfAdOpen(a.id,1);});}
+  if(v==="done"){libClose();mfConfetti({takas:"Takas tamam! 🤝",hediye:"Hediye yerine ulaştı 🎁",odunc:"Ödünç verildi 📚"}[a.kind]||"Kitap yeni sahibine ulaştı 🌱",KT_C,"linear-gradient(135deg,#6B7A3A,#4F5D3A)");try{sfLibGone(a);}catch(e){}}else if(v==="deleted"){libClose();sfToast("İlan silindi");}else sfAdOpen(a.id,1);});}
 /* verilen kitabı kütüphaneden düşürmeyi teklif et */
 function sfLibGone(a){const L=klib();const j=L.findIndex(x=>bkKey(x)===a.book_key||ktN(x.t)===ktN(a.title));if(j<0)return;setTimeout(()=>{const O=libSheet(`<div class="shs-grab"></div><div class="sf-sh sf-gone"><span class="no-mi">🌱</span><h3>"${esc(a.title)}" yeni rafında</h3><p>Kütüphanenden de çıkarayım mı? Okuduğun kitaplar listende kalır.</p><button type="button" class="btn ktgo" id="sf-gy">Evet, çıkar</button><button type="button" class="ghost" id="sf-gn">Kalsın</button></div>`);
  document.getElementById("sf-gy").onclick=()=>{const k=klib().findIndex(x=>bkKey(x)===a.book_key||ktN(x.t)===ktN(a.title));if(k>=0){klib().splice(k,1);save();}libClose();};document.getElementById("sf-gn").onclick=()=>libClose();},1400);}
@@ -19214,7 +19246,7 @@ SPS_REG.ayrac=async function(o,g,W,H,im,emb){
  g.fillStyle="#E9B949";g.beginPath();g.arc(bx+bw/2,by+60,16,0,Math.PI*2);g.fill();g.strokeStyle="#E9B949";g.lineWidth=5;g.beginPath();g.moveTo(bx+bw/2,by+60);g.quadraticCurveTo(bx+bw/2+40,by-20,bx+bw/2+10,by-90);g.stroke();
  for(let k=-4;k<=4;k++){g.strokeStyle="#C98A24";g.lineWidth=3;g.beginPath();g.moveTo(bx+bw/2+10,by-90);g.lineTo(bx+bw/2+10+k*5,by-140);g.stroke();}
  g.save();g.translate(bx+bw/2,by+bh/2);g.rotate(Math.PI/2);g.textAlign="center";g.fillStyle="#FFF4E6";const ts=spsFit(g,o.title,bh-260,64,36,'400 {s}px "DM Serif Display",serif');g.font=`400 ${ts}px "DM Serif Display",serif`;g.fillText(o.title,0,-14);g.font='800 24px "Nunito Sans",sans-serif';g.fillStyle="#FFE7A8";g.fillText((o.author||"").toLocaleUpperCase("tr-TR"),0,30);g.restore();
- let y=cy+ch+110;g.textAlign="center";if(o.cm){g.fillStyle="#3A1E14";const cs=spsFit(g,"“"+o.cm+"”",W-160,60,36,'600 {s}px "Caveat",cursive');g.font=`600 ${cs}px "Caveat",cursive`;spsWrap(g,"“"+o.cm+"”",W-160,2).forEach((l,k)=>g.fillText(l,W/2,y+k*(cs+4)));y+=o.cm.length>40?(cs+4)*2:cs+4;}
+ let y=cy+ch+104;g.textAlign="center";if(o.cm){g.fillStyle="#3A1E14";const tq="“"+o.cm+"”",L=tq.length;let cs=L<34?76:L<70?70:L<120?64:58,ls;do{g.font=`600 ${cs}px "Caveat",cursive`;ls=spsWrap(g,tq,W-160,4);cs-=2;}while(cs>40&&spsWrap(g,tq,W-160,9).length>4);cs+=2;g.font=`600 ${cs}px "Caveat",cursive`;ls.forEach((l,k)=>g.fillText(l,W/2,y+k*(cs+6)));y+=(ls.length-1)*(cs+6)+cs*.55;}
  if(o.rt)spsStarsGold(g,o.rt,W/2-104,y+6,32,"#E0A93C","rgba(224,169,60,.25)");
  await spsBrand2(g,W,1540,false,o);};
 SPS_REG.alinti=async function(o,g,W,H,im,emb){
