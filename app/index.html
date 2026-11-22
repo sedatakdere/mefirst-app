@@ -15278,7 +15278,7 @@ function sbBindLine(O,x,re){O.querySelectorAll("[data-lk]").forEach(b=>b.onclick
    a.querySelector(".lkb").onclick=ev=>{ev.stopPropagation();sbToggleLike(x,k,re);const on=liked();ev.target.classList.toggle("on",on);ev.target.textContent=on?"❤️ Beğendin":"🤍 Beğen";};
    a.querySelector(".rp").onclick=async ev=>{ev.stopPropagation();if(!ev.target.dataset.sure){ev.target.dataset.sure=1;ev.target.textContent="🚩 Şikâyet et";return;}await sbReq("POST","reports",{polaroid_id:p.id},"return=minimal");ev.target.textContent="Teşekkürler, inceleyeceğiz 🙏";ev.target.disabled=true;L.list.splice(k,1);setTimeout(()=>{Z.click();re();},900);};},30);}));
  const mine=O.querySelector("#bk-line .pol:not(.empty):not(.oth) .meta .hs");if(mine&&(x.sbLikes||x.sbRep))mine.insertAdjacentHTML("afterend",`${x.sbRep?`<span class="rc"><i class="no-mi">💬</i>${x.sbRep}</span>`:""}${x.sbLikes?`<span class="lk on" style="pointer-events:none"><i class="no-mi">❤️</i>${x.sbLikes}</span>`:""}`);
- const own=O.querySelector("#bk-line .pol:not(.empty):not(.oth)");if(own)own.addEventListener("click",e=>{if(e.target.closest(".pdel"))return;setTimeout(()=>{const Z=document.querySelector(".bkz");if(!Z||!x.sbid)return;const a=document.createElement("div");a.className="bkz-act";a.innerHTML=`<button type="button" class="rpl">💬 Yanıtlar${x.sbRep?" · "+x.sbRep:""}</button>`;Z.appendChild(a);a.querySelector(".rpl").onclick=ev=>{ev.stopPropagation();Z.remove();sbReplies(x.sbid,true,n=>{x.sbRep=n;re();});};},30);});
+ const own=O.querySelector("#bk-line .pol:not(.empty):not(.oth)");if(own)own.addEventListener("click",e=>{if(e.target.closest(".pdel"))return;setTimeout(()=>{const Z=document.querySelector(".bkz");if(!Z||!x.sbid)return;const a=document.createElement("div");a.className="bkz-act";a.innerHTML=`${x.sbLikes?`<button type="button" class="lkb on lkl">❤️ Beğenenler · ${x.sbLikes}</button>`:""}<button type="button" class="rpl">💬 Yanıtlar${x.sbRep?" · "+x.sbRep:""}</button>`;Z.appendChild(a);const lb=a.querySelector(".lkl");if(lb)lb.onclick=ev=>{ev.stopPropagation();Z.remove();sbLikers(x);};a.querySelector(".rpl").onclick=ev=>{ev.stopPropagation();Z.remove();sbReplies(x.sbid,true,n=>{x.sbRep=n;re();});};},30);});
  /* eski, senkronlanmamış polaroidi yükle */
  if(x.cm&&!x.sbs&&sbPublic()&&sbPublic().ok)sbHang(x);}
 /* bildirimler */
@@ -15289,11 +15289,11 @@ async function sbNotiPull(force){const P=sbPublic();if(!P||!P.ok||!navigator.onL
 function sbBadge(){const b=document.querySelector('#bnav [data-nv="kitap"]');if(!b)return;let d=b.querySelector(".sbdot");const n=SB_NOTI.length;if(!n){if(d)d.remove();return;}if(!d){d=document.createElement("span");d.className="sbdot";b.appendChild(d);}d.textContent=n>9?"9+":n;}
 function sbNotiCand(){if(!SB_NOTI.length)return null;const N=SB_NOTI;const likes=N.filter(n=>n.kind==="like"),pols=N.filter(n=>n.kind==="pol"),qs=N.filter(n=>n.kind==="quote"),rps=N.filter(n=>n.kind==="reply"||n.kind==="reply2");
  const top=rps[0]||pols[0]||likes[0]||qs[0];const uniq=a=>[...new Set(a.map(n=>n.actor))];let h,d;
- if(rps.length){const a=uniq(rps);const mine=rps.some(n=>n.kind==="reply");h=`${esc(a[0])}${a.length>1?` ve ${a.length-1} okur daha`:""}<br><em>${mine?"polaroidine yanıt yazdı":"de yanıt yazdı"} 💬</em>`;d=`<b>${esc(rps[0].book_title)}</b> ${mine?"polaroidinin altında sohbet başladı.":"ipindeki sohbete yeni bir yanıt geldi."}`;if(likes.length)d+=`<br>Ayrıca polaroidin ${likes.length} beğeni aldı ❤️`;}
+ if(rps.length){const a=uniq(rps);const mine=rps.some(n=>n.kind==="reply");h=`${esc(a[0])}${a.length>1?` ve ${a.length-1} okur daha`:""}<br><em>${mine?"polaroidine yanıt yazdı":"de yanıt yazdı"} 💬</em>`;d=`<b>${esc(rps[0].book_title)}</b> ${mine?"polaroidinin altında sohbet başladı.":"ipindeki sohbete yeni bir yanıt geldi."}`;if(likes.length){const lu=uniq(likes);d+=`<br>Ayrıca <b>${esc(lu[0])}</b>${lu.length>1?` ve ${lu.length-1} okur daha`:""} polaroidini beğendi ❤️`;}}
  else if(pols.length){const a=uniq(pols);h=`${esc(a[0])}${a.length>1?` ve ${a.length-1} okur daha`:""}<br><em>polaroid astı</em>`;d=`Senin yorum yaptığın <b>${esc(pols[0].book_title)}</b> ipine yeni bir polaroid asıldı 🧷`;}
- else if(likes.length){h=`Polaroidin<br><em>${likes.length} beğeni aldı ❤️</em>`;d=`${uniq(likes).slice(0,3).map(esc).join(", ")} <b>${esc(likes[0].book_title)}</b> polaroidini beğendi.`;}
+ else if(likes.length){const lu=uniq(likes);h=`${esc(lu[0])}${lu.length>1?` ve ${lu.length-1} okur daha`:""}<br><em>polaroidini beğendi ❤️</em>`;d=`${lu.length>1?lu.slice(0,4).map(n=>"<b>"+esc(n)+"</b>").join(", ")+(lu.length>4?" ve diğerleri":"")+" · ":""}<b>${esc(likes[0].book_title)}</b> polaroidin ${likes.length} yeni beğeni aldı.`;}
  else{const a=uniq(qs);h=`${esc(a[0])}<br><em>altını çizdi ✍️</em>`;d=`<b>${esc(qs[0].book_title)}</b> kitabından senin gibi bir cümlenin altını çizdi.`;}
- if(likes.length&&pols.length)if(!rps.length&&likes.length&&pols.length)d+=`<br>Ayrıca polaroidin ${likes.length} beğeni aldı ❤️`;
+ if(!rps.length&&likes.length&&pols.length){const lu=uniq(likes);d+=`<br>Ayrıca <b>${esc(lu[0])}</b>${lu.length>1?` ve ${lu.length-1} okur daha`:""} polaroidini beğendi ❤️`;}
  const ids=N.map(n=>n.id);const done=()=>{return;SB_NOTI=[];sbBadge();sbReq("PATCH",`notifications?id=in.(${ids.join(",")})`,{read:true},"return=minimal");};
  return {id:"sbn:"+ids[0],p:91,cls:"pp-kt",k:"🧷 Okur ipi",leaves:1,h,d,a:[["Kitaba git 📖",()=>{done();bkFocus={t:"cm"};const tb=top.book_title,au=(N.find(n=>n.book_key===top.book_key)||{}).book_key||"";const L=klib();const j=L.findIndex(y=>bkKey(y)===top.book_key);if(j>=0)bookOpen(j);else{const K=kt();K.bkd=K.bkd||{};const o=Object.values(K.bkd).find(y=>bkKey(y)===top.book_key);if(o)bookOpen(-1,null,o);else bookOpenAny(tb,"");}}]],x:"Tamam 💛",onx:done};}
 (function(){const _c=mfPopCands;mfPopCands=function(){const L=_c.apply(this,arguments);try{const C=sbNotiCand();if(C&&!mfPopSeen()[C.id]){L.unshift(C);}}catch(e){}return L;};
@@ -15523,7 +15523,7 @@ function trDeck(PS){const D=document.getElementById("trd");if(!D)return;const C=
   c.addEventListener("pointermove",e=>{if(!drag)return;dx=e.clientX-x0;const dy=e.clientY-y0;if(!moved&&Math.abs(dy)>Math.abs(dx)&&Math.abs(dy)>8){drag=false;c.style.transition="";lay();return;}if(Math.abs(dx)>6)moved=true;if(moved){e.preventDefault();c.style.transform=`translateX(${dx}px) rotate(${dx/18}deg)`;}});
   const end=()=>{if(!drag)return;drag=false;if(!moved){const q=PS[i];bkFocus={t:"cm"};bookOpenAny(q.book_title,q.book_author||"");return;}
    if(Math.abs(dx)>55&&n>1){c.style.transition="transform .3s ease-in,opacity .3s";c.style.transform=`translateX(${dx>0?420:-420}px) rotate(${dx>0?18:-18}deg)`;c.style.opacity=0;
-    setTimeout(()=>{trDI=(trDI+(dx>0?n-1:1))%n;lay();},260);}else lay();};
+    setTimeout(()=>{trDI=(trDI+1)%n;lay();},260);}else lay();};
   c.addEventListener("pointerup",end);c.addEventListener("pointercancel",()=>{drag=false;lay();});});
  if(N)N.onclick=()=>{trDI=(trDI+1)%n;lay();};}
 
@@ -21315,6 +21315,14 @@ mfShare=async function(txt,F,by){let O=document.getElementById("mbpol");if(O)O.r
  const sb=O.querySelector(".mbp-sh");if(!(file&&navigator.canShare&&navigator.canShare({files:[file]})))sb.style.display="none";
  sb.onclick=async()=>{try{await navigator.share({files:[file],text:(by?"“"+txt+"” — "+by:txt)+" #MeFirst"});}catch(e){}};
  O.querySelector(".mbp-dl").onclick=()=>{const a=document.createElement("a");a.href=blob?URL.createObjectURL(blob):url;a.download="mefirst-polaroid.jpg";document.body.appendChild(a);a.click();setTimeout(()=>{try{URL.revokeObjectURL(a.href);}catch(e){}a.remove();},1500);};};
+/* v1.0.2 polaroidimi kimler beğendi */
+async function sbLikers(x){const m=document.createElement("div");m.className="sbm";m.innerHTML=`<div class="sbm-c"><h3>❤️ Beğenenler</h3><div class="rps" id="lks"><p class="rp-e">Yükleniyor…</p></div><button type="button" class="no" id="lk-x">Kapat</button></div>`;
+ document.body.appendChild(m);const close=()=>m.remove();m.querySelector("#lk-x").onclick=close;m.onclick=e=>{if(e.target===m)close();};
+ const k=bkKey(x);let r=await sbReq("GET",`notifications?kind=eq.like&book_key=eq.${encodeURIComponent(k)}&select=actor,created_at&order=created_at.desc&limit=200`);
+ const B=m.querySelector("#lks");if(!Array.isArray(r)){B.innerHTML=`<p class="rp-e">Şu an listeye ulaşamadım, birazdan tekrar dener misin?</p>`;return;}
+ const seen=new Set(),L=r.filter(n=>n.actor&&!seen.has(n.actor)&&seen.add(n.actor));
+ if(!L.length){B.innerHTML=`<p class="rp-e">${x.sbLikes?"Beğenenlerin adları bildirimlerle geliyor; yeni beğenilerde burada görünecek.":"Henüz beğeni yok."}</p>`;return;}
+ B.innerHTML=L.map(n=>`<div class="rp-i"><span class="ra no-mi">❤️</span><div class="rb"><b>${esc(n.actor)}</b><small>${(t=>t==="şimdi"?t:t+" önce")(sbAgo(n.created_at))}</small></div></div>`).join("");}
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
