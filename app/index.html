@@ -7947,6 +7947,11 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v1.1.2 dönem duvarı sonu */
+.spe-next{flex:0 0 132px;align-self:center;scroll-snap-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:170px;border-radius:14px;border:1.5px dashed color-mix(in srgb,var(--ink) 35%,transparent);background:color-mix(in srgb,var(--ink) 6%,transparent);color:var(--ink);font:inherit;cursor:pointer;padding:12px;text-align:center}
+.spe-next small{font-size:11px;opacity:.7;font-weight:700}.spe-next b{font-family:var(--f-display);font-size:20px;font-weight:400}.spe-next span{font-size:12px;font-weight:800;opacity:.85}
+.spe-cnt{margin:0;padding:0 18px;font-size:11px;font-weight:700;opacity:.6;color:var(--ink);text-align:right}
+
 /* v1.0 imza günü kartı: rozetler yan yana, kutu o anki kart kadar */
 .ktsl{transition:height .3s ease}
 .ktbdg{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-bottom:3px}
@@ -21370,22 +21375,27 @@ function spEraHTML(){const L=spEraList(),c=spEraCur(),i=L.indexOf(c),F=spEraFilm
   <div class="spe-dial" id="spe-dial"><span class="spe-needle" style="--i:${i};--n:${L.length}"></span>${L.map((e,k)=>`<button type="button" data-era="${e[0]}" aria-pressed="${k===i}">${e[0]===2020?"Bugün":String(e[0]).slice(2)+"'ler"}</button>`).join("")}</div>
   <div class="spe-room" id="spe-room"><div class="spe-sign"><span class="spe-yr">${c[1]}</span><strong>${esc(c[2])}</strong><em>${esc(c[3])}</em></div>
    <div class="spe-lights" aria-hidden="true">${Array.from({length:14},(_,k)=>`<i style="--k:${k}"></i>`).join("")}</div>
-   <div class="spe-wall">${F.map((f,k)=>`<button type="button" class="spe-fr" data-spf="${f[0]}" style="--rz:${[-3,2,-1.5,3,-2,1][k%6]}deg;--dl:${(k%5)*.18}s"><span class="spe-pin"></span>${spPoster(f)}<span class="spe-cap">${esc(f[1])}<small>${f[3]}</small></span>${S.seen[f[0]]?`<i class="spc-ok">${ySvg("check")}</i>`:S.want[f[0]]?`<i class="spc-ok w">${ySvg("bookmark")}</i>`:""}</button>`).join("")}</div>
+   <div class="spe-wall">${F.map((f,k)=>`<button type="button" class="spe-fr" data-spf="${f[0]}" style="--rz:${[-3,2,-1.5,3,-2,1][k%6]}deg;--dl:${(k%5)*.18}s"><span class="spe-pin"></span>${spPoster(f)}<span class="spe-cap">${esc(f[1])}<small>${f[3]}</small></span>${S.seen[f[0]]?`<i class="spc-ok">${ySvg("check")}</i>`:S.want[f[0]]?`<i class="spc-ok w">${ySvg("bookmark")}</i>`:""}</button>`).join("")}${i<L.length-1?`<button type="button" class="spe-next" data-erg="${L[i+1][0]}"><small>${F.length} film · ${esc(c[1])} bitti</small><b>${esc(L[i+1][1])}</b><span>Yolculuğa devam ›</span></button>`:""}</div><p class="spe-cnt">${F.length} film · sağa kaydırarak gez</p>
    <div class="spe-nav">${i>0?`<button type="button" data-era="${L[i-1][0]}">‹ ${L[i-1][1]}</button>`:"<span></span>"}${i<L.length-1?`<button type="button" data-era="${L[i+1][0]}">${L[i+1][1]} ›</button>`:"<span></span>"}</div></div></section>`;}
 (function(){const _ph=spPerdeHTML;spPerdeHTML=function(){let H=_ph.apply(this,arguments);if(SP.mood)return H;const era=spEraHTML();const k=H.indexOf('<div class="kthead"><span>Bu akşam ne izlesem?');return k>=0?H.slice(0,k)+era+H.slice(k):era+H;};
  const _r=spRender;spRender=function(){const r=_r.apply(this,arguments);try{document.body.classList.toggle("sp-perde",step===96&&SP.tab!=="sahne");const P=document.getElementById("sppanel");if(!P)return r;
    if(SP.tab!=="sahne")P.querySelectorAll(".spstrip").forEach(w=>{w.className="spwall"+(w.classList.contains("bw")?" bw":"");w.querySelectorAll(".spcard").forEach((c,k)=>{c.style.transform="";c.style.filter="";c.style.setProperty("--rz",[-2.5,2,-1,2.5,-1.5,1][k%6]+"deg");});const row=w.querySelector(".sprow");if(row)row.dataset.flow="off";});
    const E=P.querySelector("#spera");if(E){E.querySelectorAll("[data-era]").forEach(b=>b.onclick=()=>spEraGo(+b.dataset.era));E.querySelectorAll("[data-spf]").forEach(b=>b.onclick=()=>spFilmOpen(b.dataset.spf));
-    const room=E.querySelector("#spe-room");let x0=null;room.addEventListener("touchstart",e=>{x0=e.touches[0].clientX;},{passive:true});room.addEventListener("touchend",e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)<60)return;const L=spEraList(),i=L.indexOf(spEraCur());const n=L[i+(dx<0?1:-1)];if(n)spEraGo(n[0],dx<0?1:-1);},{passive:true});
+    spEraSwipe(E);
     spDialC(E);}
  }catch(e){console.error(e);}return r;};})();
 function spEraGo(y,dir){const E=document.getElementById("spera");if(!E){SP.era=y;spRender();return;}const L=spEraList();const i0=L.indexOf(spEraCur());SP.era=y;const i1=L.indexOf(spEraCur());dir=dir||(i1>i0?1:-1);
  const t=document.createElement("div");t.innerHTML=spEraHTML();const N=t.firstElementChild;N.classList.add("spe-in");N.style.setProperty("--dir",dir);E.classList.add("spe-out");E.style.setProperty("--dir",dir);
  try{navigator.vibrate&&navigator.vibrate(8);}catch(_){}setTimeout(()=>{E.replaceWith(N);N.querySelectorAll("[data-era]").forEach(b=>b.onclick=()=>spEraGo(+b.dataset.era));N.querySelectorAll("[data-spf]").forEach(b=>b.onclick=()=>spFilmOpen(b.dataset.spf));
-  const room=N.querySelector("#spe-room");let x0=null;room.addEventListener("touchstart",e=>{x0=e.touches[0].clientX;},{passive:true});room.addEventListener("touchend",e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)<60)return;const L2=spEraList(),i=L2.indexOf(spEraCur());const n=L2[i+(dx<0?1:-1)];if(n)spEraGo(n[0],dx<0?1:-1);},{passive:true});
+  spEraSwipe(N);
   spDialC(N);},230);}
 
 
+/* v1.1.2 dönem kaydırma: film duvarındaki kaydırma dönemi değiştirmez */
+function spEraSwipe(E){const room=E.querySelector("#spe-room");if(!room)return;let x0=null,y0=0;
+ room.addEventListener("touchstart",e=>{if(e.target.closest(".spe-wall")){x0=null;return;}x0=e.touches[0].clientX;y0=e.touches[0].clientY;},{passive:true});
+ room.addEventListener("touchend",e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;x0=null;if(Math.abs(dx)<70||Math.abs(dy)>Math.abs(dx)*.7)return;const L=spEraList(),i=L.indexOf(spEraCur());const n=L[i+(dx<0?1:-1)];if(n)spEraGo(n[0],dx<0?1:-1);},{passive:true});
+ E.querySelectorAll("[data-erg]").forEach(b=>b.onclick=()=>spEraGo(+b.dataset.erg,1));}
 function spDialC(E){try{const D=E.querySelector("#spe-dial"),b=D&&D.querySelector("[aria-pressed=true]");if(b)D.scrollLeft=b.offsetLeft-D.clientWidth/2+b.offsetWidth/2;}catch(e){}}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
