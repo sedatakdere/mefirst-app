@@ -12633,7 +12633,25 @@ function ktScore(b){const K=kt();let s=0,why="";
   if(b[2].includes("cocuk")&&!K.gen.includes("cocuk"))s-=4;
   if(ktMood){const m=KT_MOOD.find(x=>x[0]===ktMood);if(m&&m[3].includes(b[0])){s+=10;why=KT_MOODW[ktMood];}else s-=3;}
   return [s,why||(b[4]?"Fırından yeni çıktı 🥐":"Sonbaharın vazgeçilmezi 🍂")];}
-function ktRecs(){const K=kt();return KT_BOOKS.filter(b=>!ktOnShelf(b[0])&&!K.fav.map(ktN).includes(ktN(b[0]))).map(b=>[b,...ktScore(b)]).sort((a,b)=>b[1]-a[1]);}
+function ktPool(){if(ktPool.c&&ktPool.n===TRCAT.list.length)return ktPool.c;const seen=new Set(KT_BOOKS.map(b=>ktN(b[0])));const X=KT_BOOKS.slice();
+ TRCAT.list.forEach(b=>{const k=ktN(b.t);if(!k||seen.has(k)||!b.a)return;seen.add(k);X.push([b.t,b.a,(b.g&&b.g.length?b.g:["roman"]).slice(),b.p||"","",b.d||""]);});ktPool.c=X;ktPool.n=TRCAT.list.length;return X;}
+function ktDayK(){return window.__ktDay||dkey();}
+function ktJit(t){let h=2166136261;const s=ktDayK()+"|"+t;for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619)>>>0;return (h%1000)/1000;}
+function ktRecs(){const K=kt();const P=ktPool();const fv=new Set(K.fav.map(ktN)),sh=new Set(K.shelf.map(x=>ktN(x.t))),gen=new Set(K.gen);
+ const FAV=P.filter(f=>fv.has(ktN(f[0])));const fc=new Map(),fol=a=>{if(!fc.has(a))fc.set(a,ktFollow(a));return fc.get(a);};const md=ktMood?KT_MOOD.find(x=>x[0]===ktMood):null;
+ const O=[];for(const b of P){const n=ktN(b[0]);if(sh.has(n)||fv.has(n))continue;let s=0,why="";
+  if(fol(b[1])){s+=3;why=`${b[1]} hayranısın, bunu kaçırma 😏`;}
+  const g=b[2].filter(x=>gen.has(x));if(g.length){s+=2*g.length;if(!why)why=KT_WHY[g[0]]||"";}
+  for(const f of FAV){if(f===b)continue;if(f[1]===b[1]){s+=3;if(!why)why=`"${f[0]}" sevdiysen bunu da seversin 💛`;}if(f[2].filter(x=>b[2].includes(x)).length>=2){s+=1.5;if(!why)why=`"${f[0]}" sevdiysen bunu da seversin 💛`;}}
+  if(b[4])s+=1;if(b[2].includes("cocuk")&&!gen.has("cocuk"))s-=4;
+  if(md){if(md[3].includes(b[0])){s+=10;why=KT_MOODW[ktMood];}else s-=3;}
+  O.push([b,s+ktJit(b[0])*3.6+(b[5]?.4:0),why||(b[4]?"Fırından yeni çıktı 🥐":"Sonbaharın vazgeçilmezi 🍂")]);}
+ return O.sort((a,b)=>b[1]-a[1]);}
+function ktDiv(L,n){const A=new Set(),O=[];let fo=0;for(const r of L){const a=ktN(r[0][1]);if(A.has(a))continue;const f=ktFollow(r[0][1]);if(f&&fo>=1)continue;if(f)fo++;A.add(a);O.push(r);if(O.length>=n)break;}return O;}
+function ktFeatPick(R){const K=kt();K.fh=K.fh||[];const T=ktDayK();const td=K.fh.find(x=>x.d===T);if(td){const r=R.find(x=>ktN(x[0][0])===ktN(td.t));if(r)return r;}
+ const used=new Set(K.fh.slice(-30).map(x=>ktN(x.t))),ra=new Set(K.fh.filter(x=>x.d!==T).slice(-6).map(x=>ktN(x.a)));
+ const ok=R.filter(r=>!used.has(ktN(r[0][0]))&&!ra.has(ktN(r[0][1])));const top=ok.slice(0,12);const f=top.find(r=>r[0][5])||top[0]||R[0];
+ if(f){K.fh=K.fh.filter(x=>x.d!==T);K.fh.push({t:f[0][0],a:f[0][1],d:T});K.fh=K.fh.slice(-40);save();}return f;}
 const KT_COL=[["#B5532D","#E9A55A"],["#6B7A3A","#C8B45A"],["#8C3B2E","#D9824A"],["#4F5D3A","#B98A3C"],["#9A4A2C","#F0C27A"],["#5C3A2E","#C47A4C"]];
 function ktCover(t,a,big){let h=0;for(const c of t)h=(h*31+c.charCodeAt(0))>>>0;const c=KT_COL[h%KT_COL.length];
   return `<span class="ktc${big?" big":""}" data-cvt="${esc(t)}" data-cva="${esc(a||"")}" style="--c1:${c[0]};--c2:${c[1]}" aria-hidden="true"><i></i><b lang="tr">${esc(trHyph(t.length>34?t.slice(0,32)+"…":t))}</b><small>${esc(a)}</small></span>`;}
@@ -12668,7 +12686,7 @@ function kitapRender(){const K=kt();const P=document.getElementById("ktpanel");i
     P.querySelectorAll("[data-kfx]").forEach(b=>b.onclick=()=>{K.fav.splice(+b.dataset.kfx,1);save();kitapRender();});
     document.getElementById("kt-done").onclick=()=>{if(K.setup&&!K.gen.length&&!K.au.length&&!K.fav.length){P.querySelector(".ktchips").classList.add("shake");setTimeout(()=>P.querySelector(".ktchips")&&P.querySelector(".ktchips").classList.remove("shake"),500);return;}K.setup=true;save();kttab="oneri";kitapRender();window.scrollTo({top:0,behavior:"smooth"});};
   }
-  if(kttab==="oneri"){const R=ktRecs();const feat=R[0];const nw=R.filter(r=>r[0][4]&&r[1]>=2&&r!==feat);const disc=R.filter(r=>r!==feat&&!nw.slice(0,6).includes(r)&&!ktFollow(r[0][1])&&r[0][2].some(g=>K.gen.includes(g))).slice(0,6);const rest=R.slice(1).filter(r=>!nw.slice(0,6).includes(r)&&!disc.includes(r)).slice(0,8);const nm=(st.name||"").trim();
+  if(kttab==="oneri"){const R=ktRecs();const feat=ktFeatPick(R);const nw=R.filter(r=>r[0][4]&&r[1]>=2&&r!==feat);const disc=ktDiv(R.filter(r=>r!==feat&&!nw.slice(0,6).includes(r)&&!ktFollow(r[0][1])&&r[0][2].some(g=>K.gen.includes(g))),6);const rest=ktDiv(R.filter(r=>r!==feat&&!nw.slice(0,6).includes(r)&&!disc.includes(r)&&ktN(r[0][1])!==ktN(feat?feat[0][1]:"")),8);const nm=(st.name||"").trim();
     const evB=myE.length?`<button type="button" class="ktalert" id="kt-toev"><span class="no-mi">✍️</span><span><strong>${esc(myE[0][1].filter(ktFollow)[0]||myE[0][1][0])} ${myE[0][2]?"ile imza günü":"imza gününe geliyor"}</strong><small>${myE[0][2]?ktWhen(myE[0][2])+" · "+myE[0][3]+" · ":"Kasım · tarih netleşince haber veririm · "}${esc(myE[0][4])}${myE[0][2]?", "+esc(myE[0][5]):""}</small></span><b>›</b></button>`:"";
     P.innerHTML=evB+ozgHTML()+`<div class="ktmood"><p>${nm?esc(nm)+", b":"B"}ugün kitap ne yapsın sana?</p><div class="ktmoods">${KT_MOOD.map(([id,e,l])=>`<button type="button" class="ktm" data-km="${id}" aria-pressed="${ktMood===id}">${typeof MOODI!=="undefined"&&MOODI[id]?`<i class="fei kmi">${MOODI[id]}</i>`:`<span class="no-mi">${e}</span>`}${l}</button>`).join("")}</div></div>
       <div class="kthead"><span>${ktMood?KT_MOODW[ktMood]:"Çayını demle, bu tam sana göre ☕"}</span></div>${ktMood?ktMoodRow(R):feat?ktCard(feat,true):""}
@@ -12681,7 +12699,7 @@ function kitapRender(){const K=kt();const P=document.getElementById("ktpanel");i
     const te=document.getElementById("kt-toev");if(te)te.onclick=()=>{kttab="etk";kitapRender();};
     document.getElementById("kt-tz").onclick=e=>{e.preventDefault();kttab="zevk";kitapRender();};
     P.querySelectorAll("[data-km]").forEach(b=>b.onclick=()=>{ktMood=ktMood===b.dataset.km?null:b.dataset.km;const y=window.scrollY;kitapRender();window.scrollTo({top:y});const f=document.querySelector(".ktb.feat");if(f){f.classList.add("pop");}const mr=document.querySelector(".ktmrow");if(mr)mr.scrollLeft=0;});
-    document.getElementById("kt-draw").onclick=()=>{const pool=R.slice(0,14);const r=pool[Math.floor(Math.random()*pool.length)];if(!r)return;const b=r[0];const box=document.getElementById("kt-fal");
+    document.getElementById("kt-draw").onclick=()=>{K.falH=K.falH||[];const fh=new Set(K.falH.map(ktN));const pool=R.slice(0,70).filter(r=>r!==feat&&!fh.has(ktN(r[0][0])));const r=pool[Math.floor(Math.random()*pool.length)]||R[Math.floor(Math.random()*Math.min(R.length,70))];if(!r)return;K.falH.push(r[0][0]);K.falH=K.falH.slice(-25);save();const b=r[0];const box=document.getElementById("kt-fal");
       box.innerHTML=`<div class="ktfal"><div class="ktfal-in"><div class="ktfal-f ktfal-b"><span class="no-mi">🍂</span><b>Me First</b><small>kitap falı</small></div><div class="ktfal-f ktfal-a">${ktCover(b[0],b[1],true)}<strong>${esc(b[0])}</strong><span class="ktau">${esc(b[1])}</span><p>${KT_FAL[Math.floor(Math.random()*KT_FAL.length)]}</p><div class="ktb-a"><button type="button" class="ktbtn" data-kadd="${esc(b[0])}" data-kau="${esc(b[1])}">Rafa koy 📚</button><button type="button" class="ktbtn gh" id="kt-again">Bir daha çek 🎴</button></div></div></div></div>`;
       const f=box.querySelector(".ktfal");setTimeout(()=>f.classList.add("on"),60);
       box.querySelector("[data-kadd]").onclick=e=>{const x=e.currentTarget;if(!ktOnShelf(x.dataset.kadd))K.shelf.unshift({t:x.dataset.kadd,a:x.dataset.kau,s:"oku",d:dkey()});save();x.textContent="Rafında ✓";x.disabled=true;x.classList.add("done");};
@@ -18677,10 +18695,10 @@ function spSeasonPick(){const m=new Date().getMonth();const key=m===10?"kasim":m
 function spPerdeHTML(){const S=spSt(),f=spSeasonPick();const lbl={kasim:"Kasımın filmi",aralik:"Aralığın filmi",kis:"Kış akşamlarına",bahar:"Bahar akşamlarına",yaz:"Yaz gecelerine",sonbahar:"Sonbahar akşamlarına"}[f[6]]||"Bu haftanın filmi";
  let H=`<button type="button" class="sp-feat" data-spf="${f[0]}" style="--a:${f[8]};--b:${f[9]}">${spPoster(f,"big")}<span class="spf-t"><small>${lbl}</small><strong>${esc(f[1])}</strong><em>${esc(f[7])}</em><span class="spf-a">${S.seen[f[0]]?ySvg("check")+"İzledin":S.want[f[0]]?ySvg("bookmark")+"Listende":"Bu akşam izle →"}</span></span></button>`;
  H+=`<div class="kthead"><span>Bu akşam ne izlesem?</span></div><div class="sp-moods">${Object.entries(PF_MOOD).map(([k,[ic,l]])=>`<button type="button" data-spm="${k}" aria-pressed="${SP.mood===k}">${ySvg(ic)}${l}</button>`).join("")}</div>`;
- if(SP.mood){const L=PF.filter(x=>x[5].includes(SP.mood));H+=`<div class="sp-grid">${L.map(x=>`<button type="button" class="spcard" data-spf="${x[0]}">${spPoster(x)}${S.seen[x[0]]?`<i class="spc-ok">${ySvg("check")}</i>`:S.want[x[0]]?`<i class="spc-ok w">${ySvg("bookmark")}</i>`:""}</button>`).join("")}</div>`;}
+ if(SP.mood){const L=spDayPick(PF.filter(x=>x[5].includes(SP.mood)),60,9);H+=`<div class="sp-grid">${L.map(x=>`<button type="button" class="spcard" data-spf="${x[0]}">${spPoster(x)}${S.seen[x[0]]?`<i class="spc-ok">${ySvg("check")}</i>`:S.want[x[0]]?`<i class="spc-ok w">${ySvg("bookmark")}</i>`:""}</button>`).join("")}</div>`;}
  const row=(t,L,sub)=>L.length?`<div class="kthead"><span>${t}</span>${sub?`<small>${sub}</small>`:""}</div><div class="ktrow sprow">${L.map(x=>`<button type="button" class="spcard" data-spf="${x[0]}">${spPoster(x)}${S.seen[x[0]]?`<i class="spc-ok">${ySvg("check")}</i>`:S.want[x[0]]?`<i class="spc-ok w">${ySvg("bookmark")}</i>`:""}</button>`).join("")}</div>`:"";
  const vz=SP.vizyon.map(v=>spFilm(v[0])).filter(Boolean);
- if(!SP.mood){if(vz.length)H+=row("Vizyonda, seçmece",vz,"hepsi değil, bunlar");H+=row("Aşk klasikleri",PF.filter(x=>x[5].includes("ask")&&!x[5].includes("nost")).slice(0,10));H+=row("Güçlü kadınlar",PF.filter(x=>x[5].includes("guclu")));H+=row("Yeşilçam’dan",PF.filter(x=>/^(selvi|birudum|neseli|hababam|mavi|babamoglum|vizontele|ayla|kelebek)$/.test(x[0])));H+=row("Kız kıza film gecesi",PF.filter(x=>x[5].includes("kiz")));}
+ if(!SP.mood){if(vz.length)H+=row("Vizyonda, seçmece",vz,"hepsi değil, bunlar");H+=row("Aşk klasikleri",spDayPick(PF.filter(x=>x[5].includes("ask")&&!spIsYc(x)),10,1),"her gün yenileri");H+=row("Yeşilçam’dan",spDayPick(PF.filter(spIsYc),10,2),"bir devrin sineması");H+=row("Türk sinemasından",spDayPick(PF.filter(x=>spIsTr(x)&&!spIsYc(x)),10,3));H+=row("Güçlü kadınlar",spDayPick(PF.filter(x=>x[5].includes("guclu")),10,4));H+=row("Kız kıza film gecesi",spDayPick(PF.filter(x=>x[5].includes("kiz")),10,5));}
  return H;}
 function spListeHTML(){const S=spSt();const goL=Object.keys(S.go).map(spEv).filter(Boolean);const up=goL.filter(e=>(e[4]||e[3])>=dkey()),past=goL.filter(e=>(e[4]||e[3])<dkey());
  const want=Object.keys(S.want).filter(id=>!S.seen[id]).map(spFilm).filter(Boolean),seen=Object.keys(S.seen).map(id=>({f:spFilm(id),s:S.seen[id]})).filter(o=>o.f).sort((a,b)=>(b.s.d||"").localeCompare(a.s.d||""));
@@ -19779,10 +19797,14 @@ spSeasonPick=function(){const S=spSt(),m=new Date().getMonth(),key=m===10?"kasim
  if(sea.length&&d%4===0)return sea[Math.floor(d/4)%sea.length];const L=rest.length?rest:PF;const r=spRand(d*7919);let k=Math.floor(r()*L.length);return L[k];};
 (function(){const _h=spPerdeHTML;spPerdeHTML=function(){let H=_h.apply(this,arguments);try{const f=spSeasonPick();const m=new Date().getMonth(),key=m===10?"kasim":m===11?"aralik":"";if(f[6]!==key)H=H.replace(/<small>(Kasımın filmi|Aralığın filmi|Kış akşamlarına|Bahar akşamlarına|Yaz gecelerine|Sonbahar akşamlarına|Bu haftanın filmi)<\/small>/,"<small>Bugünün filmi</small>");}catch(e){}if(!SP.mood)H+=`<div class="sns" id="sns"></div>`;return H;};})();
 const SNS={f:"all",o:"you",n:12,io:null};
-const SNS_F=[["all","Hepsi"],["ask","Aşk"],["gul","Komedi"],["agla","Dram"],["iyi","İyi hissettiren"],["tr","Yerli"],["nost","Nostalji"],["yeni","Yeni"],["unseen","İzlemediklerim"]];
+const SNS_F=[["all","Hepsi"],["ask","Aşk"],["gul","Komedi"],["agla","Dram"],["iyi","İyi hissettiren"],["tr","Türk sineması"],["yc","Yeşilçam"],["nost","Nostalji"],["yeni","Yeni"],["unseen","İzlemediklerim"]];
+const SP_TRID=/^(selvi|birudum|neseli|hababam|mavi|babamoglum|vizontele|ayla|kelebek)$/;
+function spIsTr(f){return !!(f.tr||SP_TRID.test(f[0])||/Türk (filmi|sinema)/.test(f[7]||"")||(f[10]==="reel"&&/[çğışöüÇĞİŞÖÜ]/.test(f[1]+f[4])));}
+function spIsYc(f){return spIsTr(f)&&f[3]>=1945&&f[3]<1990;}
+function spDayPick(L,n,salt){const S=spSt(),r=spRand(spDayN()*131+salt*977+7);return L.map(f=>[f,r()+(SP.afis&&SP.afis[f[0]]?.55:0)-(S.seen[f[0]]?.9:0)]).sort((a,b)=>b[1]-a[1]).slice(0,n).map(x=>x[0]);}
 const SNS_O=[["you","Sana göre"],["pop","Popüler"],["new","En yeni"],["az","A-Z"]];
 function snsStock(){const S=spSt(),y=new Date().getFullYear();let L=PF.filter(f=>f[3]&&f[1]);const F=SNS.f;
- if(F==="tr")L=L.filter(f=>f.tr||f[10]==="reel"&&/[çğışöüÇĞİŞÖÜ]/.test(f[1]+f[4]));else if(F==="yeni")L=L.filter(f=>f[3]>=y-3);else if(F==="unseen")L=L.filter(f=>!S.seen[f[0]]);else if(F!=="all")L=L.filter(f=>f[5].includes(F));
+ if(F==="tr")L=L.filter(f=>spIsTr(f)&&!spIsYc(f));else if(F==="yc")L=L.filter(spIsYc);else if(F==="yeni")L=L.filter(f=>f[3]>=y-3);else if(F==="unseen")L=L.filter(f=>!S.seen[f[0]]);else if(F!=="all")L=L.filter(f=>f[5].includes(F));
  const O=SNS.o;if(O==="az")L.sort((a,b)=>a[1].localeCompare(b[1],"tr"));else if(O==="new")L.sort((a,b)=>b[3]-a[3]);else if(O==="pop")L.sort((a,b)=>(b.p||(PF.indexOf(b)<60?120:0))-(a.p||(PF.indexOf(a)<60?120:0)));
  else{const r=spRand(spDayN()*31+7),like=new Set();Object.keys(S.seen).concat(Object.keys(S.want)).forEach(id=>{const f=spFilm(id);if(f)f[5].forEach(t=>like.add(t));});const sc=new Map(L.map(f=>[f[0],(f[5].some(t=>like.has(t))?.6:0)+(SP.afis&&SP.afis[f[0]]?.5:0)+r()]));L.sort((a,b)=>sc.get(b[0])-sc.get(a[0]));}
  return L;}
