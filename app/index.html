@@ -17627,7 +17627,8 @@ function sfBadgeUI(){try{const t=(SF.badge.unread||0)+(SF.badge.pending||0);if(n
 
 SF.town="";SF.sort="new";
 function sfMyTown(){try{return trN(localStorage.getItem("mf-sf-town")||"");}catch(e){return "";}}
-function sfView(){let R=(SF.all||[]).slice();if(SF.town)R=R.filter(a=>trN(a.town||"")===trN(SF.town));if(SF.kind)R=R.filter(a=>a.kind===SF.kind);
+function sfView(){const R0=sfView0();if(SF.sort==="near")return R0.filter(a=>!a.mine);return R0.filter(a=>!a.mine).concat(R0.filter(a=>a.mine));}
+function sfView0(){let R=(SF.all||[]).slice();if(SF.town)R=R.filter(a=>trN(a.town||"")===trN(SF.town));if(SF.kind)R=R.filter(a=>a.kind===SF.kind);
  const t=a=>+new Date(a.created_at);
  if(SF.sort==="hot")R.sort((a,b)=>(b.req_count||0)-(a.req_count||0)||t(b)-t(a));
  else if(SF.sort==="near"){const me=sfMyTown();R.sort((a,b)=>((me&&trN(b.town||"")===me)?1:0)-((me&&trN(a.town||"")===me)?1:0)||t(b)-t(a));}
