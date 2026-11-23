@@ -7947,6 +7947,21 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v1.4 oyun kutusu rozetleri + hedef ekranı */
+.kb .kb-prog{position:absolute;top:10px;left:10px;z-index:3;display:inline-flex;align-items:center;gap:6px;padding:4px 9px 4px 8px;border-radius:99px;background:rgba(10,6,24,.38);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);font:800 10.5px/1 var(--f-body);color:#fff;letter-spacing:.01em;max-width:calc(100% - 20px);white-space:nowrap;overflow:hidden}
+.kb .kb-prog i{font-style:normal;font-weight:800;color:#FFE38A;opacity:.95}
+.kb:has(.kb-new) .kb-prog{top:auto;bottom:auto;top:34px}
+#gfx-intro{position:fixed;inset:0;z-index:9570;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,rgba(20,10,40,.45),rgba(6,3,16,.8));opacity:0;transition:opacity .3s;cursor:pointer}
+#gfx-intro.on{opacity:1}#gfx-intro.out{opacity:0}
+.gi-c{position:relative;width:min(320px,86vw);padding:24px 20px 18px;border-radius:28px;text-align:center;color:#fff;background:radial-gradient(120% 80% at 50% 0%,color-mix(in srgb,var(--c2) 55%,transparent),transparent 70%),linear-gradient(170deg,rgba(40,24,70,.95),rgba(16,10,32,.96));box-shadow:0 30px 70px -20px rgba(0,0,0,.8),inset 0 0 0 1.5px color-mix(in srgb,var(--c1) 45%,transparent),0 0 60px -10px color-mix(in srgb,var(--c2) 70%,transparent);transform:scale(.7) translateY(30px);opacity:0;transition:transform .5s cubic-bezier(.2,1.5,.4,1),opacity .3s}
+#gfx-intro.on .gi-c{transform:none;opacity:1}
+.gi-k{margin:0;font:900 11px var(--f-body);letter-spacing:.32em;color:var(--c1);opacity:.95}
+.gi-t{margin:6px 0 0;font:900 42px/1 var(--f-body);background:linear-gradient(180deg,#fff,var(--c1));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 18px color-mix(in srgb,var(--c2) 80%,transparent))}
+.gi-l{height:2px;width:56px;margin:14px auto;border-radius:2px;background:linear-gradient(90deg,transparent,var(--c1),transparent)}
+.gi-g{margin:0;font:800 16px/1.35 var(--f-body)}.gi-g span{display:block;font:900 10px var(--f-body);letter-spacing:.3em;opacity:.6;margin-bottom:6px}
+.gi-ch{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:14px}.gi-ch em{font-style:normal;font:800 11.5px var(--f-body);padding:5px 10px;border-radius:99px;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)}
+.gi-go{margin-top:18px;width:100%;height:46px;border:0;border-radius:16px;font:900 15px var(--f-body);color:#1A1030;background:linear-gradient(180deg,#fff,var(--c1));box-shadow:0 12px 26px -12px var(--c2);cursor:pointer}
+
 /* v1.3 GFX katmanı */
 #gfx-cv{position:fixed;inset:0;width:100vw;height:100vh;z-index:9600;pointer-events:none}
 .gfx-flash{position:fixed;inset:0;z-index:9590;pointer-events:none;opacity:0;animation:gfxFl .45s ease-out}
@@ -21565,6 +21580,41 @@ document.addEventListener("click",e=>{const c=e.target.closest&&e.target.closest
 /* --- Kelime Keyfi: hamle puanı --- */
 (function(){const _a=kkApply;kkApply=function(G,p,pl){const r=_a.apply(this,arguments);try{if(r&&r.ok&&(G.mode!=="bot"||p===0)){const b=document.getElementById("kk-bd");const [x,y]=b?GFX.at(b):[innerWidth/2,innerHeight/2];const sc=r.score||r.pts||0;
    GFX.burst(x,y,["#9FF0C0","#fff","#FFD27A"],14+Math.min(sc,40)/2,{sp:6,up:3});if(sc)GFX.text("+"+sc,x,y-40,{big:sc>=25,c:["#fff","#2FB574"]});if(sc>=30)GFX.shake(b,5,260);GFX.combo(Math.min(Math.floor(sc/8),6));}}catch(e){}return r;};})();
+/* v1.4 oyun kutularında ilerleme rozetleri + bölüm başında hedef ekranı */
+function gfxProg(k){try{const G=st.games2||{};const st3=n=>n?`★ ${n}`:"";const fmt=n=>(+n||0).toLocaleString("tr-TR");
+ switch(k){case"blk":{const lv=typeof bkLv==="function"?bkLv(G.blkXp):1,b=bkBest();return {l:`Seviye ${lv}`,s:b?`Rekor ${fmt(b)}`:""};}
+  case"ws":{const lv=wsLvMax();return {l:`Bölüm ${lv}`,s:st3(G.wsStars)};}
+  case"tm":{const lv=tmLvMax();return {l:`Bölüm ${lv}`,s:st3(G.tmStars)};}
+  case"mv":{const b=mvBest();return b?{l:"Rekor",s:fmt(b)}:{l:"İlk rekorunu yap",s:""};}
+  case"wow":{const S=wowS();const ci=Math.floor((S.i%WLV.length)/5)%WCH.length;return {l:`Seviye ${S.i+1}`,s:WCH[ci][0]};}
+  case"kk":{const S=kkStats();return S.w||S.l?{l:`${S.w} galibiyet`,s:S.best?`En iyi ${S.best}`:""}:{l:"İlk maçını yap",s:""};}
+  case"mem":{const b=G.mem&&G.mem<999?G.mem:0;return b?{l:"En az",s:`${b} hamle`}:{l:"3 zorluk",s:""};}
+  case"jig":{const n=G.jigN||0;return n?{l:`${n} resim`,s:"tamam"}:{l:"3×3 · 4×4 · 5×5",s:""};}}}catch(e){}return null;}
+(function(){const _k=keyRender;keyRender=function(){const r=_k.apply(this,arguments);try{if(kv!=="hub")return r;
+  ["blk","ws","mv","tm","kk","wow","mem","jig"].forEach(k=>{const t=document.querySelector(`#zsh .kb-${k}`);if(!t)return;const P=gfxProg(k);let b=t.querySelector(".kb-prog");if(!P){if(b)b.remove();return;}
+   if(!b){b=document.createElement("span");b.className="kb-prog";t.appendChild(b);}b.innerHTML=`<b>${esc(P.l)}</b>${P.s?`<i>${esc(P.s)}</i>`:""}`;});
+  const DSC={blk:"Satırları doldur, patlat",ws:"Renkleri kendi şişesine ayır",mv:"Meyveleri birleştir, karpuza ulaş",tm:"Aynı üç taşı rafa topla",kk:"Arıya ya da arkadaşına karşı",wow:"Harfleri birleştir, kelimeyi bul",mem:"Kartları çevir, eşleri bul",jig:"Kendi fotoğrafınla yap"};
+  Object.keys(DSC).forEach(k=>{const t=document.querySelector(`#zsh .kb-${k}`);const sm=t&&(t.querySelector(".kb-tx small")||t.querySelector("small:not(.kb-prog *)"));if(sm&&!sm.closest(".kb-prog"))sm.textContent=DSC[k];});}catch(e){}return r;};})();
+/* hedef ekranı */
+GFX.intro=function(o){const old=document.getElementById("gfx-intro");if(old)old.remove();const d=document.createElement("div");d.id="gfx-intro";d.setAttribute("role","dialog");d.setAttribute("aria-label",(o.kick||"")+" "+(o.title||""));
+ d.innerHTML=`<div class="gi-c" style="--c1:${o.c1||"#FFD27A"};--c2:${o.c2||"#FF8FB8"}"><p class="gi-k">${o.kick||""}</p><h3 class="gi-t">${o.title||""}</h3><div class="gi-l"></div><p class="gi-g"><span>HEDEF</span>${o.goal||""}</p>${(o.chips||[]).length?`<div class="gi-ch">${o.chips.map(c=>`<em>${c}</em>`).join("")}</div>`:""}<button type="button" class="gi-go">Başla</button></div>`;
+ document.body.appendChild(d);requestAnimationFrame(()=>d.classList.add("on"));this.tone([[392,0,"sine",.07],[523.3,.08,"sine",.07],[659.3,.16,"sine",.08]],o.snd);
+ const close=()=>{if(!d.isConnected)return;d.classList.remove("on");d.classList.add("out");setTimeout(()=>d.remove(),320);};d.onclick=close;setTimeout(close,o.ms||3200);};
+function gfxSeen(key,cool){const G=st.games2=st.games2||{};G.gi=G.gi||{};const t=G.gi[key]||0;if(cool?Date.now()-t<cool:t)return true;G.gi[key]=Date.now();try{save();}catch(e){}return false;}
+function gfxIntroLater(fn){setTimeout(()=>{try{fn();}catch(e){}},420);}
+(function(){
+ const _ws=wsStart;wsStart=function(lv){const r=_ws.apply(this,arguments);if(!gfxSeen("ws"+lv))gfxIntroLater(()=>{if(kv!=="ws")return;const n=WS.T.filter(t=>t.length).length,c=new Set(WS.T.flat()).size;
+  GFX.intro({kick:"RENK SIRALA",title:`Bölüm ${lv}`,goal:`${c} rengi kendi şişesine topla`,chips:[`${WS.T.length} şişe`,"★★★ yardımsız",lv%5===0?"Usta bölümü":"Acele yok"],c1:"#BFF3FF",c2:"#7FD3FF",snd:wsSndOn()});});return r;};
+ const _tm=tmStart;tmStart=function(lv){const r=_tm.apply(this,arguments);if(!gfxSeen("tm"+lv))gfxIntroLater(()=>kv==="tm"&&GFX.intro({kick:"ÜÇLÜ EŞLE",title:`Bölüm ${lv}`,goal:`${TM.T.length} taşın hepsini üçerli topla; raf dolmasın`,chips:["7 yuvalı raf","★★★ yardımsız"],c1:"#B8F5C8",c2:"#4FB993",snd:tmSndOn()}));return r;};
+ const _bk=bkNew;bkNew=function(){const r=_bk.apply(this,arguments);if(!gfxSeen("bk",6e5))gfxIntroLater(()=>{if(kv!=="blk")return;const b=bkBest();GFX.intro({kick:"BLOK KEYFİ",title:"Yeni oyun",goal:"Satır ve sütunları doldur, patlat",chips:[b?`Rekor ${b.toLocaleString("tr-TR")}`:"İlk rekorun",`Seviye ${bkLv((st.games2||{}).blkXp)}`,"Kombo = katlanan puan"],c1:"#B9E6FF",c2:"#8B5CFF",snd:bkSndOn()});});return r;};
+ const _mv=mvNew;mvNew=function(){const r=_mv.apply(this,arguments);if(!gfxSeen("mv",6e5))gfxIntroLater(()=>{if(kv!=="mv")return;const b=mvBest();GFX.intro({kick:"MEYVE KEYFİ",title:"Yeni kavanoz",goal:"Aynı meyveleri birleştir, karpuza ulaş",chips:[b?`Rekor ${b.toLocaleString("tr-TR")}`:"İlk rekorun","Çizgiyi geçme"],c1:"#FFE38A",c2:"#FF8E72",snd:mvSndOn()});});return r;};
+ const _mn=memNew;memNew=function(lv){const r=_mn.apply(this,arguments);try{const n=MG.deck.length/2;if(!gfxSeen("mem"+lv,9e5))gfxIntroLater(()=>{if(kv!=="mem")return;GFX.intro({kick:"HAFIZA",title:{kolay:"Kolay",orta:"Orta",zor:"Zor"}[lv]||"Yeni oyun",goal:`${n} eşi bul`,chips:[`★★★ ${Math.floor(n*1.35)} hamlede`,"Acele yok"],c1:"#FFD0E2",c2:"#FF8FB8"});});}catch(e){}return r;};
+})();
+/* Resim puzzle: tamamlanan resim sayısı */
+(function(){const _k=keyRender;keyRender=function(){const r=_k.apply(this,arguments);try{if(kv==="jig"&&JG&&JG.won&&!JG._cnt){JG._cnt=1;const G=st.games2=st.games2||{};G.jigN=(G.jigN||0)+1;save();}}catch(e){}return r;};})();
+/* Kelime yolculuğu: yeni seviyeye geçince hedef */
+(function(){const _k=keyRender;keyRender=function(){const r=_k.apply(this,arguments);try{if(kv!=="wow")return r;const S=wowS();if(gfxSeen("wow"+S.i))return r;const L=wowLvl();const ci=Math.floor((S.i%WLV.length)/5)%WCH.length,C=WCH[ci];
+  gfxIntroLater(()=>{if(kv!=="wow")return;GFX.intro({kick:`${C[0].toLocaleUpperCase("tr")} · ${(S.i%5)+1}/5`,title:`Seviye ${S.i+1}`,goal:`${L.g.length} kelimeyi bul`,chips:[`${L.l.length} harf`,(S.i%5)===4?"Durak sonu: pul kazan":"Karıştır, dene"],c1:C[2],c2:C[3]});});}catch(e){}return r;};})();
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
