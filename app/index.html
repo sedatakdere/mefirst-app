@@ -8006,6 +8006,28 @@ html body .bn.bnm:has(.bn-ring) .bnm-k{left:52px;top:23px}
 #ktsl .ktsd.tk .tk-act{margin-top:auto;padding-top:13px}
 #ktsl .ktsd.tk .tk-info{margin-bottom:0}
 #hx .moonbtn,#hx .sun{z-index:3}
+/* v1.9.5 gökyüzü kartı */
+#hx .skyc{position:absolute;left:14px;right:14px;bottom:16px;z-index:6;display:flex;gap:13px;align-items:flex-start;padding:14px 15px 12px;border-radius:20px;background:linear-gradient(150deg,rgba(40,24,70,.72),rgba(24,14,44,.78));-webkit-backdrop-filter:blur(16px) saturate(1.2);backdrop-filter:blur(16px) saturate(1.2);box-shadow:0 18px 36px -18px rgba(10,4,30,.8),inset 0 0 0 1px rgba(255,236,200,.16);color:#FFF4E6;opacity:0;transform:translateY(14px) scale(.97);transition:opacity .35s ease,transform .45s cubic-bezier(.2,1.2,.4,1);cursor:pointer}
+#hx .skyc.on{opacity:1;transform:none}
+#hx .skyc.off{opacity:0;transform:translateY(8px);transition:opacity .35s ease,transform .35s ease}
+#hx .skyc.day{background:linear-gradient(150deg,rgba(255,255,255,.82),rgba(255,244,232,.86));color:#3A2A3E;box-shadow:0 18px 36px -18px rgba(60,40,80,.45),inset 0 0 0 1px rgba(255,255,255,.7)}
+#hx .skyc-ic{flex:none;width:46px;height:46px;border-radius:50%;filter:drop-shadow(0 0 14px rgba(255,236,190,.55))}
+#hx .skyc-ic svg{width:100%;height:100%}
+#hx .skyc-ic.sun{background:radial-gradient(circle at 38% 35%,#FFF6C8,#FFC857 55%,#F2913A);box-shadow:0 0 22px rgba(255,190,90,.65)}
+#hx .skyc-t{flex:1;min-width:0}
+#hx .skyc-t small{display:block;font:800 10px/1.2 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:#FFB08F}
+#hx .skyc.day .skyc-t small{color:#C2543A}
+#hx .skyc-t strong{display:block;margin:5px 0 4px;font:400 20px/1.12 var(--f-display);color:inherit}
+#hx .skyc .skyc-t p{margin:0;font:600 12.5px/1.4 var(--f-body)!important;color:rgba(255,244,230,.84)!important;-webkit-text-fill-color:currentColor;text-shadow:none!important;max-width:none!important}
+#hx .skyc.day .skyc-t p{color:rgba(58,42,62,.8)!important}
+#hx .skyc .skyc-t strong{color:#FFF4E6!important;text-shadow:none!important}
+#hx .skyc.day .skyc-t strong{color:#3A2A3E!important}
+#hx .skyc-bar{position:relative;height:4px;margin:11px 2px 0;border-radius:99px;background:linear-gradient(90deg,rgba(255,255,255,.12),rgba(255,236,190,.75) 50%,rgba(255,255,255,.12))}
+#hx .skyc.day .skyc-bar{background:linear-gradient(90deg,rgba(60,40,80,.12),rgba(242,145,58,.7) 50%,rgba(60,40,80,.12))}
+#hx .skyc-bar i{position:absolute;top:50%;width:11px;height:11px;margin:-5.5px 0 0 -5.5px;border-radius:50%;background:#FFF4D6;box-shadow:0 0 0 3px rgba(255,236,190,.3),0 0 12px rgba(255,236,190,.9)}
+#hx .skyc.day .skyc-bar i{background:#F2913A;box-shadow:0 0 0 3px rgba(242,145,58,.25)}
+#hx .skyc-lb{display:flex;justify-content:space-between;margin-top:5px;font:700 9.5px/1 var(--f-body);opacity:.6}
+@media (prefers-reduced-motion:reduce){#hx .skyc{transition:none}}
 /* v1.6 topluluk 2 */
 .hsw-fam{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 11px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFE3A0;font:800 12px/1 var(--f-body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hsw-fam svg,.hs-hub-fam svg{width:15px;height:15px;fill:#F4D58D}
@@ -22446,6 +22468,23 @@ document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("#kt
 (function(){const _y=ySheet;ySheet=function(id){const had=!!document.getElementById(id);const O=_y.apply(this,arguments);try{const h=history.state||{};if(!(had&&h.ysh===id))history.pushState({ysh:id},"");
  const c0=O._close;O._c0=c0;O._close=function(){c0();if((history.state||{}).ysh===id){window.__yb=1;history.back();}};O.querySelectorAll(".shs-x").forEach(x=>x.onclick=O._close);O.onclick=e=>{if(e.target===O)O._close();};}catch(e){}return O;};
  window.addEventListener("popstate",e=>{if(window.__yb){window.__yb=0;e.stopImmediatePropagation();return;}const L=[...document.querySelectorAll(".ysh.on")];if(!L.length)return;const top=L[L.length-1];const h=history.state||{};if(h.ysh===top.id)return;e.stopImmediatePropagation();try{(top._c0||top._close)();}catch(_){top.remove();}},true);})();
+/* ===== v1.9.5 Gökyüzü kartı: aya ya da güneşe dokununca zarif bir cam kart, kendiliğinden kaybolur ===== */
+function skyHM(h){h=((h%24)+24)%24;const H=Math.floor(h),M=Math.round((h-H)*60);return String(M===60?H+1:H).padStart(2,"0")+":"+String(M===60?0:M).padStart(2,"0");}
+function skyCard(k){const hx=document.getElementById("hx");if(!hx)return;let C=document.getElementById("skyc");if(C&&C.dataset.k===k){skyHide();return;}if(C)C.remove();
+ const day=document.documentElement.dataset.mf!=="dusk"&&!/gece|aksam|alacakaranlik/.test(hx.className);let h="";
+ if(k==="moon"){const ma=moonAge(),mp=moonPhase(ma),R=MOONR[mp[0]]||["",""];const f=Math.max(0,Math.min(1,ma/SYN));
+  h=`<span class="skyc-ic">${moonSVG(ma)}</span><div class="skyc-t"><small>Ayın ${Math.floor(ma)+1}. günü · ${esc(mp[1])}</small><strong>${esc(R[0])}</strong><p>${esc(R[1])}</p>
+   <div class="skyc-bar"><i style="left:${(f*100).toFixed(1)}%"></i></div><div class="skyc-lb"><span>Yeni Ay</span><span>Dolunay</span><span>Yeni Ay</span></div></div>`;}
+ else{const S=sunTimes(new Date()),n=new Date(),H=n.getHours()+n.getMinutes()/60;const L=S.set-S.rise,f=Math.max(0,Math.min(1,(H-S.rise)/L));const up=H>=S.rise&&H<S.set;
+  const left=up?S.set-H:0;h=`<span class="skyc-ic sun"></span><div class="skyc-t"><small>Güneş · gün ışığı ${Math.floor(L)} sa ${Math.round((L%1)*60)} dk</small><strong>${up?(left<1.2?"Altın saat yaklaşıyor":"Işık seninle"):"Gün dinleniyor"}</strong><p>${up?`Güneş ${skyHM(S.set)}'de batacak. ${left<1.2?"Kısa bir yürüyüş için en güzel ışık şimdi.":"Pencereyi aç, biraz ışık al."}`:`Yarın ${skyHM(S.rise)}'de doğacak.`}</p>
+   <div class="skyc-bar sun"><i style="left:${(f*100).toFixed(1)}%"></i></div><div class="skyc-lb"><span>${skyHM(S.rise)}</span><span>Öğle</span><span>${skyHM(S.set)}</span></div></div>`;}
+ C=document.createElement("div");C.id="skyc";C.className="skyc"+(day?" day":"");C.dataset.k=k;C.setAttribute("role","status");C.innerHTML=h;hx.appendChild(C);requestAnimationFrame(()=>C.classList.add("on"));
+ C.onclick=e=>{e.stopPropagation();skyHide();};clearTimeout(skyCard._t);skyCard._t=setTimeout(skyHide,7000);}
+function skyHide(){clearTimeout(skyCard._t);const C=document.getElementById("skyc");if(!C)return;C.classList.remove("on");C.classList.add("off");setTimeout(()=>C.remove(),420);}
+function skyBind(){const hx=document.getElementById("hx");if(!hx)return;const i=document.getElementById("sky-info");if(i)i.hidden=true;hx.querySelectorAll("[data-sky]").forEach(b=>b.onclick=e=>{e.stopPropagation();skyCard(b.dataset.sky);});}
+(function(){const _h=homeRender;homeRender=function(){const r=_h.apply(this,arguments);try{skyBind();}catch(e){}return r;};try{skyBind();}catch(e){}})();
+document.addEventListener("click",e=>{if(document.getElementById("skyc")&&!(e.target.closest&&e.target.closest("#skyc,[data-sky]")))skyHide();},true);
+addEventListener("scroll",()=>{if(document.getElementById("skyc")&&scrollY>160)skyHide();},{passive:true});
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
