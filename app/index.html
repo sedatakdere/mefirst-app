@@ -7957,6 +7957,7 @@ html body .homebtn:not([hidden]):not(#_n1):not(#_n2)::before,html body .lk-x:not
 html body .homebtn:not([hidden]):not(#_n1):not(#_n2):active,html body .lk-x:not([hidden]):not(#_n1):not(#_n2):active,html body .zs-x:not([hidden]):not(#_n1):not(#_n2):active,html body .kf-back:not([hidden]):not(#_n1):not(#_n2):active,html body .hsw-x:not([hidden]):not(#_n1):not(#_n2):active,html body .shs-x:not([hidden]):not(#_n1):not(#_n2):active,html body .ss-x:not([hidden]):not(#_n1):not(#_n2):active,html body .fb-x:not([hidden]):not(#_n1):not(#_n2):active,html body .inst-x:not([hidden]):not(#_n1):not(#_n2):active,html body .sf-back:not([hidden]):not(#_n1):not(#_n2):active,html body .mfd-x:not([hidden]):not(#_n1):not(#_n2):active,html body .ok-x:not([hidden]):not(#_n1):not(#_n2):active,html body .fx-x:not([hidden]):not(#_n1):not(#_n2):active,html body .adm-x:not([hidden]):not(#_n1):not(#_n2):active,html body .sf-pop-x:not([hidden]):not(#_n1):not(#_n2):active,html body .ob2-back:not([hidden]):not(#_n1):not(#_n2):active,html body .kx-rx:not([hidden]):not(#_n1):not(#_n2):active,html body .bz-sgx:not([hidden]):not(#_n1):not(#_n2):active{transform:scale(.9)}
 html body .homebtn:not(#_n1):not(#_n2),html body .lk-x:not(#_n1):not(#_n2),html body .zs-x:not(.ss-rx):not(#_n1):not(#_n2){--nbi:var(--nb-h)}
 html body .kf-back:not(#_n1):not(#_n2),html body .sf-back:not(#_n1):not(#_n2),html body .ob2-back:not(#_n1):not(#_n2){--nbi:var(--nb-b)}
+html.mf-quiet body *,html.mf-quiet body *::before,html.mf-quiet body *::after{animation-duration:0s!important;animation-delay:0s!important;transition:none!important}
 /* v1.6 topluluk 2 */
 .hsw-fam{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 11px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFE3A0;font:800 12px/1 var(--f-body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hsw-fam svg,.hs-hub-fam svg{width:15px;height:15px;fill:#F4D58D}
@@ -22154,7 +22155,7 @@ function hsNote(a,me){const [c,r]=hsCol(a.id);const mine=a.user_id===me;const li
 function hsOpen(){let O=document.getElementById("hsw");if(!O){O=document.createElement("div");O.id="hsw";O.className="hsw";O.setAttribute("role","dialog");document.body.appendChild(O);document.documentElement.style.overflow="hidden";try{history.pushState({hsw:1},"");}catch(e){}requestAnimationFrame(()=>O.classList.add("on"));}
  hsPaint();hsLoad(true).then(()=>{if(document.getElementById("hsw"))hsPaint();});
  if(SB_QNOTI.length){const ids=SB_QNOTI.map(n=>n.id);setTimeout(()=>{SB_QNOTI=[];hsDot();sbReq("PATCH",`notifications?id=in.(${ids.join(",")})`,{read:true},"return=minimal");},4000);}}
-function hsClose(fromPop){const O=document.getElementById("hsw");if(!O)return;O.classList.remove("on");document.documentElement.style.overflow="";setTimeout(()=>O.remove(),320);if(!fromPop)try{if(history.state&&history.state.hsw)history.back();}catch(e){}try{if(step===0)homeRender();}catch(e){}}
+function hsClose(fromPop){const O=document.getElementById("hsw");if(!O)return;O.classList.remove("on");document.documentElement.style.overflow="";setTimeout(()=>O.remove(),320);if(!fromPop)try{if(history.state&&history.state.hsw)history.back();}catch(e){}homeSoft();}
 addEventListener("popstate",()=>{const h=history.state||{};if(document.getElementById("hsw")&&!h.hsw&&!h.mfa)hsClose(true);});
 function hsPaint(){const O=document.getElementById("hsw");if(!O)return;const W=hsWeek(),H=hsSt(),me=(sbSess()||{}).uid;const sc=O.querySelector(".hsw-sc");const y=sc?sc.scrollTop:0;
  let L=(HSD.w===W.w&&HSD.list)||[];L=L.filter(a=>!H.hid.includes(a.id));const mine=L.find(a=>a.user_id===me);let rest=L.filter(a=>a!==mine);
@@ -22200,6 +22201,10 @@ function hsHubHTML(){const W=hsWeek(),H=hsSt();const ans=!!H.body;return `<butto
  if(!H.body)O.splice(Math.min(1,O.length),0,{k:"soru",t:"soru",e:"Haftanın sorusu",h:W.q,d:"Cevabını yaz, bakalım diğerleri ne demiş",cta:"Cevapla",art:`<span class="tc-q" aria-hidden="true">“</span>`,go:hsOpen});
  const A=aykNow();if(st.kitap&&st.kitap.setup&&!aykIn()&&new Date().getDate()<=12)O.splice(Math.min(2,O.length),0,{k:"kulup",t:"book",e:`Ayın kitabı · ${A.mn}`,h:A.t,d:`${A.a} · Bu ay birlikte okuyoruz`,cta:"Kulübe bak",art:`<span class="tc-cov">${ktCover(A.t,A.a)}</span>`,go:()=>{kttab="oneri";document.getElementById("go-kitap").click();setTimeout(()=>{const a=document.getElementById("ayk");if(a)a.scrollIntoView({behavior:"smooth",block:"center"});},400);}});}catch(e){}return O;};})();
 
+/* v1.8.1 ana sayfa sessiz güncelleme: arka planda gelen veri tüm sayfayı yeniden çizmesin, sadece "Bugün senin için" değiştiyse o kart yenilensin */
+function tcSig(){try{return tcRich().map(c=>c.k||c.e||"").join("|");}catch(e){return "";}}
+(function(){const _t=todayRender;todayRender=function(){const r=_t.apply(this,arguments);window.__tcSig=tcSig();return r;};})();
+function homeSoft(){try{if(step!==0||document.hidden)return;const z=document.getElementById("zsh");if(z&&!z.hidden)return;if(tcSig()!==window.__tcSig)todayRender();}catch(e){}}
 /* ===== v1.6 Topluluk 2: Kurucu üye, davet kodu, rozetler, Birlikte sayaçları, Haftanın cevabı, Ayın okuru, ikimizin cevabı ===== */
 (function(){try{const u=new URL(location.href);const c=u.searchParams.get("r");if(c&&/^[A-Za-z0-9]{6}$/.test(c)){localStorage.setItem("mf-ref",c.toUpperCase());u.searchParams.delete("r");history.replaceState(null,"",u.pathname+(u.search||"")+u.hash);}}catch(e){}})();
 function refSt(){st.ref=st.ref||{};return st.ref;}
@@ -22211,7 +22216,7 @@ async function refRedeem(code,silent){code=(code||"").trim().toUpperCase();if(!/
  return r;}
 function refLink(){const R=refSt();return R.code?`https://mefirst.app/?r=${R.code}`:"https://mefirst.app";}
 function refShare(){const t=`Me First'te seni de görmek isterim 💛 Bu linkle gel, ikimiz de rozet kazanalım: ${refLink()}${refSt().code?`\n(Davet kodum: ${refSt().code})`:""}`;if(navigator.share)navigator.share({text:t}).catch(()=>{});else window.open("https://wa.me/?text="+encodeURIComponent(t),"_blank","noopener");}
-async function refBoot(){try{await refLoad();const c=localStorage.getItem("mf-ref");if(c&&!refSt().by&&refSt().code!==c){const r=await refRedeem(c);if(r.ok||r.err!=="net")localStorage.removeItem("mf-ref");}else if(c)localStorage.removeItem("mf-ref");try{if(step===0)homeRender();}catch(_){}}catch(e){}}
+async function refBoot(){try{await refLoad();const c=localStorage.getItem("mf-ref");if(c&&!refSt().by&&refSt().code!==c){const r=await refRedeem(c);if(r.ok||r.err!=="net")localStorage.removeItem("mf-ref");}else if(c)localStorage.removeItem("mf-ref");homeSoft();}catch(e){}}
 setTimeout(refBoot,6500);
 
 /* rozetler */
@@ -22331,7 +22336,7 @@ document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest
  if(R.founder&&R.newF)O.unshift({k:"kurucu",t:"soru",e:"Me First ailesi",h:`Kurucu üye #${R.founder} oldun`,d:"İlk 500 kişiden birisin. Mührün seni bekliyor.",cta:"Mührümü gör",art:`<span class="tc-med">${rzIco("crown")}</span>`,go:mfaOpen});
  const B=st.hsBest;if(B&&!B.none&&B.w===hsWeekOff(-1).w&&wd<=2)O.splice(Math.min(2,O.length),0,{k:"hsbest",t:"soru",e:B.mine?"Duvarın yıldızı sensin":"Geçen haftanın cevabı",h:`“${B.body}”`,d:`${B.mine?"Senin cevabın":B.name} · ${B.likes} beğeni`,cta:"Duvara bak",art:`<span class="tc-med st">${rzIco("star")}</span>`,go:hsOpen});
  const p=PL.mum;if(p&&p.now>0&&wd>=3){const gl=pulseGoal("mum",p.last);O.splice(Math.min(4,O.length),0,{k:"birlikte",t:"mabet",e:"Bu hafta birlikte",h:`${p.now.toLocaleString("tr-TR")} mum yandı`,d:p.now>=gl?"Hedefe ulaştık! Sen de mumunu ekle.":`Hedef ${gl.toLocaleString("tr-TR")}. ${p.me?"Seninki de sayıldı.":"Seninki de sayılsın."}`,cta:"Ailemize bak",art:`<span class="tc-med fl">${rzIco("flame")}</span>`,go:mfaOpen});}}catch(e){}return O;};})();
-setTimeout(()=>{if(navigator.onLine===false)return;Promise.all([hsBestLoad(),pulseWeek("mum")]).then(()=>{try{if(step===0)homeRender();}catch(_){}}).catch(()=>{});},9000);
+setTimeout(()=>{if(navigator.onLine===false)return;Promise.all([hsBestLoad(),pulseWeek("mum")]).then(()=>{homeSoft();}).catch(()=>{});},9000);
 
 /* ===== v1.7 emoji avcısı: M3'te olan her emoji ikon olur (.no-mi dahil), olmayanlar marka siluetine döner ===== */
 const MX_RE=/(?:[\u{1F1E6}-\u{1F1FF}]{2})|(?:\p{Extended_Pictographic}(?:️|[\u{1F3FB}-\u{1F3FF}])?(?:‍\p{Extended_Pictographic}️?)*)/gu;
@@ -22360,6 +22365,9 @@ document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest
 document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest("#zsh .zs-x:not(.ss-rx)");if(!t)return;e.preventDefault();e.stopImmediatePropagation();const Z=document.getElementById("zsh");const h=history.state||{};
  const n=(h.kvs?2:h.zs?1:0);zodClose(true);kv="hub";
  if(n){navLock=true;history.go(-n);setTimeout(()=>{navLock=false;if(step!==0){step=0;show();}},120);}else if(step!==0){step=0;show();}},true);
+/* v1.8.1 ana sayfa zaten ekrandayken yeniden çizilirse (hava durumu, rozet, bildirim) giriş animasyonları tekrar oynamasın */
+(function(){const _h=homeRender;homeRender=function(){const he=document.getElementById("hello");const q=step===0&&performance.now()>2500&&he&&he.style.display!=="none"&&!document.hidden;
+ if(q){document.documentElement.classList.add("mf-quiet");clearTimeout(homeRender._q);}try{return _h.apply(this,arguments);}finally{if(q)homeRender._q=setTimeout(()=>document.documentElement.classList.remove("mf-quiet"),900);}};})();
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
