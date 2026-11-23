@@ -7947,6 +7947,136 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .spn-tx{flex:1;min-width:0}.spn-tx strong{display:block;font-size:15px}.spn-tx small{display:block;font-size:12.8px;opacity:.75;line-height:1.4;margin-top:2px}
 .spn-it>i{font-style:normal;font-size:18px;color:#C2304A}
 /* v0.64 partner daveti */
+/* v1.5 topluluk: gidiyorum sayacı, ayın kitabı, haftanın sorusu */
+.gocrowd{display:flex;align-items:center;gap:9px;margin:10px 2px 0;font:600 12.5px/1.25 var(--f-body);color:inherit;opacity:.88}
+.gocrowd[hidden]{display:none!important}
+.gocrowd b{font-weight:800}
+.gc-h{display:inline-flex;flex:none}
+.gc-h i{width:18px;height:18px;border-radius:50%;margin-left:-6px;background:rgba(120,110,140,.22);box-shadow:0 0 0 2px var(--gc-ring,#fff);position:relative;overflow:hidden;transition:background .3s}
+.gc-h i:first-child{margin-left:0}
+.gc-h i::after{content:"";position:absolute;left:50%;top:22%;width:7px;height:7px;margin-left:-3.5px;border-radius:50%;background:rgba(255,255,255,.85);box-shadow:0 9px 0 4px rgba(255,255,255,.85)}
+.gc-h i.on:nth-child(1){background:linear-gradient(135deg,#FF8A6B,#F2635A)}
+.gc-h i.on:nth-child(2){background:linear-gradient(135deg,#9C8FE0,#6A5ACD)}
+.gc-h i.on:nth-child(3){background:linear-gradient(135deg,#6FBFA6,#3E8C80)}
+.gocrowd.hot .gc-t{background:linear-gradient(90deg,#F2635A,#C2304A);-webkit-background-clip:text;background-clip:text;color:transparent}
+#ysheet .gocrowd{justify-content:center;margin-top:9px}
+.mep .gocrowd{margin:6px 0 2px;justify-content:center;--gc-ring:#fff}
+.ktgo-r{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:8px}
+.ktgo-r .gocrowd{margin:0;font-size:11.5px;--gc-ring:rgba(255,248,238,.9)}
+.ktgo-r .gocrowd,.ktgo-r .gocrowd.hot .gc-t{color:#FFF4E6;-webkit-text-fill-color:#FFF4E6;background:none;opacity:1;text-shadow:0 1px 2px rgba(60,20,0,.35)}
+.ayk-crowd .gocrowd.hot .gc-t{background:none;-webkit-text-fill-color:#FFB08F;color:#FFB08F}
+.ktgo{font:800 12px/1 var(--f-body);padding:8px 13px;border-radius:99px;border:0;cursor:pointer;background:linear-gradient(135deg,#FF8A6B,#F2635A);color:#fff;box-shadow:0 6px 14px -6px rgba(242,99,90,.7);transition:transform .15s}
+.ktgo:active{transform:scale(.95)}
+.ktgo.on{background:#fff;color:#C2304A;box-shadow:inset 0 0 0 1.5px #F2635A}
+
+.ayk{position:relative;overflow:hidden;margin:4px 0 18px;padding:16px 16px 14px;border-radius:24px;color:#FFF2EC;background:radial-gradient(120% 90% at 100% 0%,rgba(255,138,107,.28),transparent 55%),radial-gradient(90% 70% at 0% 100%,rgba(156,143,224,.22),transparent 60%),linear-gradient(160deg,#2A173B,#1E1129 70%);box-shadow:0 18px 36px -18px rgba(30,17,41,.75),inset 0 0 0 1px rgba(255,255,255,.07)}
+.ayk-glow{position:absolute;right:-40px;top:-50px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,176,143,.35),transparent 65%);pointer-events:none;animation:aykG 6s ease-in-out infinite alternate}
+@keyframes aykG{to{transform:translate(-18px,14px) scale(1.12);opacity:.7}}
+.ayk-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;position:relative}
+.ayk-k{display:inline-flex;align-items:center;gap:6px;font:800 11px/1 var(--f-body);letter-spacing:.09em;text-transform:uppercase;color:#FFB08F}
+.ayk-k svg{width:15px;height:15px}
+.ayk-left{font:700 11px/1 var(--f-body);color:rgba(255,242,236,.6)}
+.ayk-row{display:flex;gap:14px;align-items:center;position:relative}
+.ayk-cv{flex:none;width:74px;transform:rotate(-3deg);filter:drop-shadow(0 10px 14px rgba(0,0,0,.45))}
+.ayk-cv>*{width:74px!important;height:108px!important;margin:0!important}
+.ayk-i{min-width:0}
+.ayk-i strong{display:block;font:400 22px/1.08 var(--f-display);color:#fff}
+.ayk-a{display:block;margin-top:3px;font:700 12.5px/1.2 var(--f-body);color:#FFB08F}
+.ayk-i p{margin:7px 0 0;font:600 12.5px/1.38 var(--f-body);color:rgba(255,242,236,.78)}
+.ayk-crowd{display:flex;align-items:center;gap:10px;margin-top:13px;min-height:22px;position:relative}
+.ayk-crowd .gocrowd{margin:0;--gc-ring:#24142F;opacity:.95}
+.ayk-avs{display:inline-flex}
+.ayk-avs:empty{display:none}
+.ayk-avs img,.ayk-avs b{width:24px;height:24px;border-radius:50%;margin-left:-7px;object-fit:cover;box-shadow:0 0 0 2px #24142F;display:inline-grid;place-items:center;font:800 11px/1 var(--f-body);color:#fff;background:linear-gradient(135deg,#9C8FE0,#6A5ACD)}
+.ayk-avs :first-child{margin-left:0}
+.ayk-crowd:has(.ayk-avs:not(:empty)) .gc-h{display:none}
+.ayk-act{display:flex;gap:8px;margin-top:13px;position:relative}
+.ayk-go,.ayk-gh{flex:1;font:800 13px/1 var(--f-body);padding:12px 10px;border-radius:99px;border:0;cursor:pointer;transition:transform .15s}
+.ayk-go{background:linear-gradient(135deg,#FFB08F,#FF8A6B 45%,#F2635A);color:#2A0E10;box-shadow:0 10px 22px -10px rgba(255,138,107,.9)}
+.ayk-gh{background:rgba(255,255,255,.08);color:#FFF2EC;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.ayk-gh span{opacity:.7;font-weight:700}
+.ayk-go:active,.ayk-gh:active{transform:scale(.96)}
+.ayk-out{display:block;margin:10px auto 0;background:none;border:0;font:700 11.5px/1 var(--f-body);color:rgba(255,242,236,.5);cursor:pointer;position:relative}
+.ayk.in .ayk-cv{animation:aykB 3.4s ease-in-out infinite}
+@keyframes aykB{50%{transform:rotate(-1deg) translateY(-3px)}}
+
+.hs-hub{position:relative;display:block;width:100%;text-align:left;margin:2px 0 16px;padding:16px 18px 15px;border:0;border-radius:24px;cursor:pointer;overflow:hidden;color:#FFF2EC;background:radial-gradient(110% 90% at 100% 0%,rgba(255,138,107,.32),transparent 55%),linear-gradient(155deg,#3A1F4E,#1E1129);box-shadow:0 16px 30px -16px rgba(30,17,41,.7);font-family:var(--f-body);transition:transform .2s}
+.hs-hub:active{transform:scale(.985)}
+.hs-hub-k{display:flex;justify-content:space-between;font:800 11px/1 var(--f-body);letter-spacing:.09em;text-transform:uppercase;color:#FFB08F}
+.hs-hub-k i{font-style:normal;letter-spacing:0;text-transform:none;color:rgba(255,242,236,.55);font-weight:700}
+.hs-hub strong{display:block;margin:10px 30px 10px 0;font:400 21px/1.15 var(--f-display);color:#fff}
+.hs-hub-s{display:flex;align-items:center;gap:6px;font:700 12.5px/1 var(--f-body);color:rgba(255,242,236,.78)}
+.hs-hub-s b{font-size:18px;line-height:0;color:#FF8A6B}
+.hs-hub-q{position:absolute;right:12px;bottom:-34px;font:400 120px/1 var(--f-display);color:rgba(255,138,107,.16);pointer-events:none}
+.hs-hub.dot::after{content:"";position:absolute;top:14px;right:14px;width:9px;height:9px;border-radius:50%;background:#FF6B8A;box-shadow:0 0 0 3px rgba(255,107,138,.25);animation:hsP 1.6s infinite}
+.hs-hub.dot .hs-hub-k i{margin-right:16px}
+@keyframes hsP{50%{box-shadow:0 0 0 7px rgba(255,107,138,0)}}
+
+#todaycard .today-c.tc-soru{background:radial-gradient(90% 90% at 100% 0%,rgba(255,138,107,.38),transparent 60%),linear-gradient(150deg,#3A1F4E,#1E1129)!important;color:#FFF2EC!important}
+#todaycard .today-c.tc-soru .tc-e{color:#FFB08F!important}
+#todaycard .today-c.tc-soru .tc-go{background:linear-gradient(135deg,#FFB08F,#F2635A)!important;color:#2A0E10!important;box-shadow:none!important}
+.tc-q{display:grid;place-items:center;width:100%;height:100%;font:400 96px/1 var(--f-display);color:rgba(255,176,143,.55);padding-top:34px}
+
+.hsw{position:fixed;inset:0;z-index:9500;background:#1E1129;color:#FFF2EC;opacity:0;transform:translateY(24px);transition:opacity .3s,transform .32s cubic-bezier(.2,.8,.2,1);font-family:var(--f-body)}
+.hsw.on{opacity:1;transform:none}
+.hsw-sc{position:absolute;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 58px) 16px calc(env(safe-area-inset-bottom,0px) + 40px)}
+.hsw-sky{position:absolute;left:0;right:0;top:0;height:420px;pointer-events:none;background:radial-gradient(80% 60% at 85% 0%,rgba(255,138,107,.32),transparent 70%),radial-gradient(60% 50% at 0% 30%,rgba(156,143,224,.22),transparent 70%)}
+.hsw-x{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);right:14px;z-index:3;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.1);color:#fff;font-size:16px;cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.hsw-hd{position:relative;text-align:center;padding:0 6px}
+.hsw-k{font:800 11px/1 var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:#FFB08F}
+.hsw-hd h2{margin:14px 0 10px;font:400 30px/1.12 var(--f-display);color:#fff;text-wrap:balance}
+.hsw-m{margin:0;font:600 12.5px/1 var(--f-body);color:rgba(255,242,236,.6)}
+.hsw-m b{color:#fff}
+.hsw-lk{position:relative;display:flex;align-items:center;gap:10px;margin:18px 0 0;padding:11px 14px;border-radius:16px;background:rgba(255,107,138,.14);box-shadow:inset 0 0 0 1px rgba(255,107,138,.3);font:600 13px/1.3 var(--f-body);animation:hsIn .5s both}
+.hsw-lk svg{width:20px;height:20px;fill:#FF6B8A;flex:none}
+.hsw-form,.hsw-mine{position:relative;margin:20px 0 6px;padding:14px;border-radius:20px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+.hsw-form textarea{width:100%;box-sizing:border-box;resize:none;border:0;outline:0;border-radius:14px;padding:12px 14px;background:#FFF8F0;color:#2A1A22;font:600 22px/1.15 "Caveat",cursive}
+.hsw-form textarea.shake{animation:ktShake .4s}
+.hsw-fr{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
+.hsw-fr small{font:700 11.5px/1 var(--f-body);color:rgba(255,242,236,.5)}
+.hsw-go{font:800 14px/1 var(--f-body);padding:12px 22px;border:0;border-radius:99px;cursor:pointer;background:linear-gradient(135deg,#FFB08F,#FF8A6B 45%,#F2635A);color:#2A0E10;box-shadow:0 10px 22px -10px rgba(255,138,107,.9)}
+.hsw-go.err{background:#fff;color:#C2304A}
+.hsw-go:disabled{opacity:.7}
+.hsw-rule{margin:10px 2px 0;font:600 11px/1.35 var(--f-body);color:rgba(255,242,236,.45)}
+.hsw-mine{background:linear-gradient(150deg,rgba(255,138,107,.2),rgba(156,143,224,.12));box-shadow:inset 0 0 0 1px rgba(255,176,143,.35)}
+.hsw-mine small{font:800 10.5px/1 var(--f-body);letter-spacing:.09em;text-transform:uppercase;color:#FFB08F}
+.hsw-mine p{margin:8px 0 12px;font:600 25px/1.12 "Caveat",cursive;color:#fff}
+.hsw-ma{display:flex;align-items:center;gap:6px}
+.hsw-ma span{flex:1;display:inline-flex;align-items:center;gap:5px;font:700 12px/1 var(--f-body);color:rgba(255,242,236,.75)}
+.hsw-ma span svg{width:15px;height:15px;fill:#FF6B8A}
+.hsw-ma button{font:800 12px/1 var(--f-body);padding:8px 12px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFF2EC;cursor:pointer}
+.hsw-tabs{display:flex;gap:6px;justify-content:center;margin:22px 0 14px}
+.hsw-tabs button{font:800 12px/1 var(--f-body);padding:9px 14px;border-radius:99px;border:0;cursor:pointer;background:rgba(255,255,255,.07);color:rgba(255,242,236,.7)}
+.hsw-tabs button[aria-pressed="true"]{background:#FFF2EC;color:#2A173B}
+.hsw-wall{columns:2;column-gap:12px}
+.hsn{position:relative;break-inside:avoid;margin:0 0 12px;padding:14px 13px 10px;border-radius:6px 6px 14px 6px;background:var(--bg);color:#2A1A22;transform:rotate(var(--r,0deg));box-shadow:0 10px 18px -10px rgba(0,0,0,.6),inset 0 -2px 0 rgba(0,0,0,.05);animation:hsIn .45s both;transition:opacity .3s,transform .3s}
+.hsn:nth-child(2n){animation-delay:.05s}.hsn:nth-child(3n){animation-delay:.1s}
+.hsn::before{content:"";position:absolute;top:-7px;left:50%;width:42px;height:14px;margin-left:-21px;background:rgba(255,255,255,.55);transform:rotate(calc(var(--r,0deg) * -2));box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.hsn.me{box-shadow:0 0 0 2px var(--ac),0 10px 18px -10px rgba(0,0,0,.6)}
+.hsn p{margin:0 0 10px;font:600 20px/1.1 "Caveat",cursive;word-wrap:break-word}
+.hsn-f{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.hsn-w{display:inline-flex;align-items:center;gap:6px;min-width:0;font:700 11px/1 var(--f-body);color:rgba(42,26,34,.65)}
+.hsn-w em{font-style:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hsn-w img,.hsn-w b{width:20px;height:20px;border-radius:50%;object-fit:cover;flex:none;display:inline-grid;place-items:center;font:800 10px/1 var(--f-body);color:#fff;background:var(--ac)}
+.hsn-lk{display:inline-flex;align-items:center;gap:3px;padding:5px 7px;border:0;border-radius:99px;background:rgba(255,255,255,.55);font:800 11px/1 var(--f-body);color:#7A2E3A;cursor:pointer;flex:none}
+.hsn-lk svg{width:14px;height:14px;fill:none;stroke:#C2304A;stroke-width:2}
+.hsn-lk.on svg,.hsn-lk.own svg{fill:#F2557A;stroke:#F2557A}
+.hsn-lk.own{cursor:default}
+.hsn-lk.pop svg{animation:hsH .45s}
+@keyframes hsH{40%{transform:scale(1.5)}}
+.hsn-x{position:absolute;top:2px;right:4px;border:0;background:none;font:800 15px/1 var(--f-body);color:rgba(42,26,34,.35);cursor:pointer;padding:4px}
+.hsn-rp{margin-top:8px;padding-top:8px;border-top:1px dashed rgba(42,26,34,.2);font:700 11px/1.3 var(--f-body)}
+.hsn-rp span{display:block;margin-bottom:6px}
+.hsn-rp button{font:800 11px/1 var(--f-body);padding:6px 9px;border-radius:99px;border:0;margin-right:4px;cursor:pointer}
+.hsn-rp .y{background:#C2304A;color:#fff}.hsn-rp .n{background:rgba(42,26,34,.1);color:#2A1A22}
+.hsn.gone{opacity:0;transform:scale(.9) rotate(var(--r,0deg))}
+.hsn.sk{height:90px;background:rgba(255,255,255,.06);box-shadow:none;animation:hsSk 1.2s ease-in-out infinite alternate}
+.hsn.sk::before{display:none}
+@keyframes hsSk{to{opacity:.4}}
+@keyframes hsIn{from{opacity:0;transform:translateY(12px) rotate(var(--r,0deg))}}
+.hsw-e{margin:26px 10px;text-align:center;font:600 13.5px/1.5 var(--f-body);color:rgba(255,242,236,.6)}
+@media (prefers-reduced-motion:reduce){.hsn,.ayk-glow,.ayk.in .ayk-cv,.hsw-lk{animation:none}}
+
 /* v1.4 oyun kutusu rozetleri + hedef ekranı */
 .kb .kb-prog{position:absolute;top:10px;left:10px;z-index:3;display:inline-flex;align-items:center;gap:6px;padding:4px 9px 4px 8px;border-radius:99px;background:rgba(10,6,24,.38);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);font:800 10.5px/1 var(--f-body);color:#fff;letter-spacing:.01em;max-width:calc(100% - 20px);white-space:nowrap;overflow:hidden}
 .kb .kb-prog i{font-style:normal;font-weight:800;color:#FFE38A;opacity:.95}
@@ -21615,6 +21745,163 @@ function gfxIntroLater(fn){setTimeout(()=>{try{fn();}catch(e){}},420);}
 /* Kelime yolculuğu: yeni seviyeye geçince hedef */
 (function(){const _k=keyRender;keyRender=function(){const r=_k.apply(this,arguments);try{if(kv!=="wow")return r;const S=wowS();if(gfxSeen("wow"+S.i))return r;const L=wowLvl();const ci=Math.floor((S.i%WLV.length)/5)%WCH.length,C=WCH[ci];
   gfxIntroLater(()=>{if(kv!=="wow")return;GFX.intro({kick:`${C[0].toLocaleUpperCase("tr")} · ${(S.i%5)+1}/5`,title:`Seviye ${S.i+1}`,goal:`${L.g.length} kelimeyi bul`,chips:[`${L.l.length} harf`,(S.i%5)===4?"Durak sonu: pul kazan":"Karıştır, dene"],c1:C[2],c2:C[3]});});}catch(e){}return r;};})();
+/* ===== v1.5 Topluluk: "Ben de gidiyorum" sayaçları, Ayın kitabı kulübü, Haftanın sorusu duvarı (yabancıyla DM yok) ===== */
+const GO={c:{},at:{}};
+function goP(){st.goP=st.goP||{};return st.goP;}
+function goSet(item,on){const P=goP();P[item]=on?1:0;save();if(GO.at[item])GO.c[item]=Math.max(0,(GO.c[item]||0)+(on?1:-1));return goFlush();}
+let _goFl=null;
+function goFlush(){if(_goFl)return _goFl;_goFl=(async()=>{await 0;try{const P=goP();const ks=Object.keys(P);if(!ks.length||navigator.onLine===false)return;const S=await sbAuth();if(!S)return;
+ for(const k of ks){const on=P[k];const r=on?await sbReq("POST","going?on_conflict=item,user_id",{item:k},"resolution=ignore-duplicates,return=minimal"):await sbReq("DELETE",`going?item=eq.${encodeURIComponent(k)}&user_id=eq.${S.uid}`,null,"return=minimal");if(r!==null&&P[k]===on)delete P[k];}save();}catch(e){}finally{_goFl=null;}})();return _goFl;}
+async function goCounts(items){items=[...new Set(items)].filter(Boolean);const now=Date.now();const need=items.filter(k=>!(GO.at[k]&&now-GO.at[k]<60000));
+ if(need.length&&navigator.onLine!==false){await goFlush();const r=await sbReq("POST","rpc/going_counts",{p_items:need.slice(0,120)});if(Array.isArray(r)){need.forEach(k=>{GO.c[k]=0;GO.at[k]=now;});r.forEach(x=>{GO.c[x.item]=x.n|0;});}}
+ const o={};items.forEach(k=>{if(GO.at[k])o[k]=GO.c[k]||0;});return o;}
+const GO_W={go:["gidiyor","Me First'ten ilk giden sensin","İlk giden sen ol"],club:["okuyor","Bu ay ilk okuyan sensin","Kulübün ilk okuru sen ol"]};
+function goTxt(n,mine,kind){const W=GO_W[kind]||GO_W.go;if(mine)n=Math.max(n,1);if(kind==="kisa")return mine?(n<=1?"İlk giden sensin":`Sen + <b>${n-1}</b> kişi`):n?`<b>${n}</b> kişi gidiyor`:"İlk giden sen ol";if(mine)return n<=1?W[1]:`Sen ve <b>${n-1}</b> Me First'lü daha ${W[0]}`;return n?`<b>${n}</b> Me First'lü ${W[0]}`:W[2];}
+function goHTML(k,mine,kind){return `<div class="gocrowd" data-goi="${esc(k)}" data-mine="${mine?1:0}" data-kind="${kind||"go"}" hidden><span class="gc-h" aria-hidden="true"><i></i><i></i><i></i></span><span class="gc-t"></span></div>`;}
+function goPaint(el){const k=el.dataset.goi;if(!GO.at[k])return;const n=GO.c[k]||0,mine=el.dataset.mine==="1";el.querySelector(".gc-t").innerHTML=goTxt(n,mine,el.dataset.kind);const v=Math.min(3,Math.max(mine?1:0,n));el.querySelectorAll(".gc-h i").forEach((x,i)=>x.classList.toggle("on",i<v));el.classList.toggle("hot",n>=10);el.hidden=false;}
+async function goFill(root){try{const L=[...(root||document).querySelectorAll(".gocrowd[data-goi]")];if(!L.length)return;L.forEach(goPaint);await goCounts(L.map(e=>e.dataset.goi));L.forEach(e=>{if(document.body.contains(e))goPaint(e);});}catch(e){}}
+/* Sahne etkinliği */
+(function(){const _o=spOpen;spOpen=function(id){_o.apply(this,arguments);try{const O=document.getElementById("ysheet");const b=O&&O.querySelector("#sp-go");if(!b)return;const S=spSt(),k="sp:"+id;
+ b.insertAdjacentHTML("afterend",goHTML(k,!!S.go[id]));const f=b.onclick;b.onclick=function(){goSet(k,!S.go[id]);f.apply(this,arguments);};goFill(O);}catch(e){}};})();
+/* Macera / spor etkinliği */
+(function(){const _o=macOpen;macOpen=function(id){_o.apply(this,arguments);try{const O=document.getElementById("mep");const b=O&&O.querySelector("#mep-go");if(!b)return;const M=mac(),k="mac:"+id;
+ b.parentElement.insertAdjacentHTML("afterend",goHTML(k,!!M.go[id]));const f=b.onclick;b.onclick=function(){goSet(k,!M.go[id]);f.apply(this,arguments);};goFill(O);}catch(e){}};})();
+/* İmza günü kartı */
+(function(){const _s=ktSlide;ktSlide=function(e){const h=_s.apply(this,arguments);try{if(!e[2]||ktDays(e[2])<0)return h;const K=kt();K.go=K.go||{};const on=!!K.go[e[0]];
+ return h.replace(/<\/div><\/div>$/,`<div class="ktgo-r"><button type="button" class="ktgo${on?" on":""}" data-kgo="${esc(e[0])}">${on?"✓ Gidiyorum":"Ben de gidiyorum"}</button>${goHTML("imza:"+e[0],on,"kisa")}</div></div></div>`);}catch(_){return h;}};})();
+document.addEventListener("click",ev=>{const b=ev.target.closest&&ev.target.closest("[data-kgo]");if(!b)return;ev.stopPropagation();const id=b.dataset.kgo,K=kt();K.go=K.go||{};const on=!K.go[id];if(on)K.go[id]={d:dkey()};else delete K.go[id];save();goSet("imza:"+id,on);
+ b.classList.toggle("on",on);b.textContent=on?"✓ Gidiyorum":"Ben de gidiyorum";const g=b.parentElement.querySelector(".gocrowd");if(g){g.dataset.mine=on?1:0;goPaint(g);}
+ if(on)try{mfConfetti("Kalemin hazır olsun ✍️",["#E9C46A","#C9822B","#fff","#F7B3D2"],"linear-gradient(135deg,#6B3E2A,#2E1A0E)");}catch(_){}},true);
+/* eski "gidiyorum"ları bir kez sunucuya taşı */
+function goBoot(){try{if(!st)return;if(!st.goInit){const T=dkey(),P=goP();const S=spSt();Object.keys(S.go||{}).forEach(id=>{const e=spEv(id);if(e&&(e[4]||e[3])>=T)P["sp:"+id]=1;});
+ const M=mac();Object.keys(M.go||{}).forEach(id=>{const e=macEv(id);if(e&&evEnd(e)>=T)P["mac:"+id]=1;});const K=st.kitap;if(K&&K.club&&K.club.m)P["kulup:"+K.club.m]=1;st.goInit=1;save();}
+ if(Object.keys(goP()).length)goFlush();}catch(e){}}
+setTimeout(goBoot,5000);addEventListener("online",()=>setTimeout(goFlush,1500));
+
+/* ----- Ayın kitabı ----- */
+const AYK={"2026-11":["Kürk Mantolu Madonna","Sabahattin Ali","Bir defterin sayfalarında saklı, hiç eskimeyen bir aşk."],
+ "2026-12":["Satranç","Stefan Zweig","Bir gemi, bir satranç tahtası ve zihnin sınırları. Bir oturuşta biter."],
+ "2027-01":["Saatleri Ayarlama Enstitüsü","Ahmet Hamdi Tanpınar","Yeni yıla gülümseyerek: zamanla, düzenle ve bizimle dalga geçen bir başyapıt."],
+ "2027-02":["Gurur ve Önyargı","Jane Austen","Şubat'ın aşkı: ilk izlenimlerin ne kadar yanıltabileceğine dair."],
+ "2027-03":["Kendine Ait Bir Oda","Virginia Woolf","Mart'ta kadınlar için: düşünmek için bir oda, yazmak için bir hayat."],
+ "2027-04":["Aylak Adam","Yusuf Atılgan","İstanbul sokaklarında aşkı arayan bir adam ve yalnızlığın edebiyatı."],
+ "2027-05":["Küçük Prens","Antoine de Saint-Exupéry","Büyüklere yazılmış en güzel masal; her yaşta başka okunur."],
+ "2027-06":["Fareler ve İnsanlar","John Steinbeck","Dostluk, hayal ve bir çiftlik. İnce ama yürek burkan."],
+ "2027-07":["Yaprak Dökümü","Reşat Nuri Güntekin","Bir ailenin dağılışı; bugün hâlâ tanıdık geliyor."],
+ "2027-08":["Bülbülü Öldürmek","Harper Lee","Bir çocuğun gözünden adalet ve cesaret."],
+ "2027-09":["Mai ve Siyah","Halit Ziya Uşaklıgil","Hayallerle gerçeğin arasında bir genç adam."],
+ "2027-10":["Dönüşüm","Franz Kafka","Bir sabah uyanırsın ve hiçbir şey eskisi gibi değildir."],
+ "2027-11":["Yüzyıllık Yalnızlık","Gabriel García Márquez","Bir ailenin yüz yılı, büyülü gerçekçiliğin kalbi."],
+ "2027-12":["Bir Noel Şarkısı","Charles Dickens","Yıl sonu için sıcacık: iyiliğe dönüşen bir yürek."]};
+const AYK_L=Object.values(AYK);
+function aykNow(){const d=new Date();const m=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");const b=AYK[m]||AYK_L[(d.getFullYear()*12+d.getMonth())%AYK_L.length];
+ const dim=new Date(d.getFullYear(),d.getMonth()+1,0).getDate();return {m,t:b[0],a:b[1],w:b[2],mn:d.toLocaleDateString("tr-TR",{month:"long"}),left:dim-d.getDate(),key:bkKey({t:b[0],a:b[1]})};}
+function aykIn(){const K=kt();return !!(K.club&&K.club.m===aykNow().m);}
+const AYK_P={};
+function aykHTML(){const A=aykNow(),on=aykIn();return `<div class="ayk${on?" in":""}" id="ayk"><span class="ayk-glow" aria-hidden="true"></span>
+ <div class="ayk-top"><small class="ayk-k"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5C6.5 4 9.5 4 12 6c2.5-2 5.5-2 8-.5V19c-2.5-1.5-5.5-1.5-8 .5-2.5-2-5.5-2-8-.5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 6v13.5" stroke="currentColor" stroke-width="1.7"/></svg>Ayın kitabı · ${esc(A.mn)}</small><small class="ayk-left">${A.left?A.left+" gün kaldı":"Son gün"}</small></div>
+ <div class="ayk-row"><span class="ayk-cv">${ktCover(A.t,A.a,true)}</span><div class="ayk-i"><strong>${esc(A.t)}</strong><span class="ayk-a">${esc(A.a)}</span><p>${esc(A.w)}</p></div></div>
+ <div class="ayk-crowd"><span class="ayk-avs" id="ayk-avs"></span>${goHTML("kulup:"+A.m,on,"club")}</div>
+ <div class="ayk-act">${on?`<button type="button" class="ayk-go" id="ayk-pol">Polaroidini as</button><button type="button" class="ayk-gh" id="ayk-ip">Okur ipi<span id="ayk-pn"></span></button>`:`<button type="button" class="ayk-go" id="ayk-join">Kulübe katıl</button><button type="button" class="ayk-gh" id="ayk-ip">Okurlar ne demiş<span id="ayk-pn"></span></button>`}</div>
+ ${on?`<button type="button" class="ayk-out" id="ayk-out">Kulüpten ayrıl</button>`:""}</div>`;}
+async function aykPols(){const A=aykNow();const c=AYK_P[A.key];if(c&&Date.now()-c.at<120000)return c.list;const r=await sbReq("GET",`polaroid_feed?select=user_id,name,avatar&book_key=eq.${encodeURIComponent(A.key)}&order=created_at.desc&limit=40`);if(!Array.isArray(r))return null;AYK_P[A.key]={list:r,at:Date.now()};return r;}
+function aykBind(root){const el=root.querySelector("#ayk");if(!el)return;const A=aykNow(),K=kt();const g=s=>el.querySelector(s);
+ const j=g("#ayk-join");if(j)j.onclick=()=>{K.club={m:A.m,d:dkey()};if(!ktOnShelf(A.t))K.shelf.unshift({t:A.t,a:A.a,s:"okuyor",d:dkey()});else{const x=ktOnShelf(A.t);if(x.s!=="okundu")x.s="okuyor";}save();goSet("kulup:"+A.m,1);
+  try{mfConfetti("Kulüptesin! Rafına koydum 📚",["#FF8A6B","#FFB08F","#E9C46A","#fff"],"linear-gradient(135deg,#2A173B,#1E1129)");}catch(_){}aykRefresh();};
+ const o=g("#ayk-out");if(o)o.onclick=()=>{if(o.dataset.ok!=="1"){o.dataset.ok="1";o.textContent="Emin misin? Dokun, ayrıl";setTimeout(()=>{if(document.body.contains(o)){o.dataset.ok="";o.textContent="Kulüpten ayrıl";}},3000);return;}delete K.club;save();goSet("kulup:"+A.m,0);aykRefresh();};
+ const ip=g("#ayk-ip");if(ip)ip.onclick=()=>bookOpenAny(A.t,A.a);
+ const pl=g("#ayk-pol");if(pl)pl.onclick=()=>{try{bkFocus={t:"cm"};}catch(_){}bookOpenAny(A.t,A.a);};
+ goFill(el);aykPols().then(L=>{if(!L||!document.body.contains(el))return;const me=(sbSess()||{}).uid;const oth=L.filter(p=>p.user_id!==me);const av=el.querySelector("#ayk-avs");
+  av.innerHTML=oth.slice(0,4).map((p,i)=>p.avatar?`<img src="${esc(p.avatar)}" alt="" style="--i:${i}">`:`<b style="--i:${i}">${esc(((p.name||"O")[0]||"O").toLocaleUpperCase("tr-TR"))}</b>`).join("");
+  const pn=el.querySelector("#ayk-pn");if(pn&&L.length)pn.textContent=" · "+L.length+(L.length>=40?"+":"")+" polaroid";});}
+function aykRefresh(){const el=document.getElementById("ayk");if(!el)return;el.outerHTML=aykHTML();aykBind(document.getElementById("ktpanel")||document);}
+(function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{const P=document.getElementById("ktpanel");if(!P)return;
+ if(kttab==="oneri"&&kt().setup&&!P.querySelector("#ayk")){const al=P.querySelector("#kt-toev");if(al)al.insertAdjacentHTML("afterend",aykHTML());else P.insertAdjacentHTML("afterbegin",aykHTML());aykBind(P);}
+ if(kttab==="etk")goFill(P).then(()=>{const sl=document.getElementById("ktsl");if(sl)sl.dispatchEvent(new Event("scroll"));});}catch(e){console.error(e);}};})();
+
+/* ----- Haftanın sorusu ----- */
+const HS=["Mükemmel bir pazar sabahı nasıl geçer?","Ruh eşinin seni en çok güldüren huyu ne?","Hayatında “iyi ki” dediğin bir karar?","Bir şarkı seç: şu anki halini anlatsın.",
+ "Çocukluğundan kalan en sevdiğin koku ne?","Bir kitabın hiç aklından çıkmayan tek cümlesi?","Yeniden 18 yaşında olsan kendine ne söylerdin?","Seni hemen sakinleştiren şey ne?",
+ "Bir film karakteri olsan kim olurdun?","En sevdiğin ev yemeği ne, onu en güzel kim yapar?","Bu yıl öğrendiğin en güzel şey?","Söylemek isteyip söyleyemediğin bir teşekkür?",
+ "Hayalindeki küçük ev nerede, penceresi neye bakıyor?","Ruh eşinle yapmak isteyip henüz yapmadığın bir şey?","Seni en çok hangi mevsim anlatır, neden?","Kendinle gurur duyduğun küçük bir an?",
+ "Sadece evde işe yarayan bir süper gücün olsa ne olurdu?","En sevdiğin Yeşilçam repliği?","Telefonsuz bir gün ne yapardın?","Annenden ya da babandan aldığın en güzel huy?",
+ "İlk aşk şarkın hangisiydi?","Dünyada tek bir yemek kalsa hangisi olsun?","En son ne zaman gözlerin dolana kadar güldün?","Hayatına tek kelimelik bir başlık koysan?",
+ "Bir akşam yemeğine istediğin herkesi çağırabilsen kimi çağırırdın?","Seni anlatan bir nesne söyle.","Bu kış kendine hediye edeceğin bir alışkanlık?","Kimsenin bilmediği tuhaf bir yeteneğin var mı?",
+ "Ruh eşinin sana söylediği en güzel söz?","Gelecekteki sana tek cümlelik bir not bırak.","Şu an pencereden ne görünüyor?","En sevdiğin çocukluk oyunu?",
+ "Mutluluğun bir rengi olsaydı hangisi olurdu?","Sana en iyi gelen yürüyüş rotası nerede?","Hayatında bir “ilk” daha yaşayacak olsan ne olsun?","Sabahları aklına ilk gelen şey ne?",
+ "En çok hangi sesi seversin?","Birlikte yaşlanmak sana neyi hatırlatıyor?","Hafta sonu kaçamağı: dağ mı deniz mi, neden?","Bu hafta seni gülümseten küçük bir şey?",
+ "Asla vazgeçemeyeceğin bir ritüelin?","En unutulmaz doğum günün hangisiydi?","Bugün kendine bir iltifat et.","Bir şehri tek bir yemekle anlat.",
+ "Okuduğun ilk kitabı hatırlıyor musun?","Bu yılı bir film adıyla özetle.","Bir gün dünyada tek bir şeyi değiştirebilsen?","Bir yeri sevdiysen, insanları mıydı manzarası mı?",
+ "Yağmurlu bir akşamın vazgeçilmezi?","Bir yıl sonra kendini nerede görmek istersin?","En güzel hediyeyi kimden, ne almıştın?","Seni bir kelimeyle anlatsalar hangisi olsun isterdin?"];
+const pad2=n=>String(n).padStart(2,"0");
+function hsWeek(){const d=new Date();const wd=(d.getDay()+6)%7;const mo=new Date(d.getFullYear(),d.getMonth(),d.getDate()-wd);const su=new Date(mo);su.setDate(mo.getDate()+6);
+ const i=Math.round((mo-new Date(2026,10,23))/6048e5);const q=HS[((i%HS.length)+HS.length)%HS.length];
+ const M=x=>x.toLocaleDateString("tr-TR",{month:"long"});const rng=mo.getMonth()===su.getMonth()?`${mo.getDate()}–${su.getDate()} ${M(su)}`:`${mo.getDate()} ${M(mo)} – ${su.getDate()} ${M(su)}`;
+ return {w:`w${mo.getFullYear()}-${pad2(mo.getMonth()+1)}-${pad2(mo.getDate())}`,q,rng,left:7-wd};}
+function hsSt(){const W=hsWeek();st.hs=st.hs||{};if(st.hs.w!==W.w)st.hs={w:W.w,hid:[]};st.hs.hid=st.hs.hid||[];return st.hs;}
+let HSD={w:"",list:null,mine:new Set(),at:0,sort:"top",err:0};let SB_QNOTI=[];
+(function(){const _p=sbNotiPull;sbNotiPull=async function(){await _p.apply(this,arguments);try{const all=SB_NOTI||[];const Q=all.filter(n=>n.kind==="qlike");if(Q.length){SB_QNOTI=Q.concat(SB_QNOTI.filter(o=>!Q.some(n=>n.id===o.id)));SB_NOTI=all.filter(n=>n.kind!=="qlike");sbBadge();hsDot();}}catch(e){}};})();
+function hsDot(){document.querySelectorAll(".hs-hub").forEach(b=>b.classList.toggle("dot",!!SB_QNOTI.length));}
+async function hsLoad(force){const W=hsWeek();if(!force&&HSD.w===W.w&&HSD.list&&Date.now()-HSD.at<45000)return;
+ const r=await sbReq("GET",`week_answer_feed?week=eq.${encodeURIComponent(W.w)}&order=like_count.desc,created_at.desc&limit=150`);if(!Array.isArray(r)){HSD.err=1;if(HSD.w!==W.w)HSD.list=null;return;}
+ HSD={w:W.w,list:r,mine:new Set(),at:Date.now(),sort:HSD.sort,err:0};const me=(sbSess()||{}).uid;const ids=r.filter(a=>a.user_id!==me).map(a=>a.id);
+ if(me&&ids.length){const L=await sbReq("GET",`week_answer_likes?select=answer_id&user_id=eq.${me}&answer_id=in.(${ids.slice(0,150).join(",")})`);if(Array.isArray(L))HSD.mine=new Set(L.map(l=>l.answer_id));}
+ const my=r.find(a=>a.user_id===me);const H=hsSt();if(my){H.body=my.body;H.id=my.id;}else if(H.id){delete H.body;delete H.id;}save();}
+const HS_PAL=[["#FFF4D6","#E9C46A"],["#FFE3DA","#FF8A6B"],["#E9E2FF","#9C8FE0"],["#DDF3EA","#6FBFA6"],["#FFE2EE","#E58AA6"],["#E1EEFF","#7FA7CF"]];
+function hsCol(id){let h=0;for(const c of String(id))h=(h*31+c.charCodeAt(0))>>>0;return [HS_PAL[h%HS_PAL.length],((h>>4)%7-3)*.55];}
+function hsNote(a,me){const [c,r]=hsCol(a.id);const mine=a.user_id===me;const liked=HSD.mine.has(a.id);
+ return `<div class="hsn${mine?" me":""}" data-hid="${a.id}" style="--bg:${c[0]};--ac:${c[1]};--r:${r}deg"><p>${esc(a.body)}</p><div class="hsn-f"><span class="hsn-w">${a.avatar?`<img src="${esc(a.avatar)}" alt="">`:`<b>${esc(((a.name||"M")[0]||"M").toLocaleUpperCase("tr-TR"))}</b>`}<em>${mine?"Sen":esc(a.name||"Me First'lü")}</em></span>
+  ${mine?`<span class="hsn-lk own" aria-label="Beğeni"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>${a.like_count||0}</span>`:`<button type="button" class="hsn-lk${liked?" on":""}" data-hlk="${a.id}" aria-label="Beğen"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>${a.like_count||""}</button>`}</div>
+  ${mine?"":`<button type="button" class="hsn-x" data-hrp="${a.id}" aria-label="Şikâyet et">⋯</button>`}</div>`;}
+function hsOpen(){let O=document.getElementById("hsw");if(!O){O=document.createElement("div");O.id="hsw";O.className="hsw";O.setAttribute("role","dialog");document.body.appendChild(O);document.documentElement.style.overflow="hidden";try{history.pushState({hsw:1},"");}catch(e){}requestAnimationFrame(()=>O.classList.add("on"));}
+ hsPaint();hsLoad(true).then(()=>{if(document.getElementById("hsw"))hsPaint();});
+ if(SB_QNOTI.length){const ids=SB_QNOTI.map(n=>n.id);setTimeout(()=>{SB_QNOTI=[];hsDot();sbReq("PATCH",`notifications?id=in.(${ids.join(",")})`,{read:true},"return=minimal");},4000);}}
+function hsClose(fromPop){const O=document.getElementById("hsw");if(!O)return;O.classList.remove("on");document.documentElement.style.overflow="";setTimeout(()=>O.remove(),320);if(!fromPop)try{if(history.state&&history.state.hsw)history.back();}catch(e){}try{if(step===0)homeRender();}catch(e){}}
+addEventListener("popstate",()=>{if(document.getElementById("hsw"))hsClose(true);});
+function hsPaint(){const O=document.getElementById("hsw");if(!O)return;const W=hsWeek(),H=hsSt(),me=(sbSess()||{}).uid;const sc=O.querySelector(".hsw-sc");const y=sc?sc.scrollTop:0;
+ let L=(HSD.w===W.w&&HSD.list)||[];L=L.filter(a=>!H.hid.includes(a.id));const mine=L.find(a=>a.user_id===me);let rest=L.filter(a=>a!==mine);
+ if(HSD.sort==="new")rest=rest.slice().sort((a,b)=>a.created_at<b.created_at?1:-1);
+ const lk=SB_QNOTI.length?[...new Set(SB_QNOTI.map(n=>n.actor))]:[];const ans=!!(mine||H.body);const edit=O.dataset.edit==="1";
+ O.innerHTML=`<div class="hsw-sc"><div class="hsw-sky" aria-hidden="true"></div><button type="button" class="hsw-x" id="hsw-x" aria-label="Kapat">✕</button>
+  <div class="hsw-hd"><small class="hsw-k">Haftanın sorusu · ${esc(W.rng)}</small><h2>${esc(W.q)}</h2><p class="hsw-m">${HSD.list?`<b>${L.length}</b> cevap`:HSD.err?"Duvar şu an açılamadı":"Duvar yükleniyor…"} · ${W.left>1?W.left+" gün kaldı":"son gün"}</p></div>
+  ${lk.length?`<div class="hsw-lk"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><span><b>${esc(lk[0])}</b>${lk.length>1?` ve ${lk.length-1} kişi daha`:""} cevabını beğendi</span></div>`:""}
+  ${ans&&!edit?`<div class="hsw-mine"><small>Senin cevabın</small><p>${esc((mine&&mine.body)||H.body)}</p><div class="hsw-ma"><span>${mine?`<svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>${mine.like_count||0} beğeni`:""}</span><button type="button" id="hs-ed">Düzenle</button><button type="button" id="hs-sh">Paylaş</button><button type="button" id="hs-del">Sil</button></div></div>`
+  :`<div class="hsw-form"><textarea id="hs-t" maxlength="160" rows="3" placeholder="Cevabını yaz… (en fazla 160 harf)">${esc(edit?((mine&&mine.body)||H.body||""):"")}</textarea><div class="hsw-fr"><small id="hs-c">${edit?((mine&&mine.body)||H.body||"").length:0}/160</small><button type="button" class="hsw-go" id="hs-go">${edit?"Güncelle":"Duvara as"}</button></div><p class="hsw-rule">Saygılı ol, kişisel bilgi paylaşma. 3 şikâyet alan cevap gizlenir.</p></div>`}
+  ${rest.length?`<div class="hsw-tabs"><button type="button" data-hso="top" aria-pressed="${HSD.sort!=="new"}">En sevilenler</button><button type="button" data-hso="new" aria-pressed="${HSD.sort==="new"}">En yeniler</button></div><div class="hsw-wall">${rest.map(a=>hsNote(a,me)).join("")}</div>`
+  :HSD.list?`<p class="hsw-e">${ans?"Duvarda şimdilik sadece sen varsın. Arkadaşlarını da çağır, bakalım ne diyecekler.":"Duvar bu hafta bomboş. İlk cevap senden gelsin."}</p>`:HSD.err?`<p class="hsw-e">Bağlantı kurulamadı. Biraz sonra tekrar dener misin?</p>`:`<div class="hsw-wall sk">${"<div class='hsn sk'></div>".repeat(4)}</div>`}
+  </div>`;
+ const nsc=O.querySelector(".hsw-sc");if(nsc&&y)nsc.scrollTop=y;const g=s=>O.querySelector(s);
+ g("#hsw-x").onclick=()=>hsClose();
+ const t=g("#hs-t");if(t){t.oninput=()=>{g("#hs-c").textContent=t.value.length+"/160";};g("#hs-go").onclick=()=>hsPost(t.value,g("#hs-go"));}
+ if(g("#hs-ed"))g("#hs-ed").onclick=()=>{O.dataset.edit="1";hsPaint();const x=O.querySelector("#hs-t");if(x){x.focus();x.setSelectionRange(x.value.length,x.value.length);}};
+ if(g("#hs-sh"))g("#hs-sh").onclick=()=>{const tx=`Haftanın sorusu: ${W.q}\n\nBenim cevabım: ${(mine&&mine.body)||H.body}\n\nSen ne derdin? Me First'te herkes cevaplıyor · mefirst.app`;if(navigator.share)navigator.share({text:tx}).catch(()=>{});else window.open("https://wa.me/?text="+encodeURIComponent(tx),"_blank","noopener");};
+ if(g("#hs-del"))g("#hs-del").onclick=async e=>{const b=e.currentTarget;if(b.dataset.ok!=="1"){b.dataset.ok="1";b.textContent="Emin misin?";return;}b.disabled=true;const id=(mine&&mine.id)||H.id;if(id){const r=await sbReq("DELETE",`week_answers?id=eq.${id}`,null,"return=minimal");if(r===null){b.textContent="Silemedim";return;}}delete H.body;delete H.id;save();await hsLoad(true);hsPaint();};
+ O.querySelectorAll("[data-hso]").forEach(b=>b.onclick=()=>{HSD.sort=b.dataset.hso;hsPaint();});
+ O.querySelectorAll("[data-hlk]").forEach(b=>b.onclick=()=>hsLike(b.dataset.hlk,b));
+ O.querySelectorAll("[data-hrp]").forEach(b=>b.onclick=()=>hsReport(b.dataset.hrp,b));}
+const HS_BAD=/(https?:|www\.|\.com\b|@\w{3,}|(\d[\s.-]?){7,})/i;
+async function hsPost(v,btn){v=(v||"").replace(/\s+/g," ").trim();const O=document.getElementById("hsw");const ta=O&&O.querySelector("#hs-t");
+ const err=m=>{btn.textContent=m;btn.classList.add("err");if(ta)ta.classList.add("shake");setTimeout(()=>{if(document.body.contains(btn)){btn.textContent=O&&O.dataset.edit==="1"?"Güncelle":"Duvara as";btn.classList.remove("err");}if(ta)ta.classList.remove("shake");},2200);};
+ if(v.length<2)return err("Biraz daha yaz");if(HS_BAD.test(v))return err("Link ve numara olmasın");
+ const P=await sbJoin();if(!P)return;btn.disabled=true;btn.textContent="Asılıyor…";const W=hsWeek();
+ const r=await sbReq("POST","week_answers?on_conflict=week,user_id",{week:W.w,body:v,updated_at:new Date().toISOString()},"resolution=merge-duplicates,return=representation");btn.disabled=false;
+ if(!r)return err("Gönderemedim, tekrar dene");const H=hsSt();const first=!H.body;H.body=v;if(Array.isArray(r)&&r[0])H.id=r[0].id;save();if(O)O.dataset.edit="";
+ if(first){try{GFX.burst(innerWidth/2,innerHeight*.35,["#FF8A6B","#FFB08F","#E9C46A","#fff","#9C8FE0"],36);GFX.hap&&GFX.hap(18);}catch(_){}}
+ await hsLoad(true);hsPaint();}
+async function hsLike(id,b){const S=await sbAuth();if(!S)return;const on=!HSD.mine.has(id);const a=(HSD.list||[]).find(x=>x.id===id);
+ if(on){HSD.mine.add(id);if(a)a.like_count=(a.like_count||0)+1;}else{HSD.mine.delete(id);if(a)a.like_count=Math.max(0,(a.like_count||0)-1);}
+ b.classList.toggle("on",on);const HT=`<svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>`;b.innerHTML=HT+((a&&a.like_count)||"");if(on){b.classList.add("pop");setTimeout(()=>b.classList.remove("pop"),450);try{const R=b.getBoundingClientRect();GFX.burst(R.left+R.width/2,R.top+R.height/2,["#FF6B8A","#FF8A6B","#FFD27A"],12);}catch(_){}}
+ const r=on?await sbReq("POST","week_answer_likes?on_conflict=answer_id,user_id",{answer_id:id},"resolution=ignore-duplicates,return=minimal"):await sbReq("DELETE",`week_answer_likes?answer_id=eq.${id}&user_id=eq.${S.uid}`,null,"return=minimal");
+ if(r===null){if(on){HSD.mine.delete(id);if(a)a.like_count--;}else{HSD.mine.add(id);if(a)a.like_count++;}hsPaint();}}
+async function hsReport(id,b){const n=b.closest(".hsn");if(!n)return;if(!n.querySelector(".hsn-rp")){n.insertAdjacentHTML("beforeend",`<div class="hsn-rp"><span>Bu cevabı şikâyet edip gizleyelim mi?</span><button type="button" class="y">Şikâyet et</button><button type="button" class="n">Vazgeç</button></div>`);
+ n.querySelector(".hsn-rp .n").onclick=()=>n.querySelector(".hsn-rp").remove();n.querySelector(".hsn-rp .y").onclick=async()=>{const H=hsSt();H.hid.push(id);save();n.classList.add("gone");const S=await sbAuth();if(S)sbReq("POST","week_answer_reports?on_conflict=answer_id,user_id",{answer_id:id},"resolution=ignore-duplicates,return=minimal");setTimeout(hsPaint,320);try{sfToast("Teşekkürler, bu cevabı gizledim.");}catch(_){}};}}
+function hsHubHTML(){const W=hsWeek(),H=hsSt();const ans=!!H.body;return `<button type="button" class="hs-hub${SB_QNOTI.length?" dot":""}" id="hs-hub"><span class="hs-hub-k">Haftanın sorusu<i>${W.left>1?W.left+" gün kaldı":"son gün"}</i></span><strong>${esc(W.q)}</strong><span class="hs-hub-s">${ans?"Cevabın duvarda · diğerlerine bak":"Cevabını yaz, duvara as"}<b>›</b></span><span class="hs-hub-q" aria-hidden="true">“</span></button>`;}
+(function(){const _k=keyRender;keyRender=function(){_k.apply(this,arguments);try{if(kv!=="hub")return;const O=document.getElementById("zsh");const g=O&&O.querySelector(".kfb");if(!g||O.querySelector("#hs-hub"))return;g.insertAdjacentHTML("beforebegin",hsHubHTML());O.querySelector("#hs-hub").onclick=hsOpen;}catch(e){}};})();
+/* Bugün senin için: haftanın sorusu + ayın kitabı */
+(function(){const _r=tcRich;tcRich=function(){const O=_r.apply(this,arguments);try{const W=hsWeek(),H=hsSt();
+ if(!H.body)O.splice(Math.min(1,O.length),0,{k:"soru",t:"soru",e:"Haftanın sorusu",h:W.q,d:"Cevabını yaz, bakalım diğerleri ne demiş",cta:"Cevapla",art:`<span class="tc-q" aria-hidden="true">“</span>`,go:hsOpen});
+ const A=aykNow();if(st.kitap&&st.kitap.setup&&!aykIn()&&new Date().getDate()<=12)O.splice(Math.min(2,O.length),0,{k:"kulup",t:"book",e:`Ayın kitabı · ${A.mn}`,h:A.t,d:`${A.a} · Bu ay birlikte okuyoruz`,cta:"Kulübe bak",art:`<span class="tc-cov">${ktCover(A.t,A.a)}</span>`,go:()=>{kttab="oneri";document.getElementById("go-kitap").click();setTimeout(()=>{const a=document.getElementById("ayk");if(a)a.scrollIntoView({behavior:"smooth",block:"center"});},400);}});}catch(e){}return O;};})();
+
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
