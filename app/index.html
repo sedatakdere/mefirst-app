@@ -9971,7 +9971,7 @@ window.GB_KEY="AIzaSyB9TCHWh2eLFo87Cv400WDf1wYThln3bqs";
       <span class="ktbook" aria-hidden="true">📚</span>
       <button type="button" class="kt-ruh" id="kt-ruh"><span class="no-mi">✨</span> Okur ruhum</button>
     </div>
-    <div class="ktseg" role="tablist"><button type="button" role="tab" data-kt="oneri">Sana özel</button><button type="button" role="tab" data-kt="etk">İmza günü<span class="ktcnt" id="kt-ecount" hidden></span></button><button type="button" role="tab" data-kt="raf">Kitaplığım</button></div>
+    <div class="ktseg" role="tablist"><button type="button" role="tab" data-kt="oneri">Sana özel</button><button type="button" role="tab" data-kt="raf">Kitaplığım</button><button type="button" role="tab" data-kt="etk">İmza günü<span class="ktcnt" id="kt-ecount" hidden></span></button></div>
     <div id="ktpanel"></div>
   </div>
 
@@ -18511,7 +18511,7 @@ function sfChatMenu(){const T=SF.chat&&SF.chat.T;if(!T)return;let m=document.get
  setTimeout(()=>document.addEventListener("click",function f(e){if(!m.contains(e.target)&&e.target.id!=="sf-more"){m.remove();document.removeEventListener("click",f,true);}},true),0);}
 
 /* Kitap köşem: Sahaf sekmesi */
-(function(){const seg=document.querySelector(".ktseg");if(seg&&!seg.querySelector('[data-kt="sahaf"]'))seg.insertAdjacentHTML("beforeend",'<button type="button" role="tab" data-kt="sahaf">Sahaf<span class="ktcnt" id="kt-scount" hidden></span></button>');
+(function(){const seg=document.querySelector(".ktseg");if(seg&&!seg.querySelector('[data-kt="sahaf"]'))(seg.querySelector('[data-kt="etk"]')||seg).insertAdjacentHTML(seg.querySelector('[data-kt="etk"]')?"beforebegin":"beforeend",'<button type="button" role="tab" data-kt="sahaf">Sahaf<span class="ktcnt" id="kt-scount" hidden></span></button>');
  const _k=kitapRender;kitapRender=function(){const r=_k.apply(this,arguments);try{if(kttab==="sahaf"){const P=document.getElementById("ktpanel");if(P){P.innerHTML=sfHTML();sfBind(P);sfLoad(false);}}}catch(e){console.warn(e);}return r;};})();
 /* kitap sayfası: "Sahafta N ilan" ve "Sahafa koy" */
 const SF_CNT={};
