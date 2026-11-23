@@ -7989,7 +7989,7 @@ html body .bn.bnm:has(.bn-ring) .bnm-k{left:52px;top:23px}
 #ktsl .tk-info svg{flex:none;width:17px;height:17px;margin-top:1px;fill:none;stroke:#B0552A;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 #ktsl .tk-info span{min-width:0;overflow-wrap:anywhere}
 #ktsl .tk-info em{display:block;font-style:normal;font-weight:800;color:#2A160C}
-#ktsl .tk-act{display:flex;gap:8px;margin-top:13px}
+#ktsl .tk-act{display:flex;gap:8px}
 #ktsl .tk-act .ktgo{flex:1.4;height:40px;padding:0 10px;border-radius:12px;font:800 13px/1 var(--f-body);background:linear-gradient(135deg,#FF9F7A,#F2635A);color:#fff;box-shadow:0 8px 16px -8px rgba(242,99,90,.85);border:0;margin:0}
 #ktsl .tk-act .ktgo.on{background:#fff;color:#C2304A;box-shadow:inset 0 0 0 1.5px #F2635A}
 #ktsl .tk-yol{flex:1;height:40px;display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:12px;background:#fff;color:#7A3A1E;font:800 13px/1 var(--f-body);text-decoration:none;box-shadow:inset 0 0 0 1.5px rgba(176,85,42,.3)}
@@ -7997,6 +7997,14 @@ html body .bn.bnm:has(.bn-ring) .bnm-k{left:52px;top:23px}
 #ktsl .tk-card .gocrowd{margin:10px 2px 0;justify-content:center;color:#6A4A35;-webkit-text-fill-color:#6A4A35;font-size:12px;opacity:1;text-shadow:none;--gc-ring:#FBEBD6}
 #ktsl .tk-card .gocrowd .gc-t{background:none!important;-webkit-text-fill-color:#6A4A35}
 #ktsl .tk-card .gocrowd b{color:#2A160C;-webkit-text-fill-color:#2A160C}
+#ktsl:has(.ktsd.tk){height:var(--tkh,auto)!important;transition:none!important}
+#ktsl.tk-measure{height:auto!important;align-items:flex-start!important}
+#ktsl.tk-measure .ktsd.tk,#ktsl.tk-measure .tk-card{height:auto!important}
+#ktsl:has(.ktsd.tk){align-items:stretch!important}
+#ktsl .ktsd.tk{height:auto;display:flex!important;flex-direction:column}
+#ktsl .ktsd.tk .tk-card{flex:1;display:flex;flex-direction:column}
+#ktsl .ktsd.tk .tk-act{margin-top:auto;padding-top:13px}
+#ktsl .ktsd.tk .tk-info{margin-bottom:0}
 /* v1.6 topluluk 2 */
 .hsw-fam{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 11px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFE3A0;font:800 12px/1 var(--f-body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hsw-fam svg,.hs-hub-fam svg{width:15px;height:15px;fill:#F4D58D}
@@ -22428,6 +22436,11 @@ const TK_I={cal:'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5"
   <div class="tk-info"><p>${TK_I.cal}<span>${d?esc(d.toLocaleDateString("tr-TR",{day:"numeric",month:"long",weekday:"long"}))+(e[3]?` · <b>${esc(e[3])}</b>`:""):"Tarih netleşince haber veririm"}</span></p><p>${TK_I.pin}<span>${place}</span></p></div>
   ${e[2]&&!past?`<div class="tk-act"><button type="button" class="ktgo${on?" on":""}" data-kgo="${esc(e[0])}">${on?"✓ Gidiyorum":"Ben de gidiyorum"}</button><a class="tk-yol" href="https://www.google.com/maps/search/${q}" target="_blank" rel="noopener">${TK_I.map}Yol tarifi</a></div>${goHTML("imza:"+e[0],on)}`:""}
   </div></div>`;}catch(err){console.error(err);return h;}};})();
+/* v1.9.1 imza günü kaydırıcısı sabit yükseklikte: en uzun bilete göre, kartlar arası geçişte sayfa zıplamasın */
+function tkFix(){const sl=document.getElementById("ktsl");if(!sl||!sl.querySelector(".ktsd.tk"))return;sl.style.setProperty("--tkh","auto");sl.classList.add("tk-measure");let m=0;sl.querySelectorAll(".ktsd.tk").forEach(d=>{m=Math.max(m,d.offsetHeight);});sl.classList.remove("tk-measure");if(m)sl.style.setProperty("--tkh",m+"px");}
+(function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{if(kttab==="etk"){tkFix();setTimeout(tkFix,400);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(tkFix);}}catch(e){}};})();
+addEventListener("resize",()=>{try{if(kttab==="etk")tkFix();}catch(e){}});
+document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("#ktsl [data-aum]"))setTimeout(tkFix,50);});
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
