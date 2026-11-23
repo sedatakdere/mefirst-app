@@ -8005,6 +8005,7 @@ html body .bn.bnm:has(.bn-ring) .bnm-k{left:52px;top:23px}
 #ktsl .ktsd.tk .tk-card{flex:1;display:flex;flex-direction:column}
 #ktsl .ktsd.tk .tk-act{margin-top:auto;padding-top:13px}
 #ktsl .ktsd.tk .tk-info{margin-bottom:0}
+#hx .moonbtn,#hx .sun{z-index:3}
 /* v1.6 topluluk 2 */
 .hsw-fam{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 11px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFE3A0;font:800 12px/1 var(--f-body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hsw-fam svg,.hs-hub-fam svg{width:15px;height:15px;fill:#F4D58D}
@@ -16626,7 +16627,7 @@ function ozxRun(force){try{const z=ozgNow();if(!z||z.x!==0)return;const o=z.o,T=
   document.body.appendChild(d);requestAnimationFrame(()=>requestAnimationFrame(()=>d.classList.add("on")));
   const hold=o.k==="anma"?5200:o.k==="ogretmen"?7500:4200;let gone=false;const out=()=>{if(gone)return;gone=true;d.classList.add("off");setTimeout(()=>d.remove(),900);};
   d.addEventListener("click",out);setTimeout(out,hold);}catch(e){}}
-(function(){let n=0;const go=()=>{if(document.getElementById("mf-splash")&&n++<40){setTimeout(go,250);return;}setTimeout(()=>ozxRun(),350);};setTimeout(go,600);})();
+(function(){let n=0;const busy=()=>document.getElementById("mf-splash")||document.body.classList.contains("onb-on")||[...document.querySelectorAll(".onb")].some(e=>!e.hidden&&e.offsetParent!==null);const go=()=>{if(busy()){if(n++<2400)setTimeout(go,500);return;}setTimeout(()=>ozxRun(),350);};setTimeout(go,600);})();
 
 /* kitap sayfası okuma durumu <-> Kitaplığım rafları senkron */
 const RS2S={read:"okudu",reading:"okuyor",want:"oku"},S2RS={okudu:"read",okuyor:"reading",oku:"want"};
@@ -17349,7 +17350,7 @@ function bzBoardHTML(){const A=BZ,C=A.C,R=A.R;let h="";for(let i=0;i<C*R;i++)h+=
 function bzBox(b,front,ci){if(!b)return `<div class="bz-box empty"></div>`;const hid=b.h;return `<button type="button" class="bz-box${front?" front":""}${hid?" hid":""}" ${front?`data-col="${ci}"`:"disabled"} style="${hid?"--c:#A9A4B8;--ct:#C9C5D6;--cf:#7E7A8C":bzVars(BZ.hex[b.c])}"><b>${hid?"?":b.n}</b>${front&&!hid?'<span class="bz-bee no-mi">🐝</span>':""}</button>`;}
 function bzTrayHTML(){return BZ.cols.map((c,ci)=>`<div class="bz-col">${bzBox(c[0],1,ci)}${c[1]?`<div class="bz-nx">${bzBox(c[1],0)}</div>`:""}${c.length>2?`<small>+${c.length-2}</small>`:""}</div>`).join("");}
 function bzSlotsHTML(){const A=BZ;return Array.from({length:A.S},(_,k)=>{const s=A.slots[k];if(!s)return `<div class="bz-sl"></div>`;const stuck=s.stuck&&!bzAntsIn(s);return `<div class="bz-sl on${stuck?" stuck":""}" data-s="${k}" style="${bzVars(A.hex[s.c])}"><b>${s.rem+bzAntsIn(s)}</b>${stuck?'<i class="no-mi">⏳</i>':""}</div>`;}).join("");}
-function bzHTML(){const A=BZ;if(!A||A.loading)return `<div class="ab"><div class="ab-hd"><div><small>Bal bahçesi</small><b>Bölüm ${A?A.lv:""}</b></div></div><div class="bz-load"><span class="no-mi">🐝</span><small>Bahçe hazırlanıyor…</small></div></div>`;
+function beeHTML(){const A=BZ;if(!A||A.loading)return `<div class="ab"><div class="ab-hd"><div><small>Bal bahçesi</small><b>Bölüm ${A?A.lv:""}</b></div></div><div class="bz-load"><span class="no-mi">🐝</span><small>Bahçe hazırlanıyor…</small></div></div>`;
  return `<div class="ab bz"><div class="ab-hd"><div><small>Bal bahçesi</small><b>Bölüm ${A.lv}</b></div><div class="mg-st"><span class="bz-prog"><b id="bz-left">${A.tiles-A.got}</b> küp</span><button type="button" class="ab-snd" id="bz-fast" aria-label="Hız">${A.fast?"⏩":"▶︎"}</button><button type="button" class="ab-snd" id="ab-alb" aria-label="Albüm">📔</button><button type="button" class="ab-snd" id="ab-snd" aria-label="Oyun sesleri">${abSndOn()?"🔊":"🔇"}</button></div></div>
   ${A.lv<=2&&!A.mv?`<p class="ab-help" id="ab-help">Alttaki bir kutuya dokun 🐝 içindeki arılar yuvadan çıkıp <b>yolu açık</b> kendi rengindeki küpleri taşısın. 5 yuva dolup tıkanmasın!</p>`:""}
   <div class="ab-stage bz-stage" id="ab-stage"><div class="ab-bd bz-bd" id="bz-bd" style="--C:${A.C};--R:${A.R}">${bzBoardHTML()}</div></div>
@@ -17404,7 +17405,7 @@ function bzMix(){const A=BZ;if(!A.boost.mix)return;A.boost.mix=0;A.used=1;const 
 function bzBack(){const A=BZ;if(!A.boost.back)return;let k=-1;A.slots.forEach((s,i)=>{if(s&&!bzAntsIn(s)&&s.rem>0&&(k<0||s.stuck))k=i;});if(k<0){abToast("Geri alınacak bekleyen kutu yok");return;}const s=A.slots[k];A.slots[k]=null;A.boost.back=0;A.used=1;
  let ci=0;A.cols.forEach((c,i)=>{if(c.length<A.cols[ci].length)ci=i;});A.cols[ci].unshift({c:s.c,n:s.rem});abToast("↩ Kutu geri döndü");if(A.end===1)bzResume();else bzRefresh();}
 function bzRender(){if(kv!=="ari")return;const O=document.getElementById("zsh");if(!O)return;clearInterval(BZT);O.classList.add("pzmode");
- O.innerHTML=`<div class="ob-in zs-in kf-in"><button class="zs-x" type="button" id="zs-x" aria-label="Kapat">✕</button><button class="kf-back" type="button" data-kv="hub" aria-label="Keyif köşeme geri dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Geri</span></button>${bzHTML()}</div>`;
+ O.innerHTML=`<div class="ob-in zs-in kf-in"><button class="zs-x" type="button" id="zs-x" aria-label="Kapat">✕</button><button class="kf-back" type="button" data-kv="hub" aria-label="Keyif köşeme geri dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Geri</span></button>${beeHTML()}</div>`;
  document.getElementById("zs-x").onclick=()=>{clearInterval(BZT);zodClose();};O.scrollTop=0;if(!BZ||BZ.loading||!BZ.C)return;
  if(BZ.ants&&BZ.ants.size){BZ.ants.forEach(a=>{BZ.res.delete(a.tile);a.s.rem++;try{a.el.remove();}catch(e){}});BZ.ants.clear();}
  requestAnimationFrame(()=>{bzFit();bzMarkFree();});bzBindTray();
@@ -22441,6 +22442,10 @@ function tkFix(){const sl=document.getElementById("ktsl");if(!sl||!sl.querySelec
 (function(){const _k=kitapRender;kitapRender=function(){_k.apply(this,arguments);try{if(kttab==="etk"){tkFix();setTimeout(tkFix,400);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(tkFix);}}catch(e){}};})();
 addEventListener("resize",()=>{try{if(kttab==="etk")tkFix();}catch(e){}});
 document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("#ktsl [data-aum]"))setTimeout(tkFix,50);});
+/* v1.9.3 alttan açılan pencereler (etkinlik detayı, sohbet, stüdyo…) telefonun geri hareketiyle kapansın; sayfa geri gitmesin */
+(function(){const _y=ySheet;ySheet=function(id){const had=!!document.getElementById(id);const O=_y.apply(this,arguments);try{const h=history.state||{};if(!(had&&h.ysh===id))history.pushState({ysh:id},"");
+ const c0=O._close;O._c0=c0;O._close=function(){c0();if((history.state||{}).ysh===id){window.__yb=1;history.back();}};O.querySelectorAll(".shs-x").forEach(x=>x.onclick=O._close);O.onclick=e=>{if(e.target===O)O._close();};}catch(e){}return O;};
+ window.addEventListener("popstate",e=>{if(window.__yb){window.__yb=0;e.stopImmediatePropagation();return;}const L=[...document.querySelectorAll(".ysh.on")];if(!L.length)return;const top=L[L.length-1];const h=history.state||{};if(h.ysh===top.id)return;e.stopImmediatePropagation();try{(top._c0||top._close)();}catch(_){top.remove();}},true);})();
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
