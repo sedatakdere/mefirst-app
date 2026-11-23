@@ -22615,7 +22615,7 @@ const MF_CFG={ver:"0.9",wa:"905326608118",mail:"destek@mefirst.app"};
 (function(){
   // Geri bildirim
   const S=document.getElementById("fb-sheet");let star=0,area=[];
-  const AREAS=["Genel tasarım","Ne giysem","Biz ikimiz","Manifest Me","Çocuklarım","Keyif köşem","Kendime iyi bak","Ev & düzen","Hata buldum 🐞"];
+  const AREAS=["Genel tasarım","Biz ikimiz","Manifest Me","Çocuklarım","Keyif köşem","Kendime iyi bak","Ev & düzen","Hata buldum 🐞"];
   document.getElementById("fb-ver").textContent=MF_CFG.ver;
   const sr=()=>{document.getElementById("fb-stars").innerHTML=[1,2,3,4,5].map(i=>`<button type="button" data-st="${i}" class="${i<=star?"on":""}" aria-label="${i} yıldız">★</button>`).join("");
     document.querySelectorAll("[data-st]").forEach(b=>b.onclick=()=>{star=+b.dataset.st;sr();upd();});};
