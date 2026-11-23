@@ -21942,7 +21942,7 @@ async function sbLikers(x){const m=document.createElement("div");m.className="sb
  B.innerHTML=L.map(n=>`<div class="rp-i"><span class="ra no-mi">❤️</span><div class="rb"><b>${esc(n.actor)}</b><small>${(t=>t==="şimdi"?t:t+" önce")(sbAgo(n.created_at))}</small></div></div>`).join("");}
 /* v1.2 "Bugün senin için" yeniden: uygulamanın bugünkü yıldızları, saate göre sıralı, görselli */
 function tcRich(){const h=new Date().getHours(),O=[];const push=(k,o)=>{o.k=k;O.push(o);};
- try{const R=ktRecs();const f=R.length?ktFeatPick(R):null;if(f){const b=f[0];push("book",{t:"book",e:"Çayını demle",h:b[0],d:`${b[1]} · ${f[2]||"Bugün tam sana göre"}`,cta:"Kitaba bak",art:`<span class="tc-cov">${ktCover(b[0],b[1])}</span>`,go:()=>{try{kttab="oneri";}catch(e){}document.getElementById("go-kitap").click();}});}}catch(e){}
+ try{const R=ktRecs();const f=R.length?ktFeatPick(R):null;if(f){const b=f[0];push("book",{t:"book",e:"Çayını demle",h:b[0],d:`${b[1]} · ${f[2]||"Bugün tam sana göre"}`,cta:"Kitaba bak",art:`<span class="tc-cov">${ktCover(b[0],b[1])}</span>`,go:()=>{try{bookOpenAny(b[0],b[1]);}catch(e){try{kttab="oneri";}catch(_){}document.getElementById("go-kitap").click();}}});}}catch(e){}
  try{const fm=spSeasonPick();if(fm){const S=spSt();push("film",{t:"film",e:h>=17?"Bu akşam ne izlesek":"Akşama bir film",h:fm[1],d:`${fm[3]||""}${fm[4]?" · "+fm[4].split(",")[0]:""}${S.want[fm[0]]?" · Listende":""}`,cta:"Filme bak",art:`<span class="tc-pos">${spPoster(fm)}</span>`,go:()=>{try{SP.tab="perde";}catch(e){}document.getElementById("go-sahne").click();setTimeout(()=>{try{spFilmOpen(fm[0]);}catch(e){}},350);}});}}catch(e){}
  try{const A=bnFitArt();const sub=A.sub.replace(/<\/?em>/g,"");const H=h<11?"Güne bir antrenmanla başla":h<17?"10 dakikalık bir mola hareketi?":h<22?"Akşam esnemesi, 8 dakika":"Yarın için hedefini kur";
   push("form",{t:"form",e:"FORM",h:H,d:sub,cta:h<22?"Antrenmana başla":"FORM'a git",art:`<span class="tc-ring">${A.svg}</span>`,go:()=>document.getElementById("go-fit").click()});}catch(e){}
@@ -22488,6 +22488,8 @@ function spEraSwipe(E){const room=E.querySelector("#spe-room");if(!room)return;l
  room.addEventListener("touchend",e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;x0=null;if(Math.abs(dx)<70||Math.abs(dy)>Math.abs(dx)*.7)return;const L=spEraList(),i=L.indexOf(spEraCur());const n=L[i+(dx<0?1:-1)];if(n)spEraGo(n[0],dx<0?1:-1);},{passive:true});
  E.querySelectorAll("[data-erg]").forEach(b=>b.onclick=()=>spEraGo(+b.dataset.erg,1));}
 function spDialC(E){try{const D=E.querySelector("#spe-dial"),b=D&&D.querySelector("[aria-pressed=true]");if(b)D.scrollLeft=b.offsetLeft-D.clientWidth/2+b.offsetWidth/2;}catch(e){}}
+/* v1.9.4 "Bugün senin için" ilk boyamada da yeni kart yapısıyla gelsin (eski yapı bir an görünmesin) */
+try{if(step===0){todayRender();}}catch(e){}
 </script>
 <div class="fb-sheet" id="fb-sheet" hidden role="dialog" aria-modal="true" aria-label="Fikrini söyle">
   <div class="fb-in">
