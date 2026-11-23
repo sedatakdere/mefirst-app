@@ -4876,8 +4876,177 @@
 "agla"
 ],
 "p": 6
+},
+{
+"id": "wd-Q577757",
+"q": "Q577757",
+"t": "Gigi (film, 1958)",
+"o": "Gigi",
+"y": 1958,
+"d": "Vincente Minnelli, Charles Walters",
+"line": "1958 film by Vincente Minnelli",
+"g": [
+"iyi",
+"nost"
+],
+"p": 47
+},
+{
+"id": "wd-Q603448",
+"q": "Q603448",
+"t": "Ahlaksız Teklif",
+"o": "Ahlaksız Teklif",
+"y": 1993,
+"d": "Adrian Lyne",
+"line": "1993 film by Adrian Lyne",
+"g": [
+"agla",
+"ask"
+],
+"p": 46
+},
+{
+"id": "wd-Q18199332",
+"q": "Q18199332",
+"t": "Fantastik Canavarlar: Dumbledore'un Sırları",
+"o": "Fantastic Beasts: The Secrets of Dumbledore",
+"y": 2022,
+"d": "David Yates",
+"line": "2022 yapımı David Yates filmi",
+"g": [
+"agla",
+"iyi"
+],
+"p": 46
+},
+{
+"id": "wd-Q736969",
+"q": "Q736969",
+"t": "Beklenmeyen Misafir",
+"o": "Guess Who's Coming to Dinner",
+"y": 1967,
+"d": "Stanley Kramer",
+"line": "1967 film by Stanley Kramer",
+"g": [
+"agla",
+"gul",
+"nost"
+],
+"p": 46
+},
+{
+"id": "wd-Q27660145",
+"q": "Q27660145",
+"t": "Snow White (film, 2024)",
+"o": "Snow White",
+"y": 2025,
+"d": "Marc Webb",
+"line": "2025 film directed by Marc Webb",
+"g": [
+"agla",
+"ask",
+"iyi"
+],
+"p": 46
+},
+{
+"id": "wd-Q381751",
+"q": "Q381751",
+"t": "Sex and the City",
+"o": "Sex and the City",
+"y": 2008,
+"d": "Michael Patrick King",
+"line": "2008 film by Michael Patrick King",
+"g": [
+"ask",
+"gul"
+],
+"p": 46
+},
+{
+"id": "wd-Q19801728",
+"q": "Q19801728",
+"t": "Alvin ve Sincaplar: Yol Macerası",
+"o": "Alvin and the Chipmunks: The Road Chip",
+"y": 2015,
+"d": "Walt Becker",
+"line": "2016 direct to video film directed by Walt Becker",
+"g": [
+"gul",
+"iyi"
+],
+"p": 46
+},
+{
+"id": "wd-Q500093",
+"q": "Q500093",
+"t": "Bu Nasıl Sarışın",
+"o": "Legally Blonde",
+"y": 2001,
+"d": "Robert Luketic",
+"line": "2001 film directed by Robert Luketic",
+"g": [
+"gul"
+],
+"p": 46
+},
+{
+"id": "wd-Q18740903",
+"q": "Q18740903",
+"t": "Ferdinand",
+"o": "Ferdinand",
+"y": 2017,
+"d": "Carlos Saldanha",
+"line": "2017 çıkışlı Amerikan animasyon filmi",
+"g": [
+"gul"
+],
+"p": 46
+},
+{
+"id": "wd-Q912729",
+"q": "Q912729",
+"t": "Kahire'nin Mor Gülü",
+"o": "The Purple Rose of Cairo",
+"y": 1985,
+"d": "Woody Allen",
+"line": "1985 film by Woody Allen",
+"g": [
+"ask",
+"gul"
+],
+"p": 46
+},
+{
+"id": "wd-Q276299",
+"q": "Q276299",
+"t": "Hayallerin Peşinde",
+"o": "Revolutionary Road",
+"y": 2008,
+"d": "Sam Mendes",
+"line": "2008 film directed by Sam Mendes",
+"g": [
+"agla",
+"ask"
+],
+"p": 45
+},
+{
+"id": "wd-Q738526",
+"q": "Q738526",
+"t": "Sıkı Kontrol Edilen Trenler",
+"o": "Closely Watched Trains",
+"y": 1966,
+"d": "Jiří Menzel",
+"line": "1966 Czechoslovak film directed by Jiří Menzel",
+"g": [
+"agla",
+"gul",
+"nost"
+],
+"p": 45
 }
 ],
-"updated": "2026-11-17",
+"updated": "2026-11-23",
 "v2": 1
 }

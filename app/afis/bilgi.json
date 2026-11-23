@@ -1175,6 +1175,7 @@
 "t20261127-karsu-kayseri": {},
 "t20261127-oivavoi-izmir": {},
 "t20261127-teror": {},
+"t20261127-tuna-kalinsaz-fade": {},
 "t20261127-ve-ates-bizi-tuketiyor-kocaeli": {},
 "t20261127-verimsizler-eskisehir": {},
 "t20261128-cirkin": {},
@@ -1251,6 +1252,7 @@
 "mekan": "Zorlu Performans Sanatları Merkezi veya kısaltılmış ismiyle Zorlu PSM, İstanbul'un Beşiktaş ilçesindeki Zorlu Center kompleksinin içinde yer alan çok amaçlı bir sanat ve kültür merkezidir."
 },
 "t20261204-doktor-bana-bir-care-rize": {},
+"t20261204-eren-servan-aksoy-fade": {},
 "t20261204-gokhanturkmen-izmir": {},
 "t20261204-guldurguldur-antep": {},
 "t20261204-ransevmisimmeger-antep": {},
@@ -1266,6 +1268,7 @@
 },
 "t20261205-donusum-kahramanmaras": {},
 "t20261205-emreaydin-izmir": {},
+"t20261205-english-open-mic-fade": {},
 "t20261205-handeyener-ankara": {},
 "t20261205-romeojuliet": {},
 "t20261205-tantasci": {
@@ -1283,6 +1286,7 @@
 },
 "t20261208-keldiva-antep": {},
 "t20261208-sonersarikabadayi-izmir": {},
+"t20261209-akin-aslan-fade": {},
 "t20261209-iki-sehrin-hikayesi-denizli": {},
 "t20261209-puccinigala": {},
 "t20261210-donusum-batman": {},
@@ -1369,6 +1373,7 @@
 },
 "t20261218-seksendort-sivas": {},
 "t20261218-soguksavas-izmir": {},
+"t20261218-umutcan-arslan-fade": {},
 "t20261219-bsofeddeck-ankara": {
 "mekan": "Bilkent Konser Salonu; Ankara'nın Çankaya ilçesinde, Bilkent Üniversitesi'ne bağlı olan Müzik ve Sahne Sanatları Fakültesi'nin içinde yer alan bir konser salonudur."
 },
@@ -1381,6 +1386,7 @@
 "mekan": "İzmir Devlet Opera ve Balesi, Türkiye'de Devlet Opera ve Balesi Genel Müdürlüğü'ne bağlı olarak faaliyet gösteren altı opera-bale müdürlüğünden biridir."
 },
 "t20261220-dogu-demirkol-konya": {},
+"t20261220-emrecan-odabas-fade": {},
 "t20261220-georgia-nutcracker-ankara": {
 "mekan": "Congresium Ankara veya eski adıyla ATO Congresium; Türkiye'nin başkenti Ankara'da bulunan çok amaçlı bir kongre ve gösteri salonu kompleksidir."
 },
@@ -1389,6 +1395,7 @@
 "t20261220-kalhorerzincan-diyarbakir": {},
 "t20261220-pinokyo-konya": {},
 "t20261220-yeni-turku-bursa": {},
+"t20261225-uclu-standup-fade": {},
 "thelmalouise": {
 "imdb": "tt0103074",
 "konu": "Thelma ve Louise, 1991 yapımı bir yol filmidir. Senaryosunu  Callie Khouri'nin yazdığı filmin yönetmenliğini Ridley Scott üstlenmiştir. Başrol oyuncularından Geena Davis, \"Thelma\" karakterini, Susan Sarandon \"Louise\" karakterini, Harvey Keitel, filmin iki kadın karakterinin işlediği suçları aydınlatma çabasında olan bir dedektifi; Hal kerekterini, Michael Madsen Louise'in erkek arkadaşını, Christopher McDonald Thelma'nın eşini, Brad Pitt ise Thelma ve Louise'in yanlarına aldıkları otostopçuyu canlandırmıştır.\nDiğer bazı yol filmleriyle ve özellikle Alain Tanner'in yönettiği 1979 yapımı Messido",
@@ -4804,6 +4811,33 @@
 "Seth MacFarlane"
 ]
 },
+"wd-Q179460": {
+"imdb": "tt0257360",
+"konu": "Schmidt Hakkında, 2002 yılı ABD yapımı komedi, dram türü sinema filmi.\nBaşrolünü 3 Oscarlı sayısız ödül sahibi Jack Nicholson oynamıştır.",
+"oyuncu": [
+"Jack Nicholson",
+"Kathy Bates",
+"Angela Lansbury",
+"Dermot Mulroney",
+"June Squibb",
+"Hope Davis"
+],
+"puan": {
+"Metacritic": "85/100",
+"Rotten Tomatoes": "%85"
+},
+"sure": 125,
+"tur": [
+"komedi",
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Alexander Payne"
+]
+},
 "wd-Q18002795": {
 "imdb": "tt1663202",
 "konu": "Diriliş, Alejandro G. Iñárritu'nun yönettiği, 2016 yılında gösterime giren biyografik western gerilim filmi. Senaryo Michael Punke'nin 2002'de yayınlanan aynı adlı romanından uyarlanarak Iñárritu ve Mark L. Smith tarafından yazıldı. Filmde sınır sakini Hugh Glass'ın hayatından esinlenildi. Filmin oyuncu kadrosunda Leonardo DiCaprio, Tom Hardy, Will Poulter ve Domhnall Gleeson yer almaktadır.",
@@ -4963,6 +4997,35 @@
 "ulke": [
 "İngiltere",
 "ABD"
+],
+"yonetmen": [
+"David Yates"
+]
+},
+"wd-Q18199332": {
+"imdb": "tt4123432",
+"konu": "Fantastik Canavarlar: Dumbledore'un Sırları, yönetmenliğini David Yates'in üstlendiği, senaryosu J. K. Rowling ve Steve Kloves tarafından yazılan fantezi filmidir. ABD ve Birleşik Krallık ortak yapımı olan film, Fantastik Canavarlar: Grindelwald'ın Suçları filminin devamıdır.  Fantastic Beasts film serisinin üçüncüsü ve Wizarding World filmlerinin on birincisidir. Filmin başrollerinde Eddie Redmayne, Katherine Waterston, Dan Fogler, Alison Sudol, Ezra Miller, Callum Turner, Jessica Williams ve Jude Law yer almaktadır.",
+"oyuncu": [
+"Jude Law",
+"Eddie Redmayne",
+"Ezra Miller",
+"Katherine Waterston",
+"Dan Fogler",
+"Claudia Kim"
+],
+"puan": {
+"Metacritic": "47/100",
+"Rotten Tomatoes": "%46"
+},
+"sure": 142,
+"tur": [
+"drama",
+"macera",
+"Aile"
+],
+"ulke": [
+"ABD",
+"İngiltere"
 ],
 "yonetmen": [
 "David Yates"
@@ -5651,6 +5714,25 @@
 "Mahsun Kırmızıgül"
 ]
 },
+"wd-Q18740903": {
+"imdb": "tt3411444",
+"konu": "Ferdinand, Blue Sky Studios, Davis Entertainment ve 20th Century Fox Animation tarafından üretilen ve yönetmenliğini Carlos Saldanha'nın gerçekleştirdiği, 2017 çıkışlı Amerikan 3D bilgisayar animasyonu komedi-drama macera filmi. Film, Munro Leaf imzalı \"The Story of Ferdinand\" adlı çocuk kitabının uyarlamasıdır. Filmdeki karakterleri John Cena, Kate McKinnon, Anthony Anderson, Bobby Cannavale, Peyton Manning, Gina Rodriguez, Miguel Ángel Silvestre ve David Tennant seslendirmektedir.\nFerdinand, 111 milyon dolarlık üretim bütçesine karşı 144 milyon dolar hasılat elde etti.",
+"puan": {
+"Metacritic": "58/100",
+"Rotten Tomatoes": "%71"
+},
+"sure": 108,
+"tur": [
+"komedi",
+"macera"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Carlos Saldanha"
+]
+},
 "wd-Q188000": {
 "imdb": "tt0375679",
 "konu": "Çarpışma Akademi Ödülü almış 2004 yapımı Amerikan filmi. Pek çok sinema eleştirmeninin tahminin dışında 2005 yılında düşük bütçeli bir film olmasına rağmen En İyi Film Akademi Ödülü'nü kazanmıştır.",
@@ -6325,6 +6407,54 @@
 ],
 "yonetmen": [
 "Curtis Hanson"
+]
+},
+"wd-Q19726886": {
+"imdb": "tt4309356",
+"konu": "Sarmaşık, Tolga Karaçelik'in yönetmenliğini ve senaristliğini üstlendiği 2015 yapımı Türk filmidir. Başrollerinde Nadir Sarıbacak, Hakan Karsak ve Kadir Çermik'in yer aldığı filmde, \"bir armatörün iflas edip ortadan kaybolmasının ardından, deniz hukuku gereği gemide kalmak zorunda olan ve hiçbir yere gidemeyen beş gemici ile bir kaptanın arasındaki hiyerarşik mücadeleyi\" anlatmaktadır.",
+"oyuncu": [
+"Nadir Sarıbacak"
+],
+"puan": {
+"Rotten Tomatoes": "%67"
+},
+"sure": 104,
+"tur": [
+"drama"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Tolga Karaçelik"
+]
+},
+"wd-Q19801728": {
+"imdb": "tt2974918",
+"konu": "Alvin ve Sincaplar: Yol Macerası, Walt Becker'ın yönetmenliğini yaptığı 2015 ABD yapımı çocuk komedi filmidir.",
+"oyuncu": [
+"Kaley Cuoco",
+"Bella Thorne",
+"Christina Applegate",
+"Anna Faris",
+"Jennifer Coolidge",
+"Jason Lee"
+],
+"puan": {
+"Metacritic": "33/100",
+"Rotten Tomatoes": "%16"
+},
+"sure": 92,
+"tur": [
+"müzikal",
+"komedi",
+"macera"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Walt Becker"
 ]
 },
 "wd-Q19824796": {
@@ -7478,6 +7608,28 @@
 "Ali Bilgin"
 ]
 },
+"wd-Q21643351": {
+"imdb": "tt5985288",
+"konu": "Ekşi Elmalar, 2016 yapımı yönetmenliğini ve senaristliğini Yılmaz Erdoğan'ın gerçekleştirdiği sinema filmidir. Filmin başrollerinde Farah Zeynep Abdullah, Şükran Ovalı ve Songül Öden yer alırken kadroda kendilerine Şükrü Özyıldız, Fatih Artman, Ersin Korkut, Caner Cindoruk, Cezmi Baskın ve Yılmaz Erdoğan eşlik ediyor. Filmin yapımcılığını ise BKM üstlendi. 27 Ekim'de İstanbul'da galası yapılan film, 28 Ekim'de seyirci ile buluştu.",
+"oyuncu": [
+"Songül Öden",
+"Farah Zeynep Abdullah",
+"Yılmaz Erdoğan",
+"Şükrü Özyıldız",
+"Caner Cindoruk",
+"Cezmi Baskın"
+],
+"sure": 114,
+"tur": [
+"komedi"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Yılmaz Erdoğan"
+]
+},
 "wd-Q217182": {
 "imdb": "tt0099487",
 "konu": "Makas Eller, 20th Century Fox tarafından aile kitleleri için yapılan komedi-dram-macera-romantizm filmidir. Hikâye rengarenk Amerikan banliyösüne geniş bir tepeden bakan metruk fakat süslü bir konakta yaşayan Edward adındaki utangaç ve garip bir çocuk ve Banliyöde yaşayan, kozmetik temsilcisi Peg Boggs etrafında örülür. Klasik Amerikan ailesi kültürünü temsil eden Peg'in gözlerinden, ellerine makaslar adapte etmiş bir gencin görünümü anlatılır. Dünya çapında 78 milyon dolarlık hasılata ulaşan yapım, eleştirmenler tarafından Burton'ın en kişisel filmi olarak değerlendirilmektedir.",
@@ -8619,6 +8771,34 @@
 "Yasujirō Ozu"
 ]
 },
+"wd-Q261403": {
+"imdb": "tt0061138",
+"konu": "Bir Kadın ve Bir Erkek Claude Lelouch tarafından yönetilen 1966 Fransa filmi. Film Fransa'daki bir dul kadınla dul erkeğin aşkını konu edindi.",
+"oscar": 2,
+"oyuncu": [
+"Anouk Aimée",
+"Jean-Louis Trintignant",
+"Gérard Larrousse",
+"Pierre Barouh",
+"Valérie Lagrange",
+"Souâd Amidou"
+],
+"puan": {
+"Rotten Tomatoes": "%75"
+},
+"sure": 102,
+"tur": [
+"romantik",
+"drama",
+"melodrama"
+],
+"ulke": [
+"Fransa"
+],
+"yonetmen": [
+"Claude Lelouch"
+]
+},
 "wd-Q26698156": {
 "imdb": "tt5580390",
 "konu": "Suyun Sesi, Guillermo del Toro tarafından yönetilen ve senaryosu del Toro ile birlikte Vanessa Taylor tarafından yazılan, 2017 çıkışlı Amerikan yapımı romantik, fantastik bir filmdir. Başrollerinde Sally Hawkins, Michael Shannon, Richard Jenkins, Doug Jones, Michael Stuhlbarg ve Octavia Spencer'ın yer aldığı film, 1962'de Baltimore'de geçmektedir ve Güney Amerika'da yakalanmış bir amfibiyen ile gizli bir laboratuvarda çalışan konuşma engelli temizlik işçisi arasında geçen hikâyeyi anlatmaktadır.\nFilmin ilk gösterimi, 31 Ağustos 2017'de 74. Venedik Uluslararası Film Festivali'nin ana yarışma bö",
@@ -8915,6 +9095,61 @@
 ],
 "yonetmen": [
 "Nuri Bilge Ceylan"
+]
+},
+"wd-Q276299": {
+"imdb": "tt0959337",
+"konu": "Hayallerin Peşinde, Richard Yates'in 1961 tarihli aynı adlı romanından Justin Haythe tarafından uyarlanan 2008 yapımı film. Yönetmenliğini American Beauty filmi ile Oscar ödülü kazanan Sam Mendes'in yaptığı filmde başrolleri Leonardo DiCaprio ve Kate Winslet paylaşıyorlar. Winslet, DiCaprio ve Kathy Bates bu filmle, 1997 yapımı Titanic filminden sonra ilk kez bir araya geliyorlar. Revolutionary Road aynı zamanda Kate Winslet'ın eşi Sam Mendes ile yaptığı ilk film projesidir.",
+"oyuncu": [
+"Leonardo DiCaprio",
+"Kate Winslet",
+"Kathy Bates",
+"David Harbour",
+"Kathryn Hahn",
+"Michael Shannon"
+],
+"puan": {
+"Metacritic": "69/100",
+"Rotten Tomatoes": "%67"
+},
+"sure": 119,
+"tur": [
+"romantik",
+"drama"
+],
+"ulke": [
+"ABD",
+"İngiltere"
+],
+"yonetmen": [
+"Sam Mendes"
+]
+},
+"wd-Q27660145": {
+"imdb": "tt6208148",
+"konu": "Snow White, Greta Gerwig ve Erin Cressida Wilson'ın senaryosundan, Marc Webb tarafından yönetilen Amerikan müzikal fantezi filmidir. Walt Disney Pictures ve Marc Platt Productions'ın ortak yapımcılığını üstlendiği film, Disney'in Grimm Kardeşler'in aynı adlı 1812 peri masalına gevşek bir şekilde dayanan 1937 animasyon filminin canlı aksiyon uyarlamasıdır.\nFilmde, üvey annesi Kötü Kraliçe tarafından suikaste uğramaktan kurtulan Pamuk Prenses, daha sonra krallığını geri almak için ormanın yedi sihirli sakini ve Jonathan adlı haydutla bir araya geliyor.\n1937 yapımı Pamuk Prenses ve Yedi Cüceler'i",
+"oyuncu": [
+"Gal Gadot",
+"Rachel Zegler",
+"Martin Klebba",
+"Andrew Burnap",
+"Ansu Kabia"
+],
+"puan": {
+"Metacritic": "50/100",
+"Rotten Tomatoes": "%38"
+},
+"sure": 109,
+"tur": [
+"müzikal",
+"romantik",
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Marc Webb"
 ]
 },
 "wd-Q278190": {
@@ -9435,6 +9670,34 @@
 ],
 "yonetmen": [
 "Nuri Bilge Ceylan"
+]
+},
+"wd-Q313315": {
+"imdb": "tt0057590",
+"konu": "Tom Jones 1963 Britanya yapımı macera komedi filmi. Film Henry Fielding'in 1749 basım klasik romanı The History of Tom Jones, a Foundlingden uyarlanmıştır. Filmin baş kahramanını Albert Finney canlandırmıştır. Kendi zamanının en çok beğenilen ve popüler komedilerinden biri olan film, En İyi Film dalı da dahil 4 Oscar kazanmıştır.",
+"oscar": 4,
+"oyuncu": [
+"Albert Finney",
+"Edith Evans",
+"Lynn Redgrave",
+"David Warner",
+"Hugh Griffith",
+"Susannah York"
+],
+"puan": {
+"Rotten Tomatoes": "%81"
+},
+"sure": 128,
+"tur": [
+"komedi",
+"drama",
+"macera"
+],
+"ulke": [
+"İngiltere"
+],
+"yonetmen": [
+"Tony Richardson"
 ]
 },
 "wd-Q3137286": {
@@ -10170,6 +10433,34 @@
 "yonetmen": [
 "Zeki Ökten",
 "Yılmaz Güney"
+]
+},
+"wd-Q381751": {
+"imdb": "tt1000774",
+"konu": "Sex and the City, Michael Patrick King'in yönettiği 2008 yapımı romantik filmdir. Film Sex and the City dizisinin devamı niteliğindedir. Türkiye'de ve ABD'de 30 Mayıs 2008 tarihinde vizyona girmiştir. Vizyona girdiği ilk hafta Türkiye'de ve ABD'de en çok izlenen filmler sırasında birinci olmuştur.",
+"oyuncu": [
+"Sarah Jessica Parker",
+"Jennifer Hudson",
+"Candice Bergen",
+"Kim Cattrall",
+"Kristin Davis",
+"Cynthia Nixon"
+],
+"puan": {
+"Metacritic": "53/100",
+"Rotten Tomatoes": "%50"
+},
+"sure": 145,
+"tur": [
+"romantik komedi",
+"komedi",
+"female buddy"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Michael Patrick King"
 ]
 },
 "wd-Q384397": {
@@ -11327,6 +11618,32 @@
 "Fatih Akın"
 ]
 },
+"wd-Q500093": {
+"imdb": "tt0250494",
+"konu": "Bu Nasıl Sarışın Robert Luketic'in ilk yönetmenlik denemesi olarak yönettiği ve Karen McCullah Lutz ile Kirsten Smith tarafından yazılan, Amanda Brown'ın 2001 tarihli aynı adlı romanından uyarlanan 2001 yapımı bir Amerikan romantik komedi filmidir. Başrollerinde Reese Witherspoon, Luke Wilson, Selma Blair, Matthew Davis, Victor Garber ve Jennifer Coolidge yer almaktadır. Hikâye, Harvard Hukuk Fakültesi'nde Juris Doctor derecesi alarak eski erkek arkadaşı Warner Huntington'ü geri kazanmaya çalışan bir sororority kızı olan Elle Woods'u canlandırıyor ve bu süreçte stereotypes against blondes'ın ü",
+"oyuncu": [
+"Reese Witherspoon",
+"Raquel Welch",
+"Jennifer Coolidge",
+"Ali Larter",
+"Selma Blair",
+"Luke Wilson"
+],
+"puan": {
+"Metacritic": "59/100",
+"Rotten Tomatoes": "%72"
+},
+"sure": 92,
+"tur": [
+"komedi"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Robert Luketic"
+]
+},
 "wd-Q503313": {
 "imdb": "tt0081283",
 "konu": "Sıradan İnsanlar 1980 yapımı Amerikan drama filmi. Filmin yönetmeni Robert Redford'dur. Önemli oyuncular ise Donald Sutherland, Mary Tyler Moore, Judd Hirsch ve Timothy Hutton'dur.\nFilmin senaryosu Alvin Sargent tarafından oluşturulmuştur.",
@@ -11603,6 +11920,25 @@
 "Ferzan Özpetek"
 ]
 },
+"wd-Q55138246": {
+"imdb": "tt6992946",
+"konu": "En Sevdiğim Kumaş, Gaya Jiji'nin yönettiği 2018 yapımı dram filmidir. 2018 Cannes Film Festivali'nde Belirli Bir Bakış bölümünde gösterimi yapılmıştır.",
+"oyuncu": [
+"Manal Issa",
+"Ula Tabari"
+],
+"sure": 94,
+"tur": [
+"drama"
+],
+"ulke": [
+"Fransa",
+"Almanya"
+],
+"yonetmen": [
+"Gaya Jiji"
+]
+},
 "wd-Q5519097": {
 "imdb": "tt0450426",
 "konu": "Gelibolu, Tolga Örnek'in yönetmenliğini yaptığı 2005 yapımı Türk filmi. 1915 Çanakkale Savaşı hakkında belgesel olan yapım, olaya hem Türkler hem de İngiliz askerleri ile Anzaklar tarafından yaklaşmıştır. Altı yıllık bir çalışma sonucu hazırlanan Gelibolu, yedi ülkede yetmişten fazla arşivin, 80 binden fazla fotoğrafın taranmasıyla oluşturuldu.",
@@ -11645,6 +11981,28 @@
 ],
 "yonetmen": [
 "Greta Gerwig"
+]
+},
+"wd-Q56061842": {
+"imdb": "tt8696440",
+"konu": "Sibel, yönetmenliği ve senaristliği Çağla Zencirci ve Guillaume Giovanetti tarafından gerçekleştiren 2018 çıkışlı dramatik filmdir. Film ilk gösterimini 3 Ağustos 2018'de Locarno Film Festivali'nde gerçekleştirdi. Film ayrıca 2018 Toronto Uluslararası Film Festivali'nin \"Çağdaş Dünya Sineması\" bölümü seçkisinde yer aldı.",
+"oyuncu": [
+"Damla Sönmez"
+],
+"puan": {
+"Rotten Tomatoes": "%75"
+},
+"sure": 95,
+"tur": [
+"drama"
+],
+"ulke": [
+"Fransa",
+"Almanya"
+],
+"yonetmen": [
+"Guillaume Giovanetti",
+"Çağla Zencirci"
 ]
 },
 "wd-Q567579": {
@@ -11785,6 +12143,35 @@
 "Fatih Akın"
 ]
 },
+"wd-Q577757": {
+"imdb": "tt0051658",
+"konu": "Gigi Vincente Minnelli tarafından yönetilen ve Metro-Goldwyn-Mayer'ın Eastmancolor film süreci Metrocolor kullanılarak işlenen 1958 yapımı bir Amerikan müzikal romantik komedi filmidir. Senaryo Alan Jay Lerner tarafından Colette'in 1944 tarihli aynı adlı novella'sına dayanmaktadır. Filmde sözleri Lerner'a, müziği Frederick Loewe'ye ait olan şarkılar yer alıyor ve André Previn tarafından düzenlenip yönetiliyor. Kostüm tasarımı Cecil Beaton tarafından yapılmıştır.",
+"oscar": 8,
+"oyuncu": [
+"Maurice Chevalier",
+"Leslie Caron",
+"Eva Gabor",
+"Louis Jourdan",
+"Cecil Beaton",
+"Hermione Gingold"
+],
+"puan": {
+"Metacritic": "82/100",
+"Rotten Tomatoes": "%88"
+},
+"sure": 119,
+"tur": [
+"romantik komedi",
+"müzikal"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Vincente Minnelli",
+"Charles Walters"
+]
+},
 "wd-Q588420": {
 "imdb": "tt0175880",
 "konu": "Manolya, Paul Thomas Anderson tarafından yazılan ve yönetilen 1999 yapımı Amerikan filmidir. Ricky Jay'in anlatıcı rolünde boy gösterdiği yapımın başrollerini Tom Cruise, Philip Baker Hall, Philip Seymour Hoffman, William H. Macy, Julianne Moore, John C. Reilly ve Jason Robards paylaşmaktadır.\nTom Cruise filmdeki rolüyle En İyi Yardımcı Erkek Oyuncu dalında Oscar'a aday gösterilmiş ve aynı dalda Altın Küre Ödülü'nü kazanmıştır. Anderson, Manolya'nın -iyisiyle kötüsüyle- hayatı boyunca yapacağı en iyi film olduğunu düşündüğünü söylemiştir.",
@@ -11837,6 +12224,33 @@
 ],
 "yonetmen": [
 "Sam Raimi"
+]
+},
+"wd-Q59249": {
+"imdb": "tt1028532",
+"konu": "Hachiko: A Dog's Story, 2009 ABD yapımı drama filmi.\nFilm, bir sanat profesörünün, akita cinsi bir köpekle olan duygusal ilişkisini anlatmaktadır.",
+"oyuncu": [
+"Richard Gere",
+"Jason Alexander",
+"Joan Allen",
+"Cary-Hiroyuki Tagawa",
+"Erick Avari",
+"Sarah Roemer"
+],
+"puan": {
+"Rotten Tomatoes": "%64"
+},
+"sure": 93,
+"tur": [
+"drama",
+"Aile"
+],
+"ulke": [
+"İngiltere",
+"ABD"
+],
+"yonetmen": [
+"Lasse Halström"
 ]
 },
 "wd-Q596623": {
@@ -11964,6 +12378,33 @@
 "Emin Alper"
 ]
 },
+"wd-Q603448": {
+"imdb": "tt0107211",
+"konu": "Indecent Proposal 1993 yapımlı romantik dram filmidir. Yönetmenliğini Adrian Lynenin yaptığı film zamanında iyi bir çıkış yapmıştır, filmin senaristi Amy Holden Jones'dir ve filmin başrollerinde Robert Redford, Demi Moore ve Woody Harrelson vardır. Film Kanal D'de yayınlanan Binbir Gece dizisiyle benzerlikler taşımaktadır.",
+"oyuncu": [
+"Demi Moore",
+"Robert Redford",
+"Woody Harrelson",
+"Billy Connolly",
+"Billy Bob Thornton",
+"Oliver Platt"
+],
+"puan": {
+"Metacritic": "45/100",
+"Rotten Tomatoes": "%34"
+},
+"sure": 112,
+"tur": [
+"romantik",
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Adrian Lyne"
+]
+},
 "wd-Q60501923": {
 "imdb": "tt7975244",
 "konu": "Jumanji: Yeni Seviye, yönetmenliğini Jake Kasdan'in yaptığı, başrollerini Dwayne Johnson, Jack Black, Kevin Hart, Karen Gillan, Nick Jonas, Awkwafina, Danny DeVito ve Danny Glover'ın paylaştığı bir Amerikan fantastik-macera filmi.\n2017 yılında vizyona giren Jumanji: Vahşi Orman’ın devamıdır.",
@@ -12050,6 +12491,27 @@
 ],
 "yonetmen": [
 "Erden Kıral"
+]
+},
+"wd-Q6099462": {
+"imdb": "tt2249712",
+"konu": "Araf, Yeşim Ustaoğlu'nun senaryosunu yazdığı ve yönettiği 2012 yapımı Türk dram filmidir. \nBaşrollerini Neslihan Atagül, Barış Hacıhan ve Özcan Deniz'in paylaştığı film, arafta kalmış iki gencin hikâyesini anlatır. Büyüme, hayatı anlama, öğrenme, realiteyi anlama üzerine kurulu filmde, Zehra ve Olgun, otoban üzerine kurulu dev bir benzin istasyonunda vardiya usulü çalışmaktadırlar. Her şeyin gelip geçici olduğu bu yerde, hayatlarının da bir gün aniden değişeceği beklentisi içinde yaşamlarına devam ederler.",
+"oyuncu": [
+"Neslihan Atagül",
+"Özcan Deniz",
+"Nihal Yalçın",
+"Yasemin Çonka"
+],
+"sure": 124,
+"tur": [
+"drama"
+],
+"ulke": [
+"Türkiye",
+"Almanya"
+],
+"yonetmen": [
+"Yeşim Ustaoğlu"
 ]
 },
 "wd-Q61448040": {
@@ -12268,6 +12730,34 @@
 ],
 "yonetmen": [
 "Michael Haneke"
+]
+},
+"wd-Q6379279": {
+"imdb": "tt2358891",
+"konu": "Muhteşem Güzellik, Paolo Sorrentino'nun yönetmenliğini ve yazarlığını yaptığı 2013 yapımı İtalyan filmidir. Çekimlerine 9 Ağustos 2012'de Roma'da başlanan film 2013 Cannes Film Festivali'nde Altın Palmiye için yarışmıştır. Muhteşem Güzellik 2013 Toronto Uluslararası Film Festivali ve 2013 Reykjavik Avrupa Film Festivali'nde de gösterilmiştir.\nYapım 86.",
+"oscar": 1,
+"oyuncu": [
+"Sabrina Ferilli",
+"Toni Servillo",
+"Serena Grandi",
+"Carlo Verdone",
+"Luca Marinelli",
+"Vernon Dobtcheff"
+],
+"puan": {
+"Metacritic": "86/100",
+"Rotten Tomatoes": "%91"
+},
+"sure": 142,
+"tur": [
+"Komedi-drama"
+],
+"ulke": [
+"İtalya",
+"Fransa"
+],
+"yonetmen": [
+"Paolo Sorrentino"
 ]
 },
 "wd-Q638267": {
@@ -12553,6 +13043,34 @@
 ],
 "yonetmen": [
 "Fernando Meirelles"
+]
+},
+"wd-Q648977": {
+"imdb": "tt0124315",
+"konu": "Tanrının Eseri Şeytanın Parçası, Lasse Hallström tarafından yönetilen ve Buena Vista Pictures tarafından dağıtılan bir 1999 Amerikan dram filmidir. John Irving tarafından yazılmıştır ve aynı adlı 1985 romanına dayanmaktadır. Hikâyesi, kendisini eğiten bir doktor tarafından yönetilen 2. Dünya Savaşı dönemi Maine yetimhanesinde yaşayan Homer Wells'i ve yetimhaneden ayrıldıktan sonraki yolculuğunu anlatıyor.",
+"oscar": 2,
+"oyuncu": [
+"Charlize Theron",
+"Michael Caine",
+"Paul Rudd",
+"J. K. Simmons",
+"Erykah Badu",
+"Kieran Culkin"
+],
+"puan": {
+"Metacritic": "75/100",
+"Rotten Tomatoes": "%72"
+},
+"sure": 126,
+"tur": [
+"romantik",
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Lasse Halström"
 ]
 },
 "wd-Q649165": {
@@ -13038,6 +13556,35 @@
 "Quentin Tarantino"
 ]
 },
+"wd-Q729782": {
+"imdb": "tt0120783",
+"konu": "The Parent Trap, 1998 yapımı Amerikan romantik komedi filmidir. Aynı isimli 1961 yapımı filmin yeninden uyarlanmasıdır. Filmin yönetmeni Nancy Meyers'dir, Meyers aynı zamanda filmin yapımcısı Charles Shyer'la beraber filmin senaristidir.\nDennis Quaid ve Natasha Richardson ikiz kız çocukları olan ve çocuklarının doğumundan kısa bir süre sonra boşanmış bir çifti oynamaktadır.",
+"oyuncu": [
+"Lindsay Lohan",
+"Dennis Quaid",
+"Natasha Richardson",
+"Kat Graham",
+"Polly Holliday",
+"Elaine Hendrix"
+],
+"puan": {
+"Metacritic": "63/100",
+"Rotten Tomatoes": "%87"
+},
+"sure": 127,
+"tur": [
+"romantik komedi",
+"Komedi-drama",
+"Aile"
+],
+"ulke": [
+"İngiltere",
+"ABD"
+],
+"yonetmen": [
+"Nancy Meyers"
+]
+},
 "wd-Q729991": {
 "imdb": "tt0066011",
 "konu": "Aşk Hikâyesi 1970 ABD yapımı romantik-dramatik filmdir. Özgün adı Love Story  olan film Kasım 1971'de Türkiye'de de gösterime girmiştir. Film birçok ülkede olduğu gibi Türkiye'de de gişe rekorları kırmış, haftalarca gösterimde kalmıştır.\nÖzgün senaryosunu Erich Segal'ın yazdığı filmi Arthur Hiller yönetmiş, önemli rollerinde Ali MacGraw, Ryan O'Neal, Ray Milland ve Tommy Lee Jones oynamışlardır.",
@@ -13123,6 +13670,35 @@
 "George Stevens"
 ]
 },
+"wd-Q736969": {
+"imdb": "tt0061735",
+"konu": "Beklenmeyen Misafir  1967 ABD yapımı dramatik güldürü filmdir. Özgün adı Guess Who's Coming to Dinner olan film 21 Ocak 1969 tarihinde Türkiye'de sinemalarda gösterime girmişti. Film sonraki yıllarda TRT Televizyonunda bu kez Bir Akşam Yemeği adıyla gösterilmişti.\nSenaryosunu William Rose'un yazdığı, ırk sorununa cesurca değinen bu filmin yönetmeni ve yapımcısı Stanley Kramer'dır.",
+"oscar": 2,
+"oyuncu": [
+"Katharine Hepburn",
+"Sidney Poitier",
+"Spencer Tracy",
+"Cecil Kellaway",
+"Beah Richards",
+"Isabel Sanford"
+],
+"puan": {
+"Metacritic": "63/100",
+"Rotten Tomatoes": "%75"
+},
+"sure": 108,
+"tur": [
+"romantik komedi",
+"Komedi-drama",
+"drama"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Stanley Kramer"
+]
+},
 "wd-Q737904": {
 "imdb": "tt0250223",
 "konu": "Asteriks ve Oburiks: Görevimiz Kleopatra, René Goscinny ve Albert Uderzo'nun Asteriks ve Kleopatra  çizgi romanından uyarlanan 2002 Fransız yapımı filmdir. 1999 yapımı Asterix ve Oburiks Sezar'a Karşı devam filmidir. Filmde Oburiks'i canlandıran oyuncu Gerard Depardieu, film hakkında şunları söylüyor; “Bu harika, komedilerde asla seks olmuyor, aşk hikâyesi olsa da oldukça erdemli yaşanıyor. Yanlış anlama ve acı çekme de yok”.",
@@ -13179,6 +13755,33 @@
 ],
 "yonetmen": [
 "Mehmet Ada Öztekin"
+]
+},
+"wd-Q738526": {
+"imdb": "tt0060802",
+"konu": "Closely Watched Trains, 1966 yapımı, Çekoslovak Yeni Dalgası'nın en bilinen büyüme hikâyesi temalı komedi filmidir. Filmin yönetmenliğini Jiří Menzel üstlenmiştir. II. Dünya Savaşı döneminde, Alman işgali altındaki Çekoslovakya'da bir tren istasyonunda çalışan genç bir adamın hikâyesini anlatır. Film, 1965 yılında yazılan Bohumil Hrabal'ın romanından uyarlanmıştır.",
+"oscar": 1,
+"oyuncu": [
+"Jiří Menzel",
+"Vlastimil Brodský",
+"Josef Somr",
+"Květa Fialová",
+"Václav Neckář",
+"Pavel Landovský"
+],
+"puan": {
+"Rotten Tomatoes": "%90"
+},
+"sure": 92,
+"tur": [
+"komedi",
+"drama"
+],
+"ulke": [
+"Çekoslovakya"
+],
+"yonetmen": [
+"Jiří Menzel"
 ]
 },
 "wd-Q740489": {
@@ -13378,6 +13981,30 @@
 ],
 "yonetmen": [
 "Yavuz Özkan"
+]
+},
+"wd-Q7752476": {
+"imdb": "tt2471640",
+"konu": "Dağ; yönetmenliğini Alper Çağlar’ın yaptığı, 2012 yapımı Türk macera ve dram filmi. Film 16 Kasım 2012 tarihinde gösterime girmiştir.",
+"oyuncu": [
+"Çağlar Ertuğrul",
+"Cengiz Coşkun",
+"Ufuk Bayraktar",
+"Mesut Akusta",
+"Özgürcan Çevik",
+"İpek Bağrıaçık"
+],
+"sure": 90,
+"tur": [
+"drama",
+"macera",
+"askerî"
+],
+"ulke": [
+"Türkiye"
+],
+"yonetmen": [
+"Alper Çağlar"
 ]
 },
 "wd-Q7755621": {
@@ -13635,6 +14262,27 @@
 "Richard Linklater"
 ]
 },
+"wd-Q821346": {
+"imdb": "tt0106389",
+"konu": "Berlin in Berlin, 1993 yapımı film.",
+"oyuncu": [
+"Hülya Avşar",
+"Zafer Ergin",
+"Aliye Rona",
+"Eşref Kolçak"
+],
+"sure": 117,
+"tur": [
+"drama"
+],
+"ulke": [
+"Almanya",
+"Türkiye"
+],
+"yonetmen": [
+"Sinan Çetin"
+]
+},
 "wd-Q830874": {
 "imdb": "tt0069467",
 "konu": "Çığlıklar ve Fısıltılar, Ingmar Bergman'ın yazıp yönettiği ve başrollerinde Harriet Andersson, Kari Sylwan, Ingrid Thulin ve Liv Ullmann'ın oynadığı 1972 yapımı İsveç dönem dramasıdır. Film, 19. yüzyılın sonlarında bir malikanede geçen, kız kardeşlerden birinin ölümcül kanseriyle mücadele eden üç kız kardeş ve bir hizmetçiyi konu alıyor. Hizmetçi ona yakınken diğer iki kız kardeş birbirlerine olan duygusal uzaklıklarıyla yüzleşiyor.",
@@ -13660,6 +14308,26 @@
 ],
 "yonetmen": [
 "Ingmar Bergman"
+]
+},
+"wd-Q831943": {
+"imdb": "tt1410272",
+"konu": "Min Dît, 2009 yapımı sinema filmi. Türkiye'de 2 Nisan 2010 tarihinde vizyona giren filmin öyküsünü Evrim Alataş ile Miraz Bezar yazdı; senaryo ve yönetmenliğini ise Miraz Bezar üstlendi. Diyarbakır'da çekilen Min Dît, çatışmalı dönemde anne ve babalarını kaybeden iki çocuğun hikâyesini anlatmaktadır. Kürtçe çekilen ve Türkçe altyazı ile verilen ilk film olma özelliğini taşıyan Min Dît'in prodüksiyonu Bezar Film & Corazón International tarafından yapıldı ve katıldığı birçok festivalden, birçok ödül kazandı.",
+"oyuncu": [
+"Hakan Karsak",
+"Şenay Orak",
+"Suzan Ilir"
+],
+"sure": 102,
+"tur": [
+"drama"
+],
+"ulke": [
+"Türkiye",
+"Almanya"
+],
+"yonetmen": [
+"Miraz Bezar"
 ]
 },
 "wd-Q832180": {
@@ -13742,6 +14410,33 @@
 "Woody Allen"
 ]
 },
+"wd-Q849343": {
+"imdb": "tt0112870",
+"konu": "Dilwale Dulhania Le Jayenge bir Bollywood filmidir. Kasım 1995'te çıkan ve halen Mumbaida ilk çıkan sinemasında gösterilmeye devam edilen bu film, Bollywoodun en önemli filmlerinden biri. Aditya Chopra'nın yönettiği bu filmde Shah Rukh Khan, Kajol ve Amrish Puri başrollerde oynadı.",
+"oyuncu": [
+"Shah Rukh Khan",
+"Kajol",
+"Amrish Puri",
+"Karan Johar",
+"Anupam Kher",
+"Farida Jalal"
+],
+"puan": {
+"Rotten Tomatoes": "%100"
+},
+"sure": 245,
+"tur": [
+"Komedi-drama",
+"müzikal",
+"romantik"
+],
+"ulke": [
+"Hindistan"
+],
+"yonetmen": [
+"Aditya Chopra"
+]
+},
 "wd-Q85974844": {
 "imdb": "tt11281220",
 "konu": "Mevlana Mest-i Aşk, İran-Türkiye ortak yapımı bir tarihî dram filmi. Parsa Pirouzfar ve Shahab Hosseini'nin canlandırdığı iki İranlı şair Rumi ve Şems Tebrizi'nin etrafında dönüyor. Film, Dijital Danatlar ve Simarya Film Prodüksiyon tarafından yapılan İran ve Türkiye ortak ürünüdür.\nFilm, 24 Nisan 2024'te İran'da gösterime girdi ve bir anda İran sinema tarihinin en çok satan filmlerinden biri oldu.",
@@ -13822,6 +14517,33 @@
 ],
 "yonetmen": [
 "Mike Newell"
+]
+},
+"wd-Q912729": {
+"imdb": "tt0089853",
+"konu": "Kahire'nin Mor Gülü  1985 ABD yapımı fantastik komedi filmidir. Özgün adı The Purple Rose of Cairo olan film video salgını sırasında Türkiye'ye geldiği için önce Aralık 1985'te VHS ve Betamax formatlarında dağıtımı yapılmış, daha sonra Kasım 1986'da televizyonda gösterilmiştir.\nSenaryosunu Woody Allen'ın yazıp yönettiği filmin başlıca rollerinde Mia Farrow, Jeff Daniels ve Danny Aiello oynamışlardır. Woody Allen'ın gerçek dünya ile hayal dünyasının sınırlarını birbirine karıştırdığı bu fantezide ABD'deki büyük ekonomik bunalım yıllarında kederli yaşantısından bir süreliğine de olsa uzaklaşmak ",
+"oyuncu": [
+"Mia Farrow",
+"Dianne Wiest",
+"Jeff Daniels",
+"Danny Aiello",
+"Edward Herrmann",
+"Van Johnson"
+],
+"puan": {
+"Metacritic": "75/100",
+"Rotten Tomatoes": "%93"
+},
+"sure": 82,
+"tur": [
+"romantik komedi",
+"fantasy"
+],
+"ulke": [
+"ABD"
+],
+"yonetmen": [
+"Woody Allen"
 ]
 },
 "wd-Q912877": {
