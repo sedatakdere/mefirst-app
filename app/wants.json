@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-22",
+"updated": "2026-11-23",
 "wants": [
 {
 "q": "wd:q934718 g.o.r.a.",
@@ -30,6 +30,12 @@
 "kind": "ara",
 "n": 2,
 "last": "2026-11-10"
+},
+{
+"q": "kuzey bulut",
+"kind": "yazar",
+"n": 1,
+"last": "2026-11-23"
 },
 {
 "q": "oliver burkeman",
