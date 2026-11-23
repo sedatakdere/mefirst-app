@@ -13144,7 +13144,7 @@ document.getElementById("go-kitap").onclick=()=>{step=90;show();kitapRender();wi
 document.getElementById("kt-home").onclick=()=>{step=0;show();};
 (function(){const _h=homeRender;homeRender=function(){_h.apply(this,arguments);try{ktHome();setTimeout(ktPop,900);}catch(e){}};try{ktHome();setTimeout(ktPop,1600);}catch(e){}})();
 (function(){const _t=TC_MORE;TC_MORE=function(C,h){_t(C,h);try{if(!st.kitap||!kt().au.length)return;const E=ktMyEvents(14).filter(e=>e[2]);
-  if(E.length){const e=E[0],a=e[1].filter(ktFollow)[0]||e[1][0];C.unshift({t:"peach",e:"İmza günü",h:`${a} ${ktWhen(e[2]).toLocaleLowerCase("tr-TR")} imza gününde ✏️`,d:`${e[3]} · ${e[4]}, ${e[5]}`,cta:"Detaylar",ic:"📚",go:()=>{kttab="etk";document.getElementById("go-kitap").click();}});}
+  if(E.length){const e=E[0],a=e[1].filter(ktFollow)[0]||e[1][0];C.unshift({t:"peach",e:"İmza günü",h:`${a} ${ktWhen(e[2]).toLocaleLowerCase("tr-TR")} imza gününde ✏️`,d:`${e[3]} · ${e[4]}, ${e[5]}`,cta:"Detaylar",ic:"📚",go:()=>{ktGo("etk");}});}
   const nw=KT_BOOKS.find(b=>b[4]&&ktFollow(b[1])&&!ktOnShelf(b[0]));if(nw)C.splice(Math.min(2,C.length),0,{t:"butter",e:"Yeni kitap",h:`${nw[1]}'den yeni: ${nw[0]}`,d:nw[5],cta:"Kitap köşeme git",ic:"📚",go:()=>{kttab="oneri";document.getElementById("go-kitap").click();}});}catch(e){}};})();
 
 function ktConfetti(){const w=document.createElement("div");w.className="ktconf";w.innerHTML=Array.from({length:24},(_,i)=>`<i style="--x:${Math.random()*100}%;--d:${1.2+Math.random()}s;--r:${Math.random()*360}deg;--c:${["#C9822B","#A8492A","#E9A55A","#6B7A3A","#F7B3D2"][i%5]}"></i>`).join("")+'<b class="no-mi">Bir kitap daha bitti! 🎉</b>';document.body.appendChild(w);setTimeout(()=>w.remove(),2600);}
@@ -13193,7 +13193,7 @@ function ktAG(a){const g=new Set(KT_AG[a]||[]);KT_BOOKS.forEach(b=>{if(ktN(b[1])
 function ktEvFit(e){const K=kt();for(const a of e[1]){const g=ktAG(a).find(x=>K.gen.includes(x));if(g)return (KT_WHY[g]||"Tam senin tarzın").replace(/;.*$/,"");}return "";}
 
 (function(){const _t=TC_MORE;TC_MORE=function(C,h){_t(C,h);try{if(!st.kitap||!kt().setup)return;const e=KT_EV.find(x=>x[2]&&ktDays(x[2])>=0&&ktDays(x[2])<=3&&!x[1].some(ktFollow)&&ktEvFit(x));if(!e)return;
-  C.splice(Math.min(3,C.length),0,{t:"mint",e:"Tarzına göre",h:`${e[1][0]} ${ktWhen(e[2]).toLocaleLowerCase("tr-TR")} imza gününde 🌱`,d:`${ktEvFit(e)} · ${e[3]} · ${e[5]}`,cta:"Göz at",ic:"📚",go:()=>{kttab="etk";document.getElementById("go-kitap").click();}});}catch(x){}};})();
+  C.splice(Math.min(3,C.length),0,{t:"mint",e:"Tarzına göre",h:`${e[1][0]} ${ktWhen(e[2]).toLocaleLowerCase("tr-TR")} imza gününde 🌱`,d:`${ktEvFit(e)} · ${e[3]} · ${e[5]}`,cta:"Göz at",ic:"📚",go:()=>{ktGo("etk");}});}catch(x){}};})();
 
 /* ===== v164: Kendime iyi bak — spa sabahı ===== */
 function mfConfetti(msg,cols,bg){const C=cols||["#C9822B","#A8492A","#E9A55A","#6B7A3A","#F7B3D2"];const w=document.createElement("div");w.className="ktconf";w.innerHTML=Array.from({length:24},(_,i)=>`<i style="--x:${Math.random()*100}%;--d:${1.2+Math.random()}s;--r:${Math.random()*360}deg;--c:${C[i%C.length]}"></i>`).join("")+`<b class="no-mi"${bg?` style="background:${bg}"`:""}>${msg}</b>`;document.body.appendChild(w);setTimeout(()=>w.remove(),2600);}
@@ -21914,7 +21914,7 @@ function tcRich(){const h=new Date().getHours(),O=[];const push=(k,o)=>{o.k=k;O.
  try{const c=spCity();if(c){const T=dkey();const E=spUp().filter(e=>(e[7]||"")===c&&e[3]<=new Date(Date.now()+8*864e5).toISOString().slice(0,10)).slice(0,1)[0];
   if(E){const D=spDay(E[3]<T?T:E[3]);const img=E[10]?spImg(E[10],300):"";push("stage",{t:"stage",e:`${(()=>{const v=(c.toLocaleLowerCase("tr-TR").match(/[aeıioöuü]/g)||["e"]).pop();const hard=/[fsthşçkp]$/i.test(c);return c+"'"+(hard?"t":"d")+(/[aıou]/.test(v)?"a":"e");})()} bu hafta`,h:E[1],d:`${D.d} ${D.m}${E[5]?" · "+E[5]:""} · ${E[6]||""}`,cta:"Etkinliğe bak",art:img?`<span class="tc-pos"><img src="${img}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.tc-art').remove()"></span>`:"",ic:"🎭",go:()=>{document.getElementById("go-sahne").click();setTimeout(()=>{try{spOpen(E[0]);}catch(e){}},350);}});}}}catch(e){}
  try{const K=kt();const ev=KT_EV.filter(e=>e[2]&&ktDays(e[2])>=0&&ktDays(e[2])<=10&&e[1].some(ktFollow)).sort((a,b)=>ktDays(a[2])-ktDays(b[2]))[0];
-  if(ev){const x=ktDays(ev[2]);push("imza",{t:"book",e:"İmza günü",h:ev[1].filter(ktFollow)[0]||ev[1][0],d:`${x===0?"Bugün":x===1?"Yarın":x+" gün kaldı"} · ${auPlace(ev)}${ev[5]?", "+ev[5]:""}`,cta:"İmza gününe bak",ic:"✒️",go:()=>{kttab="etk";document.getElementById("go-kitap").click();}});}}catch(e){}
+  if(ev){const x=ktDays(ev[2]);push("imza",{t:"book",e:"İmza günü",h:ev[1].filter(ktFollow)[0]||ev[1][0],d:`${x===0?"Bugün":x===1?"Yarın":x+" gün kaldı"} · ${auPlace(ev)}${ev[5]?", "+ev[5]:""}`,cta:"İmza gününe bak",ic:"✒️",go:()=>ktGo("etk",ev[0])});}}catch(e){}
  const ord=h<11?["form","book","mabet","stage","imza","film"]:h<17?["book","stage","imza","form","film","mabet"]:h<22?["film","mabet","book","stage","imza","form"]:["mabet","book","film","imza","stage","form"];
  return O.sort((a,b)=>ord.indexOf(a.k)-ord.indexOf(b.k));}
 (function(){const _x=TC_EXTRA;TC_EXTRA=function(C,by){_x.apply(this,arguments);try{
@@ -22212,7 +22212,7 @@ function hsHubHTML(){const W=hsWeek(),H=hsSt();const ans=!!H.body;return `<butto
 /* Bugün senin için: haftanın sorusu + ayın kitabı */
 (function(){const _r=tcRich;tcRich=function(){const O=_r.apply(this,arguments);try{const W=hsWeek(),H=hsSt();
  if(!H.body)O.splice(Math.min(1,O.length),0,{k:"soru",t:"soru",e:"Haftanın sorusu",h:W.q,d:"Cevabını yaz, bakalım diğerleri ne demiş",cta:"Cevapla",art:`<span class="tc-q" aria-hidden="true">“</span>`,go:hsOpen});
- const A=aykNow();if(st.kitap&&st.kitap.setup&&!aykIn()&&new Date().getDate()<=12)O.splice(Math.min(2,O.length),0,{k:"kulup",t:"book",e:`Ayın kitabı · ${A.mn}`,h:A.t,d:`${A.a} · Bu ay birlikte okuyoruz`,cta:"Kulübe bak",art:`<span class="tc-cov">${ktCover(A.t,A.a)}</span>`,go:()=>{kttab="oneri";document.getElementById("go-kitap").click();setTimeout(()=>{const a=document.getElementById("ayk");if(a)a.scrollIntoView({behavior:"smooth",block:"center"});},400);}});}catch(e){}return O;};})();
+ const A=aykNow();if(st.kitap&&st.kitap.setup&&!aykIn()&&new Date().getDate()<=12)O.splice(Math.min(2,O.length),0,{k:"kulup",t:"book",e:`Ayın kitabı · ${A.mn}`,h:A.t,d:`${A.a} · Bu ay birlikte okuyoruz`,cta:"Kulübe bak",art:`<span class="tc-cov">${ktCover(A.t,A.a)}</span>`,go:()=>ktGo("oneri","#ayk")});}catch(e){}return O;};})();
 
 /* v1.8.1 ana sayfa sessiz güncelleme: arka planda gelen veri tüm sayfayı yeniden çizmesin, sadece "Bugün senin için" değiştiyse o kart yenilensin */
 function tcSig(){try{return tcRich().map(c=>c.k||c.e||"").join("|");}catch(e){return "";}}
@@ -22381,6 +22381,11 @@ document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest
 /* v1.8.1 ana sayfa zaten ekrandayken yeniden çizilirse (hava durumu, rozet, bildirim) giriş animasyonları tekrar oynamasın */
 (function(){const _h=homeRender;homeRender=function(){const he=document.getElementById("hello");const q=step===0&&performance.now()>2500&&he&&he.style.display!=="none"&&!document.hidden;
  if(q){document.documentElement.classList.add("mf-quiet");clearTimeout(homeRender._q);}try{return _h.apply(this,arguments);}finally{if(q)homeRender._q=setTimeout(()=>document.documentElement.classList.remove("mf-quiet"),900);}};})();
+/* v1.8.5 Kitap köşesine belirli bir sekmeyle (ve belirli bir imza gününe) her seferinde aynı şekilde git */
+function ktGo(tab,focus){try{const g=document.getElementById("go-kitap");if(step!==90||!document.getElementById("ktpanel"))g.click();kttab=tab;kitapRender();
+ const go=()=>{try{if(focus&&focus[0]==="#"){const a=document.querySelector(focus);if(a)a.scrollIntoView({behavior:"smooth",block:"center"});return;}
+  const sl=document.getElementById("ktsl");if(!sl)return;if(focus){const b=sl.querySelector(`[data-kgo="${CSS.escape(focus)}"]`);const sd=b&&b.closest(".ktsd");if(sd){try{clearInterval(ktSlT);}catch(_){}sl.scrollTo({left:sd.offsetLeft-sl.offsetLeft,behavior:"auto"});sl.dispatchEvent(new Event("scroll"));}}
+  sl.scrollIntoView({behavior:"smooth",block:"center"});}catch(e){}};setTimeout(go,120);setTimeout(go,600);}catch(e){console.error(e);}}
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
