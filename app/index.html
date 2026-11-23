@@ -7958,18 +7958,45 @@ html body .homebtn:not([hidden]):not(#_n1):not(#_n2):active,html body .lk-x:not(
 html body .homebtn:not(#_n1):not(#_n2),html body .lk-x:not(#_n1):not(#_n2),html body .zs-x:not(.ss-rx):not(#_n1):not(#_n2){--nbi:var(--nb-h)}
 html body .kf-back:not(#_n1):not(#_n2),html body .sf-back:not(#_n1):not(#_n2),html body .ob2-back:not(#_n1):not(#_n2){--nbi:var(--nb-b)}
 html.mf-quiet body *,html.mf-quiet body *::before,html.mf-quiet body *::after{animation-duration:0s!important;animation-delay:0s!important;transition:none!important}
-#ktsl .ktsd{flex-wrap:wrap}
-#ktsl .ktsd-act{flex:0 0 100%;display:flex;align-items:center;margin-top:12px;min-width:0;padding:3px;border-radius:99px;background:rgba(255,255,255,.16);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
-#ktsl .ktsd-act>*{flex:1 1 0;min-width:0;height:30px;margin:0!important;display:inline-flex!important;align-items:center;justify-content:center;gap:5px;font:800 11.5px/1 var(--f-body)!important;white-space:nowrap;border-radius:99px!important;padding:0 8px!important;border:0!important;box-shadow:none!important;background:transparent!important;color:#FFF7EE!important;-webkit-text-fill-color:#FFF7EE;text-decoration:none;overflow:hidden}
-#ktsl .ktsd-act>.ktgo{flex:1.35 1 0;background:#FFF7EE!important;color:#B8402E!important;-webkit-text-fill-color:#B8402E;box-shadow:0 4px 10px -6px rgba(60,20,0,.6)!important}
-#ktsl .ktsd-act>.ktgo.on{background:rgba(255,255,255,.28)!important;color:#fff!important;-webkit-text-fill-color:#fff}
-#ktsl .ktsd-act>.ktbtn .m3{width:14px;height:14px}
-#ktsl .ktsd-act>.gocrowd{gap:5px;opacity:1;text-shadow:none}
-#ktsl .ktsd-act>.gocrowd[hidden]{display:none!important}
-#ktsl .ktsd-act .gocrowd .gc-t{background:none!important;overflow:hidden;text-overflow:ellipsis;-webkit-text-fill-color:#FFF7EE}
-#ktsl .ktsd-act .gc-h i{width:15px;height:15px;margin-left:-6px;box-shadow:0 0 0 1.5px rgba(255,240,225,.9)}
 html body .bn.bnm .bn-ring{width:30px;height:30px;left:14px;top:12px}
 html body .bn.bnm:has(.bn-ring) .bnm-k{left:52px;top:23px}
+/* v1.9 imza günü davetiye */
+#ktsl .ktsd.tk{display:block;padding:4px 14px 8px}
+#ktsl .tk-card{position:relative;background:linear-gradient(170deg,#FFF9F0,#FBEBD6);border-radius:20px;padding:14px 14px 13px;color:#3A2216;box-shadow:0 14px 26px -16px rgba(60,20,0,.7),inset 0 0 0 1px rgba(201,130,43,.18)}
+#ktsl .tk-notch{position:absolute;top:100px;width:16px;height:16px;border-radius:50%;background:#B9632F;box-shadow:inset 0 0 0 1px rgba(0,0,0,.05)}
+#ktsl .tk-notch.l{left:-8px}#ktsl .tk-notch.r{right:-8px}
+#ktsl .tk-top{display:flex;gap:12px;align-items:flex-start;min-height:84px}
+#ktsl .tk-top .ktph{flex:none;width:72px!important;height:72px!important;margin:0!important}
+#ktsl .tk-top .ktph b{font-size:24px!important}
+#ktsl .tk-who{flex:1;min-width:0}
+#ktsl .tk-k{display:flex;align-items:center;gap:5px;flex-wrap:wrap;font:800 10px/1.2 var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:#B0552A}
+#ktsl .tk-k svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#ktsl .tk-fol{margin-left:2px;padding:2px 6px;border-radius:99px;background:#FFE3A0;color:#8A5A10;letter-spacing:.04em;font-size:9.5px}
+#ktsl .tk-who .au-k{display:block;margin-top:4px;font:700 11px/1.25 var(--f-body);color:#8A6A55}
+#ktsl .tk-who strong{display:block;margin-top:4px;font:400 23px/1.08 var(--f-display);color:#2A160C;overflow-wrap:anywhere}
+#ktsl .tk-who .au-more{margin-top:5px;padding:3px 8px;border:0;border-radius:99px;background:rgba(176,85,42,.12);color:#9A4A22;font:800 10.5px/1 var(--f-body);cursor:pointer}
+#ktsl .tk-who .au-all{display:block;margin-top:4px;font:600 11.5px/1.35 var(--f-body);color:#6A4A35}
+#ktsl .tk-who .ktnear{display:inline-block;margin-top:6px}
+#ktsl .tk-stub{flex:none;width:58px;padding:8px 0 7px;border-radius:14px;text-align:center;background:#fff;box-shadow:inset 0 0 0 1.5px rgba(176,85,42,.25);color:#7A3A1E}
+#ktsl .tk-stub b{display:block;font:400 26px/1 var(--f-display);color:#2A160C}
+#ktsl .tk-stub i{display:block;margin-top:2px;font:800 10px/1 var(--f-body);font-style:normal;letter-spacing:.12em;color:#B0552A}
+#ktsl .tk-stub small{display:block;margin-top:6px;padding-top:6px;border-top:1px dashed rgba(176,85,42,.3);font:800 9.5px/1.1 var(--f-body);color:#7A3A1E}
+#ktsl .tk-stub.hot{background:linear-gradient(160deg,#FF9F7A,#F2635A);box-shadow:0 8px 16px -8px rgba(242,99,90,.8)}
+#ktsl .tk-stub.hot b,#ktsl .tk-stub.hot i,#ktsl .tk-stub.hot small{color:#fff;border-color:rgba(255,255,255,.45)}
+#ktsl .tk-perf{height:0;margin:12px -2px 11px;border-top:2px dashed rgba(176,85,42,.28)}
+#ktsl .tk-info p{display:flex;gap:9px;align-items:flex-start;margin:0 0 7px;font:600 13px/1.35 var(--f-body);color:#4A2E20}
+#ktsl .tk-info p:last-child{margin-bottom:0}
+#ktsl .tk-info svg{flex:none;width:17px;height:17px;margin-top:1px;fill:none;stroke:#B0552A;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+#ktsl .tk-info span{min-width:0;overflow-wrap:anywhere}
+#ktsl .tk-info em{display:block;font-style:normal;font-weight:800;color:#2A160C}
+#ktsl .tk-act{display:flex;gap:8px;margin-top:13px}
+#ktsl .tk-act .ktgo{flex:1.4;height:40px;padding:0 10px;border-radius:12px;font:800 13px/1 var(--f-body);background:linear-gradient(135deg,#FF9F7A,#F2635A);color:#fff;box-shadow:0 8px 16px -8px rgba(242,99,90,.85);border:0;margin:0}
+#ktsl .tk-act .ktgo.on{background:#fff;color:#C2304A;box-shadow:inset 0 0 0 1.5px #F2635A}
+#ktsl .tk-yol{flex:1;height:40px;display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:12px;background:#fff;color:#7A3A1E;font:800 13px/1 var(--f-body);text-decoration:none;box-shadow:inset 0 0 0 1.5px rgba(176,85,42,.3)}
+#ktsl .tk-yol svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linejoin:round}
+#ktsl .tk-card .gocrowd{margin:10px 2px 0;justify-content:center;color:#6A4A35;-webkit-text-fill-color:#6A4A35;font-size:12px;opacity:1;text-shadow:none;--gc-ring:#FBEBD6}
+#ktsl .tk-card .gocrowd .gc-t{background:none!important;-webkit-text-fill-color:#6A4A35}
+#ktsl .tk-card .gocrowd b{color:#2A160C;-webkit-text-fill-color:#2A160C}
 /* v1.6 topluluk 2 */
 .hsw-fam{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 11px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFE3A0;font:800 12px/1 var(--f-body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hsw-fam svg,.hs-hub-fam svg{width:15px;height:15px;fill:#F4D58D}
@@ -22077,12 +22104,9 @@ async function goFill(root){try{const L=[...(root||document).querySelectorAll(".
 /* Macera / spor etkinliği */
 (function(){const _o=macOpen;macOpen=function(id){_o.apply(this,arguments);try{const O=document.getElementById("mep");const b=O&&O.querySelector("#mep-go");if(!b)return;const M=mac(),k="mac:"+id;
  b.parentElement.insertAdjacentHTML("afterend",goHTML(k,!!M.go[id]));const f=b.onclick;b.onclick=function(){goSet(k,!M.go[id]);f.apply(this,arguments);};goFill(O);}catch(e){}};})();
-/* İmza günü kartı */
-(function(){const _s=ktSlide;ktSlide=function(e){const h=_s.apply(this,arguments);try{if(!e[2]||ktDays(e[2])<0)return h;const K=kt();K.go=K.go||{};const on=!!K.go[e[0]];
- let yol="";const hh=h.replace(/<a class="ktbtn sm"[^>]*>[\s\S]*?<\/a>/,m=>{yol=m;return "";});
- return hh.replace(/<\/div><\/div>$/,`</div><div class="ktsd-act">${yol}<button type="button" class="ktgo${on?" on":""}" data-kgo="${esc(e[0])}">${on?"✓ Gidiyorum":"Ben de gidiyorum"}</button>${goHTML("imza:"+e[0],on,"kisa")}</div></div>`);}catch(_){return h;}};})();
+
 document.addEventListener("click",ev=>{const b=ev.target.closest&&ev.target.closest("[data-kgo]");if(!b)return;ev.stopPropagation();const id=b.dataset.kgo,K=kt();K.go=K.go||{};const on=!K.go[id];if(on)K.go[id]={d:dkey()};else delete K.go[id];save();goSet("imza:"+id,on);
- b.classList.toggle("on",on);b.textContent=on?"✓ Gidiyorum":"Ben de gidiyorum";const g=b.parentElement.querySelector(".gocrowd");if(g){g.dataset.mine=on?1:0;goPaint(g);}
+ b.classList.toggle("on",on);b.textContent=on?"✓ Gidiyorum":"Ben de gidiyorum";const g=(b.closest(".ktsd")||b.parentElement).querySelector(".gocrowd");if(g){g.dataset.mine=on?1:0;goPaint(g);}
  if(on)try{mfConfetti("Kalemin hazır olsun ✍️",["#E9C46A","#C9822B","#fff","#F7B3D2"],"linear-gradient(135deg,#6B3E2A,#2E1A0E)");}catch(_){}},true);
 /* eski "gidiyorum"ları bir kez sunucuya taşı */
 function goBoot(){try{if(!st)return;if(!st.goInit){const T=dkey(),P=goP();const S=spSt();Object.keys(S.go||{}).forEach(id=>{const e=spEv(id);if(e&&(e[4]||e[3])>=T)P["sp:"+id]=1;});
@@ -22386,6 +22410,24 @@ function ktGo(tab,focus){try{const g=document.getElementById("go-kitap");if(step
  const go=()=>{try{if(focus&&focus[0]==="#"){const a=document.querySelector(focus);if(a)a.scrollIntoView({behavior:"smooth",block:"center"});return;}
   const sl=document.getElementById("ktsl");if(!sl)return;if(focus){const b=sl.querySelector(`[data-kgo="${CSS.escape(focus)}"]`);const sd=b&&b.closest(".ktsd");if(sd){try{clearInterval(ktSlT);}catch(_){}sl.scrollTo({left:sd.offsetLeft-sl.offsetLeft,behavior:"auto"});sl.dispatchEvent(new Event("scroll"));}}
   sl.scrollIntoView({behavior:"smooth",block:"center"});}catch(e){}};setTimeout(go,120);setTimeout(go,600);}catch(e){console.error(e);}}
+/* ===== v1.9 İmza günü: davetiye bilet tasarımı (her şey tam okunur, hiçbir yazı kesilmez) ===== */
+const TK_I={cal:'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>',pin:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+ map:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v14M15 6v14"/></svg>',pen:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.2-4.6L16.5 4.1a2 2 0 0 1 2.9 0l.5.5a2 2 0 0 1 0 2.9L8.6 18.8z"/><path d="M14.5 6l3.5 3.5"/></svg>'};
+(function(){const _s=ktSlide;ktSlide=function(e){const h=_s.apply(this,arguments);try{
+ const a=e[1].filter(ktFollow)[0]||e[1][0];const x=e[2]?ktDays(e[2]):null;const d=e[2]?new Date(e[2]+"T00:00"):null;const past=x!==null&&x<0;
+ const seal=(h.match(/<span class="ktph"[\s\S]*?<\/b><\/span>/)||[""])[0];
+ const more=e[1].length>2?`<button type="button" class="au-more" data-aum>+${e[1].length-2} yazar daha</button><span class="au-all" hidden>${esc(auSort(e[1]).join(" · "))}</span>`:"";
+ const q=encodeURIComponent((String(e[4]||"").split("·").pop().trim())+" "+(e[5]||""));
+ const when=x===null?"Tarih yakında":x===0?"Bugün":x===1?"Yarın":past?"Geçti":x+" gün kaldı";
+ const fol=e[1].some(ktFollow);const K=kt();K.go=K.go||{};const on=!!K.go[e[0]];
+ const stub=d?`<span class="tk-stub${x!==null&&x<=1&&!past?" hot":""}"><b>${d.getDate()}</b><i>${d.toLocaleDateString("tr-TR",{month:"short"}).replace(".","").toLocaleUpperCase("tr-TR")}</i><small>${esc(when)}</small></span>`:`<span class="tk-stub"><b>?</b><small>Yakında</small></span>`;
+ const place=esc(auPlace(e))+(e[5]?`<em>${esc(e[5])}</em>`:"");
+ return `<div class="ktsd tk"><div class="tk-card"><span class="tk-notch l" aria-hidden="true"></span><span class="tk-notch r" aria-hidden="true"></span>
+  <div class="tk-top">${seal}<div class="tk-who"><span class="tk-k">${TK_I.pen}${e[1].length>2?"Yazar buluşması":"İmza günü"}${fol?'<span class="tk-fol">Takipte</span>':""}</span>${auKick(e)}<strong>${esc(auShort(e[1],1))}</strong>${more}${ktNearB(e)}</div>${stub}</div>
+  <div class="tk-perf" aria-hidden="true"></div>
+  <div class="tk-info"><p>${TK_I.cal}<span>${d?esc(d.toLocaleDateString("tr-TR",{day:"numeric",month:"long",weekday:"long"}))+(e[3]?` · <b>${esc(e[3])}</b>`:""):"Tarih netleşince haber veririm"}</span></p><p>${TK_I.pin}<span>${place}</span></p></div>
+  ${e[2]&&!past?`<div class="tk-act"><button type="button" class="ktgo${on?" on":""}" data-kgo="${esc(e[0])}">${on?"✓ Gidiyorum":"Ben de gidiyorum"}</button><a class="tk-yol" href="https://www.google.com/maps/search/${q}" target="_blank" rel="noopener">${TK_I.map}Yol tarifi</a></div>${goHTML("imza:"+e[0],on)}`:""}
+  </div></div>`;}catch(err){console.error(err);return h;}};})();
 /* ===== v0.44 Perde: Zaman Makinesi + Yeşilçam duvarları (aydınlık, eğlenceli) ===== */
 const SP_ERA=[
  [1940,"1940'lar","Siyah-beyaz zarafet","Fötr şapkalar, piyano barlar ve bir vedanın en güzel hali.","bw"],
