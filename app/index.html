@@ -8081,6 +8081,13 @@ html[data-mf=dusk] .spn-it{background:rgba(255,255,255,.06)}
 .kb .kb-prog{position:absolute;top:10px;left:10px;z-index:3;display:inline-flex;align-items:center;gap:6px;padding:4px 9px 4px 8px;border-radius:99px;background:rgba(10,6,24,.38);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);font:800 10.5px/1 var(--f-body);color:#fff;letter-spacing:.01em;max-width:calc(100% - 20px);white-space:nowrap;overflow:hidden}
 .kb .kb-prog i{font-style:normal;font-weight:800;color:#FFE38A;opacity:.95}
 .kb:has(.kb-new) .kb-prog{top:auto;bottom:auto;top:34px}
+#zsh .kb .kb-tx .kb-prog{position:static;display:inline-flex;align-self:flex-start;width:max-content;margin-top:7px;padding:3px 8px;font-size:10px;max-width:100%}
+#zsh .kb .kb-tx{display:flex;flex-direction:column}
+#zsh .kb .kb-tx .kb-prog b,#zsh .kb.sq .kb-tx .kb-prog b{font:800 10.5px/1 var(--f-body)!important;color:#fff;letter-spacing:.01em}
+#zsh .kb .kb-tx .kb-prog i{font:800 10.5px/1 var(--f-body)}
+#zsh .kb.sq:has(.kb-tx .kb-prog) .kb-art{top:4px!important;height:44%!important}
+#zsh .kb.sq:has(.kb-tx .kb-prog){padding-bottom:12px!important}
+#zsh .kb:has(.kb-new) .kb-tx .kb-prog{top:auto}
 #gfx-intro{position:fixed;inset:0;z-index:9570;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,rgba(20,10,40,.45),rgba(6,3,16,.8));opacity:0;transition:opacity .3s;cursor:pointer}
 #gfx-intro.on{opacity:1}#gfx-intro.out{opacity:0}
 .gi-c{position:relative;width:min(320px,86vw);padding:24px 20px 18px;border-radius:28px;text-align:center;color:#fff;background:radial-gradient(120% 80% at 50% 0%,color-mix(in srgb,var(--c2) 55%,transparent),transparent 70%),linear-gradient(170deg,rgba(40,24,70,.95),rgba(16,10,32,.96));box-shadow:0 30px 70px -20px rgba(0,0,0,.8),inset 0 0 0 1.5px color-mix(in srgb,var(--c1) 45%,transparent),0 0 60px -10px color-mix(in srgb,var(--c2) 70%,transparent);transform:scale(.7) translateY(30px);opacity:0;transition:transform .5s cubic-bezier(.2,1.5,.4,1),opacity .3s}
@@ -21722,7 +21729,7 @@ function gfxProg(k){try{const G=st.games2||{};const st3=n=>n?`★ ${n}`:"";const
   case"jig":{const n=G.jigN||0;return n?{l:`${n} resim`,s:"tamam"}:{l:"3×3 · 4×4 · 5×5",s:""};}}}catch(e){}return null;}
 (function(){const _k=keyRender;keyRender=function(){const r=_k.apply(this,arguments);try{if(kv!=="hub")return r;
   ["blk","ws","mv","tm","kk","wow","mem","jig"].forEach(k=>{const t=document.querySelector(`#zsh .kb-${k}`);if(!t)return;const P=gfxProg(k);let b=t.querySelector(".kb-prog");if(!P){if(b)b.remove();return;}
-   if(!b){b=document.createElement("span");b.className="kb-prog";t.appendChild(b);}b.innerHTML=`<b>${esc(P.l)}</b>${P.s?`<i>${esc(P.s)}</i>`:""}`;});
+   if(!b){b=document.createElement("span");b.className="kb-prog";}const tx=t.querySelector(".kb-tx");if(tx){if(b.parentElement!==tx)tx.appendChild(b);}else if(!b.parentElement)t.appendChild(b);b.innerHTML=`<b>${esc(P.l)}</b>${P.s?`<i>${esc(P.s)}</i>`:""}`;});
   const DSC={blk:"Satırları doldur, patlat",ws:"Renkleri kendi şişesine ayır",mv:"Meyveleri birleştir, karpuza ulaş",tm:"Aynı üç taşı rafa topla",kk:"Arıya ya da arkadaşına karşı",wow:"Harfleri birleştir, kelimeyi bul",mem:"Kartları çevir, eşleri bul",jig:"Kendi fotoğrafınla yap"};
   Object.keys(DSC).forEach(k=>{const t=document.querySelector(`#zsh .kb-${k}`);const sm=t&&(t.querySelector(".kb-tx small")||t.querySelector("small:not(.kb-prog *)"));if(sm&&!sm.closest(".kb-prog"))sm.textContent=DSC[k];});}catch(e){}return r;};})();
 /* hedef ekranı */
