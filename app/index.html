@@ -8241,6 +8241,13 @@ html body #zsh.pzmode:has(.ws-in){background:#0B2419}
 .ky-pr b,.kyj-shout,.kyj-mini,.kyj-stamp b,.ky-w .ws-lvl b,.kyj-start,.ky-w .ws-act b,.ky-w .ws-card>b,.ky-w .ws-go,.ky-lv b{font-family:"Titan One","Fredoka",system-ui,sans-serif!important;font-weight:400!important;letter-spacing:.01em}
 .kyj-num{font-family:"Titan One",sans-serif!important;font-weight:400!important}
 .ky-w .ws-top{min-height:150px}.ky-w .ws-lvl{height:92px;box-sizing:border-box}
+/* v2.6.5 Kuş Yuvası: "Bölüm tamam" başlığı kartın üstüne binmesin, üstteki boşlukta dursun */
+body:has(#zsh:not([hidden]) .ky-w) .gfx-win{place-items:start center}
+body:has(#zsh:not([hidden]) .ky-w) .gfx-win::before{background:linear-gradient(180deg,rgba(8,14,10,.7),rgba(8,14,10,.15) 45%,transparent 70%)}
+body:has(#zsh:not([hidden]) .ky-w) .gfx-win .gw-in{transform:none;margin-top:calc(env(safe-area-inset-top) + 64px)}
+body:has(#zsh:not([hidden]) .ky-w) .gfx-win .gw-rays,body:has(#zsh:not([hidden]) .ky-w) .gfx-win .gw-glow{top:17%}
+body:has(#zsh:not([hidden]) .ky-w) .gfx-win .gw-t{font-family:"Titan One","Fredoka",sans-serif!important;font-weight:400!important;background:none!important;-webkit-text-fill-color:#FFEE58!important;color:#FFEE58!important;filter:none!important;text-shadow:2.5px 2.5px 0 #3A1A06,-2.5px 2.5px 0 #3A1A06,2.5px -2.5px 0 #3A1A06,-2.5px -2.5px 0 #3A1A06,0 3px 0 #3A1A06,0 -3px 0 #3A1A06,3px 0 0 #3A1A06,-3px 0 0 #3A1A06,0 6px 0 #3A1A06}
+body:has(#zsh:not([hidden]) .ky-w) .gfx-win .gw-st i{width:40px;height:40px}body:has(#zsh:not([hidden]) .ky-w) .gfx-win .gw-st i:nth-child(2){width:50px;height:50px}
 /* v1.6 topluluk 2 */
 .hsw-fam{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 11px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFE3A0;font:800 12px/1 var(--f-body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hsw-fam svg,.hs-hub-fam svg{width:15px;height:15px;fill:#F4D58D}
