@@ -8264,6 +8264,41 @@ body:has(#zsh:not([hidden]) .ky-w) .gfx-win .gw-st i{width:40px;height:40px}body
 .ky-owl.cheer .ky-ow-l,.ky-owl.spin .ky-ow-l{animation:kyOwL .16s ease-in-out 6 alternate}.ky-owl.cheer .ky-ow-r,.ky-owl.spin .ky-ow-r{animation:kyOwR .16s ease-in-out 6 alternate}
 @keyframes kyOwL{to{transform:rotate(40deg)}}@keyframes kyOwR{to{transform:rotate(-40deg)}}
 .ky-owl.spin{animation:kyOs .9s cubic-bezier(.3,1.3,.5,1)}@keyframes kyOs{40%{transform:translateY(-14px) rotate(180deg)}80%{transform:translateY(-4px) rotate(360deg)}100%{transform:rotate(360deg)}}
+/* v2.8 bölge sahneleri */
+.ky-fx>*{display:none;position:absolute;inset:0;pointer-events:none}
+#zsh .kf-in.ws-in.ws-in.ws-in.ws-in:has(#ws[data-reg="1"]){background:radial-gradient(40% 20% at 20% 10%,rgba(220,235,255,.25),transparent 70%),linear-gradient(180deg,#0A1530 0%,#14305A 45%,#163E5E 70%,#0C2238 100%)!important}
+#zsh .kf-in.ws-in.ws-in.ws-in.ws-in:has(#ws[data-reg="2"]){background:radial-gradient(60% 30% at 50% 20%,rgba(200,200,230,.18),transparent 70%),linear-gradient(180deg,#151A2C 0%,#2B3048 40%,#3D4258 70%,#22263A 100%)!important}
+#zsh .kf-in.ws-in.ws-in.ws-in.ws-in:has(#ws[data-reg="3"]){background:radial-gradient(50% 25% at 70% 15%,rgba(255,210,230,.35),transparent 70%),linear-gradient(180deg,#22214E 0%,#4A3A7A 38%,#8A5A92 68%,#C77E9A 100%)!important}
+#zsh .kf-in.ws-in.ws-in.ws-in.ws-in:has(#ws[data-reg="4"]){background:radial-gradient(60% 30% at 50% 30%,rgba(160,120,255,.25),transparent 70%),linear-gradient(180deg,#07061A 0%,#160F3A 45%,#24165A 75%,#0E0A2A 100%)!important}
+#zsh .kf-in.ws-in.ws-in.ws-in.ws-in:has(#ws[data-reg="5"]){background:radial-gradient(70% 35% at 50% 85%,rgba(255,170,60,.45),transparent 70%),linear-gradient(180deg,#2A1430 0%,#5A2A3A 35%,#A2512E 70%,#D98A3A 100%)!important}
+#ws[data-reg="1"] .ky-lake,#ws[data-reg="2"] .ky-mtn,#ws[data-reg="2"] .ky-fog,#ws[data-reg="3"] .ky-cl,#ws[data-reg="4"] .ky-st,#ws[data-reg="5"] .ky-fall{display:block}
+#ws[data-reg="1"] .ky-pines,#ws[data-reg="2"] .ky-pines,#ws[data-reg="3"] .ky-pines{display:none}
+.ky-lake{top:auto!important;height:130px;background:linear-gradient(180deg,rgba(120,170,230,.25),#0A2440 40%,#061A30);border-top:1px solid rgba(200,225,255,.35)}
+.ky-lake::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(180deg,rgba(200,225,255,.16) 0 1.5px,transparent 1.5px 9px);animation:kyWave 3s linear infinite;-webkit-mask:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}
+@keyframes kyWave{to{background-position:0 9px}}
+.ky-lake i{position:absolute;left:12%;top:16px;width:46px;height:90px;border-radius:50%;background:radial-gradient(ellipse,rgba(255,244,214,.7),rgba(255,244,214,.12) 55%,transparent 70%);animation:kyRef 2.4s ease-in-out infinite;filter:blur(1px)}
+@keyframes kyRef{50%{transform:scaleX(1.35) scaleY(.92);opacity:.75}}
+.ky-mtn{top:auto!important;height:170px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 170' preserveAspectRatio='none'%3E%3Cpath fill='%2335394F' d='M0 170V90l50-50 40 34 60-66 50 52 40-30 70 60 40-24 50 40v64z'/%3E%3Cpath fill='%23E8ECF8' opacity='.55' d='M150 8l-18 20 10-2 8 8 6-10 10 6zM290 74l-14 10 8 0 6 6 4-8z'/%3E%3Cpath fill='%231E2236' d='M0 170v-40l60-30 50 30 70-44 60 38 50-26 60 34 50-20v58z'/%3E%3C/svg%3E") bottom/100% 100% no-repeat}
+.ky-fog i{position:absolute;left:-40%;width:180%;height:70px;border-radius:50%;background:radial-gradient(ellipse,rgba(230,235,250,.32),transparent 65%);filter:blur(6px);animation:kyFog 26s ease-in-out infinite alternate}
+.ky-fog i:nth-child(1){top:46%}.ky-fog i:nth-child(2){top:66%;animation-duration:34s;animation-delay:-10s}.ky-fog i:nth-child(3){top:84%;animation-duration:22s;animation-delay:-5s;opacity:.8}
+@keyframes kyFog{to{transform:translateX(18%)}}
+.ky-cl i{position:absolute;height:34px;border-radius:99px;background:rgba(255,235,245,.32);filter:blur(2px);animation:kyCl2 40s linear infinite}
+.ky-cl i::before{content:"";position:absolute;left:20%;bottom:12px;width:50%;height:34px;border-radius:50%;background:inherit}
+.ky-cl i:nth-child(1){top:58%;width:160px;left:-170px}.ky-cl i:nth-child(2){top:74%;width:220px;left:-230px;animation-duration:55s;animation-delay:-22s}.ky-cl i:nth-child(3){top:88%;width:260px;left:-270px;animation-duration:48s;animation-delay:-8s;background:rgba(255,220,235,.42)}.ky-cl i:nth-child(4){top:30%;width:110px;left:-120px;animation-duration:62s;animation-delay:-40s;opacity:.7}
+@keyframes kyCl2{to{transform:translateX(calc(100vw + 300px))}}
+.ky-st i{position:absolute;left:var(--x);top:var(--y);width:2.5px;height:2.5px;border-radius:50%;background:#fff;box-shadow:0 0 6px 1px rgba(200,190,255,.9);animation:kyTw 2.4s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes kyTw{50%{opacity:.2;transform:scale(.6)}}
+.ky-st b{position:absolute;left:70%;top:12%;width:90px;height:2px;border-radius:2px;background:linear-gradient(90deg,#fff,transparent);transform:rotate(-24deg);opacity:0;animation:kyShoot 7s ease-in 2s infinite}
+@keyframes kyShoot{0%,86%{opacity:0;transform:rotate(-24deg) translateX(0)}88%{opacity:1}100%{opacity:0;transform:rotate(-24deg) translateX(-260px)}}
+.ky-fall i{position:absolute;left:var(--x);top:-30px;width:24px;height:14px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 26'%3E%3Cpath d='M2 13c3-1 5-4 8-4 0-3 3-6 6-4 1-3 5-4 7-1 2-2 6-2 7 1 3-1 6 1 6 3 3 0 5 2 6 5-1 3-3 4-6 4 0 3-3 5-6 3-1 3-5 4-7 1-2 3-6 2-7-1-3 2-6 0-6-3-3 0-6-2-8-4z' fill='%23E08A2A'/%3E%3C/svg%3E") center/contain no-repeat;animation:kyFall var(--t) linear infinite;animation-delay:var(--d);opacity:.85}
+@keyframes kyFall{0%{transform:translate(0,0) rotate(var(--r))}50%{transform:translate(30px,48vh) rotate(calc(var(--r) + 200deg))}100%{transform:translate(-10px,100vh) rotate(calc(var(--r) + 400deg))}}
+#ws[data-reg="5"] .ky-cvs,#ws[data-reg="5"] .ky-oak,#ws[data-reg="5"] .ky-nest,#ws[data-reg="5"] .ky-leaf{filter:hue-rotate(-62deg) saturate(1.35)}
+#ws[data-reg="4"] .ky-sky u{background:#C8B8FF;box-shadow:0 0 8px 3px rgba(180,160,255,.7)}
+.ky-sq{position:absolute;left:-70px;top:12px;width:64px;height:48px;z-index:1;opacity:0;filter:drop-shadow(0 3px 3px rgba(0,0,0,.4))}
+.ky-sq svg{width:100%;height:100%}
+.ky-sq.go{animation:kySq 6.5s ease-in-out forwards}
+@keyframes kySq{0%{opacity:1;transform:translate(0,0)}22%{transform:translate(150px,30px)}28%{transform:translate(150px,24px)}34%{transform:translate(150px,30px)}60%{transform:translate(150px,30px) scaleX(1)}64%{transform:translate(150px,30px) scaleX(-1)}68%{transform:translate(150px,30px) scaleX(1)}100%{opacity:1;transform:translate(calc(100vw + 40px),6px)}}
+.ky-sq.go .ky-sq-tail{transform-origin:16px 40px;animation:kyTail .3s ease-in-out 18 alternate}@keyframes kyTail{to{transform:rotate(-12deg)}}
 /* v1.6 topluluk 2 */
 .hsw-fam{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 11px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFE3A0;font:800 12px/1 var(--f-body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hsw-fam svg,.hs-hub-fam svg{width:15px;height:15px;fill:#F4D58D}
@@ -22494,6 +22529,23 @@ function kyBirdZ(){return `<svg viewBox="0 0 40 40" class="ky-bs ky-z" style="--
   const L=W&&W.querySelector(".ws-lvl");if(L)L.classList.add("ky-swing");}catch(e){}};
  const _pr=kyPraise;kyPraise=function(k){_pr.apply(this,arguments);kyOwl(k>=2?"spin":"cheer");};
  const _t=wsTap;wsTap=function(i){const r=_t.apply(this,arguments);try{if(WS&&WS.sel>=0)kyOwl("look");}catch(e){}return r;};
+})();
+
+/* ===== v2.8 Kuş Yuvası: bölgeye göre değişen sahne + daldan geçen sincap ===== */
+(function(){
+ const SQ=`<svg viewBox="0 0 64 48" class="ky-sq-s"><path class="ky-sq-tail" d="M14 40C2 38-2 24 6 14 12 6 24 6 26 14c2 7-6 9-8 4 6 2 4-8-4-6-8 3-8 16 0 22 4 3 6 5 0 6z" fill="#C8742E" stroke="#7A3E14" stroke-width="1.2"/>
+  <ellipse cx="34" cy="34" rx="13" ry="10" fill="#D9853A"/><ellipse cx="37" cy="37" rx="7" ry="6" fill="#F4D7AE"/><circle cx="47" cy="24" r="9" fill="#D9853A"/><path d="M44 16l2-7 4 6z" fill="#B5652A"/><ellipse cx="53" cy="26" rx="4" ry="3" fill="#F4D7AE"/>
+  <circle cx="49" cy="22" r="2.4" fill="#1E1208"/><circle cx="49.8" cy="21.2" r=".8" fill="#fff"/><circle cx="56.6" cy="25.4" r="1.3" fill="#3A1A08"/><ellipse cx="44" cy="27" rx="2.2" ry="1.3" fill="#FF8FA8" opacity=".6"/>
+  <g transform="translate(50 33)"><path d="M-4 0c0 4 2 6 4 6s4-2 4-6z" fill="#D9963E"/><path d="M-5-.5c0-2.6 2.2-4.4 5-4.4s5 1.8 5 4.4z" fill="#6E4A26"/></g>
+  <path d="M28 43l-2 4M40 43l2 4" stroke="#7A3E14" stroke-width="2.4" stroke-linecap="round"/></svg>`;
+ const FX=`<div class="ky-fx" aria-hidden="true"><div class="ky-lake"><i></i></div><div class="ky-mtn"></div><div class="ky-fog"><i></i><i></i><i></i></div>
+  <div class="ky-cl"><i></i><i></i><i></i><i></i></div><div class="ky-st">${Array.from({length:26},(_,k)=>`<i style="--x:${(k*37)%100}%;--y:${(k*53)%70}%;--d:${(k*.41)%3}s"></i>`).join("")}<b></b></div>
+  <div class="ky-fall">${Array.from({length:9},(_,k)=>`<i style="--x:${(k*13+5)%100}%;--d:${(k*1.3)%9}s;--t:${7+(k%4)*1.6}s;--r:${(k*47)%360}deg"></i>`).join("")}</div></div>`;
+ window.kySqGo=function(){try{if(kv!=="ws"||document.getElementById("zsh").hidden)return;const c=document.querySelector(".ky-canopy");if(!c)return;let q=c.querySelector(".ky-sq");if(!q){c.insertAdjacentHTML("beforeend",`<div class="ky-sq">${SQ}</div>`);q=c.querySelector(".ky-sq");}
+   q.classList.remove("go");void q.offsetWidth;q.classList.add("go");}catch(e){}};
+ let sqT=0;const sqRun=()=>{clearTimeout(sqT);sqT=setTimeout(()=>{kySqGo();sqRun();},14000+Math.random()*22000);};
+ const _b=wsBind;wsBind=function(){_b.apply(this,arguments);try{const sky=document.querySelector("#ws .ky-sky");if(sky&&!sky.querySelector(".ky-fx"))sky.insertAdjacentHTML("beforeend",FX);sqRun();}catch(e){}};
+ const _p=wsPaint;wsPaint=function(){_p.apply(this,arguments);try{const W=document.getElementById("ws");if(W&&WS){const r=String(Math.floor((WS.lv-1)/10)%6);if(W.dataset.reg!==r)W.dataset.reg=r;}}catch(e){}};
 })();
 /* --- Renk Sırala: dolan şişe kutlaması, bölüm şovu --- */
 (function(){const solvedN=()=>WS?WS.T.filter(t=>t.length===WS_CAP&&t.every(x=>x===t[0])).length:0;let base=0;
