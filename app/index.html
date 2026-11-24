@@ -8044,6 +8044,9 @@ html body .bn.bnm:has(.bn-ring) .bnm-k{left:52px;top:23px}
 #zsh .bk2-sc b#bk2-score.up{transform:scale(1.08);color:#FFF6C8}
 #zsh .bk2-sc small.rec{animation:bkRec 1s ease}
 @keyframes bkRec{0%,100%{transform:none}30%{transform:scale(1.35);filter:drop-shadow(0 0 10px #FFD27A)}}
+/* v2.1.1 oyun sonu kartı: kapat/geri her zaman erişilir, bölüm kartı üstüne binmez */
+#zsh .zs-x,#zsh .kf-back{z-index:60!important}
+.tm:has(#tm-ov:not([hidden])) .tm-intro,.ws:has(#ws-ov:not([hidden])) .tm-intro{display:none!important}
 /* v1.6 topluluk 2 */
 .hsw-fam{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 11px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFE3A0;font:800 12px/1 var(--f-body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hsw-fam svg,.hs-hub-fam svg{width:15px;height:15px;fill:#F4D58D}
