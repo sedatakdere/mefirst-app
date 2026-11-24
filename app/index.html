@@ -8083,7 +8083,7 @@ html body #zsh.pzmode:has(.ws-in){background:#7CC08E}
 .ky-birds{position:absolute;inset:0;pointer-events:none}.ky-tr .ws-g::before,.ky-tr .ws-g::after{display:none!important}
 .ky-b{position:absolute;left:50%;width:calc(var(--w)*.9);height:calc(var(--w)*.9);margin-left:calc(var(--w)*-.45);bottom:calc(var(--w)*.1 + var(--k)*var(--w)*.7);z-index:calc(var(--k) + 2);transition:bottom .28s cubic-bezier(.3,1.5,.5,1)}
 .ky-b svg,.ky-fly svg{width:100%;height:100%;display:block;overflow:visible;filter:drop-shadow(0 3px 3px rgba(30,14,4,.35))}
-.ky-bs .ky-bd{fill:var(--c);stroke:rgba(40,20,10,.22);stroke-width:.8}.ky-bs .ky-bl{fill:color-mix(in srgb,var(--c) 42%,#fff)}.ky-bs .ky-cr,.ky-bs .ky-wl,.ky-bs .ky-wr{fill:color-mix(in srgb,var(--c) 72%,#2A1206)}
+.ky-bs .ky-bd{fill:var(--c);stroke:rgba(40,20,10,.38);stroke-width:1.1}.ky-bs .ky-bl{fill:color-mix(in srgb,var(--c) 42%,#fff)}.ky-bs .ky-cr,.ky-bs .ky-wl,.ky-bs .ky-wr{fill:color-mix(in srgb,var(--c) 72%,#2A1206)}
 .ky-bs .ky-wl{transform-origin:7px 22px}.ky-bs .ky-wr{transform-origin:33px 22px}
 .ky-b .ky-ey{animation:kyBlink 5s infinite;animation-delay:var(--d);transform-origin:20px 19px}@keyframes kyBlink{0%,94%,100%{transform:none}96%{transform:scaleY(.1)}}
 .ws-t.ky.sel .ky-b.top{bottom:calc(var(--w)*3.3);z-index:9;animation:kyHover .5s ease-in-out infinite alternate}
@@ -8100,6 +8100,18 @@ html body #zsh.pzmode:has(.ws-in){background:#7CC08E}
 .ky-w .ws-act{background:rgba(255,255,255,.55)!important;color:#24553A!important}
 .ky-big{width:64px;height:64px}.tm-big .ky-bs{width:64px;height:64px}
 .kb-ws{--a:#8FD39A;--b:#3F8A5E}
+/* v2.3.1 Kuş Yuvası büyük kuşlar */
+.ws-t.ky{height:calc(var(--w,52px)*3.2)}
+.ky-b{width:calc(var(--w)*1.04);height:calc(var(--w)*1.04);margin-left:calc(var(--w)*-.52);bottom:calc(var(--w)*.06 + var(--k)*var(--w)*.68)}
+.ky-b svg{animation:kyBr 2.8s ease-in-out infinite;animation-delay:var(--d);transform-origin:50% 92%}@keyframes kyBr{50%{transform:scale(1.035,.965)}}
+.ws-t.ky.sel .ky-b.top{bottom:calc(var(--w)*3.22)}.ky-nest{bottom:calc(var(--w)*2.98)}
+.ws-tubes.ky-g{padding-top:calc(var(--w,50px)*.9);align-content:center;flex:1 1 0;min-height:0}
+.ws-t.ky.ok .ky-cap{box-shadow:0 0 0 3px rgba(255,236,140,.95),0 0 22px 4px rgba(255,226,120,.85);animation:kyOk .9s ease-in-out infinite alternate}@keyframes kyOk{to{box-shadow:0 0 0 2px rgba(255,236,140,.6),0 0 10px 2px rgba(255,226,120,.5)}}
+.ky-lvb{cursor:pointer;border-radius:16px;padding:2px 10px}.ky-map{display:block;margin-top:3px;font-size:10.5px;font-weight:800;letter-spacing:.04em;color:#1F4A33;opacity:.8}
+.ky-pk{max-height:78vh;display:flex;flex-direction:column}.ky-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:12px 0 10px;overflow:auto;padding:4px;max-height:46vh}
+.ky-lv{aspect-ratio:1;border:0;border-radius:50%;background:radial-gradient(circle at 50% 42%,#F0CC94 0 30%,#D9A86A 31% 40%,#EFC892 41% 52%,#B97E48 53% 66%,#7A4C2A 67%);color:#3A2212;font:inherit;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 8px -4px rgba(40,20,8,.6)}
+.ky-lv b{font:900 17px/1 var(--f-body)}.ky-lv i{display:flex;gap:1px;margin-top:2px}.ky-lv s{width:7px;height:7px;clip-path:polygon(50% 0,62% 35%,100% 38%,70% 60%,80% 100%,50% 76%,20% 100%,30% 60%,0 38%,38% 35%);background:rgba(58,34,18,.3)}.ky-lv s.y{background:#FFC83A}
+.ky-lv.on{outline:3px solid #3CC24A;outline-offset:2px}.ky-lv.nw{animation:kyOk .9s ease-in-out infinite alternate}
 /* v1.6 topluluk 2 */
 .hsw-fam{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 11px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFE3A0;font:800 12px/1 var(--f-body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hsw-fam svg,.hs-hub-fam svg{width:15px;height:15px;fill:#F4D58D}
@@ -22123,11 +22135,20 @@ const GFX_BG={blk:"neon",ws:"aqua",mv:"sun",tm:"leaf",wow:"dusk",mem:"rose",jig:
  const _o=bkOver;bkOver=function(){const r=_o.apply(this,arguments);try{GFX.lose(document.getElementById("bk2-b"));}catch(e){}return r;};})();
 
 /* ===== v2.3 Kuş Yuvası: Renk Sırala'nın yeni hâli — tüpler ağaç gövdesi, renkler yuvarlak kuşlar; kurallar ve bölümler aynı ===== */
+const KY_COL=["#F0363F","#FFD21F","#2F7BFF","#3CC24A","#9150E6","#FF8A1F","#FF6FB5","#20C9D9","#F4F4F4","#30303C","#8B5A2B","#B8E04A"];KY_COL.forEach((c,i)=>{WS_C[i]=c;});
 function kyBird(c,cls){const cr=[
  '<path d="M16.6 9.2c-2.6-3.4-2.2-6.6-.4-8 .2 3 1.4 5 3 7zM19.4 8c-.4-4.2 1.4-6.6 3.8-7.2-.8 2.4-.8 4.8-.6 7.4zM22.6 9c1.6-3.4 4.6-4.6 7-3.8-2 1-3.4 2.6-4.4 4.8z"/>',
  '<path d="M18.4 8.4c-2-4.2.6-8.2 4.6-8 3.2.2 3.4 4.4.4 4.6-1.6.1-2.4-1.2-1.4-2.2-1.8.4-2.4 2.8-1 5.6z"/>',
  '<path d="M14.4 10.4l.8-8 3.8 6.6zM21 8l3.6-7.2 2 8z"/>',
- '<circle cx="16.6" cy="7.6" r="3.2"/><circle cx="20.6" cy="5.4" r="3.8"/><circle cx="24.4" cy="7.8" r="2.8"/>'][c%4];
+ '<circle cx="16.6" cy="7.6" r="3.2"/><circle cx="20.6" cy="5.4" r="3.8"/><circle cx="24.4" cy="7.8" r="2.8"/>',
+ '<path d="M18.6 8.4c-1.2-6.4 3-9.6 9-8.8-3.4 1.6-5.6 4.6-6.6 8.8z"/><path d="M21.6 7.2c1-2.6 3-4.2 5.4-4.6" fill="none" stroke="rgba(255,255,255,.45)" stroke-width=".8"/>',
+ '<path d="M12.6 10.6l1.6-5 2 3.6 1.4-6 2.4 5.2 2.2-5.8 1.4 6 2.4-4 1 5.6z"/>',
+ '<g transform="translate(26 7.2)"><circle cy="-3" r="2.6" fill="#FFD6EA"/><circle cx="2.9" cy="-.9" r="2.6" fill="#FFD6EA"/><circle cx="1.8" cy="2.4" r="2.6" fill="#FFD6EA"/><circle cx="-1.8" cy="2.4" r="2.6" fill="#FFD6EA"/><circle cx="-2.9" cy="-.9" r="2.6" fill="#FFD6EA"/><circle r="1.9" fill="#FFC83A"/></g>',
+ '<path d="M16.4 9c2.2-4.6 7.6-6.8 14-5.4-4.4.8-7.8 3-9.8 6.6zM18.6 9.6c2.6-3 6.6-4.2 10.6-3.4-3 .8-5.6 2.4-7.2 4.6z"/>',
+ '<path d="M11.4 13c0-6.6 3.8-10.2 8.6-10.2s8.6 3.6 8.6 10.2l-2.1-2.2-2.2 2.2-2.1-2.2-2.2 2.2-2.1-2.2-2.2 2.2-2.1-2.2z" fill="#FFF3D6" stroke="#D9C29A" stroke-width=".8"/>',
+ '<path d="M17.6 8.6c-.8-3-2.8-5.2-5.2-5.8l.4-1.2c2.8.8 5 3.4 6 6.6zM22.4 8.6c.8-3 2.8-5.2 5.2-5.8l-.4-1.2c-2.8.8-5 3.4-6 6.6z"/><circle cx="12.4" cy="2.2" r="2" fill="#FF5A6A"/><circle cx="27.6" cy="2.2" r="2" fill="#FF5A6A"/>',
+ '<path d="M19.6 7.6c-.4-1.6-.2-3 .6-4.2" fill="none" stroke="#5E3A1E" stroke-width="1.2" stroke-linecap="round"/><path d="M20.4 4.2c1-3.4 4.6-4.8 8.4-3.6-1 3.6-4.6 5.2-8.4 3.6z" fill="#5FC04A"/>',
+ '<path d="M15 9.4c-1-3.2.6-5.8 3-6.4-.4 2.2 0 4.2 1 6zM21 8.6c.4-3.6 3-5.6 6-5.2-1.4 1.6-2 3.6-1.8 5.8z"/>'][c%12];
  return `<svg viewBox="0 0 40 40" class="ky-bs${cls?" "+cls:""}" style="--c:${WS_C[c]}" aria-hidden="true"><g class="ky-cr">${cr}</g>
  <path class="ky-wl" d="M6.2 21.5c-3.6.2-5.6 4-4.4 7.2 3.6-.2 6.2-2.6 6.6-6z"/><path class="ky-wr" d="M33.8 21.5c3.6.2 5.6 4 4.4 7.2-3.6-.2-6.2-2.6-6.6-6z"/>
  <circle cx="20" cy="22" r="15.6" class="ky-bd"/><ellipse cx="20" cy="29.2" rx="10.4" ry="7.2" class="ky-bl"/><circle cx="20" cy="22" r="15.6" fill="url(#kyShade)"/>
@@ -22135,13 +22156,13 @@ function kyBird(c,cls){const cr=[
  <g class="ky-ey"><circle cx="14.6" cy="19" r="5" fill="#fff"/><circle cx="25.4" cy="19" r="5" fill="#fff"/><circle cx="15.4" cy="19.6" r="2.7" fill="#2A1A10"/><circle cx="24.6" cy="19.6" r="2.7" fill="#2A1A10"/><circle cx="16.3" cy="18.5" r="1" fill="#fff"/><circle cx="25.5" cy="18.5" r="1" fill="#fff"/></g>
  <path d="M16.6 23.4h6.8L20 28.6z" fill="#F59A23"/><path d="M16.6 23.4h6.8L20 25.6z" fill="#FFD36A"/></svg>`;}
 const KY_DEFS='<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><radialGradient id="kyShade" cx="36%" cy="28%" r="78%"><stop offset="0" stop-color="#fff" stop-opacity=".5"/><stop offset=".35" stop-color="#fff" stop-opacity=".06"/><stop offset=".7" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#2A1206" stop-opacity=".32"/></radialGradient></defs></svg>';
-wsTubeHTML=function(t,i){const full=t.length===WS_CAP&&t.every(x=>x===t[0]);return `<button type="button" class="ws-t ky${WS.sel===i?" sel":""}${full?" full":""}" data-t="${i}" aria-label="Gövde ${i+1}"><span class="ky-tr"><span class="ws-g"></span><span class="ky-cap"></span><span class="ky-knot" style="--ky:${18+(i*37)%40}%;--kx:${i%2?62:18}%"></span>${i%3===1?'<span class="ky-leaf"></span>':""}</span>
+wsTubeHTML=function(t,i){const full=t.length===WS_CAP&&t.every(x=>x===t[0]);const ok=WS.sel>=0&&WS.sel!==i&&wsCan(WS.T,WS.sel,i);return `<button type="button" class="ws-t ky${WS.sel===i?" sel":""}${full?" full":""}${ok?" ok":""}" data-t="${i}" aria-label="Gövde ${i+1}"><span class="ky-tr"><span class="ws-g"></span><span class="ky-cap"></span><span class="ky-knot" style="--ky:${18+(i*37)%40}%;--kx:${i%2?62:18}%"></span>${i%3===1?'<span class="ky-leaf"></span>':""}</span>
  <span class="ky-birds">${t.map((c,k)=>`<i class="ky-b${k===t.length-1?" top":""}" style="--k:${k};--d:${(k*.37+i*.21)%1.6}s">${kyBird(c)}</i>`).join("")}</span>${full?'<span class="ky-nest"><i></i><i></i><i></i><i></i><i></i></span>':""}</button>`;};
 (function(){
  const _h=wsHTML;wsHTML=function(){return _h.apply(this,arguments).replace("Bir şişeye dokun, sonra dökmek istediğin şişeye.","Bir gövdeye dokun, kuş havalansın; sonra konacağı gövdeye dokun.").replace("<b>Boş şişe</b>","<b>Boş gövde</b>").replace('<div class="ws" id="ws">','<div class="ws ky-w" id="ws">'+KY_DEFS+'<div class="ky-sky" aria-hidden="true"><i></i><i></i><i></i></div>');};
- const _p=wsPaint;wsPaint=function(){const E=document.getElementById("ws-tubes");if(E&&WS){const n=WS.T.length,per=n<=5?n:n<=10?Math.ceil(n/2):Math.ceil(n/3),rows=Math.ceil(n/per);
-   const H=E.clientHeight||420,Wd=E.clientWidth||360;const w=Math.max(30,Math.min(64,Wd/per*.82,(H-8)/(rows*4.35)));E.style.setProperty("--w",w+"px");E.style.setProperty("--rg",(w*.98)+"px");E.classList.add("ky-g");}
-  _p.apply(this,arguments);};
+ const _p=wsPaint;wsPaint=function(){_p.apply(this,arguments);const E=document.getElementById("ws-tubes");if(E&&WS){const n=WS.T.length;const er=E.getBoundingClientRect(),ac=document.querySelector("#ws .ws-acts");const H=Math.max(240,(ac?ac.getBoundingClientRect().top:innerHeight-90)-er.top-14),Wd=E.clientWidth||360;let bw=0,bp=n;
+   for(let per=Math.ceil(n/3);per<=n;per++){const rows=Math.ceil(n/per);const w=Math.min(84,Wd/per*.93,H/(rows*4.15+.95));if(w>bw+.5){bw=w;bp=per;}}
+   E.style.setProperty("--per",bp);E.style.setProperty("--w",bw+"px");E.style.setProperty("--rg",(bw*.95)+"px");E.classList.add("ky-g");}};
  const _s=wsSnd;wsSnd=function(k,x){if(!wsSndOn())return;try{const C=sndCtx();if(!C||C.state!=="running")return;const m=C.createGain();m.gain.value=.5;m.connect(C.destination);const t=C.currentTime+.01;
    const chirp=(tt,f,v)=>{sndTone(C,m,tt,f,.07,"sine",v||.16,.002,f*1.45);sndTone(C,m,tt+.075,f*1.12,.06,"sine",(v||.16)*.8,.002,f*1.6);};
    if(k==="sel")chirp(t,2100+Math.random()*500);
@@ -22154,7 +22175,7 @@ wsTubeHTML=function(t,i){const full=t.length===WS_CAP&&t.every(x=>x===t[0]);retu
   const w=parseFloat(getComputedStyle(E).getPropertyValue("--w"))||50,rb=B.getBoundingClientRect(),bs=WS.T[b].length;const bir=[...A.querySelectorAll(".ky-b")].slice(-m).reverse();
   const dur=430,gap=120;window.KY_DUR=dur+gap*(m-1)+260;wsSnd("pour",m);const fl=[];
   bir.forEach((el,j)=>{const r=el.getBoundingClientRect(),sz=r.width;const tx=rb.left+rb.width/2-sz/2,ty=rb.bottom-(6+(bs+j)*w*.7)-sz;const dx=tx-r.left,dy=ty-r.top,peak=Math.min(r.top,ty)-w*1.1-r.top,dir=dx>=0?1:-1;
-   const c=el.cloneNode(true);c.classList.add("ky-fly");c.style.cssText=`position:fixed;left:${r.left}px;top:${r.top}px;width:${sz}px;height:${sz}px;margin:0;bottom:auto;z-index:60`;document.body.appendChild(c);el.style.visibility="hidden";fl.push(c);
+   const c=el.cloneNode(true);c.classList.add("ky-fly");c.style.cssText=`position:fixed;left:${r.left}px;top:${r.top}px;width:${sz}px;height:${sz}px;margin:0;bottom:auto;z-index:60`;document.body.appendChild(c);el.style.visibility="hidden";fl.push(c);setTimeout(()=>{try{GFX.burst(r.left+sz/2,r.top+sz/2,[getComputedStyle(c.querySelector("svg")).getPropertyValue("--c")||"#fff","#fff"],7,{sp:3.5,up:2.5,sz:5});}catch(_){}},j*gap);
    c.animate([{transform:"translate(0,0) rotate(0)"},{transform:`translate(${dx*.5}px,${peak}px) rotate(${dir*12}deg)`,offset:.5},{transform:`translate(${dx}px,${dy-6}px) rotate(${-dir*4}deg)`,offset:.88},{transform:`translate(${dx}px,${dy}px) rotate(0)`}],{duration:dur,delay:j*gap,easing:"cubic-bezier(.45,.05,.4,1)",fill:"both"});});
   setTimeout(()=>{WS.H.push(WS.T.map(t=>t.slice()));for(let k=0;k<m;k++)WS.T[b].push(WS.T[a].pop());WS.mv++;WS.sel=-1;fl.forEach(c=>c.remove());WSB=false;const tb=WS.T[b],full=tb.length===WS_CAP&&tb.every(x=>x===tb[0]);wsPaint();
    const Bn=document.querySelector(`.ws-t[data-t="${b}"]`);if(Bn)[...Bn.querySelectorAll(".ky-b")].slice(-m).forEach((x,i)=>{x.classList.add("land");x.style.animationDelay=(i*.04)+"s";});
@@ -22163,6 +22184,17 @@ wsTubeHTML=function(t,i){const full=t.length===WS_CAP&&t.every(x=>x===t[0]);retu
    if(wsSolved(WS.T))setTimeout(wsWin,full?650:180);wsSave();},dur+gap*(m-1)+20);};
  wsCard=function(){const lv=wsLvMax();const tr=(x,h,cs,cl)=>`<g transform="translate(${x} ${90-h})"${cl?` class="${cl}"`:""}><rect x="0" y="6" width="26" height="${h-6}" rx="5" fill="#8A5A34"/><rect x="3" y="8" width="20" height="${h-12}" rx="4" fill="#3C2414"/><ellipse cx="13" cy="7" rx="14" ry="5" fill="#E8C08A"/><ellipse cx="13" cy="7" rx="9" ry="3" fill="#3C2414"/>${cs.map((c,k)=>`<g transform="translate(-1 ${h-31-k*17}) scale(.7)">${kyBird(c).replace('<svg ','<svg width="40" height="40" ')}</g>`).join("")}</g>`;
   return `<button type="button" class="kb kb-ws wide" data-kv="ws" style="--i:0"><span class="kb-art no-mi"><svg viewBox="0 0 140 90">${KY_DEFS.replace(/<\/?svg[^>]*>/g,"")}${tr(28,66,[0,0,4])}${tr(62,66,[4,6])}<g class="kb-wsp">${tr(96,66,[6,6,6,6])}</g></svg></span><span class="kb-tx"><b>Kuş Yuvası</b><small>${lv>1?`Bölüm ${lv} · ⭐ ${wsG2().wsStars||0}`:"Her kuşu kendi yuvasına diz"}</small></span></button>`;};
+})();
+
+(function(){/* v2.3.1: yeni oyun 1. bölümden, bölüm seçici, bölüm başı en iyi yıldız, zafer şarkısı */
+ const G=()=>wsG2();
+ const _k=keyRender;keyRender=function(){if(kv==="ws"&&!G().kyV){const g=G();g.kyV=1;g.wsLv=1;g.wsStars=0;g.kyS={};delete g.ws;WS=null;try{save();}catch(e){}}return _k.apply(this,arguments);};
+ const _w=wsWin;wsWin=function(){const g=G();g.kyS=g.kyS||{};const s3=WS.used===0?3:WS.used<=2?2:1,prev=g.kyS[WS.lv]||0;const r=_w.apply(this,arguments);g.wsStars=Math.max(0,(g.wsStars||0)-s3+Math.max(0,s3-prev));g.kyS[WS.lv]=Math.max(prev,s3);try{save();}catch(e){}
+  document.querySelectorAll(".ws-t.ky").forEach((t,i)=>setTimeout(()=>{t.classList.remove("sing");void t.offsetWidth;t.classList.add("sing");},i*70));return r;};
+ window.kyPick=function(){const O=document.getElementById("ws-ov");if(!O||WSB)return;const mx=wsLvMax(),S=G().kyS||{};O.hidden=false;
+  O.innerHTML=`<div class="ws-card ky-pk"><small>Orman haritası</small><b>Bölüm seç</b><div class="ky-grid">${Array.from({length:mx},(_,i)=>i+1).reverse().map(n=>`<button type="button" class="ky-lv${n===WS.lv?" on":""}${n===mx?" nw":""}" data-lv="${n}"><b>${n}</b><i>${[1,2,3].map(k=>`<s class="${k<=(S[n]||0)?"y":""}"></s>`).join("")}</i></button>`).join("")}</div><button type="button" class="ws-go tm-go2" id="ky-pkx">Kapat</button></div>`;
+  O.querySelectorAll("[data-lv]").forEach(b=>b.onclick=()=>{O.hidden=true;wsStart(+b.dataset.lv);wsPaint();});O.querySelector("#ky-pkx").onclick=()=>{O.hidden=true;};};
+ const _b=wsBind;wsBind=function(){_b.apply(this,arguments);const L=document.querySelector("#ws .ws-lvl");if(L){L.classList.add("ky-lvb");L.onclick=kyPick;if(!L.querySelector(".ky-map"))L.insertAdjacentHTML("beforeend",'<span class="ky-map">Bölüm seç ▾</span>');}};
 })();
 /* --- Renk Sırala: dolan şişe kutlaması, bölüm şovu --- */
 (function(){const solvedN=()=>WS?WS.T.filter(t=>t.length===WS_CAP&&t.every(x=>x===t[0])).length:0;let base=0;
