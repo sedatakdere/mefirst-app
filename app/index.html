@@ -8170,6 +8170,12 @@ html body #zsh.pzmode:has(.ws-in){background:#0B2419}
 .ky-w .ws-card small{color:#FFC83A!important}.ky-w .ws-card b{color:#FFF6DA}.ky-w .ws-card>span{color:#E8D6B0}.ky-w .ws-card .kyj-mini{color:#FFC83A}
 .ky-w .ws-go{background:linear-gradient(180deg,#FFE38A,#FFB020)!important;color:#2A1204!important;box-shadow:0 5px 0 #B5650A,0 14px 24px -10px rgba(255,170,40,.6)!important;font-weight:900}
 .ky-w .ws-card .bk2-du{color:#FFB3C8}.ky-w .tm-go2{background:rgba(255,255,255,.1)!important;color:#FFF6DA!important}
+/* v2.4.1 Kuş Yuvası: kalın, ortada patlayan övgü yazıları */
+.ky-pr{position:absolute;left:0;right:0;top:30%;z-index:30;display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none;transform:rotate(var(--r));animation:kyPr 1.45s cubic-bezier(.2,1.6,.4,1) both}
+.ky-pr b{font:900 italic 46px/1 var(--f-body);letter-spacing:-.01em;background:linear-gradient(180deg,#FFFDE8 0%,#FFE14A 45%,#FF9A1F 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;-webkit-text-stroke:5px #2A1204;paint-order:stroke fill;filter:drop-shadow(0 4px 0 #2A1204) drop-shadow(0 0 16px rgba(255,190,60,.45))}
+.ky-pr.hot b{font-size:52px;background-image:linear-gradient(180deg,#FFF2F6 0%,#FF8FB8 40%,#FF3D6E 100%);filter:drop-shadow(0 4px 0 #2A0410) drop-shadow(0 0 20px rgba(255,80,130,.55))}
+.ky-pr i{font:900 13px/1 var(--f-body);font-style:normal;letter-spacing:.06em;padding:6px 11px;border-radius:99px;color:#2A1204;background:linear-gradient(180deg,#FFE38A,#FFB020);box-shadow:0 3px 0 #8A4A08}
+@keyframes kyPr{0%{opacity:0;transform:rotate(var(--r)) scale(.2)}18%{opacity:1;transform:rotate(var(--r)) scale(1.18)}30%{transform:rotate(var(--r)) scale(.96)}40%{transform:rotate(var(--r)) scale(1)}78%{opacity:1;transform:rotate(var(--r)) translateY(-6px)}100%{opacity:0;transform:rotate(var(--r)) translateY(-34px) scale(.9)}}
 /* v1.6 topluluk 2 */
 .hsw-fam{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 11px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFE3A0;font:800 12px/1 var(--f-body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hsw-fam svg,.hs-hub-fam svg{width:15px;height:15px;fill:#F4D58D}
@@ -22304,9 +22310,15 @@ wsTubeHTML=function(t,i){const full=t.length===WS_CAP&&t.every(x=>x===t[0]);cons
    wsStart(to);wsPaint();const n=WS.T.length,cc=new Set(WS.T.flat()).size;kyJourney(from,to,{c,chips:[`${cc} renk kuş`,`${n} gövde`]});};}
   const card=O&&O.querySelector(".ws-card");if(card&&!card.querySelector(".kyj-mini"))card.insertAdjacentHTML("afterbegin",`<b class="kyj-mini">${pick(SHOUT)}</b>`);return r;};
 })();
+let kyStreak=0;
+function kyPraise(k){const W=document.getElementById("ws");if(!W)return;W.querySelectorAll(".ky-pr").forEach(e=>e.remove());
+ const L1=["Süper!","Vay!","Bomba!","Cik cik!","Harika!"],UP=["Süper!","Harika!","Muhteşem!","Efsane!","İnanılmaz!"];
+ const w=k<=1?L1[Math.floor(Math.random()*L1.length)]:UP[Math.min(k-1,UP.length-1)];
+ const d=document.createElement("div");d.className="ky-pr"+(k>=3?" hot":"");d.style.setProperty("--r",(Math.random()*8-4).toFixed(1)+"deg");
+ d.innerHTML=`<b>${w}</b>${k>=2?`<i>×${k} seri</i>`:""}`;W.appendChild(d);setTimeout(()=>d.remove(),1500);}
 /* --- Renk Sırala: dolan şişe kutlaması, bölüm şovu --- */
 (function(){const solvedN=()=>WS?WS.T.filter(t=>t.length===WS_CAP&&t.every(x=>x===t[0])).length:0;let base=0;
- const _p=wsPour;wsPour=function(a,b,m){base=solvedN();const r=_p.apply(this,arguments);setTimeout(()=>{try{const n=solvedN();if(n>base){const E=document.getElementById("ws-tubes");const t=E&&E.children[b];if(t){const [x,y]=GFX.at(t);GFX.burst(x,y,["#fff","#B8E986","#FFE38A",WS_C[WS.T[b][0]]||"#fff"],26,{sp:8,up:5});GFX.ring(x,y,"#FFF3B0",90,5);GFX.text("Yuva tamam!",x,y-60,{c:["#fff","#FFE38A"]});GFX.combo(n,wsSndOn());}}}catch(e){}},window.KY_DUR||560);return r;};
+ const _p=wsPour;wsPour=function(a,b,m){base=solvedN();const r=_p.apply(this,arguments);setTimeout(()=>{try{const n=solvedN();if(n>base){const E=document.getElementById("ws-tubes");const t=E&&E.children[b];if(t){const [x,y]=GFX.at(t);GFX.burst(x,y,["#fff","#B8E986","#FFE38A",WS_C[WS.T[b][0]]||"#fff"],26,{sp:8,up:5});GFX.ring(x,y,"#FFF3B0",90,5);kyStreak=(kyStreak||0)+1;kyPraise(kyStreak);GFX.combo(n,wsSndOn());}}else kyStreak=0;}catch(e){}},window.KY_DUR||560);return r;};
  const _w=wsWin;wsWin=function(){const r=_w.apply(this,arguments);try{const s3=WS.used===0?3:WS.used<=2?2:1;GFX.win({title:`Bölüm ${WS.lv} tamam!`,stars:s3,snd:wsSndOn()});}catch(e){}return r;};})();
 
 /* --- Meyve Keyfi: büyük birleşmelerde şok dalgası --- */
