@@ -8047,6 +8047,8 @@ html body .bn.bnm:has(.bn-ring) .bnm-k{left:52px;top:23px}
 /* v2.1.1 oyun sonu kartı: kapat/geri her zaman erişilir, bölüm kartı üstüne binmez */
 #zsh .zs-x,#zsh .kf-back{z-index:60!important}
 .tm:has(#tm-ov:not([hidden])) .tm-intro,.ws:has(#ws-ov:not([hidden])) .tm-intro{display:none!important}
+.m3 svg.zg,svg.zg{filter:drop-shadow(0 2px 6px rgba(20,10,60,.35))}
+.bz-md .bz-gl .m3{width:1.45em;height:1.45em;vertical-align:-.2em}
 /* v1.6 topluluk 2 */
 .hsw-fam{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 11px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFE3A0;font:800 12px/1 var(--f-body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hsw-fam svg,.hs-hub-fam svg{width:15px;height:15px;fill:#F4D58D}
@@ -22596,6 +22598,24 @@ function bkCenter(){const B=document.getElementById("bk2-b");if(!B)return [inner
   if(ok&&BK.rec){const b=document.getElementById("bk2-best");if(b)b.textContent=Math.max(best,BK.sc);}}catch(e){}return ok;};
  const _n=bkNew;bkNew=function(){_n.apply(this,arguments);BK.rec=0;shown=null;};
 })();
+/* ===== v2.1.2 Burç simgeleri: gece mavisi madalyon, altın çizgi glif (fonta bağlı değil), elemente göre ince halka ===== */
+(function(){const G={
+"♈":"M24 34V21M24 21c0-6-3-9-6.5-9S12 14.5 12 17.5s2.2 5 4.5 5M24 21c0-6 3-9 6.5-9s5.5 2.5 5.5 5.5-2.2 5-4.5 5",
+"♉":"M13.5 13c2 6.5 6 9.5 10.5 9.5s8.5-3 10.5-9.5M30.5 29a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z",
+"♊":"M15 14c6 2.2 12 2.2 18 0M15 34c6-2.2 12-2.2 18 0M20 15.5v17M28 15.5v17",
+"♋":"M34 19.5c-3.5-4-11-6-15.5-3M14 28.5c3.5 4 11 6 15.5 3M20.5 19.5a3.3 3.3 0 1 1-6.6 0 3.3 3.3 0 0 1 6.6 0zM34.1 28.5a3.3 3.3 0 1 1-6.6 0 3.3 3.3 0 0 1 6.6 0z",
+"♌":"M22 28a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM22 28c0-9 2.5-15 7.5-15s6 4 6 7.5c0 6-5.5 8.5-5.5 13 0 2.6 2 4 4.5 3",
+"♍":"M13 15.5v18M13 18.5c0-2 1.6-3.2 3.4-3.2S20 16.5 20 18.5v15M20 18.5c0-2 1.6-3.2 3.4-3.2S27 16.5 27 18.5v12c0 3 2.6 4.8 6 2.2M27 26c2.5-3.6 7.5-3.3 7.5.2 0 3.4-3.6 6.4-8.8 8.3",
+"♎":"M13 34.5h22M13 28.5h6.5c-3-3.2-2.6-9.8 4.5-11.3 7.1 1.5 7.5 8.1 4.5 11.3H35",
+"♏":"M12.5 15.5v18M12.5 18.5c0-2 1.6-3.2 3.4-3.2s3.6 1.2 3.6 3.2v15M19.5 18.5c0-2 1.6-3.2 3.4-3.2s3.6 1.2 3.6 3.2v12.5c0 2 1.4 3.2 3.5 3.2h5M32 30.5l3.5 3.4-3.5 3.4",
+"♐":"M14.5 33.5l19-19M24 14.5h9.5V24M17.5 23.5l7 7",
+"♑":"M12.5 15.5c2 0 3.5 1.8 3.5 4.2v12.8M16 20c0-3 2-5 4.3-5s4.2 2 4.2 5v9.5c0 3.6 2.6 5.5 5.6 5.5s5-2.2 5-4.8-2.2-4.7-4.8-4.7c-3.3 0-5.8 3-5.8 6.5 0 2.7-2 4.5-4.5 4.5",
+"♒":"M13 21.5l3.7-3.3 3.6 3.3 3.7-3.3 3.6 3.3 3.7-3.3 3.7 3.3M13 30.5l3.7-3.3 3.6 3.3 3.7-3.3 3.6 3.3 3.7-3.3 3.7 3.3",
+"♓":"M16.5 13.5c5.2 4.3 5.2 16.7 0 21M31.5 13.5c-5.2 4.3-5.2 16.7 0 21M14.5 24h19"};
+ const EL={"♈":"#FF9C74","♌":"#FF9C74","♐":"#FF9C74","♉":"#A6DC92","♍":"#A6DC92","♑":"#A6DC92","♊":"#B4CCFF","♎":"#B4CCFF","♒":"#B4CCFF","♋":"#86E3E0","♏":"#86E3E0","♓":"#86E3E0"};
+ const defs='<defs><radialGradient id="zgB" cx="38%" cy="30%" r="80%"><stop offset="0" stop-color="#4A3A8E"/><stop offset=".55" stop-color="#2A1F62"/><stop offset="1" stop-color="#140E36"/></radialGradient><linearGradient id="zgG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF1C4"/><stop offset=".55" stop-color="#FFD27A"/><stop offset="1" stop-color="#E5A24A"/></linearGradient></defs>';
+ Object.keys(G).forEach(z=>{M3[z]=`<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="zg">${defs}<circle cx="24" cy="24" r="21.5" fill="url(#zgB)"/><circle cx="24" cy="24" r="21.5" fill="none" stroke="url(#zgG)" stroke-width="1.3"/><circle cx="24" cy="24" r="18.3" fill="none" stroke="${EL[z]}" stroke-width=".9" opacity=".55"/><path d="${G[z]}" fill="none" stroke="#FFD27A" stroke-opacity=".35" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" style="filter:blur(1.2px)"/><path d="${G[z]}" fill="none" stroke="url(#zgG)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>`;});
+ try{document.querySelectorAll(".m3").forEach(i=>{});}catch(e){}})();
 /* v1.9.4 "Bugün senin için" ilk boyamada da yeni kart yapısıyla gelsin (eski yapı bir an görünmesin) */
 try{if(step===0){todayRender();}}catch(e){}
 </script>
