@@ -8117,6 +8117,11 @@ html body #zsh.pzmode:has(.ws-in){background:#7CC08E}
 .ws-t.ky:nth-child(2n) .ky-tr{transform:scaleX(-1)}
 .ws-t.ky:nth-child(3n) .ky-tr{background-position:0 -40px,0 0!important;background-size:100% 120%,auto!important}
 .ws-t.ky.pop,.ws-t.ky.no{animation:none!important;transform:none!important}
+/* v2.3.5 ana sayfa yana sallanmasın: hareketli gökyüzü katmanları kutusundan asla taşmasın (iOS/Android kırpma hatası) */
+#hx,#hx .sky-bg{contain:paint}
+#hx{-webkit-mask-image:-webkit-radial-gradient(white,black)}
+.wrap{max-width:100%}
+html,body{max-width:100%;overscroll-behavior-x:none}
 /* v1.6 topluluk 2 */
 .hsw-fam{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 11px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFE3A0;font:800 12px/1 var(--f-body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hsw-fam svg,.hs-hub-fam svg{width:15px;height:15px;fill:#F4D58D}
