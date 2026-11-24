@@ -22200,6 +22200,13 @@ wsTubeHTML=function(t,i){const full=t.length===WS_CAP&&t.every(x=>x===t[0]);cons
   O.querySelectorAll("[data-lv]").forEach(b=>b.onclick=()=>{O.hidden=true;wsStart(+b.dataset.lv);wsPaint();});O.querySelector("#ky-pkx").onclick=()=>{O.hidden=true;};};
  const _b=wsBind;wsBind=function(){_b.apply(this,arguments);const L=document.querySelector("#ws .ws-lvl");if(L){L.classList.add("ky-lvb");L.onclick=kyPick;if(!L.querySelector(".ky-map"))L.insertAdjacentHTML("beforeend",'<span class="ky-map">Bölüm seç ▾</span>');}};
 })();
+
+(function(){/* v2.3.3 Kuş Yuvası gizli: yalnızca gizli kapıyı açan cihazda görünür (Oyunlar başlığına 7 dokunuş) */
+ window.kyOn=function(){try{return localStorage.getItem("mf-ky")==="1";}catch(e){return false;}};
+ const RSws=RS_G.ws;const sync=()=>{if(kyOn())RS_G.ws=RSws;else delete RS_G.ws;};sync();
+ const _k=keyRender;keyRender=function(){if(kv==="ws"&&!kyOn())kv="hub";const r=_k.apply(this,arguments);try{if(kv==="hub"){if(!kyOn())document.querySelectorAll('#zsh .kb-ws').forEach(e=>e.remove());
+   const h=[...document.querySelectorAll("#zsh .kf-sec")].find(x=>/Oyunlar/.test(x.textContent));if(h&&!h._ky){h._ky=1;let n=0,t=0;h.addEventListener("click",()=>{const now=Date.now();n=now-t<700?n+1:1;t=now;if(n>=7){n=0;try{localStorage.setItem("mf-ky",kyOn()?"0":"1");}catch(e){}sync();try{navigator.vibrate&&navigator.vibrate([20,40,20]);}catch(e){}keyRender();}});}}}catch(e){}return r;};
+})();
 /* --- Renk Sırala: dolan şişe kutlaması, bölüm şovu --- */
 (function(){const solvedN=()=>WS?WS.T.filter(t=>t.length===WS_CAP&&t.every(x=>x===t[0])).length:0;let base=0;
  const _p=wsPour;wsPour=function(a,b,m){base=solvedN();const r=_p.apply(this,arguments);setTimeout(()=>{try{const n=solvedN();if(n>base){const E=document.getElementById("ws-tubes");const t=E&&E.children[b];if(t){const [x,y]=GFX.at(t);GFX.burst(x,y,["#fff","#B8E986","#FFE38A",WS_C[WS.T[b][0]]||"#fff"],26,{sp:8,up:5});GFX.ring(x,y,"#FFF3B0",90,5);GFX.text("Yuva tamam!",x,y-60,{c:["#fff","#FFE38A"]});GFX.combo(n,wsSndOn());}}}catch(e){}},window.KY_DUR||560);return r;};
