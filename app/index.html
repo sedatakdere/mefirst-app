@@ -8214,6 +8214,14 @@ html body #zsh.pzmode:has(.ws-in){background:#0B2419}
 .ky-oak2{position:absolute;right:-10px;top:-18px;width:56px;height:44px;pointer-events:none;transform:scaleX(-1)}.ky-oak2 i:nth-child(1){left:0;top:4px;transform:rotate(-28deg)}.ky-oak2 i:nth-child(2){left:14px;top:14px;transform:rotate(18deg)}
 .ky-w .ws-card{position:relative;background:repeating-linear-gradient(180deg,rgba(60,30,10,.18) 0 1px,transparent 1px 7px),linear-gradient(180deg,#B57A40,#8E5A2C 55%,#6E4420)!important;box-shadow:inset 0 0 0 3px #4A2A12,inset 0 3px 0 rgba(255,220,170,.35),0 7px 0 #2A1608,0 30px 50px -16px rgba(0,0,0,.9)!important}
 .ky-pk .ky-lv{box-shadow:inset 0 0 0 2px #4A2A12,0 4px 0 #2A1608!important}
+/* v2.6 uyuyan kuşlar, 5'li gövde */
+.ws-t.ky{height:calc(var(--w,52px)*(.5 + var(--cap,4)*.68))!important}
+.ws-t.ky.sel .ky-b.top{bottom:calc(var(--w)*(.5 + var(--cap,4)*.68))!important}.ky-nest{bottom:calc(var(--w)*(.28 + var(--cap,4)*.68))!important}
+.ky-b.zz svg{filter:drop-shadow(0 3px 3px rgba(0,0,0,.45)) saturate(.6) brightness(.82)}
+.ky-b.zz .ky-bs{animation:kyZb 3.2s ease-in-out infinite;animation-delay:var(--d)}@keyframes kyZb{50%{transform:scale(1.04,.95) translateY(1px)}}
+.ky-zz{font:800 9px "Baloo 2",sans-serif;fill:#EAF6FF;opacity:0;animation:kyZz 2.6s ease-in-out infinite;animation-delay:var(--d)}@keyframes kyZz{0%{opacity:0;transform:translate(0,4px)}40%{opacity:.9}100%{opacity:0;transform:translate(5px,-6px)}}
+.ky-b.wake{animation:kyWake .7s cubic-bezier(.2,1.8,.4,1) both}@keyframes kyWake{0%{transform:scale(.6) rotate(-14deg);filter:brightness(2.2)}50%{transform:scale(1.18) rotate(6deg)}100%{transform:none;filter:none}}
+.ky-b.wake::after{content:"!";position:absolute;right:-4px;top:-10px;font:800 20px/1 "Baloo 2",sans-serif;color:#FFEE58;text-shadow:2px 0 #3A1A06,-2px 0 #3A1A06,0 2px #3A1A06,0 -2px #3A1A06;animation:kyBang .9s ease-out both}@keyframes kyBang{0%{opacity:0;transform:scale(.2)}30%{opacity:1;transform:scale(1.3)}100%{opacity:0;transform:translateY(-12px)}}
 /* v1.6 topluluk 2 */
 .hsw-fam{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 11px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFE3A0;font:800 12px/1 var(--f-body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hsw-fam svg,.hs-hub-fam svg{width:15px;height:15px;fill:#F4D58D}
@@ -20756,7 +20764,7 @@ function bkMisPaint(){const e=document.getElementById("bk2-ms");if(!e)return;con
 
 /* ===== v0.73 Renk Sırala: şişelerdeki renkli suları ayır — sakin, süresiz, bölüm bölüm ===== */
 const WS_C=["#FF6FA8","#FF8A5B","#FFD24A","#4FD18B","#2EC4C9","#4C8DFF","#8E6CFF","#E5484D","#D69CFF","#A6E05A","#9B6A4A","#FFFFFF"];
-const WS_CAP=4;let WS=null,WSB=false;
+let WS_CAP=4;let WS=null,WSB=false;
 function wsG2(){return st.games2=st.games2||{};}
 function wsSndOn(){return wsG2().wsSnd!==0;}
 function wsSnd(k,x){if(!wsSndOn())return;try{const C=sndCtx();if(!C||C.state!=="running")return;const m=C.createGain();m.gain.value=.5;m.connect(C.destination);const t=C.currentTime+.01;
@@ -22263,7 +22271,7 @@ wsTubeHTML=function(t,i){const full=t.length===WS_CAP&&t.every(x=>x===t[0]);cons
 (function(){
  const _h=wsHTML;wsHTML=function(){return _h.apply(this,arguments).replace("Bir şişeye dokun, sonra dökmek istediğin şişeye.","Bir gövdeye dokun, kuş havalansın; sonra konacağı gövdeye dokun.").replace("<b>Boş şişe</b>","<b>Boş gövde</b>").replace('<div class="ws" id="ws">','<div class="ws ky-w" id="ws">'+KY_DEFS+'<div class="ky-sky" aria-hidden="true"><b class="ky-moon"></b><i></i><i></i><i></i><em class="ky-pines"></em>'+Array.from({length:12},(_,k)=>`<u style="--x:${(k*37+11)%96}%;--y:${38+(k*23)%52}%;--d:${(k*.73)%5}s;--t:${4+(k%4)}s"></u>`).join("")+'</div>');};
  const _p=wsPaint;wsPaint=function(){_p.apply(this,arguments);const E=document.getElementById("ws-tubes");if(E&&WS){const n=WS.T.length;const er=E.getBoundingClientRect(),ac=document.querySelector("#ws .ws-acts");const H=Math.max(240,(ac?ac.getBoundingClientRect().top:innerHeight-90)-er.top-14),Wd=E.clientWidth||360;let bw=0,bp=n;
-   for(let per=Math.ceil(n/3);per<=n;per++){const rows=Math.ceil(n/per);const w=Math.min(84,Wd/per*.93,H/(rows*4.15+.95));if(w>bw+.5){bw=w;bp=per;}}
+   for(let per=Math.ceil(n/3);per<=n;per++){const rows=Math.ceil(n/per);const cp=(WS&&WS.cap)||4,fh=.95+.5+cp*.68;const w=Math.min(84,Wd/per*.93,H/(rows*fh+.95));if(w>bw+.5){bw=w;bp=per;}}
    E.style.setProperty("--per",bp);E.style.setProperty("--w",bw+"px");E.style.setProperty("--rg",(bw*.95)+"px");E.classList.add("ky-g");}};
  const _s=wsSnd;wsSnd=function(k,x){if(!wsSndOn())return;try{const C=sndCtx();if(!C||C.state!=="running")return;const m=C.createGain();m.gain.value=.5;m.connect(C.destination);const t=C.currentTime+.01;
    const chirp=(tt,f,v)=>{sndTone(C,m,tt,f,.07,"sine",v||.16,.002,f*1.45);sndTone(C,m,tt+.075,f*1.12,.06,"sine",(v||.16)*.8,.002,f*1.6);};
@@ -22331,7 +22339,7 @@ wsTubeHTML=function(t,i){const full=t.length===WS_CAP&&t.every(x=>x===t[0]);cons
   const O=document.createElement("div");O.id="kyj";O.className="kyj"+(boss?" boss":"");
   O.innerHTML=`${KY_DEFS}<div class="kyj-cam"><svg width="${W}" height="${tot}" viewBox="0 0 ${W} ${tot}">${stars}${trees}<path d="${seg(a,b)}" class="kyj-road"/><path d="${seg(a,b)}" class="kyj-dots"/><path d="${seg(a,from)}" class="kyj-done"/><path d="${seg(from,to)}" class="kyj-go" id="kyj-p"/>${Array.from({length:b-a+1},(_,k)=>node(a+k)).join("")}</svg><div class="kyj-bird">${kyBird(c)}</div></div>
    <div class="kyj-top"><small>${newReg?"YENİ BÖLGE AÇILDI":"ORMAN HARİTASI"} · ${REG[reg%REG.length].toUpperCase()}</small><b class="kyj-shout">${pick(SHOUT)}</b></div>
-   <div class="kyj-stamp"><small>${boss?"USTA BÖLÜMÜ":"BÖLÜM"}</small><b>${to}</b><span>${newReg?`Hoş geldin: ${REG[reg%REG.length]}`:boss?"Kuşlar bu sefer inatçı. Göster kendini!":pick(SUB)}</span>${info&&info.chips?`<i>${info.chips.map(x=>`<em>${x}</em>`).join("")}</i>`:""}</div>
+   <div class="kyj-stamp"><small>${boss?"USTA BÖLÜMÜ":"BÖLÜM"}</small><b>${to}</b><span>${info&&info.sub?info.sub:newReg?`Hoş geldin: ${REG[reg%REG.length]}`:boss?"Kuşlar bu sefer inatçı. Göster kendini!":pick(SUB)}</span>${info&&info.chips?`<i>${info.chips.map(x=>`<em>${x}</em>`).join("")}</i>`:""}</div>
    <button type="button" class="kyj-start">Uç bakalım</button><small class="kyj-skip">Geçmek için dokun</small>`;
   document.body.appendChild(O);requestAnimationFrame(()=>O.classList.add("on"));
   const cam=O.querySelector(".kyj-cam"),bird=O.querySelector(".kyj-bird"),path=O.querySelector("#kyj-p"),L=path.getTotalLength();path.style.strokeDasharray=L;path.style.strokeDashoffset=L;
@@ -22375,6 +22383,41 @@ function kyPraise(k){const W=document.getElementById("ws");if(!W)return;W.queryS
   const L=document.querySelector("#ws .ws-lvl");if(L&&!L.querySelector(".ky-oak"))L.insertAdjacentHTML("afterbegin",'<span class="ky-oak" aria-hidden="true"><i></i><i></i><u></u></span><span class="ky-rope" aria-hidden="true"></span>');}catch(e){}};
  const _w=wsWin;wsWin=function(){const r=_w.apply(this,arguments);try{const d=document.querySelector("#ws-ov #ws-duel");if(d)d.remove();const c=document.querySelector("#ws-ov .ws-card");if(c&&!c.querySelector(".ky-oak2"))c.insertAdjacentHTML("afterbegin",'<span class="ky-oak2" aria-hidden="true"><i></i><i></i><u></u></span>');}catch(e){}return r;};
 })();
+
+/* ===== v2.6 Kuş Yuvası: uzun soluklu bölüm tasarımı — testere dişi zorluk, çözücüyle zorluk puanı, uyuyan kuşlar, tek boş gövde, 5'li gövde ===== */
+function kyCfg(lv){const r=Math.floor((lv-1)/10),pos=(lv-1)%10,W=[0,1,2,3,5,1,0,3,4,6][pos];const boss=pos===9,usta=pos===4,easy=pos===5||pos===6;
+ let nc=Math.min(11,4+Math.min(r,4)+Math.round(W*.7)),emp=2,cap=4;const hid=r>=1&&!easy;
+ if(r>=2&&(usta||boss||pos===8)){emp=1;nc=Math.max(4,nc-3);}
+ if(r>=3&&(pos===2||pos===7||boss)){cap=5;nc=Math.max(4,nc-2);}
+ return {lv,r,pos,nc,emp,cap,hid,boss,usta,easy,kind:boss||usta?"hard":easy?"easy":"mid"};}
+function kySolveN(T0,lim){const seen=new Set(),key=T=>T.map(t=>t.join(",")).sort().join("|");const S=[T0.map(t=>t.slice())];let n=0;
+ while(S.length){const T=S.pop();if(wsSolved(T))return n+1;const k=key(T);if(seen.has(k))continue;seen.add(k);if(++n>lim)return -1;
+  for(let a=0;a<T.length;a++)for(let b=0;b<T.length;b++){const m=wsCan(T,a,b);if(!m)continue;const [,nn]=wsTop(T[a]);if(!T[b].length&&nn===T[a].length)continue;const U=T.map(t=>t.slice());for(let i=0;i<m;i++)U[b].push(U[a].pop());S.push(U);}}return -1;}
+wsMake=function(lv){const C=kyCfg(lv);WS_CAP=C.cap;const want=C.kind==="mid"?3:4,lim=C.nc>=9?22000:30000;
+ const gen=(emp,tries)=>{const out=[];for(let s=0;s<tries&&out.length<want;s++){const r=wsRand(lv*7919+s*104729+17+emp*31);const pool=[];for(let c=0;c<C.nc;c++)for(let k=0;k<C.cap;k++)pool.push(c);
+   for(let i=pool.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}const T=[];for(let c=0;c<C.nc;c++)T.push(pool.slice(c*C.cap,c*C.cap+C.cap));for(let e=0;e<emp;e++)T.push([]);
+   if(wsSolved(T)||T.some(t=>t.length&&t.every(x=>x===t[0])))continue;const n=kySolveN(T,lim);if(n>0)out.push({T,n});}return out;};
+ let L=gen(C.emp,C.emp===1?26:30);if(!L.length&&C.emp===1){C.emp=2;L=gen(2,30);}
+ if(!L.length){const T=[];for(let c=0;c<C.nc;c++)T.push(Array.from({length:C.cap},(_,k)=>k===C.cap-1?(c+1)%C.nc:c));T.push([],[]);kyCfg._last=C;return T;}
+ L.sort((a,b)=>a.n-b.n);const pick=C.kind==="hard"?L[L.length-1]:C.kind==="easy"?L[0]:L[Math.floor(L.length/2)];C.score=pick.n;kyCfg._last=C;return pick.T;};
+function kyNorm(){if(!WS)return;WS.hv=WS.hv||[];while(WS.hv.length<WS.T.length)WS.hv.push(0);WS.T.forEach((t,i)=>{WS.hv[i]=Math.min(WS.hv[i]||0,Math.max(0,t.length-1));});}
+const KY_NEW={11:["Uyuyan kuşlar","Alttaki kuşlar uyuyor; üstleri boşalınca uyanıp rengini gösterir."],25:["Tek boş gövde","Bu bölümde tek boş gövde var. Her hamleyi düşün!"],33:["Uzun gövde","Gövdeler uzadı: her yuvaya 5 kuş sığıyor."]};
+(function(){
+ const _st=wsStart;wsStart=function(lv){const r=_st.apply(this,arguments);const C=kyCfg._last&&kyCfg._last.lv===lv?kyCfg._last:kyCfg(lv);WS.cap=WS_CAP;WS.cfg={nc:C.nc,emp:C.emp,cap:C.cap,hid:C.hid,kind:C.kind,score:C.score||0};WS.hv=C.hid?WS.T.map(t=>Math.max(0,t.length-1)):WS.T.map(()=>0);wsSave();return r;};
+ const _ld=wsLoad;wsLoad=function(){const ok=_ld.apply(this,arguments);if(ok&&WS){WS_CAP=WS.cap||4;kyNorm();}return ok;};
+ const _cn=wsCan;wsCan=function(T,a,b){let m=_cn.apply(this,arguments);if(m&&WS&&T===WS.T&&WS.hv){const vis=T[a].length-(WS.hv[a]||0);m=Math.min(m,Math.max(1,vis));}return m;};
+ const _tb=wsTubeHTML;wsTubeHTML=function(t,i){let h=_tb.apply(this,arguments);const hv=(WS&&WS.hv&&WS.hv[i])||0;if(!hv)return h;
+  for(let k=0;k<hv;k++){h=h.replace(new RegExp(`<i class="ky-b([^"]*)" style="--k:${k};([^"]*)">[\\s\\S]*?</svg></i>`),(m0,cl,sty)=>`<i class="ky-b zz${cl}" style="--k:${k};${sty}">${kyBirdZ()}</i>`);}return h;};
+ const _p=wsPaint;wsPaint=function(){let prev=null;if(WS){kyNorm();prev=(WS._hvShown||[]).slice();}_p.apply(this,arguments);
+  try{const E=document.getElementById("ws-tubes");if(E&&WS){E.style.setProperty("--cap",WS.cap||4);(WS.hv||[]).forEach((v,i)=>{const pv=prev?prev[i]:undefined;if(pv!=null&&v<pv){const el=E.querySelector(`.ws-t[data-t="${i}"] .ky-b[style*="--k:${v};"]`);if(el){el.classList.add("wake");setTimeout(()=>{try{wsSnd("sel");}catch(e){}},60);}}});WS._hvShown=(WS.hv||[]).slice();}}catch(e){}};
+ const _w=wsWin;wsWin=function(){const r=_w.apply(this,arguments);try{const nb=document.querySelector("#ws-ov #ws-next");if(nb){const oc=nb.onclick;nb.onclick=()=>{oc&&oc();};}}catch(e){}return r;};
+ const _j=kyJourney;kyJourney=function(from,to,info){try{info=info||{};const c=WS&&WS.cfg;if(c){const ch=[];if(c.emp===1)ch.push("Tek boş gövde");if(c.cap===5)ch.push("5'li gövde");if(c.hid)ch.push("Uyuyan kuşlar");ch.push(`${c.nc} renk kuş`,`${WS.T.length} gövde`);info.chips=ch.slice(0,3);if(KY_NEW[to])info.sub="YENİ: "+KY_NEW[to][1];}}catch(e){}return _j.call(this,from,to,info);};
+})();
+function kyBirdZ(){return `<svg viewBox="0 0 40 40" class="ky-bs ky-z" style="--c:#6A5A4C" aria-hidden="true"><path class="ky-wl" d="M6.2 21.5c-3.6.2-5.6 4-4.4 7.2 3.6-.2 6.2-2.6 6.6-6z"/><path class="ky-wr" d="M33.8 21.5c3.6.2 5.6 4 4.4 7.2-3.6-.2-6.2-2.6-6.6-6z"/>
+ <circle cx="20" cy="22" r="15.6" class="ky-bd"/><ellipse cx="20" cy="29.2" rx="10.4" ry="7.2" class="ky-bl"/><circle cx="20" cy="22" r="15.6" fill="url(#kyShade)"/>
+ <path d="M10.6 19.6c1.6 1.8 4.4 1.8 6 0M23.4 19.6c1.6 1.8 4.4 1.8 6 0" fill="none" stroke="#2A1A10" stroke-width="1.6" stroke-linecap="round"/><path d="M17.4 24h5.2L20 27.6z" fill="#C98A3A"/>
+ <path d="M8 9.5c4-5.5 18-6.5 24-1.2-2.4.2-4.4 1.2-5.2 2.8-3.6-2.6-11.4-2.8-18.8-1.6z" fill="#3F8A3A"/><path d="M11 9.2c5-2 12-2.2 18-.6" stroke="#2C6328" stroke-width=".8" fill="none"/>
+ <text x="30" y="8" class="ky-zz">z</text></svg>`;}
 /* --- Renk Sırala: dolan şişe kutlaması, bölüm şovu --- */
 (function(){const solvedN=()=>WS?WS.T.filter(t=>t.length===WS_CAP&&t.every(x=>x===t[0])).length:0;let base=0;
  const _p=wsPour;wsPour=function(a,b,m){base=solvedN();const r=_p.apply(this,arguments);setTimeout(()=>{try{const n=solvedN();if(n>base){const E=document.getElementById("ws-tubes");const t=E&&E.children[b];if(t){const [x,y]=GFX.at(t);GFX.burst(x,y,["#fff","#B8E986","#FFE38A",WS_C[WS.T[b][0]]||"#fff"],26,{sp:8,up:5});GFX.ring(x,y,"#FFF3B0",90,5);kyStreak=(kyStreak||0)+1;kyPraise(kyStreak);GFX.combo(n,wsSndOn());}}else kyStreak=0;}catch(e){}},window.KY_DUR||560);return r;};
