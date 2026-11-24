@@ -8062,6 +8062,44 @@ html body .bn.bnm:has(.bn-ring) .bnm-k{left:52px;top:23px}
 .mv-jar.shk{animation:mvShk .5s cubic-bezier(.36,.07,.19,.97)}@keyframes mvShk{15%,55%{transform:translateX(-7px) rotate(-1.2deg)}35%,75%{transform:translateX(7px) rotate(1.2deg)}}
 .mv-sc b.up{animation:mvUp .35s cubic-bezier(.2,1.6,.4,1)}@keyframes mvUp{40%{transform:scale(1.18)}}
 .mv-sc small.rec{animation:bkRec 1.2s ease-in-out 3;color:#E0457A}
+/* v2.3 Kuş Yuvası */
+#zsh .kf-in.ws-in.ws-in.ws-in{background:radial-gradient(60% 30% at 78% 8%,rgba(255,240,190,.95) 0%,rgba(255,226,150,.35) 40%,transparent 70%),radial-gradient(120% 40% at 50% 112%,#2F6B4A 0%,#3F8559 45%,transparent 72%),linear-gradient(180deg,#9FD8E6 0%,#BDE6C9 45%,#7CC08E 78%,#4E9467 100%)!important}
+html body #zsh.pzmode:has(.ws-in){background:#7CC08E}
+.ky-sky{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}.ky-sky i{position:absolute;height:14px;border-radius:99px;background:rgba(255,255,255,.7);filter:blur(1px);animation:kyCloud 38s linear infinite}
+.ky-sky i::before{content:"";position:absolute;left:22%;bottom:5px;width:46%;height:16px;border-radius:50%;background:inherit}
+.ky-sky i:nth-child(1){top:12%;width:90px;left:-100px}.ky-sky i:nth-child(2){top:24%;width:64px;left:-80px;animation-duration:52s;animation-delay:-20s;opacity:.7}.ky-sky i:nth-child(3){top:6%;width:70px;left:-90px;animation-duration:46s;animation-delay:-34s;opacity:.8}
+@keyframes kyCloud{to{transform:translateX(calc(100vw + 220px))}}
+.ky-w>*:not(.ky-sky){position:relative;z-index:1}.ky-w .ws-ov{position:absolute;z-index:20}
+.ws-tubes.ky-g{row-gap:var(--rg,48px);padding-top:calc(var(--w,50px)*.95)}
+.ws-t.ky{width:var(--w,52px);height:calc(var(--w,52px)*3.35);transform:none!important;transition:none;overflow:visible}
+.ws-t.ky.sel{transform:none!important}
+.ky-tr{position:absolute;inset:calc(var(--w)*.06) 0 0 0;border-radius:calc(var(--w)*.2) calc(var(--w)*.2) calc(var(--w)*.22) calc(var(--w)*.22);background:repeating-linear-gradient(90deg,rgba(40,20,8,.16) 0 2px,transparent 2px 6px,rgba(255,220,170,.07) 6px 8px,transparent 8px 11px),linear-gradient(90deg,#4E3019,#7E5230 22%,#9C6A40 48%,#85573A 70%,#55361E);box-shadow:inset 0 -8px 12px rgba(30,14,4,.35),0 10px 16px -10px rgba(20,40,20,.7)}
+.ky-tr::after{content:"";position:absolute;left:-5px;right:-5px;bottom:-3px;height:calc(var(--w)*.2);border-radius:50% 50% 30% 30%;background:linear-gradient(180deg,#6E4428,#4A2C16);clip-path:polygon(0 100%,8% 30%,22% 60%,35% 20%,65% 20%,78% 60%,92% 30%,100% 100%)}
+.ky-tr .ws-g{position:absolute;left:18%;right:18%;top:calc(var(--w)*.1);bottom:calc(var(--w)*.18);border-radius:999px 999px 12px 12px;background:linear-gradient(90deg,#1E1008,#3A2212 45%,#2A170B);box-shadow:inset 0 6px 10px rgba(0,0,0,.55),inset 0 -4px 8px rgba(0,0,0,.4)}
+.ky-cap{position:absolute;left:-3px;right:-3px;top:calc(var(--w)*-.1);height:calc(var(--w)*.3);border-radius:50%;background:radial-gradient(ellipse at 50% 50%,#24140A 0 34%,#F0CC94 36% 44%,#D9A86A 46% 52%,#EFC892 54% 62%,#C9905A 64% 72%,#7A4C2A 74%)}
+.ky-knot{position:absolute;left:var(--kx);top:var(--ky);width:16%;height:6%;border-radius:50%;background:radial-gradient(#3A2212,#6E4428 70%);opacity:.75}
+.ky-leaf{position:absolute;right:-12px;top:42%;width:18px;height:10px;border-radius:0 100% 0 100%;background:linear-gradient(135deg,#9BE07A,#3F9A52);transform:rotate(-24deg);transform-origin:0 100%}
+.ky-leaf::before{content:"";position:absolute;left:-6px;top:6px;width:9px;height:2px;background:#5E3A1E;border-radius:2px}
+.ky-birds{position:absolute;inset:0;pointer-events:none}.ky-tr .ws-g::before,.ky-tr .ws-g::after{display:none!important}
+.ky-b{position:absolute;left:50%;width:calc(var(--w)*.9);height:calc(var(--w)*.9);margin-left:calc(var(--w)*-.45);bottom:calc(var(--w)*.1 + var(--k)*var(--w)*.7);z-index:calc(var(--k) + 2);transition:bottom .28s cubic-bezier(.3,1.5,.5,1)}
+.ky-b svg,.ky-fly svg{width:100%;height:100%;display:block;overflow:visible;filter:drop-shadow(0 3px 3px rgba(30,14,4,.35))}
+.ky-bs .ky-bd{fill:var(--c);stroke:rgba(40,20,10,.22);stroke-width:.8}.ky-bs .ky-bl{fill:color-mix(in srgb,var(--c) 42%,#fff)}.ky-bs .ky-cr,.ky-bs .ky-wl,.ky-bs .ky-wr{fill:color-mix(in srgb,var(--c) 72%,#2A1206)}
+.ky-bs .ky-wl{transform-origin:7px 22px}.ky-bs .ky-wr{transform-origin:33px 22px}
+.ky-b .ky-ey{animation:kyBlink 5s infinite;animation-delay:var(--d);transform-origin:20px 19px}@keyframes kyBlink{0%,94%,100%{transform:none}96%{transform:scaleY(.1)}}
+.ws-t.ky.sel .ky-b.top{bottom:calc(var(--w)*3.3);z-index:9;animation:kyHover .5s ease-in-out infinite alternate}
+.ws-t.ky.sel .ky-b.top .ky-wl,.ky-fly .ky-wl{animation:kyFlapL .14s ease-in-out infinite alternate}.ws-t.ky.sel .ky-b.top .ky-wr,.ky-fly .ky-wr{animation:kyFlapR .14s ease-in-out infinite alternate}
+@keyframes kyFlapL{to{transform:rotate(38deg)}}@keyframes kyFlapR{to{transform:rotate(-38deg)}}@keyframes kyHover{to{transform:translateY(-5px)}}
+.ky-b.land{animation:kyLand .4s cubic-bezier(.3,1.6,.5,1) both}@keyframes kyLand{0%{transform:scale(1.12,.82) translateY(4px)}55%{transform:scale(.94,1.08) translateY(-3px)}}
+.ws-t.ky.sing .ky-b{animation:kySing .5s ease-in-out 3 alternate;animation-delay:calc(var(--k)*.08s)}@keyframes kySing{to{transform:translateY(-6px) rotate(-6deg)}}
+.ky-nest{position:absolute;left:50%;bottom:calc(var(--w)*3.12);width:calc(var(--w)*1.2);height:0;margin-left:calc(var(--w)*-.6);z-index:1}
+.ky-nest i{position:absolute;bottom:0;width:calc(var(--w)*.34);height:calc(var(--w)*.2);border-radius:0 100% 0 100%;background:linear-gradient(135deg,#B5EC8A,#3F9A52);transform-origin:50% 100%;animation:kyLf .5s cubic-bezier(.3,1.6,.5,1) both}
+.ky-nest i:nth-child(1){left:4%;transform:rotate(-58deg)}.ky-nest i:nth-child(2){left:22%;transform:rotate(-30deg);animation-delay:.05s}.ky-nest i:nth-child(3){left:38%;transform:rotate(-4deg);animation-delay:.1s}.ky-nest i:nth-child(4){left:54%;transform:rotate(24deg);animation-delay:.15s}.ky-nest i:nth-child(5){left:70%;transform:rotate(52deg);animation-delay:.2s}
+@keyframes kyLf{from{scale:0}}
+.ws-t.ky.no .ky-tr{animation:wsNo .35s}
+.ky-w .ws-lvl b{text-shadow:0 4px 0 rgba(40,90,60,.35)}.ky-w .ws-btn{background:rgba(255,255,255,.35);color:#24553A}.ky-w .ws-hint{color:#1F4A33;font-weight:700}
+.ky-w .ws-act{background:rgba(255,255,255,.55)!important;color:#24553A!important}
+.ky-big{width:64px;height:64px}.tm-big .ky-bs{width:64px;height:64px}
+.kb-ws{--a:#8FD39A;--b:#3F8A5E}
 /* v1.6 topluluk 2 */
 .hsw-fam{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 11px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFE3A0;font:800 12px/1 var(--f-body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hsw-fam svg,.hs-hub-fam svg{width:15px;height:15px;fill:#F4D58D}
@@ -20668,7 +20706,7 @@ function wsCard(){const lv=wsLvMax();const tube=(x,cs)=>`<g transform="translate
   O.innerHTML=`<div class="ob-in zs-in kf-in ws-in"><button class="zs-x" type="button" id="zs-x" aria-label="Kapat">✕</button><button class="kf-back" type="button" data-kv="hub" aria-label="Keyif köşeme geri dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Geri</span></button>${wsHTML()}</div>`;
   document.getElementById("zs-x").onclick=zodClose;O.scrollTop=0;requestAnimationFrame(wsBind);try{rsDuelFab({k:"oyun",v:"ws"});}catch(e){}return;}
  _k.apply(this,arguments);if(kv==="hub"){const b=document.querySelector("#zsh .kb-blk");if(b&&!document.querySelector("#zsh .kb-ws")){b.insertAdjacentHTML("afterend",wsCard());}}};})();
-RS_G.ws=["Renk Sırala bölüm yarışı","Kim daha ileride?"];
+RS_G.ws=["Kuş Yuvası bölüm yarışı","Kim daha ileride?"];
 (function(){const _l=rsLv;rsLv=function(v){if(v==="ws")return wsLvMax();return _l.apply(this,arguments);};})();
 
 /* ===== v0.74 Meyve Keyfi: meyveleri kavanoza bırak, aynılar birleşip büyüsün — kiraz'dan karpuza ===== */
@@ -20847,8 +20885,8 @@ addEventListener("resize",()=>{if(kv==="tm"&&TM)tmPaint();});
 RS_G.tm=["Üçlü Eşle bölüm yarışı","Kim daha ileride?"];
 (function(){const _l=rsLv;rsLv=function(v){if(v==="tm")return tmLvMax();return _l.apply(this,arguments);};})();
 /* Renk Sırala: hamle kalmadıysa söyle ve yol göster */
-wsStuck=function(){const O=document.getElementById("ws-ov");if(!O)return;O.hidden=false;O.innerHTML=`<div class="ws-card"><div class="tm-big">🫙</div><small>Hamle kalmadı</small><b>Takıldın gibi</b><span>Bir yardım kullan ya da baştan dene</span>
- ${WS.undo&&WS.H.length?`<button type="button" class="ws-go" id="wso-un">↶ Geri al (${WS.undo})</button>`:""}${WS.plus?`<button type="button" class="ws-go" id="wso-pl" style="margin-top:8px">＋ Boş şişe ekle</button>`:""}<button type="button" class="ws-go tm-go2" id="wso-re">Bölümü baştan oyna</button></div>`;
+wsStuck=function(){const O=document.getElementById("ws-ov");if(!O)return;O.hidden=false;O.innerHTML=`<div class="ws-card"><div class="tm-big">${kyBird(WS.T.find(t=>t.length)?WS.T.find(t=>t.length).slice(-1)[0]:0,"ky-big")}</div><small>Hamle kalmadı</small><b>Kuşlar sıkıştı</b><span>Bir yardım kullan ya da baştan dene</span>
+ ${WS.undo&&WS.H.length?`<button type="button" class="ws-go" id="wso-un">↶ Geri al (${WS.undo})</button>`:""}${WS.plus?`<button type="button" class="ws-go" id="wso-pl" style="margin-top:8px">＋ Boş gövde ekle</button>`:""}<button type="button" class="ws-go tm-go2" id="wso-re">Bölümü baştan oyna</button></div>`;
  const c=()=>{O.hidden=true;};const u=O.querySelector("#wso-un");if(u)u.onclick=()=>{c();document.getElementById("ws-undo").click();};const p=O.querySelector("#wso-pl");if(p)p.onclick=()=>{c();document.getElementById("ws-add").click();};O.querySelector("#wso-re").onclick=()=>{c();document.getElementById("ws-re").click();};};
 (function(){const _p=wsPaint;wsPaint=function(){_p.apply(this,arguments);try{if(WS&&!WS.won&&!WSB&&!wsSolved(WS.T)&&!wsAnyMove()){const O=document.getElementById("ws-ov");if(O&&O.hidden)setTimeout(()=>{if(!wsAnyMove()&&!wsSolved(WS.T))wsStuck();},600);}}catch(e){}};})();
 
@@ -22084,9 +22122,51 @@ const GFX_BG={blk:"neon",ws:"aqua",mv:"sun",tm:"leaf",wow:"dusk",mem:"rose",jig:
  }catch(e){console.warn(e);}return ok;};
  const _o=bkOver;bkOver=function(){const r=_o.apply(this,arguments);try{GFX.lose(document.getElementById("bk2-b"));}catch(e){}return r;};})();
 
+/* ===== v2.3 Kuş Yuvası: Renk Sırala'nın yeni hâli — tüpler ağaç gövdesi, renkler yuvarlak kuşlar; kurallar ve bölümler aynı ===== */
+function kyBird(c,cls){const cr=[
+ '<path d="M16.6 9.2c-2.6-3.4-2.2-6.6-.4-8 .2 3 1.4 5 3 7zM19.4 8c-.4-4.2 1.4-6.6 3.8-7.2-.8 2.4-.8 4.8-.6 7.4zM22.6 9c1.6-3.4 4.6-4.6 7-3.8-2 1-3.4 2.6-4.4 4.8z"/>',
+ '<path d="M18.4 8.4c-2-4.2.6-8.2 4.6-8 3.2.2 3.4 4.4.4 4.6-1.6.1-2.4-1.2-1.4-2.2-1.8.4-2.4 2.8-1 5.6z"/>',
+ '<path d="M14.4 10.4l.8-8 3.8 6.6zM21 8l3.6-7.2 2 8z"/>',
+ '<circle cx="16.6" cy="7.6" r="3.2"/><circle cx="20.6" cy="5.4" r="3.8"/><circle cx="24.4" cy="7.8" r="2.8"/>'][c%4];
+ return `<svg viewBox="0 0 40 40" class="ky-bs${cls?" "+cls:""}" style="--c:${WS_C[c]}" aria-hidden="true"><g class="ky-cr">${cr}</g>
+ <path class="ky-wl" d="M6.2 21.5c-3.6.2-5.6 4-4.4 7.2 3.6-.2 6.2-2.6 6.6-6z"/><path class="ky-wr" d="M33.8 21.5c3.6.2 5.6 4 4.4 7.2-3.6-.2-6.2-2.6-6.6-6z"/>
+ <circle cx="20" cy="22" r="15.6" class="ky-bd"/><ellipse cx="20" cy="29.2" rx="10.4" ry="7.2" class="ky-bl"/><circle cx="20" cy="22" r="15.6" fill="url(#kyShade)"/>
+ <ellipse cx="10.6" cy="25.4" rx="3" ry="1.8" fill="#FF7896" opacity=".42"/><ellipse cx="29.4" cy="25.4" rx="3" ry="1.8" fill="#FF7896" opacity=".42"/>
+ <g class="ky-ey"><circle cx="14.6" cy="19" r="5" fill="#fff"/><circle cx="25.4" cy="19" r="5" fill="#fff"/><circle cx="15.4" cy="19.6" r="2.7" fill="#2A1A10"/><circle cx="24.6" cy="19.6" r="2.7" fill="#2A1A10"/><circle cx="16.3" cy="18.5" r="1" fill="#fff"/><circle cx="25.5" cy="18.5" r="1" fill="#fff"/></g>
+ <path d="M16.6 23.4h6.8L20 28.6z" fill="#F59A23"/><path d="M16.6 23.4h6.8L20 25.6z" fill="#FFD36A"/></svg>`;}
+const KY_DEFS='<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><radialGradient id="kyShade" cx="36%" cy="28%" r="78%"><stop offset="0" stop-color="#fff" stop-opacity=".5"/><stop offset=".35" stop-color="#fff" stop-opacity=".06"/><stop offset=".7" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#2A1206" stop-opacity=".32"/></radialGradient></defs></svg>';
+wsTubeHTML=function(t,i){const full=t.length===WS_CAP&&t.every(x=>x===t[0]);return `<button type="button" class="ws-t ky${WS.sel===i?" sel":""}${full?" full":""}" data-t="${i}" aria-label="Gövde ${i+1}"><span class="ky-tr"><span class="ws-g"></span><span class="ky-cap"></span><span class="ky-knot" style="--ky:${18+(i*37)%40}%;--kx:${i%2?62:18}%"></span>${i%3===1?'<span class="ky-leaf"></span>':""}</span>
+ <span class="ky-birds">${t.map((c,k)=>`<i class="ky-b${k===t.length-1?" top":""}" style="--k:${k};--d:${(k*.37+i*.21)%1.6}s">${kyBird(c)}</i>`).join("")}</span>${full?'<span class="ky-nest"><i></i><i></i><i></i><i></i><i></i></span>':""}</button>`;};
+(function(){
+ const _h=wsHTML;wsHTML=function(){return _h.apply(this,arguments).replace("Bir şişeye dokun, sonra dökmek istediğin şişeye.","Bir gövdeye dokun, kuş havalansın; sonra konacağı gövdeye dokun.").replace("<b>Boş şişe</b>","<b>Boş gövde</b>").replace('<div class="ws" id="ws">','<div class="ws ky-w" id="ws">'+KY_DEFS+'<div class="ky-sky" aria-hidden="true"><i></i><i></i><i></i></div>');};
+ const _p=wsPaint;wsPaint=function(){const E=document.getElementById("ws-tubes");if(E&&WS){const n=WS.T.length,per=n<=5?n:n<=10?Math.ceil(n/2):Math.ceil(n/3),rows=Math.ceil(n/per);
+   const H=E.clientHeight||420,Wd=E.clientWidth||360;const w=Math.max(30,Math.min(64,Wd/per*.82,(H-8)/(rows*4.35)));E.style.setProperty("--w",w+"px");E.style.setProperty("--rg",(w*.98)+"px");E.classList.add("ky-g");}
+  _p.apply(this,arguments);};
+ const _s=wsSnd;wsSnd=function(k,x){if(!wsSndOn())return;try{const C=sndCtx();if(!C||C.state!=="running")return;const m=C.createGain();m.gain.value=.5;m.connect(C.destination);const t=C.currentTime+.01;
+   const chirp=(tt,f,v)=>{sndTone(C,m,tt,f,.07,"sine",v||.16,.002,f*1.45);sndTone(C,m,tt+.075,f*1.12,.06,"sine",(v||.16)*.8,.002,f*1.6);};
+   if(k==="sel")chirp(t,2100+Math.random()*500);
+   else if(k==="bad")sndTone(C,m,t,1300,.16,"sine",.14,.004,700);
+   else if(k==="pour"){const n=x||1;for(let i=0;i<n;i++){const tt=t+i*.11;for(let j=0;j<4;j++)sndTone(C,m,tt+j*.035,160+Math.random()*60,.03,"triangle",.12,.002,120);chirp(tt+.06,1900+i*220+Math.random()*200,.13);sndTone(C,m,tt+.44,320,.07,"triangle",.2,.002,190);}}
+   else if(k==="done"){for(let i=0;i<7;i++)sndTone(C,m,t+i*.055,i%2?3100:2600,.05,"sine",.12,.002,i%2?3500:2900);[1047,1319,1568].forEach((f,i)=>sndBell(C,m,t+.42+i*.08,f,.6,.1));}
+   else if(k==="win"){[2093,2349,2637,2794,3136,2637,3136,3520].forEach((f,i)=>chirp(t+i*.12,f*.8,.13));[523,659,784,1047].forEach((f,i)=>sndBell(C,m,t+.2+i*.14,f,.9,.1));}
+   else _s.apply(this,arguments);}catch(e){}};
+ wsPour=function(a,b,m){WSB=true;const E=document.getElementById("ws-tubes");const A=E.querySelector(`.ws-t[data-t="${a}"]`),B=E.querySelector(`.ws-t[data-t="${b}"]`);
+  const w=parseFloat(getComputedStyle(E).getPropertyValue("--w"))||50,rb=B.getBoundingClientRect(),bs=WS.T[b].length;const bir=[...A.querySelectorAll(".ky-b")].slice(-m).reverse();
+  const dur=430,gap=120;window.KY_DUR=dur+gap*(m-1)+260;wsSnd("pour",m);const fl=[];
+  bir.forEach((el,j)=>{const r=el.getBoundingClientRect(),sz=r.width;const tx=rb.left+rb.width/2-sz/2,ty=rb.bottom-(6+(bs+j)*w*.7)-sz;const dx=tx-r.left,dy=ty-r.top,peak=Math.min(r.top,ty)-w*1.1-r.top,dir=dx>=0?1:-1;
+   const c=el.cloneNode(true);c.classList.add("ky-fly");c.style.cssText=`position:fixed;left:${r.left}px;top:${r.top}px;width:${sz}px;height:${sz}px;margin:0;bottom:auto;z-index:60`;document.body.appendChild(c);el.style.visibility="hidden";fl.push(c);
+   c.animate([{transform:"translate(0,0) rotate(0)"},{transform:`translate(${dx*.5}px,${peak}px) rotate(${dir*12}deg)`,offset:.5},{transform:`translate(${dx}px,${dy-6}px) rotate(${-dir*4}deg)`,offset:.88},{transform:`translate(${dx}px,${dy}px) rotate(0)`}],{duration:dur,delay:j*gap,easing:"cubic-bezier(.45,.05,.4,1)",fill:"both"});});
+  setTimeout(()=>{WS.H.push(WS.T.map(t=>t.slice()));for(let k=0;k<m;k++)WS.T[b].push(WS.T[a].pop());WS.mv++;WS.sel=-1;fl.forEach(c=>c.remove());WSB=false;const tb=WS.T[b],full=tb.length===WS_CAP&&tb.every(x=>x===tb[0]);wsPaint();
+   const Bn=document.querySelector(`.ws-t[data-t="${b}"]`);if(Bn)[...Bn.querySelectorAll(".ky-b")].slice(-m).forEach((x,i)=>{x.classList.add("land");x.style.animationDelay=(i*.04)+"s";});
+   if(full){setTimeout(()=>wsSnd("done"),120);if(Bn){Bn.classList.add("pop","sing");wsSpark(Bn,WS_C[tb[0]]);}try{navigator.vibrate&&navigator.vibrate([12,40,12]);}catch(e){}}
+   else{try{navigator.vibrate&&navigator.vibrate(8);}catch(e){}}
+   if(wsSolved(WS.T))setTimeout(wsWin,full?650:180);wsSave();},dur+gap*(m-1)+20);};
+ wsCard=function(){const lv=wsLvMax();const tr=(x,h,cs,cl)=>`<g transform="translate(${x} ${90-h})"${cl?` class="${cl}"`:""}><rect x="0" y="6" width="26" height="${h-6}" rx="5" fill="#8A5A34"/><rect x="3" y="8" width="20" height="${h-12}" rx="4" fill="#3C2414"/><ellipse cx="13" cy="7" rx="14" ry="5" fill="#E8C08A"/><ellipse cx="13" cy="7" rx="9" ry="3" fill="#3C2414"/>${cs.map((c,k)=>`<g transform="translate(-1 ${h-31-k*17}) scale(.7)">${kyBird(c).replace('<svg ','<svg width="40" height="40" ')}</g>`).join("")}</g>`;
+  return `<button type="button" class="kb kb-ws wide" data-kv="ws" style="--i:0"><span class="kb-art no-mi"><svg viewBox="0 0 140 90">${KY_DEFS.replace(/<\/?svg[^>]*>/g,"")}${tr(28,66,[0,0,4])}${tr(62,66,[4,6])}<g class="kb-wsp">${tr(96,66,[6,6,6,6])}</g></svg></span><span class="kb-tx"><b>Kuş Yuvası</b><small>${lv>1?`Bölüm ${lv} · ⭐ ${wsG2().wsStars||0}`:"Her kuşu kendi yuvasına diz"}</small></span></button>`;};
+})();
 /* --- Renk Sırala: dolan şişe kutlaması, bölüm şovu --- */
 (function(){const solvedN=()=>WS?WS.T.filter(t=>t.length===WS_CAP&&t.every(x=>x===t[0])).length:0;let base=0;
- const _p=wsPour;wsPour=function(a,b,m){base=solvedN();const r=_p.apply(this,arguments);setTimeout(()=>{try{const n=solvedN();if(n>base){const E=document.getElementById("ws-tubes");const t=E&&E.children[b];if(t){const [x,y]=GFX.at(t);GFX.burst(x,y,["#fff","#BFF3FF","#FFE38A"],26,{sp:8,up:5});GFX.ring(x,y,"#BFF3FF",90,5);GFX.text("Şişe tamam!",x,y-60,{c:["#fff","#7FD3FF"]});GFX.combo(n,wsSndOn());}}}catch(e){}},560);return r;};
+ const _p=wsPour;wsPour=function(a,b,m){base=solvedN();const r=_p.apply(this,arguments);setTimeout(()=>{try{const n=solvedN();if(n>base){const E=document.getElementById("ws-tubes");const t=E&&E.children[b];if(t){const [x,y]=GFX.at(t);GFX.burst(x,y,["#fff","#B8E986","#FFE38A",WS_C[WS.T[b][0]]||"#fff"],26,{sp:8,up:5});GFX.ring(x,y,"#FFF3B0",90,5);GFX.text("Yuva tamam!",x,y-60,{c:["#fff","#FFE38A"]});GFX.combo(n,wsSndOn());}}}catch(e){}},window.KY_DUR||560);return r;};
  const _w=wsWin;wsWin=function(){const r=_w.apply(this,arguments);try{const s3=WS.used===0?3:WS.used<=2?2:1;GFX.win({title:`Bölüm ${WS.lv} tamam!`,stars:s3,snd:wsSndOn()});}catch(e){}return r;};})();
 
 /* --- Meyve Keyfi: büyük birleşmelerde şok dalgası --- */
@@ -22124,7 +22204,7 @@ function gfxProg(k){try{const G=st.games2||{};const st3=n=>n?`★ ${n}`:"";const
 (function(){const _k=keyRender;keyRender=function(){const r=_k.apply(this,arguments);try{if(kv!=="hub")return r;
   ["blk","ws","mv","tm","kk","wow","mem","jig"].forEach(k=>{const t=document.querySelector(`#zsh .kb-${k}`);if(!t)return;const P=gfxProg(k);let b=t.querySelector(".kb-prog");if(!P){if(b)b.remove();return;}
    if(!b){b=document.createElement("span");b.className="kb-prog";}const tx=t.querySelector(".kb-tx");if(tx){if(b.parentElement!==tx)tx.appendChild(b);}else if(!b.parentElement)t.appendChild(b);b.innerHTML=`<b>${esc(P.l)}</b>${P.s?`<i>${esc(P.s)}</i>`:""}`;});
-  const DSC={blk:"Satırları doldur, patlat",ws:"Renkleri kendi şişesine ayır",mv:"Meyveleri birleştir, karpuza ulaş",tm:"Aynı üç taşı rafa topla",kk:"Arıya ya da arkadaşına karşı",wow:"Harfleri birleştir, kelimeyi bul",mem:"Kartları çevir, eşleri bul",jig:"Kendi fotoğrafınla yap"};
+  const DSC={blk:"Satırları doldur, patlat",ws:"Her kuşu kendi yuvasına diz",mv:"Meyveleri birleştir, karpuza ulaş",tm:"Aynı üç taşı rafa topla",kk:"Arıya ya da arkadaşına karşı",wow:"Harfleri birleştir, kelimeyi bul",mem:"Kartları çevir, eşleri bul",jig:"Kendi fotoğrafınla yap"};
   Object.keys(DSC).forEach(k=>{const t=document.querySelector(`#zsh .kb-${k}`);const sm=t&&(t.querySelector(".kb-tx small")||t.querySelector("small:not(.kb-prog *)"));if(sm&&!sm.closest(".kb-prog"))sm.textContent=DSC[k];});}catch(e){}return r;};})();
 /* hedef ekranı */
 GFX.intro=function(o){const old=document.getElementById("gfx-intro");if(old)old.remove();const d=document.createElement("div");d.id="gfx-intro";d.setAttribute("role","dialog");d.setAttribute("aria-label",(o.kick||"")+" "+(o.title||""));
@@ -22135,7 +22215,7 @@ function gfxSeen(key,cool){const G=st.games2=st.games2||{};G.gi=G.gi||{};const t
 function gfxIntroLater(fn){setTimeout(()=>{try{fn();}catch(e){}},420);}
 (function(){
  const _ws=wsStart;wsStart=function(lv){const r=_ws.apply(this,arguments);if(!gfxSeen("ws"+lv))gfxIntroLater(()=>{if(kv!=="ws")return;const n=WS.T.filter(t=>t.length).length,c=new Set(WS.T.flat()).size;
-  GFX.intro({kick:"RENK SIRALA",title:`Bölüm ${lv}`,goal:`${c} rengi kendi şişesine topla`,chips:[`${WS.T.length} şişe`,"★★★ yardımsız",lv%5===0?"Usta bölümü":"Acele yok"],c1:"#BFF3FF",c2:"#7FD3FF",snd:wsSndOn()});});return r;};
+  GFX.intro({kick:"KUŞ YUVASI",title:`Bölüm ${lv}`,goal:`${c} renk kuşu kendi gövdesine diz`,chips:[`${WS.T.length} gövde`,"★★★ yardımsız",lv%5===0?"Usta bölümü":"Acele yok"],c1:"#FFF3B0",c2:"#7FCB8A",snd:wsSndOn()});});return r;};
  const _tm=tmStart;tmStart=function(lv){const r=_tm.apply(this,arguments);if(!gfxSeen("tm"+lv))gfxIntroLater(()=>kv==="tm"&&GFX.intro({kick:"ÜÇLÜ EŞLE",title:`Bölüm ${lv}`,goal:`${TM.T.length} taşın hepsini üçerli topla; raf dolmasın`,chips:["7 yuvalı raf","★★★ yardımsız"],c1:"#B8F5C8",c2:"#4FB993",snd:tmSndOn()}));return r;};
  const _bk=bkNew;bkNew=function(){const r=_bk.apply(this,arguments);if(!gfxSeen("bk",6e5))gfxIntroLater(()=>{if(kv!=="blk")return;const b=bkBest();GFX.intro({kick:"BLOK KEYFİ",title:"Yeni oyun",goal:"Satır ve sütunları doldur, patlat",chips:[b?`Rekor ${b.toLocaleString("tr-TR")}`:"İlk rekorun",`Seviye ${bkLv((st.games2||{}).blkXp)}`,"Kombo = katlanan puan"],c1:"#B9E6FF",c2:"#8B5CFF",snd:bkSndOn()});});return r;};
  const _mv=mvNew;mvNew=function(){const r=_mv.apply(this,arguments);if(!gfxSeen("mv",6e5))gfxIntroLater(()=>{if(kv!=="mv")return;const b=mvBest();GFX.intro({kick:"MEYVE KEYFİ",title:"Yeni kavanoz",goal:"Aynı meyveleri birleştir, karpuza ulaş",chips:[b?`Rekor ${b.toLocaleString("tr-TR")}`:"İlk rekorun","Çizgiyi geçme"],c1:"#FFE38A",c2:"#FF8E72",snd:mvSndOn()});});return r;};
