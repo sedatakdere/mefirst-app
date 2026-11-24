@@ -8122,6 +8122,54 @@ html body #zsh.pzmode:has(.ws-in){background:#7CC08E}
 #hx{-webkit-mask-image:-webkit-radial-gradient(white,black)}
 .wrap{max-width:100%}
 html,body{max-width:100%;overscroll-behavior-x:none}
+/* v2.4 Kuş Yuvası gece ormanı */
+#zsh .kf-in.ws-in.ws-in.ws-in.ws-in{background:radial-gradient(38% 20% at 82% 9%,rgba(255,244,214,.28) 0%,rgba(255,244,214,.06) 55%,transparent 75%),radial-gradient(120% 45% at 50% 115%,#0B2A1C 0%,#0E3524 40%,transparent 75%),linear-gradient(180deg,#0B1426 0%,#102340 34%,#123A35 70%,#0B2419 100%)!important}
+html body #zsh.pzmode:has(.ws-in){background:#0B2419}
+.ky-moon{position:absolute;left:20%;top:6px;width:32px;height:32px;border-radius:50%;background:radial-gradient(circle at 38% 38%,#FFFBEA,#F4E3B0 60%,#D9C48A);box-shadow:0 0 30px 8px rgba(255,240,200,.35),0 0 90px 30px rgba(255,240,200,.12)}
+.ky-moon::after{content:"";position:absolute;left:28%;top:52%;width:9px;height:9px;border-radius:50%;background:rgba(190,165,110,.45);box-shadow:12px -14px 0 -2px rgba(190,165,110,.35),16px 4px 0 -3px rgba(190,165,110,.3)}
+.ky-sky i{background:rgba(160,180,220,.16)!important;filter:blur(2px)}
+.ky-sky u{position:absolute;left:var(--x);top:var(--y);width:5px;height:5px;border-radius:50%;background:#F6FF9A;box-shadow:0 0 8px 3px rgba(230,255,120,.65);opacity:0;animation:kyFly var(--t) ease-in-out infinite;animation-delay:var(--d);text-decoration:none}
+@keyframes kyFly{0%,100%{opacity:0;transform:translate(0,0)}30%{opacity:1}50%{transform:translate(14px,-18px)}70%{opacity:.8}85%{transform:translate(-8px,-6px)}}
+.ky-pines{position:absolute;left:0;right:0;bottom:0;height:120px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 120' preserveAspectRatio='none'%3E%3Cpath fill='%2306140E' d='M0 120V70l14-30 14 30 10-46 12 46 16-36 14 36 10-52 12 52 18-30 12 30 14-44 12 44 16-26 12 26 12-58 12 58 16-34 14 34 12-48 12 48 16-28 14 28 12-40 14 40 16-30 12 30 14-50 12 50 14-34 V120z'/%3E%3C/svg%3E") bottom/100% 100% no-repeat;opacity:.9}
+.ky-w .ws-lvl small{color:rgba(220,240,230,.7)}.ky-w .ws-lvl b{color:#FFF6DA;text-shadow:0 0 18px rgba(255,214,120,.45),0 3px 0 rgba(0,0,0,.4)}
+.ky-w .ws-btn{background:rgba(255,255,255,.1);color:#EAF6EE;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+.ky-w .ws-hint{color:rgba(225,240,232,.78);font-weight:700}.ky-map{color:#FFE38A!important}
+.ky-w .ws-act{background:rgba(255,255,255,.1)!important;color:#F2F8F4!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.16),0 6px 14px -8px rgba(0,0,0,.8)!important}
+.ky-tr{box-shadow:inset 0 -8px 12px rgba(30,14,4,.35),0 0 0 1px rgba(0,0,0,.25),0 14px 22px -10px rgba(0,0,0,.85),0 0 28px -6px rgba(255,214,140,.18)}
+.kyj-mini{display:block;margin:-4px auto 6px;font:900 italic 17px/1.05 var(--f-body);letter-spacing:.02em;color:#FFC83A;-webkit-text-stroke:1.2px #3A1E06;paint-order:stroke fill;transform:rotate(-3deg);animation:kyjPop .6s cubic-bezier(.2,1.8,.4,1) both}
+/* harita seyri */
+.kyj{position:fixed;inset:0;z-index:9700;overflow:hidden;background:radial-gradient(70% 40% at 50% 0%,#1D3A5C 0%,transparent 70%),linear-gradient(180deg,#0A1220,#0E2A22 60%,#081A12);opacity:0;transition:opacity .35s;touch-action:none}
+.kyj.on{opacity:1}.kyj.out{opacity:0;transform:scale(1.08);transition:opacity .35s,transform .38s}
+.kyj-cam{position:absolute;left:0;top:0;will-change:transform}
+.kyj-road{fill:none;stroke:#3A2614;stroke-width:22;stroke-linecap:round;opacity:.85}.kyj-dots{fill:none;stroke:rgba(255,236,190,.35);stroke-width:3;stroke-dasharray:2 12;stroke-linecap:round}
+.kyj-done,.kyj-go{fill:none;stroke:#FFC83A;stroke-width:5;stroke-linecap:round;stroke-dasharray:1 11;filter:drop-shadow(0 0 6px rgba(255,200,58,.8))}.kyj-go{stroke-dasharray:none;stroke:url(#kyGo);stroke:#FFD86A}
+.kyj-wood{fill:#E2B47A;stroke:#7A4C2A;stroke-width:4}.kyj-n.f .kyj-wood{fill:#8A6A4A}.kyj-n.b .kyj-wood{stroke:#FFC83A}
+.kyj-num{text-anchor:middle;font:900 20px var(--f-body);fill:#3A2212}.kyj-n.c .kyj-num{font-size:26px}.kyj-n.f .kyj-num{fill:#3A2A1C;opacity:.7}
+.kyj-halo{fill:rgba(255,214,110,.18);stroke:rgba(255,214,110,.5);stroke-width:2;opacity:0}.kyj.landed .kyj-halo{animation:kyjHalo 1.4s ease-out infinite}
+@keyframes kyjHalo{0%{opacity:.9;transform:scale(.6)}100%{opacity:0;transform:scale(1.5)}}
+.kyj-bird{position:absolute;left:0;top:0;width:64px;height:64px;z-index:3;filter:drop-shadow(0 10px 8px rgba(0,0,0,.5))}.kyj-bird svg{width:100%;height:100%;overflow:visible}
+.kyj-bird .ky-wl{animation:kyFlapL .12s ease-in-out infinite alternate}.kyj-bird .ky-wr{animation:kyFlapR .12s ease-in-out infinite alternate}
+.kyj.landed .kyj-bird .ky-wl,.kyj.landed .kyj-bird .ky-wr{animation:none}.kyj.landed .kyj-bird svg{animation:kySing .4s ease-in-out 4 alternate}
+.kyj-top{position:absolute;left:0;right:0;top:calc(env(safe-area-inset-top) + 26px);text-align:center;pointer-events:none;padding:0 14px}
+.kyj-top small{display:inline-block;padding:6px 12px;border-radius:99px;background:rgba(255,255,255,.1);color:#CFE8DA;font:800 10.5px/1 var(--f-body);letter-spacing:.14em;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+.kyj-shout{display:block;margin-top:14px;font:900 italic clamp(30px,9.5vw,44px)/1 var(--f-body);letter-spacing:-.01em;color:#FFD23F;background:linear-gradient(180deg,#FFF4B0,#FFC23A 55%,#FF8A1F);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;-webkit-text-stroke:2px #2A1204;paint-order:stroke fill;filter:drop-shadow(0 5px 0 rgba(0,0,0,.55)) drop-shadow(0 0 20px rgba(255,190,60,.35));transform:rotate(-4deg);animation:kyjPop .7s .25s cubic-bezier(.2,1.8,.4,1) both,kyjWob 2.4s 1s ease-in-out infinite}
+@keyframes kyjPop{0%{opacity:0;transform:rotate(-14deg) scale(2.6)}60%{opacity:1;transform:rotate(-2deg) scale(.9)}100%{transform:rotate(-4deg) scale(1)}}
+@keyframes kyjWob{50%{transform:rotate(-1deg) scale(1.04)}}
+.kyj-stamp{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom) + 118px);transform:translateX(-50%);width:min(86vw,340px);padding:14px 16px 14px;border-radius:24px;text-align:center;color:#FFF6DA;background:linear-gradient(180deg,rgba(40,24,10,.92),rgba(24,14,6,.94));box-shadow:inset 0 0 0 2px rgba(255,200,58,.55),0 20px 40px -14px rgba(0,0,0,.9);opacity:0;pointer-events:none}
+.kyj.landed .kyj-stamp{animation:kyjSlam .5s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes kyjSlam{0%{opacity:0;transform:translateX(-50%) scale(2.4) rotate(-10deg)}70%{opacity:1;transform:translateX(-50%) scale(.94) rotate(2deg)}100%{opacity:1;transform:translateX(-50%) scale(1) rotate(-1.5deg)}}
+.kyj-stamp small{display:block;font:900 11px/1 var(--f-body);letter-spacing:.26em;color:#FFC83A}.kyj-stamp b{display:block;font:900 58px/1 var(--f-body);margin:4px 0 2px;color:#FFF;text-shadow:0 0 24px rgba(255,200,58,.55),0 4px 0 #6A3A10}
+.kyj-stamp span{display:block;font-size:13.5px;font-weight:700;color:#F2E2C0}.kyj-stamp i{display:flex;justify-content:center;gap:6px;margin-top:9px;font-style:normal}.kyj-stamp em{font:800 11px/1 var(--f-body);font-style:normal;padding:6px 9px;border-radius:99px;background:rgba(255,200,58,.14);color:#FFE38A}
+.kyj.boss .kyj-stamp{box-shadow:inset 0 0 0 2px #FF5A6A,0 0 40px -6px rgba(255,90,106,.6),0 20px 40px -14px rgba(0,0,0,.9)}.kyj.boss .kyj-stamp small{color:#FF8A96}
+.kyj.landed{animation:kyjShake .42s .02s}@keyframes kyjShake{20%{transform:translate(-6px,3px)}40%{transform:translate(5px,-4px)}60%{transform:translate(-4px,2px)}80%{transform:translate(2px,-1px)}}
+.kyj-start{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom) + 44px);transform:translateX(-50%) scale(.6);min-width:200px;height:58px;border:0;border-radius:99px;font:900 19px/1 var(--f-body);letter-spacing:.02em;color:#2A1204;background:linear-gradient(180deg,#FFE38A,#FFB020);box-shadow:0 6px 0 #B5650A,0 18px 30px -10px rgba(255,170,40,.7);opacity:0;pointer-events:none;transition:opacity .3s .55s,transform .45s .55s cubic-bezier(.2,1.8,.4,1)}
+.kyj.landed .kyj-start{opacity:1;pointer-events:auto;transform:translateX(-50%) scale(1);animation:kyjBtn 1.2s 1.2s ease-in-out infinite}
+@keyframes kyjBtn{50%{transform:translateX(-50%) scale(1.06)}}.kyj-start:active{transform:translateX(-50%) translateY(4px) scale(.98)!important;box-shadow:0 2px 0 #B5650A}
+.kyj-skip{position:absolute;left:0;right:0;bottom:calc(env(safe-area-inset-bottom) + 14px);text-align:center;color:rgba(220,240,230,.45);font-size:11px;font-weight:700;transition:opacity .3s}.kyj.landed .kyj-skip{opacity:0}
+.ky-w .ws-card{background:linear-gradient(180deg,#2E1C0E,#1A1007)!important;color:#FFF6DA;box-shadow:inset 0 0 0 2px rgba(255,200,58,.5),0 24px 50px -16px rgba(0,0,0,.9)!important}
+.ky-w .ws-card small{color:#FFC83A!important}.ky-w .ws-card b{color:#FFF6DA}.ky-w .ws-card>span{color:#E8D6B0}.ky-w .ws-card .kyj-mini{color:#FFC83A}
+.ky-w .ws-go{background:linear-gradient(180deg,#FFE38A,#FFB020)!important;color:#2A1204!important;box-shadow:0 5px 0 #B5650A,0 14px 24px -10px rgba(255,170,40,.6)!important;font-weight:900}
+.ky-w .ws-card .bk2-du{color:#FFB3C8}.ky-w .tm-go2{background:rgba(255,255,255,.1)!important;color:#FFF6DA!important}
 /* v1.6 topluluk 2 */
 .hsw-fam{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 11px;border-radius:99px;border:0;background:rgba(255,255,255,.1);color:#FFE3A0;font:800 12px/1 var(--f-body);cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .hsw-fam svg,.hs-hub-fam svg{width:15px;height:15px;fill:#F4D58D}
@@ -22169,7 +22217,7 @@ const KY_DEFS='<svg width="0" height="0" style="position:absolute" aria-hidden="
 wsTubeHTML=function(t,i){const full=t.length===WS_CAP&&t.every(x=>x===t[0]);const ok=WS.sel>=0&&WS.sel!==i&&wsCan(WS.T,WS.sel,i);return `<button type="button" class="ws-t ky${WS.sel===i?" sel":""}${full?" full":""}${ok?" ok":""}" data-t="${i}" aria-label="Gövde ${i+1}"><span class="ky-tr"><span class="ws-g"></span><span class="ky-cap"></span><span class="ky-knot" style="--ky:${18+(i*37)%40}%;--kx:${i%2?62:18}%"></span>${i%3===1?'<span class="ky-leaf"></span>':""}</span>
  <span class="ky-birds">${t.map((c,k)=>`<i class="ky-b${k===t.length-1?" top":""}" style="--k:${k};--d:${(k*.37+i*.21)%1.6}s">${kyBird(c)}</i>`).join("")}</span>${full?'<span class="ky-nest"><i></i><i></i><i></i><i></i><i></i></span>':""}</button>`;};
 (function(){
- const _h=wsHTML;wsHTML=function(){return _h.apply(this,arguments).replace("Bir şişeye dokun, sonra dökmek istediğin şişeye.","Bir gövdeye dokun, kuş havalansın; sonra konacağı gövdeye dokun.").replace("<b>Boş şişe</b>","<b>Boş gövde</b>").replace('<div class="ws" id="ws">','<div class="ws ky-w" id="ws">'+KY_DEFS+'<div class="ky-sky" aria-hidden="true"><i></i><i></i><i></i></div>');};
+ const _h=wsHTML;wsHTML=function(){return _h.apply(this,arguments).replace("Bir şişeye dokun, sonra dökmek istediğin şişeye.","Bir gövdeye dokun, kuş havalansın; sonra konacağı gövdeye dokun.").replace("<b>Boş şişe</b>","<b>Boş gövde</b>").replace('<div class="ws" id="ws">','<div class="ws ky-w" id="ws">'+KY_DEFS+'<div class="ky-sky" aria-hidden="true"><b class="ky-moon"></b><i></i><i></i><i></i><em class="ky-pines"></em>'+Array.from({length:12},(_,k)=>`<u style="--x:${(k*37+11)%96}%;--y:${38+(k*23)%52}%;--d:${(k*.73)%5}s;--t:${4+(k%4)}s"></u>`).join("")+'</div>');};
  const _p=wsPaint;wsPaint=function(){_p.apply(this,arguments);const E=document.getElementById("ws-tubes");if(E&&WS){const n=WS.T.length;const er=E.getBoundingClientRect(),ac=document.querySelector("#ws .ws-acts");const H=Math.max(240,(ac?ac.getBoundingClientRect().top:innerHeight-90)-er.top-14),Wd=E.clientWidth||360;let bw=0,bp=n;
    for(let per=Math.ceil(n/3);per<=n;per++){const rows=Math.ceil(n/per);const w=Math.min(84,Wd/per*.93,H/(rows*4.15+.95));if(w>bw+.5){bw=w;bp=per;}}
    E.style.setProperty("--per",bp);E.style.setProperty("--w",bw+"px");E.style.setProperty("--rg",(bw*.95)+"px");E.classList.add("ky-g");}};
@@ -22212,6 +22260,49 @@ wsTubeHTML=function(t,i){const full=t.length===WS_CAP&&t.every(x=>x===t[0]);cons
  const RSws=RS_G.ws;const sync=()=>{if(kyOn())RS_G.ws=RSws;else delete RS_G.ws;};sync();
  const _k=keyRender;keyRender=function(){if(kv==="ws"&&!kyOn())kv="hub";const r=_k.apply(this,arguments);try{if(kv==="hub"){if(!kyOn())document.querySelectorAll('#zsh .kb-ws').forEach(e=>e.remove());
    const h=[...document.querySelectorAll("#zsh .kf-sec")].find(x=>/Oyunlar/.test(x.textContent));if(h&&!h._ky){h._ky=1;let n=0,t=0;h.addEventListener("click",()=>{const now=Date.now();n=now-t<700?n+1:1;t=now;if(n>=7){n=0;try{localStorage.setItem("mf-ky",kyOn()?"0":"1");}catch(e){}sync();try{navigator.vibrate&&navigator.vibrate([20,40,20]);}catch(e){}keyRender();}});}}}catch(e){}return r;};
+})();
+
+/* ===== v2.4 Kuş Yuvası: gece ormanı + bölümler arası harita seyri (komik ve karizmatik) ===== */
+(function(){
+ const REG=["Yaşlı Orman","Ay Işığı Gölü","Sisli Dağ","Bulut Tepesi","Yıldız Korusu","Kehribar Vadisi"];
+ const SHOUT=["CİK CİK, EFSANE!","KANATLAR ALEV ALDI!","ORMANIN YENİ PATRONU!","TÜYLER DİKEN DİKEN!","BU NE HIZ BÖYLE?!","KUŞLAR SANA HAYRAN!","YUVA USTASI GELDİ!","PIRRR! SIRADAKİ!","AĞAÇLAR ALKIŞLIYOR!","GAGALAR ŞAŞKIN!"];
+ const SUB=["Kemerleri bağla, kanatları aç","Hafif rüzgâr, bol cıvıltı","Kuşlar seni bekliyor","Bir dal daha, bir zafer daha","Sessiz ol, kuşlar uyuyor… şaka, uçuyoruz!","Gagalar hazır, tüyler taranmış"];
+ const pick=a=>a[Math.floor(Math.random()*a.length)];
+ window.kySfx=function(k){if(!wsSndOn())return;try{const C=sndCtx();if(!C||C.state!=="running")return;const m=C.createGain();m.gain.value=.55;m.connect(C.destination);const t=C.currentTime+.01;
+  if(k==="whoosh"){for(let i=0;i<10;i++)sndTone(C,m,t+i*.045,700-i*45+Math.random()*80,.06,"triangle",.07,.004,300);for(let i=0;i<4;i++)sndTone(C,m,t+.15+i*.16,2300+i*180,.06,"sine",.1,.002,3300);}
+  else if(k==="boom"){sndTone(C,m,t,150,.55,"sine",.6,.002,42);sndTone(C,m,t,90,.25,"square",.08,.002,50);sndTone(C,m,t+.02,2600,.05,"sine",.08,.002,3600);}
+  else if(k==="fan"){[523,659,784,1047,1319].forEach((f,i)=>sndTone(C,m,t+i*.075,f,.14,"square",.06,.004,f*1.01));sndBell(C,m,t+.42,1568,.8,.12);sndBell(C,m,t+.5,2093,.8,.09);}
+  else if(k==="tick")sndTone(C,m,t,1900,.04,"sine",.1,.002,2400);}catch(e){}};
+ window.kyJourney=function(from,to,info){document.getElementById("kyj")&&document.getElementById("kyj").remove();
+  const W=Math.min(innerWidth,520),H=innerHeight,gap=128,a=Math.max(1,from-3),b=to+3;
+  const P=i=>[W/2+Math.sin(i*1.25)*W*.26,(b-i)*gap+H*.4];const tot=(b-a)*gap+H*.8;
+  const seg=(i,j)=>{let d="";for(let k=i;k<j;k++){const [x1,y1]=P(k),[x2,y2]=P(k+1);d+=(k===i?`M${x1} ${y1}`:"")+`C${x1} ${y1-gap*.55} ${x2} ${y2+gap*.55} ${x2} ${y2}`;}return d;};
+  const S=(wsG2().kyS)||{},reg=Math.floor((to-1)/10),newReg=Math.floor((from-1)/10)!==reg,boss=to%5===0;
+  const node=i=>{const [x,y]=P(i),done=i<to,cur=i===to,r=cur?30:24;const rg=Math.floor((i-1)/10);
+   return `<g class="kyj-n${done?" d":""}${cur?" c":""}${i>to?" f":""}${i%5===0?" b":""}" transform="translate(${x} ${y})">${cur?`<circle r="46" class="kyj-halo"/>`:""}<circle r="${r+5}" fill="#2A170C" opacity=".55" cy="5"/><circle r="${r}" class="kyj-wood"/><circle r="${r*.72}" fill="none" stroke="#B97E48" stroke-width="2" opacity=".7"/><circle r="${r*.44}" fill="none" stroke="#B97E48" stroke-width="1.6" opacity=".55"/>
+    <text y="${cur?9:7}" class="kyj-num">${i}</text>${done?`<g transform="translate(0 ${r+12})">${[0,1,2].map(k=>`<path transform="translate(${(k-1)*13} 0) scale(.55)" d="M0-10l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L0 4.9l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="${k<(S[i]||1)?"#FFC83A":"rgba(255,255,255,.18)"}"/>`).join("")}</g>`:""}${i%5===0&&!done?`<path transform="translate(0 ${-r-12}) scale(.8)" d="M-12 6h24l3-13-8 6-7-10-7 10-8-6z" fill="#FFC83A" stroke="#7A4C10" stroke-width="1.5"/>`:""}${i>to?`<circle r="${r}" fill="#0A1410" opacity=".45"/>`:""}</g>`;};
+  const trees=Array.from({length:Math.ceil(tot/90)},(_,k)=>{const y=k*90+20,l=k%2,x=l?W-20-(k*13)%40:12+(k*17)%40,sc=.7+(k%3)*.2;return `<path transform="translate(${x} ${y}) scale(${sc})" d="M0-34l14 20h-8l12 16h-9l11 15H-20l11-15h-9l12-16h-8z" fill="#08140F" opacity=".85"/>`;}).join("");
+  const stars=Array.from({length:40},(_,k)=>`<circle cx="${(k*71)%W}" cy="${(k*131)%tot}" r="${k%5?1:1.8}" fill="#fff" opacity="${.25+(k%4)*.15}"/>`).join("");
+  const c=info&&info.c!=null?info.c:Math.floor(Math.random()*8);
+  const O=document.createElement("div");O.id="kyj";O.className="kyj"+(boss?" boss":"");
+  O.innerHTML=`${KY_DEFS}<div class="kyj-cam"><svg width="${W}" height="${tot}" viewBox="0 0 ${W} ${tot}">${stars}${trees}<path d="${seg(a,b)}" class="kyj-road"/><path d="${seg(a,b)}" class="kyj-dots"/><path d="${seg(a,from)}" class="kyj-done"/><path d="${seg(from,to)}" class="kyj-go" id="kyj-p"/>${Array.from({length:b-a+1},(_,k)=>node(a+k)).join("")}</svg><div class="kyj-bird">${kyBird(c)}</div></div>
+   <div class="kyj-top"><small>${newReg?"YENİ BÖLGE AÇILDI":"ORMAN HARİTASI"} · ${REG[reg%REG.length].toUpperCase()}</small><b class="kyj-shout">${pick(SHOUT)}</b></div>
+   <div class="kyj-stamp"><small>${boss?"USTA BÖLÜMÜ":"BÖLÜM"}</small><b>${to}</b><span>${newReg?`Hoş geldin: ${REG[reg%REG.length]}`:boss?"Kuşlar bu sefer inatçı. Göster kendini!":pick(SUB)}</span>${info&&info.chips?`<i>${info.chips.map(x=>`<em>${x}</em>`).join("")}</i>`:""}</div>
+   <button type="button" class="kyj-start">Uç bakalım</button><small class="kyj-skip">Geçmek için dokun</small>`;
+  document.body.appendChild(O);requestAnimationFrame(()=>O.classList.add("on"));
+  const cam=O.querySelector(".kyj-cam"),bird=O.querySelector(".kyj-bird"),path=O.querySelector("#kyj-p"),L=path.getTotalLength();path.style.strokeDasharray=L;path.style.strokeDashoffset=L;
+  const set=(f)=>{const p=path.getPointAtLength(L*f),q=path.getPointAtLength(Math.min(L,L*f+2));bird.style.transform=`translate(${p.x-32}px,${p.y-74}px) scaleX(${q.x<p.x-.1?-1:1})`;cam.style.transform=`translate(${(innerWidth-W)/2}px,${H*.55-p.y}px)`;path.style.strokeDashoffset=L*(1-f);};
+  set(0);let done=false,raf=0,t0=0;const DUR=1900;
+  const land=()=>{if(done)return;done=true;cancelAnimationFrame(raf);set(1);O.classList.add("landed");kySfx("boom");setTimeout(()=>kySfx("fan"),180);try{navigator.vibrate&&navigator.vibrate([30,50,20]);}catch(e){}
+   try{const r=bird.getBoundingClientRect();GFX.burst(r.left+32,r.top+60,["#FFC83A","#fff",WS_C[c]],30,{sp:7,up:4});GFX.ring(r.left+32,r.top+60,"#FFE38A",110,5);}catch(e){}};
+  const step=ts=>{if(!t0)t0=ts;const k=Math.min(1,(ts-t0)/DUR),e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;set(e);if(k<1)raf=requestAnimationFrame(step);else land();};
+  setTimeout(()=>{kySfx("whoosh");raf=requestAnimationFrame(step);},650);
+  const close=()=>{if(!O.isConnected)return;O.classList.add("out");setTimeout(()=>O.remove(),380);};
+  O.onclick=e=>{if(e.target.closest(".kyj-start")){close();return;}if(!done)land();};};
+ const _w=wsWin;wsWin=function(){const r=_w.apply(this,arguments);const O=document.getElementById("ws-ov"),nb=O&&O.querySelector("#ws-next");
+  if(nb){nb.innerHTML="Haritada uç →";nb.onclick=()=>{O.hidden=true;const from=WS.lv,to=from+1,last=WS.T.find(t=>t.length);const c=last?last[0]:0;try{const g=wsG2();g.gi=g.gi||{};g.gi["ws"+to]=Date.now();}catch(e){}
+   wsStart(to);wsPaint();const n=WS.T.length,cc=new Set(WS.T.flat()).size;kyJourney(from,to,{c,chips:[`${cc} renk kuş`,`${n} gövde`]});};}
+  const card=O&&O.querySelector(".ws-card");if(card&&!card.querySelector(".kyj-mini"))card.insertAdjacentHTML("afterbegin",`<b class="kyj-mini">${pick(SHOUT)}</b>`);return r;};
 })();
 /* --- Renk Sırala: dolan şişe kutlaması, bölüm şovu --- */
 (function(){const solvedN=()=>WS?WS.T.filter(t=>t.length===WS_CAP&&t.every(x=>x===t[0])).length:0;let base=0;
