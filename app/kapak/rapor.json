@@ -1,9 +1,11 @@
 {
- "tarih": "2026-11-18 12:12",
+ "tarih": "2026-11-25 13:27",
  "bulunan": {
   "Tante Rosa": "dr",
   "Ruhlar Evi": "dr",
+  "Dört Bin Hafta": "dr",
   "Memleketimden İnsan Manzaraları": "dr",
+  "Bülbülü Öldürmek": "dr",
   "Martin Eden": "dr"
  },
  "bulunamayan": {
@@ -25,12 +27,6 @@
    "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
    "google:HTTPError:HTTP Error 429: Too Many Requests"
   ],
-  "Dört Bin Hafta": [
-   "dr:yok",
-   "idefix:yok",
-   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
-   "google:HTTPError:HTTP Error 429: Too Many Requests"
-  ],
   "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli": [
    "dr:yok",
    "idefix:yok",
@@ -45,12 +41,6 @@
   ],
   "Kayıp Gül": [
    "dr:yok",
-   "idefix:yok",
-   "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
-   "google:HTTPError:HTTP Error 429: Too Many Requests"
-  ],
-  "Bülbülü Öldürmek": [
-   "dr:ValueError:boyut 180x180",
    "idefix:yok",
    "kitapyurdu:HTTPError:HTTP Error 403: Forbidden",
    "google:HTTPError:HTTP Error 429: Too Many Requests"
@@ -81,17 +71,17 @@
   ]
  },
  "kaynak": {
-  "dr": 4
+  "dr": 6
  },
- "toplam": 86,
+ "toplam": 80,
  "boyut": {
-  "orijinal": 4
+  "orijinal": 6
  },
  "dbg": {
   "Bekar ve Mutlu Nasıl Yaşanır?": [
    {
     "q": "Bekar ve Mutlu Nasıl Yaşanır? Jennifer Taitz",
-    "n": 645648,
+    "n": 647248,
     "alts": [
      "Bekar ve Mutlu Nasıl Yaşanır-Doğru Kişiyi Ararken Kendini Kaybetmenin Yolları"
     ],
@@ -104,7 +94,7 @@
    },
    {
     "q": "Bekar ve Mutlu Nasıl Yaşanır?",
-    "n": 645015,
+    "n": 646615,
     "alts": [
      "Bekar ve Mutlu Nasıl Yaşanır-Doğru Kişiyi Ararken Kendini Kaybetmenin Yolları"
     ],
@@ -119,7 +109,7 @@
   "Kurt Seyit ve Şura": [
    {
     "q": "Kurt Seyit ve Şura Nermin Bezmen",
-    "n": 631881,
+    "n": 623761,
     "alts": [
      "Kurt Seyt ve Shura",
      "Peynir ve Kurtlar",
@@ -133,7 +123,7 @@
    },
    {
     "q": "Kurt Seyit ve Şura",
-    "n": 613844,
+    "n": 605724,
     "alts": [
      "Peynir ve Kurtlar",
      "Ayı ve Kurt",
@@ -149,14 +139,14 @@
   "Hayata Röveşata Çeken Adam": [
    {
     "q": "Hayata Röveşata Çeken Adam Fredrik Backman",
-    "n": 411525,
+    "n": 388181,
     "alts": [],
-    "imgs": 62,
+    "imgs": 60,
     "raw": []
    },
    {
     "q": "Hayata Röveşata Çeken Adam",
-    "n": 631016,
+    "n": 624421,
     "alts": [
      "Kızlar &#199;etesi - Adım Adım Hayata"
     ],
@@ -168,41 +158,15 @@
     ]
    }
   ],
-  "Dört Bin Hafta": [
-   {
-    "q": "Dört Bin Hafta Oliver Burkeman",
-    "n": 352066,
-    "alts": [
-     "Anadolu&#39;da D&#246;rt Bin Yılı Yaşayanlar",
-     "Bilim: D&#246;rt Bin Yıllık Bir Tarih"
-    ],
-    "imgs": 59,
-    "raw": []
-   },
-   {
-    "q": "Dört Bin Hafta",
-    "n": 549308,
-    "alts": [
-     "Bilim: D&#246;rt Bin Yıllık Bir Tarih",
-     "Anadolu&#39;da D&#246;rt Bin Yılı Yaşayanlar",
-     "D&#246;rt Kafadarlar Takımı 14-Limandaki Canavar",
-     "Lanark D&#246;rt Kitaplık Bir Hayat",
-     "D&#246;rt Kafadarlar Takımı 44 - Han&#231;er Dişli Kaplanlar",
-     "D&#246;rt Kafadarlar Takımı 13-Uğursuz Kuşun &#214;t&#252;ş&#252;"
-    ],
-    "imgs": 82,
-    "raw": []
-   }
-  ],
   "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli": [
    {
     "q": "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli Adele Faber & Elaine Mazlish",
-    "n": 705588,
+    "n": 695666,
     "alts": [
      "&#199;ocuklarımızla Cinsellik Hakkında Nasıl Konuşmalı?",
      "Gizemli Mağara - &#199;ocuklar i&#231;in Felsefe",
-     "Athena&#39;nın İntikamı - &#199;ocuklar i&#231;in Felsefe",
      "Ş&#246;len - &#199;ocuklar i&#231;in Felsefe",
+     "Athena&#39;nın İntikamı - &#199;ocuklar i&#231;in Felsefe",
      "Her Şeyin Başlangıcı - &#199;ocuklar i&#231;in Felsefe",
      "Muhteşem Atlantis Krallığı - &#199;ocuklar i&#231;in Felsefe"
     ],
@@ -211,12 +175,12 @@
    },
    {
     "q": "Çocuklar Dinlesin Diye Nasıl Konuşmalı, Çocuklar Konuşsun Diye Nasıl Dinlemeli",
-    "n": 700823,
+    "n": 690807,
     "alts": [
      "&#199;ocuklarımızla Cinsellik Hakkında Nasıl Konuşmalı?",
+     "Ş&#246;len - &#199;ocuklar i&#231;in Felsefe",
      "Gizemli Mağara - &#199;ocuklar i&#231;in Felsefe",
      "Athena&#39;nın İntikamı - &#199;ocuklar i&#231;in Felsefe",
-     "Ş&#246;len - &#199;ocuklar i&#231;in Felsefe",
      "Her Şeyin Başlangıcı - &#199;ocuklar i&#231;in Felsefe",
      "Muhteşem Atlantis Krallığı - &#199;ocuklar i&#231;in Felsefe"
     ],
@@ -227,7 +191,7 @@
   "Fi": [
    {
     "q": "Fi Azra Kohen",
-    "n": 346685,
+    "n": 346665,
     "alts": [
      "OFİS,&lt;br&gt;KIRTASİYE",
      "SAP FI",
@@ -235,25 +199,25 @@
     ],
     "imgs": 59,
     "raw": [
-     "<img width='1140px' height='60px' src='//i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/OGRTMENLER-GUNU-HELLO-BAR-OLCULERI_2280-x-120.webp' alt=''>",
+     "<img width='1140px' height='60px' src='//i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/TROY-HelloBar-2280x1120px-kopyasi.webp' alt=''>",
      "<img width='1140px' height='60px' src='//i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/hello-bar-2280-x-120.webp' alt=''>",
      "<img width='1140px' height='60px' src='//i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/MAGAZA-TESLIMAT-HELLO-BAR-KIR_2280-x-120.webp' alt=''>"
     ]
    },
    {
     "q": "Fi",
-    "n": 642341,
+    "n": 642275,
     "alts": [
      "OFİS,&lt;br&gt;KIRTASİYE",
      "Fince S&#246;zl&#252;k: T&#252;rk&#231;e Fince - Fince T&#252;rk&#231;e",
-     "SAP FI",
      "Fi Emanillah",
+     "SAP FI",
      "Fince/T&#252;rk&#231;e-T&#252;rk&#231;e/Fince Cep S&#246;zl&#252;ğ&#252;",
      "Fi Tarihinden Hikayeler"
     ],
     "imgs": 95,
     "raw": [
-     "<img width='1140px' height='60px' src='//i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/OGRTMENLER-GUNU-HELLO-BAR-OLCULERI_2280-x-120.webp' alt=''>",
+     "<img width='1140px' height='60px' src='//i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/TROY-HelloBar-2280x1120px-kopyasi.webp' alt=''>",
      "<img width='1140px' height='60px' src='//i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/hello-bar-2280-x-120.webp' alt=''>",
      "<img width='1140px' height='60px' src='//i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/MAGAZA-TESLIMAT-HELLO-BAR-KIR_2280-x-120.webp' alt=''>"
     ]
@@ -262,7 +226,7 @@
   "Kayıp Gül": [
    {
     "q": "Kayıp Gül Serdar Özkan",
-    "n": 465177,
+    "n": 465157,
     "alts": [
      "Kayıp G&#252;l 2 - &#214;l&#252;ms&#252;z Kalp"
     ],
@@ -274,7 +238,7 @@
    },
    {
     "q": "Kayıp Gül",
-    "n": 668567,
+    "n": 678223,
     "alts": [
      "Kayıp G&#252;l 2 - &#214;l&#252;ms&#252;z Kalp",
      "Kayıp Kiracı",
@@ -294,16 +258,16 @@
   "Evelyn Hugo'nun Yedi Kocası": [
    {
     "q": "Evelyn Hugo'nun Yedi Kocası Taylor Jenkins Reid",
-    "n": 427358,
+    "n": 434524,
     "alts": [
      "Evelyn Hardcastle&#39;ın Yedi &#214;l&#252;m&#252;"
     ],
-    "imgs": 65,
+    "imgs": 66,
     "raw": []
    },
    {
     "q": "Evelyn Hugo'nun Yedi Kocası",
-    "n": 330286,
+    "n": 330267,
     "alts": [
      "Evelyn Hardcastle&#39;ın Yedi &#214;l&#252;m&#252;"
     ],
@@ -314,7 +278,7 @@
   "Ve Sonra Hiç Kalmadı": [
    {
     "q": "Ve Sonra Hiç Kalmadı Agatha Christie",
-    "n": 764324,
+    "n": 765626,
     "alts": [
      "EV VE &lt;br&gt;YAŞAM",
      "Ve Perde İndi",
@@ -326,7 +290,7 @@
    },
    {
     "q": "Ve Sonra Hiç Kalmadı",
-    "n": 626338,
+    "n": 624698,
     "alts": [
      "EV VE &lt;br&gt;YAŞAM",
      "Kopuk ve Hi&#231;",
@@ -342,7 +306,7 @@
   "Şimdinin Gücü": [
    {
     "q": "Şimdinin Gücü Eckhart Tolle",
-    "n": 494018,
+    "n": 496577,
     "alts": [],
     "imgs": 67,
     "raw": [
@@ -353,7 +317,7 @@
    },
    {
     "q": "Şimdinin Gücü",
-    "n": 692843,
+    "n": 693254,
     "alts": [
      "Şimdinin Bilgeliği"
     ],
@@ -368,10 +332,11 @@
   "Keşke Ailemin Okuduğu Bir Kitap Olsaydı": [
    {
     "q": "Keşke Ailemin Okuduğu Bir Kitap Olsaydı Philippa Perry",
-    "n": 661040,
+    "n": 659293,
     "alts": [
      "Keşke T&#252;m Sevdiklerim De Okusa Dediğiniz Kitap",
      "Keşke Zamanım Olsaydı",
+     "Keşke - Sessiz Kitap",
      "Bir K&#246;y Enstit&#252;s&#252; - Keşke",
      "Keşke Bir &#214;p&#252;p Koklasaydım"
     ],
@@ -384,9 +349,10 @@
    },
    {
     "q": "Keşke Ailemin Okuduğu Bir Kitap Olsaydı",
-    "n": 659553,
+    "n": 657806,
     "alts": [
      "Keşke Zamanım Olsaydı",
+     "Keşke - Sessiz Kitap",
      "Bir K&#246;y Enstit&#252;s&#252; - Keşke",
      "Keşke Bir &#214;p&#252;p Koklasaydım",
      "Keşke T&#252;m Sevdiklerim De Okusa Dediğiniz Kitap"
