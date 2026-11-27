@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated": "2026-11-17",
+ "updated": "2026-11-27",
  "note": "Me First Sahne & Perde. sahne: [id,ad,tur(tiyatro|konser|cocuk|standup|dans|opera),baslangic,bitis|'',saat|'',mekan,il,link,kisa not,gorsel]. vizyon: [id,Türkçe ad,özgün ad,vizyon tarihi,tür,tek satır (kendi cümlesi),link,afis]. afis: {film_id: afis url}",
  "sahne": [
   [
@@ -30,71 +30,6 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/sefiller-202612616037fdd82e30d5ab4b48b7e11e51d4f5e926.jpg"
   ],
   [
-   "t20261117-elma-kurdu-kirtik",
-   "Elma Kurdu Kırtık",
-   "cocuk",
-   "2026-11-17",
-   "",
-   "13:00",
-   "Sarıyer Boğaziçi Kültür Merkezi",
-   "İstanbul",
-   "https://www.timeturk.com/elma-kurdu-kirtik-17-kasimda-sariyerde-sahnelenecek",
-   "İBB Şehir Tiyatroları çocuk oyunu, Sarıyer temsili.",
-   ""
-  ],
-  [
-   "t20261117-farelerveinsanlar-trabzon",
-   "Fareler ve İnsanlar",
-   "tiyatro",
-   "2026-11-17",
-   "",
-   "20:00",
-   "KTÜ AKM Salonu",
-   "Trabzon",
-   "https://iticket.com.tr/en/events/theatre/trabzon/fareler-ve-insanlar-17-kasim-trabzon-bilet",
-   "Steinbeck uyarlaması",
-   "https://cdn.iticket.com.tr/cdn-cgi/image/width=1400,height=470,quality=92,format=auto/event/cover/7hndd8m1Z1aBaEHQouqV1BI19eJAjNhjO0PBJWYC.jpg"
-  ],
-  [
-   "t20261117-konken-antep",
-   "Konken Partisi",
-   "tiyatro",
-   "2026-11-17",
-   "",
-   "20:00",
-   "Devlet Tiyatroları Şehitkamil Sahnesi",
-   "Gaziantep",
-   "https://biletsirasi.com/tiyatro/konken-partisi-tiyatro",
-   "Melek Baykal ve Mehmet Atay'lı turne komedisi",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/konken-partisi-20251223174318630f035dbd444a9eac72dcee7a3a5fbb.jpg"
-  ],
-  [
-   "t20261117-scapin-bursa",
-   "Scapin ve Yeni Dolapları",
-   "tiyatro",
-   "2026-11-17",
-   "2026-11-21",
-   "20:00",
-   "Ahmet Vefik Paşa Sahnesi",
-   "Bursa",
-   "https://tiyatrolar.com.tr/tiyatro/scapin-ve-yeni-dolaplari",
-   "Bursa DT; 21 Kasım'da 15:00 ek seans var.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/scapin-ve-yeni-dolaplari-20261271119469c2449e219324239b7c50396e1aeaf8a.jpg"
-  ],
-  [
-   "t20261117-unutmak-eskisehir",
-   "Unutmak",
-   "tiyatro",
-   "2026-11-17",
-   "2026-11-19",
-   "20:00",
-   "Haldun Dormen Sahnesi",
-   "Eskişehir",
-   "https://www.eskisehir.net/eskisehir-sehir-tiyatrolarinin-kasim-ayi-oyun-takvimi-aciklandi",
-   "Eskişehir Büyükşehir Şehir Tiyatroları",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/unutmak-ebb-202635111733d622af45a7da4113a4e114368b9379e3.jpg"
-  ],
-  [
    "t20261117-cephedepiknik-ankara",
    "Cephede Piknik",
    "tiyatro",
@@ -106,45 +41,6 @@
    "https://biletinial.com/tr-tr/tiyatro/cephede-piknik?cinemaBranchId=1246",
    "Arrabal'ın absürt savaş oyunu, yön. Ergin Özdemir; 55 dakika.",
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/cephede-piknik-202612613565747ece1dbdcd44a091dba1a12877086e.jpg"
-  ],
-  [
-   "t20261117-ivi-buradaydi",
-   "Sanatçısı Belirsiz İvi Buradaydı",
-   "tiyatro",
-   "2026-11-17",
-   "",
-   "",
-   "Leyla Gencer Opera ve Sanat Merkezi, Bakırköy",
-   "İstanbul",
-   "https://www.evrensel.net/haber/6005069/istanbul-tiyatro-festivali-22-ekimde-basliyor-programda-17-gosteri-var",
-   "İstanbul Tiyatro Festivali; İngilizce üstyazılı, Tilbe Saran'a onur ödülü.",
-   ""
-  ],
-  [
-   "t20261117-romeo-juliet-mersin",
-   "Romeo ve Juliet",
-   "opera",
-   "2026-11-17",
-   "",
-   "",
-   "Mersin Kültür Merkezi",
-   "Mersin",
-   "https://biletinial.com/tr-tr/mekan/mersin-devlet-opera-balesi",
-   "MDOB balesi; 19 Kasım'da da sahnede.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/romeo-juliet-mersin-dob-2026102115564385c695a2d3f54609b44a01b671864a14.jpg"
-  ],
-  [
-   "t20261117-rustemoglu-cemal-izmir",
-   "Rüstemoğlu Cemal'in Tuhaf Hikâyesi",
-   "tiyatro",
-   "2026-11-17",
-   "2026-11-21",
-   "",
-   "Karşıyaka Ragıp Haykır Sahnesi",
-   "İzmir",
-   "https://www.egeyedair.com/izmirde-kasim-perdesi-acildi-konserler-sergiler-ve-tiyatro-oyunlari/52690",
-   "İzmir Devlet Tiyatrosu yapımı; 27-28 Kasım'da Urla AKM'de de oynanıyor.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/rustemoglu-cemalin-tuhaf-hikayesi-izmir-dt-2025129919373630665738cc460a860f3d9ee73d5fba.jpg"
   ],
   [
    "t20261117-triyandafilis-ankara",
@@ -160,266 +56,6 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/sen-de-gitme-triyandafilis-2026126144413254dc8ab785641e694816a3fbfdfac5f.jpg"
   ],
   [
-   "t20261117-umudunu-yitirmeyen-sigircik-adana",
-   "Umudunu Yitirmeyen Sığırcık",
-   "cocuk",
-   "2026-11-17",
-   "2026-11-18",
-   "",
-   "Ramazanoğlu Fuaye Sahnesi",
-   "Adana",
-   "https://biletinial.com/tr-tr/mekan/adana-devlet-tiyatro-cafe",
-   "Adana DT Filozof Çocuklar Projesi; 15 Kasım'da da var.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/umudunu-yitirmeyen-sigircik-filozof-cocuklar-projesi-adana-dt-20261014104753ab6bbfdeca924265b49518c2b27fb0af.jpg"
-  ],
-  [
-   "t20261118-tuz-biber-mk",
-   "Tuz Biber Stand-up (Öğrenci Matinesi)",
-   "standup",
-   "2026-11-18",
-   "",
-   "15:00",
-   "Muammer Karaca Tiyatrosu, Beyoğlu",
-   "İstanbul",
-   "https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
-   "Öğrencilere yönelik gündüz stand-up matinesi.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ogrenci-matinesi-tuz-biber-stand-up-202611613142191cf8abbe9174d4d89b40464321f3404.png"
-  ],
-  [
-   "t20261118-ay-tedirginligi",
-   "Ay Tedirginliği",
-   "tiyatro",
-   "2026-11-18",
-   "",
-   "20:00",
-   "Ataköy Baruthane Sahnesi, Bakırköy",
-   "İstanbul",
-   "https://www.evrensel.net/haber/6007246/bakirkoy-belediye-tiyatrolari-kasim-ayinda-9-oyun-sahneleyecek",
-   "Özen Yula oyunu; Ataköy Marmaray'dan ücretsiz servis var.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ay-tedirginligi-bb-20261101034268c4a51e6a10448eca291bfdb7977d1ea.jpg"
-  ],
-  [
-   "t20261118-fareler-ve-insanlar-ordu",
-   "Fareler ve İnsanlar",
-   "tiyatro",
-   "2026-11-18",
-   "",
-   "20:00",
-   "Ordu Atatürk Kültür Merkezi",
-   "Ordu",
-   "https://iticket.com.tr/en/events/theatre/ordu/fareler-ve-insanlar-18-kasim-ordu-bilet",
-   "Steinbeck'in klasik romanından uyarlanan oyun Ordu'da sahnede.",
-   "https://cdn.iticket.com.tr/cdn-cgi/image/width=1400,height=470,quality=92,format=auto/event/cover/dbXRyuMgZCQC7HcRpVf8CRfcZgcwy3JkunGHlARu.jpg"
-  ],
-  [
-   "t20261118-gercekbiroperaaksami",
-   "\"Gerçek\" Bir Opera Akşamı - I (İDOB)",
-   "opera",
-   "2026-11-18",
-   "",
-   "20:00",
-   "AKM Tiyatro Salonu",
-   "İstanbul",
-   "https://sanatcepte.com/etkinlik/etkinlik-detay/gercek-bir-opera-aksami-idob-akm",
-   "",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/gercek-bir-opera-aksami-idob-2026111012593876dbb3ab333b45ad9554e41ffa0f1c7e.jpg"
-  ],
-  [
-   "t20261118-savastayasam-izmir",
-   "Savaşta Yaşam",
-   "tiyatro",
-   "2026-11-18",
-   "",
-   "20:00",
-   "Torbalı İsmail Uygur Kültür Merkezi",
-   "İzmir",
-   "https://www.izmir.art/tr/kentte-tiyatro-ruzgari-esecek-14-uluslararasi-izmir-tiyatro-festivali-basliyor",
-   "İranlı İran Oynar Theater topluluğu; festival konuğu.",
-   ""
-  ],
-  [
-   "t20261118-taziye-antalya",
-   "Taziye",
-   "tiyatro",
-   "2026-11-18",
-   "2026-11-21",
-   "20:00",
-   "Haşim İşcan Kültür Merkezi",
-   "Antalya",
-   "https://www.antalyakorfez.com/antalya-devlet-tiyatrosunun-kasim-programi-aciklandi",
-   "Antalya Devlet Tiyatrosu kasım programında.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/taziye-202691016254ac3e287cd3aa4bf5a73ce39d4d71a79a.jpeg"
-  ],
-  [
-   "t20261118-dorantes",
-   "Aytaç Doğan, İsmail Tunçbilek & Dorantes",
-   "konser",
-   "2026-11-18",
-   "",
-   "20:30",
-   "Muammer Karaca Tiyatrosu",
-   "İstanbul",
-   "https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
-   "Kanun, bağlama ve flamenko piyanosu bir arada",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/aytac-dogan-ismail-tuncbilek-dorantes-gitanos-del-mediterraneo-202611131319358e3d60facdb46ecba533cba7de03feb.png"
-  ],
-  [
-   "t20261118-eliotttordo-samsun",
-   "Eliott Tordo",
-   "konser",
-   "2026-11-18",
-   "",
-   "20:30",
-   "Atakum Belediyesi Ata Sahne",
-   "Samsun",
-   "https://iticket.com.tr/en/events/concerts/samsun/eliott-tordo-konseri-18-kasim-samsun-bilet",
-   "",
-   "https://cdn.iticket.com.tr/cdn-cgi/image/width=1400,height=470,quality=92,format=auto/event/cover/e1IgZUXfwfq453Jwgwc3vxm7WohpHr6J.jpg"
-  ],
-  [
-   "t20261118-sibelcan-epicsymphony-ankara",
-   "An Epic Symphony & Sibel Can",
-   "konser",
-   "2026-11-18",
-   "",
-   "21:00",
-   "CSO Ada Ankara Ana Salon",
-   "Ankara",
-   "https://konserbilet.com/takvim/kasim-2026/ankara",
-   "Sibel Can şarkıları senfonik düzenlemelerle",
-   "https://www.biletix.com/static/images/live/event/eventimages/sibelcan_gorsel.png"
-  ],
-  [
-   "t20261118-emreaydin-urfa",
-   "Emre Aydın",
-   "konser",
-   "2026-11-18",
-   "",
-   "",
-   "Mehmet Akif İnan Konferans Salonu (Urfa City AVM)",
-   "Şanlıurfa",
-   "https://www.songkick.com/fr/concerts/43352457-emre-aydin-at-urfa-city-avm",
-   "Kapı açılışı 20:30",
-   "https://www.biletix.com/static/images/live/event/groupimages/emreaydinn-grupp.png"
-  ],
-  [
-   "t20261119-sivasta108gun-sivas",
-   "Sivas'ta 108 Gün",
-   "tiyatro",
-   "2026-11-19",
-   "",
-   "19:30",
-   "Atatürk Kültür Merkezi Sahnesi",
-   "Sivas",
-   "https://www.etkinlinkler.com/sivas/etkinlikler",
-   "Sivas Devlet Tiyatrosu; Milli Mücadele dönemini anlatıyor",
-   ""
-  ],
-  [
-   "t20261119-babil-kuleleri",
-   "Babil Kuleleri",
-   "tiyatro",
-   "2026-11-19",
-   "",
-   "20:00",
-   "Leyla Gencer Opera ve Sanat Merkezi, Bakırköy",
-   "İstanbul",
-   "https://www.evrensel.net/haber/6007246/bakirkoy-belediye-tiyatrolari-kasim-ayinda-9-oyun-sahneleyecek",
-   "Bakırköy Belediye Tiyatroları temsili.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/babil-kuleleri-202612119541034a6ce90ad184bcf8c020db94f74d836.jpg"
-  ],
-  [
-   "t20261119-dugunvedavul-kayseri",
-   "Düğün ve Davul",
-   "tiyatro",
-   "2026-11-19",
-   "2026-11-21",
-   "20:00",
-   "Kayseri Devlet Tiyatrosu",
-   "Kayseri",
-   "https://kayham.erciyes.edu.tr/EditorUpload/Files/november-event-schedule_72OvnMN8NML.pdf",
-   "21 Kasım'da 15:00 ve 20:00 iki seans",
-   ""
-  ],
-  [
-   "t20261119-lgtyoungsoloists",
-   "LGT Young Soloists",
-   "konser",
-   "2026-11-19",
-   "",
-   "20:00",
-   "Cemal Reşit Rey Konser Salonu",
-   "İstanbul",
-   "https://tr.euronews.com/2026/10/30/tekfen-filarmoniden-gevendeye-crr-kasim-konserleri-aciklandi",
-   "Genç solistlerden oluşan yaylı topluluğu.",
-   "https://www.biletix.com/static/images/live/event/eventimages/5CRRX-26su.png"
-  ],
-  [
-   "t20261119-lucia",
-   "Lucia di Lammermoor (İDOB)",
-   "opera",
-   "2026-11-19",
-   "",
-   "20:00",
-   "AKM Türk Telekom Opera Salonu",
-   "İstanbul",
-   "https://sanatcepte.com/etkinlik/etkinlik-detay/lucia-di-lammermoor-idob-akm",
-   "Donizetti operası; 21 Kasım'da da sahnede.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/lucia-di-lammermoor-idob-202611295942af93db75721844d38f78bb085ab70eeb.jpg"
-  ],
-  [
-   "t20261119-kirac-kokler-kayseri",
-   "Kıraç'la Kökler",
-   "konser",
-   "2026-11-19",
-   "",
-   "20:30",
-   "Erciyes Kültür Merkezi",
-   "Kayseri",
-   "https://kayham.erciyes.edu.tr/EditorUpload/Files/november-event-schedule_72OvnMN8NML.pdf",
-   "",
-   ""
-  ],
-  [
-   "t20261119-saksakcilar",
-   "Şakşakçılar",
-   "tiyatro",
-   "2026-11-19",
-   "",
-   "20:30",
-   "Muammer Karaca Tiyatrosu",
-   "İstanbul",
-   "https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
-   "",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/saksakcilar-2026102315475753c5c0d68a5e485faddde4448241418b.jpg"
-  ],
-  [
-   "t20261119-ilhanersahin-ankara",
-   "İlhan Erşahin",
-   "konser",
-   "2026-11-19",
-   "",
-   "21:00",
-   "IF Performance Hall (Kavaklıdere)",
-   "Ankara",
-   "https://songkick.com/concerts/43366737-ilhan-ersahin-at-if-performance-hall",
-   "Saat kapı açılışı; caz saksafoncusu.",
-   ""
-  ],
-  [
-   "t20261119-agir-roman-adana",
-   "Ağır Roman",
-   "tiyatro",
-   "2026-11-19",
-   "2026-11-21",
-   "",
-   "Ramazanoğlu Kültür Merkezi",
-   "Adana",
-   "https://biletinial.com/tr-tr/mekan/adana-devlet-tiyatro-cafe",
-   "Metin Kaçan uyarlaması, 16 yaş üstü.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/agir-roman-20251017162533f99839621c034c73a67db74327c45d3d.jpg"
-  ],
-  [
    "t20261119-findikkiran-antalya",
    "Fındıkkıran",
    "opera",
@@ -433,45 +69,6 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/findikkiran-antalya-dob-2025119124751a8dda184bf1248e0b6b880ddafe178a7.jpg"
   ],
   [
-   "t20261119-okan-cabalar-adana",
-   "Okan Çabalar Stand Up",
-   "standup",
-   "2026-11-19",
-   "",
-   "",
-   "Adana 01 Burda PGM",
-   "Adana",
-   "https://biletinial.com/tr-tr/tiyatro/adana",
-   "",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/okan-cabalar-2024117104626f0acd3fb4bbc4fd092b269103b8ae49c.png"
-  ],
-  [
-   "t20261119-on-ikinci-gece-kocaeli",
-   "On İkinci Gece",
-   "tiyatro",
-   "2026-11-19",
-   "2026-11-21",
-   "",
-   "Süleyman Demirel Kültür Merkezi - Büyük Salon",
-   "Kocaeli",
-   "https://biletinial.com/tr-tr/tiyatro/on-ikinci-gece-kocaeli-bb",
-   "Shakespeare komedisi Kocaeli Şehir Tiyatroları yapımıyla üç akşam sahnede.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/on-ikinci-gece-kocaeli-buyuksehir-20261031185339759cb1fd9cdb4b8da9777feed1cccd04.jpg"
-  ],
-  [
-   "t20261119-ozgur-turhan-izmir",
-   "Özgür Turhan - Yepyenisi",
-   "standup",
-   "2026-11-19",
-   "",
-   "",
-   "Bostanlı Suat Taşer Salonu",
-   "İzmir",
-   "https://biletinial.com/tr-tr/tiyatro/ozgur-turhan-yepyenisi",
-   "Özgür Turhan'ın yeni stand-up gösterisi.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ozgur-turhan-yepyenisi-2026130175056babb6b85a98147238ce997fcc8092e0f.jpg"
-  ],
-  [
    "t20261119-yastikadam-konya",
    "Yastık Adam",
    "tiyatro",
@@ -483,539 +80,6 @@
    "https://biletinial.com/tr-tr/mekan/konya-devlet-tiyatrosu",
    "Martin McDonagh oyunu; aralıktaki günlerde temsiller",
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/yastik-adam-konya-dt-202610211416060064cec2eee4a8a9293b0e6f11d9ab4.jpeg"
-  ],
-  [
-   "t20261120-anne-kafamda-bit-var",
-   "Anne Kafamda Bit Var",
-   "tiyatro",
-   "2026-11-20",
-   "2026-11-21",
-   "20:00",
-   "Leyla Gencer Opera ve Sanat Merkezi, Bakırköy",
-   "İstanbul",
-   "https://www.evrensel.net/haber/6008775/bakirkoy-belediye-tiyatrolarinda-4-farkli-oyun-tiyatroseverlerle-bulusacak",
-   "Tarık Akan'ın otobiyografik eserinden uyarlama.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/anne-kafamda-bit-var-bbt-2026217164352f01161322a174c2198c9e770a5c6099e.jpg"
-  ],
-  [
-   "t20261120-crrcaz",
-   "CRR Caz Orkestrası & Aubrey Logan",
-   "konser",
-   "2026-11-20",
-   "",
-   "20:00",
-   "Cemal Reşit Rey Konser Salonu",
-   "İstanbul",
-   "https://tr.euronews.com/2026/10/30/tekfen-filarmoniden-gevendeye-crr-kasim-konserleri-aciklandi",
-   "Konuk: Aubrey Logan ve Sezin Ahmet Türkmenoğlu.",
-   "https://www.biletix.com/static/images/live/event/eventimages/5CRSA_19201080.png"
-  ],
-  [
-   "t20261120-csofilm-ankara",
-   "CSO: Film Müzikleri Hollywood'dan Cinecittà'ya",
-   "konser",
-   "2026-11-20",
-   "",
-   "20:00",
-   "CSO Ada Ankara Ziraat Bankası Ana Salon",
-   "Ankara",
-   "https://www.sanatcepte.gov.tr/etkinlik/etkinlik-detay/cso-denizbank-konserleri-film-muzikleri-hollywooddan-cinecittaya-cso",
-   "Şef Alessandro Cedrone; sinema tarihinin unutulmaz müzikleri.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/cumhurbaskanligi-senfoni-orkestrasi-denizbank-konserleri-film-muzikleri-hollywo-20261016201328f262d58190ff4d12801b37361111fba6.jpg"
-  ],
-  [
-   "t20261120-hisseliharikalar-izmir",
-   "Hisseli Harikalar Kumpanyası",
-   "tiyatro",
-   "2026-11-20",
-   "2026-11-22",
-   "20:00",
-   "Sahne Tozu Tiyatrosu Haldun Dormen Sahnesi",
-   "İzmir",
-   "https://izmirmag.net/tiyatro/",
-   "20-21 Kasım 20:00, 22 Kasım 14:00 seansı.",
-   ""
-  ],
-  [
-   "t20261120-macbeth-eskisehir",
-   "Macbeth",
-   "tiyatro",
-   "2026-11-20",
-   "2026-11-22",
-   "20:00",
-   "Büyükşehir Belediyesi Sanat ve Kültür Merkezi Tiyatro Sahnesi",
-   "Eskişehir",
-   "https://www.eskisehir.net/eskisehir-sehir-tiyatrolarinin-kasim-ayi-oyun-takvimi-aciklandi",
-   "Şehir Tiyatroları; 22 Kasım seansı 18:00",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/macbeth-ebb-20202139552.jpg"
-  ],
-  [
-   "t20261120-pinokyoexe",
-   "Pinokyo.exe (İDOB)",
-   "dans",
-   "2026-11-20",
-   "",
-   "20:00",
-   "Süreyya Opera Sahnesi (Kadıköy)",
-   "İstanbul",
-   "https://sanatcepte.com/etkinlik/etkinlik-detay/pinokyo-istanbul-dob",
-   "Modern dans; ayrıca 4, 8, 11, 14 Aralık.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/pinokyoexe-istanbul-dob-20268271550404483e384e5c9440b9dcd8f145daaa453.jpg"
-  ],
-  [
-   "t20261120-soytarilar-antep",
-   "Soytarılar",
-   "tiyatro",
-   "2026-11-20",
-   "",
-   "20:00",
-   "Gaziantep Devlet Tiyatrosu Şehit Kamil Sahnesi",
-   "Gaziantep",
-   "https://tiyatrolar.com.tr/sahnedekiler/?il=27",
-   "",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/soytarilar-tiyatro-oyunu-20266162022662bb99a45fc14c8a8ed3063f63cb5fb8.jpg"
-  ],
-  [
-   "t20261120-altinejderha-izmir",
-   "Altın Ejderha",
-   "tiyatro",
-   "2026-11-20",
-   "",
-   "20:30",
-   "Peron Sahne (Bornova)",
-   "İzmir",
-   "https://www.izmir.art/tr/kentte-tiyatro-ruzgari-esecek-14-uluslararasi-izmir-tiyatro-festivali-basliyor",
-   "Bornova Belediyesi Şehir Tiyatrosu; İzmir Tiyatro Festivali kapsamında.",
-   ""
-  ],
-  [
-   "t20261120-antalya-dso-gurer-aykal",
-   "Antalya DSO - Gürer Aykal Yönetiminde",
-   "konser",
-   "2026-11-20",
-   "",
-   "20:30",
-   "AKM Aspendos Salonu",
-   "Antalya",
-   "https://antalyakenthaber.com/antalyada-kis-aksamlari-icin-klasik-muzik-konserleri-hangi-salonlarda-47554",
-   "Weber ve Çaykovski 5. Senfoni.",
-   ""
-  ],
-  [
-   "t20261120-celile",
-   "Celile",
-   "tiyatro",
-   "2026-11-20",
-   "",
-   "20:30",
-   "Muammer Karaca Tiyatrosu",
-   "İstanbul",
-   "https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
-   "",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/celile-nazim-hikmetin-annesi-202697194512d7637954e571479a85983d49d8a99d1d.jpg"
-  ],
-  [
-   "t20261120-annakarenina-eifman-ankara",
-   "Anna Karenina – Eifman Ballet St. Petersburg",
-   "opera",
-   "2026-11-20",
-   "",
-   "21:00",
-   "Congresium Ankara",
-   "Ankara",
-   "https://konserbilet.com/takvim/kasim-2026/ankara",
-   "Boris Eifman'ın Rus bale topluluğu Ankara'da",
-   "https://www.biletix.com/static/images/live/event/eventimages/anna-30-7-26.png"
-  ],
-  [
-   "t20261120-altin-gun-izmir",
-   "Altın Gün",
-   "konser",
-   "2026-11-20",
-   "",
-   "",
-   "İzmir Arena",
-   "İzmir",
-   "https://www.egeyedair.com/izmirde-kasim-perdesi-acildi-konserler-sergiler-ve-tiyatro-oyunlari/52690",
-   "Psikedelik Anadolu rock grubu İzmir'de.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/altin-gun-2026321234248dd3e9fd94c417fabb40d0b69b2d943.jpg"
-  ],
-  [
-   "t20261120-halilsezai-izmir",
-   "Halil Sezai",
-   "konser",
-   "2026-11-20",
-   "",
-   "",
-   "SoldOut Performance Hall",
-   "İzmir",
-   "https://www.songkick.com/concerts/43359862-halil-sezai-at-soldout-performance-hall",
-   "Kapılar 21:00'de açılıyor.",
-   "https://www.biletix.com/static/images/live/event/eventimages/5WL85-26su.png"
-  ],
-  [
-   "t20261120-korayavci-antep",
-   "Koray Avcı",
-   "konser",
-   "2026-11-20",
-   "",
-   "",
-   "Jolly Joker Gaziantep",
-   "Gaziantep",
-   "https://www.songkick.com/de/concerts/43331082-koray-avci-at-jolly-joker-gaziantep",
-   "Kapı açılışı 21:00",
-   ""
-  ],
-  [
-   "t20261120-mizojini-manisa",
-   "Mizojini (Küller ve Hatıralar)",
-   "tiyatro",
-   "2026-11-20",
-   "",
-   "",
-   "Manisa BB Şehir Tiyatrosu Uğur Mumcu Sahnesi",
-   "Manisa",
-   "https://biletinial.com/tr-tr/tiyatro/mizojini-kuller-ve-hatiralar-manisa-bb",
-   "Manisa Şehir Tiyatrosu oyunu; 25 ve 27 Kasım'da da sahnelenecek.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/mizojini-kuller-ve-hatiralar-manisa-bb-2026102692516b4f9dc526ac44f25bb9cd3fe61f3e43f.png"
-  ],
-  [
-   "t20261121-bluesonblues-izmir",
-   "Blues on Blues: The Old Ramblers",
-   "konser",
-   "2026-11-21",
-   "",
-   "20:00",
-   "Bergama Vapuru (Konak İskelesi kalkışlı)",
-   "İzmir",
-   "https://www.izmir.art/tr/izmir-korfezi-nde-blues-ruzgari-yeniden-esecek",
-   "Körfezde vapur üstünde yaklaşık iki saatlik blues konseri.",
-   ""
-  ],
-  [
-   "t20261121-bsoraiskin-ankara",
-   "Bilkent Senfoni: Daniel Raiskin & Ilia Rayskin",
-   "konser",
-   "2026-11-21",
-   "",
-   "20:00",
-   "Bilkent Konser Salonu",
-   "Ankara",
-   "https://bso.bilkent.edu.tr/tr/index.php/sezon-konserleri",
-   "Copeland 'Tyrant's Crush' ve Glazunov 5. Senfoni.",
-   "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1024,h_1024/https://bso.bilkent.edu.tr/tr/wp-content/uploads/2026/10/1080x1080.jpg"
-  ],
-  [
-   "t20261121-karmakarisik",
-   "Karmakarışık",
-   "tiyatro",
-   "2026-11-21",
-   "",
-   "20:00",
-   "Muammer Karaca Tiyatrosu",
-   "İstanbul",
-   "https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
-   "",
-   ""
-  ],
-  [
-   "t20261121-ladymacbeth-malatya",
-   "Lady Macbeth",
-   "tiyatro",
-   "2026-11-21",
-   "",
-   "20:00",
-   "Malatya Kongre ve Kültür Merkezi Kemal Sunal Salonu",
-   "Malatya",
-   "https://concerts.consequence.net/events/ozge-durmuscan-at-malatya-kongre-ve-kultur-merkezi-kemal-sunal-salonu-on-2026-11-21-20-00",
-   "Özge Durmuşcan'ın uyarlayıp yönettiği tek kişilik oyun",
-   ""
-  ],
-  [
-   "t20261121-alevligunler-antep",
-   "Alevli Günler",
-   "tiyatro",
-   "2026-11-21",
-   "",
-   "20:30",
-   "Gaziantep Devlet Tiyatrosu Şehit Kamil Sahnesi",
-   "Gaziantep",
-   "https://tiyatrolar.com.tr/sahnedekiler/?il=27",
-   "",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/alevli-gunler-20231024172253b5710e217a344f09be2fc896584cea18.jpg"
-  ],
-  [
-   "t20261121-benmiyapmisim-izmir",
-   "Ersin Korkut – Ben mi Yapmışım?",
-   "standup",
-   "2026-11-21",
-   "",
-   "20:30",
-   "Bostanlı Suat Taşer Tiyatrosu",
-   "İzmir",
-   "https://biletinial.com/tr-tr/tiyatro/izmir",
-   "Ersin Korkut'un tek kişilik gösterisi.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ben-mi-yapmisim-20269241131262d300f571d554b8885b153340112a727.jpg"
-  ],
-  [
-   "t20261121-gayesuakyol",
-   "Garanti BBVA Genç Konserleri: Neo Turkish Psych by Gaye Su Akyol",
-   "konser",
-   "2026-11-21",
-   "",
-   "21:00",
-   "Zorlu PSM Turkcell Sahnesi",
-   "İstanbul",
-   "https://www.biletix.com/etkinlik/55GAV/TURKIYE/tr/garanti-bbva-genc-konserleri-neo-turkish-psych-by-gaye-su-akyol-21-11-2026-istanbul",
-   "",
-   "https://www.zorlupsm.com/medium/Activity/Image/8112ecad-930c-4726-a9fd-b11b914e1775"
-  ],
-  [
-   "t20261121-sonersarikabadayi-trabzon",
-   "Soner Sarıkabadayı",
-   "konser",
-   "2026-11-21",
-   "",
-   "21:00",
-   "KTÜ AKM Salonu",
-   "Trabzon",
-   "https://iticket.com.tr/en/events/concerts/trabzon/soner-sarikabadayi-konseri-21-kasim-trabzon-bilet",
-   "",
-   "https://cdn.iticket.com.tr/cdn-cgi/image/width=1400,height=470,quality=92,format=auto/event/cover/qE5UyXGlFzQhDKCDwjlVXbVyq44KbaF9.jpg"
-  ],
-  [
-   "t20261121-dus-payi-denizli",
-   "Düş Payı",
-   "tiyatro",
-   "2026-11-21",
-   "",
-   "",
-   "Denizli Merkezefendi Belediyesi KM Servergazi Salonu",
-   "Denizli",
-   "https://biletinial.com/tr-tr/tiyatro/dus-payi",
-   "",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/dus-payi-2026827218293b32e77d0ade4108a5ebbfe8d02bed85.png"
-  ],
-  [
-   "t20261121-serdarortac-izmir",
-   "Serdar Ortaç",
-   "konser",
-   "2026-11-21",
-   "",
-   "",
-   "Balçova Termal Otel",
-   "İzmir",
-   "https://www.songkick.com/concerts/43443594-serdar-ortac-at-balcova-termal-otel",
-   "Kapılar 21:00.",
-   ""
-  ],
-  [
-   "t20261121-tosca-mersin",
-   "Tosca",
-   "opera",
-   "2026-11-21",
-   "",
-   "",
-   "Mersin Kültür Merkezi",
-   "Mersin",
-   "https://biletinial.com/tr-tr/mekan/mersin-devlet-opera-balesi",
-   "Mersin Devlet Opera ve Balesi.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/tosca-mersin-dob-20269281658e589b1f6c7f2494e9bcfd8ba691dc2aa.jpg"
-  ],
-  [
-   "t20261122-denizkizi",
-   "Deniz Kızı Mia",
-   "cocuk",
-   "2026-11-22",
-   "",
-   "13:00",
-   "Muammer Karaca Tiyatrosu",
-   "İstanbul",
-   "https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
-   "Çocuk oyunu",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/deniz-kizi-mia-2026111313301423f211749cd24f2197c7513d44a4b492.png"
-  ],
-  [
-   "t20261122-elsa-sihirli-macera-corum",
-   "Elsa: Sihirli Macera",
-   "cocuk",
-   "2026-11-22",
-   "",
-   "13:00",
-   "Çorum Devlet Tiyatrosu",
-   "Çorum",
-   "https://www.biletix.com/etkinlik/5YSN6/TURKIYE/tr/elsa-sihirli-macera-22-11-2026-corum",
-   "Karlar Ülkesi'nden uyarlanan aile oyunu; 13:00, 15:00 ve 17:00 seansları var.",
-   "https://www.biletix.com/static/images/live/event/eventimages/5YSN5-91126su.png"
-  ],
-  [
-   "t20261122-sihirli-oyuncak",
-   "Sihirli Oyuncak",
-   "cocuk",
-   "2026-11-22",
-   "",
-   "13:00",
-   "Leyla Gencer Opera ve Sanat Merkezi, Bakırköy",
-   "İstanbul",
-   "https://www.evrensel.net/haber/6008775/bakirkoy-belediye-tiyatrolarinda-4-farkli-oyun-tiyatroseverlerle-bulusacak",
-   "Bakırköy Belediye Tiyatroları çocuk oyunu.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/sihirli-oyuncak-20251226204644dadfd40aefdc47939e3dc1b402c12e1b.jpg"
-  ],
-  [
-   "t20261122-idammahkumu-antep",
-   "Bir İdam Mahkumunun Son Günü",
-   "tiyatro",
-   "2026-11-22",
-   "",
-   "18:15",
-   "Gaziantep Bir Başka Tiyatro",
-   "Gaziantep",
-   "https://iticket.com.tr/en/events/theatre/gaziantep/bir-idam-mahkumunun-son-gunu-ekim-kasim-aralik-gaziantep-bilet",
-   "Victor Hugo uyarlaması; 6 Aralık 16:00'da da sahnede",
-   "https://cdn.iticket.com.tr/cdn-cgi/image/width=1400,height=470,quality=92,format=auto/event/cover/nZmONRDnvZeTzV48vJkpg7htKVuznn5J.jpg"
-  ],
-  [
-   "t20261122-masumiyetmuzesi-antep",
-   "Masumiyet Müzesi",
-   "tiyatro",
-   "2026-11-22",
-   "",
-   "19:30",
-   "Gaziantep Bir Başka Tiyatro",
-   "Gaziantep",
-   "https://iticket.com.tr/en/events/theatre/gaziantep/masumiyet-muzesi-ekim-kasim-aralik-gaziantep-bilet",
-   "Kemal ile Füsun'un hikayesi; 6 Aralık 17:00'de tekrar",
-   "https://cdn.iticket.com.tr/cdn-cgi/image/width=1400,height=470,quality=92,format=auto/event/cover/wYp5nKjXN9cjiaSuuZQ4e4e4hhGvz469.jpg"
-  ],
-  [
-   "t20261122-emre-aydin-batman",
-   "Emre Aydın",
-   "konser",
-   "2026-11-22",
-   "",
-   "20:00",
-   "Hatice Nasıroğlu Konferans Salonu",
-   "Batman",
-   "https://www.bubilet.com.tr/batman/etkinlik/emre-aydin-konseri",
-   "Emre Aydın Batman'da hayranlarıyla buluşuyor.",
-   ""
-  ],
-  [
-   "t20261122-hijyenik-asklar-amasya",
-   "Hijyenik Aşklar",
-   "tiyatro",
-   "2026-11-22",
-   "",
-   "20:00",
-   "Amasya Belediyesi Kültür Merkezi Şehzade Salonu",
-   "Amasya",
-   "https://www.bubilet.com.tr/amasya/etkinlik/hijyenik-asklar-oyunu",
-   "Hijyenik Aşklar oyunu Şehzade Salonu'nda seyirciyle buluşuyor.",
-   ""
-  ],
-  [
-   "t20261122-lady-macbeth-elazig",
-   "Lady Macbeth",
-   "tiyatro",
-   "2026-11-22",
-   "",
-   "20:00",
-   "Elazığ Nurettin Ardıçoğlu Kültür Merkezi",
-   "Elazığ",
-   "https://www.bubilet.com.tr/elazig/etkinlik/lady-macbeth-oyunu",
-   "Lady Macbeth oyunu Nurettin Ardıçoğlu Kültür Merkezi'nde.",
-   ""
-  ],
-  [
-   "t20261122-sefa-doganay-rize",
-   "Sefa Doğanay - Tek mi Sandınız",
-   "standup",
-   "2026-11-22",
-   "",
-   "20:00",
-   "Rize İsmail Kahraman Kültür Merkezi",
-   "Rize",
-   "https://www.biletix.com/etkinlik/5FU74/TURKIYE/en/sefa-doganay-tek-mi-sandiniz-22-11-2026-rize",
-   "Taklit ustası Sefa Doğanay yeni gösterisiyle Rize'de.",
-   "https://www.biletix.com/static/images/live/event/eventimages/sefadoganay-13-8-26su.png"
-  ],
-  [
-   "t20261122-romeojuliet-antep",
-   "Romeo ve Juliet",
-   "tiyatro",
-   "2026-11-22",
-   "",
-   "20:30",
-   "Gaziantep Bir Başka Tiyatro",
-   "Gaziantep",
-   "https://iticket.com.tr/en/events/theatre/gaziantep/romeo-ve-juliet-kasim-aralik-gaziantep-bilet",
-   "6 Aralık 18:15'te de oynanıyor",
-   "https://cdn.iticket.com.tr/cdn-cgi/image/width=1400,height=470,quality=92,format=auto/event/cover/45uDeFFWdRFtmmdEh1cmNL2NTp9NlBhy.jpg"
-  ],
-  [
-   "t20261122-lady-susan-edirne",
-   "Lady Susan",
-   "tiyatro",
-   "2026-11-22",
-   "",
-   "",
-   "Edirne Oda Sahnesi",
-   "Edirne",
-   "https://biletinial.com/tr-tr/tiyatro/lady-susan",
-   "Jane Austen uyarlaması; 29 Kasım'da da Edirne Oda Sahnesi'nde.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/lady-susan-20261151038224942d5c9e5a14657945a03ef87acff1a.jpg"
-  ],
-  [
-   "t20261122-papagenolar-ankara",
-   "Papagenolar Çocuk Operası",
-   "cocuk",
-   "2026-11-22",
-   "",
-   "",
-   "CSO Ada Ankara Ziraat Bankası Ana Salon",
-   "Ankara",
-   "https://www.sanatcepte.gov.tr/etkinlik/etkinlikler?search=cso",
-   "Çocuklara yönelik opera gösterisi.",
-   ""
-  ],
-  [
-   "t20261122-tut-elimden-rovni-canakkale",
-   "Tut Elimden Rovni",
-   "tiyatro",
-   "2026-11-22",
-   "",
-   "",
-   "Çanakkale Belediyesi Kültür Merkezi",
-   "Çanakkale",
-   "https://biletinial.com/tr-tr/tiyatro/tut-elimden-rovni-tiyatro",
-   "İki sirk akrobatının aşk ve kıskançlık hikayesi sahnede.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/tut-elimden-rovni-f-prd-2026101913175444f4e376ef094322a408b56fac4bb074.jpg"
-  ],
-  [
-   "t20261123-bir-baba-hamlet-canakkale",
-   "Bir Baba Hamlet",
-   "tiyatro",
-   "2026-11-23",
-   "",
-   "",
-   "Çanakkale İÇDAŞ Kara Yusuf Kongre Merkezi",
-   "Çanakkale",
-   "https://biletinial.com/tr-tr/tiyatro/bir-baba-hamlet",
-   "",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/bir-baba-hamlet-202523112794fbc851b1a764fb99bff907373bfc1e4.jpg"
-  ],
-  [
-   "t20261123-bosanma-teklifi-usak",
-   "Boşanma Teklifi",
-   "tiyatro",
-   "2026-11-23",
-   "",
-   "",
-   "Uşak Atatürk Kültür Merkezi Büyük Salon",
-   "Uşak",
-   "https://biletinial.com/tr-tr/tiyatro/bosanma-teklifi",
-   "",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/bosanma-teklifi-2025869443da8edd1a79d94559ae9a0ef042e4dea5.jpg"
   ],
   [
    "t20261123-onikiofkeli-ankara",
@@ -1044,84 +108,6 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/therese-raquin-bir-cinayetin-anatomisi-20253111354218835cb1e44814bc89fce46f22aed5991.jpeg"
   ],
   [
-   "t20261124-caribou",
-   "Garanti BBVA Genç Konserleri: Caribou",
-   "konser",
-   "2026-11-24",
-   "",
-   "20:00",
-   "Zorlu PSM Turkcell Sahnesi",
-   "İstanbul",
-   "https://www.biletix.com/etkinlik/55GAY/TURKIYE/tr/garanti-bbva-genc-konserleri-caribou-24-11-2026-istanbul",
-   "Elektronik müzik projesi Caribou sahnede.",
-   "https://www.zorlupsm.com/medium/Activity/Image/1afa6c25-6400-4f0f-b628-f6d79aa26124"
-  ],
-  [
-   "t20261124-crrsenfoni",
-   "CRR Senfoni Orkestrası & Merve Kocabeyler",
-   "konser",
-   "2026-11-24",
-   "",
-   "20:00",
-   "Cemal Reşit Rey Konser Salonu",
-   "İstanbul",
-   "https://tr.euronews.com/2026/10/30/tekfen-filarmoniden-gevendeye-crr-kasim-konserleri-aciklandi",
-   "Arp solisti Merve Kocabeyler ile.",
-   "https://www.biletix.com/static/images/live/event/eventimages/5CRSB_19201080.png"
-  ],
-  [
-   "t20261124-dost-eskisehir",
-   "Dost",
-   "tiyatro",
-   "2026-11-24",
-   "2026-11-26",
-   "20:00",
-   "Haldun Dormen Sahnesi",
-   "Eskişehir",
-   "https://www.eskisehir.net/eskisehir-sehir-tiyatrolarinin-kasim-ayi-oyun-takvimi-aciklandi",
-   "Eskişehir Büyükşehir Şehir Tiyatroları",
-   "https://tiyatrolar.com.tr/files/activity/d/dost/image/dost.jpg"
-  ],
-  [
-   "t20261124-momentum",
-   "Momentum (İDOB)",
-   "opera",
-   "2026-11-24",
-   "",
-   "20:00",
-   "Süreyya Opera Sahnesi (Kadıköy)",
-   "İstanbul",
-   "https://sanatcepte.com/etkinlik/etkinlik-detay/momentum-istanbul-dob",
-   "Bale; ayrıca 27, 29 Kasım ve 1, 7 Aralık.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/momentum-istanbul-dob-202611314305a6ea63b6aec44b4cab3611b8111601f3.jpg"
-  ],
-  [
-   "t20261124-hayal",
-   "Hayal Satıcısı",
-   "tiyatro",
-   "2026-11-24",
-   "",
-   "20:30",
-   "Muammer Karaca Tiyatrosu",
-   "İstanbul",
-   "https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
-   "",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/hayal-saticisi-20259916283672ff27d844264416927c8c68d1fcd571.jpg"
-  ],
-  [
-   "t20261124-karsu-konya",
-   "Karsu",
-   "konser",
-   "2026-11-24",
-   "",
-   "",
-   "Selçuklu Kongre Merkezi Konya Sahne",
-   "Konya",
-   "https://tickets.songkick.com/metro-areas/32477-turkey-konya",
-   "",
-   "https://www.biletix.com/static/images/live/event/eventimages/5MY11-karsu-bu26.png"
-  ],
-  [
    "t20261124-komsukoyundelisi-ankara",
    "Komşu Köyün Delisi",
    "tiyatro",
@@ -1135,45 +121,6 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/komsu-koyun-delisi-ankara-dt-2026421153215cfca997e12b34bf08c7fac22464e2f0f.jpg"
   ],
   [
-   "t20261124-kurtlar-sofrasi-izmir",
-   "Kurtlar Sofrası",
-   "tiyatro",
-   "2026-11-24",
-   "",
-   "",
-   "Karşıyaka Ragıp Haykır Sahnesi",
-   "İzmir",
-   "https://www.egeyedair.com/izmirde-kasim-perdesi-acildi-konserler-sergiler-ve-tiyatro-oyunlari/52690",
-   "İzmir Devlet Tiyatrosu'nun yeni oyununun prömiyeri.",
-   ""
-  ],
-  [
-   "t20261125-dervisnazimvehitler-ankara",
-   "Derviş Nazım ve Hitler",
-   "tiyatro",
-   "2026-11-25",
-   "",
-   "20:00",
-   "Çankaya Belediyesi Yılmaz Güney Sahnesi",
-   "Ankara",
-   "https://turkinform.com.tr/ankara-tiyatro-festivali-biletleri-satisa-cikti-program-aciklandi",
-   "29. Uluslararası Ankara Tiyatro Festivali kapsamında, Kadıköy Halk Tiyatrosu",
-   ""
-  ],
-  [
-   "t20261125-icimizdekiseytan-samsun",
-   "İçimizdeki Şeytan",
-   "tiyatro",
-   "2026-11-25",
-   "",
-   "20:00",
-   "Samsun Büyükşehir Belediyesi Atakum Sanat Merkezi",
-   "Samsun",
-   "https://iticket.com.tr/en/events/theatre/samsun/icimizdeki-seytan-tiyatrosu-25-kasim-samsun-bilet",
-   "",
-   "https://cdn.iticket.com.tr/cdn-cgi/image/width=1400,height=470,quality=92,format=auto/event/cover/wemTmjJQLojcdGfs1bsy2Le37qYnKDNTVhi6wB2E.jpg"
-  ],
-  [
    "t20261125-kan-ve-sultan-bursa",
    "Kan ve Sultan",
    "tiyatro",
@@ -1185,19 +132,6 @@
    "https://tiyatrolar.com.tr/tiyatro/kan-ve-sultan",
    "Bursa Devlet Tiyatrosu'nun yeni oyunu; 28 Kasım'da 15:00 ek seans.",
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/kan-ve-sultan-bursa-dt-202691014181582ec81fe8d504fc38eca08eda13f4592.jpg"
-  ],
-  [
-   "t20261125-nilufer-kayseri",
-   "Nilüfer",
-   "konser",
-   "2026-11-25",
-   "",
-   "20:30",
-   "Erciyes Kültür Merkezi",
-   "Kayseri",
-   "https://kayham.erciyes.edu.tr/EditorUpload/Files/november-event-schedule_72OvnMN8NML.pdf",
-   "",
-   ""
   ],
   [
    "t20261125-devlet-ana-adana",
@@ -1226,45 +160,6 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/bobo-ve-arkadaslari-20261291699b8c43c8599784625a566e85e5611f440.png"
   ],
   [
-   "t20261126-karacaoglan-sivas",
-   "Karacaoğlan",
-   "tiyatro",
-   "2026-11-26",
-   "",
-   "19:30",
-   "Atatürk Kültür Merkezi Sahnesi",
-   "Sivas",
-   "https://www.etkinlinkler.com/sivas/etkinlikler",
-   "Sivas Devlet Tiyatrosu; 14:00 seansı da var",
-   ""
-  ],
-  [
-   "t20261126-catastrophe",
-   "Catastrophe / Kıyamet",
-   "tiyatro",
-   "2026-11-26",
-   "",
-   "20:00",
-   "Muammer Karaca Tiyatrosu",
-   "İstanbul",
-   "https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
-   "Yunan tiyatro ekibi; 29 Kasım'da tekrar sahnede",
-   ""
-  ],
-  [
-   "t20261126-edusa",
-   "Edusa (İDOB)",
-   "opera",
-   "2026-11-26",
-   "",
-   "20:00",
-   "AKM Türk Telekom Opera Salonu",
-   "İstanbul",
-   "https://sanatcepte.com/etkinlik/etkinlik-detay/edusa-idob-akm",
-   "Bir Anadolu hikayesi; ayrıca 28 Kasım, 10 ve 12 Aralık.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/edusa-idob-202611101545467c88158afa0645869ca3a409830a261f.jpg"
-  ],
-  [
    "t20261126-kesanlialidestani-kayseri",
    "Keşanlı Ali Destanı",
    "tiyatro",
@@ -1276,84 +171,6 @@
    "https://kayham.erciyes.edu.tr/EditorUpload/Files/november-event-schedule_72OvnMN8NML.pdf",
    "Haldun Taner klasiği; 28 Kasım'da 15:00 seansı da var",
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/kesanli-ali-destani-kayseri-dt-2026520120381d8b65aedd90448a9697736bfe5ed9ec.jpg"
-  ],
-  [
-   "t20261126-simyaci-zonguldak",
-   "Simyacı",
-   "tiyatro",
-   "2026-11-26",
-   "",
-   "20:00",
-   "Zonguldak Belediyesi Sinema Salonu",
-   "Zonguldak",
-   "https://iticket.com.tr/en/events/theatre/zonguldak/simyaci-tiyatrosu-26-kasim-zonguldak-bilet",
-   "Paulo Coelho'nun romanından uyarlanan oyun Zonguldak'ta.",
-   "https://cdn.iticket.com.tr/cdn-cgi/image/width=1400,height=470,quality=92,format=auto/event/cover/16oU55saqcQTyjNzAcTUd4WTMYvwBErQ.jpg"
-  ],
-  [
-   "t20261126-yeniturku-eskisehir",
-   "Yeni Türkü Konseri",
-   "konser",
-   "2026-11-26",
-   "",
-   "20:30",
-   "Vehbi Koç Kongre Merkezi",
-   "Eskişehir",
-   "https://bilettakvimi.com/takvim/eskisehir/ay/kasim-2026",
-   "",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/yeni-turku-konseri-2023213154926.jpg"
-  ],
-  [
-   "t20261126-karsu-ankara",
-   "Karsu",
-   "konser",
-   "2026-11-26",
-   "",
-   "21:00",
-   "Congresium Ankara",
-   "Ankara",
-   "https://songkick.com/concerts/43376353-karsu-at-congresium-ankara-ato-ankara-international-convention-and-exhibition-centre",
-   "Saat kapı açılışı.",
-   "https://www.biletix.com/static/images/live/event/eventimages/5MY11-karsu-bu26.png"
-  ],
-  [
-   "t20261126-oivavoi-ankara",
-   "Oi Va Voi",
-   "konser",
-   "2026-11-26",
-   "",
-   "21:00",
-   "Jolly Joker Ankara",
-   "Ankara",
-   "https://concerts.consequence.net/venues/jolly-joker-ankara-tickets",
-   "Londralı world-music grubu.",
-   "https://jjticketingstorage.blob.core.windows.net/content/cda6ffcb-455e-4c5e-af18-5852d2a50a44.png"
-  ],
-  [
-   "t20261126-coppelia-ankara",
-   "Coppelia",
-   "opera",
-   "2026-11-26",
-   "",
-   "",
-   "Ankara Opera Sahnesi",
-   "Ankara",
-   "https://nerdeizleyeyim.com/opera-bale",
-   "Ankara Devlet Opera ve Balesi; 28 Kasım'da da sahnelenecek",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/coppelia-ankara-dob-2026106153051fe917fde22524962b3b8caee372e4b09.jpg"
-  ],
-  [
-   "t20261126-ezginingunlugu-erzurum",
-   "Ezginin Günlüğü",
-   "konser",
-   "2026-11-26",
-   "",
-   "",
-   "Necip Fazıl Kısakürek Kültür Merkezi",
-   "Erzurum",
-   "https://www.songkick.com/venues/4531669-necip-fazil-kisakurek-kultur-merkezi-erzurum",
-   "",
-   ""
   ],
   [
    "t20261126-giselle-izmir",
@@ -1369,19 +186,6 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/giselle-izmir-dob-20261029914421f34df3d034242b9b488bcd8b0a1519e.jpg"
   ],
   [
-   "t20261126-kiss-me-kate-mersin",
-   "Kiss Me Kate",
-   "opera",
-   "2026-11-26",
-   "",
-   "",
-   "Mersin Kültür Merkezi",
-   "Mersin",
-   "https://biletinial.com/tr-tr/mekan/mersin-devlet-opera-balesi",
-   "MDOB müzikali; 28 Kasım'da da sahnede.",
-   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/kiss-me-kate-mersin-dob-20262517479c14352c15c54c3082d47dd670ddc589.jpg"
-  ],
-  [
    "t20261126-lukasulic",
    "Luka Sulic",
    "konser",
@@ -1395,17 +199,17 @@
    "https://www.biletix.com/static/images/live/event/eventimages/5PE80_19201080.png"
   ],
   [
-   "t20261126-yenilmez-izmir",
-   "Yenilmez",
+   "t20261127-seferi-ramazan-bey-erzurum",
+   "Seferi Ramazan Bey'in Nafile Dünyası",
    "tiyatro",
-   "2026-11-26",
-   "2026-11-28",
-   "",
-   "İsmet İnönü Sahnesi",
-   "İzmir",
-   "https://www.egeyedair.com/izmirde-kasim-perdesi-acildi-konserler-sergiler-ve-tiyatro-oyunlari/52690",
-   "İzmir Büyükşehir Şehir Tiyatroları'nın yeni prodüksiyonu.",
-   ""
+   "2026-11-27",
+   "2026-12-05",
+   "19:30",
+   "Erzurum Devlet Tiyatrosu Sahnesi",
+   "Erzurum",
+   "https://biletinial.com/tr-tr/tiyatro/seferi-ramazan-beyin-nafile-dunyasi-dt?cinemaBranchId=1253",
+   "Erzurum DT büyük oyunu; bazı seanslar tükendi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/seferi-ramazan-beyin-nafile-dunyasi-2026102792430e17c50eeb08244dfb61c07f48370c8d5.jpeg"
   ],
   [
    "t20261127-amorisospesi",
@@ -1564,6 +368,19 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ve-ates-bizi-tuketiyor-kocaeli-buyuksehir-202610271711335ba3e0822e0349fd8415adf43fa4cc6d.jpg"
   ],
   [
+   "t20261128-huysuz-palyaco-adiyaman",
+   "Huysuz Palyaço ve Sihirbaz",
+   "cocuk",
+   "2026-11-28",
+   "",
+   "12:00",
+   "Adıyaman TPAO Kültür Merkezi",
+   "Adıyaman",
+   "https://biletinial.com/tr-tr/tiyatro/huysuz-palyaco-ve-sihirbaz",
+   "Etkileşimli çocuk gösterisi; 12:00, 16:00 ve 18:00.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/huysuz-palyaco-ve-sihirbaz-2026112131823a3d64109c2a343009ea8aff49f9e22b6.jpg"
+  ],
+  [
    "t20261128-harrypotter",
    "Harry Potter ve Ateş Kadehi In Concert",
    "konser",
@@ -1603,6 +420,19 @@
    "https://cdn.iticket.com.tr/cdn-cgi/image/width=1400,height=470,quality=92,format=auto/event/cover/ZVk7yE62XDIX23T7LbQkbKJILLD2e0ZW.jpg"
   ],
   [
+   "t20261128-okan-degirmenci-fade",
+   "Okan Değirmenci Stand-up",
+   "standup",
+   "2026-11-28",
+   "",
+   "19:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "Tek kişilik gösterisiyle Ankara'da ilk kez sahnede.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/okan-degirmenci-tek-kisilik-stand-up-gosterisi-202611221832502cf5e6f2c3a4411b9ce5c9a9d4c928b5.jpg"
+  ],
+  [
    "t20261128-cirkin",
    "Çirkin",
    "tiyatro",
@@ -1614,6 +444,19 @@
    "https://www.evrensel.net/haber/6007246/bakirkoy-belediye-tiyatrolari-kasim-ayinda-9-oyun-sahneleyecek",
    "Marius von Mayenburg'un kara komedisi.",
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/cirkin-bbt-2026121134625ece89841de8a490d959a16eff6edf697.jpg"
+  ],
+  [
+   "t20261128-kamuran-akkor-ankara",
+   "Kamuran Akkor – Altın Yıllar \"Aşk Eski Bir Yalan\"",
+   "konser",
+   "2026-11-28",
+   "",
+   "20:00",
+   "CSO Ada Ankara Ziraat Bankası Ana Salon",
+   "Ankara",
+   "https://sanatcepte.com/etkinlik/etkinlik-detay/kamuran-akkor-altin-yillar-ask-eski-bir-yalan-csoada",
+   "Nostalji ve arabesk aşk şarkıları orkestrasıyla",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/kamuran-akkor-altin-yillar-ask-eski-bir-yalan-2026102812165b1a3eaf9aa2d44b29960c21857273cb7.png"
   ],
   [
    "t20261128-xeroabbas-diyarbakir",
@@ -1629,6 +472,19 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/xero-abbas-konseri-20269161423118eabf874e98f4d82b608daea056786bf.jpg"
   ],
   [
+   "t20261128-emre-aydin-kayseri",
+   "Emre Aydın",
+   "konser",
+   "2026-11-28",
+   "",
+   "20:30",
+   "EKM Erciyes Kültür Merkezi",
+   "Kayseri",
+   "https://mekanrehber.com/etkinlik/emre-aydin-kayseri-2026-11-28/",
+   "",
+   "https://mekanrehber.com/assets/events/ticketmaster/2026/463679c6a0a3853792815921-card-16x9.webp"
+  ],
+  [
    "t20261128-evelynhardcastle-antep",
    "Evelyn Hardcastle'ın Yedi Ölümü",
    "tiyatro",
@@ -1642,6 +498,19 @@
    "https://cdn.iticket.com.tr/cdn-cgi/image/width=1400,height=470,quality=92,format=auto/event/cover/Hrtx54TQbLMKG1IGGaFHYyJ6xgwuuFfb.jpg"
   ],
   [
+   "t20261128-serdar-nalcakar-fade",
+   "Serdar Nalçakar · Çok Bozdu",
+   "standup",
+   "2026-11-28",
+   "",
+   "21:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "İkinci seans 26 Aralık 21:00; 18+.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/serdar-nalcakar-cok-bozdu-2026817113659b2b20c5722134c2ba4b3182240fd89d2.png"
+  ],
+  [
    "t20261128-goksel-izmir",
    "Göksel",
    "konser",
@@ -1652,7 +521,7 @@
    "İzmir",
    "https://www.egeyedair.com/izmirde-kasim-perdesi-acildi-konserler-sergiler-ve-tiyatro-oyunlari/52690",
    "",
-   ""
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/goksel-festival-202611221654549d15bb876328415da9b9531e1abc0ff1.png"
   ],
   [
    "t20261128-kalben-antep",
@@ -1681,6 +550,19 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/264829f20756435a801fdf5fa58238db.jpg"
   ],
   [
+   "t20261129-cicek-ulkesi-filorina-fade",
+   "Resimli Hikayeler · Çiçek Ülkesi Filorina",
+   "cocuk",
+   "2026-11-29",
+   "",
+   "13:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "4 yaş üstü masal oyunu; ikinci seans 20 Aralık 13:00.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/resimli-hikayeler-cicek-ulkesi-filorina-20261022191647b7e7170af63341efb85acd3a26be6d8b.jpg"
+  ],
+  [
    "t20261129-en-mutlu-kim",
    "En Mutlu Kim?",
    "cocuk",
@@ -1704,7 +586,7 @@
    "İstanbul",
    "https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
    "Çocuklar için sihirbazlık",
-   ""
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/the-magic-of-kevin-spencer-sihirbaz-gosterisi-20261120162513e3ad2638d88b4f7dba19a7931884b5cd.png"
   ],
   [
    "t20261129-pinokyo-kayseri",
@@ -1717,7 +599,20 @@
    "Kayseri",
    "https://kayham.erciyes.edu.tr/EditorUpload/Files/november-event-schedule_72OvnMN8NML.pdf",
    "15:00 ve 17:00 seansları",
-   ""
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/pinokyo-kumbara-sanat-fabrika-202692992510907adf58e6774845828c10f4c3fe1865.jpg"
+  ],
+  [
+   "t20261129-ahmet-baran-rocknraks-ankara",
+   "Ahmet Baran & İyilik Korosu ile Rock'n Raks",
+   "konser",
+   "2026-11-29",
+   "",
+   "20:00",
+   "CSO Ada Ankara Ziraat Bankası Ana Salon",
+   "Ankara",
+   "https://sanatcepte.com/etkinlik/etkinlik-detay/ahmet-baran-iyilik-korosu-ile-rockn-raks-csoada",
+   "Türkçe rock klasikleri kanun, koro ve modern dansla",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ahmet-baran-iyilik-korosu-ile-rockn-raks-202692815421698b9f48cd958449c86df2f7a9aba548b.png"
   ],
   [
    "t20261129-gevende",
@@ -1759,6 +654,19 @@
    ""
   ],
   [
+   "t20261129-meksika-acmazi-konya",
+   "Meksika Açmazı – İyi Misin?",
+   "standup",
+   "2026-11-29",
+   "",
+   "20:00",
+   "Selçuklu Sahne – Güzel Sanatlar Lisesi",
+   "Konya",
+   "https://mekanrehber.com/etkinlik/meksika-acmazi-iyi-misin-konya-2026-11-29/",
+   "Talk show",
+   "https://mekanrehber.com/assets/events/ticketmaster/2026/a9b40d362dfc35267ec15ec2-card-16x9.webp"
+  ],
+  [
    "t20261129-ogulcanbektas-ankara",
    "Oğulcan Bektaş Stand-up",
    "standup",
@@ -1769,7 +677,7 @@
    "Ankara",
    "https://konserbilet.com/takvim/kasim-2026/ankara",
    "",
-   ""
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ogulcan-bektas-stand-up-20267161859122eae70013add4f898f92c82104c5a6d7.jpg"
   ],
   [
    "t20261129-catastrophe",
@@ -1782,7 +690,33 @@
    "İstanbul",
    "https://www.evrensel.net/haber/6008085/muammer-karaca-tiyatrosu-kasim-ayinda-hangi-etkinliklere-ev-sahipligi-yapacak",
    "Yunan topluluğun ikinci temsili.",
-   ""
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/catastrophe-kiyamet-20261120161912bd028fa4f9744fedbb1794dd3e78d70e.png"
+  ],
+  [
+   "t20261129-salih-tiras-fade",
+   "Salih Tıraş Stand Up",
+   "standup",
+   "2026-11-29",
+   "",
+   "21:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "Tek kişilik gösteri, 18+; Ocak'ta da seansları var.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/salih-tiras-stand-up-2026871744130877db4c015342dbbecbd581b9b90f96.jpg"
+  ],
+  [
+   "t20261129-wegh-kayseri",
+   "Wegh",
+   "konser",
+   "2026-11-29",
+   "",
+   "21:00",
+   "EKM Erciyes Kültür Merkezi",
+   "Kayseri",
+   "https://mekanrehber.com/etkinlik/wegh-kayseri-2026-11-29/",
+   "13 Aralık'ta aynı salonda ikinci konser",
+   "https://mekanrehber.com/assets/events/ticketmaster/2026/530a0fc26a2a2fb9141d176c-card-16x9.webp"
   ],
   [
    "t20261129-emreaydin-konya",
@@ -1821,7 +755,7 @@
    "Amasya",
    "https://www.bubilet.com.tr/amasya/etkinlik/eser-yenenler-ile-itiraf-et",
    "Eser Yenenler interaktif gösterisiyle Amasya'da.",
-   ""
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/eser-yenenler-ile-itiraf-et-202581893823a6e07943b88d4c388ff9e6c167e63b21.png"
   ],
   [
    "t20261130-severepascal",
@@ -1835,6 +769,19 @@
    "https://tr.euronews.com/2026/10/30/tekfen-filarmoniden-gevendeye-crr-kasim-konserleri-aciklandi",
    "Klarnet-çello-piyano oda müziği.",
    "https://www.biletix.com/static/images/live/event/eventimages/5CRSF_19201080.png"
+  ],
+  [
+   "t20261130-zengin-mutfagi-konya",
+   "Zengin Mutfağı",
+   "tiyatro",
+   "2026-11-30",
+   "",
+   "20:30",
+   "Selçuklu Kongre Merkezi Anadolu Sahne",
+   "Konya",
+   "https://mekanrehber.com/etkinlik/zengin-mutfagi-konya-2026-11-30/",
+   "",
+   "https://mekanrehber.com/assets/events/ticketmaster/2026/95d07feaaacadaa57ef41519-card-16x9.webp"
   ],
   [
    "t20261130-amadeus-kocaeli",
@@ -1863,6 +810,45 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/parla-202663103841ef631ad0b24f4217b76a4e0abdfaf32a.jpg"
   ],
   [
+   "t20261201-papagan-kacti-van",
+   "Papağan Kaçtı",
+   "cocuk",
+   "2026-12-01",
+   "2026-12-08",
+   "14:00",
+   "Van Devlet Tiyatrosu Kültür Merkezi Sahnesi",
+   "Van",
+   "https://biletinial.com/tr-tr/tiyatro/papagan-kacti-dt?cinemaBranchId=1298",
+   "Van DT çocuk oyunu; 1 ve 8 Aralık seansları.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/papagan-kacti-co-202610121730440d94ad0e508943c2ad1e2934899a5257.jpeg"
+  ],
+  [
+   "t20261201-cagri-sertel-trio-eskisehir",
+   "Çağrı Sertel Trio",
+   "konser",
+   "2026-12-01",
+   "",
+   "20:00",
+   "Sanat ve Kültür Sarayı Şehir Orkestrası Sahnesi",
+   "Eskişehir",
+   "https://esbilet.com.tr/tr/events/3a250a74-0094-3df6-2877-bbbf81bb85e9/details?kind=event&venueId=3a22d9e6-09ba-7ead-e825-3fd4bef21ceb",
+   "Caz piyanisti Çağrı Sertel ve trio",
+   "https://azonceeskisehir.com/storage/uploads/etkinlik/b51915b128ccb946f88a5a8107cfcf350187231c.webp"
+  ],
+  [
+   "t20261201-simdi-90lar-ankara",
+   "Şimdi 90'lar",
+   "konser",
+   "2026-12-01",
+   "",
+   "20:00",
+   "CSO Ada Ankara Ziraat Bankası Ana Salon",
+   "Ankara",
+   "https://sanatcepte.com/etkinlik/etkinlik-detay/simdi-90lar-csoada",
+   "Jale, Erdal Çelik ve Sibel Alaş'la 90'lar pop gecesi",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/simdi-90lar-csoada-20261021173646befbfc9def1f45b98d8ab5e506a9628c.png"
+  ],
+  [
    "t20261201-suc-ve-ceza-ordu",
    "Suç ve Ceza",
    "tiyatro",
@@ -1889,6 +875,19 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/xero-abbas-konseri-20269161423118eabf874e98f4d82b608daea056786bf.jpg"
   ],
   [
+   "t20261201-yarim-akillar-tam-kalpler-fade",
+   "Yarım Akıllar Tam Kalpler",
+   "tiyatro",
+   "2026-12-01",
+   "",
+   "20:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "Huzurevinde geçen kara komedi; ikinci seans 17 Aralık.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/yarim-akillilar-tam-kalpler-2026869342752ec7646be0844d38c07761c184aa9a5.jpg"
+  ],
+  [
    "t20261201-anadolu-atesi-bursa",
    "Anadolu Ateşi",
    "dans",
@@ -1912,7 +911,7 @@
    "İstanbul",
    "https://www.oggusto.com/etkinlik-rehberi/degisim-donusum-tiyatro-oyunu",
    "Thomas Ostermeier yönetiminde; Timuçin Esen ve Funda Eryiğit.",
-   ""
+   "https://cdn.oggusto.com/uploads/2026/10/degisim-donusum-tiyatro.webp"
   ],
   [
    "t20261201-pinarfidan-izmir",
@@ -1928,17 +927,17 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/pinar-fidan-stand-up-20253617267070cd7b86b214139ac1a41c0d33f486e.jpg"
   ],
   [
-   "t20261201-cemerdost-erzurum",
-   "Cem Erdost İleri",
-   "konser",
+   "t20261201-shirley-valentine-mugla",
+   "Shirley Valentine – Sumru Yavrucuk",
+   "tiyatro",
    "2026-12-01",
    "",
-   "",
-   "Necip Fazıl Kısakürek Kültür Merkezi",
-   "Erzurum",
-   "https://www.songkick.com/venues/4531669-necip-fazil-kisakurek-kultur-merkezi-erzurum",
-   "",
-   ""
+   "20:30",
+   "Bodrum Belediyesi Şehir Tiyatrosu Oasis AVM",
+   "Muğla",
+   "https://biletinial.com/tr-tr/tiyatro/shirley-valetine-ozkyorg",
+   "Sumru Yavrucuk'lu tek kişilik komedi",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/shirley-valentine-sumru-yavrucuk-2025101513416bbf8212a192145a9a8b0a74b8089b01a.jpg"
   ],
   [
    "t20261201-ozge-arslan-tekirdag",
@@ -1954,6 +953,19 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ozge-arslan-solo-konser-202610211547145c23400f13a64a97a53c4c3c8901b8d9.jpg"
   ],
   [
+   "t20261202-azahar-flamenko-fade",
+   "Azahar Flamenko Konseri",
+   "konser",
+   "2026-12-02",
+   "",
+   "20:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "Lorca'dan ilhamla müzik, dans ve şiir.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/azahar-flamenko-konseri-2026111221135581f7f8f43b5c48bb977df9dd02f3da54.jpeg"
+  ],
+  [
    "t20261202-esyanintabiati-antep",
    "Eşyanın Tabiatı",
    "tiyatro",
@@ -1965,6 +977,58 @@
    "https://tiyatrolar.com.tr/tiyatro/esyanin-tabiati",
    "Aysa Prodüksiyon; Mert Turak ve Aslıhan Malbora'lı komedi",
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/esyanin-tabiati-202510210135916acb8c53ba488689a81fba566cb765.jpg"
+  ],
+  [
+   "t20261202-icimizdeki-seytan-ankara",
+   "İçimizdeki Şeytan",
+   "tiyatro",
+   "2026-12-02",
+   "",
+   "20:00",
+   "Yenimahalle Dört Mevsim Tiyatro Sahnesi",
+   "Ankara",
+   "https://biletinial.com/tr-tr/tiyatro/icimizdeki-seytan",
+   "Sabahattin Ali uyarlaması; 3 Ara Panora, 4 Ara Çankaya Sahne",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/icimizdeki-seytan-20241120102417006a1be2c9ea4186ba31d4dbc34ddde6.jpeg"
+  ],
+  [
+   "t20261202-ilker-ayrik-bursa",
+   "İlker Ayrık'la Gerçekler Acıdır",
+   "standup",
+   "2026-12-02",
+   "",
+   "20:00",
+   "Merinos AKKM Osmangazi Salonu",
+   "Bursa",
+   "https://biletinial.com/tr-tr/tiyatro/ilker-ayrikla-gercekler-acidir",
+   "İlker Ayrık'ın komedi gösterisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ilker-ayrikla-gercekler-acidir-202611513419b614ad82bb1d4c6f9e257f7cec55f19c.jpg"
+  ],
+  [
+   "t20261202-omur-gedik-sanliurfa",
+   "Ömür Gedik",
+   "konser",
+   "2026-12-02",
+   "",
+   "20:00",
+   "Mehmet Akif İnan Konferans Salonu (Urfa City AVM)",
+   "Şanlıurfa",
+   "https://biletinial.com/tr-tr/muzik/omur-gedik-konseri?cinemaBranchId=16398",
+   "Ömür Gedik pop konseri.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/omur-gedik-konseri-20261118132522abd0c194946c4a6292d1df2ce4936953.jpg"
+  ],
+  [
+   "t20261202-shirley-valentine-aydin",
+   "Shirley Valentine – Sumru Yavrucuk",
+   "tiyatro",
+   "2026-12-02",
+   "",
+   "20:00",
+   "Söke Efes Kültür Merkezi",
+   "Aydın",
+   "https://biletinial.com/tr-tr/tiyatro/shirley-valetine-ozkyorg",
+   "Sumru Yavrucuk'lu tek kişilik komedi",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/shirley-valentine-sumru-yavrucuk-2025101513416bbf8212a192145a9a8b0a74b8089b01a.jpg"
   ],
   [
    "t20261202-bulasikcilar-izmir",
@@ -1980,6 +1044,32 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/bulasikcilar-20261141041755ee9ca384dd4bc6bcc18963480e7d3c.jpg"
   ],
   [
+   "t20261202-devlerin-savasi-konya",
+   "Devlerin Savaşı",
+   "tiyatro",
+   "2026-12-02",
+   "",
+   "20:30",
+   "Selçuklu Kongre Merkezi Konya Sahne",
+   "Konya",
+   "https://mekanrehber.com/etkinlik/devlerin-savasi-konya-2026-12-02/",
+   "",
+   "https://mekanrehber.com/assets/events/ticketmaster/2026/3e58627a4cbe918d4acc7a71-card-16x9.webp"
+  ],
+  [
+   "t20261202-jekyll-hyde",
+   "Jekyll & Hyde",
+   "tiyatro",
+   "2026-12-02",
+   "",
+   "21:00",
+   "Zorlu PSM Turkcell Sahnesi",
+   "İstanbul",
+   "https://www.biletix.com/etkinlik/5HYK0/DIGER/en/jekyll-hyde-02-12-2026-istanbul",
+   "İyi ile kötünün çatışmasını anlatan klasik uyarlama.",
+   "https://www.biletix.com/static/images/live/event/eventimages/jekyllhyde-26su.png"
+  ],
+  [
    "t20261202-pinhani-malatya",
    "Pinhani",
    "konser",
@@ -1990,7 +1080,20 @@
    "Malatya",
    "https://www.jambase.com/show/pinhani-malatya-hanzade-konagi-20261202",
    "",
-   ""
+   "https://www.biletix.com/static/images/live/event/groupimages/pinhani-yazili-yeniboyut1-grup.png"
+  ],
+  [
+   "t20261202-sebnem-ferah",
+   "Şebnem Ferah",
+   "konser",
+   "2026-12-02",
+   "",
+   "21:30",
+   "Volkswagen Arena",
+   "İstanbul",
+   "https://www.biletix.com/etkinlik/5PSFC/TURKIYE/en/sebnem-ferah-02-12-2026-istanbul",
+   "Rock'ın güçlü sesi Volkswagen Arena'da.",
+   "https://www.biletix.com/static/images/live/event/eventimages/5PSF3_sebonew-1920.png"
   ],
   [
    "t20261202-carmen-ankara",
@@ -2019,6 +1122,32 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ahmet-kaya-ile-kardes-turkuler-202597145527835f83ff72934050a04dfb4bbee51c3c.png"
   ],
   [
+   "t20261202-lang-lang",
+   "Lang Lang & Genç Müzisyenler: İpek Yolu Konseri",
+   "konser",
+   "2026-12-02",
+   "",
+   "",
+   "AKM Türk Telekom Opera Salonu",
+   "İstanbul",
+   "https://akmistanbul.gov.tr/tr/etkinlik/lang-lang-and-genc-muzisyenler",
+   "Lang Lang genç piyanistlerle ÇEV Sanat yararına sahnede.",
+   "https://cdn.akmistanbul.gov.tr/other/lang-lang-400x250-yatay.png"
+  ],
+  [
+   "t20261203-gronholm-metodu-van",
+   "Grönholm Metodu",
+   "tiyatro",
+   "2026-12-03",
+   "2026-12-05",
+   "19:30",
+   "Van Devlet Tiyatrosu Kültür Merkezi Sahnesi",
+   "Van",
+   "https://biletinial.com/tr-tr/tiyatro/gronholm-metodu-van-dt?cinemaBranchId=1298",
+   "Van DT yetişkin oyunu; 5 Aralık'ta matine de var.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/gronholm-metodu-van-dt-2026102316576ab1ab551975f4533b647450544fc7799.jpeg"
+  ],
+  [
    "t20261203-resimliosmanlitarihi-sivas",
    "Resimli Osmanlı Tarihi",
    "tiyatro",
@@ -2045,6 +1174,19 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/siemens-turkiye-opera-yarismasi-final-konseri-idob-20261191616192a7b879ea02e44b0a00a8953f8ad96bb.jpg"
   ],
   [
+   "t20261203-dogu-demirkol-kirklareli",
+   "Doğu Demirkol Stand Up",
+   "standup",
+   "2026-12-03",
+   "",
+   "20:30",
+   "Cahit Irgat Salonu",
+   "Kırklareli",
+   "https://biletinial.com/tr-tr/tiyatro/dogu-demirkol-stand-up-gosterisi",
+   "Doğu Demirkol stand-up turnesi Kırklareli'de.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/dogu-demirkol-2024814152646798dab89b2249f492282b518130426c.png"
+  ],
+  [
    "t20261203-dorian-gray",
    "Dorian Gray'in Portresi",
    "tiyatro",
@@ -2058,6 +1200,19 @@
    "https://www.zorlupsm.com/medium/Activity/Image/d9a52323-d72f-4b4a-89f5-a7227a1e8a15"
   ],
   [
+   "t20261203-ilker-ayrik-balikesir",
+   "İlker Ayrık'la Gerçekler Acıdır",
+   "standup",
+   "2026-12-03",
+   "",
+   "20:30",
+   "Balıkesir Avlu Kültür Merkezi Fatih Salonu",
+   "Balıkesir",
+   "https://biletinial.com/tr-tr/tiyatro/ilker-ayrikla-gercekler-acidir",
+   "İlker Ayrık'ın komedi gösterisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ilker-ayrikla-gercekler-acidir-202611513419b614ad82bb1d4c6f9e257f7cec55f19c.jpg"
+  ],
+  [
    "t20261203-utkuergin-izmir",
    "Utku Ergin – Yeni Gösteri",
    "standup",
@@ -2068,7 +1223,7 @@
    "İzmir",
    "https://tuzbiberstandup.com/etkinlik/utku-ergin-yeni-goesteri-3",
    "Utku Ergin'in yeni stand-up gösterisi.",
-   ""
+   "https://tuzbiberstandup.com/_next/image?url=http%3A%2F%2Flocalhost%3A1342%2Fuploads%2Futku_yeni_websize_c8eded6fdb.png&w=1080&q=75"
   ],
   [
    "t20261203-leylatheband",
@@ -2123,17 +1278,17 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/woyzeck-konya-dt-202691016281ca59155d53e34041955dc0d4f8f3eb39.jpeg"
   ],
   [
-   "t20261204-dearnewyear",
-   "Dear New Year Vol. 2",
-   "konser",
+   "t20261204-baturay-ozdemir-fade",
+   "Baturay Özdemir · Deneme Gösterisi",
+   "standup",
    "2026-12-04",
-   "2026-12-15",
-   "12:00",
-   "Zorlu PSM",
-   "İstanbul",
-   "https://www.zorlupsm.com/etkinlikler/festival",
-   "Ücretsiz yılbaşı festivali: konser, DJ, atölye, pazar. Saatler güne göre değişir.",
-   ""
+   "",
+   "20:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/etkinlik/5ORF6/TURKIYE/tr/baturay-ozdemir-deneme-gosterisi-04-12-2026-ankara",
+   "Yeni şovunun esprilerini ilk kez deniyor; 5 Aralık 21:00 ve 7 Aralık 20:00 de var.",
+   "https://www.biletix.com/static/images/live/event/eventimages/5ORF6-baturayyeni-1920.png"
   ],
   [
    "t20261204-doktor-bana-bir-care-rize",
@@ -2162,17 +1317,43 @@
    "https://cdn.iticket.com.tr/cdn-cgi/image/width=1400,height=470,quality=92,format=auto/event/cover/A5F0ygz6p1k8h5W7HhJkih2ZAI4d712Ks8H9DINZ.jpg"
   ],
   [
-   "t20261204-baturay-ozdemir-fade",
-   "Baturay Özdemir · Deneme Gösterisi",
+   "t20261204-dogu-demirkol-edirne",
+   "Doğu Demirkol Stand Up",
    "standup",
    "2026-12-04",
    "",
-   "20:00",
-   "FADE Stage & Coffee, Çankaya",
+   "20:30",
+   "Edirne Belediyesi Atatürk Kültür Merkezi",
+   "Edirne",
+   "https://biletinial.com/tr-tr/tiyatro/dogu-demirkol-stand-up-gosterisi",
+   "Doğu Demirkol stand-up turnesi Edirne'de.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/dogu-demirkol-2024814152646798dab89b2249f492282b518130426c.png"
+  ],
+  [
+   "t20261204-profesyonel-ankara",
+   "Profesyonel",
+   "tiyatro",
+   "2026-12-04",
+   "",
+   "20:30",
+   "MEB Şura Salonu",
    "Ankara",
-   "https://www.biletix.com/etkinlik/5ORF6/TURKIYE/tr/baturay-ozdemir-deneme-gosterisi-04-12-2026-ankara",
-   "Yeni şovunun esprilerini ilk kez deniyor; 5 Aralık 21:00 ve 7 Aralık 20:00 de var.",
-   "https://www.biletix.com/static/images/live/event/eventimages/5ORF6-baturayyeni-1920.png"
+   "https://biletinial.com/tr-tr/tiyatro/profesyonel",
+   "Bülent Emin Yarar ve Yetkin Dikinciler'le kara komedi",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/profesyonel-tiyatro-oyunu-20269111349204c9ae71138ac4da0bad0c832ad71c8a8.jpg"
+  ],
+  [
+   "t20261204-sergen-deveci-zonguldak",
+   "Sergen Deveci - Ketenpere / Olan",
+   "standup",
+   "2026-12-04",
+   "",
+   "20:30",
+   "Hüseyin Tatoğlu Kültür Merkezi, Karadeniz Ereğli",
+   "Zonguldak",
+   "https://biletinial.com/tr-tr/tiyatro/sergen-deveci-ketenpere-olan-stand-up",
+   "İlişkiler üzerine 18+ stand-up gösterisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/sergen-deveci-ketenpere-olan-stand-up-2026224135447e39c29d2175e4aa2bd49e02d79d9e25c.jpg"
   ],
   [
    "t20261204-adamlar",
@@ -2237,7 +1418,7 @@
    "Gaziantep",
    "https://biletsirasi.com/tiyatro/guldur-guldur",
    "Sevilen skeç gösterisinin turne durağı",
-   ""
+   "https://www.biletix.com/static/images/live/event/eventimages/guldurguldurshow-13-10-26-su.png"
   ],
   [
    "t20261204-sila-ankara",
@@ -2251,6 +1432,19 @@
    "https://songkick.com/venues/1817058-congresium-ankara-ato-ankara-international-convention-and-exhibition-centre/calendar",
    "",
    "https://www.biletix.com/static/images/live/event/eventimages/5DTC9-GORSEL.png"
+  ],
+  [
+   "t20261205-elsa-kis-masali-ankara",
+   "Elsa Kış Masalı Müzikali",
+   "cocuk",
+   "2026-12-05",
+   "",
+   "14:00",
+   "CSO Ada Ankara Bankkart Mavi Salon",
+   "Ankara",
+   "https://sanatcepte.com/etkinlik/etkinlik-detay/elsa-kis-masali-muzikali-csoada",
+   "Elsa, Anna ve Olaf'lı müzikli çocuk macerası",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/elsa-kis-masali-muzikali-csoada-202610211633614e32252930a43eaad1232a13aae8d0d.png"
   ],
   [
    "t20261205-romeojuliet",
@@ -2305,6 +1499,58 @@
    "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1024,h_1024/https://bso.bilkent.edu.tr/tr/wp-content/uploads/2026/06/5web-1-1.jpg"
   ],
   [
+   "t20261205-cyrano-mersin",
+   "Cyrano de Bergerac (Bale)",
+   "opera",
+   "2026-12-05",
+   "",
+   "20:00",
+   "Mersin Opera Büyük Sahne",
+   "Mersin",
+   "https://biletinial.com/tr-tr/opera-bale/cyrano-de-bergerac-mersin-dob?cinemaBranchId=1270",
+   "Rostand'ın oyunundan uyarlanan Mersin DOB balesi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/cyrano-de-bergerac-mersin-dob-202611616821a9d0e725b4f8441993a1c8bba1470cb6.jpg"
+  ],
+  [
+   "t20261205-dogu-demirkol-sakarya",
+   "Doğu Demirkol Stand Up",
+   "standup",
+   "2026-12-05",
+   "",
+   "20:30",
+   "Serdivan Belediyesi Kültür Sanat ve Kongre Merkezi",
+   "Sakarya",
+   "https://biletinial.com/tr-tr/tiyatro/dogu-demirkol-stand-up-gosterisi",
+   "Doğu Demirkol Serdivan'da (biletler tükendi).",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/dogu-demirkol-2024814152646798dab89b2249f492282b518130426c.png"
+  ],
+  [
+   "t20261205-profesyonel-eskisehir",
+   "Profesyonel",
+   "tiyatro",
+   "2026-12-05",
+   "",
+   "20:30",
+   "Atatürk Kültür Sanat ve Kongre Merkezi",
+   "Eskişehir",
+   "https://biletinial.com/tr-tr/tiyatro/profesyonel",
+   "Bülent Emin Yarar ve Yetkin Dikinciler'le kara komedi",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/profesyonel-tiyatro-oyunu-20269111349204c9ae71138ac4da0bad0c832ad71c8a8.jpg"
+  ],
+  [
+   "t20261205-suat-suna-istanbul",
+   "Suat Suna - Şarkılar Eskiden Daha mı Güzeldi",
+   "konser",
+   "2026-12-05",
+   "",
+   "20:30",
+   "Caddebostan Kültür Merkezi Büyük Salon",
+   "İstanbul",
+   "https://biletinial.com/tr-tr/muzik/suat-suna",
+   "Suat Suna'dan nostaljik şarkılarla müzikli gösteri.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/suat-suna-2026220192847ec6ae8426e7a482e9b1732a08d68db46.jpg"
+  ],
+  [
    "t20261205-handeyener-ankara",
    "Hande Yener",
    "konser",
@@ -2329,6 +1575,19 @@
    "https://www.vwarena.com/tr/tum-etkinlikler",
    "İki gece üst üste konser.",
    "https://api.pozitifmuzik.com/images/event/6a71e6e425034bbd86ef554e1e658f76/extralarge.png"
+  ],
+  [
+   "t20261205-ash-symphonic",
+   "Ash - The Symphonic Experience",
+   "konser",
+   "2026-12-05",
+   "",
+   "21:30",
+   "Zorlu PSM Turkcell Sahnesi",
+   "İstanbul",
+   "https://www.biletix.com/etkinlik/5X900/DIGER/en/ash-the-symphonic-experience-w-eurasia-philharmonic-orchestra-05-12-2026-istanbul",
+   "Ash şarkıları Avrasya Filarmoni Orkestrası eşliğinde.",
+   "https://www.biletix.com/static/images/live/event/eventimages/2ih45.png"
   ],
   [
    "t20261205-blackbriar-izmir",
@@ -2370,6 +1629,19 @@
    "https://www.biletix.com/static/images/live/event/groupimages/emreaydinn-grupp.png"
   ],
   [
+   "t20261205-english-open-mic-fade",
+   "Ankara English Stand-up Open Mic",
+   "standup",
+   "2026-12-05",
+   "",
+   "",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "19:00'da; sonraki open mic 9 Ocak 2027.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ankara-english-stand-up-comedy-open-mic-2026228131141b4dd10ddaed94a3091f6e84935f5faf2.jpg"
+  ],
+  [
    "t20261205-tartuffe-manisa",
    "Tartuffe",
    "tiyatro",
@@ -2383,17 +1655,30 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/tartuffe-tiyatro-2026923162638377136fb91d04edc90fa60e1412fc56a.jpg"
   ],
   [
-   "t20261205-english-open-mic-fade",
-   "Ankara English Stand-up Open Mic",
-   "standup",
-   "2026-12-05",
+   "t20261206-jazz-for-kids-ankara",
+   "Jazz For Kids",
+   "cocuk",
+   "2026-12-06",
    "",
-   "",
-   "FADE Stage & Coffee, Çankaya",
+   "13:00",
+   "CSO Ada Ankara Bankkart Mavi Salon",
    "Ankara",
-   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
-   "İngilizce açık mikrofon gecesi; yeni komedyenler sahnede.",
-   ""
+   "https://sanatcepte.com/etkinlik/etkinlik-detay/jazz-for-kids-csoada",
+   "Çocuk şarkılarının caz düzenlemeleriyle interaktif konser, 4+",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/jazz-for-kids-csoada-20261015171519b931f2c155944b728b4e9ae65c98732f.png"
+  ],
+  [
+   "t20261206-delikburunlular-erzurum",
+   "Delikburunlular Kabilesi",
+   "cocuk",
+   "2026-12-06",
+   "2026-12-09",
+   "14:00",
+   "Erzurum Devlet Tiyatrosu Sahnesi",
+   "Erzurum",
+   "https://biletinial.com/tr-tr/tiyatro/delikburunlular-kabilesi-dt?cinemaBranchId=1253",
+   "Liderini arayan bir kabilenin hikâyesi; 6+ çocuk oyunu.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/delikburunlular-kabilesi-co-2026114101215cd7692f3923140d6bb3164c27e287727.jpg"
   ],
   [
    "t20261206-alevli-gunler-rize",
@@ -2419,7 +1704,33 @@
    "İzmir",
    "https://tuzbiberstandup.com/etkinlik/isa-culun-yeni-goesteri-16",
    "",
-   ""
+   "https://tuzbiberstandup.com/_next/image?url=http%3A%2F%2Flocalhost%3A1342%2Fuploads%2Fisa_websize_2373479f1d.png&w=1080&q=75"
+  ],
+  [
+   "t20261206-kanavice-duzce",
+   "Kanaviçe",
+   "tiyatro",
+   "2026-12-06",
+   "",
+   "20:00",
+   "Düzce Belediyesi Kültür Merkezi Celil Yağız Sahnesi",
+   "Düzce",
+   "https://biletinial.com/tr-tr/tiyatro/kanavice-tiyatro-oyunu-?cinemaBranchId=16418",
+   "Turgut Özakman uyarlaması aile sırları komedisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/kanavice-tiyatro-oyunu-202610222063004c0f9b207c94ed7a825bf147f67ffdc.jpg"
+  ],
+  [
+   "t20261206-ne-prosto-bursa",
+   "Ne Prosto Orchestra - Best of Ne Prosto Pop",
+   "konser",
+   "2026-12-06",
+   "",
+   "20:00",
+   "Merinos AKKM Osmangazi Salonu",
+   "Bursa",
+   "https://biletinial.com/tr-tr/muzik/ne-prosto-orchestra",
+   "2000'ler pop hitleri senfonik düzenlemelerle.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ne-prosto-orchestra-202610199383980b4fdb9a36044fb9a99217455d8a589.jpg"
   ],
   [
    "t20261206-icimizdeki-seytan-isparta",
@@ -2435,6 +1746,19 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/icimizdeki-seytan-20241120102417006a1be2c9ea4186ba31d4dbc34ddde6.jpeg"
   ],
   [
+   "t20261206-kucuk-prens",
+   "Küçük Prens (İDOB Çocuk Operası)",
+   "cocuk",
+   "2026-12-06",
+   "2026-12-27",
+   "",
+   "Kadıköy Süreyya Opera Sahnesi",
+   "İstanbul",
+   "https://www.evrensel.net/haber/6009332/kucuk-prens-cocuk-operasi-olarak-sahneye-cikiyor",
+   "İDOB'un çocuk operası; Aralık boyunca belirli günlerde.",
+   "https://www.evrensel.net/images/1280/upload/dosya/370490.jpg"
+  ],
+  [
    "t20261207-donusum-antep",
    "Dönüşüm - Franz Kafka",
    "tiyatro",
@@ -2446,6 +1770,19 @@
    "https://iticket.com.tr/en/events/theatre/gaziantep/donusum-franz-kafka-tiyatrosu-7-aralik-gaziantep-bilet",
    "Kafka uyarlaması",
    "https://cdn.iticket.com.tr/cdn-cgi/image/width=1400,height=470,quality=92,format=auto/event/cover/uggKBQif3mO2HhttVsiMpvSmZwg3aN9F8FeqHt3I.jpg"
+  ],
+  [
+   "t20261207-teoman",
+   "Teoman",
+   "konser",
+   "2026-12-07",
+   "",
+   "21:00",
+   "Zorlu PSM Turkcell Sahnesi",
+   "İstanbul",
+   "https://www.biletix.com/etkinlik/5JBC0/DIGER/en/teoman-07-12-2026-istanbul",
+   "Teoman Zorlu PSM'de.",
+   "https://www.biletix.com/static/images/live/event/eventimages/teoman-26-10-26-su.png"
   ],
   [
    "t20261207-kadimdenkudume-ankara",
@@ -2472,6 +1809,32 @@
    "https://sebiarus.ktb.gov.tr/TR-383026/toren-programi.html",
    "Sema ayinli uluslararası anma törenleri; 7 Aralık 18:00",
    ""
+  ],
+  [
+   "t20261208-bana-normal-fade",
+   "Bana Normal",
+   "tiyatro",
+   "2026-12-08",
+   "",
+   "20:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "Absürt korku hikâyesi; ikinci seans 23 Aralık.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/bana-normal-202511111721394f22adf3b16241c18ce534688207018b.jpg"
+  ],
+  [
+   "t20261208-bir-tango-hikayesi-ankara",
+   "Bir Tango Hikayesi – Orquesta Pasional",
+   "konser",
+   "2026-12-08",
+   "",
+   "20:00",
+   "CSO Ada Ankara Tarihi Salon",
+   "Ankara",
+   "https://sanatcepte.com/etkinlik/etkinlik-detay/bir-tango-hikayesi-ankara-tango-hikayesi-csoada",
+   "Arjantinli dansçılar eşliğinde canlı tango orkestrası",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/bir-tango-hikayesi-ankara-tango-hikayesi-2026113154149b8936fd0bbd49d9b6253470fa631262.png"
   ],
   [
    "t20261208-keldiva-antep",
@@ -2513,6 +1876,45 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/soner-sarikabadayi-20251225195025d952cb5ab2e041428f44957eefd8d98a.png"
   ],
   [
+   "t20261209-frankenstein-ankara",
+   "Frankenstein (32 Kısım Tekmili Birden)",
+   "tiyatro",
+   "2026-12-09",
+   "2026-12-12",
+   "20:00",
+   "CSO Ada Ankara Ziraat Bankası Ana Salon",
+   "Ankara",
+   "https://sanatcepte.com/etkinlik/etkinlik-detay/frankenstein-32-kisim-tekmili-birden-dt",
+   "Ankara DT; iki kişilik kara komedi, 9-11-12 Aralık",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/frankenstein-32-kisim-tekmili-birden-2024102214335617daaaa35a6340c4af446ac7308a3335.jpg"
+  ],
+  [
+   "t20261209-hisseli-harikalar-ankara",
+   "Hisseli Harikalar Kumpanyası",
+   "tiyatro",
+   "2026-12-09",
+   "",
+   "20:00",
+   "CSO Ada Ankara Bankkart Mavi Salon",
+   "Ankara",
+   "https://sanatcepte.com/etkinlik/etkinlik-detay/hisseli-harikalar-kumpanyasi-tiyatro-oyunu-csoada",
+   "Anadolu'yu gezen kumpanyanın müzikli, nostaljik hikâyesi",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/hisseli-harikalar-kumpanyasi-tiyatro-oyunu-20261020162557129dc140a7c94914b81b0899d0fa4b3e.png"
+  ],
+  [
+   "t20261209-taziye-antalya",
+   "Taziye",
+   "tiyatro",
+   "2026-12-09",
+   "2026-12-12",
+   "20:00",
+   "Haşim İşcan Kültür Merkezi DT Sahnesi",
+   "Antalya",
+   "https://biletinial.com/tr-tr/tiyatro/taziye-dt?cinemaBranchId=2174",
+   "Murathan Mungan'ın kan davası ve töre üzerine oyunu; 16+.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/taziye-20261026161659b7bc60c4ad1f4b88ad4e3933b6206341.jpg"
+  ],
+  [
    "t20261209-akin-aslan-fade",
    "Akın Aslan Stand-up",
    "standup",
@@ -2524,6 +1926,19 @@
    "https://www.biletix.com/mekan/06059/TURKIYE/tr",
    "TuzBiber gecesi; Farabi Sokak'taki sahne kafede.",
    ""
+  ],
+  [
+   "t20261209-zengin-mutfagi",
+   "Zengin Mutfağı",
+   "tiyatro",
+   "2026-12-09",
+   "",
+   "20:30",
+   "Bostancı Gösteri Merkezi",
+   "İstanbul",
+   "https://pass.paribu.com/en/tiyatro/zengin-mutfagi",
+   "Şener Şen'li kadroyla Vasıf Öngören klasiği.",
+   "https://cdn.paribupass.com/web_event_detail_desktop/01a1a2e1-2300-7875-b1f5-030562c2eb65/Zengin%20Mutfag%CC%86%C4%B1%202880x1536.jpg"
   ],
   [
    "t20261209-iki-sehrin-hikayesi-denizli",
@@ -2552,6 +1967,32 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/gala-konser-idob-202611210566677c2246280d496196761b453e4892ca.jpg"
   ],
   [
+   "t20261210-yalancinin-mumu-erzurum",
+   "Yalancının Mumu",
+   "tiyatro",
+   "2026-12-10",
+   "2026-12-12",
+   "19:30",
+   "Erzurum Devlet Tiyatrosu Sahnesi",
+   "Erzurum",
+   "https://biletinial.com/tr-tr/tiyatro/yalancinin-mumu?cinemaBranchId=1253",
+   "Osmanlı döneminde geçen kılık değiştirme komedisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/yalancinin-mumu-20261510258faa1e772f50c4b868efd25eee321af5a.png"
+  ],
+  [
+   "t20261210-carmina-burana-antalya",
+   "Carmina Burana",
+   "opera",
+   "2026-12-10",
+   "2026-12-24",
+   "20:00",
+   "Antalya Haşim İşcan K.M. Opera Sahnesi",
+   "Antalya",
+   "https://biletinial.com/tr-tr/opera-bale/carmina-burana-antalya-dob?cinemaBranchId=1271",
+   "Orff'un kantatı koro ve dansla; 10, 12 ve 24 Aralık.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/carmina-burana-antalya-dob-2026107155141a766658c0c1497ca230ac06dc3c6cac.jpg"
+  ],
+  [
    "t20261210-donusum-batman",
    "Dönüşüm - Franz Kafka",
    "tiyatro",
@@ -2562,7 +2003,46 @@
    "Batman",
    "https://www.bubilet.com.tr/batman/etkinlik/donusum-franz-kafka",
    "Kafka'nın Dönüşüm'ü sahne uyarlamasıyla Batman'da.",
-   ""
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/donusum-franz-kafka-tiyatro-20269102049338b42c93443c44e9da3bb65732fb3037b.jpg"
+  ],
+  [
+   "t20261210-gun-eksilmesin-ankara",
+   "Gün Eksilmesin Penceremden",
+   "tiyatro",
+   "2026-12-10",
+   "",
+   "20:00",
+   "CSO Ada Ankara Bankkart Mavi Salon",
+   "Ankara",
+   "https://sanatcepte.com/etkinlik/etkinlik-detay/gun-eksilmesin-penceremden-dt",
+   "Cahit Sıtkı Tarancı'nın hayatı ve şiirleri sahnede",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/gun-eksilmesin-penceremden-20251131145681f87948c72545a1a2d1b0a9ca0b3c71.jpg"
+  ],
+  [
+   "t20261210-sessizlik-kayittayiz-trabzon",
+   "Sessizlik! Kayıttayız",
+   "tiyatro",
+   "2026-12-10",
+   "2026-12-12",
+   "20:00",
+   "Trabzon DT Haluk Ongan Sahnesi",
+   "Trabzon",
+   "https://biletinial.com/tr-tr/tiyatro/sessizlik-kayittayiz-dt?cinemaBranchId=1297",
+   "Her şeyin ters gittiği bir film çekimini anlatan komedi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/sessizlik-kayittayiz-2025122122923c84a0e717eb43f58f11d20f87c4582a.jpg"
+  ],
+  [
+   "t20261210-bulasikcilar-bursa",
+   "Bulaşıkçılar",
+   "tiyatro",
+   "2026-12-10",
+   "",
+   "20:30",
+   "Merinos AKKM Osmangazi Salonu",
+   "Bursa",
+   "https://biletinial.com/tr-tr/tiyatro/bulasikcilar",
+   "Restoran mutfağında üç kadının kara komedisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/bulasikcilar-20261141041755ee9ca384dd4bc6bcc18963480e7d3c.jpg"
   ],
   [
    "t20261210-saintlevant",
@@ -2576,6 +2056,19 @@
    "https://vwarena.com/en/event-detail/ev7gq",
    "Filistinli şarkıcının dünya turnesi İstanbul durağı.",
    "https://api.pozitifmuzik.com/images/event/38680e6bce674294a2c332d7bc253fd9/extralarge.png"
+  ],
+  [
+   "t20261210-edusa",
+   "Edusa (İDOB)",
+   "opera",
+   "2026-12-10",
+   "2026-12-12",
+   "",
+   "AKM Türk Telekom Opera Salonu",
+   "İstanbul",
+   "https://akmistanbul.gov.tr/tr/etkinlik/edusa",
+   "Lidya'da geçen yerli opera; 10 ve 12 Aralık.",
+   "https://cdn.akmistanbul.gov.tr/other/edusa-400x250-yatay.png"
   ],
   [
    "t20261210-kardesturkuler-izmir",
@@ -2630,6 +2123,19 @@
    "https://www.biletix.com/static/images/live/event/eventimages/5DTC6-GORSEL.png"
   ],
   [
+   "t20261210-oz-buyucusu-kahramanmaras",
+   "OZ Büyücüsü Müzikali",
+   "cocuk",
+   "2026-12-10",
+   "",
+   "",
+   "Mehmet Akif Ersoy Kültür Merkezi",
+   "Kahramanmaraş",
+   "https://biletinial.com/tr-tr/tiyatro/oz-buyucusu-muzikali?cinemaBranchId=17585",
+   "Dorothy'nin Sarı Tuğla Yolu macerası; 3+ çocuk müzikali.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/oz-buyucusu-muzaikali-2026213202227866f86cff192406fbfe01047e2cf02ee.jpg"
+  ],
+  [
    "t20261210-tosca-izmir",
    "Tosca",
    "opera",
@@ -2653,7 +2159,46 @@
    "Malatya",
    "https://www.jambase.com/show/cem-erdost-ileri-malatya-cultural-center-20261211",
    "",
-   ""
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/cem-erdost-ileri-202610309460c651f77facb2420d8fb3ebe2e56b9a7a.jpg"
+  ],
+  [
+   "t20261211-liszt-lied-ankara",
+   "Liszt & Lied Konseri – Ankara DOB",
+   "konser",
+   "2026-12-11",
+   "",
+   "20:00",
+   "CSO Ada Ankara Bankkart Mavi Salon",
+   "Ankara",
+   "https://sanatcepte.com/etkinlik/etkinlik-detay/11-aralik-konseri-ankara-dob",
+   "Goethe ve Heine şiirleriyle Liszt lied akşamı",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/11-aralik-konseri-ankara-dob-2026111015475766d299e4815d4398bd9375c8f77ffd9f.png"
+  ],
+  [
+   "t20261211-olun-bizi-ayirana-dek-ankara",
+   "Ölü'n Bizi Ayırana Dek",
+   "tiyatro",
+   "2026-12-11",
+   "",
+   "20:00",
+   "Yenimahalle Nazım Hikmet KSM Genco Erkal Salonu",
+   "Ankara",
+   "https://biletinial.com/tr-tr/tiyatro/olun-bizi-ayirana-dek-grg",
+   "Komedi",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/olun-bizi-ayirana-dek-20253261320302f83b74d32594bd6aa947428116ec0d0.jpg"
+  ],
+  [
+   "t20261211-taha-ercoskun-fade",
+   "Taha Ercoşkun · Muhafazakar Background",
+   "standup",
+   "2026-12-11",
+   "",
+   "20:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "Yeni tek kişilik stand-up gösterisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/taha-ercoskun-muhafazakar-background-202672415534edc6f207f5ca41ccab30dc4108ab5e92.jpg"
   ],
   [
    "t20261211-amadeus-bursa",
@@ -2667,6 +2212,45 @@
    "https://www.biletix.com/etkinlik/5PEA1/IZMIR/tr/amadeus-11-12-2026-bursa",
    "Mozart ile Salieri'nin hikâyesini anlatan oyun.",
    "https://www.biletix.com/static/images/live/event/eventimages/amadeus-vedabu26.png"
+  ],
+  [
+   "t20261211-bulasikcilar-istanbul",
+   "Bulaşıkçılar",
+   "tiyatro",
+   "2026-12-11",
+   "",
+   "20:30",
+   "Caddebostan Kültür Merkezi Büyük Salon",
+   "İstanbul",
+   "https://biletinial.com/tr-tr/tiyatro/bulasikcilar",
+   "Morris Panych'in kara komedisi, yön. Işıl Kasapoğlu.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/bulasikcilar-20261141041755ee9ca384dd4bc6bcc18963480e7d3c.jpg"
+  ],
+  [
+   "t20261211-dogu-demirkol-bursa",
+   "Doğu Demirkol Stand Up",
+   "standup",
+   "2026-12-11",
+   "",
+   "20:30",
+   "Merinos AKKM Orhangazi Salonu",
+   "Bursa",
+   "https://biletinial.com/tr-tr/tiyatro/dogu-demirkol-stand-up-gosterisi",
+   "Doğu Demirkol stand-up turnesi Bursa'da.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/dogu-demirkol-2024814152646798dab89b2249f492282b518130426c.png"
+  ],
+  [
+   "t20261211-fosforlu-cevriye-hatay",
+   "Fosforlu Cevriye",
+   "tiyatro",
+   "2026-12-11",
+   "",
+   "20:30",
+   "AKAD Kültür Merkezi, İskenderun",
+   "Hatay",
+   "https://biletinial.com/tr-tr/tiyatro/fosforlu-cevriye-tiyatro?cinemaBranchId=34771",
+   "Suat Derviş'in Galata'da geçen hikâyesinin müzikli uyarlaması.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/fosforlu-cevriye-ortak-sahne-2026111695588e8db6bd06004a279499a8ea0289eab9.png"
   ],
   [
    "t20261211-kayahani-beklerken-istanbul",
@@ -2721,6 +2305,19 @@
    "https://www.biletix.com/static/images/live/event/groupimages/yalin-19-10-26-sugrp.png"
   ],
   [
+   "t20261211-nevzat-can-unsal-fade",
+   "Nevzat Can Ünsal · Devam",
+   "standup",
+   "2026-12-11",
+   "",
+   "21:30",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "İkinci seans 19 Aralık 19:00; 18+.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/nevzat-can-unsal-tek-kisilik-stand-up-202610161120188bcb4ac143214528b5911e64ef765b7c.jpg"
+  ],
+  [
    "t20261211-csosostakovic-ankara",
    "CSO: Şostakoviç Sovyet Yüzyılı",
    "konser",
@@ -2734,17 +2331,17 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/cumhurbaskanligi-senfoni-orkestrasi-denizbank-konserleri-sostakovic-sovyet-yuzy-2026111110242473664656914e45f396c18b07f3d168a3.jpg"
   ],
   [
-   "t20261211-gripin-izmir",
-   "Gripin",
-   "konser",
-   "2026-12-11",
+   "t20261212-buyuk-afrika-sirki-erzincan",
+   "Büyük Afrika Sirki",
+   "cocuk",
+   "2026-12-12",
    "",
-   "",
-   "Swissotel Büyük Efes İzmir",
-   "İzmir",
-   "https://www.songkick.com/concerts/43510205-gripin-at-swissotel-buyuk-efes-izmir",
-   "",
-   ""
+   "12:00",
+   "Erzincan Belediyesi Kültür Sanat Merkezi",
+   "Erzincan",
+   "https://biletinial.com/tr-tr/tiyatro/buyuk-afrika-sirki?cinemaBranchId=16268",
+   "Akrobasi ve illüzyonlu çocuk sirki; gün boyu 4 seans.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/buyuk-afrika-sirki-20221230103748.jpeg"
   ],
   [
    "t20261212-hologramsirki-antep",
@@ -2760,17 +2357,30 @@
    "https://cdn.iticket.com.tr/cdn-cgi/image/width=1400,height=470,quality=92,format=auto/event/cover/HspU9RgOhxTBajsZeiedqSqbATJCihZuVmh1SaaC.jpg"
   ],
   [
-   "t20261212-uc-kadin-kavanoz-kul-elazig",
-   "Üç Kadın ve Bir Kavanoz Kül",
+   "t20261212-bremen-giresun",
+   "Bremen Mızıkacıları",
+   "cocuk",
+   "2026-12-12",
+   "",
+   "13:00",
+   "Giresun Belediyesi Kültür ve Fuar Merkezi",
+   "Giresun",
+   "https://biletinial.com/tr-tr/tiyatro/bremen-mizikacilari-syyht",
+   "Seyyah Tiyatro'dan 2+ yaş çocuk oyunu; 3 seans.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/bremen-mizikacilari-2022118143839.jpg"
+  ],
+  [
+   "t20261212-hijyenik-asklar-erzincan",
+   "Hijyenik Aşklar",
    "tiyatro",
    "2026-12-12",
    "",
    "20:00",
-   "Elazığ Nurettin Ardıçoğlu Kültür Merkezi",
-   "Elazığ",
-   "https://www.bubilet.com.tr/elazig/etkinlik/uc-kadin-ve-bir-kavanoz-kul-oyunu",
-   "Üç kadının hikâyesini anlatan oyun Elazığ'da sahnede.",
-   ""
+   "Erzincan Belediyesi Kültür Sanat Merkezi",
+   "Erzincan",
+   "https://biletinial.com/tr-tr/tiyatro/hijyenik-asklar-tiyatro-oyunu?cinemaBranchId=16268",
+   "Yılmaz Erdoğan'ın aşk ve ilişkiler komedisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/hijyenik-asklar-tiyatro-oyunu-202679131832fae94821195b47eb91ee86e5e1e10400.png"
   ],
   [
    "t20261128-ucurtma",
@@ -2825,17 +2435,30 @@
    "https://cdn.biletsirasi.com/images/jpegs/soner-arica-783-S3Y7R7.jpeg"
   ],
   [
-   "t20261212-feridun-duzagac-batman",
-   "Feridun Düzağaç",
+   "t20261212-bikarisik-dogaclama-fade",
+   "Bi'Karışık Doğaçlama Gösterisi",
+   "tiyatro",
+   "2026-12-12",
+   "",
+   "21:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "Seyirci katılımlı tiyatro sporları doğaçlaması.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/bikarisik-dogaclama-gosterisi-20261126191819f06bc611e36f4de3aa4b1b5f8302f85f.png"
+  ],
+  [
+   "t20261212-ogun-sanlisoy-konya",
+   "Ogün Sanlısoy",
    "konser",
    "2026-12-12",
    "",
-   "22:00",
-   "Holly Stone Performance Hall Batman",
-   "Batman",
-   "https://www.bubilet.com.tr/batman/etkinlik/feridun-duzagac-konseri-",
-   "Feridun Düzağaç Batman'da sahne alacak.",
-   ""
+   "21:00",
+   "Konya PSM",
+   "Konya",
+   "https://mekanrehber.com/etkinlik/ogun-sanlisoy-konya-2026-12-12/",
+   "",
+   "https://mekanrehber.com/assets/events/ticketmaster/2026/3f257096d0de93ca62505cac-card-16x9.webp"
   ],
   [
    "t20261212-kirac-mersin",
@@ -2877,6 +2500,32 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/televizyon-cumhuriyeti-2026106105345605b63a9726849969d165152c55a2096.jpg"
   ],
   [
+   "t20261213-ben-nasil-deli-oldum-fade",
+   "Ben Nasıl Deli Oldum?",
+   "tiyatro",
+   "2026-12-13",
+   "",
+   "16:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "Kara mizahlı absürt oyun; 16+.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ben-nasil-deli-oldum-202610221636188839f48bbbf3478d944cc3315dba8e50.jpeg"
+  ],
+  [
+   "t20261213-edi-ile-budu-tokat",
+   "Edi ile Büdü",
+   "tiyatro",
+   "2026-12-13",
+   "",
+   "20:00",
+   "Tokat 26 Haziran Atatürk Kültür Merkezi",
+   "Tokat",
+   "https://biletinial.com/tr-tr/tiyatro/edi-ile-budu?cinemaBranchId=16392",
+   "Genç bir adam için yarışan iki yaşlı dostun komedisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/edi-ile-budu-202681810351121d10d3b34764563844842719ce74eb3.jpg"
+  ],
+  [
    "t20261213-konken-erzurum",
    "Konken Partisi",
    "tiyatro",
@@ -2888,6 +2537,32 @@
    "https://biletsirasi.com/tiyatro/konken-partisi-tiyatro",
    "Melek Baykal ve Mehmet Atay'lı komedi",
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/konken-partisi-20251223174318630f035dbd444a9eac72dcee7a3a5fbb.jpg"
+  ],
+  [
+   "t20261213-marilyn-monroe-bursa",
+   "Marilyn Monroe",
+   "tiyatro",
+   "2026-12-13",
+   "",
+   "20:00",
+   "Bursa Nilüfer Sahnesi",
+   "Bursa",
+   "https://biletinial.com/tr-tr/tiyatro/marilyn-monroe",
+   "Ceylan Yılmaz'ın tek kişilik psikolojik draması.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/marilyn-monroe-20261026141749b0b1b9d7425c4b3abb85fd0272f1ae63.jpg"
+  ],
+  [
+   "t20261213-emre-fel",
+   "Emre Fel",
+   "konser",
+   "2026-12-13",
+   "",
+   "21:00",
+   "Bostancı Gösteri Merkezi",
+   "İstanbul",
+   "https://iticket.com.tr/en/events/concerts/istanbul/emre-fel-konseri-istanbul-bilet",
+   "Emre Fel Bostancı'da sahnede.",
+   "https://iticket.com.tr/og/event/emre-fel-konseri-istanbul-bilet.jpg?c=concerts&lang=en&v=e1.1bzgufr"
   ],
   [
    "t20261213-donusum-samsa-balikesir",
@@ -2955,6 +2630,32 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/soner-sarikabadayi-20251225195025d952cb5ab2e041428f44957eefd8d98a.png"
   ],
   [
+   "t20261212-uc-kadin-kavanoz-kul-elazig",
+   "Üç Kadın ve Bir Kavanoz Kül",
+   "tiyatro",
+   "2026-12-14",
+   "",
+   "20:00",
+   "Elazığ Nurettin Ardıçoğlu Kültür Merkezi",
+   "Elazığ",
+   "https://www.bubilet.com.tr/elazig/etkinlik/uc-kadin-ve-bir-kavanoz-kul-oyunu",
+   "Üç kadının hikâyesini anlatan oyun Elazığ'da sahnede.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/uc-kadin-ve-bir-kavanoz-kul-20265620462ab1cc5fbae214dc0bcb00a46c69e0c5c.jpg"
+  ],
+  [
+   "t20261214-ask-listesi-bolu",
+   "Aşk Listesi",
+   "tiyatro",
+   "2026-12-14",
+   "",
+   "20:00",
+   "Bolu Necip Fazıl Kısakürek Kültür Merkezi",
+   "Bolu",
+   "https://biletinial.com/tr-tr/tiyatro/ask-listesi-",
+   "50. yaş hediyesi bir listeyle başlayan romantik komedi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ask-listesi-2024101893724e240f091bcb44790b79f4c3dcdebe5e1.jpg"
+  ],
+  [
    "t20261214-benmiyapmisim-antep",
    "Ersin Korkut - Ben mi Yapmışım?",
    "standup",
@@ -2966,6 +2667,19 @@
    "https://biletsirasi.com/tiyatro/ben-mi-yapmisim",
    "Ersin Korkut'un tek kişilik komedi gösterisi",
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ben-mi-yapmisim-20269241131262d300f571d554b8885b153340112a727.jpg"
+  ],
+  [
+   "t20261214-ilker-ayrik-istanbul",
+   "İlker Ayrık'la Gerçekler Acıdır",
+   "standup",
+   "2026-12-14",
+   "",
+   "20:30",
+   "Zorlu PSM Turkcell Sahnesi",
+   "İstanbul",
+   "https://biletinial.com/tr-tr/tiyatro/ilker-ayrikla-gercekler-acidir",
+   "İlker Ayrık'ın komedi gösterisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ilker-ayrikla-gercekler-acidir-202611513419b614ad82bb1d4c6f9e257f7cec55f19c.jpg"
   ],
   [
    "t20261215-findikkiran-antdob-antalya",
@@ -3007,6 +2721,19 @@
    "https://cdn.iticket.com.tr/cdn-cgi/image/width=1400,height=470,quality=92,format=auto/event/cover/5ZWIMMGsEwzYN4l0lyIT6c4mWVjZkONIhm8UZdRE.jpg"
   ],
   [
+   "t20261215-saticinin-olumu",
+   "Satıcının Ölümü",
+   "tiyatro",
+   "2026-12-15",
+   "2026-12-17",
+   "20:30",
+   "Zorlu PSM Turkcell Sahnesi",
+   "İstanbul",
+   "https://www.biletix.com/etkinlik/55GAF/DIGER/en/saticinin-olumu-15-12-2026-istanbul",
+   "Arthur Miller klasiği üç akşam Zorlu PSM'de.",
+   "https://www.biletix.com/static/images/live/event/eventimages/55GA6_19201080.png"
+  ],
+  [
    "t20261215-amadeus-eskisehir",
    "Amadeus - Veda Turnesi",
    "tiyatro",
@@ -3018,6 +2745,19 @@
    "https://biletinial.com/tr-tr/tiyatro/amadeus-piu",
    "Peter Shaffer'ın oyunu veda turnesiyle Eskişehir'de.",
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/amadeus-2026941627409175b20963ef4e5ea65a24f82669603b.jpg"
+  ],
+  [
+   "t20261215-ersin-korkut-sanliurfa",
+   "Ersin Korkut - Ben mi Yapmışım?",
+   "standup",
+   "2026-12-15",
+   "",
+   "",
+   "Mehmet Akif İnan Konferans Salonu (Urfa City AVM)",
+   "Şanlıurfa",
+   "https://biletinial.com/tr-tr/tiyatro/ben-mi-yapmisim?cinemaBranchId=16398",
+   "Ersin Korkut'un tek kişilik gösterisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ben-mi-yapmisim-20269241131262d300f571d554b8885b153340112a727.jpg"
   ],
   [
    "t20261215-julideozcelik-ankara",
@@ -3072,6 +2812,32 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ozlem-kosif-hayatim-yanlis-anlama-2026108171847705b0c4372b848b6be9fc2e5f69c4c85.jpg"
   ],
   [
+   "t20261216-piyango-fade",
+   "Piyango",
+   "tiyatro",
+   "2026-12-16",
+   "",
+   "20:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "Oyunu çark ve tombala toplarının seçtiği doğaçlama.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/piyango-202693017162758e4dab8900845bebfd13e4d6540534e.jpg"
+  ],
+  [
+   "t20261216-erkek-akli-isparta",
+   "Erkek Aklı Oksimoron",
+   "standup",
+   "2026-12-16",
+   "",
+   "20:30",
+   "Isparta Belediyesi Kültür Merkezi Gül Salonu",
+   "Isparta",
+   "https://biletinial.com/tr-tr/tiyatro/erkek-akli-oksimoron-tyndn",
+   "Emre Karayel'in 'Kadınlar ne ister?' komedi gösterisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/erkek-akli-oksimoron-202495161754bdc25e84a59744558aad54b0eb55240e.jpg"
+  ],
+  [
    "t20261216-ali-congun-kahramanmaras",
    "Ali Congun - Adliye Çayı",
    "standup",
@@ -3098,6 +2864,19 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/lumera-trio-sezen-aksu-sarkilari-202682913123442a82d42ccab4ddcaee1b29391375e1a.jpg"
   ],
   [
+   "t20261216-plastik-asklar-zonguldak",
+   "Plastik Aşklar",
+   "tiyatro",
+   "2026-12-16",
+   "",
+   "",
+   "BEÜ Sezai Karakoç Konferans Salonu",
+   "Zonguldak",
+   "https://biletinial.com/tr-tr/tiyatro/plastik-asklar",
+   "Oya Başar ve Begüm Birgören'li Hıdırellez komedisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/plastik-asklar-oya-basar-begum-birgoren-ort-20261022173332967e4a6179e44000b7c4a8ee0dfc748d.jpg"
+  ],
+  [
    "t20261216-triggerfinger-izmir",
    "Triggerfinger",
    "konser",
@@ -3111,19 +2890,6 @@
    "https://www.biletix.com/static/images/live/event/eventimages/5BLA6-BU27.png"
   ],
   [
-   "t20261217-evgenygrinko-diyarbakir",
-   "Evgeny Grinko",
-   "konser",
-   "2026-12-17",
-   "",
-   "20:00",
-   "Diyarbakır Sezai Karakoç Kültür ve Kongre Merkezi",
-   "Diyarbakır",
-   "https://concerts.consequence.net/venues/diyarbak-r-sezai-karako-k-lt-r-ve-kongre-merkezi-tickets",
-   "Rus piyanist ve besteci",
-   ""
-  ],
-  [
    "t20261217-findikkiran-adob-ankara",
    "Fındıkkıran (Ankara DOB)",
    "opera",
@@ -3135,6 +2901,58 @@
    "https://sanatcepte.com/etkinlik/etkinlik-detay/findikkiran-adob",
    "Bale 19, 21 ve 24 Aralık'ta da sahnelenecek.",
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/findikkiran-ankara-dob-20231120134313712db9adb5bb4d4690c1cd37f75ed9e5.jpg"
+  ],
+  [
+   "t20261217-koma-amed-sanliurfa",
+   "Koma Amed",
+   "konser",
+   "2026-12-17",
+   "",
+   "20:00",
+   "Mehmet Akif İnan Konferans Salonu (Urfa City AVM)",
+   "Şanlıurfa",
+   "https://biletinial.com/tr-tr/muzik/koma-amed?cinemaBranchId=16398",
+   "Kürtçe halk ezgileri ve besteleriyle Koma Amed; tükendi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/koma-amed-2026112103225a58f857b7bd94e118364cdd3496cd350.png"
+  ],
+  [
+   "t20261218-anadolu-atesi-mugla",
+   "Anadolu Ateşi",
+   "dans",
+   "2026-12-18",
+   "",
+   "20:00",
+   "Muğla Sıtkı Koçman Üniversitesi Atatürk Kültür Merkezi",
+   "Muğla",
+   "https://biletinial.com/tr-tr/tiyatro/anadolu-atesi---",
+   "Halk dansı, bale ve modern dansı birleştiren gösteri",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/anadolu-atesi-2025328114736b73d28381c3547138dca3f91485d01b6.jpg"
+  ],
+  [
+   "t20261218-ayi-bolu",
+   "Ayı",
+   "tiyatro",
+   "2026-12-18",
+   "",
+   "20:00",
+   "Bolu Necip Fazıl Kültür Merkezi",
+   "Bolu",
+   "https://biletinial.com/tr-tr/tiyatro/ayi-aspendos",
+   "Çehov'un tek perdelik komedisi, Fulya Selvi yönetiminde.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ayi-aspendos-2026728923324cb3859cca29484a84a5bf81d2e0f86e.jpg"
+  ],
+  [
+   "t20261218-seyfi-bey-amasya",
+   "Seyfi Bey",
+   "tiyatro",
+   "2026-12-18",
+   "",
+   "20:00",
+   "Amasya Belediyesi KM Şehzade Salonu",
+   "Amasya",
+   "https://biletinial.com/tr-tr/tiyatro/seyfi-bey?cinemaBranchId=16158",
+   "Seyfi Dursunoğlu'nun kulisinde geçen tek perdelik dram.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/seyfi-bey-20249111416500c1c3ece25f9464a878ca70fc2e325be.jpg"
   ],
   [
    "t20261218-alicongun-izmir",
@@ -3173,7 +2991,7 @@
    "Malatya",
    "https://concerts.consequence.net/events/hayrettin-at-malatya-kongre-ve-kultur-merkezi-kemal-sunal-salonu-on-2026-12-18-20-00",
    "Doğaçlama komedi gecesi, sürpriz konuklarla",
-   ""
+   "https://www.biletix.com/static/images/live/event/groupimages/5JM62-BU26.png"
   ],
   [
    "t20261218-imperial-nutcracker-istanbul",
@@ -3199,7 +3017,7 @@
    "Sivas",
    "https://mekanrehber.com/etkinlikler/sivas/",
    "",
-   ""
+   "https://www.biletix.com/static/images/live/event/groupimages/5ADBA-seksendort-bu26.png"
   ],
   [
    "t20261218-soguksavas-izmir",
@@ -3212,7 +3030,7 @@
    "İzmir",
    "https://tuzbiberstandup.com/etkinlik/soguk-savas-42",
    "TuzBiber'in YouTube programının sürpriz konuklu canlı versiyonu.",
-   ""
+   "https://tuzbiberstandup.com/_next/image?url=http%3A%2F%2Flocalhost%3A1342%2Fuploads%2F1400x800_e156afb2de.jpg&w=1080&q=75"
   ],
   [
    "t20261218-umutcan-arslan-fade",
@@ -3239,19 +3057,6 @@
    "https://concerts.consequence.net/venues/jolly-joker-ankara-tickets",
    "",
    "https://jjticketingstorage.blob.core.windows.net/content/db07d006-4b58-4189-983e-4319f0d7998a.png"
-  ],
-  [
-   "t20261218-feridun-duzagac-mersin",
-   "Feridun Düzağaç",
-   "konser",
-   "2026-12-18",
-   "",
-   "22:30",
-   "Jolly Joker Mersin",
-   "Mersin",
-   "https://mersin.jollyjoker.com.tr/etkinlik/ZI58T/feridun-duzagac/2026-12-18",
-   "Kapı 21:00, sahne 22:30.",
-   "https://jjticketingstorage.blob.core.windows.net/content/14b9a7ec-2b3e-488b-93d1-e6d19e444049.jpg"
   ],
   [
    "t20261218-7-kocali-hurmuz-gaziantep",
@@ -3306,6 +3111,71 @@
    "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1024,h_1024/https://bso.bilkent.edu.tr/tr/wp-content/uploads/2026/05/19web.jpg"
   ],
   [
+   "t20261219-sefiller-bitlis",
+   "Sefiller",
+   "tiyatro",
+   "2026-12-19",
+   "",
+   "20:00",
+   "Bitlis İl Kültür Merkezi",
+   "Bitlis",
+   "https://biletinial.com/tr-tr/tiyatro/sefiller-tiyatro-oyunu?cinemaBranchId=2638",
+   "Pera Tiyatro'dan minimalist Sefiller uyarlaması.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/sefiller-pera-202697113142b94da517086e47b3b4a255d1ef9d52de.jpg"
+  ],
+  [
+   "t20261219-shirley-valentine-ankara",
+   "Shirley Valentine – Sumru Yavrucuk",
+   "tiyatro",
+   "2026-12-19",
+   "",
+   "20:00",
+   "MEB Şura Salonu",
+   "Ankara",
+   "https://biletinial.com/tr-tr/tiyatro/shirley-valetine-ozkyorg",
+   "20 Aralık'ta Etimesgut Korkut Ata KM'de de",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/shirley-valentine-sumru-yavrucuk-2025101513416bbf8212a192145a9a8b0a74b8089b01a.jpg"
+  ],
+  [
+   "t20261219-seksendort-kayseri",
+   "Seksendört",
+   "konser",
+   "2026-12-19",
+   "",
+   "20:30",
+   "EKM Erciyes Kültür Merkezi",
+   "Kayseri",
+   "https://mekanrehber.com/etkinlik/seksendort-kayseri-2026-12-19/",
+   "",
+   "https://mekanrehber.com/assets/events/ticketmaster/2026/8b9178d451e809f5f7b6bf5a-card-16x9.webp"
+  ],
+  [
+   "t20261219-suat-suna-bursa",
+   "Suat Suna - Şarkılar Eskiden Daha mı Güzeldi",
+   "konser",
+   "2026-12-19",
+   "",
+   "20:30",
+   "Bursa BAOB Sahne",
+   "Bursa",
+   "https://biletinial.com/tr-tr/muzik/suat-suna",
+   "Suat Suna'dan nostaljik şarkılarla müzikli gösteri.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/suat-suna-2026220192847ec6ae8426e7a482e9b1732a08d68db46.jpg"
+  ],
+  [
+   "t20261219-dogan-tuncel-fade",
+   "Doğan Tunçel Stand Up",
+   "standup",
+   "2026-12-19",
+   "",
+   "21:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "Yepyeni hikâyelerle tek kişilik gösteri; 18+.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/dogan-tuncel-stand-up-2026824164865b18688fc7984869942098d4787c809c.jpg"
+  ],
+  [
    "t20261219-cok-guzel-hareketler-adana",
    "Çok Güzel Hareketler 2",
    "tiyatro",
@@ -3358,6 +3228,19 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/vivaldi-mevsimler-izmir-dob-202610692651f9de20a802644e4293bb3e90fbf0a66d.jpeg"
   ],
   [
+   "t20261220-nasrettin-hoca-ordu",
+   "Nasrettin Hoca Masal Yolcusu",
+   "cocuk",
+   "2026-12-20",
+   "",
+   "13:00",
+   "Ordu Atatürk Kültür Merkezi",
+   "Ordu",
+   "https://biletinial.com/tr-tr/tiyatro/nasrettin-hoca-masal-yolcusu",
+   "Eşeğini çalmak isteyenleri alt eden Hoca'nın müzikali.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/nasrettin-hoca-masal-yolcusu-202610301517497e48603c201c45f39de8ffb32837038d.jpg"
+  ],
+  [
    "t20261220-georgia-nutcracker-ankara",
    "The Nutcracker (Fındıkkıran Balesi) - State Ballet of Georgia",
    "opera",
@@ -3369,6 +3252,32 @@
    "https://klemensart.com/etkinlikler/the-nutcracker-findikkiran-balesi-state-ballet-of-georgia-20261220",
    "Gürcistan Devlet Balesi aynı gün 19:30'da ikinci gösteriyi sunuyor.",
    "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1920,quality=80/files/Etkinlik/the-nutcracker-findikkiran-40821.jpg"
+  ],
+  [
+   "t20261220-cem-eren-ozturk-erte-fade",
+   "Cem Eren Öztürk · Erte",
+   "standup",
+   "2026-12-20",
+   "",
+   "19:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "Pandeminin gündelik hayata etkisini anlatan üçüncü gösterisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/erte-202581813254679ef9d8e22044f648b6a2c0ad2777dec.jpg"
+  ],
+  [
+   "t20261220-hamlet-elazig",
+   "Hamlet",
+   "tiyatro",
+   "2026-12-20",
+   "",
+   "20:00",
+   "Elazığ Nurettin Ardıçoğlu Kültür Merkezi",
+   "Elazığ",
+   "https://biletinial.com/tr-tr/tiyatro/hamlet-tiyatroyunu",
+   "Erselcan Tokdemir'li Shakespeare uyarlaması.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/hamlet-esrik-2026522131825ca2ef28ae0444673a183737723234626.jpg"
   ],
   [
    "t20261220-hijyenikasklar-antep",
@@ -3384,16 +3293,29 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/hijyenik-asklar-tiyatro-oyunu-202679131832fae94821195b47eb91ee86e5e1e10400.png"
   ],
   [
-   "t20261220-gokhan-turkmen-elazig",
-   "Gökhan Türkmen",
-   "konser",
+   "t20261220-romeo-juliet-corum",
+   "Romeo & Juliet",
+   "tiyatro",
+   "2026-12-20",
+   "",
+   "20:00",
+   "Çorum Devlet Tiyatrosu",
+   "Çorum",
+   "https://biletinial.com/tr-tr/tiyatro/romeo-juliet-sek?cinemaBranchId=349",
+   "Taner Cindoruk yönetiminde Shakespeare klasiği.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/romeo-juliet-sek-2026101613637f227393328df457c933c9edf553e7895.jpg"
+  ],
+  [
+   "t20261220-emrecan-odabas-fade",
+   "Emrecan Odabaş Stand-up",
+   "standup",
    "2026-12-20",
    "",
    "20:30",
-   "Elazığ Ahmet Tevfik Ozan Fuar ve Kongre Merkezi",
-   "Elazığ",
-   "https://www.bubilet.com.tr/elazig/etkinlik/gokhan-turkmen-konseri",
-   "Gökhan Türkmen sevilen şarkılarıyla Elazığ'da konser verecek.",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "TuzBiber gecesi; Farabi Sokak'taki sahne kafede.",
    ""
   ],
   [
@@ -3410,17 +3332,17 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/kayhan-kalhor-erdal-erzincan-20259231771149f762acf23f471a9afd9676bdd9cfb9.jpg"
   ],
   [
-   "t20261220-emrecan-odabas-fade",
-   "Emrecan Odabaş Stand-up",
-   "standup",
+   "t20261220-seksendort-konya",
+   "Seksendört",
+   "konser",
    "2026-12-20",
    "",
    "20:30",
-   "FADE Stage & Coffee, Çankaya",
-   "Ankara",
-   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
-   "TuzBiber gecesi; Farabi Sokak'taki sahne kafede.",
-   ""
+   "Selçuklu Kongre Merkezi Anadolu Sahne",
+   "Konya",
+   "https://mekanrehber.com/etkinlik/seksendort-konya-2026-12-20/",
+   "",
+   "https://mekanrehber.com/assets/events/ticketmaster/2026/fdf085c5bda129d205169142-card-16x9.webp"
   ],
   [
    "t20261220-dogu-demirkol-konya",
@@ -3462,6 +3384,175 @@
    "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/yeni-turku-konseri-2023213154926.jpg"
   ],
   [
+   "t20261221-ilker-ayrik-canakkale",
+   "İlker Ayrık'la Gerçekler Acıdır",
+   "standup",
+   "2026-12-21",
+   "",
+   "20:30",
+   "Çanakkale İÇDAŞ Kara Yusuf Kongre Merkezi",
+   "Çanakkale",
+   "https://biletinial.com/tr-tr/tiyatro/ilker-ayrikla-gercekler-acidir",
+   "İlker Ayrık'ın komedi gösterisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ilker-ayrikla-gercekler-acidir-202611513419b614ad82bb1d4c6f9e257f7cec55f19c.jpg"
+  ],
+  [
+   "t20261222-komsum-iii-vlad-fade",
+   "Komşum III. Vlad",
+   "tiyatro",
+   "2026-12-22",
+   "",
+   "20:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "Hayatta kalmanın bedelini soran kara komedi; 16+.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/komsum-iii-vlad-2024121116103613e0d3a836c64ddaa4e3e070eb8452d4.jpg"
+  ],
+  [
+   "t20261222-tom-dick-harry-hatay",
+   "Tom, Dick ve Harry",
+   "tiyatro",
+   "2026-12-22",
+   "",
+   "20:30",
+   "AKAD Kültür Merkezi, İskenderun",
+   "Hatay",
+   "https://biletinial.com/tr-tr/tiyatro/tom-dick-ve-harry-?cinemaBranchId=34771",
+   "Ray Cooney'nin evlat edinme günü geçen aile komedisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/tom-dick-ve-harry-202652593568c8790674c294ffe9d3009a66270b028.jpg"
+  ],
+  [
+   "t20261222-attila-antalya",
+   "Attila",
+   "opera",
+   "2026-12-22",
+   "",
+   "",
+   "Antalya Devlet Opera ve Balesi",
+   "Antalya",
+   "https://biletinial.com/tr-tr/opera-bale/attila-antalya-dob?cinemaBranchId=1271",
+   "Verdi'nin Hun lideri Attila'yı anlatan operası.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/attila-antalya-dob-2026524113228a6e8c01b644d4286ae798973aa8b5caa.jpg"
+  ],
+  [
+   "t20261223-himiko-trio-bursa",
+   "Japonya'dan Anadolu'ya: Himiko Trio",
+   "konser",
+   "2026-12-23",
+   "",
+   "20:00",
+   "BAOB Sahne",
+   "Bursa",
+   "https://biletinial.com/tr-tr/muzik/japonyadan-anadoluya-muzik-yolculugu-himiko-trio-konseri",
+   "Koto, flüt ve piyanoyla Türk-Japon ezgileri.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/japonyadan-anadoluya-muzik-yolculugu-himiko-trio-konseri-2026111617658f63c6774df774fa7b3d4935a245234cd.jpeg"
+  ],
+  [
+   "t20261223-ozgur-turhan-duzce",
+   "Özgür Turhan - Yepyenisi",
+   "standup",
+   "2026-12-23",
+   "",
+   "20:30",
+   "Düzce Belediyesi Kültür Merkezi",
+   "Düzce",
+   "https://biletinial.com/tr-tr/tiyatro/ozgur-turhan-yepyenisi?cinemaBranchId=16418",
+   "Özgür Turhan'ın 90 dakikalık yeni stand-up gösterisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ozgur-turhan-yepyenisi-2026130175056babb6b85a98147238ce997fcc8092e0f.jpg"
+  ],
+  [
+   "t20261223-faust-zonguldak",
+   "Faust",
+   "tiyatro",
+   "2026-12-23",
+   "",
+   "",
+   "Zonguldak Belediyesi Sinema Salonu",
+   "Zonguldak",
+   "https://biletinial.com/tr-tr/tiyatro/faust-tiyatro-oyunu-biletleri",
+   "Goethe'nin Faust'unun tek kişilik uyarlaması; 12+.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/faust-tiyatro-oyunu-202641493324962746da3c3a4429b3fe7028a5506f33.jpg"
+  ],
+  [
+   "t20261224-kerbela-elazig",
+   "Kerbela",
+   "tiyatro",
+   "2026-12-24",
+   "",
+   "19:30",
+   "Nurettin Ardıçoğlu Kültür Merkezi Büyük Salon",
+   "Elazığ",
+   "https://biletinial.com/tr-tr/tiyatro/kerbela",
+   "Almila Tiyatro Atölyesi'nden Kerbela trajedisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/kerbela-20268142038193c30b1f6b6a34d3e9ed940300c430299.jpeg"
+  ],
+  [
+   "t20261224-morkomedyen-karabuk",
+   "Morkomedyen Stand Up",
+   "standup",
+   "2026-12-24",
+   "",
+   "20:00",
+   "Leyla Dizdar Kültür Merkezi",
+   "Karabük",
+   "https://biletinial.com/tr-tr/tiyatro/morkomedyen",
+   "Murat Genç'in 16+ stand-up gösterisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/morkomedyen-stand-up-2026515174733de703e5bfd064e94b182e81450b82a03.jpg"
+  ],
+  [
+   "t20261224-nazim-tokat",
+   "Nazım",
+   "tiyatro",
+   "2026-12-24",
+   "",
+   "20:00",
+   "Tokat 26 Haziran Atatürk Kültür Merkezi",
+   "Tokat",
+   "https://biletinial.com/tr-tr/tiyatro/nazim?cinemaBranchId=16392",
+   "Nazım Hikmet'in şiir ve mektuplarından müzikli dram.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/nazim-202522417332fa9073474b914a63be982cff9c79a82c.png"
+  ],
+  [
+   "t20261224-sebnem-ferah",
+   "Şebnem Ferah",
+   "konser",
+   "2026-12-24",
+   "",
+   "21:30",
+   "Volkswagen Arena",
+   "İstanbul",
+   "https://www.biletix.com/etkinlik/5PSFC/TURKIYE/en/sebnem-ferah-02-12-2026-istanbul",
+   "Şebnem Ferah'ın yıl sonu ikinci arena konseri.",
+   "https://www.biletix.com/static/images/live/event/eventimages/5PSF3_sebonew-1920.png"
+  ],
+  [
+   "t20261225-lumera-amasya",
+   "Lumera - Sezen Aksu Şarkıları",
+   "konser",
+   "2026-12-25",
+   "",
+   "20:00",
+   "Amasya Belediyesi KM Şehzade Salonu",
+   "Amasya",
+   "https://biletinial.com/tr-tr/muzik/lumera-trio-sezen-aksu-sarkilari?cinemaBranchId=16158",
+   "Klarnet, gitar ve çelloyla mum ışığında Sezen Aksu.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/lumera-trio-sezen-aksu-sarkilari-202682913123442a82d42ccab4ddcaee1b29391375e1a.jpg"
+  ],
+  [
+   "t20261225-morkomedyen-bartin",
+   "Morkomedyen Stand Up",
+   "standup",
+   "2026-12-25",
+   "",
+   "20:00",
+   "Bartın Kültür Merkezi",
+   "Bartın",
+   "https://biletinial.com/tr-tr/tiyatro/morkomedyen",
+   "Murat Genç'ten astroloji ve ilişkiler üzerine 16+ gösteri.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/morkomedyen-stand-up-2026515174733de703e5bfd064e94b182e81450b82a03.jpg"
+  ],
+  [
    "t20261225-uclu-standup-fade",
    "3'lü Stand Up Gecesi Falan",
    "standup",
@@ -3473,19 +3564,165 @@
    "https://www.biletix.com/etkinlik/5YD21/TURKIYE/tr/3lu-stand-up-gecesi-falan-25-12-2026-ankara",
    "Üç komedyenin sahne aldığı stand-up gecesi.",
    "https://www.biletix.com/static/images/live/event/eventimages/5YD19-BU27.png"
+  ],
+  [
+   "t20261226-buyuk-afrika-sirki-burdur",
+   "Büyük Afrika Sirki",
+   "cocuk",
+   "2026-12-26",
+   "",
+   "13:00",
+   "Burdur Kültür Merkezi",
+   "Burdur",
+   "https://biletinial.com/tr-tr/tiyatro/buyuk-afrika-sirki",
+   "Çocuklar için akrobasi ve illüzyon gösterisi; 3 seans.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/buyuk-afrika-sirki-20221230103748.jpeg"
+  ],
+  [
+   "t20261226-yilbasi-konseri-antalya",
+   "Yılbaşı Konseri - Antalya DOB",
+   "konser",
+   "2026-12-26",
+   "2026-12-28",
+   "20:00",
+   "Antalya Haşim İşcan K.M. Opera Sahnesi",
+   "Antalya",
+   "https://biletinial.com/tr-tr/opera-bale/yilbasi-konseri-antalya-dob?cinemaBranchId=1271",
+   "Strauss, Çaykovski, Bizet eserleriyle yeni yıl konseri.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/yilbasi-konseri-antalya-dob-2025112715401455ec077fa1034a2380ebe924096ccafb.jpg"
+  ],
+  [
+   "t20261226-kari-koca-isleri-osmaniye",
+   "Karı Koca İşleri / Yeni Sürüm",
+   "tiyatro",
+   "2026-12-26",
+   "",
+   "20:30",
+   "Kadirli Devlet Bahçeli Kültür Merkezi",
+   "Osmaniye",
+   "https://biletinial.com/tr-tr/tiyatro/kari-koca-isleri-yeni-surum",
+   "İlişkilerin komik yanlarını anlatan yenilenmiş komedi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/kari-koca-isleri-yeni-surum-2025912132750e80e1028ea204b069251e3d4793084ac.jpg"
+  ],
+  [
+   "t20261227-huysuz-palyaco-bolu",
+   "Huysuz Palyaço ve Sihirbaz",
+   "cocuk",
+   "2026-12-27",
+   "",
+   "12:00",
+   "Bolu Necip Fazıl Kısakürek Kültür Merkezi",
+   "Bolu",
+   "https://biletinial.com/tr-tr/tiyatro/huysuz-palyaco-ve-sihirbaz",
+   "Sihirbaz, palyaço ve kuklalı etkileşimli çocuk gösterisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/huysuz-palyaco-ve-sihirbaz-2026112131823a3d64109c2a343009ea8aff49f9e22b6.jpg"
+  ],
+  [
+   "t20261227-hansel-gretel-corum",
+   "Hansel ve Gretel Müzikali",
+   "cocuk",
+   "2026-12-27",
+   "",
+   "14:00",
+   "Çorum Devlet Tiyatrosu",
+   "Çorum",
+   "https://biletinial.com/tr-tr/tiyatro/hansel-ve-gretel-muzikali-kayip-zamanin-pesinde?cinemaBranchId=349",
+   "Dijital oyun dünyasında geçen çocuk müzikali; 14:00 ve 16:00.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/hansel-ve-gretel-muzikali-kayip-zamanin-pesinde-20261118103233c06a99626944af94c62eb9e7f40c0f.jpg"
+  ],
+  [
+   "t20261227-cok-guzel-hareketler-sanliurfa",
+   "Çok Güzel Hareketler 2",
+   "tiyatro",
+   "2026-12-27",
+   "",
+   "15:30",
+   "Mehmet Akif İnan Konferans Salonu (Urfa City AVM)",
+   "Şanlıurfa",
+   "https://biletinial.com/tr-tr/tiyatro/cok-guzel-hareketler?cinemaBranchId=16398",
+   "BKM Mutfak ekibinin skeç gösterisi; 15:30 ve 20:00.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/cok-guzel-hareketler-2-202610212015127879238657734b618ca4572b6e0720d2.jpg"
+  ],
+  [
+   "t20261227-gilgamis-destani-fade",
+   "Gılgamış Destanı",
+   "tiyatro",
+   "2026-12-27",
+   "",
+   "16:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "Bülent Bektaş'ın tek kişilik epik uyarlaması; 16+.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/gilgamis-destani-fade-20261023108457f102d4a58fe4784bda8244a1bf2ae1a.jpeg"
+  ],
+  [
+   "t20261227-fazli-polat-bursa",
+   "Fazlı Polat - Şaka Şaka",
+   "standup",
+   "2026-12-27",
+   "",
+   "19:00",
+   "Podyum Sanat Mahal",
+   "Bursa",
+   "https://biletinial.com/tr-tr/tiyatro/fazli-polat-saka-saka-stand-up",
+   "Fazlı Polat'ın stand-up gösterisi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/fazli-polat-saka-saka-stand-up-202628131649e53b879830144a7f9b46fedeeccfcb2b.jpg"
+  ],
+  [
+   "t20261228-bir-idam-mahkumu-bartin",
+   "Victor Hugo'dan Bir İdam Mahkumu",
+   "tiyatro",
+   "2026-12-28",
+   "",
+   "18:00",
+   "Bartın Kültür Merkezi Küçük Salon",
+   "Bartın",
+   "https://biletinial.com/tr-tr/tiyatro/biridam-mahkumunun-son-gunu",
+   "Hugo'nun idam mahkûmunun son günlerini anlatan oyun.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/victor-hugodan-bir-idam-mahkumu-20261089242639b0f3f3f42a430ebca072c35091cc92.jpg"
+  ],
+  [
+   "t20261228-uyarlariz-bir-seyler-fade",
+   "Uyarlarız Bir Şeyler",
+   "tiyatro",
+   "2026-12-28",
+   "",
+   "20:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "Çehov uyarlaması komedi.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/uyarlariz-bir-seyler-20261120102411ede6cefeaea4366b334ebb56b396ff8.jpg"
+  ],
+  [
+   "t20261229-oguz-pasaoglu-fade",
+   "Oğuz Paşaoğlu Tek Kişilik Stand Up",
+   "standup",
+   "2026-12-29",
+   "",
+   "19:00",
+   "FADE Stage & Coffee, Çankaya",
+   "Ankara",
+   "https://www.biletix.com/mekan/06059/TURKIYE/tr",
+   "90 dakikalık tek kişilik gösteri; 18+.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/oguz-pasaoglu-tek-kisilik-stand-up-202412819533309ba3063cb274299bf34abd870ebb979.jpg"
+  ],
+  [
+   "t20261229-yeni-yil-konseri-mersin",
+   "Yeni Yıl Konseri - Mersin DOB",
+   "konser",
+   "2026-12-29",
+   "",
+   "20:00",
+   "Mersin Opera Büyük Sahne",
+   "Mersin",
+   "https://biletinial.com/tr-tr/opera-bale/yeni-yil-konseri-mersin-dob?cinemaBranchId=1270",
+   "Mersin DOB'un yeni yıl konseri; satış 28 Kasım'da.",
+   "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/yeni-yil-konseri-mersin-dob-2025121191314b6b280d869e44b76b8db671acad6262a.jpg"
   ]
  ],
  "vizyon": [
-  [
-   "v-hungergames-sunrise",
-   "Açlık Oyunları: Hasatta Gündoğumu",
-   "The Hunger Games: Sunrise on the Reaping",
-   "2026-11-20",
-   "Bilim kurgu, macera",
-   "Suzanne Collins'in romanından: genç Haymitch, iki kat haraçla oynanan 50. Açlık Oyunları'na seçiliyor.",
-   "https://www.beyazperde.com/filmler/film-1000004528/",
-   "https://cdn.sinemalar.com/images/movie/286513/poster/aclik-oyunlari-hasatta-gundogumu-1790180277.jpg"
-  ],
   [
    "v-asktesadufleri3",
    "Aşk Tesadüfleri Sever 3",
@@ -3535,6 +3772,16 @@
    "Fikret ile Solmaz yıllar sonra gerçek bir aile olmuştur; ama ortaya çıkan yeni bir sır her şeyi karıştırır.",
    "https://www.beyazperde.com/filmler/film-324523/",
    "https://tr.web.img4.acsta.net/img/97/d7/97d79a50d1efd61ba27d54399d960a60.jpg"
+  ],
+  [
+   "v-karanliktaislik",
+   "Karanlıkta Islık Çalanlar",
+   "Karanlıkta Islık Çalanlar",
+   "2026-12-04",
+   "Dram, komedi",
+   "Ankaralı bir aile, ansızın gelen tuhaf bir konukla ertelenmiş hayalleriyle yüzleşiyor; ödüllü, buruk komedi.",
+   "https://www.beyazperde.com/filmler/film-1000042487/",
+   "https://tr.web.img4.acsta.net/img/86/41/8641f6f7e1203f19cf3af7b790b43964.webp"
   ]
  ],
  "afis": {
