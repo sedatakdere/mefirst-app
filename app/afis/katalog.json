@@ -5045,8 +5045,36 @@
 "nost"
 ],
 "p": 45
+},
+{
+"id": "wd-Q901140",
+"q": "Q901140",
+"t": "Çakalın Günü",
+"o": "The Day of the Jackal",
+"y": 1973,
+"d": "Fred Zinnemann",
+"line": "1973 film by Fred Zinnemann",
+"g": [
+"agla",
+"nost"
+],
+"p": 44
+},
+{
+"id": "wd-Q7090972",
+"q": "Q7090972",
+"t": "Bereketli Topraklar Üzerinde",
+"o": "On Fertile Lands",
+"y": 1980,
+"d": "Erden Kıral",
+"line": "Film",
+"tr": 1,
+"g": [
+"nost"
+],
+"p": 6
 }
 ],
-"updated": "2026-11-23",
+"updated": "2026-11-27",
 "v2": 1
 }
